@@ -4,7 +4,7 @@ import axios from 'axios';
 import { Container, Typography, Box, Button } from '@mui/material';
 import Navbar from '../Common/Navbar';
 import Footer from '../Common/Footer';
-
+import Aos from 'aos'
 
 const months = {1:'January',2:'February',3:'March',4:'April',5:'May',6:'June',7:'July',8:'August',9:'September',10:'October',11:'November',12:'December'}
 
@@ -29,7 +29,7 @@ export default function BlogBody() {
     
       let date = formatDate(attributes.Date);
 
-
+      let imgURL = `http://157.173.222.81:1337${attributes.Headline_image.data.attributes.formats.thumbnail.url}`
   return (<>
     <Navbar/>
     {/* <div>BlogBody</div> */}
@@ -48,11 +48,12 @@ export default function BlogBody() {
           </Typography>
         </Box>
         
-        <Box my={4} display="flex" justifyContent="center">
+        {/* <Box my={4} display="flex" justifyContent="center">
           <Box 
             style={{ 
               width: '100%', 
               height: '300px', 
+              
               backgroundColor: '#E0E0E0', 
               borderRadius: '8px', 
               display: 'flex', 
@@ -64,9 +65,39 @@ export default function BlogBody() {
               No image available
             </Typography>
           </Box>
-        </Box>
+        </Box> */}
+        <Box my={4} display="flex" justifyContent="center">
+  <Box 
+    style={{ 
+      width: '100%', 
+      height: '300px', 
+      backgroundColor: '#E0E0E0', 
+      borderRadius: '8px', 
+      display: 'flex', 
+      justifyContent: 'center', 
+      alignItems: 'center',
+      overflow: 'hidden' // Ensure the image stays within the box boundaries
+    }}
+  >
+    {imgURL ? (
+      <img 
+        src={imgURL} 
+        alt="Displayed" 
+        style={{ 
+          width: '100%', 
+          height: '100%', 
+          objectFit: 'cover' // Cover ensures the image covers the box dimensions while maintaining aspect ratio
+        }} 
+      />
+    ) : (
+      <Typography variant="subtitle1" color="textSecondary">
+        No image available
+      </Typography>
+    )}
+  </Box>
+</Box>
         <Typography variant="body1" paragraph>
-          {attributes.Content}
+          {attributes.text}
         </Typography>
       </Container>
 
