@@ -1,7 +1,7 @@
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import "./index.css";
 import Cource from "../assets/GroupImg1.png";
-import {Link} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 import Img2 from "../assets/GroupImg2.png";
 const Explore = () => {
   return (
@@ -20,13 +20,13 @@ const Explore = () => {
               at all stages of their study abroad journey, from initial
               exploration to program application.
             </p>
-            <Link to={'/Mentorship'}>
+            <NavLink style={{color:"black"}}  to={'/Mentorship'}>
 
             <ArrowForwardIcon
               sx={{ fontSize: "40px" }}
               className="menthosihpArrow"
             />
-            </Link>
+            </NavLink>
           </div>
           <div className="explore_rightCard">
             {" "}
@@ -34,9 +34,9 @@ const Explore = () => {
             <h3>
               Finding Your Course 
                 
-              <Link to={'/FindYourCourse'}>
+              <NavLink style={{color:"black"}}  to={'/FindYourCourse'}>
               <ArrowForwardIcon sx={{ fontSize: "40px" }} />
-              </Link>
+              </NavLink>
             </h3>
             <p>
               Orient Spectra simplifies course selection for your academic and
@@ -51,9 +51,9 @@ const Explore = () => {
             <h3>
             
               Coaching 
-              <Link to={'/Coaching'} >
+              <NavLink style={{color:"black"}}  to={'/Coaching'} >
               <ArrowForwardIcon sx={{ fontSize: "40px" }} />
-              </Link> 
+              </NavLink> 
             </h3>
             <p>
               Orient Spectra streamlines the student visa process. Our expert
