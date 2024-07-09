@@ -5,8 +5,85 @@ import { Container, Typography, Box, Button } from '@mui/material';
 import Navbar from '../Common/Navbar';
 import Footer from '../Common/Footer';
 import Aos from 'aos'
-
+import GetTuchWithUs from '../../Landing_page/GetTuchWithUs2';
+import CircleArrow from '../Common/CircleArrow';
 const months = {1:'January',2:'February',3:'March',4:'April',5:'May',6:'June',7:'July',8:'August',9:'September',10:'October',11:'November',12:'December'}
+
+const RecentBlogs = [
+  {
+    id: 1,
+    date: "19 JUN2024",
+    title: "Recent Blog Title",
+    description:
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh malutpat.",
+      img:"",
+      
+  },
+  {
+    id: 1,
+    date: "19 JUN2024",
+    title: "Recent Blog Title",
+    description:
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh malutpat.",
+       img:""
+  },
+  {
+    id: 2,
+    date: "19 JUN2024",
+    title: "Recent Blog Title",
+    description:
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh malutpat.",
+       img:""
+  },
+  {
+    id: 3,
+    date: "19 JUN2024",
+    title: "Recent Blog Title",
+    description:
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh malutpat.",
+       img:""
+  },
+  {
+    id: 3,
+    date: "19 JUN2024",
+    title: "Recent Blog Title",
+    description:
+      "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh malutpat.",
+       img:""
+  },
+ 
+];
+
+
+const YouMightAlsoLike = () => {
+  return (
+    <>
+      <div className='YouMightAlsoLike'>
+        <div>
+          <h2>You Might Also Like</h2>
+        </div>
+        <div className="YouMightAlsoLike-blog-main-div">
+            {RecentBlogs.map((value, id)=><>
+            <div className="YouMightAlsoLike-blog-div">
+             
+                <div className="YouMightAlsoLike-blog-date">
+                    <p>{value.date}</p>
+                    <CircleArrow 
+                        className={"CircleArrow"} />
+                </div>
+                <div>
+                    <h3>{value.title}</h3>
+                </div>
+
+
+            </div>
+               
+            </>)}
+        </div>
+      </div>
+    </>
+  );
+};
 
 export default function BlogBody() {
     const location = useLocation();
@@ -100,8 +177,22 @@ export default function BlogBody() {
           {attributes.text}
         </Typography>
       </Container>
+      <div className='hr-tags'>
+      <hr />
+          <div className="remaing-blogs">
+            <h3>H3 Title</h3>
+            <p>19 JUN 2024</p>
+          </div>
+          <hr />
+          <div className="remaing-blogs">
+            <h3>H3 Title</h3>
+            <p>19 JUN 2024</p>
+          </div>
 
-    
+      </div>
+      
+      <YouMightAlsoLike />
+    <GetTuchWithUs/>
     <Footer/>
     </>)
 }

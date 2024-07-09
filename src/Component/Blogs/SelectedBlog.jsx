@@ -35,7 +35,8 @@ const RecentBlogs = [
     title: "Recent Blog Title",
     description:
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh malutpat.",
-      img:""
+      img:"",
+      
   },
   {
     id: 1,
@@ -86,10 +87,11 @@ const YouMightAlsoLike = () => {
                 <div></div>
                 <div className="YouMightAlsoLike-blog-date">
                     <p>{value.date}</p>
-                    <CircleArrow 
-                        className={"CircleArrow"} />
+                    <CircleArrow className={"CircleArrow"} />
                 </div>
-
+                <div>
+                    <h3>{value.title}</h3>
+                </div>
 
 
             </div>

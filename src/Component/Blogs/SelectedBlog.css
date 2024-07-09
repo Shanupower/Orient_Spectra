@@ -2,6 +2,9 @@
     /* margin-bottom: 150px; */
 }
 
+.YouMightAlsoLike{
+    padding: 50px;
+}
 .selected-blog-hero {
     display: flex;
     justify-content: center;
@@ -59,8 +62,8 @@ img {
 .YouMightAlsoLike-blog-div{
     display: flex;
    justify-content: center;
-   height: 250px;
-   width: 220px;
+   height: 300px;
+   width: 320px;
     background-color: lightgray;
     margin: 10px;
     border-radius: 25px;
@@ -70,7 +73,13 @@ img {
 .YouMightAlsoLike-blog-date{
     display: flex;
     justify-content: space-between;
+   flex-wrap: wrap;
+
+    align-items: center;
     position: absolute;
     bottom: 10px;
 
+}
+.hr-tags{
+    padding: 50px;
 }
