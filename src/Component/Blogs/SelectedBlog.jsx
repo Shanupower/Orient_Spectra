@@ -10,51 +10,7 @@ import GetTuchWithUs from "../../Landing_page/GetTuchWithUs2";
 import axios from "axios"
 import { useParams } from "react-router-dom";
 
-const {id} = useParams()
-console.log(id)
 
-useEffect(()=>{
-    axios.get("http://157.173.222.81:1337/api/blogs/2?populate=*").then(data=>console.log(data))
-},[])
-
-useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get("http://157.173.222.81:1337//api/blogs?populate=*", {
-          headers: {
-            Authorization: `Bearer ${import.meta.env.VITE_STRAPI}`
-          }
-        });
-        if (response.status === 200) {
-          data = (response.data.data);
-          let top = data.slice(0,3);
-          setTopPosts(top)
-          let featured = data.slice(3,9)
-          setFeaturedPosts
-        }}
-        catch(err){
-            console.log(err)
-
-        }
-fetchData()
-    }}
-)
-
-useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get("http://http://157.173.222.81:1337/api/blogs?populate=*", {
-          headers: {
-            Authorization: `Bearer ${import.meta.env.VITE_STRAPI}`
-          }
-        });
-        if (response.status === 200) {
-          data = (response.data.data);
-}}
-catch(err){
-    console.log(err)
-}
-}})
 const BlogTitle = () => {
   return (
     <div className="blog-title-p">
