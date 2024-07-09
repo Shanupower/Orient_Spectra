@@ -174,9 +174,10 @@ export default function BlogBody() {
     )}
   </Box>
 </Box>
-        <Typography variant="body1" paragraph>
+        {/* <Typography variant="body1" paragraph>
           {attributes.text}
-        </Typography>
+        </Typography> */}
+       <div dangerouslySetInnerHTML={{__html:attributes.text}}></div>
       
 
    
