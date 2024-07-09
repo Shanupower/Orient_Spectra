@@ -7,6 +7,7 @@ import Footer from "../Common/Footer";
 import BestBlog from "./BestBlog";
 import axios from "axios";
 import { useEffect,useState } from "react";
+import BlogsDetails from "./BlogsDetails";
 const Blogs = () => {
 
   const [data, setData] = useState([]);
@@ -39,6 +40,7 @@ const Blogs = () => {
       <Hero data={data.slice(0,3)}/>
       <BestBlog data ={data.slice(3)}/>
       <MoreBlog data={data.slice(3)}/>
+      <BlogsDetails/>
       <GetTuchWithUs />
       <Footer />
     </>
