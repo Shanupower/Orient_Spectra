@@ -5,6 +5,7 @@ import { Container, Typography, Box, Button } from '@mui/material';
 import Navbar from '../Common/Navbar';
 import Footer from '../Common/Footer';
 import Aos from 'aos'
+import './SelectedBlog.css'
 import GetTuchWithUs from '../../Landing_page/GetTuchWithUs2';
 import CircleArrow from '../Common/CircleArrow';
 const months = {1:'January',2:'February',3:'March',4:'April',5:'May',6:'June',7:'July',8:'August',9:'September',10:'October',11:'November',12:'December'}
@@ -55,6 +56,36 @@ const RecentBlogs = [
 ];
 
 
+// const YouMightAlsoLike = () => {
+//   return (
+//     <>
+//       <div className='YouMightAlsoLike'>
+//         <div>
+//           <h2>You Might Also Like</h2>
+//         </div>
+//         <div className="YouMightAlsoLike-blog-main-div">
+//             {RecentBlogs.map((value, id)=><>
+//             <div className="YouMightAlsoLike-blog-div">
+             
+//                 <div className="YouMightAlsoLike-blog-date">
+//                     <p>{value.date}</p>
+//                     <CircleArrow 
+//                         className={"CircleArrow"} />
+//                 </div>
+//                 <div>
+//                     <h3>{value.title}</h3>
+//                 </div>
+
+
+//             </div>
+               
+//             </>)}
+//         </div>
+//       </div>
+//     </>
+//   );
+// };
+
 const YouMightAlsoLike = () => {
   return (
     <>
@@ -63,27 +94,25 @@ const YouMightAlsoLike = () => {
           <h2>You Might Also Like</h2>
         </div>
         <div className="YouMightAlsoLike-blog-main-div">
-            {RecentBlogs.map((value, id)=><>
-            <div className="YouMightAlsoLike-blog-div">
-             
-                <div className="YouMightAlsoLike-blog-date">
-                    <p>{value.date}</p>
-                    <CircleArrow 
-                        className={"CircleArrow"} />
-                </div>
-                <div>
-                    <h3>{value.title}</h3>
-                </div>
-
-
+          {RecentBlogs.map((value, id) => (
+            <div className="YouMightAlsoLike-blog-div" key={id}>
+              <div className="YouMightAlsoLike-blog-date">
+                <p>{value.date}</p>
+                <CircleArrow className={"CircleArrow"} />
+              </div>
+              <div className="YouMightAlsoLike-blog-content">
+                <h3 className="YouMightAlsoLike-blog-title">{value.title}</h3>
+                <p className="YouMightAlsoLike-blog-description">{value.description}</p>
+              </div>
             </div>
-               
-            </>)}
+          ))}
         </div>
       </div>
     </>
   );
 };
+
+
 
 export default function BlogBody() {
     const location = useLocation();
@@ -125,24 +154,6 @@ export default function BlogBody() {
           </Typography>
         </Box>
         
-        {/* <Box my={4} display="flex" justifyContent="center">
-          <Box 
-            style={{ 
-              width: '100%', 
-              height: '300px', 
-              
-              backgroundColor: '#E0E0E0', 
-              borderRadius: '8px', 
-              display: 'flex', 
-              justifyContent: 'center', 
-              alignItems: 'center' 
-            }}
-          >
-            <Typography variant="subtitle1" color="textSecondary">
-              No image available
-            </Typography>
-          </Box>
-        </Box> */}
         <Box my={4} display="flex" justifyContent="center">
   <Box 
     style={{ 
