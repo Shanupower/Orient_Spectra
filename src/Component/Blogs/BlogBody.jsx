@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation,useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { Container, Typography, Box } from '@mui/material';
 import Navbar from '../Common/Navbar';
@@ -11,22 +11,29 @@ import CircleArrow from '../Common/CircleArrow';
 
 const months = { 1: 'January', 2: 'February', 3: 'March', 4: 'April', 5: 'May', 6: 'June', 7: 'July', 8: 'August', 9: 'September', 10: 'October', 11: 'November', 12: 'December' };
 
+
 const YouMightAlsoLike = ({ RecentBlogs }) => {
+  const navigate = useNavigate();
+  
+  const handleNavigate = (post) => {
+    navigate('/content', { state: { data: post } });
+  };
+
   return (
     <div className='YouMightAlsoLike'>
       <div>
         <h2>You Might Also Like</h2>
       </div>
       <div className="YouMightAlsoLike-blog-main-div">
-        {RecentBlogs.map((value, id) => (
+        {RecentBlogs?.map((value, id) => (
           <div className="YouMightAlsoLike-blog-div" key={id}>
             <div className="YouMightAlsoLike-blog-date">
               <p>{value.date}</p>
-              <CircleArrow className={"CircleArrow"} />
+              <CircleArrow className={"CircleArrow"} onClick={() => handleNavigate(value)} />
             </div>
             <div className="YouMightAlsoLike-blog-content">
-              <h3 className="YouMightAlsoLike-blog-title">{value.title}</h3>
-              <p className="YouMightAlsoLike-blog-description">{value.description}</p>
+              <h3 className="YouMightAlsoLike-blog-title">{value?.title}</h3>
+              <p className="YouMightAlsoLike-blog-description">{value?.description}</p>
             </div>
           </div>
         ))}
@@ -35,9 +42,10 @@ const YouMightAlsoLike = ({ RecentBlogs }) => {
   );
 };
 
+
 export default function BlogBody() {
   const location = useLocation();
-  const { data } = location.state || {};
+  const { data } = location?.state || {};
   const [postData, setPostData] = useState([]);
   const [randomBlogs, setRandomBlogs] = useState([]);
 
@@ -59,11 +67,11 @@ export default function BlogBody() {
   useEffect(() => {
     if (postData.length > 0) {
       const getRandomBlogs = () => {
-        let shuffled = postData.sort(() => 0.5 - Math.random());
+        let shuffled = postData?.sort(() => 0.5 - Math.random());
         return shuffled.slice(0, 6).map(blog => ({
-          date: formatDate(blog.attributes.Date),
-          title: blog.attributes.Title,
-          description: blog.attributes.Description
+          date: formatDate(blog?.attributes?.Date),
+          title: blog.attributes?.Title,
+          description: blog.attributes?.Description
         }));
       };
 
@@ -85,9 +93,9 @@ export default function BlogBody() {
     });
   }, []);
 
-  let date = formatDate(attributes.Date);
+  let date = formatDate(attributes?.Date);
 
-  let imgURL = `http://157.173.222.81:1337${attributes.Headline_image.data.attributes.formats.thumbnail.url}`;
+  let imgURL = `http://157.173.222.81:1337${attributes?.Headline_image.data.attributes.formats.thumbnail.url}`;
 
   return (
     <>
@@ -95,7 +103,7 @@ export default function BlogBody() {
       <Container maxWidth="md" style={{ paddingTop: '2rem', paddingBottom: '2rem' }}>
         <Box textAlign="center">
           <Typography variant="h1" gutterBottom>
-            {attributes.Title}
+            {attributes?.Title}
           </Typography>
         </Box>
         <Box textAlign="center" my={2}>
@@ -135,7 +143,7 @@ export default function BlogBody() {
           </Box>
         </Box>
         <Typography variant="body1" paragraph>
-          {attributes.text}
+          {attributes?.text}
         </Typography>
       </Container>
       <div className='hr-tags'>
