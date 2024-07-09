@@ -8,7 +8,8 @@ import StudyOverseas from "./Component/StudyOverseas/StudyOverseas";
 import LandingPage from "./Landing_page/LandingPage";
 import { Routes, Route } from "react-router-dom";
 import Finding  from "./FindingYourCourse/Finding";
-import BlogBody from "./Component/Blogs/BlogBody";
+import Coaching from "./Coaching/Coaching";
+import Mentorship from "./Mentorship/Mentorship";
 function App() {
   return (
     <>
@@ -20,8 +21,12 @@ function App() {
         <Route path="/events" element={<Event />} />
         <Route path="/study-overseas" element={<StudyOverseas />} />
         <Route path="/news-&-pr" element={<NewsPR />} />
-        <Route path="/find" element={<Finding/>}></Route>
-        <Route path="content" element={<BlogBody/>} />
+        <Route path="/FindYourCourse" element={<Finding/>}></Route>
+        <Route path='/Coaching' element={<Coaching/>}></Route>
+        <Route path="/Mentorship" element={<Mentorship/>}></Route>
+
+
+
       </Routes>
     </>
   );
