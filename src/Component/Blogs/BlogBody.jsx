@@ -60,19 +60,20 @@ const YouMightAlsoLike = () => {
     <>
       <div className='YouMightAlsoLike'>
         <div>
-          <h2>You Might Also Like</h2>
+          <h2 className='YouMightAlsoLike-h2' >You Might Also Like</h2>
         </div>
         <div className="YouMightAlsoLike-blog-main-div">
             {RecentBlogs.map((value, id)=><>
             <div className="YouMightAlsoLike-blog-div">
-             
                 <div className="YouMightAlsoLike-blog-date">
                     <p>{value.date}</p>
-                    <CircleArrow 
-                        className={"CircleArrow"} />
+                    <span>
+                    <CircleArrow className={"CircleArrow"} />
+                    </span>
                 </div>
-                <div>
+                <div className='YouMightAlsoLike-blog-description'>
                     <h3>{value.title}</h3>
+                    <p>{value.description}</p>
                 </div>
 
 
@@ -176,6 +177,9 @@ export default function BlogBody() {
         <Typography variant="body1" paragraph>
           {attributes.text}
         </Typography>
+      
+
+   
       </Container>
       <div className='hr-tags'>
       <hr />

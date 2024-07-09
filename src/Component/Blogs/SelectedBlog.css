@@ -3,7 +3,11 @@
 }
 
 .YouMightAlsoLike{
-    padding: 50px;
+    padding: 30px;
+}
+.YouMightAlsoLike-h2{
+    margin-left: 50px;
+    margin-bottom: 20px;
 }
 .selected-blog-hero {
     display: flex;
@@ -66,20 +70,26 @@ img {
    width: 320px;
     background-color: lightgray;
     margin: 10px;
-    border-radius: 25px;
+    border-radius: 15px;
     position: relative;
 
 }
 .YouMightAlsoLike-blog-date{
     display: flex;
     justify-content: space-between;
-   flex-wrap: wrap;
-
     align-items: center;
     position: absolute;
     bottom: 10px;
 
 }
+.YouMightAlsoLike-blog-date p{
+    margin-right:100px ;
+}
 .hr-tags{
     padding: 50px;
+}
+.YouMightAlsoLike-blog-description{
+    position: absolute;
+    bottom:-100px;
+    padding: 0px 10px;
 }
