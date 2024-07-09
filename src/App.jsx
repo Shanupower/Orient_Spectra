@@ -11,6 +11,7 @@ import Finding  from "./FindingYourCourse/Finding";
 import Coaching from "./Coaching/Coaching";
 import Mentorship from "./Mentorship/Mentorship";
 import SelectedBlog from "./Component/Blogs/SelectedBlog";
+import BlogBody from "./Component/Blogs/BlogBody";
 function App() {
   return (
     <>
@@ -25,7 +26,8 @@ function App() {
         <Route path="/FindYourCourse" element={<Finding/>}></Route>
         <Route path='/Coaching' element={<Coaching/>}></Route>
         <Route path="/Mentorship" element={<Mentorship/>}></Route>
-        <Route path='/blogs/:id' element={<SelectedBlog/>}></Route>
+        <Route path='/blogs' element={<SelectedBlog/>}></Route>
+        <Route path="/content" element={<BlogBody/>}/>
 
 
 

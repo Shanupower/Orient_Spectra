@@ -27,7 +27,7 @@ const MoreBlog = ({data}) => {
             <div className="blogcard1">
               <h3>{item?.attributes.Title}</h3>
               <p>
-                {item?.attributes.Content}
+                {item?.attributes.Short_Description}
               </p>
             </div>
             <CircleArrow 
