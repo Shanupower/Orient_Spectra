@@ -66,7 +66,7 @@ const GetStartedToday = () => {
       >
         <div className="section StudyAbroad">
           <div className="studySection useInViewcard">
-            <p color="#FF5F15">Get Started Today!</p>
+            <p color="#FF5F15" style={{marginBottom:"20px"}}>Get Started Today!</p>
             <p className={`Getcontent ${isAnimated ? "animated" : ""}`}>
 
             </p>

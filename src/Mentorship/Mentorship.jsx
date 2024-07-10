@@ -18,6 +18,7 @@ import "../FindingYourCourse/find.css";
 import CircleArrow from "../Component/Common/CircleArrow";
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
+import Footer from "../Component/Common/Footer";
 // DATA FOR ACCORDION
 const getItems = (panelStyle) => [
   {
@@ -200,6 +201,7 @@ const Finding = () => {
         <div className="capabilities-section">
           <div className="capabilities-card">
             <div className="cap-image-card ">
+            <img style={{objectFit:"cover"}} src="src\assets\Explore our Capabilities\Coaching\Services image.jpg" alt="Coaching"/> 
               <NavLink style={{color:"black"}} to={'/Coaching'}>
               <CircleArrow className="CircleArrowButton" />
               </NavLink>
@@ -214,11 +216,13 @@ const Finding = () => {
           </div>
           <div className="capabilities-card">
             <div className="cap-image-card ">
-              <NavLink style={{color:"black"}} to={'/Mentorship'}>
+            <img style={{objectFit:"cover"}} src="src\assets\Explore our Capabilities\Finding your course\Our Approach.jpg" alt="Finding your course"/>
+
+              <NavLink style={{color:"black"}} to={'/FindYourCourse'}>
               <CircleArrow className="CircleArrowButton" />
               </NavLink>
             </div>
-            <h1>Mentorship</h1>
+            <h1>Find Your Course</h1>
             <p>
               At Orient Spectra Overseas Education Consultancy, your success is
               our priority. Trust us to guide you through the student visa
@@ -228,6 +232,8 @@ const Finding = () => {
         </div>
       </div>
       <GetStartedToday />
+      <Footer/>
+      
     </>
   );
 };

@@ -68,7 +68,7 @@ export default function BlogBody() {
     if (postData.length > 0) {
       const getRandomBlogs = () => {
         let shuffled = postData?.sort(() => 0.5 - Math.random());
-        return shuffled.slice(0, 6).map(blog => ({
+        return shuffled.slice(0, 10).map(blog => ({
           date: formatDate(blog?.attributes?.Date),
           title: blog.attributes?.Title,
           description: blog.attributes?.Description
@@ -143,10 +143,10 @@ export default function BlogBody() {
           </Box>
         </Box>
         <Typography variant="body1" paragraph>
-          {attributes?.text}
+        <div dangerouslySetInnerHTML={{ __html: attributes.text }} />
         </Typography>
       </Container>
-      <div className='hr-tags'>
+      {/* <div className='hr-tags'>
         <hr />
         <div className="remaing-blogs">
           <h3>H3 Title</h3>
@@ -157,7 +157,7 @@ export default function BlogBody() {
           <h3>H3 Title</h3>
           <p>19 JUN 2024</p>
         </div>
-      </div>
+      </div> */}
 
       <YouMightAlsoLike RecentBlogs={randomBlogs} />
       <GetTuchWithUs />
