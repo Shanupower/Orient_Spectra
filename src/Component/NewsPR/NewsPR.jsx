@@ -5,6 +5,32 @@ import Navbar from "../Common/Navbar";
 import Hero from "./Hero";
 import LatestNews from "./LatestNews";
 import RecentNews from "./RecentNews";
+const NewsPRData = [
+  {
+    id: 1,
+    attributes: {
+      title: "The 10 Best Places to Visit in the World",
+      Short_Description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut",
+    },
+  },
+  {
+    id: 2,
+    attributes: {
+      title: "The 10 Best Places to Visit in the World",
+      Short_Description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut",
+    },
+  },
+  {
+    id: 3,
+    attributes: {
+      title: "The 10 Best Places to Visit in the World",
+      Short_Description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut",
+    },
+  },
+];
 const NewsPR = () => {
   return (
     <>
@@ -12,7 +38,7 @@ const NewsPR = () => {
       <Hero />
       <LatestNews />
       <RecentNews />
-      <MoreBlog />
+      <MoreBlog data={NewsPRData} />
       <GetTuchWithUs />
       <Footer />
     </>
