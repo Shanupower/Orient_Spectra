@@ -2,16 +2,12 @@ import CircleArrow from "../Common/CircleArrow";
 import Divider from "../Common/Divider";
 import "./event.css";
 
-const SuccessStory = () => {
+const SuccessStory = ({ eventData }) => {
   return (
     <div className="success-story-container section">
       <div className="event-datecard">
-        <b>19 Jun 2024</b>
-        <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique
-          expedita odio debitis odit voluptate amet, magnam fugiat eaque
-          consectetur ipsam.
-        </p>
+        <b>{eventData[0]?.attributes.Date_of_the_event}</b>
+        <p>{eventData[0]?.attributes.Shortdescription}</p>
       </div>
       <div className="success-stroy-section">
         <h1>Sucess Stories</h1>

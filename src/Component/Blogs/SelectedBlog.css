@@ -151,9 +151,11 @@ img {
 }
 
 .hero-section-blog > h1 {
-  font-size: 60px;
+  font-size: 74px;
   font-weight: 500;
   color: var(--brand-color);
+  width: 50%;
+  line-height: 1.2;
 }
 .hero-section-blog > div {
   display: flex;
@@ -164,7 +166,7 @@ img {
 
 .hero-section-blog > div > p {
   width: 30%;
-  font-size: 18px;
+  font-size: 20px;
   color: var(--text-color-darkblak);
 }
 
@@ -182,8 +184,7 @@ img {
   width: 100%;
   display: flex;
   justify-content: flex-end;
+  marb
 }
 
-.Richtextcard {
-  width: 60%;
-}
+

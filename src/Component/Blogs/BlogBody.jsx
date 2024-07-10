@@ -142,7 +142,6 @@ export default function BlogBody() {
         </div>
         <div className="TexteditorBlock">
           <div
-            className="Richtextcard"
             dangerouslySetInnerHTML={{ __html: attributes.text }}
           />
         </div>

@@ -66,11 +66,3 @@ html {
 .Orient-Spectra-text{
   margin-left: 100px;
 }
-.orient-spectra-btn-text{
-  background-color: transparent;
-  color: black;
-  font-size: 25px;
-  font-family: "OverusedGrotesk";
-  src: url("src/fonts/woff/OverusedGrotesk-Light.woff") format("woff");
-  
-}
