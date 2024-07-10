@@ -1,8 +1,9 @@
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import "./index.css";
 import Cource from "../assets/GroupImg1.png";
-import {NavLink} from 'react-router-dom'
+import { NavLink } from "react-router-dom";
 import Img2 from "../assets/GroupImg2.png";
+import Img3 from "../assets/Asset 1@2x 2 (1).png";
 const Explore = () => {
   return (
     <>
@@ -13,29 +14,32 @@ const Explore = () => {
         </div>
         <div className="explore_rightSide">
           <div className="explore_rightCard">
-            <h3>Mentorship</h3>
-            <p className="courseText">
-              Orient Spectra empowers students to achieve academic and career
-              goals through personalized mentorship. Our program guides students
-              at all stages of their study abroad journey, from initial
-              exploration to program application.
-            </p>
-            <NavLink style={{color:"black"}}  to={'/Mentorship'}>
-
-            <ArrowForwardIcon
-              sx={{ fontSize: "40px" }}
-              className="menthosihpArrow"
-            />
-            </NavLink>
+            <div className="explore_rightCard_img">
+              <img src={Img3} alt="" />
+            </div>
+            <div>
+              <h3>Mentorship</h3>
+              <p className="courseText">
+                Orient Spectra empowers students to achieve academic and career
+                goals through personalized mentorship. Our program guides
+                students at all stages of their study abroad journey, from
+                initial exploration to program application.
+              </p>
+              <NavLink style={{ color: "black" }} to={"/Mentorship"}>
+                <ArrowForwardIcon
+                  sx={{ fontSize: "40px" }}
+                  className="menthosihpArrow"
+                />
+              </NavLink>
+            </div>
           </div>
           <div className="explore_rightCard">
             {" "}
             <img src={Cource} alt="" className="corcesImage" />
             <h3>
-              Finding Your Course 
-                
-              <NavLink style={{color:"black"}}  to={'/FindYourCourse'}>
-              <ArrowForwardIcon sx={{ fontSize: "40px" }} />
+              Finding Your Course
+              <NavLink style={{ color: "black" }} to={"/FindYourCourse"}>
+                <ArrowForwardIcon sx={{ fontSize: "40px" }} />
               </NavLink>
             </h3>
             <p>
@@ -47,13 +51,12 @@ const Explore = () => {
           </div>
           <div className="explore_rightCard">
             {" "}
-          <img src={Img2} alt="" className="corcesImage" />
+            <img src={Img2} alt="" className="corcesImage" />
             <h3>
-            
-              Coaching 
-              <NavLink style={{color:"black"}}  to={'/Coaching'} >
-              <ArrowForwardIcon sx={{ fontSize: "40px" }} />
-              </NavLink> 
+              Coaching
+              <NavLink style={{ color: "black" }} to={"/Coaching"}>
+                <ArrowForwardIcon sx={{ fontSize: "40px" }} />
+              </NavLink>
             </h3>
             <p>
               Orient Spectra streamlines the student visa process. Our expert

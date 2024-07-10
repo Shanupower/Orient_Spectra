@@ -20,6 +20,25 @@
 .navBarContainer.Navbarshow {
   transform: translateY(2rem);
 }
+.countryCard {
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+}
+.flagCard {
+  width: 50px;
+  height: 30px;
+}
+.countryCard > p {
+  color: #000 !important;
+  font-size: 14px !important;
+  font-weight: 500;
+}
+.flagCard > img {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
 
 .logo {
   height: 3.8rem;
@@ -236,7 +255,6 @@
 .FaQ_container > h1 {
   font-size: 42px;
   color: var(--text-color-black);
-
 }
 
 .accordionConatiner {
@@ -252,3 +270,20 @@
 .AccordionSummary {
   background-color: #ffe8d9 #ff7300;
 }
+
+/* .css-dev-only-do-not-override-j9bb5n {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 2rem;
+  min-width: fit-content;
+}
+
+
+.ant-dropdown-placement-bottomLeft {
+  --arrow-x: 56.02664px !important;
+  --arrow-y: 4px !important;
+  inset: 79px auto auto 92.35px !important;
+  box-sizing: border-box;
+  min-width: 150.053px;
+  max-width: 74% !important;
+} */

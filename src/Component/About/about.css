@@ -55,10 +55,10 @@
 
 /* Storry */
 
-.story-container {
+.story-containers {
   margin-block: 2rem;
 }
-.story-container > h1 {
+.story-containers > h1 {
   color: var(--text-color-darkblack);
   font-size: 70px;
   font-weight: 600;

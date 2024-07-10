@@ -26,6 +26,7 @@ const Hero = () => {
               <div className="Hero--images">
                 <img src={data.bgImage} alt="" />
               </div>
+
               <div className="Hero_Content">
                 <p className="hero_Heading">{data.text}</p>
                 <h1 className="hero_Heading BoldHeading">{data.heading}</h1>

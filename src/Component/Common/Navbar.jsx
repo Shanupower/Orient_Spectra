@@ -10,25 +10,193 @@ import { useMediaQuery } from "@mui/material";
 import { Drawer } from "antd";
 import { Menu } from "antd";
 import Logo3 from "../../assets/Layer_1.png";
+import Us from "../../assets/Country/Flag/Group 25.png";
+import Canada from "../../assets/Country/Flag/Group 23.png";
+import Australia from "../../assets/Country/Flag/Group 28.png";
+import Uk from "../../assets/Country/Flag/Group 30.png";
+import Dubai from "../../assets/Country/Flag/Group 39.png";
+import Sweden from "../../assets/Country/Flag/Group 40.png";
+import Poland from "../../assets/Country/Flag/Group 41.png";
+import Switzerland from "../../assets/Country/Flag/Group 42.png";
+import Malta from "../../assets/Country/Flag/Malta.png";
+import Singapore from "../../assets/Country/Flag/Singapore.png";
+import Ireland from "../../assets/Country/Flag/Ireland.png";
+import Germany from "../../assets/Country/Flag/Germany.png";
+import France from "../../assets/Country/Flag/France.png";
 
 import MenuIcon from "@mui/icons-material/Menu";
 
 const items = [
-  // {
-  //   label: <a href="https://www.antgroup.com">1st menu item</a>,
-  //   key: "0",
-  // },
-  // {
-  //   label: <a href="https://www.aliyun.com">2nd menu item</a>,
-  //   key: "1",
-  // },
-  // {
-  //   type: "divider",
-  // },
-  // {
-  //   label: "3rd menu item",
-  //   key: "3",
-  // },
+  {
+    label: (
+      <a href="/country/Usa">
+        <div className="countryCard">
+          <div className="flagCard">
+            <img src={Us} alt="" />
+          </div>
+          <p>United States</p>
+        </div>
+      </a>
+    ),
+    key: "0",
+  },
+  {
+    label: (
+      <a href="/country/Canada">
+        <div className="countryCard">
+          <div className="flagCard">
+            <img src={Canada} alt="" />
+          </div>
+          <p>Canada</p>
+        </div>
+      </a>
+    ),
+    key: "1",
+  },
+
+  {
+    label: (
+      <a href="/country/UK">
+        <div className="countryCard">
+          <div className="flagCard">
+            <img src={Uk} alt="" />
+          </div>
+          <p>United Kingdom</p>
+        </div>
+      </a>
+    ),
+    key: "3",
+  },
+  {
+    label: (
+      <a href="/country/Australia">
+        <div className="countryCard">
+          <div className="flagCard">
+            <img src={Australia} alt="" />
+          </div>
+          <p>Australia</p>
+        </div>
+      </a>
+    ),
+    key: "3",
+  },
+  {
+    label: (
+      <a href="/country/France">
+        <div className="countryCard">
+          <div className="flagCard">
+            <img src={France} alt="" />
+          </div>
+          <p>France</p>
+        </div>
+      </a>
+    ),
+    key: "3",
+  },
+  {
+    label: (
+      <a href="/country/Germany">
+        <div className="countryCard">
+          <div className="flagCard">
+            <img src={Germany} alt="" />
+          </div>
+          <p>Germany</p>
+        </div>
+      </a>
+    ),
+    key: "3",
+  },
+  {
+    label: (
+      <a href="/country/Switzerland">
+        <div className="countryCard">
+          <div className="flagCard">
+            <img src={Switzerland} alt="" />
+          </div>
+          <p>Switzerland</p>
+        </div>
+      </a>
+    ),
+    key: "3",
+  },
+  {
+    label: (
+      <a href="/country/Ireland">
+        <div className="countryCard">
+          <div className="flagCard">
+            <img src={Ireland} alt="" />
+          </div>
+          <p>Ireland</p>
+        </div>
+      </a>
+    ),
+    key: "3",
+  },
+  {
+    label: (
+      <a href="/country/Singapore">
+        <div className="countryCard">
+          <div className="flagCard">
+            <img src={Singapore} alt="" />
+          </div>
+          <p>Singapore</p>
+        </div>
+      </a>
+    ),
+    key: "3",
+  },
+  {
+    label: (
+      <a href="/country/Dubai">
+        <div className="countryCard">
+          <div className="flagCard">
+            <img src={Dubai} alt="" />
+          </div>
+          <p>Dubai</p>
+        </div>
+      </a>
+    ),
+    key: "3",
+  },
+  {
+    label: (
+      <a href="/country/Sweden">
+        <div className="countryCard">
+          <div className="flagCard">
+            <img src={Sweden} alt="" />
+          </div>
+          <p>Sweden</p>
+        </div>
+      </a>
+    ),
+    key: "3",
+  },
+  {
+    label: (
+      <a href="/country/Poland">
+        <div className="countryCard">
+          <div className="flagCard">
+            <img src={Poland} alt="" />
+          </div>
+          <p>Poland</p>
+        </div>
+      </a>
+    ),
+    key: "3",
+  },
+  {
+    label: (
+      <a href="/country/Malta">
+        <div className="countryCard">
+          <div className="flagCard">
+            <img src={Malta} alt="" />
+          </div>
+          <p>Malta</p>
+        </div>
+      </a>
+    ),
+    key: "3",
+  },
 ];
 const Menuitem = [
   {
@@ -216,16 +384,10 @@ const Navbar = () => {
                 }}
                 trigger={["click"]}
               >
-                <Link
-                  to="/country"
-                  className="Link_route "
-                  style={{ color: "#fff" }}
-                >
-                  <Space>
-                    Study Overseas
-                    <DownOutlined />
-                  </Space>
-                </Link>
+                <Space>
+                  Study Overseas
+                  <DownOutlined />
+                </Space>
               </Dropdown>
             </div>
             <div>

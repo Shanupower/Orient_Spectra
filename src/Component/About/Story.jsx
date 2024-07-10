@@ -2,14 +2,13 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import Quote from "../../assets/Country/quote.png";
 import Graph from "../../assets/Blogs/graph2.png";
 import FormatQuoteSharpIcon from "@mui/icons-material/FormatQuoteSharp";
-
-import "./about.css";
 import BarLabel from "./Barchart";
 import CircleArrow from "../Common/CircleArrow";
+import "./about.css";
 
 const Story = () => {
   return (
-    <div className="story-container section">
+    <div className="story-containers section">
       <h1>This Is Us</h1>
       <div className="storytext-card">
         <p>
