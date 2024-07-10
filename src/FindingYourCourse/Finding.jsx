@@ -178,7 +178,7 @@ const Finding = () => {
         <div className="capabilities-section">
           <div className="capabilities-card">
             <div className="cap-image-card">
-              <img style={{objectFit:"cover"}} src="src\assets\Explore our Capabilities\Coaching\Services image.jpg"/> 
+              <img style={{objectFit:"cover"}} src="src\assets\Explore our Capabilities\Coaching\Services image.jpg" alt="Coaching"/> 
               <NavLink style={{color:"black"}} to={'/Coaching'}>
 
               <CircleArrow className="CircleArrowButton" />
@@ -194,7 +194,7 @@ const Finding = () => {
           </div>
           <div className="capabilities-card">
             <div className="cap-image-card">
-              <img style={{objectFit:"cover"}} src="src\assets\Explore our Capabilities\Mentorship\How it works.jpg"/>
+              <img style={{objectFit:"cover"}} src="src\assets\Explore our Capabilities\Mentorship\How it works.jpg" alt="Mentorship"/>
               <NavLink style={{color:"black"}} to={'/Mentorship'}>
               <CircleArrow className="CircleArrowButton" />
               </NavLink>

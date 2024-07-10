@@ -193,7 +193,7 @@ const Coaching = () => {
         <div className="capabilities-section">
           <div className="capabilities-card">
             <div className="cap-image-card">
-              <img style={{objectFit:"cover"}} src="src\assets\Explore our Capabilities\Finding your course\Our Approach.jpg"/>
+              <img style={{objectFit:"cover"}} src="src\assets\Explore our Capabilities\Finding your course\Our Approach.jpg" alt="Finding your course"/>
               <NavLink style={{ color: "black" }} to={"/FindYourCourse"}>
                 <CircleArrow className="CircleArrowButton" />
               </NavLink>
@@ -208,7 +208,7 @@ const Coaching = () => {
           </div>
           <div className="capabilities-card">
             <div className="cap-image-card">
-              <img style={{objectFit:"cover"}} src="src\assets\Explore our Capabilities\Mentorship\How it works.jpg"/>
+              <img style={{objectFit:"cover"}} src="src\assets\Explore our Capabilities\Mentorship\How it works.jpg" alt="Mentorship"/>
               <NavLink style={{ color: "black" }} to={"/Mentorship"}>
                 <CircleArrow className="CircleArrowButton" />
               </NavLink>
