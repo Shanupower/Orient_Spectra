@@ -24,6 +24,7 @@ import SingaporeCountry from "./Component/Country/Singapore/Country";
 function App() {
   return (
     <>
+    
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/country/Usa" element={<UKCountry />} />

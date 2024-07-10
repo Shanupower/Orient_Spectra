@@ -2,7 +2,6 @@ import Img from "../../assets/man-wearing-t-shirt-gesturing.jpg";
 import Img1 from "../../assets/pretty-indian-college-girl-universit.jpg";
 import Img2 from "../../assets/pretty-indian-college-girl-university.jpg";
 import Img3 from "../../assets/young-adult-achievement-graduation-gown-toothy-smile-generated-by-ai.jpg";
-
 export const HeroPagedata = [
   {
     id: 1,
