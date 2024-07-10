@@ -13,133 +13,168 @@ import Footer from "../../Common/Footer";
 const getItems = (panelStyle) => [
   {
     key: "1",
-    label: "What are the general steps to apply to a university in the USA?",
+    label: "Why should I consider Canada for my study abroad destination?",
     children: (
       <p className="textContent">
-        The general steps include researching universities, preparing for
-        standardized tests (like SAT, ACT, GRE, GMAT), obtaining recommendation
-        letters, writing personal statements, completing the application forms,
-        submitting transcripts, and applying for a student visa.
+        Canada is known for its high-quality education system, diverse and inclusive
+        society, and beautiful natural landscapes. It's an ideal destination for students seeking a
+        well-rounded overseas education experience.
       </p>
     ),
     style: panelStyle,
   },
   {
     key: "2",
-    label:
-      "What types of student visas are available for international students?",
+    label: "What are the benefits of studying abroad in Canada?",
     children: (
       <p className="textContent">
-        {" "}
-        The most common student visas are the F-1 visa for academic studies and
-        the J-1 visa for exchange programs. The M-1 visa is for vocational or
-        non-academic programs.
+        Studying abroad in Canada offers numerous benefits, including access to
+        world-class universities, diverse cultural experiences, opportunities for research and
+        development, and pathways to permanent residency.
       </p>
     ),
     style: panelStyle,
   },
   {
     key: "3",
-    label:
-      " How important are standardized tests for admission to U.S. universities?",
+    label: "What are the general admission requirements for international students in Canada?",
     children: (
       <p className="textContent">
-        : Standardized tests like the SAT, ACT, GRE, and GMAT are important as
-        they are often required by universities as part of the admissions
-        process. However, their importance can vary by institution and program
+        Admission requirements vary by institution and program, but typically include
+        academic transcripts, proof of language proficiency (such as IELTS or TOEFL scores),
+        a statement of purpose, and letters of recommendation.
       </p>
     ),
     style: panelStyle,
   },
   {
     key: "4",
-    label: "What are the English language proficiency requirements?",
+    label: "How do I apply to Canadian universities for overseas education?",
     children: (
       <p className="textContent">
-        Most universities require international students to demonstrate English
-        proficiency through tests such as TOEFL or IELTS. Minimum score
-        requirements vary by institution.
+        The application process generally involves selecting your desired program, meeting
+        the eligibility criteria, submitting an online application through the university's portal,
+        and providing necessary documents such as transcripts and language test scores.
       </p>
     ),
     style: panelStyle,
   },
   {
     key: "5",
-    label: "Are there scholarships available for international students?",
+    label: "When should I start my application process to study abroad in Canada?",
     children: (
       <p className="textContent">
-        {" "}
-        Yes, many universities offer scholarships for international students
-        based on merit, need, or specific talents. Additionally, there are
-        external scholarships and grants available from various organizations.
+        It is advisable to start the application process at least 12-18 months before the
+        intended start date to ensure ample time for gathering documents, fulfilling
+        requirements, and obtaining a study permit.
       </p>
     ),
     style: panelStyle,
   },
   {
     key: "6",
-    label: "What is the typical academic year like in U.S. universities?",
+    label: "How much does it cost to study in Canada?",
     children: (
       <p className="textContent">
-        {" "}
-        The academic year is typically divided into two semesters (fall and
-        spring) or quarters, depending on the institution. There may also be a
-        summer session for additional courses.
+        Tuition fees vary depending on the program and institution, but international
+        students can expect to pay between CAD 15,000 to CAD 30,000 per year.
+        Additionally, living expenses can range from CAD 10,000 to CAD 15,000 annually.
       </p>
     ),
     style: panelStyle,
   },
   {
     key: "7",
-    label:
-      "What kind of academic support is available for international students?",
+    label: "Are there scholarships available for international students in Canada?",
     children: (
       <p className="textContent">
-        {" "}
-        Universities offer various support services, including tutoring centers,
-        writing labs, academic advising, and international student offices to
-        help with academic and cultural adjustment
+        Yes, many Canadian universities and government programs offer scholarships for
+        international students based on academic merit, financial need, and specific fields of
+        study.
       </p>
     ),
     style: panelStyle,
   },
   {
     key: "8",
-    label: "What are the options for staying in the USA after graduation?",
+    label: "What is the process for obtaining a Canadian study permit?",
     children: (
       <p className="textContent">
-        International students can apply for Optional Practical Training (OPT),
-        which allows them to work in their field of study for up to 12 months
-        (or up to 36 months for STEM graduates). Additionally, some may pursue
-        H-1B work visas if they secure a job offer from a U.S. employer.
+        To obtain a study permit, you need an acceptance letter from a designated learning institution
+        (DLI), proof of sufficient financial resources, and a clean criminal record. You must apply online
+        or at a visa application center.
       </p>
     ),
     style: panelStyle,
   },
   {
     key: "9",
-    label: "How can I build a professional network while studying in the USA?",
+    label: "Can I work while studying abroad in Canada?",
     children: (
       <p className="textContent">
-        {" "}
-        Students can build their network by joining student organizations,
-        participating in internships, attending career fairs, engaging in
-        on-campus events, and connecting with alumni through university career
-        services.
+        Yes, international students in Canada can work up to 20 hours per week during regular
+        academic sessions and full-time during scheduled breaks, provided they hold a valid study
+        permit and are enrolled full-time at a DLI.
       </p>
     ),
     style: panelStyle,
   },
   {
     key: "10",
-    label: "Can international students work while studying in the USA?",
+    label: "What is the accommodation situation for international students in Canada?",
     children: (
       <p className="textContent">
-        Yes, international students with an F-1 visa can work on-campus for up
-        to 20 hours per week during the academic year and full-time during
-        breaks. Off-campus work is permitted under certain conditions, such as
-        Curricular Practical Training (CPT) and Optional Practical Training
-        (OPT).
+        International students can choose from on-campus housing, off-campus apartments, or
+        homestays. It is recommended to arrange accommodation in advance to secure a place that fits
+        your budget and preferences.
+      </p>
+    ),
+    style: panelStyle,
+  },
+  {
+    key: "11",
+    label: "How can I adjust to the cultural differences while studying overseas in Canada?",
+    children: (
+      <p className="textContent">
+        Embracing cultural differences involves participating in campus activities, joining student
+        organizations, making friends from diverse backgrounds, and seeking support from international
+        student services.
+      </p>
+    ),
+    style: panelStyle,
+  },
+  {
+    key: "12",
+    label: "What healthcare options are available for international students in Canada?",
+    children: (
+      <p className="textContent">
+        International students must have health insurance. Some provinces provide healthcare
+        coverage to international students, while others require students to purchase private health
+        insurance.
+      </p>
+    ),
+    style: panelStyle,
+  },
+  {
+    key: "13",
+    label: "Can I stay in Canada after I graduate?",
+    children: (
+      <p className="textContent">
+        Yes, many international students apply for the Post-Graduation Work Permit (PGWP), which
+        allows them to work in Canada for up to three years after completing their studies. This
+        experience can also help in applying for permanent residency.
+      </p>
+    ),
+    style: panelStyle,
+  },
+  {
+    key: "14",
+    label: "What are the career prospects for international graduates in Canada?",
+    children: (
+      <p className="textContent">
+        Canada has a strong job market with opportunities in various fields such as technology,
+        healthcare, engineering, and business. International graduates with Canadian education and work
+        experience are highly valued by employers.
       </p>
     ),
     style: panelStyle,
