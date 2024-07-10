@@ -15,10 +15,10 @@
 
 .find-cource-image-card {
   width: 100%;
-  margin-top: 4rem;
+  margin-top: 5rem;
 }
 .image-card {
-  height: 80vh;
+  height: 85vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,7 +51,7 @@
   display: flex;
   align-items: stretch;
   gap: 2rem;
-  margin-block: 6rem;
+  margin-block: 1rem;
 }
 .story-leftcard {
   width: calc(50% - 1rem);

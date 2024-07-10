@@ -12,6 +12,7 @@ import LandscapeIcon from "@mui/icons-material/Landscape";
 import "./find.css";
 import CircleArrow from "../Component/Common/CircleArrow";
 import { NavLink } from "react-router-dom";
+import Footer from "../Component/Common/Footer";
 // DATA FOR ACCORDION
 const getItems = (panelStyle) => [
   {
@@ -177,10 +178,11 @@ const Finding = () => {
         <div className="capabilities-section">
           <div className="capabilities-card">
             <div className="cap-image-card">
+              <img style={{objectFit:"cover"}} src="src\assets\Explore our Capabilities\Coaching\Services image.jpg" alt="Coaching"/> 
               <NavLink style={{color:"black"}} to={'/Coaching'}>
 
-              </NavLink>
               <CircleArrow className="CircleArrowButton" />
+              </NavLink>
             </div>
             <h1>Coaching</h1>
             <p>
@@ -192,6 +194,7 @@ const Finding = () => {
           </div>
           <div className="capabilities-card">
             <div className="cap-image-card">
+              <img style={{objectFit:"cover"}} src="src\assets\Explore our Capabilities\Mentorship\How it works.jpg" alt="Mentorship"/>
               <NavLink style={{color:"black"}} to={'/Mentorship'}>
               <CircleArrow className="CircleArrowButton" />
               </NavLink>
@@ -206,6 +209,7 @@ const Finding = () => {
         </div>
       </div>
       <GetStartedToday />
+      <Footer/>
     </>
   );
 };

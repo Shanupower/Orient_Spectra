@@ -11,7 +11,7 @@ const FindingAccordion = ({ getItems }) => {
 
   return (
     <>
-      <div className="section FaQ_container">
+      <div className="section FaQ_container" style={{marginTop:"10px"}}>
 
         <div className="accordionConatiner">
           <Collapse

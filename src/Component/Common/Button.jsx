@@ -6,7 +6,7 @@ const Button = ({ text, link, arrow, className }) => {
     <>
       <Link
         to={link ? link : "#"}
-        className={`Link_route CoomonButton ${className}`}
+        className={`Link_route orient-spectra-btn-text CoomonButton ${className}`}
       >
         {text}
         {arrow ? <ArrowForwardIcon /> : null}
