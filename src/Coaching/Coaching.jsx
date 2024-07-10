@@ -14,35 +14,47 @@ import LandscapeIcon from "@mui/icons-material/Landscape";
 import "../FindingYourCourse/find.css";
 import CircleArrow from "../Component/Common/CircleArrow";
 import { NavLink } from "react-router-dom";
+import Footer from "../Component/Common/Footer";
 
 // DATA FOR ACCORDION
 const getItems = (panelStyle) => [
   {
     key: "1",
-    label: "Coaching and Guidance for Student Visas",
+    label: "Expert Guidance",
     children: (
       <p className="textContent">
-        At Orient Spectra Overseas Education Consultancy, we understand that
-        obtaining a student visa can be a challenging and intricate process. Our
-        mission is to make this journey as smooth and stress-free as possible
-        for you. With our expert guidance and experienced counselors, we offer
-        comprehensive support to help you secure your student visa and embark on
-        your educational journey abroad.
+        • Our team consists of highly qualified professionals with extensive
+        knowledge of visa procedures for various countries. • We stay updated
+        with the latest changes in visa policies and requirements, ensuring that
+        you receive accurate and timely advice.
       </p>
     ),
     style: panelStyle,
   },
   {
     key: "2",
-    label: "Comprehensive Support",
+    label: " Personalized Counseling",
     children: (
       <p className="textContent">
         {" "}
-        • Document Preparation: Assistance with gathering and organizing all
+        • We recognize that each student’s situation is unique. Our counselors
+        provide personalized guidance tailored to your specific needs and
+        circumstances. • From choosing the right course and institution to
+        preparing your visa application, we are with you every step of the way
+      </p>
+    ),
+    style: panelStyle,
+  },
+  {
+    key: "3",
+    label: " Comprehensive Support:",
+    children: (
+      <p className="textContent">
+        •Document Preparation: Assistance with gathering and organizing all
         necessary documents to ensure your application is complete and meets all
-        requirements.
+        requirements. 
         • Application Assistance: Step-by-step support in filling
-        out visa application forms correctly to avoid any errors or omissions. 
+        out visa application forms correctly to avoid any errors or omissions.
         • Interview Preparation: Coaching to prepare you for visa interviews,
         including mock interviews to build your confidence and improve your
         chances of success.
@@ -51,7 +63,7 @@ const getItems = (panelStyle) => [
     style: panelStyle,
   },
   {
-    key: "3",
+    key: "4",
     label: " Experienced Counselors",
     children: (
       <p className="textContent">
@@ -62,12 +74,12 @@ const getItems = (panelStyle) => [
     style: panelStyle,
   },
   {
-    key: "4",
-    label: " Proven Track Record:",
+    key: "5",
+    label: " Proven Track Record",
     children: (
       <p className="textContent">
-       • We pride ourselves on our high success rate in securing student visas for our clients.
-       • Testimonials from our satisfied students attest to our commitment and effectiveness.
+        • We pride ourselves on our high success rate in securing student visas for our clients.
+        • Testimonials from our satisfied students attest to our commitment and effectiveness
       </p>
     ),
     style: panelStyle,
@@ -80,8 +92,9 @@ const getItems2 = (panelStyle) => [
     label: "Visa Application Process",
     children: (
       <p className="textContent">
-      Detailed guidance on the entire visa application process.
-      Assistance with understanding and fulfilling visa requirements for various countries.
+        Detailed guidance on the entire visa application process. Assistance
+        with understanding and fulfilling visa requirements for various
+        countries.
       </p>
     ),
     style: panelStyle,
@@ -92,8 +105,9 @@ const getItems2 = (panelStyle) => [
     children: (
       <p className="textContent">
         {" "}
-        Advice on financial documentation and proof of funds required for the visa application.
-        Information on scholarships and financial aid opportunities.
+        Advice on financial documentation and proof of funds required for the
+        visa application. Information on scholarships and financial aid
+        opportunities.
       </p>
     ),
     style: panelStyle,
@@ -103,8 +117,8 @@ const getItems2 = (panelStyle) => [
     label: "Pre-Departure Orientation",
     children: (
       <p className="textContent">
-       Sessions to prepare you for life abroad, covering cultural adaptation, accommodation, travel arrangements, and 
-       more.
+        Sessions to prepare you for life abroad, covering cultural adaptation,
+        accommodation, travel arrangements, and more.
       </p>
     ),
     style: panelStyle,
@@ -114,8 +128,8 @@ const getItems2 = (panelStyle) => [
     label: "Post-Visa Services",
     children: (
       <p className="textContent">
-      Continued support even after you receive your visa, including assistance with accommodation and settling into 
-      your new environment.
+        Continued support even after you receive your visa, including assistance
+        with accommodation and settling into your new environment.
       </p>
     ),
     style: panelStyle,
@@ -133,20 +147,21 @@ const getItems2 = (panelStyle) => [
   //   style: panelStyle,
   // },
 ];
-const capName = "Coaching and Guidance ";
-const capSecondName="for Student Visas"
-const capDescription ="At Orient Spectra Overseas Education Consultancy, we understand that obtaining a student visa can be a challenging and intricate process. Our mission is to make this journey as smooth and stress-free as possible for you. With our expert guidance and experienced counselors, we offer comprehensive support to help you secure your student visa and embark on your educational journey abroad."
+const capName = "Coaching ";
+// const capSecondName="for Student Visas"
+const capDescription =
+  "At Orient Spectra Overseas Education Consultancy, we understand that obtaining a student visa can be a challenging and intricate process. Our mission is to make this journey as smooth and stress-free as possible for you. With our expert guidance and experienced counselors, we offer comprehensive support to help you secure your student visa and embark on your educational journey abroad.";
 const Coaching = () => {
   return (
     <>
       <Navbar />
       {/* FIND YOUR COURSE COMPONENT */}
-      <FYC capDescription={capDescription} capName={capName} capSecondName={capSecondName} />
+      <FYC capDescription={capDescription} capName={capName} />
 
       <div className="find-cource-image-card section">
         <div className="image-card">
           {/* <LandscapeIcon className="LandscapeIconIcon2" /> */}
-          <img src="src\assets\Explore our Capabilities\Coaching\Main Image.jpg"/>
+          <img src="src\assets\Explore our Capabilities\Coaching\Main Image.jpg" />
         </div>
       </div>
       <div className="whywechoose-card section">
@@ -165,7 +180,7 @@ const Coaching = () => {
           </div>
         </div>
         <div className="story-rightcard">
-          <img src="src\assets\Explore our Capabilities\Coaching\Services image.jpg"/>
+          <img src="src\assets\Explore our Capabilities\Coaching\Services image.jpg" />
           <LandscapeIcon className="LandscapeIconIcon2" />
         </div>
       </div>
@@ -178,11 +193,12 @@ const Coaching = () => {
         <div className="capabilities-section">
           <div className="capabilities-card">
             <div className="cap-image-card">
-              <NavLink style={{color:"black"}} to={'/Coaching'}>
-              <CircleArrow className="CircleArrowButton" />
+              <img style={{objectFit:"cover"}} src="src\assets\Explore our Capabilities\Finding your course\Our Approach.jpg"/>
+              <NavLink style={{ color: "black" }} to={"/FindYourCourse"}>
+                <CircleArrow className="CircleArrowButton" />
               </NavLink>
             </div>
-            <h1>Coaching</h1>
+            <h1>Find Your Course</h1>
             <p>
               Obtaining a student visa can be challenging, but our mission is to
               make it smooth and stress-free. With expert guidance and
@@ -192,8 +208,9 @@ const Coaching = () => {
           </div>
           <div className="capabilities-card">
             <div className="cap-image-card">
-              <NavLink style={{color:"black"}} to={'/Mentorship'}>
-              <CircleArrow className="CircleArrowButton" />
+              <img style={{objectFit:"cover"}} src="src\assets\Explore our Capabilities\Mentorship\How it works.jpg"/>
+              <NavLink style={{ color: "black" }} to={"/Mentorship"}>
+                <CircleArrow className="CircleArrowButton" />
               </NavLink>
             </div>
             <h1>Mentorship</h1>
@@ -206,6 +223,7 @@ const Coaching = () => {
         </div>
       </div>
       <GetStartedToday />
+      <Footer/>
     </>
   );
 };

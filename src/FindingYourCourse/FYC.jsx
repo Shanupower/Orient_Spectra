@@ -17,7 +17,7 @@ const FYC = ({ capName, capDescription, capSecondName }) => {
           hidden: { opacity: 0, x: -50 },
           visible: { opacity: 1, x: 0 },
         }}>
-        <div className="section StudyAbroad" style={{ marginBlock: "12rem 0" }}>
+        <div className="section StudyAbroad" style={{ marginBlock: "10rem 0" }}>
           <div className="studySection useInViewcard findHearing">
             {capName && capSecondName ? (<>
               <p>{capName}</p>{" "}
@@ -35,8 +35,9 @@ const FYC = ({ capName, capDescription, capSecondName }) => {
             )}
           </div>
           <Button
-            arrow={true}
-            className={`GetTuchArrow ${isAnimated ? "buttonfadeIn" : ""}`}
+            // arrow={true}
+            text={"Orient Spectra"}
+            className={`GetTuchArrow Orient-Spectra-text  ${isAnimated ? "buttonfadeIn" : ""}`}
           />
         </div>
         <div className="story-container findCOntent">

@@ -60,6 +60,9 @@ img {
 }
 .YouMightAlsoLike-blog-main-div{
     display: flex;
+    max-height: 440px;
+    
+    overflow-x: auto;
    
     
 }
@@ -72,7 +75,7 @@ img {
     display: flex;
    justify-content: center;
    height: 300px;
-   width: 320px;
+   max-width: 310px;
     background-color: lightgray;
     margin: 10px;
     border-radius: 15px;

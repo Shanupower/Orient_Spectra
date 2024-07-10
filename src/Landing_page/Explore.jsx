@@ -20,7 +20,7 @@ const Explore = () => {
               at all stages of their study abroad journey, from initial
               exploration to program application.
             </p>
-            <NavLink style={{color:"black"}}  to={'/Mentorship'}>
+            <NavLink style={{color:"white"}}  to={'/Mentorship'}>
 
             <ArrowForwardIcon
               sx={{ fontSize: "40px" }}
@@ -34,7 +34,7 @@ const Explore = () => {
             <h3>
               Finding Your Course 
                 
-              <NavLink style={{color:"black"}}  to={'/FindYourCourse'}>
+              <NavLink style={{color:"white"}}  to={'/FindYourCourse'}>
               <ArrowForwardIcon sx={{ fontSize: "40px" }} />
               </NavLink>
             </h3>
@@ -51,7 +51,7 @@ const Explore = () => {
             <h3>
             
               Coaching 
-              <NavLink style={{color:"black"}}  to={'/Coaching'} >
+              <NavLink style={{color:"white"}}  to={'/Coaching'} >
               <ArrowForwardIcon sx={{ fontSize: "40px" }} />
               </NavLink> 
             </h3>
