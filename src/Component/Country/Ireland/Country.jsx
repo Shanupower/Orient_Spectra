@@ -13,133 +13,63 @@ import Footer from "../../Common/Footer";
 const getItems = (panelStyle) => [
   {
     key: "1",
-    label: "What are the general steps to apply to a university in the USA?",
+    label: "Top University in Ireland",
     children: (
       <p className="textContent">
-        The general steps include researching universities, preparing for
-        standardized tests (like SAT, ACT, GRE, GMAT), obtaining recommendation
-        letters, writing personal statements, completing the application forms,
-        submitting transcripts, and applying for a student visa.
+        Trinity College Dublin is ranked as the leading university in Ireland by both
+        the QS World Ranking and Times Higher Education ranking. It offers extensive
+        opportunities for research and innovation, enhancing career prospects for
+        students.
       </p>
     ),
     style: panelStyle,
   },
   {
     key: "2",
-    label:
-      "What types of student visas are available for international students?",
+    label: "Popular Courses for International Students in Ireland",
     children: (
       <p className="textContent">
-        {" "}
-        The most common student visas are the F-1 visa for academic studies and
-        the J-1 visa for exchange programs. The M-1 visa is for vocational or
-        non-academic programs.
+        Popular courses for international students include business, computer
+        science, engineering, medicine, pharmacy, and data science. The choice of
+        course should align with individual interests, strengths, and career
+        aspirations.
       </p>
     ),
     style: panelStyle,
   },
   {
     key: "3",
-    label:
-      " How important are standardized tests for admission to U.S. universities?",
+    label: "Top Universities for the 2024-25 Intake in Ireland",
     children: (
       <p className="textContent">
-        : Standardized tests like the SAT, ACT, GRE, and GMAT are important as
-        they are often required by universities as part of the admissions
-        process. However, their importance can vary by institution and program
+        Apart from Trinity College Dublin, other prominent universities include
+        University College Dublin, recognized as Ireland’s Global University, and RCSI
+        University of Medicine and Health Sciences. These institutions provide
+        diverse undergraduate and postgraduate programs.
       </p>
     ),
     style: panelStyle,
   },
   {
     key: "4",
-    label: "What are the English language proficiency requirements?",
+    label: "Tuition Fees for International Students in Ireland",
     children: (
       <p className="textContent">
-        Most universities require international students to demonstrate English
-        proficiency through tests such as TOEFL or IELTS. Minimum score
-        requirements vary by institution.
+        Tuition fees vary depending on the university, program, and level of study. Generally, undergraduate
+        programs range from €10,000 to €25,000 per year, while postgraduate programs can cost between
+        €10,000 and €35,000. Prospective students should verify specific fees for their chosen courses.
       </p>
     ),
     style: panelStyle,
   },
   {
     key: "5",
-    label: "Are there scholarships available for international students?",
+    label: "Part-Time Work Opportunities for Students in Ireland",
     children: (
       <p className="textContent">
-        {" "}
-        Yes, many universities offer scholarships for international students
-        based on merit, need, or specific talents. Additionally, there are
-        external scholarships and grants available from various organizations.
-      </p>
-    ),
-    style: panelStyle,
-  },
-  {
-    key: "6",
-    label: "What is the typical academic year like in U.S. universities?",
-    children: (
-      <p className="textContent">
-        {" "}
-        The academic year is typically divided into two semesters (fall and
-        spring) or quarters, depending on the institution. There may also be a
-        summer session for additional courses.
-      </p>
-    ),
-    style: panelStyle,
-  },
-  {
-    key: "7",
-    label:
-      "What kind of academic support is available for international students?",
-    children: (
-      <p className="textContent">
-        {" "}
-        Universities offer various support services, including tutoring centers,
-        writing labs, academic advising, and international student offices to
-        help with academic and cultural adjustment
-      </p>
-    ),
-    style: panelStyle,
-  },
-  {
-    key: "8",
-    label: "What are the options for staying in the USA after graduation?",
-    children: (
-      <p className="textContent">
-        International students can apply for Optional Practical Training (OPT),
-        which allows them to work in their field of study for up to 12 months
-        (or up to 36 months for STEM graduates). Additionally, some may pursue
-        H-1B work visas if they secure a job offer from a U.S. employer.
-      </p>
-    ),
-    style: panelStyle,
-  },
-  {
-    key: "9",
-    label: "How can I build a professional network while studying in the USA?",
-    children: (
-      <p className="textContent">
-        {" "}
-        Students can build their network by joining student organizations,
-        participating in internships, attending career fairs, engaging in
-        on-campus events, and connecting with alumni through university career
-        services.
-      </p>
-    ),
-    style: panelStyle,
-  },
-  {
-    key: "10",
-    label: "Can international students work while studying in the USA?",
-    children: (
-      <p className="textContent">
-        Yes, international students with an F-1 visa can work on-campus for up
-        to 20 hours per week during the academic year and full-time during
-        breaks. Off-campus work is permitted under certain conditions, such as
-        Curricular Practical Training (CPT) and Optional Practical Training
-        (OPT).
+        International students studying on a Stamp 2 visa (typically held by full-time students) can work
+        part-time, up to 20 hours per week during term time, and full-time during holidays. It is important to manage
+        work commitments alongside academic responsibilities effectively.
       </p>
     ),
     style: panelStyle,
