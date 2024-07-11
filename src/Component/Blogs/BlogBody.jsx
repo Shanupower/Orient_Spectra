@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Container, Typography, Box } from "@mui/material";
 import Navbar from "../Common/Navbar";
@@ -36,10 +36,7 @@ const YouMightAlsoLike = ({ RecentBlogs }) => {
       <div className="Youmightlike-section">
         {RecentBlogs?.map((value, id) => (
           <div className="Youmightlike-container" key={id}>
-            <div
-              className="youmight-img-content"
-              onClick={() => handleNavigate(value)}
-            >
+            <div className="youmight-img-content">
               <div className="youmight-img-card">
                 {value.img && (
                   <img src={`http://157.173.222.81:1337${value?.img}`} alt="" />
@@ -47,7 +44,10 @@ const YouMightAlsoLike = ({ RecentBlogs }) => {
               </div>
               <p>
                 {value.date}
-                <CircleArrow />
+
+                <NavLink to="/content" onClick={() => handleNavigate(value)}>
+                  <CircleArrow />
+                </NavLink>
               </p>
             </div>
             <div className="youmightlikeblog-congtent-card">
@@ -66,7 +66,7 @@ export default function BlogBody() {
   const { data } = location?.state || {};
   const [postData, setPostData] = useState([]);
   const [randomBlogs, setRandomBlogs] = useState([]);
-
+  console.log("data??????",data);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -133,17 +133,18 @@ export default function BlogBody() {
         <div className="hero-section-blog">
           <h1> {attributes?.Title}</h1>
           <div>
-            <span>{formatDate(attributes.updatedAt)}</span>
+            <span>{formatDate(attributes?.updatedAt)}</span>
             <p>{attributes?.Short_Description}</p>
           </div>
           <div className="singleBlogImgae-container">
-            <img src={imgURL} alt="blog" />
+            <img
+              src={`http://157.173.222.81:1337${attributes?.Headline_image.data.attributes.formats.large.url}`}
+              alt="blog"
+            />
           </div>
         </div>
         <div className="TexteditorBlock">
-          <div
-            dangerouslySetInnerHTML={{ __html: attributes.text }}
-          />
+          <div dangerouslySetInnerHTML={{ __html: attributes?.text }} />
         </div>
       </div>
 
