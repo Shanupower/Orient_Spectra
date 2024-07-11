@@ -30,11 +30,10 @@ const Awarded = () => {
       <div className="awarded-section">
         {AwardedData.map((item) => (
           <div className="awarded-card" key={item}>
-            <p>Lorem ipsum dolor sit amet.</p>
             <div className="awarded-image">
               <img src={item.img} alt="" />
             </div>
-          </div>
+          </div>  
         ))}
       </div>
     </div>

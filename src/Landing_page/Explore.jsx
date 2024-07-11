@@ -25,7 +25,7 @@ const Explore = () => {
                 students at all stages of their study abroad journey, from
                 initial exploration to program application.
               </p>
-              <NavLink style={{ color: "black" }} to={"/Mentorship"}>
+              <NavLink style={{ color: "#fff" }} to={"/Mentorship"}>
                 <ArrowForwardIcon
                   sx={{ fontSize: "40px" }}
                   className="menthosihpArrow"
@@ -38,7 +38,7 @@ const Explore = () => {
             <img src={Cource} alt="" className="corcesImage" />
             <h3>
               Finding Your Course
-              <NavLink style={{ color: "black" }} to={"/FindYourCourse"}>
+              <NavLink style={{ color: "#fff" }} to={"/FindYourCourse"}>
                 <ArrowForwardIcon sx={{ fontSize: "40px" }} />
               </NavLink>
             </h3>
@@ -54,7 +54,7 @@ const Explore = () => {
             <img src={Img2} alt="" className="corcesImage" />
             <h3>
               Coaching
-              <NavLink style={{ color: "black" }} to={"/Coaching"}>
+              <NavLink style={{ color: "#fff" }} to={"/Coaching"}>
                 <ArrowForwardIcon sx={{ fontSize: "40px" }} />
               </NavLink>
             </h3>

@@ -13,6 +13,13 @@
   flex-direction: column;
 }
 
+.founderImage_card {
+  width: 80%;
+  height: 38vh;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: auto;
+}
 .BlogMarguee {
   width: 40%;
   border: 1px solid var(--text-color-black);
@@ -281,6 +288,7 @@
   color: var(--text-color-darkblack);
   font-size: 38px;
   line-height: 1.2;
+  margin-top: 1rem;
 }
 .founder-card > span {
   font-size: 14px;
@@ -361,14 +369,15 @@
 }
 
 .awarded-card {
-  min-width: 280px;
-  height: 50vh;
+  min-width: 260px;
+  height: 30vh;
   border: 2px solid lightgray;
   border-radius: 16px;
   padding: 1.4rem;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
 }
 
 .awarded-image {
@@ -379,8 +388,8 @@
   justify-content: center;
   height: 40%;
 }
-.rfm-child{
-  padding-right: .2rem;
+.rfm-child {
+  padding-right: 0.2rem;
 }
 .blogMarqueeText .marquee-content {
   display: inline-block;

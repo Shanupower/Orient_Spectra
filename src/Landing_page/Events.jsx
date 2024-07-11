@@ -1,14 +1,37 @@
-import { useEffect } from "react";
-import "./index.css";
 import Banner1 from "../assets/Vector (2).png";
 import Banner2 from "../assets/Vector (3).png";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { motion } from "framer-motion";
+import axios from "axios";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+
+import "./index.css";
 
 const Events = () => {
+  const [Eventdata, setEventData] = useState([]);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          "http://157.173.222.81:1337/api/events?sort[0]=Date_of_the_event&populate=*"
+        );
+        if (response?.status === 200) {
+          console.log("status is:", response);
+          setEventData(response?.data.data);
+        }
+      } catch (error) {
+        console.log("ERROR OCCURED WHILE FETCHING:", error.message);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   useEffect(() => {
     const stack = document.querySelector(".stack");
-
     if (stack) {
       [...stack.children].reverse().forEach((i) => stack.append(i));
 
@@ -43,7 +66,9 @@ const Events = () => {
       };
     }
   }, []);
-
+  const handleNavigate = (post) => {
+    navigate(`/content`, { state: { data: post } });
+  };
   return (
     <div className="section Events__container">
       <motion.div
@@ -62,19 +87,20 @@ const Events = () => {
 
           <div className="dateEvent">
             <p>Date of the event</p>
-            <span>2024</span>
+            <span>{Eventdata[0]?.attributes?.Date_of_the_event}</span>
           </div>
           <div className="event_bottomContent">
-            <h4 className="explaintag">
-              Explore Study Abroad options in Germany
-            </h4>
-            <span>EU Business School Fair in Hyderabad</span>
+            <h4 className="explaintag">{Eventdata[0]?.attributes?.Headline}</h4>
+            <span> {Eventdata[0]?.attributes?.Shortdescription}</span>
           </div>
         </div>
         <div className="eventsRigtImage">
           <b className="upcomingEvents">Upcoming Events</b>
 
-          <img src={Banner1} alt="Event Banner" />
+          <img
+            src={`http://157.173.222.81:1337${Eventdata[0]?.attributes?.Poster?.data?.attributes.url}`}
+            alt=""
+          />
         </div>
       </motion.div>
 

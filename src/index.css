@@ -43,8 +43,6 @@ img {
 .Link_route {
   text-decoration: none;
   cursor: pointer;
-  margin-left: 55px;
-
 }
 
 ::-webkit-scrollbar {
@@ -63,6 +61,3 @@ html {
   padding: 1rem 6%;
 }
 
-.Orient-Spectra-text{
-  margin-left: 100px;
-}
