@@ -2,21 +2,71 @@ import AddIcon from "@mui/icons-material/Add";
 import Whatsapp from "../assets/icons/Group 56.png";
 import Window from "../assets/icons/Group (2).png";
 import Mic from "../assets/icons/Group (3).png";
-
+import Img from "../assets/man-wearing-t-shirt-gesturing.jpg";
+import Img1 from "../assets/pretty-indian-college-girl-universit.jpg";
+import Img2 from "../assets/pretty-indian-college-girl-university.jpg";
+import Img3 from "../assets/young-adult-achievement-graduation-gown-toothy-smile-generated-by-ai.jpg";
 import { Carousel } from "antd";
 import "./index.css";
-import { HeroPagedata } from "../Container/data/Hero";
 import Button from "../Component/Common/Button";
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { useMediaQuery } from "@mui/material";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 
-const Hero = () => {
+const Hero = ({ blog, event }) => {
   const [isOpen, setIsOpen] = useState(false);
   const isMd = useMediaQuery("(max-width:986px)");
+  const navigate = useNavigate();
 
+  const HeroPagedata = useMemo(
+    () => [
+      {
+        id: 1,
+        text: "Shaping Your",
+        heading: "Dream to fly",
+        bgImage: Img,
+        subtext:
+          "The Most Comprehensive & Personalized Study Abroad Plan, suited for your Dreams. Obsessed with Student Success.",
+      },
+      {
+        id: 2,
+        text: "Want to know",
+        heading: "how to study abroad?",
+        bgImage: Img1,
+        subtext:
+          "The Most Comprehensive & Personalized Study Abroad Plan, suited for your Dreams. Obsessed with Student Success.",
+      },
+      {
+        id: 3,
+        heading: blog?.attributes?.Title || "Rise of new education",
+        bgImage: `http://157.173.222.81:1337${blog?.attributes?.Headline_image?.data?.attributes?.formats?.large?.url}`,
+        subtext:
+          blog?.attributes?.Short_Description ||
+          "– US, UK, Australia and Canada – face headwinds",
+        link: "blog",
+      },
+      {
+        id: 4,
+        heading: event?.attributes?.Headline || "Reasons to Study in Germany",
+        bgImage: `http://157.173.222.81:1337${event?.attributes?.Poster?.data?.attributes.url}`,
+        subtext: event?.attributes?.Shortdescription,
+        link: "event",
+      },
+    ],
+    [blog, event]
+  );
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  const handleNavigate = (data) => {
+    if (data.link == "blog") {
+      navigate("/content", { state: { data: blog } });
+    } else if (data.link == "event") {
+      navigate("/events", { state: { data: event } });
+    }
+  };
+
   return (
     <div className="HeroBlock">
       <div className="HeroContainer">
@@ -28,10 +78,13 @@ const Hero = () => {
               </div>
 
               <div className="Hero_Content">
-                <p className="hero_Heading">{data.text}</p>
+                <p className="hero_Heading">{data?.text}</p>
                 <h1 className="hero_Heading BoldHeading">{data.heading}</h1>
                 <p className="heroSubtext">{data.subtext}</p>
-                <div className="StudyButtonCard">
+                <div
+                  className="StudyButtonCard"
+                  onClick={() => handleNavigate(data)}
+                >
                   <Button text="Study Abroad" arrow={true} />
                 </div>
               </div>
