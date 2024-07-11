@@ -843,7 +843,6 @@
 }
 .findMore:hover {
   color: var(--brand-color);
-
 }
 /* Counselore_container */
 
@@ -936,7 +935,7 @@
   font-size: 18px;
 }
 .progressLineAnimation {
-  animation: progressbar 3.7s linear;
+  animation: progressbar 9.9s linear;
 }
 @keyframes progressbar {
   from {
@@ -957,14 +956,6 @@
   object-fit: contain;
 }
 
-@keyframes glob {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 .country {
   position: absolute;
   top: 10rem;
@@ -1081,7 +1072,7 @@ canvas {
   position: relative;
   width: 60%;
 }
-.dateEvent >span{
+.dateEvent > span {
   width: fit-content;
 }
 .event_leftContent > .dateEvent > p::after {

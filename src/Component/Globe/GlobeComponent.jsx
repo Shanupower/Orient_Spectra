@@ -1,53 +1,93 @@
-import React from "react";
-import Globe from "react-globe.gl";
-import GlobeImge from "../../assets/images/earth-night copy.jpg";
-import GlobeImge1 from "../../assets/images/earth-night.jpg";
-import GlobeImge2 from "../../assets/images/night-sky.png";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import "./index.css";
-const GlobeComponent = ({
-  initialSpeed,
-  country,
-  countryInfo,
-  rotateGlobe,
-}) => {
-  const globeEl = React.useRef();
-  React.useEffect(() => {
-    if (rotateGlobe) {
-      const controls = globeEl.current.controls();
-      controls.autoRotate = true;
-      controls.autoRotateSpeed = initialSpeed;
-      controls.enableZoom = true;
+import GlobeComponent from "../Component/Globe/GlobeComponent";
+import { useEffect, useState } from "react";
 
-      setTimeout(() => {
-        controls.autoRotate = false;
-      }, 3600); // assuming 10 deg/sec, it takes 3600ms to rotate 360 degrees at 0.1 deg/ms
+const GlobeData = [
+  {
+    country: "United states of America",
+    info: "Studying in the USA offers an enriching academic experience that attracts students from all corners of the globe",
+  },
+  {
+    country: "Canada",
+    info: "Canada is known for its high-quality education and research opportunities at all levels, from elementary to post-secondary",
+  },
+  {
+    country: "Germany",
+    info: "high-quality education, free public universities, and low tuition fees",
+  },
+  {
+    country: "Australia",
+    info: "Australia is a popular destination for international students seeking a high-quality education and a diverse cultural experience",
+  },
+];
+
+const Counselors = () => {
+  const [countryIndex, setCountryIndex] = useState(0);
+  const [initialSpeed, setInitialSpeed] = useState(20);
+
+  const [rotateGlobe, setRotateGlobe] = useState(false);
+
+  const handleRotateGlobe = (direction) => {
+    if (direction > 0 && GlobeData.length > countryIndex) {
+      setCountryIndex(countryIndex + 1);
+    } else if (direction < 0 && countryIndex > 0) {
+      setCountryIndex(countryIndex - 1);
     }
-  }, [initialSpeed, rotateGlobe]);
+    setInitialSpeed(direction);
+    setRotateGlobe(true);
+    setTimeout(() => {
+      setRotateGlobe(false);
+      setInitialSpeed(10);
+    }, 3600);
+  };
 
   return (
-    <div className="hero--globe">
-      <Globe
-        ref={globeEl}
-        width={600}
-        height={500}
-        backgroundColor="#fff"
-        atmosphereColor="transparent"
-        globeImageUrl={GlobeImge1}
-        rotateSpeed={0.5}
-      />
+    <div className="section Counselore_container">
+      <div className="counselor_left_side">
+        <p>Countries We Are in</p>
+        <span>10+ Countries</span>
+        <div className="progress-bar">
+          <div className="progress">
+            <p
+              className={`progressLine  ${
+                rotateGlobe && "progressLineAnimation"
+              }`}
+            >
+              |
+            </p>
+          </div>
+        </div>
+        <div className="leftandrightArrow">
+          <button
+            className="GlowbLeftIccon"
+            onClick={() => handleRotateGlobe(-20)}
+            disabled={countryIndex === 0}
+          >
+            <ArrowForwardIcon />
+          </button>
 
-      <div
-        className={` contrynameCord ${
-          rotateGlobe && "contrynameCordAnimation"
-        }`}
-      >
-        <p>{country}</p>
+          <button
+            className="GlobRightArrow"
+            onClick={() => handleRotateGlobe(20)}
+            disabled={countryIndex === GlobeData.length - 1}
+          >
+            <ArrowForwardIcon />
+          </button>
+
+          <p>{GlobeData[countryIndex].country}</p>
+        </div>
       </div>
-      <div className="contryDiscriptionCord">
-        <p>{countryInfo}</p>
+      <div className="globmapw">
+        <GlobeComponent
+          initialSpeed={initialSpeed}
+          country={GlobeData[countryIndex].country}
+          countryInfo={GlobeData[countryIndex].country}
+          rotateGlobe={rotateGlobe}
+        />
       </div>
     </div>
   );
 };
 
-export default GlobeComponent;
+export default Counselors;
