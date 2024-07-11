@@ -1,5 +1,7 @@
 import Marquee from "react-fast-marquee";
 import img1 from "../../assets/Blogs/glob1.png";
+import Globe from "../../assets/About/Earth_1-ezgif.com-optimize.gif";
+
 import "./about.css";
 const Hero = () => {
   return (
@@ -17,7 +19,7 @@ const Hero = () => {
       </div>
 
       <div className="hero-rightside-card">
-        <img src={img1} alt="img1" className="hero-img" />
+        <img src={Globe} alt="img1" className="hero-img" />
       </div>
     </div>
   );

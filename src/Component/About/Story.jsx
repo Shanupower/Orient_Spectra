@@ -58,8 +58,7 @@ const Story = () => {
           <p>Student Visas Processed </p>
         </div>
         <div className="Successful-Admits-card">
-          <div className="grafimage-card">
-            {/* <img src={Graph} alt="" /> */}
+          <div className="grafimage-cards">
             <BarLabel />
           </div>
           <p>

@@ -15,7 +15,6 @@ const Event = () => {
           "http://157.173.222.81:1337/api/events?sort[0]=Date_of_the_event&populate=*"
         );
         if (response?.status === 200) {
-          // console.log("status is:", response);
           setEventData(response?.data.data);
         }
       } catch (error) {
