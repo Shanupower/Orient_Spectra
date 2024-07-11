@@ -21,13 +21,13 @@ import MaltaCountry from "./Component/Country/Malta/Country";
 import PolandCountry from "./Component/Country/Poland/Country";
 import SwitzerlandCountry from "./Component/Country/Switzerland/Country";
 import SingaporeCountry from "./Component/Country/Singapore/Country";
+import USACountry from "./Component/Country/Usa/Country";
 function App() {
   return (
     <>
-    
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/country/Usa" element={<UKCountry />} />
+        <Route path="/country/Usa" element={<USACountry />} />
         <Route path="/country/UK" element={<UKCountry />} />
 
         <Route path="/country/Australia" element={<AustraliaCountry />} />

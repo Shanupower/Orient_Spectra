@@ -121,7 +121,6 @@ const getItems = (panelStyle) => [
   },
 ];
 const UKCountry = () => {
-  const { usa } = useParams();
   return (
     <>
       <Navbar />
