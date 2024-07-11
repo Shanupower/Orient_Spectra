@@ -8,7 +8,6 @@ import axios from "axios";
 
 const Event = () => {
   const [Eventdata, setEventData] = useState([]);
-  const Date_of_the_event = new Date();
   useEffect(() => {
     const fetchData = async () => {
       try {

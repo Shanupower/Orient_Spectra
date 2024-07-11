@@ -21,9 +21,15 @@
   position: relative;
   overflow: hidden;
 }
-.blog-image-section >img{
+.blog-image-section > img {
   object-fit: cover;
+  filter: opacity(0.4);
+  filter: blur(0.4);
 }
+/* .blog-leftside-container:hover > .blog-image-section > img {
+  filter: opacity(1);
+  filter: blur(0);
+} */
 .blog-image-section {
   width: 100%;
   height: 100%;

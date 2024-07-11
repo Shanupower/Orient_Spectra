@@ -284,7 +284,6 @@
   position: absolute;
   left: 0;
   bottom: 0;
-  
 }
 .explore_rightCard:nth-child(2) {
   width: 49%;
@@ -308,7 +307,6 @@
   font-size: 36px;
   margin-bottom: 0.4rem;
   padding-left: 3.2rem;
-
 }
 .explore_rightCard > h3 {
   font-size: 30px;
@@ -325,7 +323,6 @@
   color: var(--text-color-lightwhite);
   padding-left: 3.2rem;
   padding-bottom: 3.2rem;
-
 }
 
 .explore_rightCard > p {
@@ -726,7 +723,6 @@
   flex: 1 1 64%;
   height: 80vh;
   border-radius: 16px;
-  background: url("../assets/Asset 4@2x (7).png") no-repeat center center;
   background-size: cover;
   filter: brightness(1.2);
   display: flex;
@@ -734,8 +730,23 @@
   justify-content: flex-end;
   color: var(--text-color-white);
   padding: 2rem 2.8rem;
+  position: relative;
+  overflow: hidden;
 }
-
+.leftBlogCard-image-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+.leftBlogCard-image-card > img {
+  filter: opacity(0.9);
+}
+.leftBlogCard:hover > .leftBlogCard-image-card > img {
+  filter: opacity(1);
+}
 .titleblogContent > span {
   background-color: rgb(51, 51, 244);
   width: fit-content;
@@ -748,6 +759,10 @@
 .titleblogContent > p {
   font-size: 54px;
   line-height: 1;
+  width: 70%;
+  margin-top: 1rem;
+  font-weight: bold;
+  color: var(--text-color-black);
 }
 .titleblogContent > strong {
   color: var(--brand-color);
@@ -763,7 +778,7 @@
 .blogContent > p {
   font-size: 20px;
   width: 50%;
-  color: var(--text-color-gray);
+  color: var(--text-color-darkblack);
 }
 .blogContent > .rightArrowBlog {
   width: 60px;
@@ -794,20 +809,29 @@
   justify-content: flex-end;
   padding: 2rem 2rem 1rem 2rem;
   box-shadow: var(--box-shadow);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
 .rightBlogsCantainer > .rightcard:nth-child(1) {
-  background: url("../assets/Rectangle 57.png") no-repeat center center;
   background-size: cover;
-  filter: brightness(1.2);
 }
 .rightBlogsCantainer > .rightcard:nth-child(1) > strong {
   font-size: 18px;
-  color: var(--text-color-white);
+  color: var(--text-color-darkblack);
 }
 
+.rightcard > .leftBlogCard-image-card > img {
+  filter: opacity(0.4);
+  filter: blur(0.6);
+}
+.rightcard:hover > .leftBlogCard-image-card > img {
+  filter: opacity(1);
+  filter: blur(0);
+}
 .rightBlogsCantainer > .rightcard > p {
-  font-size: 12px;
-  color: var(--text-color-gray);
+  font-size: 13px;
+  color: var(--text-color-darkblack);
 }
 
 .findMore {
@@ -815,8 +839,12 @@
   color: var(--text-color-black);
   margin-top: 2rem;
   cursor: pointer;
+  font-weight: bold;
 }
+.findMore:hover {
+  color: var(--brand-color);
 
+}
 /* Counselore_container */
 
 .Counselore_container {
@@ -1018,6 +1046,7 @@ canvas {
   display: flex;
   justify-content: space-between;
   padding: 2em;
+  gap: 2rem;
 }
 
 .event_leftContent {
@@ -1033,9 +1062,10 @@ canvas {
   font-weight: 500;
 }
 .eventsRigtImage {
-  width: 46%;
+  width: 60%;
   border-radius: 16px;
   overflow: hidden;
+  height: 64vh;
 }
 
 .event_leftContent > .dateEvent {
@@ -1049,17 +1079,19 @@ canvas {
   font-size: 14px;
   color: var(--text-color-white);
   position: relative;
-  width: 100%;
+  width: 60%;
 }
-
+.dateEvent >span{
+  width: fit-content;
+}
 .event_leftContent > .dateEvent > p::after {
   content: "";
   position: absolute;
-  width: 64%;
+  width: 80%;
   height: 1px;
   background-color: var(--text-color-white);
   top: 0.67rem;
-  right: 2%;
+  left: 48%;
 }
 
 .explaintag {

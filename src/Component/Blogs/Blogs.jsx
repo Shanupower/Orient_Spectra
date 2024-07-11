@@ -16,7 +16,7 @@ const Blogs = () => {
           `${import.meta.env.VITE_API_URL}/api/blogs?populate=*`
         );
         if (response?.status === 200) {
-          console.log("status is:", response);
+          // console.log("status is:", response);
           setData(response?.data.data);
         }
       } catch (error) {

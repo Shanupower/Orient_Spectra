@@ -1,6 +1,8 @@
 import FormatQuoteSharpIcon from "@mui/icons-material/FormatQuoteSharp";
 import Divider from "../Common/Divider";
 import LandscapeIcon from "@mui/icons-material/Landscape";
+import FounderImage from "../../assets/About/fk7shE2M.jpeg";
+
 import "./about.css";
 const Founders = () => {
   return (
@@ -12,7 +14,9 @@ const Founders = () => {
       <Divider />
       <div className="founder-container">
         <div className="founder-card">
-          <LandscapeIcon className="LandscapeIcon" />
+          <div className="founderImage_card">
+            <img src={FounderImage} alt="" />
+          </div>
           <h1>Srinivas Goud Nandaram</h1>
           <span>Co-Founder</span>
         </div>
