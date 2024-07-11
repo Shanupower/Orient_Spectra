@@ -93,7 +93,7 @@ const getItems = (panelStyle) => [
     style: panelStyle,
   },
 ];
-const AustraliaCountry = () => {
+const USACountry = () => {
   return (
     <>
       <Navbar />
@@ -111,4 +111,4 @@ const AustraliaCountry = () => {
   );
 };
 
-export default AustraliaCountry;
+export default USACountry;
