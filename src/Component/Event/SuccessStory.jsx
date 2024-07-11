@@ -1,13 +1,32 @@
+import { useMemo, useState } from "react";
 import CircleArrow from "../Common/CircleArrow";
 import Divider from "../Common/Divider";
 import "./event.css";
 
 const SuccessStory = ({ eventData }) => {
+  const currentYear = new Date().getFullYear();
+  const [Year, setYear] = useState(currentYear);
+
+  const handleYeardata = (status) => {
+    if (status == "next" && Year < currentYear) {
+      setYear(Year + 1);
+    } else if (status == "prev" && Year > 2000) {
+      setYear(Year - 1);
+    }
+  };
+
+  const activeYearData = useMemo(() => {
+    return eventData.filter(
+      (data) =>
+        new Date(data.attributes.Date_of_the_event).getFullYear() === Year
+    );
+  }, [Year, eventData]);
+  console.log("activeYearData", activeYearData);
   return (
     <div className="success-story-container section">
       <div className="event-datecard">
-        <b>{eventData[0]?.attributes.Date_of_the_event}</b>
-        <p>{eventData[0]?.attributes.Shortdescription}</p>
+        <b>{eventData?.[1]?.attributes.Date_of_the_event}</b>
+        <p>{eventData?.[1]?.attributes.Shortdescription}</p>
       </div>
       <div className="success-stroy-section">
         <h1>Sucess Stories</h1>
@@ -16,14 +35,20 @@ const SuccessStory = ({ eventData }) => {
       <div className="envet-date-coontainer">
         <div className="event-leftdate-section">
           <div>
-            <h1>2024</h1>
-            <b>2023</b>
-            <b>2022</b>
-            <b>2021</b>
+            <h1>{Year}</h1>
+            <b>{Year - 1}</b>
+            <b>{Year - 2}</b>
+            <b>{Year - 3}</b>
           </div>
           <div>
-            <CircleArrow className="enevtdateArrowUp" />
-            <CircleArrow className="enevtdateArrowdown" />
+            <CircleArrow
+              className="enevtdateArrowUp"
+              onClick={() => handleYeardata("next")}
+            />
+            <CircleArrow
+              className="enevtdateArrowdown"
+              onClick={() => handleYeardata("prev")}
+            />
           </div>
         </div>
         <div className="event-rightdate-section">
@@ -41,10 +66,10 @@ const SuccessStory = ({ eventData }) => {
             </div>
           </div>
           <div className="event-list-card">
-            {[...Array(4)].map((item) => (
-              <div key={item}>
-                <p>Event Title Text</p>
-                <span>19 JUN 2024</span>
+            {activeYearData.map((data, index) => (
+              <div key={index}>
+                <p>{data?.attributes?.Shortdescription}</p>
+                <span>{data?.attributes?.Date_of_the_event}</span>
               </div>
             ))}
           </div>
