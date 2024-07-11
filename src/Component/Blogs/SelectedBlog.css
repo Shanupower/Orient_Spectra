@@ -1,6 +1,4 @@
-.selected-blog-div {
-  /* margin-bottom: 150px; */
-}
+
 
 .YouMightAlsoLike > h2 {
   font-size: 30px;
@@ -74,6 +72,8 @@ img {
   min-height: 60vh;
   max-width: 420px;
   min-width: 420px;
+  position: relative;
+
 }
 .youmight-img-content {
   width: 100%;
@@ -184,7 +184,14 @@ img {
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  marb
+  /* marb */
+}
+.navlink-to{
+  position: absolute;
+  right: 4%;
+  bottom: 35%;
+
+
 }
 
 

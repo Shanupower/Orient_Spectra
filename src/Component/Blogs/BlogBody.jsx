@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Container, Typography, Box } from "@mui/material";
 import Navbar from "../Common/Navbar";
@@ -38,7 +38,7 @@ const YouMightAlsoLike = ({ RecentBlogs }) => {
           <div className="Youmightlike-container" key={id}>
             <div
               className="youmight-img-content"
-              onClick={() => handleNavigate(value)}
+              
             >
               <div className="youmight-img-card">
                 {value.img && (
@@ -47,12 +47,19 @@ const YouMightAlsoLike = ({ RecentBlogs }) => {
               </div>
               <p>
                 {value.date}
-                <CircleArrow />
+               
+                {/* <CircleArrow /> */}
+
+
               </p>
             </div>
             <div className="youmightlikeblog-congtent-card">
               <h3>{value?.title}</h3>
               <p>{value?.description}</p>
+               <NavLink className={'navlink-to'} onClick={(value) => handleNavigate(value)}>
+              <CircleArrow /></NavLink>
+                
+             
             </div>
           </div>
         ))}
