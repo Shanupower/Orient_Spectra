@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-
 import "./index.css";
 
 const Events = () => {
@@ -41,7 +40,9 @@ const Events = () => {
           card.classList.remove("top-card");
         });
         const topCard = stack.querySelector(".card:last-child");
-        topCard.classList.add("top-card");
+        if (topCard) {
+          topCard.classList.add("top-card");
+        }
       };
 
       const swap = (e) => {
@@ -65,10 +66,12 @@ const Events = () => {
         stack.removeEventListener("click", swap);
       };
     }
-  }, []);
+  }, [Eventdata]);
+
   const handleNavigate = (post) => {
-    navigate(`/content`, { state: { data: post } });
+    navigate(`/events`, { state: { data: post } });
   };
+
   return (
     <div className="section Events__container">
       <motion.div
@@ -84,26 +87,23 @@ const Events = () => {
       >
         <div className="event_leftContent">
           <b className="upcomingText">Upcoming Events</b>
-
           <div className="dateEvent">
             <p>Date of the event</p>
             <span>{Eventdata[0]?.attributes?.Date_of_the_event}</span>
           </div>
           <div className="event_bottomContent">
             <h4 className="explaintag">{Eventdata[0]?.attributes?.Headline}</h4>
-            <span> {Eventdata[0]?.attributes?.Shortdescription}</span>
+            <span>{Eventdata[0]?.attributes?.Shortdescription}</span>
           </div>
         </div>
         <div className="eventsRigtImage">
           <b className="upcomingEvents">Upcoming Events</b>
-
           <img
             src={`http://157.173.222.81:1337${Eventdata[0]?.attributes?.Poster?.data?.attributes.url}`}
             alt=""
           />
         </div>
       </motion.div>
-
       <motion.div
         className="event_rightSide"
         initial="hidden"
@@ -116,20 +116,26 @@ const Events = () => {
         }}
       >
         <div className="stack">
-          {[1, 2, 3, 4, 5].map((item, index) => (
+          {Eventdata?.map((item, index) => (
             <div className="card cardEvent" key={index}>
               <div className="card_content">
-                <div>
-                  <p>Title of</p>
-                  <b>The Event</b>
+                <div className="CardEvent_heading">
+                  {item?.attributes?.Headline}
                 </div>
-                <ArrowForwardIcon
-                  sx={{ fontSize: "40px", fontWeight: "300" }}
-                  className="eventarrow"
-                />
+                <div onClick={() => handleNavigate(item)}>
+                  <ArrowForwardIcon
+                    sx={{ fontSize: "40px", fontWeight: "300" }}
+                    className="eventarrow"
+                  />
+                </div>
               </div>
-              <p>2023</p>
-              <img src={Banner2} alt="Event" />
+              <p className="Evet_date_card">
+                {new Date(item?.attributes?.Date_of_the_event).getFullYear()}
+              </p>
+              <img
+                src={`http://157.173.222.81:1337${item?.attributes?.Poster?.data?.attributes.url}`}
+                alt=""
+              />
             </div>
           ))}
         </div>

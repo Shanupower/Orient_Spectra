@@ -8,6 +8,8 @@ import axios from "axios";
 
 const Event = () => {
   const [Eventdata, setEventData] = useState([]);
+  const [CompletedEventdata, setCompletedEventdata] = useState([]);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -24,11 +26,27 @@ const Event = () => {
 
     fetchData();
   }, []);
+  useEffect(() => {
+    const fetchCompletedData = async () => {
+      try {
+        const response = await axios.get(
+          "http://157.173.222.81:1337/api/completed-events&populate=*"
+        );
+        if (response?.status === 200) {
+          setCompletedEventdata(response?.data.data);
+        }
+      } catch (error) {
+        console.log("ERROR OCCURED WHILE FETCHING:", error.message);
+      }
+    };
+
+    // fetchCompletedData();
+  }, []);
   return (
     <>
       <Navbar />
       <Hero eventData={Eventdata} />
-      <SuccessStory eventData={Eventdata} />
+      <SuccessStory CompletedEventdata={Eventdata} />
       <GetTuchWithUs />
       <Footer />
     </>

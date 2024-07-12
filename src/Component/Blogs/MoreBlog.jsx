@@ -32,7 +32,7 @@ const MoreBlog = ({data}) => {
             </div>
             <CircleArrow 
               className={"CircleArrow"} 
-              onClick={() => handleNavigate(item)} 
+              // onClick={() => handleNavigate(item)} 
             />
           </div>
         ))}

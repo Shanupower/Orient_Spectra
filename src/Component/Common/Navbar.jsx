@@ -5,7 +5,6 @@ import { DownOutlined } from "@ant-design/icons";
 import { Dropdown, Space } from "antd";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import "./index.css";
 import { useMediaQuery } from "@mui/material";
 import { Drawer } from "antd";
 import { Menu } from "antd";
@@ -23,8 +22,11 @@ import Singapore from "../../assets/Country/Flag/Singapore.png";
 import Ireland from "../../assets/Country/Flag/Ireland.png";
 import Germany from "../../assets/Country/Flag/Germany.png";
 import France from "../../assets/Country/Flag/France.png";
-
+import AccessibleIcon from "@mui/icons-material/Accessible";
+import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import MenuIcon from "@mui/icons-material/Menu";
+import SchoolIcon from "@mui/icons-material/School";
+import "./index.css";
 
 const items = [
   {
@@ -311,6 +313,8 @@ const Navbar = () => {
 
   const isMd = useMediaQuery("(max-width:986px)");
   const [open, setOpen] = useState(false);
+  const [openWhatwedo, setWhatwedoOpen] = useState(false);
+  const [openbranches, setopenbranches] = useState(false);
 
   const showDrawer = () => {
     setOpen(!open);
@@ -319,7 +323,14 @@ const Navbar = () => {
   const onClose = () => {
     setOpen(false);
   };
-
+  const handleOpenWhatWedoCard = () => {
+    setWhatwedoOpen(!openWhatwedo);
+    setopenbranches(false);
+  };
+  const handleOpeOurBranch = () => {
+    setopenbranches(!openbranches);
+    setWhatwedoOpen(false);
+  };
   return (
     <>
       {isMd ? (
@@ -384,10 +395,7 @@ const Navbar = () => {
                 }}
                 trigger={["click"]}
               >
-                <Space>
-                  Study Overseas
-                  <DownOutlined />
-                </Space>
+                <Space>Study Overseas</Space>
               </Dropdown>
             </div>
             <div>
@@ -397,35 +405,88 @@ const Navbar = () => {
             </div>
 
             <div>
-              <Dropdown
-                menu={{
-                  items,
-                }}
-                trigger={["click"]}
+              <div onClick={handleOpenWhatWedoCard}>
+                <Link className="Link_route DailyNews" to={"#"}>
+                  What we do
+                </Link>
+              </div>
+
+              <div
+                className={`whatwedo-dropdwon-container ${
+                  openWhatwedo && "Whatwedoshow"
+                }`}
               >
-                <a onClick={(e) => e.preventDefault()}>
-                  <Space>
-                    What we do
-                    <DownOutlined />
-                  </Space>
-                </a>
-              </Dropdown>
+                <div className="whatwedo-section">
+                  <div className="whatweddo-card">
+                    <AccessibleIcon className="AccessibleIcon" />
+                    <p>Mentorship</p>
+                  </div>
+                  <KeyboardArrowRightIcon className="KeyboardArrowRightIcon" />
+                </div>
+                <div className="whatwedo-section">
+                  <div className="whatweddo-card">
+                    <SchoolIcon className="AccessibleIcon" />
+                    <p>Find Your Course</p>
+                  </div>
+                  <KeyboardArrowRightIcon className="KeyboardArrowRightIcon" />
+                </div>
+                <div className="whatwedo-section">
+                  <div className="whatweddo-card">
+                    <AccessibleIcon className="AccessibleIcon" />
+                    <p>Coaching</p>
+                  </div>
+                  <KeyboardArrowRightIcon className="KeyboardArrowRightIcon" />
+                </div>
+              </div>
             </div>
 
             <div>
-              <Dropdown
-                menu={{
-                  items,
-                }}
-                trigger={["click"]}
+              <div onClick={handleOpeOurBranch}>
+                <Link className="Link_route DailyNews" to={"#"}>
+                  Our Branches
+                </Link>
+              </div>
+
+              <div
+                className={` branchssshow-card ${
+                  openbranches && "branchssshow"
+                }`}
               >
-                <a onClick={(e) => e.preventDefault()}>
-                  <Space>
-                    Our branches
-                    <DownOutlined />
-                  </Space>
-                </a>
-              </Dropdown>
+                <div className="whatwedo-section">
+                  <h2>Kothapet</h2>
+
+                  <div className="whatweddo-card branchCardLocation">
+                    <p>
+                      4th floor, Baheti Spectrum, National Highway 65,
+                      Polkampally, Margadarshi Colony, Kothapet, Hyderabad,
+                      Telangana 500035
+                    </p>
+                    <KeyboardArrowRightIcon className="KeyboardArrowRightIcon" />
+                  </div>
+                </div>
+                <div className="whatwedo-section">
+                  <h2>Himayath Nagar</h2>
+
+                  <div className="whatweddo-card branchCardLocation">
+                    <p>
+                      1st Floor, Sanatana Eternal, Himayatnagar Rd, Gagan Mahal,
+                      Basheer Bagh, Hyderabad, Telangana, 500029
+                    </p>
+                    <KeyboardArrowRightIcon className="KeyboardArrowRightIcon" />
+                  </div>
+                </div>
+                <div className="whatwedo-section">
+                  <h2>Kukatpally</h2>
+
+                  <div className="whatweddo-card branchCardLocation">
+                    <p>
+                      502, 5th floor, Manjeera Majestic Commercial, JNTU Rd,
+                      KPHB, Kukatpally, Hyderabad, Telangana, 500072
+                    </p>
+                    <KeyboardArrowRightIcon className="KeyboardArrowRightIcon" />
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div>
@@ -436,7 +497,12 @@ const Navbar = () => {
 
             <div>
               <Link className="Link_route DailyNews" to={"/news-&-pr"}>
-                Daily News
+                News & PR
+              </Link>
+            </div>
+            <div>
+              <Link className="Link_route DailyNews" to={"/events"}>
+                Events
               </Link>
             </div>
           </div>
@@ -452,3 +518,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+const WhatWedoDropDown = () => {};

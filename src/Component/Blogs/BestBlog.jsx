@@ -24,9 +24,7 @@ const BestBlog = ({ data }) => {
   return (
     <div className="bestblog-conntainer section">
       <div className="continue-reading-card">
-        <CircleArrow className="LeftCircleArrow" />
         <p>Continue Reading</p>
-        <CircleArrow className="rightCircleArrow" />
       </div>
 
       <OwlCarousel className="owl-theme" {...options}>

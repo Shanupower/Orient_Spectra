@@ -286,3 +286,98 @@
   min-width: 150.053px;
   max-width: 74% !important;
 } */
+
+.ant-dropdown-menu {
+  display: grid !important;
+  grid-template-columns: repeat(5, 1fr) !important;
+  gap: 2rem !important;
+}
+
+/* ant-dropdown css-dev-only-do-not-override-j9bb5n  */
+.ant-dropdown-placement-bottomLeft {
+  width: 74% !important;
+  max-width: 74% !important;
+  left: 6% !important;
+  position: fixed !important;
+  top: 5rem !important;
+}
+
+@media (max-width: 1100px) {
+  .ant-dropdown-menu {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+}
+.ant-space-gap-col-small {
+  cursor: pointer !important;
+}
+
+/* What we do */
+.branchssshow-card,
+.whatwedo-dropdwon-container {
+  position: fixed;
+  left: 6% !important;
+  top: 5rem !important;
+  /* border: 1px solid red; */
+  width: 74% !important;
+  max-width: 74% !important;
+  color: var(--text-color-black);
+  background-color: #fff;
+  border-radius: 16px;
+  min-height: 20vh;
+  box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.3);
+  padding-block: 2rem 2rem;
+  display: none;
+}
+
+.whatwedo-section {
+  display: flex;
+  gap: 2rem;
+  border-bottom: 1px solid var(--text-color-black);
+  width: 60%;
+  justify-content: space-between;
+  margin: auto;
+  align-items: center;
+  cursor: pointer;
+}
+
+.whatweddo-card {
+  display: flex;
+  justify-content: space-around;
+  padding-block: 1rem;
+  align-items: center;
+
+  gap: 3rem;
+}
+.whatweddo-card > p {
+  font-size: 18px;
+  color: var(--text-color-darkgray);
+}
+.AccessibleIcon {
+  font-size: 32px !important;
+  color: var(--text-color-darkgray);
+}
+.whatwedo-section:hover > .whatweddo-card > p {
+  color: var(--brand-color);
+}
+.whatwedo-section:hover > .whatweddo-card > .AccessibleIcon {
+  color: var(--brand-color);
+}
+.whatwedo-section:hover  .KeyboardArrowRightIcon {
+  color: var(--brand-color);
+}
+.branchssshow,
+.Whatwedoshow {
+  display: block;
+}
+
+.branchCardLocation {
+  text-wrap: wrap;
+  width: 40%;
+}
+.branchCardLocation > p {
+  font-size: 12px;
+  line-height: 1.2;
+}
+.whatwedo-section:hover > h2 {
+  color: var(--brand-color);
+}
