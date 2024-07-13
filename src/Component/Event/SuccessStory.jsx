@@ -3,10 +3,10 @@ import CircleArrow from "../Common/CircleArrow";
 import Divider from "../Common/Divider";
 import "./event.css";
 
-const SuccessStory = ({ eventData }) => {
+const SuccessStory = ({ CompletedEventdata }) => {
   const currentYear = new Date().getFullYear();
   const [Year, setYear] = useState(currentYear);
-
+  console.log("CompletedEventdata", CompletedEventdata);
   const handleYeardata = (status) => {
     if (status == "next" && Year < currentYear) {
       setYear(Year + 1);
@@ -16,21 +16,20 @@ const SuccessStory = ({ eventData }) => {
   };
 
   const activeYearData = useMemo(() => {
-    return eventData.filter(
+    return CompletedEventdata.filter(
       (data) =>
         new Date(data.attributes.Date_of_the_event).getFullYear() === Year
     );
-  }, [Year, eventData]);
+  }, [Year, CompletedEventdata]);
   console.log("activeYearData", activeYearData);
   return (
     <div className="success-story-container section">
       <div className="event-datecard">
-        <b>{eventData?.[1]?.attributes.Date_of_the_event}</b>
-        <p>{eventData?.[1]?.attributes.Shortdescription}</p>
+        <b>{CompletedEventdata?.[1]?.attributes.Date_of_the_event}</b>
+        <p>{CompletedEventdata?.[1]?.attributes.Shortdescription}</p>
       </div>
       <div className="success-stroy-section">
         <h1>Sucess Stories</h1>
-        <h2>Title Text</h2>
       </div>
       <div className="envet-date-coontainer">
         <div className="event-leftdate-section">

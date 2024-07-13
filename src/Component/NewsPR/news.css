@@ -1,6 +1,6 @@
 .hero-news-and-pr-container {
   width: 100%;
-  height:70vh;
+  height: 70vh;
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
@@ -66,9 +66,10 @@
   height: 80vh;
   display: flex;
   align-items: flex-end;
-  background-color: var(--bg-color);
   border-radius: 16px;
   padding: 2rem;
+  position: relative;
+  overflow: hidden;
 }
 .Recentnews-card > div,
 .latestnews-card > div {
@@ -76,7 +77,14 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  background-color: var(--bg-color);
+}
+.latest-image-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
 }
 
 .Recentnews-card {
@@ -99,5 +107,5 @@
 .recent-news-title-card > p {
   font-size: 14px;
   color: var(--text-color-darkgray);
-  margin-top: .3rem;
+  margin-top: 0.3rem;
 }

@@ -139,12 +139,39 @@
   align-items: center;
   justify-content: center;
   gap: 2rem;
+  position: relative;
 }
 
 .LeftCircleArrow {
   rotate: 180deg;
   width: 40px !important;
   height: 40px !important;
+}
+
+.owl-prev {
+  position: absolute;
+  top: -5.4rem;
+  left: 37%;
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--text-color-darkblack) !important;
+  border-radius: 50% !important;
+  margin-right: 1rem;
+}
+.owl-next {
+  position: absolute;
+  top: -5.4rem;
+  left: 59%;
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--text-color-darkblack) !important;
+  border-radius: 50% !important;
+  margin-right: 1rem;
+}
+.owl-next:hover,
+.owl-prev:hover {
+  background-color: var(--brand-color) !important;
+  border-color: var(--brand-color) !important;
 }
 .rightCircleArrow {
   width: 40px !important;
