@@ -5,7 +5,7 @@ import Event from "./Component/Event/Event";
 import NewsPR from "./Component/NewsPR/NewsPR";
 import StudyOverseas from "./Component/StudyOverseas/StudyOverseas";
 import LandingPage from "./Landing_page/LandingPage";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Finding from "./FindingYourCourse/Finding";
 import Coaching from "./Coaching/Coaching";
 import Mentorship from "./Mentorship/Mentorship";
@@ -22,10 +22,47 @@ import PolandCountry from "./Component/Country/Poland/Country";
 import SwitzerlandCountry from "./Component/Country/Switzerland/Country";
 import SingaporeCountry from "./Component/Country/Singapore/Country";
 import USACountry from "./Component/Country/Usa/Country";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import Navbar from "./Component/Common/Navbar";
+import Footer from "./Component/Common/Footer";
+import Step1 from "./Component/StartYourJourney/Step1";
+import StartYourJourney from "./Component/StartYourJourney/StartYourJourney";
 function App() {
+  const [openWhatwedo, setWhatwedoOpen] = useState(false);
+  const [openbranches, setopenbranches] = useState(false);
+  const [activeNavbar, setactiveNavbar] = useState(false);
+  const hanldeCloseSubheader = () => {
+    setWhatwedoOpen(false);
+    setopenbranches(false);
+    setactiveNavbar(false);
+  };
+
+  const location = useLocation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      hanldeCloseSubheader();
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+
   return (
     <>
+      <Navbar
+        openWhatwedo={openWhatwedo}
+        setWhatwedoOpen={setWhatwedoOpen}
+        openbranches={openbranches}
+        setopenbranches={setopenbranches}
+        activeNavbar={activeNavbar}
+        setactiveNavbar={setactiveNavbar}
+        hanldeCloseSubheader={hanldeCloseSubheader}
+      />
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/country/Usa" element={<USACountry />} />
@@ -53,7 +90,12 @@ function App() {
         <Route path="/Mentorship" element={<Mentorship />}></Route>
         <Route path="/blogs" element={<SelectedBlog />}></Route>
         <Route path="/content" element={<BlogBody />} />
+
+        {/* Start your Journey */}
+        <Route path="/start-your-journey" element={<StartYourJourney />} />
+        <Route path="*" element={<p>Request URL Invalid</p>} />
       </Routes>
+      <Footer />
     </>
   );
 }

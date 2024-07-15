@@ -52,10 +52,9 @@ const getItems = (panelStyle) => [
       <p className="textContent">
         •Document Preparation: Assistance with gathering and organizing all
         necessary documents to ensure your application is complete and meets all
-        requirements. 
-        • Application Assistance: Step-by-step support in filling
-        out visa application forms correctly to avoid any errors or omissions.
-        • Interview Preparation: Coaching to prepare you for visa interviews,
+        requirements. • Application Assistance: Step-by-step support in filling
+        out visa application forms correctly to avoid any errors or omissions. •
+        Interview Preparation: Coaching to prepare you for visa interviews,
         including mock interviews to build your confidence and improve your
         chances of success.
       </p>
@@ -67,8 +66,9 @@ const getItems = (panelStyle) => [
     label: " Experienced Counselors",
     children: (
       <p className="textContent">
-        • Our counselors have years of experience in the field of overseas education and student visa applications.
-        • They have successfully helped numerous students achieve their dreams of studying abroad.
+        • Our counselors have years of experience in the field of overseas
+        education and student visa applications. • They have successfully helped
+        numerous students achieve their dreams of studying abroad.
       </p>
     ),
     style: panelStyle,
@@ -78,8 +78,9 @@ const getItems = (panelStyle) => [
     label: " Proven Track Record",
     children: (
       <p className="textContent">
-        • We pride ourselves on our high success rate in securing student visas for our clients.
-        • Testimonials from our satisfied students attest to our commitment and effectiveness
+        • We pride ourselves on our high success rate in securing student visas
+        for our clients. • Testimonials from our satisfied students attest to
+        our commitment and effectiveness
       </p>
     ),
     style: panelStyle,
@@ -154,7 +155,6 @@ const capDescription =
 const Coaching = () => {
   return (
     <>
-      <Navbar />
       {/* FIND YOUR COURSE COMPONENT */}
       <FYC capDescription={capDescription} capName={capName} />
 
@@ -193,7 +193,11 @@ const Coaching = () => {
         <div className="capabilities-section">
           <div className="capabilities-card">
             <div className="cap-image-card">
-              <img style={{objectFit:"cover"}} src="src\assets\Explore our Capabilities\Finding your course\Our Approach.jpg" alt="Finding your course"/>
+              <img
+                style={{ objectFit: "cover" }}
+                src="src\assets\Explore our Capabilities\Finding your course\Our Approach.jpg"
+                alt="Finding your course"
+              />
               <NavLink style={{ color: "black" }} to={"/FindYourCourse"}>
                 <CircleArrow className="CircleArrowButton" />
               </NavLink>
@@ -208,7 +212,11 @@ const Coaching = () => {
           </div>
           <div className="capabilities-card">
             <div className="cap-image-card">
-              <img style={{objectFit:"cover"}} src="src\assets\Explore our Capabilities\Mentorship\How it works.jpg" alt="Mentorship"/>
+              <img
+                style={{ objectFit: "cover" }}
+                src="src\assets\Explore our Capabilities\Mentorship\How it works.jpg"
+                alt="Mentorship"
+              />
               <NavLink style={{ color: "black" }} to={"/Mentorship"}>
                 <CircleArrow className="CircleArrowButton" />
               </NavLink>
@@ -223,7 +231,6 @@ const Coaching = () => {
         </div>
       </div>
       <GetStartedToday />
-      <Footer/>
     </>
   );
 };

@@ -1,0 +1,126 @@
+.step1-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  padding-top: 6rem;
+  border: 1px solid;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: var(--bg-color);
+  padding-bottom: 0 !important;
+}
+
+.step1-left-card {
+  width: calc(45% - 1rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.step1-left-card > h1 {
+  font-size: 50px;
+  line-height: 1.2;
+  color: var(--text-color-black);
+}
+.step1-left-card > h1 > b {
+  color: var(--brand-color);
+}
+.step1-left-card > h1 > span {
+  color: var(--text-color-darkgray);
+  font-size: 16px;
+}
+.step1-right-card {
+  width: calc(45% - 1rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.Next-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 0.8rem 2rem;
+  border-radius: 16px;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 600;
+}
+.destination-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.destination-item {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+}
+.destination-item:hover {
+  border: 2px solid var(--brand-color);
+  padding: 1rem 0.4rem;
+}
+.destination-item > div {
+  width: 40%;
+  height: 36px;
+}
+.SelectedCountry {
+  border: 1px solid var(--bg-color);
+  background-color: #ffffff;
+  padding-left: 0.6rem;
+  border-radius: 4px;
+}
+.destination-item > span {
+  font-size: 12px;
+}
+/* Corse */
+.Course-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.subject-card,
+.Course-card {
+  background-color: #ffffff;
+  font-size: 20px;
+  color: var(--text-color-black);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.subject-card {
+  padding: 0.5rem 2rem;
+}
+.selectedCardcourse {
+  background-color: var(--brand-color);
+  color: #ffffff;
+}
+
+/* Stepper.css */
+.stepper {
+  display: flex;
+  align-items: center;
+  width: 80%;
+}
+
+.step {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--text-color-gray);
+  cursor: pointer;
+}
+
+.line {
+  flex-grow: 1;
+  height: 2px;
+  background-color: var(--text-color-gray);
+  margin: 0 10px;
+}
+
+.ActiveStep {
+  background-color: var(--brand-color);
+}

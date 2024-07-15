@@ -54,7 +54,6 @@ const LandingPage = () => {
 
   return (
     <>
-      <Navbar />
       <Hero blog={blog} event={event} />
       <Discovery />
       <Acedemic />
@@ -68,7 +67,6 @@ const LandingPage = () => {
       <News />
       {/* <Faq /> */}
       <GetTuchWithUs />
-      <Footer />
     </>
   );
 };

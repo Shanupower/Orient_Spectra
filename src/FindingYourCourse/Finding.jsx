@@ -130,23 +130,26 @@ const getItems2 = (panelStyle) => [
     style: panelStyle,
   },
 ];
-const capName="Finding Your";
-const capSecondName ="Course"
-const capDescription = " At Orient Spectra, we understand that choosing the right course for your academic and professional goals can be a daunting task. That's why we offer expert guidance and counseling services to help you navigate through the myriad of options available to you. With our experienced counselors by your side, you can make informed decisions that align with your interests, abilities, and aspirations."
-
+const capName = "Finding Your";
+const capSecondName = "Course";
+const capDescription =
+  " At Orient Spectra, we understand that choosing the right course for your academic and professional goals can be a daunting task. That's why we offer expert guidance and counseling services to help you navigate through the myriad of options available to you. With our experienced counselors by your side, you can make informed decisions that align with your interests, abilities, and aspirations.";
 
 const Finding = () => {
   return (
     <>
-      <Navbar />
       {/* FIND YOUR COURSE COMPONENT */}
-      <FYC capName={capName} capDescription={capDescription} capSecondName={capSecondName}/>
+      <FYC
+        capName={capName}
+        capDescription={capDescription}
+        capSecondName={capSecondName}
+      />
 
       <div className="find-cource-image-card section">
         <div className="image-card">
           {/* <LandscapeIcon className="LandscapeIconIcon2" />
            */}
-           <img src="src\assets\Explore our Capabilities\Finding your course\Main Image.jpg"/>
+          <img src="src\assets\Explore our Capabilities\Finding your course\Main Image.jpg" />
         </div>
       </div>
       <div className="whywechoose-card section">
@@ -166,7 +169,7 @@ const Finding = () => {
         </div>
         <div className="story-rightcard">
           {/* <LandscapeIcon className="LandscapeIconIcon2" /> */}
-          <img src="src\assets\Explore our Capabilities\Finding your course\Our Approach.jpg"/>
+          <img src="src\assets\Explore our Capabilities\Finding your course\Our Approach.jpg" />
         </div>
       </div>
 
@@ -178,10 +181,13 @@ const Finding = () => {
         <div className="capabilities-section">
           <div className="capabilities-card">
             <div className="cap-image-card">
-              <img style={{objectFit:"cover"}} src="src\assets\Explore our Capabilities\Coaching\Services image.jpg" alt="Coaching"/> 
-              <NavLink style={{color:"black"}} to={'/Coaching'}>
-
-              <CircleArrow className="CircleArrowButton" />
+              <img
+                style={{ objectFit: "cover" }}
+                src="src\assets\Explore our Capabilities\Coaching\Services image.jpg"
+                alt="Coaching"
+              />
+              <NavLink style={{ color: "black" }} to={"/Coaching"}>
+                <CircleArrow className="CircleArrowButton" />
               </NavLink>
             </div>
             <h1>Coaching</h1>
@@ -194,9 +200,13 @@ const Finding = () => {
           </div>
           <div className="capabilities-card">
             <div className="cap-image-card">
-              <img style={{objectFit:"cover"}} src="src\assets\Explore our Capabilities\Mentorship\How it works.jpg" alt="Mentorship"/>
-              <NavLink style={{color:"black"}} to={'/Mentorship'}>
-              <CircleArrow className="CircleArrowButton" />
+              <img
+                style={{ objectFit: "cover" }}
+                src="src\assets\Explore our Capabilities\Mentorship\How it works.jpg"
+                alt="Mentorship"
+              />
+              <NavLink style={{ color: "black" }} to={"/Mentorship"}>
+                <CircleArrow className="CircleArrowButton" />
               </NavLink>
             </div>
             <h1>Mentorship</h1>
@@ -209,7 +219,6 @@ const Finding = () => {
         </div>
       </div>
       <GetStartedToday />
-      <Footer/>
     </>
   );
 };

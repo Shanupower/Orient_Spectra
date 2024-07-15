@@ -96,7 +96,6 @@ const getItems = (panelStyle) => [
 const USACountry = () => {
   return (
     <>
-      <Navbar />
       <Hero />
       <State />
       <UnitedState />
@@ -106,7 +105,6 @@ const USACountry = () => {
       <Admissiontimeline />
       <Personalized />
       <CountryFaq getItems={getItems} />
-      <Footer />
     </>
   );
 };

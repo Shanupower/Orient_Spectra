@@ -7,9 +7,8 @@ import { Divider } from "antd";
 import CircleArrow from "../Common/CircleArrow";
 import Footer from "../Common/Footer";
 import GetTuchWithUs from "../../Landing_page/GetTuchWithUs2";
-import axios from "axios"
+import axios from "axios";
 import { useParams } from "react-router-dom";
-
 
 const BlogTitle = () => {
   return (
@@ -35,8 +34,7 @@ const RecentBlogs = [
     title: "Recent Blog Title",
     description:
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh malutpat.",
-      img:"",
-      
+    img: "",
   },
   {
     id: 1,
@@ -44,7 +42,7 @@ const RecentBlogs = [
     title: "Recent Blog Title",
     description:
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh malutpat.",
-       img:""
+    img: "",
   },
   {
     id: 2,
@@ -52,7 +50,7 @@ const RecentBlogs = [
     title: "Recent Blog Title",
     description:
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh malutpat.",
-       img:""
+    img: "",
   },
   {
     id: 3,
@@ -60,7 +58,7 @@ const RecentBlogs = [
     title: "Recent Blog Title",
     description:
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh malutpat.",
-       img:""
+    img: "",
   },
   {
     id: 3,
@@ -68,11 +66,9 @@ const RecentBlogs = [
     title: "Recent Blog Title",
     description:
       "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh malutpat.",
-       img:""
+    img: "",
   },
- 
 ];
-
 
 const YouMightAlsoLike = () => {
   return (
@@ -82,36 +78,31 @@ const YouMightAlsoLike = () => {
           <h4>You Might Also Like</h4>
         </div>
         <div className="YouMightAlsoLike-blog-main-div">
-            {RecentBlogs.map((value, id)=><>
-            <div className="YouMightAlsoLike-blog-div">
+          {RecentBlogs.map((value, id) => (
+            <>
+              <div className="YouMightAlsoLike-blog-div">
                 <div></div>
                 <div className="YouMightAlsoLike-blog-date">
-                    <p>{value.date}</p>
-                    <CircleArrow className={"CircleArrow"} />
+                  <p>{value.date}</p>
+                  <CircleArrow className={"CircleArrow"} />
                 </div>
                 <div>
-                    <h3>{value.title}</h3>
+                  <h3>{value.title}</h3>
                 </div>
-
-
-            </div>
-               
-            </>)}
+              </div>
+            </>
+          ))}
         </div>
       </div>
     </>
   );
 };
 
-
-
 const SelectedBlog = () => {
   return (
     <>
       <div className="selected-blog-hero">
-        <div className="selected-blog-div">
-          <Navbar />
-        </div>
+        <div className="selected-blog-div"></div>
         <div className="selected-blog-title">
           <h1>Title of The Blog</h1>
           <div className="selected-description-div">
@@ -130,7 +121,7 @@ const SelectedBlog = () => {
           />
           <div>
             <p></p>
-            </div>
+          </div>
           <hr />
           <div className="remaing-blogs">
             <h3>H3 Title</h3>
@@ -144,8 +135,7 @@ const SelectedBlog = () => {
           <YouMightAlsoLike />
         </div>
       </div>
-      <GetTuchWithUs/>
-      <Footer/>
+      <GetTuchWithUs />
     </>
   );
 };

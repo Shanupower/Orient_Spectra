@@ -145,7 +145,6 @@ const getItems = (panelStyle) => [
 const StudyOverseas = () => {
   return (
     <>
-      <Navbar />
       <Hero />
       <Counselors />
       <DiscoverEvent />
@@ -153,7 +152,6 @@ const StudyOverseas = () => {
       <Events />
       <CountryFaq getItems={getItems} />
       <GetTuchWithUs />
-      <Footer />
     </>
   );
 };

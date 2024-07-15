@@ -26,6 +26,7 @@ import AccessibleIcon from "@mui/icons-material/Accessible";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import MenuIcon from "@mui/icons-material/Menu";
 import SchoolIcon from "@mui/icons-material/School";
+import SportsIcon from "@mui/icons-material/Sports";
 import "./index.css";
 
 const items = [
@@ -308,13 +309,17 @@ const Menuitem = [
     // ),
   },
 ];
-const Navbar = () => {
-  const [show, setShow] = useState(true);
-
+const Navbar = ({
+  hanldeCloseSubheader,
+  openWhatwedo,
+  setWhatwedoOpen,
+  openbranches,
+  setopenbranches,
+  activeNavbar,
+  setactiveNavbar,
+}) => {
   const isMd = useMediaQuery("(max-width:986px)");
   const [open, setOpen] = useState(false);
-  const [openWhatwedo, setWhatwedoOpen] = useState(false);
-  const [openbranches, setopenbranches] = useState(false);
 
   const showDrawer = () => {
     setOpen(!open);
@@ -326,10 +331,18 @@ const Navbar = () => {
   const handleOpenWhatWedoCard = () => {
     setWhatwedoOpen(!openWhatwedo);
     setopenbranches(false);
+    setactiveNavbar(true);
   };
   const handleOpeOurBranch = () => {
     setopenbranches(!openbranches);
     setWhatwedoOpen(false);
+    setactiveNavbar(true);
+  };
+
+  const hanldeCloseSubheader2 = () => {
+    setWhatwedoOpen(false);
+    setopenbranches(false);
+    setactiveNavbar(!activeNavbar);
   };
   return (
     <>
@@ -384,11 +397,15 @@ const Navbar = () => {
         </div>
       ) : (
         <div className={`navBarContainer `}>
-          <div className="navbarCard">
-            <Link to="/" className="Link_route logo">
+          <div className={`navbarCard ${activeNavbar && "activeNavbar"}`}>
+            <Link
+              to="/"
+              className="Link_route logo"
+              onClick={hanldeCloseSubheader}
+            >
               <img src={Logo} alt="" />
             </Link>
-            <div>
+            <div onClick={hanldeCloseSubheader2}>
               <Dropdown
                 menu={{
                   items,
@@ -398,15 +415,23 @@ const Navbar = () => {
                 <Space>Study Overseas</Space>
               </Dropdown>
             </div>
-            <div>
-              <Link className="Link_route DailyNews" to="/about">
+            <div onClick={hanldeCloseSubheader}>
+              <Link
+                className={`Link_route DailyNews ${activeNavbar && "DalyText"}`}
+                to="/about"
+              >
                 <Space>About us</Space>
               </Link>
             </div>
 
             <div>
               <div onClick={handleOpenWhatWedoCard}>
-                <Link className="Link_route DailyNews" to={"#"}>
+                <Link
+                  className={`Link_route DailyNews ${
+                    activeNavbar && "DalyText"
+                  }`}
+                  to={"#"}
+                >
                   What we do
                 </Link>
               </div>
@@ -416,33 +441,50 @@ const Navbar = () => {
                   openWhatwedo && "Whatwedoshow"
                 }`}
               >
-                <div className="whatwedo-section">
-                  <div className="whatweddo-card">
+                <Link
+                  to="/Mentorship"
+                  className="whatwedo-section Link_route"
+                  onClick={hanldeCloseSubheader}
+                >
+                  <div className=" whatweddo-card">
                     <AccessibleIcon className="AccessibleIcon" />
                     <p>Mentorship</p>
                   </div>
                   <KeyboardArrowRightIcon className="KeyboardArrowRightIcon" />
-                </div>
-                <div className="whatwedo-section">
+                </Link>
+                <Link
+                  to="/FindYourCourse"
+                  className="whatwedo-section Link_route"
+                  onClick={hanldeCloseSubheader}
+                >
                   <div className="whatweddo-card">
                     <SchoolIcon className="AccessibleIcon" />
                     <p>Find Your Course</p>
                   </div>
                   <KeyboardArrowRightIcon className="KeyboardArrowRightIcon" />
-                </div>
-                <div className="whatwedo-section">
+                </Link>
+                <Link
+                  to="/Coaching"
+                  className="whatwedo-section Link_route"
+                  onClick={hanldeCloseSubheader}
+                >
                   <div className="whatweddo-card">
-                    <AccessibleIcon className="AccessibleIcon" />
+                    <SportsIcon className="AccessibleIcon" />
                     <p>Coaching</p>
                   </div>
                   <KeyboardArrowRightIcon className="KeyboardArrowRightIcon" />
-                </div>
+                </Link>
               </div>
             </div>
 
             <div>
               <div onClick={handleOpeOurBranch}>
-                <Link className="Link_route DailyNews" to={"#"}>
+                <Link
+                  className={`Link_route DailyNews ${
+                    activeNavbar && "DalyText"
+                  }`}
+                  to={"#"}
+                >
                   Our Branches
                 </Link>
               </div>
@@ -452,7 +494,10 @@ const Navbar = () => {
                   openbranches && "branchssshow"
                 }`}
               >
-                <div className="whatwedo-section">
+                <div
+                  className="whatwedo-section"
+                  onClick={hanldeCloseSubheader}
+                >
                   <h2>Kothapet</h2>
 
                   <div className="whatweddo-card branchCardLocation">
@@ -464,7 +509,10 @@ const Navbar = () => {
                     <KeyboardArrowRightIcon className="KeyboardArrowRightIcon" />
                   </div>
                 </div>
-                <div className="whatwedo-section">
+                <div
+                  className="whatwedo-section"
+                  onClick={hanldeCloseSubheader}
+                >
                   <h2>Himayath Nagar</h2>
 
                   <div className="whatweddo-card branchCardLocation">
@@ -475,7 +523,10 @@ const Navbar = () => {
                     <KeyboardArrowRightIcon className="KeyboardArrowRightIcon" />
                   </div>
                 </div>
-                <div className="whatwedo-section">
+                <div
+                  className="whatwedo-section"
+                  onClick={hanldeCloseSubheader}
+                >
                   <h2>Kukatpally</h2>
 
                   <div className="whatweddo-card branchCardLocation">
@@ -489,24 +540,33 @@ const Navbar = () => {
               </div>
             </div>
 
-            <div>
-              <Link className="Link_route DailyNews" to={"/blogs"}>
+            <div onClick={hanldeCloseSubheader}>
+              <Link
+                className={`Link_route DailyNews ${activeNavbar && "DalyText"}`}
+                to={"/blogs"}
+              >
                 Blogs
               </Link>
             </div>
 
-            <div>
-              <Link className="Link_route DailyNews" to={"/news-&-pr"}>
+            <div onClick={hanldeCloseSubheader}>
+              <Link
+                className={`Link_route DailyNews ${activeNavbar && "DalyText"}`}
+                to={"/news-&-pr"}
+              >
                 News & PR
               </Link>
             </div>
-            <div>
-              <Link className="Link_route DailyNews" to={"/events"}>
+            <div onClick={hanldeCloseSubheader}>
+              <Link
+                className={`Link_route DailyNews ${activeNavbar && "DalyText"}`}
+                to={"/events"}
+              >
                 Events
               </Link>
             </div>
           </div>
-          <div className="navbarButton">
+          <div className="navbarButton" onClick={hanldeCloseSubheader}>
             <Link className="Link_route GetInbutton" to={"#"}>
               Get In Touch
             </Link>
@@ -519,4 +579,3 @@ const Navbar = () => {
 
 export default Navbar;
 
-const WhatWedoDropDown = () => {};

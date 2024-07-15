@@ -14,7 +14,6 @@ import Story from "./Story";
 const About = () => {
   return (
     <>
-      <Navbar />
       <Hero />
       <Story />
       <Counselors />
@@ -25,7 +24,6 @@ const About = () => {
       <Events />
       <Testimonial />
       <GetTuchWithUs />
-      <Footer />
     </>
   );
 };

@@ -88,7 +88,6 @@ const getItems = (panelStyle) => [
 const MaltaCountry = () => {
   return (
     <>
-      <Navbar />
       <Hero />
       <State />
       <UnitedState />
@@ -98,7 +97,6 @@ const MaltaCountry = () => {
       <Admissiontimeline />
       <Personalized />
       <CountryFaq getItems={getItems} />
-      <Footer />
     </>
   );
 };
