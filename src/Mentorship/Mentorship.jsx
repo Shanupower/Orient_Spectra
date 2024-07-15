@@ -162,14 +162,13 @@ const capDescription =
 const Finding = () => {
   return (
     <>
-      <Navbar />
       {/* FIND YOUR COURSE COMPONENT */}
-      <FYC capName={capName} capDescription={capDescription}/>
+      <FYC capName={capName} capDescription={capDescription} />
 
       <div className="find-cource-image-card section">
         <div className="image-card">
           {/* <LandscapeIcon className="LandscapeIconIcon2" /> */}
-          <img src="src\assets\Explore our Capabilities\Mentorship\Main image.jpg"/>
+          <img src="src\assets\Explore our Capabilities\Mentorship\Main image.jpg" />
         </div>
       </div>
       <div className="whywechoose-card section">
@@ -189,7 +188,7 @@ const Finding = () => {
         </div>
         <div className="story-rightcard">
           {/* <LandscapeIcon className="LandscapeIconIcon2" /> */}
-          <img src="src\assets\Explore our Capabilities\Mentorship\How it works.jpg"/>
+          <img src="src\assets\Explore our Capabilities\Mentorship\How it works.jpg" />
         </div>
       </div>
 
@@ -201,9 +200,13 @@ const Finding = () => {
         <div className="capabilities-section">
           <div className="capabilities-card">
             <div className="cap-image-card ">
-            <img style={{objectFit:"cover"}} src="src\assets\Explore our Capabilities\Coaching\Services image.jpg" alt="Coaching"/> 
-              <NavLink style={{color:"black"}} to={'/Coaching'}>
-              <CircleArrow className="CircleArrowButton" />
+              <img
+                style={{ objectFit: "cover" }}
+                src="src\assets\Explore our Capabilities\Coaching\Services image.jpg"
+                alt="Coaching"
+              />
+              <NavLink style={{ color: "black" }} to={"/Coaching"}>
+                <CircleArrow className="CircleArrowButton" />
               </NavLink>
             </div>
             <h1>Coaching</h1>
@@ -216,10 +219,14 @@ const Finding = () => {
           </div>
           <div className="capabilities-card">
             <div className="cap-image-card ">
-            <img style={{objectFit:"cover"}} src="src\assets\Explore our Capabilities\Finding your course\Our Approach.jpg" alt="Finding your course"/>
+              <img
+                style={{ objectFit: "cover" }}
+                src="src\assets\Explore our Capabilities\Finding your course\Our Approach.jpg"
+                alt="Finding your course"
+              />
 
-              <NavLink style={{color:"black"}} to={'/FindYourCourse'}>
-              <CircleArrow className="CircleArrowButton" />
+              <NavLink style={{ color: "black" }} to={"/FindYourCourse"}>
+                <CircleArrow className="CircleArrowButton" />
               </NavLink>
             </div>
             <h1>Find Your Course</h1>
@@ -232,8 +239,6 @@ const Finding = () => {
         </div>
       </div>
       <GetStartedToday />
-      <Footer/>
-      
     </>
   );
 };

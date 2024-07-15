@@ -81,7 +81,6 @@ const getItems = (panelStyle) => [
 const IrelandCountry = () => {
   return (
     <>
-      <Navbar />
       <Hero />
       <State />
       <UnitedState />
@@ -91,7 +90,6 @@ const IrelandCountry = () => {
       <Admissiontimeline />
       <Personalized />
       <CountryFaq getItems={getItems} />
-      <Footer />
     </>
   );
 };

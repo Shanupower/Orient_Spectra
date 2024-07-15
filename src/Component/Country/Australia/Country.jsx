@@ -96,17 +96,15 @@ const getItems = (panelStyle) => [
 const AustraliaCountry = () => {
   return (
     <>
-      <Navbar />
       <Hero />
-      <State />
+      {/* <State /> */}
       <UnitedState />
       <Univercity />
       <TrendingCourse />
       <AdmitionRequired />
       <Admissiontimeline />
-      <Personalized />
-      <CountryFaq getItems={getItems} />
-      <Footer />
+      {/* <Personalized /> */}
+      {/* <CountryFaq getItems={getItems} /> */}
     </>
   );
 };

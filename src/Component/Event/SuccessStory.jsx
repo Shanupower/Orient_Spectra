@@ -1,6 +1,12 @@
 import { useMemo, useState } from "react";
 import CircleArrow from "../Common/CircleArrow";
-import Divider from "../Common/Divider";
+import * as React from "react";
+import Accordion from "@mui/material/Accordion";
+import AccordionActions from "@mui/material/AccordionActions";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import Button from "@mui/material/Button";
 import "./event.css";
 
 const SuccessStory = ({ CompletedEventdata }) => {
@@ -53,24 +59,32 @@ const SuccessStory = ({ CompletedEventdata }) => {
         <div className="event-rightdate-section">
           <div className="success-storytitle-container">
             <div className="success-titleleft-card">
-              <h3>Event Title Text</h3>
-              <span>19 JUN 2024</span>
-            </div>
-            <div className="success-titleRight-card">
-              <h2>For the event title</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                diam nonummy nibh malutpat.
-              </p>
-            </div>
-          </div>
-          <div className="event-list-card">
-            {activeYearData.map((data, index) => (
-              <div key={index}>
-                <p>{data?.attributes?.Shortdescription}</p>
-                <span>{data?.attributes?.Date_of_the_event}</span>
+              <div className="success-titleleft-card">
+                {activeYearData.length > 0 ? (
+                  activeYearData.map((data, index) => (
+                    <Accordion
+                      {...(index === 0 && { defaultExpanded: true })}
+                      key={index}
+                    >
+                      <AccordionSummary
+                        expandIcon={data?.attributes?.Date_of_the_event}
+                        aria-controls={`panel${index}-content`}
+                        id={`panel${index}-header`}
+                      >
+                        {data?.attributes?.Headline}
+                      </AccordionSummary>
+                      <AccordionDetails>
+                        {data?.attributes?.Shortdescription}
+                      </AccordionDetails>
+                    </Accordion>
+                  ))
+                ) : (
+                  <div className="no-data-container">
+                    <p>No Data Found</p>
+                  </div>
+                )}
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </div>

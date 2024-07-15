@@ -198,7 +198,6 @@ const getItems = (panelStyle) => [
 const CanadaCountry = () => {
   return (
     <>
-      <Navbar />
       <Hero />
       <State />
       <UnitedState />
@@ -208,7 +207,6 @@ const CanadaCountry = () => {
       <Admissiontimeline />
       <Personalized />
       <CountryFaq getItems={getItems} />
-      <Footer />
     </>
   );
 };

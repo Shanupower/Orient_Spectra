@@ -73,7 +73,6 @@ const getItems = (panelStyle) => [
 const SingaporeCountry = () => {
   return (
     <>
-      <Navbar />
       <Hero />
       <State />
       <UnitedState />
@@ -83,7 +82,6 @@ const SingaporeCountry = () => {
       <Admissiontimeline />
       <Personalized />
       <CountryFaq getItems={getItems} />
-      <Footer />
     </>
   );
 };

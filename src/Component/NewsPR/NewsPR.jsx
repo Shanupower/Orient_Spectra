@@ -10,6 +10,7 @@ import axios from "axios";
 
 const NewsPR = () => {
   const [NewsData, setNewsData] = useState([]);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -17,26 +18,25 @@ const NewsPR = () => {
           "http://157.173.222.81:1337/api/news-and-prs?populate=*"
         );
         if (response?.status === 200) {
-          setNewsData(response?.data.data);
+          setNewsData(response?.data?.data || []);
         }
       } catch (error) {
-        console.log("ERROR OCCURED WHILE FETCHING:", error.message);
+        console.error("ERROR OCCURRED WHILE FETCHING:", error.message);
       }
     };
 
     fetchData();
   }, []);
+
   console.log("response", NewsData);
 
   return (
     <>
-      <Navbar />
-      <Hero NewsData={NewsData[0]} />
-      <LatestNews NewsData={NewsData[0]} />
-      <RecentNews />
-      <MoreBlog data={NewsData} />
+      {NewsData.length > 0 && <Hero NewsData={NewsData[0]} />}
+      {NewsData.length > 0 && <LatestNews NewsData={NewsData[0]} />}
+      {NewsData.length > 0 && <RecentNews NewsData={NewsData.slice(1, 5)} />}
+      {NewsData.length > 5 && <MoreBlog data={NewsData.slice(5)} />}
       <GetTuchWithUs />
-      <Footer />
     </>
   );
 };

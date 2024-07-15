@@ -30,12 +30,10 @@ const Blogs = () => {
 
   return (
     <>
-      <Navbar />
       <Hero data={data.slice(0, 3)} />
-      <BestBlog data={data.slice(3)} />
-      <MoreBlog data={data.slice(3)} />
+      <BestBlog data={data.slice(3, 8)} />
+      <MoreBlog data={data.slice(8)} />
       <GetTuchWithUs />
-      <Footer />
     </>
   );
 };

@@ -77,7 +77,6 @@ const getItems = (panelStyle) => [
 const SwitzerlandCountry = () => {
   return (
     <>
-      <Navbar />
       <Hero />
       <State />
       <UnitedState />
@@ -87,7 +86,6 @@ const SwitzerlandCountry = () => {
       <Admissiontimeline />
       <Personalized />
       <CountryFaq getItems={getItems} />
-      <Footer />
     </>
   );
 };

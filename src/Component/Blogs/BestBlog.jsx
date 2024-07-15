@@ -40,15 +40,12 @@ const BestBlog = ({ data }) => {
             <div className="bestblog-leftside-card1">
               <p>Best of the Week</p>
               <h1>
-                Title Of the <br />
-                Blog
+                <h1>{item?.attributes?.Title}</h1>
+                <br />
               </h1>
             </div>
             <div className="bestblog-leftside-card2">
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est
-                non earum numquam error illo?
-              </p>
+              <p>{item?.attributes.Short_Description}</p>
               <CircleArrow
                 className="rightCircleArrow"
                 onClick={() => handleNavigate(item)}

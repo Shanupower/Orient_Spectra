@@ -66,7 +66,7 @@ export default function BlogBody() {
   const { data } = location?.state || {};
   const [postData, setPostData] = useState([]);
   const [randomBlogs, setRandomBlogs] = useState([]);
-  console.log("data??????",data);
+  console.log("data??????", data);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -127,8 +127,6 @@ export default function BlogBody() {
 
   return (
     <>
-      <Navbar />
-
       <div className="singleblog-body section">
         <div className="hero-section-blog">
           <h1> {attributes?.Title}</h1>
@@ -150,7 +148,6 @@ export default function BlogBody() {
 
       <YouMightAlsoLike RecentBlogs={randomBlogs} />
       <GetTuchWithUs />
-      <Footer />
     </>
   );
 }

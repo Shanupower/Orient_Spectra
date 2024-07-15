@@ -1,22 +1,25 @@
 import CircleArrow from "../Common/CircleArrow";
 import "./news.css";
-const RecentNews = () => {
+const RecentNews = ({ NewsData }) => {
   return (
     <div className="Recent-newws-container section">
-      {[1, 2, 3, 4, 5].map((item) => (
+      {NewsData?.map((item) => (
         <div key={item} className="recent_news_section">
           <div className="Recentnews-card">
+            <div className="recentnews-card-img">
+              <img
+                src={`http://157.173.222.81:1337${item?.attributes?.Headline_image?.data[0]?.attributes?.formats?.large?.url}`}
+                alt=""
+              />
+            </div>
             <div>
-              <p>19 Jun 2024</p>
+              <p>{item?.attributes.Title}</p>
               <CircleArrow className="CircleArrow" />
             </div>
           </div>
           <div className="recent-news-title-card">
-            <h1>Recent News Title</h1>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio ad
-              quis alias voluptatum amet?
-            </p>
+            <h1>{item?.attributes.Title}</h1>
+            <p>{item?.attributes?.Short_Description}</p>
           </div>
         </div>
       ))}

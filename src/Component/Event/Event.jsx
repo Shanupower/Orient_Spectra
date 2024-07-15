@@ -44,11 +44,9 @@ const Event = () => {
   }, []);
   return (
     <>
-      <Navbar />
       <Hero eventData={Eventdata} />
       <SuccessStory CompletedEventdata={Eventdata} />
       <GetTuchWithUs />
-      <Footer />
     </>
   );
 };
