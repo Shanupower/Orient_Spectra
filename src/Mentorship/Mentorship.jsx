@@ -3,18 +3,13 @@
 
 import React from "react";
 import Navbar from "../Component/Common/Navbar";
-// import FYC from "./FYC";
 import FYC from "../FindingYourCourse/FYC";
 
-// import { Container, Typography, Box, Button } from "@mui/material";
 import "../Component/About/about.css";
 import FindingAccordion from "../FindingYourCourse/FindingAccordion";
-// import FindingAccordion from "./FindingAccordion";
 import GetStartedToday from "../FindingYourCourse/GetStartedToday";
-// import GetStartedToday from "./GetStartedToday";
 import LandscapeIcon from "@mui/icons-material/Landscape";
 import "../FindingYourCourse/find.css";
-// import "./find.css";
 import CircleArrow from "../Component/Common/CircleArrow";
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
