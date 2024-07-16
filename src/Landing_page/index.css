@@ -651,7 +651,7 @@
 
 .News-container {
   margin-top: 4rem;
-  padding-block: 2rem;
+  /* padding-block: 2rem; */
 }
 
 .News-container > h2 {
@@ -662,14 +662,15 @@
 .media-container {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: center;
   margin-top: 2rem;
   gap: 4rem;
+  overflow-x: auto;
 }
 .media-card {
+  width: 420px;
+  min-width: 420px;
   padding-bottom: 1rem;
-  flex: 1 1 calc(30% - 60px);
-  min-width: 30rem;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 .media-video {
@@ -683,9 +684,11 @@
 .media-card > p {
   font-size: 24px;
   margin-bottom: 0.3rem;
+  padding-left: 0.4rem;
 }
 .media-card > span {
   font-size: 16px;
+  padding-left: 0.4rem;
 }
 .playIcon {
   position: absolute;
@@ -1494,13 +1497,13 @@ canvas {
     width: 50%;
   }
   .explore_rightCard:nth-child(1) {
-    height: 26rem;
+    height: 20rem;
   }
   .explore_rightCard:nth-child(2) {
-    height: 18rem;
+    min-height: 18rem;
   }
   .explore_rightCard:nth-child(3) {
-    height: 18rem;
+    min-height: 18rem;
   }
   .explore_rightCard:nth-child(1) > h3 {
     font-size: 30px;
@@ -1954,16 +1957,7 @@ canvas {
   .FaQ_container {
     margin-top: 2rem;
   }
-  .Getcontent::after {
-    content: "";
-    display: block;
-    width: 62%;
-    height: 2px;
-    background-color: var(--line-color, black);
-    position: absolute;
-    top: 58%;
-    left: 24%;
-  }
+
   .blogContent > p {
     display: none;
   }
@@ -2225,8 +2219,8 @@ canvas {
     transform: translate(60px, 0px); /* Adjust the position to 30deg */
   }
   .menthosihpArrow {
-    right: 2rem;
-    bottom: 2.2rem;
+    right: -8rem;
+    bottom: 1rem;
   }
 }
 
@@ -2243,7 +2237,6 @@ canvas {
   align-items: center;
   justify-content: space-between; /* Adjusted to make globe stick to the right */
   width: 100%;
-  height: 100vh;
   box-sizing: border-box;
   background-color: white; /* Ensure container background is white */
 }
@@ -2320,7 +2313,6 @@ canvas {
   background-color: transparent;
   border: 1px solid rgb(4, 25, 146);
   color: var(--text-color-darkblack);
-
 }
 @keyframes rotate-card1 {
   0% {
@@ -2347,4 +2339,60 @@ canvas {
     transform: rotateY(360deg) translateZ(280px);
     opacity: 1;
   } /* Increased translateZ by 40% */
+}
+
+@media (max-width: 1067px) {
+  .Counselors_container {
+    justify-content: center; /* Adjusted to make globe stick to the right */
+    width: 100%;
+    flex-direction: column-reverse;
+    margin-bottom: 4rem;
+  }
+  .counselor_left_side > p {
+    font-weight: 400;
+    font-size: 52px;
+    letter-spacing: -1px;
+    display: flex;
+    width: 100%;
+    text-align: left;
+    line-height: 1.1;
+  }
+  .globe-container {
+    position: relative;
+    width: 100%; /* Increased width by 40% */
+    height: 100%; /* Increased height by 40% */
+  }
+  .text-cards {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%; /* Increased width by 40% */
+    height: 100%; /* Increased height by 40% */
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    perspective: 1000px;
+  }
+  .content::after {
+    content: "";
+    width: 0%;
+  }
+  .text-card {
+    width: 100px; /* Increased width by 40% */
+    padding: 6px; /* Increased padding by 40% */
+    color: white;
+    font-size: 10px; /* Increased font size by 40% */
+  }
+  .Getcontent::after {
+    content: "";
+    display: block;
+    width: 0%;
+  }
+  .explore_rightCard {
+    padding: 1rem;
+  }
+  .explore_rightCard:nth-child(1) > div > h3 {
+    font-size: 30px;
+    padding-left: 1.2rem;
+    padding-bottom: .8rem;
+  }
 }

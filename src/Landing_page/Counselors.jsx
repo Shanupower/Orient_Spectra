@@ -133,7 +133,7 @@ const Counselors = () => {
     setRotateGlobe(true);
     setTimeout(() => {
       setRotateGlobe(false);
-    }, 10000);
+    }, 10000);  
   };
 
   const handlePrev = () => {

@@ -1,60 +1,49 @@
 import Img1 from "../assets/WhatsApp Image 2024-05-31 at 2.22.46 PM.jpeg";
 import Img2 from "../assets/WhatsApp Image 2024-05-31 at 2.05.55 PM.jpeg";
 import Img3 from "../assets/DSC02094.jpeg";
+import axios from "axios";
 
 import Play from "../assets/playIcon.png";
 import "./index.css";
+import { useState, useEffect } from "react";
 const News = () => {
+  const [NewsData, setNewsData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          "http://157.173.222.81:1337/api/news-and-prs?populate=*"
+        );
+        if (response?.status === 200) {
+          setNewsData(response?.data?.data || []);
+        }
+      } catch (error) {
+        console.error("ERROR OCCURRED WHILE FETCHING:", error.message);
+      }
+    };
+
+    fetchData();
+  }, []);
+  console.log(NewsData, ">>>>><<<<<<<<");
   return (
     <>
       <div className="section News-container">
         <h2>News & Media</h2>
         <div className="media-container">
-          <div className="media-card">
-            <div className="media-video">
-              <img src={Img1} alt="" />
-              <img className="playIcon" src={Play} alt="" />
+          {NewsData?.map((item) => (
+            <div className="media-card" key={item}>
+              <div className="media-video">
+                <img
+                  src={`http://157.173.222.81:1337${item?.attributes?.Headline_image?.data[0]?.attributes?.formats?.large?.url}`}
+                  alt=""
+                />
+                {/* <img className="playIcon" src={Play} alt="" /> */}
+              </div>
+              <p>{item?.attributes?.Title}</p>
+              <span>{item?.attributes?.Short_Description}</span>
             </div>
-            <p>
-              Title of <strong>The News </strong>
-            </p>
-            <span>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
-              nemo excepturi? Obcaecati ut, soluta, nemo ullam ipsum nam dolores
-              non accusamus illo quasi debitis perspiciatis? Sed fugiat eius id
-              quos.
-            </span>
-          </div>
-          <div className="media-card">
-            <div className="media-video">
-              <img src={Img2} alt="" />
-              <img className="playIcon" src={Play} alt="" />
-            </div>
-            <p>
-              Title of <strong>The News </strong>
-            </p>
-            <span>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
-              nemo excepturi? Obcaecati ut, soluta, nemo ullam ipsum nam dolores
-              non accusamus illo quasi debitis perspiciatis? Sed fugiat eius id
-              quos.
-            </span>
-          </div>
-          <div className="media-card">
-            <div className="media-video">
-              <img src={Img3} alt="" />
-              <img className="playIcon" src={Play} alt="" />
-            </div>
-            <p>
-              Title of <strong>The News </strong>
-            </p>
-            <span>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,
-              nemo excepturi? Obcaecati ut, soluta, nemo ullam ipsum nam dolores
-              non accusamus illo quasi debitis perspiciatis? Sed fugiat eius id
-              quos.
-            </span>
-          </div>
+          ))}
         </div>
       </div>
     </>

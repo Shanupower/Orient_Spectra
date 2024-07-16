@@ -146,8 +146,8 @@ const StudyOverseas = () => {
   return (
     <>
       <Hero />
-      <Counselors />
       <DiscoverEvent />
+      <Counselors />
       <Testimonial />
       <Events />
       <CountryFaq getItems={getItems} />

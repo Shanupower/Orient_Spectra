@@ -4,6 +4,7 @@
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
+
 }
 
 .study-overseas-container > p {
@@ -30,6 +31,8 @@
   display: flex;
   gap: 2rem;
   align-items: flex-start;
+  /* flex-direction: row-reverse; */
+  margin-top: 6rem;
 }
 .discover-left-card {
   width: calc(50% - 1rem);

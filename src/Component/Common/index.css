@@ -61,9 +61,21 @@
 .activeNavbar {
   color: black;
   background-color: #ffffff;
-  box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.3);
+  position: relative;
+  border-radius: 12px 12px 0 0;
 }
-
+.activeNavbar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.3);
+  z-index: -1;
+  clip-path: inset(-10px -10px 0 -10px);
+}
 .DailyNews {
   color: var(--text-color-white);
   font-size: 18px;
@@ -325,19 +337,31 @@
 .whatwedo-dropdwon-container {
   position: fixed;
   left: 6% !important;
-  top: 5rem !important;
+  top: 5.22rem !important;
   /* border: 1px solid red; */
   width: 74% !important;
   max-width: 74% !important;
   color: var(--text-color-black);
   background-color: #ffffff;
-  border-radius: 16px;
+  border-radius: 0 0 12px 12px;
   min-height: 20vh;
-  box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.3);
+  /* box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.3); */
   padding-block: 2rem 2rem;
   display: none;
 }
-
+.branchssshow-card::before,
+.whatwedo-dropdwon-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 2px 1px 4px rgba(0, 0, 0, 0.3);
+  z-index: -1;
+  clip-path: inset(0px -10px -10px -10px);
+}
 .whatwedo-section {
   display: flex;
   gap: 2rem;

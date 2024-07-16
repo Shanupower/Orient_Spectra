@@ -28,7 +28,6 @@ const NewsPR = () => {
     fetchData();
   }, []);
 
-  console.log("response", NewsData);
 
   return (
     <>
