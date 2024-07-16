@@ -51,7 +51,6 @@ function App() {
     };
   }, []);
 
-
   return (
     <>
       <Navbar
@@ -88,7 +87,7 @@ function App() {
         <Route path="/FindYourCourse" element={<Finding />}></Route>
         <Route path="/Coaching" element={<Coaching />}></Route>
         <Route path="/Mentorship" element={<Mentorship />}></Route>
-        <Route path="/blogs" element={<SelectedBlog />}></Route>
+        <Route path="/blog" element={<SelectedBlog />}></Route>
         <Route path="/content" element={<BlogBody />} />
 
         {/* Start your Journey */}

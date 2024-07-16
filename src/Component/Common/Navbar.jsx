@@ -21,7 +21,7 @@ import Malta from "../../assets/Country/Flag/Malta.png";
 import Singapore from "../../assets/Country/Flag/Singapore.png";
 import Ireland from "../../assets/Country/Flag/Ireland.png";
 import Germany from "../../assets/Country/Flag/Germany.png";
-import France from "../../assets/Country/Flag/France.png";
+import France from "../../assets/Country/Flag/France.png"; 
 import AccessibleIcon from "@mui/icons-material/Accessible";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -405,16 +405,19 @@ const Navbar = ({
             >
               <img src={Logo} alt="" />
             </Link>
-            <div onClick={hanldeCloseSubheader2}>
+            <Link
+              to="/study-overseas"
+              // onClick={hanldeCloseSubheader2}
+              className={`Link_route DailyNews ${activeNavbar && "DalyText"}`}
+            >
               <Dropdown
                 menu={{
                   items,
                 }}
-                trigger={["click"]}
               >
                 <Space>Study Overseas</Space>
               </Dropdown>
-            </div>
+            </Link>
             <div onClick={hanldeCloseSubheader}>
               <Link
                 className={`Link_route DailyNews ${activeNavbar && "DalyText"}`}
@@ -578,4 +581,3 @@ const Navbar = ({
 };
 
 export default Navbar;
-
