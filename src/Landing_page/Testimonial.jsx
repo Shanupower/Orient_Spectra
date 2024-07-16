@@ -16,6 +16,7 @@ import Video5 from "../assets/Testimonial_05.mp4";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import "./index.css";
 
+
 const TestimonialData = [
   {
     id: 1,
@@ -122,16 +123,16 @@ const Testimonial = () => {
               </div>
               <div className="left_rigtCard">
                 <p className="leftArrow" onClick={handleClickLeft}>
-                  <img src={Arrowleft} alt="Left Arrow" />
+                <ArrowForwardIcon className="leftarrowicon" />
                 </p>
                 <p className="studentCard studentename">
                   {currentTestimonial.userName}
                 </p>
                 <p className="RightArrow" onClick={handleClickRight}>
-                  <img src={Arrowleft} alt="Right Arrow" />
+                <ArrowForwardIcon className="rightarrowicon" />
                 </p>
               </div>
-              <span className="testimonialtext">
+              <span className="testimonialtext">t
                 {currentTestimonial.content}
               </span>
             </div>

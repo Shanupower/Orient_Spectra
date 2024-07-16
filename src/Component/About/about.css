@@ -327,7 +327,7 @@
 .AboutCountry-section {
   display: flex;
   gap: 3rem;
-  overflow: auto;
+  overflow-x: auto;
   margin-block: 4rem;
 }
 .AboutCountry-card {
@@ -402,7 +402,7 @@
   object-fit: contain;
 }
 
-.MuiChartsAxis-tickLabel{
+.MuiChartsAxis-tickLabel {
   fill: var(--brand-color) !important;
   font-size: 14px !important;
 }
@@ -415,4 +415,59 @@
 }
 .css-1k2u9zb-MuiChartsAxis-root {
   border: none !important;
+}
+
+@media (max-width: 1067px) {
+  .hero-conntainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8rem;
+  }
+  .Quotation-card > p,
+  .Quotation-card,
+  .founder-card,
+  .Successful-Admits-card,
+  .success-card,
+  .stroy-center-card,
+  .stroy-left-card,
+  .storytext-card > p,
+  .BlogMarguee,
+  .hero-leftside-card {
+    width: 100%;
+  }
+  .hero-rightside-card {
+    width: 100%;
+    height: 60vh;
+  }
+  .storytext-card {
+    display: flex;
+    flex-direction: column;
+  }
+  .founder-container,
+  .founders-card,
+  .success-admit-container,
+  .story-spectra-card {
+    flex-direction: column;
+  }
+  .Successful-Admits-card {
+    padding: 1rem;
+    position: relative;
+    background-color: var(--text-color-darkblack);
+  }
+  .consectetuer-container > h1 {
+    width: 100%;
+    font-size: 30px;
+  }
+  .founders-card {
+    align-items: left;
+  }
+  .AboutCountry-container > h1,
+  .founders-card > h1 {
+    width: 100%;
+    font-size: 40px;
+  }
+  .founders-card p {
+    width: 100%;
+    text-align: left;
+  }
 }
