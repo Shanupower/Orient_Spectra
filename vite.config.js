@@ -3,6 +3,12 @@ import react from "@vitejs/plugin-react";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-   base: 'http://0.0.0.0:5173/'
-  plugins: [react()],
+  plugins: [vue()],
+  server: {
+    port: 5173, // Default port
+    open: true, // Automatically open the app in the browser
+  },
+  build: {
+    outDir: 'dist', // Output directory for build files
+  },
 });
