@@ -30,6 +30,7 @@ const GetTuchWithUs = () => {
         </div>
       </div>
       <motion.div
+      className="GetContterCard"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}

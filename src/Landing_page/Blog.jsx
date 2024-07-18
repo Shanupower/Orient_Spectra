@@ -32,14 +32,14 @@ const Blog = () => {
   const handleNavigate = (post) => {
     navigate(`/content`, { state: { data: post } });
   };
-
+  console.log("blogssssssssss", data);
   return (
     <>
       <div className="section BlogContainer">
         <div className="leftBlogCard">
           <div className="leftBlogCard-image-card">
             <img
-              src={`http://157.173.222.81:1337${data[0]?.attributes?.Headline_image.data.attributes.formats.large.url}`}
+              src={`http://157.173.222.81:1337${data[0]?.attributes?.Headline_image.data.attributes.formats.thumbnail.url}`}
               alt="Blog Image 1"
             />
           </div>
@@ -60,20 +60,22 @@ const Blog = () => {
           </div>
         </div>
         <div className="rightBlogsCantainer">
-          {data.splice(0, 4).map((item) => (
+          {data.slice(1, 5).map((item) => (
             <div
-              className="rightcard"
+              className="rightcard1"
               key={item}
               onClick={() => handleNavigate(item)}
             >
-              <div className="leftBlogCard-image-card">
+              <div className="leftBlogCard-image-card1">
                 <img
-                  src={`http://157.173.222.81:1337${item?.attributes?.Headline_image.data.attributes.formats.large.url}`}
+                  src={`http://157.173.222.81:1337${item?.attributes?.Headline_image.data.attributes.formats.small.url}`}
                   alt="Blog Image 1"
                 />
               </div>
-              <strong>{item?.attributes?.Title}</strong>
-              <p>{item?.attributes?.Short_Description}</p>
+              <div className="blog-content-section">
+                <strong>{item?.attributes?.Title}</strong>
+                <p>{item?.attributes?.Short_Description}</p>
+              </div>
             </div>
           ))}
           <Link to={"/blogs"} className="Link_route findMore">

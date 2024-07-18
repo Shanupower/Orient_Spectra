@@ -16,21 +16,21 @@ const State = () => {
           universities, and exciting courses.
         </div>
       </div>
-      <div className="capital-container">
-        <div className="capital-card">
+      <div className="capital-container1">
+        <div className="leftcapital-container">
           <span>Capital</span>
           <h3>Paris</h3>
         </div>
-        <div className="about-copital-container">
-          <div className="about-capital-card">
+        <div className="Rightcapital-container">
+          <div className="about-capital-card1">
             <span>Population </span>
             <h2>64.88 Million</h2>
           </div>
-          <div className="about-capital-card">
+          <div className="about-capital-card1">
             <span>Language </span>
             <h2>French</h2>
           </div>
-          <div className="about-capital-card">
+          <div className="about-capital-card1">
             <span>Currency </span>
             <h2>Franc</h2>
           </div>

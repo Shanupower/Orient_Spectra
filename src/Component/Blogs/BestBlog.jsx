@@ -6,16 +6,10 @@ import OwlCarousel from "react-owl-carousel";
 import { useLocation, useNavigate } from "react-router-dom";
 
 import "./blog.css";
-
-const options = {
-  autoplay: false,
-  center: true,
-  loop: true,
-  nav: true,
-  items: 3,
-};
+import { useMediaQuery } from "@mui/material";
 
 const BestBlog = ({ data }) => {
+  const isMd = useMediaQuery("(max-width:986px)");
   const navigate = useNavigate();
   const handleNavigate = (post) => {
     navigate("/content", { state: { data: post } });
@@ -27,7 +21,15 @@ const BestBlog = ({ data }) => {
         <p>Continue Reading</p>
       </div>
 
-      <OwlCarousel className="owl-theme" {...options}>
+      <OwlCarousel
+        loop={false}
+        margin={10}
+        nav
+        center={true}
+        autoplay={false}
+        items={isMd ? 1 : 3}
+        className="owl-theme"
+      >
         {data.map((item) => (
           <div className="bestblog-leftside-container" key={item.id}>
             <div className="blog-image-section">
