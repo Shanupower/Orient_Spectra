@@ -79,7 +79,7 @@ const SingaporeCountry = () => {
       <Univercity />
       <TrendingCourse />
       <AdmitionRequired />
-      <Admissiontimeline />
+      {/* <Admissiontimeline /> */}
       <Personalized />
       <CountryFaq getItems={getItems} />
     </>

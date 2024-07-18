@@ -7,7 +7,6 @@ const Hero = ({ eventData }) => {
   const [EventId, setEventId] = useState(0);
 
 
-  console.log(eventData);
   const handleEventdata = (status) => {
     if (status === "next") {
       if (EventId < eventData.length - 1) {

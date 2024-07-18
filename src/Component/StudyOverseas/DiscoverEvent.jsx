@@ -7,7 +7,7 @@ const DiscoverEvent = () => {
   return (
     <div className="Discover-container section">
       <div className="discover-left-card">
-        <video src={Video} className="VideoCard" muted autoplay loop />
+        <video src={Video} className="VideoCard" muted autoplay loop controls />
       </div>
       <div className="discoverRight-card">
         <Chrono

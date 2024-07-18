@@ -97,14 +97,14 @@ const AustraliaCountry = () => {
   return (
     <>
       <Hero />
-      {/* <State /> */}
+      <State />
       <UnitedState />
       <Univercity />
       <TrendingCourse />
       <AdmitionRequired />
-      <Admissiontimeline />
-      {/* <Personalized /> */}
-      {/* <CountryFaq getItems={getItems} /> */}
+      {/* <Admissiontimeline /> */}
+      <Personalized />
+      <CountryFaq getItems={getItems} />
     </>
   );
 };

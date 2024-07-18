@@ -1,12 +1,12 @@
 import "./Country.css";
-import Img1 from "../../../assets/Country/Clip path group-5.png";
+import Img1 from "../../../assets/Country/Group 6-2.png";
 import Img2 from "../../../assets/Country/graph.png";
 
 const State = () => {
   return (
     <div className="section">
       <div className="state-container ">
-        <h1>Poland</h1>
+        <h1>United State of America</h1>
         <p>
           A Quotation from lorium ipusum Lorem ipsum dolor sit amet,
           consectetuer adipiscing{" "}
@@ -16,23 +16,24 @@ const State = () => {
           universities, and exciting courses.
         </div>
       </div>
-      <div className="capital-container">
-        <div className="capital-card">
+
+      <div className="capital-container1">
+        <div className="leftcapital-container">
           <span>Capital</span>
-          <h3>Warsaw</h3>
+          <h3>CanberraPopulation</h3>
         </div>
-        <div className="about-copital-container">
-          <div className="about-capital-card">
+        <div className="Rightcapital-container">
+          <div className="about-capital-card1">
             <span>Population </span>
-            <h2>37.7 Million</h2>
+            <h2>25.77 Million</h2>
           </div>
-          <div className="about-capital-card">
+          <div className="about-capital-card1">
             <span>Language </span>
-            <h2>Polish</h2>
+            <h2>English</h2>
           </div>
-          <div className="about-capital-card">
+          <div className="about-capital-card1">
             <span>Currency </span>
-            <h2>Polish zloty</h2>
+            <h2>Australian Dollar</h2>
           </div>
         </div>
       </div>
@@ -40,7 +41,7 @@ const State = () => {
       <div className="GDP-container">
         <div className="gdp-card">
           <span>GDP</span>
-          <h3>$ 845 Billion</h3>
+          <h3>$ 1.74 Trillion</h3>
           <div className="imageCardGdp">
             <img src={Img2} alt="" />
           </div>
@@ -52,12 +53,12 @@ const State = () => {
 
           <div className="univercity-card2">
             <p>Universities</p>
-            <h2>500+</h2>
+            <h2>43</h2>
           </div>
         </div>
         <div className="International-conatiner">
           <p>International Students</p>
-          <h1>89,400</h1>
+          <h1>869,709</h1>
         </div>
       </div>
     </div>

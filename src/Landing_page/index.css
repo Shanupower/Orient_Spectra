@@ -211,6 +211,9 @@
   padding-block: 4rem;
   margin-top: 4rem;
 }
+.GetContterCard{
+  margin-bottom: 4rem;
+}
 .foreignAcedemic > p {
   text-align: center;
   color: var(--text-color-gray);
@@ -714,7 +717,6 @@
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
-  align-items: center;
 }
 .rightBlogArow {
   display: none !important;
@@ -724,7 +726,7 @@
   border: 1px solid gray;
   box-shadow: var(--box-shadow);
   flex: 1 1 64%;
-  height: 80vh;
+  height: 84vh;
   border-radius: 16px;
   background-size: cover;
   filter: brightness(1.2);
@@ -800,7 +802,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
-  height: 80vh;
+  /* height: 90vh; */
 }
 .rightBlogsCantainer > .rightcard {
   border: 1px solid gray;
@@ -808,22 +810,53 @@
   height: 16vh;
   border-radius: 16px;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
   padding: 2rem 2rem 1rem 2rem;
   box-shadow: var(--box-shadow);
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
 }
-.rightBlogsCantainer > .rightcard:nth-child(1) {
+.rightBlogsCantainer > .rightcard1 {
+  border: 1px solid gray;
+  box-shadow: var(--box-shadow);
+  height: 16vh;
+  border-radius: 16px;
+  padding: .8rem 1rem 1rem 2rem;
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.rightBlogsCantainer > .rightcard {
   background-size: cover;
+  height: 22vh;
 }
-.rightBlogsCantainer > .rightcard:nth-child(1) > strong {
+.blog-content-section {
+  width: 80%;
+}
+.leftBlogCard-image-card1 {
+  width: 24%;
+  height: 12vh;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.rightBlogsCantainer > .rightcard > div > strong {
   font-size: 18px;
   color: var(--text-color-darkblack);
+  line-height: 1;
 }
-
+.rightBlogsCantainer > .rightcard1 > div > strong {
+  font-size: 16px;
+  color: var(--text-color-darkblack);
+  line-height: 0.6;
+}
 .rightcard > .leftBlogCard-image-card > img {
   filter: opacity(0.4);
   filter: blur(0.6);
@@ -832,7 +865,8 @@
   filter: opacity(1);
   filter: blur(0);
 }
-.rightBlogsCantainer > .rightcard > p {
+.rightBlogsCantainer > .rightcard1 > div > p,
+.rightBlogsCantainer > .rightcard > div > p {
   font-size: 13px;
   color: var(--text-color-darkblack);
 }
@@ -2393,6 +2427,6 @@ canvas {
   .explore_rightCard:nth-child(1) > div > h3 {
     font-size: 30px;
     padding-left: 1.2rem;
-    padding-bottom: .8rem;
+    padding-bottom: 0.8rem;
   }
 }

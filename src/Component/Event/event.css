@@ -239,5 +239,29 @@
   rotate: 180deg;
 }
 
-.owl-prev {
+@media (max-width: 1067px) {
+  .Event-hero-container{
+    margin-block: 6rem;
+  }
+  .event-hero-section {
+    padding: 1rem;
+  }
+  .envet-date-coontainer ,
+  .bookPass-container,
+  .bookPass-cardd,
+  .event-hero-leftcard {
+    flex-direction: column;
+  }
+  .event-rightdate-section,
+  .event-leftdate-section,
+  .bookPass-cardd,
+  .eventarrowcard,
+  .Experience-rightcard,
+  .Experience-leftcard > p,
+  .Experience-leftcard {
+    width: 100%;
+  }
+  .Experience-leftcard > h1 {
+    font-size: 40px;
+  }
 }

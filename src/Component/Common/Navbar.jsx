@@ -205,108 +205,216 @@ const Menuitem = [
   {
     key: "Study Overseas",
     label: "Study Overseas",
-    // icon: (
-    //   <img
-    //     style={{ width: "20px", height: "20px" }}
-    //     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhnL362W89--dfHtQ8A5r26VOXewXggu3CUxw2zqtGEQ&s"
-    //     alt=""
-    //   />
-    // ),
+
     children: [
-      // {
-      //   key: "1",
-      //   label: (
-      //     <Link style={{ textDecoration: "none" }} to="/services">
-      //       Services
-      //     </Link>
-      //   ),
-      // },
+      {
+        key: "0",
+        label: (
+          <Link style={{ textDecoration: "none" }} to="/study-overseas">
+            Study Overseas
+          </Link>
+        ),
+      },
+      {
+        key: "1",
+        label: (
+          <Link style={{ textDecoration: "none" }} to="/country/Usa">
+            United States
+          </Link>
+        ),
+      },
+      {
+        key: "2",
+        label: (
+          <Link style={{ textDecoration: "none" }} to="/country/Canada">
+            Canada
+          </Link>
+        ),
+      },
+      {
+        key: "3",
+        label: (
+          <Link style={{ textDecoration: "none" }} to="/country/UK">
+            United Kingdom
+          </Link>
+        ),
+      },
+      {
+        key: "4",
+        label: (
+          <Link style={{ textDecoration: "none" }} to="/country/Australia">
+            Australia
+          </Link>
+        ),
+      },
+      {
+        key: "5",
+        label: (
+          <Link style={{ textDecoration: "none" }} to="/country/France">
+            France
+          </Link>
+        ),
+      },
+      {
+        key: "15",
+        label: (
+          <Link style={{ textDecoration: "none" }} to="/country/Germany">
+            Germany
+          </Link>
+        ),
+      },
+      {
+        key: "61",
+        label: (
+          <Link style={{ textDecoration: "none" }} to="/country/Switzerland">
+            Switzerland
+          </Link>
+        ),
+      },
+      {
+        key: "15",
+        label: (
+          <Link style={{ textDecoration: "none" }} to="/country/Ireland">
+            Ireland
+          </Link>
+        ),
+      },
+      {
+        key: "41",
+        label: (
+          <Link style={{ textDecoration: "none" }} to="/country/Singapore">
+            Singapore
+          </Link>
+        ),
+      },
+      {
+        key: "12",
+        label: (
+          <Link style={{ textDecoration: "none" }} to="/country/Dubai">
+            Dubai
+          </Link>
+        ),
+      },
+      {
+        key: "16",
+        label: (
+          <Link style={{ textDecoration: "none" }} to="/country/Sweden">
+            Sweden
+          </Link>
+        ),
+      },
+      {
+        key: "164",
+        label: (
+          <Link style={{ textDecoration: "none" }} to="/country/Poland">
+            Poland
+          </Link>
+        ),
+      },
+      {
+        key: "132",
+        label: (
+          <Link style={{ textDecoration: "none" }} to="/country/Malta">
+            Malta
+          </Link>
+        ),
+      },
     ],
   },
+
   {
     key: "About us",
-    label: "About us",
-    // icon: (
-    //   <img
-    //     style={{ width: "20px", height: "20px" }}
-    //     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhnL362W89--dfHtQ8A5r26VOXewXggu3CUxw2zqtGEQ&s"
-    //     alt=""
-    //   />
-    // ),
-    children: [
-      // {
-      //   key: "1",
-      //   label: (
-      //     <Link style={{ textDecoration: "none" }} to="/services">
-      //       Services
-      //     </Link>
-      //   ),
-      // },
-    ],
+    label: (
+      <Link style={{ textDecoration: "none" }} to="/about">
+        About Us
+      </Link>
+    ),
   },
   {
     key: "What we do    ",
     label: "What we do    ",
-    // icon: (
-    //   <img
-    //     style={{ width: "20px", height: "20px" }}
-    //     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhnL362W89--dfHtQ8A5r26VOXewXggu3CUxw2zqtGEQ&s"
-    //     alt=""
-    //   />
-    // ),
+
     children: [
-      // {
-      //   key: "1",
-      //   label: (
-      //     <Link style={{ textDecoration: "none" }} to="/services">
-      //       Services
-      //     </Link>
-      //   ),
-      // },
+      {
+        key: "1",
+        label: (
+          <Link style={{ textDecoration: "none" }} to="/Mentorship">
+            Mentorship
+          </Link>
+        ),
+      },
+      {
+        key: "1",
+        label: (
+          <Link style={{ textDecoration: "none" }} to="/FindYourCourse">
+            Find Your Course
+          </Link>
+        ),
+      },
+      {
+        key: "1",
+        label: (
+          <Link style={{ textDecoration: "none" }} to="/Coaching">
+            Coaching
+          </Link>
+        ),
+      },
     ],
   },
   {
     key: "Our branches",
     label: "Our branches",
-    // icon: (
-    //   <img
-    //     style={{ width: "20px", height: "20px" }}
-    //     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhnL362W89--dfHtQ8A5r26VOXewXggu3CUxw2zqtGEQ&s"
-    //     alt=""
-    //   />
-    // ),
+
     children: [
-      // {
-      //   key: "1",
-      //   label: (
-      //     <Link style={{ textDecoration: "none" }} to="/services">
-      //       Services
-      //     </Link>
-      //   ),
-      // },
+      {
+        key: "1",
+        label: (
+          <Link style={{ textDecoration: "none" }} to="/Kothapet">
+            Kothapet
+          </Link>
+        ),
+      },
+      {
+        key: "1",
+        label: (
+          <Link style={{ textDecoration: "none" }} to="/#">
+            Himayath Nagar
+          </Link>
+        ),
+      },
+      {
+        key: "1",
+        label: (
+          <Link style={{ textDecoration: "none" }} to="/Kukatpally">
+            Kukatpally
+          </Link>
+        ),
+      },
     ],
   },
   {
     key: "Blogs",
-    label: "Blogs",
-    // icon: (
-    //   <img
-    //     style={{ width: "20px", height: "20px" }}
-    //     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhnL362W89--dfHtQ8A5r26VOXewXggu3CUxw2zqtGEQ&s"
-    //     alt=""
-    //   />
-    // ),
+    label: (
+      <Link style={{ textDecoration: "none" }} to="/blogs">
+        Blogs
+      </Link>
+    ),
   },
   {
-    key: "Daily News",
-    label: "Daily News",
-    // icon: (
-    //   <img
-    //     style={{ width: "20px", height: "20px" }}
-    //     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhnL362W89--dfHtQ8A5r26VOXewXggu3CUxw2zqtGEQ&s"
-    //     alt=""
-    //   />
-    // ),
+    key: "News & PR",
+    label: (
+      <Link style={{ textDecoration: "none" }} to="/news-&-pr">
+        News & PR
+      </Link>
+    ),
+  },
+  {
+    key: "News & PR",
+    label: (
+      <Link style={{ textDecoration: "none" }} to="/events">
+        Events
+      </Link>
+    ),
   },
 ];
 const Navbar = ({

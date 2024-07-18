@@ -38,6 +38,7 @@
   display: flex;
   justify-content: space-between;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .state-container > h1 {
@@ -58,49 +59,44 @@
   width: calc(80% / 3 - 1rem);
 }
 
-.capital-container {
+
+/* H */
+.capital-container1 {
   display: flex;
   align-items: center;
-  width: 100%;
   gap: 2rem;
   flex-wrap: wrap;
-  margin-block: 6.2rem 2rem;
+  margin-block: 6rem;
 }
-.capital-card {
+.leftcapital-container {
   width: calc(20% - 1rem);
   background-color: var(--brand-color);
-  padding: 1rem 2rem;
-  border-radius: 10px;
+  padding: 1rem;
+  border-radius: 16px;
   color: var(--text-color-white);
-  max-height: 80px;
+  max-width: 100%;
 }
-.capital-card > h3 {
-  font-size: 22px;
-}
-.about-copital-container {
+.Rightcapital-container {
   width: calc(80% - 1rem);
-  background-color: var(--text-color-blue);
-  padding: 1rem 2rem;
-  border-radius: 10px;
-  color: var(--text-color-white);
   display: flex;
   justify-content: space-between;
-  gap: 2rem;
-  max-height: 86px;
-  min-height: 80px;
+  gap: 1rem;
+  background-color: var(--text-color-blue);
+  padding:1.6rem 1rem;
+  border-radius: 16px;
+  
 }
-
-.about-capital-card {
-  width: calc(100% / 3 - 1rem);
+.about-capital-card1 {
   display: flex;
-  gap: 3rem;
   align-items: center;
+  gap: 3rem;
+  color: var(--text-color-white);
 }
-.about-capital-card > h2 {
-  font-size: 18px;
-  font-weight: 600;
-}
+.about-capital-card1 >h2 {
+  font-size: 20px;
 
+}
+/*  */
 .GDP-container {
   display: flex;
   gap: 2rem;
@@ -465,6 +461,7 @@
 .university-card {
   background-color: #efefef;
   border-radius: 20px;
+  min-height: 60px;
 }
 
 .howApllycard {
@@ -517,11 +514,13 @@
 .Expense-card {
   display: flex;
   justify-content: space-between;
+  gap: 1rem;
 }
 .Expertcard {
   display: flex;
   width: 20%;
   gap: 1rem;
+  align-items: center;
 }
 .Expense-card > p,
 .Expertcard > p {
@@ -545,4 +544,66 @@
   height: 1px;
   background-color: var(--text-color-darkblack);
   margin-top: 0.4rem;
+}
+
+@media (max-width: 987px) {
+  .state-container {
+    flex-direction: column;
+  }
+  .state-container > h1 {
+    width: 100% !important;
+    font-size: 38px !important;
+  }
+  .state-container > p {
+    width: 100% !important;
+    font-size: 22px !important;
+  }
+  .state-container > div {
+    width: 100% !important;
+    font-size: 18px;
+  }
+  .capital-container {
+    flex-direction: column !important;
+  }
+  .capital-card {
+    width: 100% !important;
+    max-height: 80px;
+  }
+  .about-copital-container {
+    width: 100% !important;
+  }
+  .Rightcapital-container ,
+
+  .capital-container1,
+  .Expense-card,
+  .admissionTime-container,
+  .Admition-required-container,
+  .aboutstateCard,
+  .GDP-container {
+    flex-direction: column !important;
+  }
+  .Rightcapital-container ,
+  .leftcapital-container,
+  .Expertcard,
+  .Popular_Universities-container,
+  .PopularProgram_card,
+  .Popular_Universities-containe,
+  .admissintimeline-card,
+  .admission-container,
+  .admissioncard-sticy,
+  .ReadMoreCard,
+  .StudyingCard,
+  .unitedImge,
+  .International-conatiner,
+  .univercity-container,
+  .gdp-card {
+    width: 100% !important;
+  }
+  .Popular_Universities {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  .program-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
 }

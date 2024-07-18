@@ -59,49 +59,44 @@
   width: calc(80% / 3 - 1rem);
 }
 
-.capital-container {
+
+/* H */
+.capital-container1 {
   display: flex;
   align-items: center;
-  width: 100%;
   gap: 2rem;
   flex-wrap: wrap;
-  margin-block: 6.2rem 2rem;
+  margin-block: 6rem;
 }
-.capital-card {
+.leftcapital-container {
   width: calc(20% - 1rem);
   background-color: var(--brand-color);
-  padding: 1rem 2rem;
-  border-radius: 10px;
+  padding: 1rem;
+  border-radius: 16px;
   color: var(--text-color-white);
-  max-height: 80px;
+  max-width: 100%;
 }
-.capital-card > h3 {
-  font-size: 22px;
-}
-.about-copital-container {
+.Rightcapital-container {
   width: calc(80% - 1rem);
-  background-color: var(--text-color-blue);
-  padding: 1rem 2rem;
-  border-radius: 10px;
-  color: var(--text-color-white);
   display: flex;
   justify-content: space-between;
-  gap: 2rem;
-  max-height: 86px;
-  min-height: 80px;
+  gap: 1rem;
+  background-color: var(--text-color-blue);
+  padding:1.6rem 1rem;
+  border-radius: 16px;
+  
 }
-
-.about-capital-card {
-  width: calc(100% / 3 - 1rem);
+.about-capital-card1 {
   display: flex;
-  gap: 3rem;
   align-items: center;
+  gap: 3rem;
+  color: var(--text-color-white);
 }
-.about-capital-card > h2 {
-  font-size: 18px;
-  font-weight: 600;
-}
+.about-capital-card1 >h2 {
+  font-size: 20px;
 
+}
+/*  */
 .GDP-container {
   display: flex;
   gap: 2rem;
@@ -577,7 +572,9 @@
   .about-copital-container {
     width: 100% !important;
   }
+  .Rightcapital-container ,
 
+  .capital-container1,
   .Expense-card,
   .admissionTime-container,
   .Admition-required-container,
@@ -585,6 +582,8 @@
   .GDP-container {
     flex-direction: column !important;
   }
+  .Rightcapital-container ,
+  .leftcapital-container,
   .Expertcard,
   .Popular_Universities-container,
   .PopularProgram_card,

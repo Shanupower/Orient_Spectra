@@ -24,6 +24,7 @@
   justify-content: center;
   background-color: var(--bg-color);
   border-radius: 16px;
+  overflow: hidden;
 }
 
 .LandscapeIconIcon2 {
@@ -97,6 +98,7 @@
   display: flex;
   gap: 2rem;
   overflow-x: auto;
+  flex-wrap: wrap;
 }
 .capabilities-card {
   width: 480px;
@@ -111,22 +113,45 @@
   margin-bottom: 1rem;
   position: relative;
 }
-.CircleArrowButton{
-    position:absolute;
-    bottom: 1rem;
-    right: 1rem;
-    border-color: var(--brand-color);
+.CircleArrowButton {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  border-color: var(--brand-color);
 }
 
 .capabilities-card > h1 {
   font-size: 38px;
   color: var(--text-color-black);
-  padding-inline: .6rem;
+  padding-inline: 0.6rem;
 }
 .capabilities-card > p {
   font-size: 18px;
   color: var(--text-color-darkgray);
   margin-top: 0.6rem;
-  padding-inline: .6rem;
+  padding-inline: 0.6rem;
+}
 
+@media (max-width: 1076px) {
+  .story-rightcard,
+  .image-card {
+    height: 40vh;
+  }
+  .capabilities-section,
+  .story-container {
+    flex-direction: column;
+  }
+  .story-rightcard,
+  .story-leftcard {
+    width: 100%;
+  }
+  .story-leftcard > div > h1,
+  .story-leftcard > div > h2 {
+    font-size: 38px;
+  }
+  .capabilities-card {
+    width: 100%;
+    min-height: 40vh;
+    margin-block: 2rem;
+  }
 }
