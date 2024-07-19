@@ -79,7 +79,7 @@ const Blog = () => {
             </div>
           ))}
           <Link to={"/blogs"} className="Link_route findMore">
-            Find More
+            Find More <ArrowForwardIcon className="blogarrrow" />
           </Link>
         </div>
       </div>

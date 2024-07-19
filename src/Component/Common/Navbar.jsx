@@ -8,7 +8,6 @@ import { useEffect, useState } from "react";
 import { useMediaQuery } from "@mui/material";
 import { Drawer } from "antd";
 import { Menu } from "antd";
-import Logo3 from "../../assets/Layer_1.png";
 import Us from "../../assets/Country/Flag/Group 25.png";
 import Canada from "../../assets/Country/Flag/Group 23.png";
 import Australia from "../../assets/Country/Flag/Group 28.png";
@@ -446,6 +445,13 @@ const Navbar = ({
     setWhatwedoOpen(false);
     setactiveNavbar(true);
   };
+  const handleMouseOver = () => {
+    setactiveNavbar(true);
+  };
+
+  const handleMouseOut = () => {
+    setactiveNavbar(false);
+  };
 
   const hanldeCloseSubheader2 = () => {
     window.location.href = "/study-overseas";
@@ -512,6 +518,8 @@ const Navbar = ({
               <img src={Logo} alt="" />
             </Link>
             <div
+              onMouseOver={handleMouseOver}
+              onMouseOut={handleMouseOut}
               onClick={hanldeCloseSubheader2}
               className={`Link_route DailyNews ${activeNavbar && "DalyText"}`}
             >
@@ -519,6 +527,7 @@ const Navbar = ({
                 menu={{
                   items,
                 }}
+                // trigger={["click"]}
               >
                 <Space>Study Overseas</Space>
               </Dropdown>
