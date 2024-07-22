@@ -43,12 +43,13 @@ const YouMightAlsoLike = ({ RecentBlogs }) => {
                   alt="alty"
                 />
               </div>
-              <p>{value?.attributes?.updatedAt}</p>
+              <p>{value?.data?.attributes?.Date}</p>
+              
             </div>
             <div className="youmightlikeblog-congtent-card">
               <h3>{value?.data?.attributes?.Title}</h3>
               <p>{value?.data?.attributes?.Short_Description}</p>
-              <div onClick={() => handleNavigate2(value?.data)}>
+              <div onClick={() => handleNavigate2(value?.data)} style={{marginTop:".4rem"}}>
                 <CircleArrow />
               </div>
             </div>

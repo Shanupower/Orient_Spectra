@@ -629,7 +629,7 @@ const Navbar = ({
               </div>
             </div>
 
-            <div onClick={hanldeCloseSubheader}>
+            <div onClick={hanldeCloseSubheader}> 
               <Link
                 className={`Link_route DailyNews ${activeNavbar && "DalyText"}`}
                 to="/about"

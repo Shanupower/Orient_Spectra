@@ -29,8 +29,7 @@ const Blogs = () => {
 
     fetchData();
   }, []);
-  console.log(data);
-  return (
+  return (  
     <>
       <Hero data={data.slice(0, 3)} />
       <BestBlog data={data.slice(3, 8)} />

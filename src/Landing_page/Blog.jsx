@@ -14,10 +14,13 @@ const Blog = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://157.173.222.81:1337/api/blogs?sort[0]=Date:desc&populate=*/`
+          `http://157.173.222.81:1337/api/blogs?populate=*`
         );
         if (response?.status === 200) {
-          setBlogData(response?.data?.data || []);
+          const sortedData = response.data.data.sort(
+            (a, b) => new Date(b.attributes.Date) - new Date(a.attributes.Date)
+          );
+          setBlogData(sortedData);
         }
       } catch (error) {
         console.log("status is:", response?.status);
