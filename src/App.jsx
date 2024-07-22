@@ -27,14 +27,18 @@ import Navbar from "./Component/Common/Navbar";
 import Footer from "./Component/Common/Footer";
 import Step1 from "./Component/StartYourJourney/Step1";
 import StartYourJourney from "./Component/StartYourJourney/StartYourJourney";
+import MoreBlogContent from "./Component/Blogs/MoreBlogContent";
 function App() {
   const [openWhatwedo, setWhatwedoOpen] = useState(false);
   const [openbranches, setopenbranches] = useState(false);
+  const [studyOverseas, setStudyOverseas] = useState(false);
+
   const [activeNavbar, setactiveNavbar] = useState(false);
   const hanldeCloseSubheader = () => {
     setWhatwedoOpen(false);
     setopenbranches(false);
     setactiveNavbar(false);
+    setStudyOverseas(false);
   };
 
   const location = useLocation();
@@ -61,6 +65,8 @@ function App() {
         activeNavbar={activeNavbar}
         setactiveNavbar={setactiveNavbar}
         hanldeCloseSubheader={hanldeCloseSubheader}
+        studyOverseas={studyOverseas}
+        setStudyOverseas={setStudyOverseas}
       />
       <Routes>
         <Route path="/" element={<LandingPage />} />
@@ -89,6 +95,7 @@ function App() {
         <Route path="/Mentorship" element={<Mentorship />}></Route>
         <Route path="/blog" element={<SelectedBlog />}></Route>
         <Route path="/content" element={<BlogBody />} />
+        <Route path="/selected-blog" element={<MoreBlogContent />} />
 
         {/* Start your Journey */}
         <Route path="/start-your-journey" element={<StartYourJourney />} />

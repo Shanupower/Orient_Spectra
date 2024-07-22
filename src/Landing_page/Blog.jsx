@@ -7,18 +7,17 @@ import { useNavigate } from "react-router-dom";
 import "./index.css";
 
 const Blog = () => {
-  const [data, setData] = useState([]);
+  const [blogData, setBlogData] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `${import.meta.env.VITE_API_URL}/api/blogs?populate=*`
+          `http://157.173.222.81:1337/api/blogs?sort[0]=Date:desc&populate=*/`
         );
         if (response?.status === 200) {
-          // console.log("status is:", response);
-          setData(response?.data.data);
+          setBlogData(response?.data?.data || []);
         }
       } catch (error) {
         console.log("status is:", response?.status);
@@ -32,46 +31,50 @@ const Blog = () => {
   const handleNavigate = (post) => {
     navigate(`/content`, { state: { data: post } });
   };
-  console.log("blogssssssssss", data);
+  console.log("blogssssssssss", blogData);
   return (
     <>
       <div className="section BlogContainer">
         <div className="leftBlogCard">
           <div className="leftBlogCard-image-card">
             <img
-              src={`http://157.173.222.81:1337${data[0]?.attributes?.Headline_image.data.attributes.formats.thumbnail.url}`}
+              src={`http://157.173.222.81:1337${blogData[0]?.attributes?.Headline_image?.data?.attributes?.formats?.thumbnail?.url}`}
               alt="Blog Image 1"
             />
           </div>
           <div className="titleblogContent">
             <span>New</span>
-            <p>{data[0]?.attributes?.Title.split(" ").slice(0, 3).join(" ")}</p>
+            <p>
+              {blogData[0]?.attributes?.Title.split(" ").slice(0, 3).join(" ")}
+            </p>
             <strong>
-              {data[0]?.attributes?.Title.split(" ").slice(3).join(" ")}
+              {blogData[0]?.attributes?.Title.split(" ").slice(3).join(" ")}
             </strong>
           </div>
           <div className="blogContent">
             {" "}
-            <p>{data[0]?.attributes?.Short_Description}</p>
+            <p>{blogData[0]?.attributes?.Short_Description}</p>
             <ArrowForwardIcon
               className="rightArrowBlog"
-              onClick={() => handleNavigate(data[0])}
+              onClick={() => handleNavigate(blogData[0])}
             />
           </div>
         </div>
         <div className="rightBlogsCantainer">
-          {data.slice(1, 5).map((item) => (
+          {blogData.slice(1, 5).map((item) => (
             <div
               className="rightcard1"
               key={item}
               onClick={() => handleNavigate(item)}
             >
-              <div className="leftBlogCard-image-card1">
-                <img
-                  src={`http://157.173.222.81:1337${item?.attributes?.Headline_image.data.attributes.formats.small.url}`}
-                  alt="Blog Image 1"
-                />
-              </div>
+              {item?.attributes?.Headline_image?.data && (
+                <div className="leftBlogCard-image-card1">
+                  <img
+                    src={`http://157.173.222.81:1337${item?.attributes?.Headline_image?.data?.attributes.formats.small.url}`}
+                    alt="Blog Image 1"
+                  />
+                </div>
+              )}
               <div className="blog-content-section">
                 <strong>{item?.attributes?.Title}</strong>
                 <p>{item?.attributes?.Short_Description}</p>

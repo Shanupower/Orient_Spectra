@@ -25,10 +25,9 @@ const months = {
 
 const YouMightAlsoLike = ({ RecentBlogs }) => {
   const navigate = useNavigate();
-  console.log("RecentBlogs>>>>>>>>>>", RecentBlogs);
 
   const handleNavigate2 = (post) => {
-    navigate("/content", { state: { data: post } });
+    navigate("/selected-blog", { state: { data: post } });
   };
   return (
     <div className="YouMightAlsoLike section">
@@ -38,17 +37,16 @@ const YouMightAlsoLike = ({ RecentBlogs }) => {
           <div className="Youmightlike-container" key={id}>
             <div className="youmight-img-content">
               <div className="youmight-img-card">
-                <img
-                  src={`http://157.173.222.81:1337${value?.data?.attributes?.Headline_image?.data?.attributes?.formats?.thumbnail?.url}`}
-                  alt="alty"
-                />
+                {value.img && (
+                  <img src={`http://157.173.222.81:1337${value?.img}`} alt="" />
+                )}
               </div>
-              <p>{value?.attributes?.updatedAt}</p>
+              <p>{value.date}</p>
             </div>
             <div className="youmightlikeblog-congtent-card">
-              <h3>{value?.data?.attributes?.Title}</h3>
-              <p>{value?.data?.attributes?.Short_Description}</p>
-              <div onClick={() => handleNavigate2(value?.data)}>
+              <h3>{value?.title}</h3>
+              <p>{value?.description}</p>
+              <div onClick={() => handleNavigate2(value)}>
                 <CircleArrow />
               </div>
             </div>
@@ -59,7 +57,7 @@ const YouMightAlsoLike = ({ RecentBlogs }) => {
   );
 };
 
-export default function BlogBody() {
+export default function MoreBlogContent() {
   const location = useLocation();
   const { data } = location?.state || {};
   const [postData, setPostData] = useState([]);
@@ -87,7 +85,11 @@ export default function BlogBody() {
       const getRandomBlogs = () => {
         let shuffled = postData?.sort(() => 0.5 - Math.random());
         return shuffled.slice(0, 10).map((blog) => ({
-          data: blog,
+          date: formatDate(blog?.attributes?.Date),
+          title: blog.attributes?.Title,
+          description: blog.attributes?.Short_Description,
+          img: blog.attributes?.Headline_image?.data?.attributes?.formats?.large
+            ?.url,
         }));
       };
 

@@ -6,7 +6,6 @@ import { useState } from "react";
 const Hero = ({ eventData }) => {
   const [EventId, setEventId] = useState(0);
 
-
   const handleEventdata = (status) => {
     if (status === "next") {
       if (EventId < eventData.length - 1) {

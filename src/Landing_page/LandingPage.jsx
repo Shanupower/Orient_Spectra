@@ -22,7 +22,7 @@ const LandingPage = () => {
   const fetchBlogData = async () => {
     try {
       const response = await axios.get(
-        `${import.meta.env.VITE_API_URL}/api/blogs?populate=*`
+        `http://157.173.222.81:1337/api/blogs?populate=*`
       );
       if (response?.status === 200) {
         setBlog(response?.data.data[0]);
