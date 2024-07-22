@@ -13,11 +13,13 @@ const Blogs = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `${import.meta.env.VITE_API_URL}/api/blogs?populate=*`
+          `http://157.173.222.81:1337/api/blogs?populate=*`
         );
         if (response?.status === 200) {
-          // console.log("status is:", response);
-          setData(response?.data.data);
+          const sortedData = response.data.data.sort(
+            (a, b) => new Date(b.attributes.Date) - new Date(a.attributes.Date)
+          );
+          setData(sortedData);
         }
       } catch (error) {
         console.log("status is:", response?.status);
@@ -27,8 +29,7 @@ const Blogs = () => {
 
     fetchData();
   }, []);
-
-  return (
+  return (  
     <>
       <Hero data={data.slice(0, 3)} />
       <BestBlog data={data.slice(3, 8)} />

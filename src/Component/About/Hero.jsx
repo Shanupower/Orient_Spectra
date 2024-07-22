@@ -13,7 +13,7 @@ const Hero = () => {
         </h1>
         <div className="BlogMarguee">
           <Marquee className="blogMargueeText" speed={100}>
-            Study Abroad Consultancy
+            Study Abroad Consultancy  
           </Marquee>
         </div>
       </div>

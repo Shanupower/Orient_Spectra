@@ -28,7 +28,6 @@ const NewsPR = () => {
     fetchData();
   }, []);
 
-
   return (
     <>
       {NewsData.length > 0 && <Hero NewsData={NewsData[0]} />}

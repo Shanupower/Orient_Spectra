@@ -1,5 +1,3 @@
-import Banner1 from "../assets/Vector (2).png";
-import Banner2 from "../assets/Vector (3).png";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { motion } from "framer-motion";
 import axios from "axios";
