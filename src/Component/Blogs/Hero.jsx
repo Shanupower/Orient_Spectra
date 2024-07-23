@@ -13,8 +13,13 @@ const Hero = ({ data }) => {
     <div className="blog-hero-container section">
       <div className="blog-leftside-container">
         <div className="blog-image-section">
-          <img
+          {/* <img
             src={`http://157.173.222.81:1337${data[0]?.attributes?.Headline_image?.data?.attributes?.formats.large.url}`}
+            alt="Blog Image 1"
+            className="blog-image"
+          /> */}
+          <img
+            src={`http://157.173.222.81:1337${data[0]?.attributes?.Headline_image?.data?.attributes?.formats?.small?.url}`}
             alt="Blog Image 1"
             className="blog-image"
           />

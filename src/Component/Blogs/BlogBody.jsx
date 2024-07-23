@@ -35,7 +35,12 @@ const YouMightAlsoLike = ({ RecentBlogs }) => {
       <h2>You Might Also Like</h2>
       <div className="Youmightlike-section">
         {RecentBlogs?.map((value, id) => (
-          <div className="Youmightlike-container" key={id}>
+          <div
+            className="Youmightlike-container"
+            key={id}
+            onClick={() => handleNavigate2(value?.data)}
+            style={{ cursor: "pointer" }}
+          >
             <div className="youmight-img-content">
               <div className="youmight-img-card">
                 <img
@@ -44,14 +49,13 @@ const YouMightAlsoLike = ({ RecentBlogs }) => {
                 />
               </div>
               <p>{value?.data?.attributes?.Date}</p>
-              
             </div>
             <div className="youmightlikeblog-congtent-card">
               <h3>{value?.data?.attributes?.Title}</h3>
               <p>{value?.data?.attributes?.Short_Description}</p>
-              <div onClick={() => handleNavigate2(value?.data)} style={{marginTop:".4rem"}}>
+              {/* <div onClick={() => handleNavigate2(value?.data)} style={{marginTop:".4rem", textAlign:"right"}}>
                 <CircleArrow />
-              </div>
+              </div> */}
             </div>
           </div>
         ))}

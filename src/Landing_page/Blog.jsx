@@ -80,7 +80,7 @@ const Blog = () => {
               )}
               <div className="blog-content-section">
                 <strong>{item?.attributes?.Title}</strong>
-                <p>{item?.attributes?.Short_Description}</p>
+                <p>{item?.attributes?.Short_Description.slice(1, 100)}<b>...more</b></p>
               </div>
             </div>
           ))}

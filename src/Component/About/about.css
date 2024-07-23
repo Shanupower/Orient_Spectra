@@ -325,6 +325,9 @@
   border-bottom: 2px solid var(--text-color-black);
   padding-bottom: 0.6rem;
 }
+.swiperCard-conatiner {
+  position: relative;
+}
 .AboutCountry-section {
   display: flex;
   gap: 3rem;
@@ -338,16 +341,21 @@
   background-color: var(--bg-color);
   overflow: hidden;
   padding: 1rem 0.8rem;
+
 }
 
 .counrtyImage-card {
   width: 100%;
-  height: calc(60% - 0.3rem);
-  background-color: var(--text-color-blue);
+  height: 50vh;
   border-radius: 20px;
   margin-bottom: 0.6rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
 }
-
+.counrtyImage-card > img {
+  width: 100%;
+  height: 100%;
+}
 .counttry-name-card {
   font-size: 24px;
   color: var(--text-color-darkblack);
