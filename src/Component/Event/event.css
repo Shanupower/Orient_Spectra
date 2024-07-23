@@ -240,13 +240,13 @@
 }
 
 @media (max-width: 1067px) {
-  .Event-hero-container{
+  .Event-hero-container {
     margin-block: 6rem;
   }
   .event-hero-section {
     padding: 1rem;
   }
-  .envet-date-coontainer ,
+  .envet-date-coontainer,
   .bookPass-container,
   .bookPass-cardd,
   .event-hero-leftcard {
@@ -264,4 +264,10 @@
   .Experience-leftcard > h1 {
     font-size: 40px;
   }
+  .event-hero-section {
+  
+    height: 90vh;
+ 
+  }
+  
 }

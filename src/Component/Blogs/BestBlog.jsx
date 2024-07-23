@@ -22,11 +22,11 @@ const BestBlog = ({ data }) => {
       </div>
 
       <OwlCarousel
-        loop={false}
+        loop={true}
         margin={10}
         nav
         center={true}
-        autoplay={false}
+        autoplay={true}
         items={isMd ? 1 : 3}
         className="owl-theme"
       >

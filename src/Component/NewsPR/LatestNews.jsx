@@ -20,3 +20,4 @@ const LatestNews = ({ NewsData }) => {
 };
 
 export default LatestNews;
+  

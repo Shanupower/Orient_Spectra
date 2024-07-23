@@ -892,14 +892,14 @@
   cursor: pointer;
   font-weight: bold;
   display: flex;
-  gap:1rem ;
-  align-items:center ;
+  gap: 1rem;
+  align-items: center;
 }
 .findMore:hover {
   color: var(--brand-color);
 }
-.blogarrrow{
-  margin-top: .1rem;
+.blogarrrow {
+  margin-top: 0.1rem;
 }
 /* Counselore_container */
 
@@ -2450,3 +2450,13 @@ canvas {
     padding-bottom: 0.8rem;
   }
 }
+.cardEvent > img,
+.Evet_date_card,
+.CardEvent_heading {
+  user-select: none;
+  -webkit-user-select: none; /* For Safari */
+  -moz-user-select: none; /* For Firefox */
+  -ms-user-select: none;
+}
+
+

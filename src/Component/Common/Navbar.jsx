@@ -1,8 +1,9 @@
 import Logo from "../../assets/Logo10.png";
-import Logo2 from "../../assets/Logo2.png";
+import Mentorship from "../../assets/About2/Mentorship.svg";
+import Find from "../../assets/About2/Courses.svg";
+import Coaching from "../../assets/About2/Coaching.svg";
 
-import { DownOutlined } from "@ant-design/icons";
-import { Dropdown, Space } from "antd";
+import { Space } from "antd";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useMediaQuery } from "@mui/material";
@@ -21,12 +22,78 @@ import Singapore from "../../assets/Country/Flag/Singapore.png";
 import Ireland from "../../assets/Country/Flag/Ireland.png";
 import Germany from "../../assets/Country/Flag/Germany.png";
 import France from "../../assets/Country/Flag/France.png";
-import AccessibleIcon from "@mui/icons-material/Accessible";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import MenuIcon from "@mui/icons-material/Menu";
-import SchoolIcon from "@mui/icons-material/School";
-import SportsIcon from "@mui/icons-material/Sports";
+
 import "./index.css";
+
+const StudyCountry = [
+  {
+    name: "USA",
+    image: Us,
+    link: "/country/Usa",
+  },
+  {
+    name: "Canada",
+    image: Canada,
+    link: "/country/Canada",
+  },
+  {
+    name: "Australia",
+    image: Australia,
+    link: "/country/Australia",
+  },
+  {
+    name: "United Kingdom",
+    image: Uk,
+    link: "/country/UK",
+  },
+  {
+    name: "Dubai",
+    image: Dubai,
+    link: "/country/Dubai",
+  },
+  {
+    name: "Sweden",
+    image: Sweden,
+    link: "/country/Sweden",
+  },
+  {
+    name: "Poland",
+    image: Poland,
+    link: "/country/Poland",
+  },
+  {
+    name: "Switzerland",
+    image: Switzerland,
+    link: "/country/Switzerland",
+  },
+  {
+    name: "Malta",
+    image: Malta,
+    link: "/country/Malta",
+  },
+  {
+    name: "Singapore",
+    image: Singapore,
+    link: "/country/Singapore",
+  },
+  {
+    name: "Ireland",
+    image: Ireland,
+    link: "/country/Ireland",
+  },
+  {
+    name: "Germany",
+    image: Germany,
+    link: "/country/Germany",
+  },
+  {
+    name: "France",
+    image: France,
+    link: "/country/France",
+  },
+];
 
 const items = [
   {
@@ -424,6 +491,8 @@ const Navbar = ({
   setopenbranches,
   activeNavbar,
   setactiveNavbar,
+  setStudyOverseas,
+  studyOverseas,
 }) => {
   const isMd = useMediaQuery("(max-width:986px)");
   const [open, setOpen] = useState(false);
@@ -435,27 +504,37 @@ const Navbar = ({
   const onClose = () => {
     setOpen(false);
   };
+
   const handleOpenWhatWedoCard = () => {
-    setWhatwedoOpen(!openWhatwedo);
+    setWhatwedoOpen(true);
     setopenbranches(false);
     setactiveNavbar(true);
   };
+
   const handleOpeOurBranch = () => {
-    setopenbranches(!openbranches);
+    setopenbranches(true);
     setWhatwedoOpen(false);
     setactiveNavbar(true);
   };
+
   const handleMouseOver = () => {
+    setWhatwedoOpen(false);
+    setopenbranches(false);
+
     setactiveNavbar(true);
+    setStudyOverseas(true);
   };
+  console.log("StudyOverseas", studyOverseas);
 
   const handleMouseOut = () => {
     setactiveNavbar(false);
+    setStudyOverseas(false);
   };
 
   const hanldeCloseSubheader2 = () => {
     window.location.href = "/study-overseas";
   };
+
   return (
     <>
       {isMd ? (
@@ -517,22 +596,40 @@ const Navbar = ({
             >
               <img src={Logo} alt="" />
             </Link>
-            <div
-              onMouseOver={handleMouseOver}
-              onMouseOut={handleMouseOut}
-              onClick={hanldeCloseSubheader2}
-              className={`Link_route DailyNews ${activeNavbar && "DalyText"}`}
-            >
-              <Dropdown
-                menu={{
-                  items,
-                }}
-                // trigger={["click"]}
+
+            <div>
+              <div
+                onClick={hanldeCloseSubheader2}
+                onMouseOver={handleMouseOver}
+                className={`DailyNews ${activeNavbar && "DalyText"}`}
               >
-                <Space>Study Overseas</Space>
-              </Dropdown>
+                Study Overseas
+              </div>
+
+              <div
+                onMouseOver={handleMouseOver}
+                onMouseOut={handleMouseOut}
+                className={`study_overseas ${
+                  studyOverseas && "showStudyoverseas"
+                }`}
+              >
+                {StudyCountry.map((item, index) => (
+                  <Link
+                    className="study_overseas_card Link_route"
+                    key={index}
+                    to={item.link}
+                    style={{ color: "#000" }}
+                  >
+                    <div className="countryImagecard">
+                      <img src={item.image} alt="" />
+                    </div>
+                    <p>{item.name}</p>
+                  </Link>
+                ))}
+              </div>
             </div>
-            <div onClick={hanldeCloseSubheader}>
+
+            <div onClick={hanldeCloseSubheader}> 
               <Link
                 className={`Link_route DailyNews ${activeNavbar && "DalyText"}`}
                 to="/about"
@@ -554,44 +651,61 @@ const Navbar = ({
               </div>
 
               <div
-                className={`whatwedo-dropdwon-container ${
-                  openWhatwedo && "Whatwedoshow"
+                className={`whatwedo-dropdwon-container   ${
+                  openWhatwedo && "Whatwedoshow mentorshipcard-section"
                 }`}
               >
                 <Link
                   to="/Mentorship"
-                  className="whatwedo-section Link_route"
+                  className="whatwedo-section1 Link_route"
                   onClick={hanldeCloseSubheader}
                 >
-                  <div className=" whatweddo-card">
-                    <AccessibleIcon className="AccessibleIcon" />
-                    <p>Mentorship</p>
+                  <div className="mentorship-imagecard">
+                    <img src={Mentorship} alt="" />
                   </div>
-                  <KeyboardArrowRightIcon className="KeyboardArrowRightIcon" />
+                  <div className="mentorship-text-card">
+                    <h2>Mentorship</h2>
+                    <p>
+                      Orient Spectra simplifies course selection for your
+                      academic and career goals.{" "}
+                    </p>
+                  </div>
                 </Link>
                 <Link
                   to="/FindYourCourse"
-                  className="whatwedo-section Link_route"
+                  className="whatwedo-section2 Link_route"
                   onClick={hanldeCloseSubheader}
                 >
-                  <div className="whatweddo-card">
-                    <SchoolIcon className="AccessibleIcon" />
-                    <p>Find Your Course</p>
+                  <div className="mentorship-imagecard">
+                    <img src={Find} alt="" />
                   </div>
-                  <KeyboardArrowRightIcon className="KeyboardArrowRightIcon" />
+                  <div className="mentorship-text-card">
+                    <h2>Finding Your Course</h2>
+                    <p>
+                      Orient Spectra simplifies course selection for your
+                      academic and career goals.
+                    </p>
+                  </div>
                 </Link>
                 <Link
                   to="/Coaching"
-                  className="whatwedo-section Link_route"
+                  className="whatwedo-section2 Link_route"
                   onClick={hanldeCloseSubheader}
                 >
-                  <div className="whatweddo-card">
-                    <SportsIcon className="AccessibleIcon" />
-                    <p>Coaching</p>
+                  <div className="mentorship-imagecard">
+                    <img src={Coaching} alt="" />
                   </div>
-                  <KeyboardArrowRightIcon className="KeyboardArrowRightIcon" />
+                  <div className="mentorship-text-card">
+                    <h2>Coaching</h2>
+                    <p>
+                      Orient Spectra streamlines the student visa process. Our
+                      expert counselors provide comprehensive.
+                    </p>
+                  </div>
                 </Link>
               </div>
+
+              {/*  */}
             </div>
 
             <div>
