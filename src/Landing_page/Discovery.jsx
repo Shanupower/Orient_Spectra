@@ -7,26 +7,27 @@ const Discovery = () => {
     <div className=" discovery-section">
       <div className=" discovery_Container">
         <div className="dicovery_card">
-          <h1>15,000+</h1>
-          <p>Successful Admits</p>
+          <h1>19+</h1>
+          <p>Years Experience</p>
         </div>
         <div className="dicovery_card">
-          <h1>170+</h1>
-          <p>Countries represented</p>
+          <h1>15000+</h1>
+          <p>Successful Admits
+          </p>
         </div>
         <div className="dicovery_card">
           <h1>98%</h1>
-          <p>Visa Pass Rate</p>
+          <p>Visa Success Rate
+          </p>
         </div>
       </div>
       <div className="discoverTextCard">
         <p>
-          Discover why thousands of students chose Orient Spectra to build their
-          career Overseas.
+        Discover why countless students choose Orient Spectra to shape their international education journey.
         </p>
 
         <div className="Marguee">
-          <Marquee className="MargueeText" speed={100}>A Study Abroad Consultancy</Marquee>
+          <Marquee className="MargueeText" speed={100}> Abraod Education Simplified.</Marquee>
         </div>
       </div>
       <Divider />

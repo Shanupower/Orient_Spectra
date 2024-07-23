@@ -22,11 +22,11 @@ const Hero = ({ blog, event }) => {
     () => [
       {
         id: 1,
-        text: "Shaping Your",
-        heading: "Dream to fly",
+        text: "Your Pathway to",
+        heading: "Global Education",
         bgImage: Img,
         subtext:
-          "The Most Comprehensive & Personalized Study Abroad Plan, suited for your Dreams. Obsessed with Student Success.",
+          "Empowering Students with Comprehensive, Personalized Study Abroad Guidance.",
       },
       {
         id: 2,
@@ -34,7 +34,7 @@ const Hero = ({ blog, event }) => {
         heading: "how to study abroad?",
         bgImage: Img1,
         subtext:
-          "The Most Comprehensive & Personalized Study Abroad Plan, suited for your Dreams. Obsessed with Student Success.",
+          "Comprehensive and Personalized Study Abroad Planning, Dedicated to Ensuring Your Academic and Career Success.",
       },
       {
         id: 3,

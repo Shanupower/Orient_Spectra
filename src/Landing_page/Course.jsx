@@ -14,14 +14,12 @@ const items = [
     children: (
       <div className="course_container_innerDiv">
         <div className="course_container_inner_left">
-          <h1>Diverse Course Options To Choose From</h1>
+          <h1>Well Established Overseas Education Consultancy in Hyderabad</h1>
           <p>
-            Established in 2005, Orient Spectra guides students towards top
-            universities globally (USA, UK, Canada, etc.) through personalized
-            counseling and comprehensive support services. From program
-            selection to visa applications and airport pickups, their
-            experienced team ensures a smooth transition for students pursuing
-            international education. Key Highlights:
+          The consultancy has built a strong reputation over the years and represents over 400 universities globally, including institutions in the UK, USA, Germany, France, Ireland.
+The consultancy is known for its individualized approach, providing detailed attention and tailored advice to each student, leveraging the extensive experience of our counsellors.
+The consultancy's commitment to quality service has been recognized widely, including by the Times Business Award 2023, which acknowledged it as one of the top 50 overseas education consultants in hyderabad. Students have praised Orient Spectra for their thorough and supportive approach, making it a recommended choice for those seeking to pursue higher education overseas.
+
           </p>
           <Button text=" Find Your Course" arrow={true} />
         </div>
@@ -39,26 +37,11 @@ const items = [
         <div className="course_container_inner_left">
           <h1>You Gain A Global Perspective </h1>
           <p>
-            Established consultancy (2005) guides students to top universities
-            (UK, USA, Canada, etc.) through personalized counseling and
-            comprehensive services:
-            <ul style={{ marginTop: "1rem" }}>
-              <li>
-                Course & Admission Support: Expert guidance for choosing the
-                right program and university.
-              </li>
-              <li>
-                Standardized Test Prep: Experienced faculty and resources for
-                GRE, TOEFL, IELTS, PTE.
-              </li>
-              <li>
-                Visa Assistance: Specialized counseling for a high success rate.
-              </li>
-              <li>
-                Career Guidance: Shaping students' academic and professional
-                paths.
-              </li>
-            </ul>
+          We are recognized by various international educational organizations, including The British Council, IDP, and PTE, which underscores their credibility and adherence to high standards in education consulting. 
+
+The consultancy has an in-house R&D center dedicated to exploring new educational opportunities and ensuring that students have access to the latest information.
+They facilitate direct interactions between students and university representatives, offering valuable insights and helping students make more informed decisions.
+
           </p>
           <Button text=" Find Your Course" arrow={true} />
         </div>
@@ -76,11 +59,9 @@ const items = [
         <div className="course_container_inner_left">
           <h1>An experience of a lifetime</h1>
           <p>
-            Studying abroad broadens your educational options with diverse
-            courses, research opportunities, and skill-based training. You can
-            explore multiple interests simultaneously, like literature and
-            mathematics. Orient Spectra collaborates with 500+ top universities
-            worldwide, ensuring a tailored fit for your academic journey.
+          Studying abroad is more than just an academic pursuit—it's a transformative journey that broadens your educational horizons and enhances your future. By immersing yourself in a new cultural and academic environment, you'll gain access to a diverse array of courses, cutting-edge research opportunities, and hands-on skill development.
+
+Embrace the chance to expand your global perspective, build a professional network, and acquire valuable international experience. By studying abroad, you'll engage with diverse perspectives and gain insights that are crucial for success in the global job market. With our expert guidance, your dream of pursuing international education becomes a well-crafted reality, designed to elevate your academic and professional aspirations.
           </p>
           <Button text=" Find Your Course" arrow={true} />
         </div>
