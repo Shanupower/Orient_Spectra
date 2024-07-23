@@ -2,7 +2,7 @@ import AddIcon from "@mui/icons-material/Add";
 import Whatsapp from "../assets/icons/Group 56.png";
 import Window from "../assets/icons/Group (2).png";
 import Mic from "../assets/icons/Group (3).png";
-import Img from "../assets/Home page/Home_Page_01.jpg";
+import Img from "../assets/Home_page/Home Page_01.jpg";
 import Img1 from "../assets/pretty-indian-college-girl-universit.jpg";
 import Img2 from "../assets/pretty-indian-college-girl-university.jpg";
 import Img3 from "../assets/young-adult-achievement-graduation-gown-toothy-smile-generated-by-ai.jpg";
