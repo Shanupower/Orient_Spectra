@@ -73,10 +73,11 @@ const FlagData = [
 
 import "./index.css";
 
-export const NextStepComponent = ({ handleStepCount }) => {
+export const NextStepComponent = ({ handleStepCount, text, icon }) => {
   return (
     <div className="Next-container">
-      Next <CircleArrow onClick={handleStepCount} />
+      {text ? text : "Next"}{" "}
+      {icon ? icon : <CircleArrow onClick={handleStepCount} />}
     </div>
   );
 };
@@ -119,7 +120,11 @@ const Step1 = ({
             </div>
           ))}
         </div>
-        <NextStepComponent handleStepCount={handleStepCount} />
+        {country ? (
+          <NextStepComponent handleStepCount={handleStepCount} />
+        ) : (
+          <NextStepComponent />
+        )}
       </div>
     </div>
   );

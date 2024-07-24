@@ -29,7 +29,10 @@ const Blogs = () => {
 
     fetchData();
   }, []);
-  return (  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  return (
     <>
       <Hero data={data.slice(0, 3)} />
       <BestBlog data={data.slice(3, 8)} />

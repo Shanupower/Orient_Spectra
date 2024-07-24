@@ -28,49 +28,6 @@ const Events = () => {
     fetchData();
   }, []);
 
-  useEffect(() => {
-    const stack = document.querySelector(".stack");
-    if (stack) {
-      [...stack.children].reverse().forEach((i) => stack.append(i));
-
-      const updateTopCard = () => {
-        const cards = stack.querySelectorAll(".card");
-        cards.forEach((card) => {
-          card.classList.remove("top-card");
-        });
-        const topCard = stack.querySelector(".card:last-child");
-        if (topCard) {
-          topCard.classList.add("top-card");
-        }
-      };
-
-      const swap = (e) => {
-        const card = stack.querySelector(".card:last-child");
-        if (e.target !== card) return;
-        card.style.animation = "swap 700ms forwards";
-
-        setTimeout(() => {
-          card.style.animation = "";
-          stack.prepend(card);
-          updateTopCard();
-        }, 700);
-      };
-
-      stack.addEventListener("click", swap);
-
-      // Initialize top card border
-      updateTopCard();
-
-      return () => {
-        stack.removeEventListener("click", swap);
-      };
-    }
-  }, [Eventdata]);
-
-  const handleNavigate = (post) => {
-    navigate(`/events`, { state: { data: post } });
-  };
-
   return (
     <div className="section Events__container">
       <motion.div

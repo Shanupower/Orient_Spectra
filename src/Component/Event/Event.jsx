@@ -42,6 +42,9 @@ const Event = () => {
 
     // fetchCompletedData();
   }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Hero eventData={Eventdata} />

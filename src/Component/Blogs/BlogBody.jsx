@@ -25,11 +25,11 @@ const months = {
 
 const YouMightAlsoLike = ({ RecentBlogs }) => {
   const navigate = useNavigate();
-  console.log("RecentBlogs>>>>>>>>>>", RecentBlogs);
 
   const handleNavigate2 = (post) => {
     navigate("/content", { state: { data: post } });
   };
+
   return (
     <div className="YouMightAlsoLike section">
       <h2>You Might Also Like</h2>
@@ -69,7 +69,9 @@ export default function BlogBody() {
   const { data } = location?.state || {};
   const [postData, setPostData] = useState([]);
   const [randomBlogs, setRandomBlogs] = useState([]);
-  console.log("data??????", data);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [data]);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -133,7 +135,7 @@ export default function BlogBody() {
           </div>
           <div className="singleBlogImgae-container">
             <img
-              src={`http://157.173.222.81:1337${attributes?.Headline_image.data.attributes.formats.large.url}`}
+              src={`http://157.173.222.81:1337${attributes?.Headline_image?.data?.attributes?.formats?.large?.url}`}
               alt="blog"
             />
           </div>

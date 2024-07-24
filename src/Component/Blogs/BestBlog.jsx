@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import CircleArrow from "../Common/CircleArrow";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
@@ -34,7 +34,7 @@ const BestBlog = ({ data }) => {
           <div className="bestblog-leftside-container" key={item.id}>
             <div className="blog-image-section">
               <img
-                src={`http://157.173.222.81:1337${item?.attributes?.Headline_image.data.attributes.formats.large.url}`}
+                src={`http://157.173.222.81:1337${item?.attributes?.Headline_image?.data?.attributes?.formats?.samll?.url}`}
                 alt="Blog Image 1"
                 className="blog-image"
               />

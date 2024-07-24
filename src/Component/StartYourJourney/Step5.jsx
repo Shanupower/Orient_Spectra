@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useMemo, useState } from "react";
 import Stepper from "./Stepper";
 import { NextStepComponent } from "./Step1";
+import CloseIcon from "@mui/icons-material/Close";
 import "./index.css";
 
 const CourseData = [
@@ -32,6 +33,54 @@ const CourseData = [
     id: 7,
     title: "Cloud Computing",
   },
+  {
+    id: 8,
+    title: "Mechanical Engineering",
+  },
+  {
+    id: 9,
+    title: "Machine Learning",
+  },
+  {
+    id: 10,
+    title: "Journalism",
+  },
+  {
+    id: 11,
+    title: "Fashion Design",
+  },
+  {
+    id: 16,
+    title: "Hospitality Management",
+  },
+  {
+    id: 17,
+    title: "Cloud Computing",
+  },
+  {
+    id: 12,
+    title: "Mechanical Engineering",
+  },
+  {
+    id: 13,
+    title: "Machine Learning",
+  },
+  {
+    id: 14,
+    title: "Journalism",
+  },
+  {
+    id: 15,
+    title: "Fashion Design",
+  },
+  {
+    id: 26,
+    title: "Hospitality Management",
+  },
+  {
+    id: 27,
+    title: "Cloud Computing",
+  },
 ];
 
 const Step5 = ({
@@ -41,14 +90,36 @@ const Step5 = ({
   setSubject,
   Subject,
 }) => {
-    const handleSelectedSubject = (item) => () => {
-      if (Subject.some((subject) => subject.title === item.title)) {
-        setSubject(Subject.filter((subject) => subject.title !== item.title));
-      } else if (Subject.length < 5) {
-        setSubject([...Subject, item]);
-      }
-    };
+  const [userInput, setUserInput] = useState("");
+  const filteredSubject = useMemo(() => {
+    if (!userInput) {
+      return null;
+    }
+    const lowercasedSearch = userInput.toLowerCase();
+    return CourseData.filter((subject) =>
+      subject.title.toLowerCase().includes(lowercasedSearch)
+    );
+  }, [CourseData, userInput]);
 
+  console.log(Subject);
+
+  const handleSubject = (item) => () => {
+    if (!Subject.some((sub) => sub.id === item.id)) {
+      setSubject((prevSubjects) => [...prevSubjects, item]);
+      setUserInput("");
+    } else {
+      setUserInput("");
+    }
+  };
+
+  const hanldeUserInput = (e) => {
+    setUserInput(e.target.value);
+  };
+  const haandlRemoveSubject = (id) => () => {
+    setSubject((prevSubjects) =>
+      prevSubjects.filter((subject) => subject.id !== id)
+    );
+  };
   return (
     <div className="step1-container section">
       <div className="step1-left-card">
@@ -62,22 +133,46 @@ const Step5 = ({
         <Stepper step={step} handlePrevStep={handlePrevStep} />
       </div>
       <div className="step1-right-card">
+        <div className="step5_inputcard">
+          <input
+            type="text"
+            name="subject"
+            value={userInput}
+            placeholder="Search and Select Your Subject"
+            onChange={hanldeUserInput}
+          />
+          {userInput && (
+            <div className="dropbox-container">
+              {filteredSubject?.map((item, index) => (
+                <div
+                  key={index}
+                  className="searchedItem-container"
+                  onClick={handleSubject(item)}
+                >
+                  <p>{item.title}</p>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
         <div className="Course-container">
-          {CourseData.map((item, index) => (
-            <div
-              className={`subject-card ${
-                Subject.some((subject) => subject.title === item.title)
-                  ? "selectedCardcourse"
-                  : ""
-              }`}
-              key={index}
-              onClick={handleSelectedSubject(item)}
-            >
-              {item.title}
+          {Subject.map((item, index) => (
+            <div className={`subject-card`} key={index}>
+              {item.title}{" "}
+              <CloseIcon
+                className="CloseIconCard"
+                onClick={haandlRemoveSubject(item.id)}
+              />
             </div>
           ))}
         </div>
-        <NextStepComponent handleStepCount={handleStepCount} />
+        {Subject.length <= 4 ? <p>Please Select minimum 5 subject</p> : ""}
+
+        {Subject.length >= 5 ? (
+          <NextStepComponent handleStepCount={handleStepCount} />
+        ) : (
+          <NextStepComponent />
+        )}
       </div>
     </div>
   );

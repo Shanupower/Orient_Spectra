@@ -20,7 +20,9 @@ const Story = () => {
         <h3>Our Story</h3>
       </div>
       <div className="story-spectra-card">
-        <div className="stroy-left-card"></div>
+        <div className="stroy-left-card">
+          <img src={Quote} alt="" />
+        </div>
         <div className="stroy-center-card">
           <div className="quoet-image">
             {/* <img src={Quote} alt="" /> */}

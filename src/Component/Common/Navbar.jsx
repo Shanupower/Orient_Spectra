@@ -535,6 +535,11 @@ const Navbar = ({
     window.location.href = "/study-overseas";
   };
 
+  const handlegetTuchwithus = () => {
+    window.location.href = "/start-your-journey";
+    hanldeCloseSubheader();
+  };
+
   return (
     <>
       {isMd ? (
@@ -629,7 +634,7 @@ const Navbar = ({
               </div>
             </div>
 
-            <div onClick={hanldeCloseSubheader}> 
+            <div onClick={hanldeCloseSubheader}>
               <Link
                 className={`Link_route DailyNews ${activeNavbar && "DalyText"}`}
                 to="/about"
@@ -797,8 +802,8 @@ const Navbar = ({
               </Link>
             </div>
           </div>
-          <div className="navbarButton" onClick={hanldeCloseSubheader}>
-            <Link className="Link_route GetInbutton" to={"#"}>
+          <div className="navbarButton" onClick={handlegetTuchwithus}>
+            <Link className="Link_route GetInbutton" to={"/start-your-journey"}>
               Get In Touch
             </Link>
           </div>

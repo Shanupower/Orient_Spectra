@@ -52,7 +52,11 @@ const Step2 = ({
             </div>
           ))}
         </div>
-        <NextStepComponent handleStepCount={handleStepCount} />
+        {course ? (
+          <NextStepComponent handleStepCount={handleStepCount} />
+        ) : (
+          <NextStepComponent />
+        )}
       </div>
     </div>
   );
