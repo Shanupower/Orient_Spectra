@@ -2,8 +2,8 @@ import AddIcon from "@mui/icons-material/Add";
 import Whatsapp from "../assets/icons/Group 56.png";
 import Window from "../assets/icons/Group (2).png";
 import Mic from "../assets/icons/Group (3).png";
-import Img from "../assets/man-wearing-t-shirt-gesturing.jpg";
-import Img1 from "../assets/pretty-indian-college-girl-universit.jpg";
+import Img from "../assets/Home_page/Home Page_01.jpg";
+import Img1 from "../assets/Home_page/Home Page_04.jpg";
 import Img2 from "../assets/pretty-indian-college-girl-university.jpg";
 import Img3 from "../assets/young-adult-achievement-graduation-gown-toothy-smile-generated-by-ai.jpg";
 import { Carousel } from "antd";
@@ -22,11 +22,11 @@ const Hero = ({ blog, event }) => {
     () => [
       {
         id: 1,
-        text: "Shaping Your",
-        heading: "Dream to fly",
+        text: "Your Pathway to",
+        heading: "Global Education",
         bgImage: Img,
         subtext:
-          "The Most Comprehensive & Personalized Study Abroad Plan, suited for your Dreams. Obsessed with Student Success.",
+          "Empowering Students with Comprehensive, Personalized Study Abroad Guidance.",
       },
       {
         id: 2,
@@ -34,7 +34,7 @@ const Hero = ({ blog, event }) => {
         heading: "how to study abroad?",
         bgImage: Img1,
         subtext:
-          "The Most Comprehensive & Personalized Study Abroad Plan, suited for your Dreams. Obsessed with Student Success.",
+          "Comprehensive and Personalized Study Abroad Planning, Dedicated to Ensuring Your Academic and Career Success.",
       },
       {
         id: 3,

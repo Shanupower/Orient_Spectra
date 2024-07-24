@@ -8,7 +8,7 @@ const Acedemic = () => {
   return (
     <div className="Acedemic_cantainer section">
       {/* <div className="discoverButton">
-        <p>Unlock Your Skill To Abroad now</p>
+        <p>Transform Your Skills for Admission to Leading Global Universities</p>
 
         <Button text="Discover more" arrow={true} />
       </div> */}
@@ -22,9 +22,9 @@ const Acedemic = () => {
       </Marquee>
 
       <div className="Acedemic_cantainer__header">
-        <p>Unlock Your Skill To Abroad now</p>
+        <p>Transform Your Skills for Admission to Leading Global Universities</p>
         <div className="discovermoreButton">
-          <Button text="Discover more" arrow={true} />
+          <Button text="Meet Counselors" arrow={true} />
         </div>
       </div>
 
