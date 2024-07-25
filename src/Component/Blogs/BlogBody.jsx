@@ -6,8 +6,8 @@ import { Container, Typography, Box } from "@mui/material";
 import Aos from "aos";
 import "./SelectedBlog.css";
 import GetTuchWithUs from "../../Landing_page/GetTuchWithUs2";
-import CircleArrow from "../Common/CircleArrow";
-import Img1 from "../../assets/Property 1=Default (1).png";
+import Skeleton from "@mui/material/Skeleton";
+
 const months = {
   1: "January",
   2: "February",
@@ -25,6 +25,7 @@ const months = {
 
 const YouMightAlsoLike = ({ RecentBlogs }) => {
   const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(true);
 
   const handleNavigate2 = (post) => {
     navigate("/content", { state: { data: post } });
@@ -43,9 +44,19 @@ const YouMightAlsoLike = ({ RecentBlogs }) => {
           >
             <div className="youmight-img-content">
               <div className="youmight-img-card">
+                {isLoading && (
+                  <Skeleton
+                    animation="wave"
+                    variant="rectangular"
+                    width={"100%"}
+                    height={"100%"}
+                    sx={{ bgcolor: "grey.500" }}
+                  />
+                )}{" "}
                 <img
                   src={`http://157.173.222.81:1337${value?.data?.attributes?.Headline_image?.data?.attributes?.formats?.thumbnail?.url}`}
                   alt="alty"
+                  onLoad={() => setIsLoading(false)}
                 />
               </div>
               <p>{value?.data?.attributes?.Date}</p>
@@ -69,6 +80,8 @@ export default function BlogBody() {
   const { data } = location?.state || {};
   const [postData, setPostData] = useState([]);
   const [randomBlogs, setRandomBlogs] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [data]);
@@ -134,10 +147,22 @@ export default function BlogBody() {
             <p>{attributes?.Short_Description}</p>
           </div>
           <div className="singleBlogImgae-container">
-            <img
-              src={`http://157.173.222.81:1337${attributes?.Headline_image?.data?.attributes?.formats?.large?.url}`}
-              alt="blog"
-            />
+            {isLoading && (
+              <Skeleton
+                animation="wave"
+                variant="rectangular"
+                width={"100%"}
+                height={"100%"}
+                sx={{ bgcolor: "grey.500" }}
+              />
+            )}{" "}
+            {!isLoading && (
+              <img
+                src={`http://157.173.222.81:1337${attributes?.Headline_image?.data?.attributes?.formats?.large?.url}`}
+                alt="blog"
+                onLoad={() => setIsLoading(false)}
+              />
+            )}
           </div>
         </div>
         <div className="TexteditorBlock">

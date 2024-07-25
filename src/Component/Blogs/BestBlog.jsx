@@ -1,16 +1,19 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import CircleArrow from "../Common/CircleArrow";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import OwlCarousel from "react-owl-carousel";
 import { useLocation, useNavigate } from "react-router-dom";
+import Skeleton from "@mui/material/Skeleton";
 
-import "./blog.css";
 import { useMediaQuery } from "@mui/material";
+import "./blog.css";
 
 const BestBlog = ({ data }) => {
   const isMd = useMediaQuery("(max-width:986px)");
   const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(true);
+
   const handleNavigate = (post) => {
     navigate("/content", { state: { data: post } });
   };
@@ -33,11 +36,24 @@ const BestBlog = ({ data }) => {
         {data.map((item) => (
           <div className="bestblog-leftside-container" key={item.id}>
             <div className="blog-image-section">
+              {!isLoading && (
+                <Skeleton
+                  animation="wave"
+                  variant="rectangular"
+                  width={"100%"}
+                  height={"100%"}
+                  sx={{ bgcolor: "grey.500" }}
+                />
+              )}
+              {/* {!isLoading && ( */}
               <img
-                src={`http://157.173.222.81:1337${item?.attributes?.Headline_image?.data?.attributes?.formats?.samll?.url}`}
+                src={`http://157.173.222.81:1337${item?.attributes?.Headline_image?.data?.attributes?.formats?.thumbnail?.url}`}
                 alt="Blog Image 1"
                 className="blog-image"
+                onLoad={() => setIsLoading(false)}
+                onError={() => setIsLoading(true)}
               />
+              {/* )} */}
             </div>
             <div className="bestblog-leftside-card1">
               <p>Best of the Week</p>

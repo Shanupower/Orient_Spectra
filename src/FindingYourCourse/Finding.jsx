@@ -9,10 +9,12 @@ import "../Component/About/about.css";
 import FindingAccordion from "./FindingAccordion";
 import GetStartedToday from "./GetStartedToday";
 import LandscapeIcon from "@mui/icons-material/Landscape";
-import "./find.css";
 import CircleArrow from "../Component/Common/CircleArrow";
 import { NavLink } from "react-router-dom";
-import Footer from "../Component/Common/Footer";
+import Skeleton from "@mui/material/Skeleton";
+import { useState, useMemo, useEffect } from "react";
+import "./find.css";
+
 // DATA FOR ACCORDION
 const getItems = (panelStyle) => [
   {
@@ -136,6 +138,8 @@ const capDescription =
   " At Orient Spectra, we understand that choosing the right course for your academic and professional goals can be a daunting task. That's why we offer expert guidance and counseling services to help you navigate through the myriad of options available to you. With our experienced counselors by your side, you can make informed decisions that align with your interests, abilities, and aspirations.";
 
 const Finding = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
   return (
     <>
       {/* FIND YOUR COURSE COMPONENT */}
@@ -147,8 +151,15 @@ const Finding = () => {
 
       <div className="find-cource-image-card section">
         <div className="image-card">
-          {/* <LandscapeIcon className="LandscapeIconIcon2" />
-           */}
+          {isLoading && (
+            <Skeleton
+              animation="wave"
+              variant="rectangular"
+              width={"100%"}
+              height={"100%"}
+              sx={{ bgcolor: "grey.500" }}
+            />
+          )}{" "}
           <img src="src\assets\Explore our Capabilities\Finding your course\Main Image.jpg" />
         </div>
       </div>

@@ -14,7 +14,9 @@ import LandscapeIcon from "@mui/icons-material/Landscape";
 import "../FindingYourCourse/find.css";
 import CircleArrow from "../Component/Common/CircleArrow";
 import { NavLink } from "react-router-dom";
-import Footer from "../Component/Common/Footer";
+import { useState, useEffect } from "react";
+
+import Skeleton from "@mui/material/Skeleton";
 
 // DATA FOR ACCORDION
 const getItems = (panelStyle) => [
@@ -153,6 +155,11 @@ const capName = "Coaching ";
 const capDescription =
   "At Orient Spectra Overseas Education Consultancy, we understand that obtaining a student visa can be a challenging and intricate process. Our mission is to make this journey as smooth and stress-free as possible for you. With our expert guidance and experienced counselors, we offer comprehensive support to help you secure your student visa and embark on your educational journey abroad.";
 const Coaching = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
   return (
     <>
       {/* FIND YOUR COURSE COMPONENT */}
@@ -161,6 +168,15 @@ const Coaching = () => {
       <div className="find-cource-image-card section">
         <div className="image-card">
           {/* <LandscapeIcon className="LandscapeIconIcon2" /> */}
+          {isLoading && (
+            <Skeleton
+              animation="wave"
+              variant="rectangular"
+              width={"100%"}
+              height={"100%"}
+              sx={{ bgcolor: "grey.500" }}
+            />
+          )}{" "}
           <img src="src\assets\Explore our Capabilities\Coaching\Main Image.jpg" />
         </div>
       </div>
