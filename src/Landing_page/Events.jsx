@@ -4,6 +4,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./index.css";
+import EventDargCard from "./EventSwip";
 
 const Events = () => {
   const [Eventdata, setEventData] = useState([]);
@@ -26,49 +27,6 @@ const Events = () => {
 
     fetchData();
   }, []);
-
-  useEffect(() => {
-    const stack = document.querySelector(".stack");
-    if (stack) {
-      [...stack.children].reverse().forEach((i) => stack.append(i));
-
-      const updateTopCard = () => {
-        const cards = stack.querySelectorAll(".card");
-        cards.forEach((card) => {
-          card.classList.remove("top-card");
-        });
-        const topCard = stack.querySelector(".card:last-child");
-        if (topCard) {
-          topCard.classList.add("top-card");
-        }
-      };
-
-      const swap = (e) => {
-        const card = stack.querySelector(".card:last-child");
-        if (e.target !== card) return;
-        card.style.animation = "swap 700ms forwards";
-
-        setTimeout(() => {
-          card.style.animation = "";
-          stack.prepend(card);
-          updateTopCard();
-        }, 700);
-      };
-
-      stack.addEventListener("click", swap);
-
-      // Initialize top card border
-      updateTopCard();
-
-      return () => {
-        stack.removeEventListener("click", swap);
-      };
-    }
-  }, [Eventdata]);
-
-  const handleNavigate = (post) => {
-    navigate(`/events`, { state: { data: post } });
-  };
 
   return (
     <div className="section Events__container">
@@ -113,30 +71,7 @@ const Events = () => {
           visible: { opacity: 1, y: 0 },
         }}
       >
-        <div className="stack">
-          {Eventdata?.map((item, index) => (
-            <div className="card cardEvent" key={index}>
-              <div className="card_content">
-                <div className="CardEvent_heading">
-                  {item?.attributes?.Headline}
-                </div>
-                <div onClick={() => handleNavigate(item)}>
-                  <ArrowForwardIcon
-                    sx={{ fontSize: "40px", fontWeight: "300" }}
-                    className="eventarrow"
-                  />
-                </div>
-              </div>
-              <p className="Evet_date_card">
-                {new Date(item?.attributes?.Date_of_the_event).getFullYear()}
-              </p>
-              <img
-                src={`http://157.173.222.81:1337${item?.attributes?.Poster?.data?.attributes.url}`}
-                alt=""
-              />
-            </div>
-          ))}
-        </div>
+        <EventDargCard Eventdata={Eventdata} />
       </motion.div>
     </div>
   );

@@ -27,7 +27,9 @@ const NewsPR = () => {
 
     fetchData();
   }, []);
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       {NewsData.length > 0 && <Hero NewsData={NewsData[0]} />}

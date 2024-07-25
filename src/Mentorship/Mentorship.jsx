@@ -13,7 +13,10 @@ import "../FindingYourCourse/find.css";
 import CircleArrow from "../Component/Common/CircleArrow";
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
-import Footer from "../Component/Common/Footer";
+import { useState, useEffect } from "react";
+
+import Skeleton from "@mui/material/Skeleton";
+
 // DATA FOR ACCORDION
 const getItems = (panelStyle) => [
   {
@@ -155,6 +158,7 @@ const capName = "Mentorship";
 const capDescription =
   "At Orient Spectra, we believe in the power of mentorship to guide students towards their academic and professional goals. Our mentorship program is designed to provide personalized guidance and support to students at every step of their journey towards studying abroad. Whether you are just starting to explore your options or preparing to embark on your study abroad adventure, our team of experienced mentors is here to help you succeed";
 const Finding = () => {
+  const [isLoading, setIsLoading] = useState(true);
   return (
     <>
       {/* FIND YOUR COURSE COMPONENT */}
@@ -214,12 +218,21 @@ const Finding = () => {
           </div>
           <div className="capabilities-card">
             <div className="cap-image-card ">
+              {isLoading && (
+                <Skeleton
+                  animation="wave"
+                  variant="rectangular"
+                  width={"100%"}
+                  height={"100%"}
+                  sx={{ bgcolor: "grey.500" }}
+                />
+              )}{" "}
               <img
                 style={{ objectFit: "cover" }}
                 src="src\assets\Explore our Capabilities\Finding your course\Our Approach.jpg"
                 alt="Finding your course"
+                onLoad={() => setIsLoading(false)}
               />
-
               <NavLink style={{ color: "black" }} to={"/FindYourCourse"}>
                 <CircleArrow className="CircleArrowButton" />
               </NavLink>

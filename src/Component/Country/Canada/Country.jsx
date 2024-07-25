@@ -1,4 +1,3 @@
-import Navbar from "../../Common/Navbar";
 import Admissiontimeline from "./Admissiontimeline";
 import AdmitionRequired from "./AdmitionRequired";
 import Hero from "./Hero";
@@ -9,7 +8,7 @@ import UnitedState from "./UnitedState";
 import Univercity from "./Univercity";
 import CountryFaq from "../../Common/Contryfaq";
 import { useParams } from "react-router-dom";
-import Footer from "../../Common/Footer";
+import { useEffect } from "react";
 const getItems = (panelStyle) => [
   {
     key: "1",
@@ -196,6 +195,9 @@ const getItems = (panelStyle) => [
   },
 ];
 const CanadaCountry = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Hero />

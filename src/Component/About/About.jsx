@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Counselors from "../../Landing_page/Counselors";
 import Events from "../../Landing_page/Events";
 import GetTuchWithUs from "../../Landing_page/GetTuchWithUs2";
@@ -12,6 +13,9 @@ import Hero from "./Hero";
 import Story from "./Story";
 
 const About = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Hero />

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Counselors from "../../Landing_page/Counselors";
 import Events from "../../Landing_page/Events";
 import GetTuchWithUs from "../../Landing_page/GetTuchWithUs2";
@@ -143,6 +144,9 @@ const getItems = (panelStyle) => [
   },
 ];
 const StudyOverseas = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Hero />

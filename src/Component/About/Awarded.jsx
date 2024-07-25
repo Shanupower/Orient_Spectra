@@ -28,8 +28,8 @@ const Awarded = () => {
       </div>
       <Divider />
       <div className="awarded-section">
-        {AwardedData.map((item) => (
-          <div className="awarded-card" key={item}>
+        {AwardedData.map((item,index) => (
+          <div className="awarded-card" key={index}>
             <div className="awarded-image">
               <img src={item.img} alt="" />
             </div>

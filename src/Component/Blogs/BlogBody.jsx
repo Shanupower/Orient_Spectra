@@ -6,8 +6,8 @@ import { Container, Typography, Box } from "@mui/material";
 import Aos from "aos";
 import "./SelectedBlog.css";
 import GetTuchWithUs from "../../Landing_page/GetTuchWithUs2";
-import CircleArrow from "../Common/CircleArrow";
-import Img1 from "../../assets/Property 1=Default (1).png";
+import Skeleton from "@mui/material/Skeleton";
+
 const months = {
   1: "January",
   2: "February",
@@ -25,33 +25,48 @@ const months = {
 
 const YouMightAlsoLike = ({ RecentBlogs }) => {
   const navigate = useNavigate();
-  console.log("RecentBlogs>>>>>>>>>>", RecentBlogs);
+  const [isLoading, setIsLoading] = useState(true);
 
   const handleNavigate2 = (post) => {
     navigate("/content", { state: { data: post } });
   };
+
   return (
     <div className="YouMightAlsoLike section">
       <h2>You Might Also Like</h2>
       <div className="Youmightlike-section">
         {RecentBlogs?.map((value, id) => (
-          <div className="Youmightlike-container" key={id}>
+          <div
+            className="Youmightlike-container"
+            key={id}
+            onClick={() => handleNavigate2(value?.data)}
+            style={{ cursor: "pointer" }}
+          >
             <div className="youmight-img-content">
               <div className="youmight-img-card">
+                {isLoading && (
+                  <Skeleton
+                    animation="wave"
+                    variant="rectangular"
+                    width={"100%"}
+                    height={"100%"}
+                    sx={{ bgcolor: "grey.500" }}
+                  />
+                )}{" "}
                 <img
                   src={`http://157.173.222.81:1337${value?.data?.attributes?.Headline_image?.data?.attributes?.formats?.thumbnail?.url}`}
                   alt="alty"
+                  onLoad={() => setIsLoading(false)}
                 />
               </div>
               <p>{value?.data?.attributes?.Date}</p>
-              
             </div>
             <div className="youmightlikeblog-congtent-card">
               <h3>{value?.data?.attributes?.Title}</h3>
               <p>{value?.data?.attributes?.Short_Description}</p>
-              <div onClick={() => handleNavigate2(value?.data)} style={{marginTop:".4rem"}}>
+              {/* <div onClick={() => handleNavigate2(value?.data)} style={{marginTop:".4rem", textAlign:"right"}}>
                 <CircleArrow />
-              </div>
+              </div> */}
             </div>
           </div>
         ))}
@@ -65,7 +80,11 @@ export default function BlogBody() {
   const { data } = location?.state || {};
   const [postData, setPostData] = useState([]);
   const [randomBlogs, setRandomBlogs] = useState([]);
-  console.log("data??????", data);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [data]);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -128,10 +147,22 @@ export default function BlogBody() {
             <p>{attributes?.Short_Description}</p>
           </div>
           <div className="singleBlogImgae-container">
-            <img
-              src={`http://157.173.222.81:1337${attributes?.Headline_image.data.attributes.formats.large.url}`}
-              alt="blog"
-            />
+            {isLoading && (
+              <Skeleton
+                animation="wave"
+                variant="rectangular"
+                width={"100%"}
+                height={"100%"}
+                sx={{ bgcolor: "grey.500" }}
+              />
+            )}{" "}
+            {!isLoading && (
+              <img
+                src={`http://157.173.222.81:1337${attributes?.Headline_image?.data?.attributes?.formats?.large?.url}`}
+                alt="blog"
+                onLoad={() => setIsLoading(false)}
+              />
+            )}
           </div>
         </div>
         <div className="TexteditorBlock">

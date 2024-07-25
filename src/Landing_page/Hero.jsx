@@ -7,17 +7,19 @@ import Img1 from "../assets/Home_page/Home Page_04.jpg";
 import Img2 from "../assets/pretty-indian-college-girl-university.jpg";
 import Img3 from "../assets/young-adult-achievement-graduation-gown-toothy-smile-generated-by-ai.jpg";
 import { Carousel } from "antd";
-import "./index.css";
 import Button from "../Component/Common/Button";
-import { useState, useMemo } from "react";
-import { useMediaQuery } from "@mui/material";
+import { useState, useMemo, useEffect } from "react";
+import { fabClasses, useMediaQuery } from "@mui/material";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
+import "./index.css";
+import Skeleton from "@mui/material/Skeleton";
 
 const Hero = ({ blog, event }) => {
   const [isOpen, setIsOpen] = useState(false);
   const isMd = useMediaQuery("(max-width:986px)");
   const navigate = useNavigate();
 
+  const [isLoading, setIsLoading] = useState(true);
   const HeroPagedata = useMemo(
     () => [
       {
@@ -55,6 +57,7 @@ const Hero = ({ blog, event }) => {
     ],
     [blog, event]
   );
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -67,6 +70,7 @@ const Hero = ({ blog, event }) => {
     }
   };
 
+  console.log(isLoading);
   return (
     <div className="HeroBlock">
       <div className="HeroContainer">
@@ -74,7 +78,20 @@ const Hero = ({ blog, event }) => {
           {HeroPagedata.map((data) => (
             <div key={data.id} className="Hero_container">
               <div className="Hero--images">
-                <img src={data.bgImage} alt="" />
+                {isLoading && (
+                  <Skeleton
+                    animation="wave"
+                    variant="rectangular"
+                    width={"100%"}
+                    height={"100%"}
+                    sx={{ bgcolor: "grey.500" }}
+                  />
+                )}
+                <img
+                  src={data.bgImage}
+                  alt=""
+                  onLoad={() => setIsLoading(false)}
+                />
               </div>
 
               <div className="Hero_Content">

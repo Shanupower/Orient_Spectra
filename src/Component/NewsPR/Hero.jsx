@@ -9,10 +9,10 @@ const Hero = ({ NewsData }) => {
       <div className="Catalyzing-card">
         <p>{NewsData?.attributes?.Short_Description}</p>
 
-        <div className="search-card">
+        {/* <div className="search-card">
           <input type="text" placeholder="search..." />
           <SearchOutlinedIcon />
-        </div>
+        </div> */}
       </div>
     </div>
   );
