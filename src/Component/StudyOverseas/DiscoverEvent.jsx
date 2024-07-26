@@ -1,13 +1,42 @@
 import { Chrono } from "react-chrono";
-import Img1 from "../../assets/Blogs/study.png";
+import React, { useEffect, useState, useRef } from "react";
 import Video from "../../assets/About/LineAnim_startYourJourney.mp4";
-
+import * as LottiePlayer from "@lottiefiles/lottie-player";
+import { create } from "@lottiefiles/lottie-interactivity";
+import LineAnimation from "../../assets/Country/LineAnim_StartYourJourney (1).json";
 import "./StudyOverseas.css";
+import { height } from "@mui/system";
 const DiscoverEvent = () => {
+  const lottiee = React.useRef(null);
+  React.useEffect(() => {
+    lottiee.current.addEventListener("load", function (e) {
+      create({
+        mode: "scroll",
+        player: "#firstLottie",
+        actions: [
+          {
+            visibility: [0, 1],
+            type: "seek",
+            frames: [0, 181],
+          },
+        ],
+      });
+    });
+  }, [lottiee]);
+  console.log("LineAnimation", LineAnimation);
   return (
     <div className="Discover-container section">
       <div className="discover-left-card">
-        <video src={Video} className="VideoCard" muted autoplay loop controls />
+        {/* <video src={Video} className="VideoCard" muted autoplay loop controls /> */}
+        <lottie-player
+          ref={lottiee}
+          id="firstLottie"
+          controls
+          mode="scroll"
+          src={"https://assets3.lottiefiles.com/packages/lf20_XZ3pkn.json"}
+          // src={LineAnimation}
+          style={{ width: "100%", height: "100%" }}
+        ></lottie-player>
       </div>
       <div className="discoverRight-card">
         <Chrono
