@@ -33,8 +33,8 @@ const DiscoverEvent = () => {
           id="firstLottie"
           controls
           mode="scroll"
-          src={"https://assets3.lottiefiles.com/packages/lf20_XZ3pkn.json"}
-          // src={LineAnimation}
+          // src={"https://assets3.lottiefiles.com/packages/lf20_XZ3pkn.json"}
+          src={LineAnimation}
           style={{ width: "100%", height: "100%" }}
         ></lottie-player>
       </div>

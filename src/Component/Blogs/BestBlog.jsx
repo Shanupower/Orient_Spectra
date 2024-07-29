@@ -3,7 +3,7 @@ import CircleArrow from "../Common/CircleArrow";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import OwlCarousel from "react-owl-carousel";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Skeleton from "@mui/material/Skeleton";
 
 import { useMediaQuery } from "@mui/material";
@@ -11,12 +11,10 @@ import "./blog.css";
 
 const BestBlog = ({ data }) => {
   const isMd = useMediaQuery("(max-width:986px)");
-  const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(true);
-
-  const handleNavigate = (post) => {
-    navigate("/content", { state: { data: post } });
-  };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="bestblog-conntainer section">
@@ -45,15 +43,12 @@ const BestBlog = ({ data }) => {
                   sx={{ bgcolor: "grey.500" }}
                 />
               )}
-              {/* {!isLoading && ( */}
               <img
                 src={`http://157.173.222.81:1337${item?.attributes?.Headline_image?.data?.attributes?.formats?.thumbnail?.url}`}
                 alt="Blog Image 1"
                 className="blog-image"
                 onLoad={() => setIsLoading(false)}
-                onError={() => setIsLoading(true)}
               />
-              {/* )} */}
             </div>
             <div className="bestblog-leftside-card1">
               <p>Best of the Week</p>
@@ -64,10 +59,10 @@ const BestBlog = ({ data }) => {
             </div>
             <div className="bestblog-leftside-card2">
               <p>{item?.attributes.Short_Description}</p>
-              <CircleArrow
-                className="rightCircleArrow"
-                onClick={() => handleNavigate(item)}
-              />
+
+              <Link to={`/blog-content/${item?.id}`} className="Link_route">
+                <CircleArrow className={"CircleArrow "} />
+              </Link>
             </div>
           </div>
         ))}

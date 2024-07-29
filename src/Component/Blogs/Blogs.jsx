@@ -1,9 +1,7 @@
 import React from "react";
-import Navbar from "../Common/Navbar";
 import Hero from "./Hero";
 import MoreBlog from "./MoreBlog";
 import GetTuchWithUs from "../../Landing_page/GetTuchWithUs2";
-import Footer from "../Common/Footer";
 import BestBlog from "./BestBlog";
 import axios from "axios";
 import { useEffect, useState } from "react";
@@ -13,7 +11,7 @@ const Blogs = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://157.173.222.81:1337/api/blogs?populate=*`
+          `http://157.173.222.81:1337/api/blogs/?populate=*&fields[0]=Title&fields[1]=Date&fields[2]=Short_Description `
         );
         if (response?.status === 200) {
           const sortedData = response.data.data.sort(
@@ -29,9 +27,7 @@ const Blogs = () => {
 
     fetchData();
   }, []);
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+console.log("DAATAATTA",data);
   return (
     <>
       <Hero data={data.slice(0, 3)} />

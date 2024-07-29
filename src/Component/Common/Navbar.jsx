@@ -524,11 +524,12 @@ const Navbar = ({
     setactiveNavbar(true);
     setStudyOverseas(true);
   };
-  console.log("StudyOverseas", studyOverseas);
 
   const handleMouseOut = () => {
     setactiveNavbar(false);
     setStudyOverseas(false);
+    setWhatwedoOpen(false);
+    setopenbranches(false);
   };
 
   const hanldeCloseSubheader2 = () => {
@@ -545,10 +546,6 @@ const Navbar = ({
       {isMd ? (
         <div className={`navMenuResponsive `}>
           <div className="navMenuLeft">
-            {" "}
-            {/* <Link to="#" className="Link_route logoContainer">
-              <img src={Logo} alt="" />
-            </Link> */}
             <div className="logoContainer">
               <img src={Logo} alt="" />
             </div>
@@ -644,7 +641,7 @@ const Navbar = ({
             </div>
 
             <div>
-              <div onClick={handleOpenWhatWedoCard}>
+              <div onMouseOver={handleOpenWhatWedoCard}>
                 <Link
                   className={`Link_route DailyNews ${
                     activeNavbar && "DalyText"
@@ -656,13 +653,15 @@ const Navbar = ({
               </div>
 
               <div
+                onMouseOver={handleOpenWhatWedoCard}
+                onMouseOut={handleMouseOut}
                 className={`whatwedo-dropdwon-container   ${
                   openWhatwedo && "Whatwedoshow mentorshipcard-section"
                 }`}
               >
                 <Link
                   to="/Mentorship"
-                  className="whatwedo-section1 Link_route"
+                  className="whatwedo-section2 whatwedo-section1 Link_route onhoverMentorshipCard"
                   onClick={hanldeCloseSubheader}
                 >
                   <div className="mentorship-imagecard">
@@ -676,9 +675,10 @@ const Navbar = ({
                     </p>
                   </div>
                 </Link>
+
                 <Link
                   to="/FindYourCourse"
-                  className="whatwedo-section2 Link_route"
+                  className="whatwedo-section2 Link_route onhoverMentorshipCard"
                   onClick={hanldeCloseSubheader}
                 >
                   <div className="mentorship-imagecard">
@@ -694,7 +694,7 @@ const Navbar = ({
                 </Link>
                 <Link
                   to="/Coaching"
-                  className="whatwedo-section2 Link_route"
+                  className="whatwedo-section2 Link_route onhoverMentorshipCard"
                   onClick={hanldeCloseSubheader}
                 >
                   <div className="mentorship-imagecard">
@@ -714,7 +714,7 @@ const Navbar = ({
             </div>
 
             <div>
-              <div onClick={handleOpeOurBranch}>
+              <div onMouseOver={handleOpeOurBranch}>
                 <Link
                   className={`Link_route DailyNews ${
                     activeNavbar && "DalyText"
@@ -726,6 +726,8 @@ const Navbar = ({
               </div>
 
               <div
+                onMouseOver={handleOpeOurBranch}
+                onMouseOut={handleMouseOut}
                 className={` branchssshow-card ${
                   openbranches && "branchssshow"
                 }`}

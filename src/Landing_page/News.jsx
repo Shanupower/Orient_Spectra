@@ -32,7 +32,7 @@ const News = () => {
         <h2>News & Media</h2>
         <div className="media-container">
           {NewsData?.map((item) => (
-            <div className="media-card" key={item}>
+            <div className="media-card" key={item?.id}>
               <div className="media-video">
                 <img
                   src={`http://157.173.222.81:1337${item?.attributes?.Headline_image?.data[0]?.attributes?.formats?.large?.url}`}

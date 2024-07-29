@@ -1,31 +1,42 @@
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { motion } from "framer-motion";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import "./index.css";
 import EventDargCard from "./EventSwip";
+import "./index.css";
 
 const Events = () => {
-  const [Eventdata, setEventData] = useState([]);
-  const navigate = useNavigate();
+  const [upcomingEventdata, setUpcominngEventData] = useState([]);
+  const [CompletedEventdata, setCompletedEventData] = useState([]);
+
+  const fetchUpcomingEventData = async () => {
+    try {
+      const response = await axios.get(
+        "http://157.173.222.81:1337/api/events?sort[0]=Date_of_the_event&populate=*"
+      );
+      if (response?.status === 200) {
+        setUpcominngEventData(response?.data.data);
+      }
+    } catch (error) {
+      console.log("ERROR OCCURED WHILE FETCHING:", error.message);
+    }
+  };
+  const fetchCompletedEventdata = async () => {
+    try {
+      const response = await axios.get(
+        "http://157.173.222.81:1337/api/completed-events&populate=*"
+      );
+      if (response?.status === 200) {
+        console.log("fetchCompletedEventdata", response);
+        setCompletedEventData(response?.data.data);
+      }
+    } catch (error) {
+      console.log("ERROR OCCURED WHILE FETCHING:", error.message);
+    }
+  };
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(
-          "http://157.173.222.81:1337/api/events?sort[0]=Date_of_the_event&populate=*"
-        );
-        if (response?.status === 200) {
-          console.log("status is:", response);
-          setEventData(response?.data.data);
-        }
-      } catch (error) {
-        console.log("ERROR OCCURED WHILE FETCHING:", error.message);
-      }
-    };
-
-    fetchData();
+    fetchUpcomingEventData();
+    fetchCompletedEventdata();
   }, []);
 
   return (
@@ -45,17 +56,19 @@ const Events = () => {
           <b className="upcomingText">Upcoming Events</b>
           <div className="dateEvent">
             <p>Date of the event</p>
-            <span>{Eventdata[0]?.attributes?.Date_of_the_event}</span>
+            <span>{upcomingEventdata[0]?.attributes?.Date_of_the_event}</span>
           </div>
           <div className="event_bottomContent">
-            <h4 className="explaintag">{Eventdata[0]?.attributes?.Headline}</h4>
-            <span>{Eventdata[0]?.attributes?.Shortdescription}</span>
+            <h4 className="explaintag">
+              {upcomingEventdata[0]?.attributes?.Headline}
+            </h4>
+            <span>{upcomingEventdata[0]?.attributes?.Shortdescription}</span>
           </div>
         </div>
         <div className="eventsRigtImage">
           <b className="upcomingEvents">Upcoming Events</b>
           <img
-            src={`http://157.173.222.81:1337${Eventdata[0]?.attributes?.Poster?.data?.attributes.url}`}
+            src={`http://157.173.222.81:1337${upcomingEventdata[0]?.attributes?.Poster?.data?.attributes.url}`}
             alt=""
           />
         </div>
@@ -71,7 +84,7 @@ const Events = () => {
           visible: { opacity: 1, y: 0 },
         }}
       >
-        <EventDargCard Eventdata={Eventdata} />
+        <EventDargCard Eventdata={upcomingEventdata} />
       </motion.div>
     </div>
   );

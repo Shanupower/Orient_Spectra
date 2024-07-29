@@ -343,7 +343,7 @@
 .branchssshow-card,
 .whatwedo-dropdwon-container {
   position: fixed;
-  left: 5.93% !important;
+  left: 6.13% !important;
   top: 5.22rem !important;
   width: 74% !important;
   max-width: 74% !important;
@@ -377,18 +377,7 @@
   cursor: pointer;
   margin: auto;
 }
-.whatwedo-section1 {
-  display: flex;
-  gap: 1rem;
-  width: calc(50% - 1rem);
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-  background-color: var(--text-color-blue);
-  border-radius: 10px;
-  padding: 1rem;
-  color: var(--text-color-white);
-}
+
 .mentorship-imagecard {
   width: 34%;
   height: 16vh;
@@ -401,13 +390,13 @@
   margin-bottom: 1rem;
 }
 .mentorship-text-card > p {
-  font-size: 16px;
+  font-size: 18px;
   text-wrap: wrap;
   line-height: 1.3;
 }
 .whatwedo-section2 {
   display: flex;
-  width: calc(25% - 1rem);
+  width: calc(100% / 3 - 1rem);
   justify-content: space-between;
   align-items: center;
   border-radius: 10px;
@@ -426,11 +415,11 @@
   text-align: center;
 }
 .whatwedo-section2 > .mentorship-text-card > h2 {
-  font-size: 22px;
+  font-size: 24px;
   margin-bottom: 0.6rem;
 }
 .whatwedo-section2 > .mentorship-text-card > p {
-  font-size: 14px;
+  font-size: 18px;
   display: none;
 }
 .whatwedo-section2:hover > .mentorship-text-card > p {
@@ -478,6 +467,23 @@
   color: var(--brand-color);
 }
 
+.onhoverMentorshipCard {
+  width: calc(100% / 3 - 1rem);
+  transition: width 0.3s linear;
+}
+
+.onhoverMentorshipCard:hover {
+  width: calc(50% - 1rem);
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  background-color: var(--text-color-blue);
+}
+
+.onhoverMentorshipCard:hover > .mentorship-text-card {
+  text-align: left;
+}
+
 .study_overseas {
   /* display: none; */
   opacity: 0;
@@ -518,4 +524,5 @@
   display: flex;
   gap: 1rem;
   padding-inline: 1rem;
+  justify-content: space-between;
 }
