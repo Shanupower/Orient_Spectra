@@ -1,20 +1,18 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import CircleArrow from "../Common/CircleArrow";
 import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
 import "./blog.css";
 
 const MoreBlog = ({ data }) => {
-  const navigate = useNavigate();
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 6;
   const pageCount = Math.ceil(data.length / itemsPerPage);
 
-  const handleNavigate = (post) => {
-    navigate(`/content`, { state: { data: post } });
-  };
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const handleChangePage = (event, page) => {
     setCurrentPage(page);
   };
@@ -44,10 +42,10 @@ const MoreBlog = ({ data }) => {
               <h3>{item?.attributes.Title}</h3>
               <p>{item?.attributes.Short_Description}</p>
             </div>
-            <CircleArrow
-              className={"CircleArrow"}
-              onClick={() => handleNavigate(item)}
-            />
+
+            <Link to={`/blog-content/${item?.id}`} className="Link_route">
+              <CircleArrow className={"CircleArrow "} />
+            </Link>
           </div>
         ))}
       </div>

@@ -94,7 +94,7 @@ function App() {
         <Route path="/Coaching" element={<Coaching />}></Route>
         <Route path="/Mentorship" element={<Mentorship />}></Route>
         <Route path="/blog" element={<SelectedBlog />}></Route>
-        <Route path="/content" element={<BlogBody />} />
+        <Route path="/blog-content/:id" element={<BlogBody />} />
         <Route path="/selected-blog" element={<MoreBlogContent />} />
 
         {/* Start your Journey */}

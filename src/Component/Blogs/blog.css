@@ -97,6 +97,7 @@
 .CircleArrow {
   height: 40px !important;
   width: 40px !important;
+  color: var(--text-color-darkblack) !important;
 }
 
 .moreBlog-ccontainer {
