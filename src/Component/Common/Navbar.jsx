@@ -1,11 +1,15 @@
 import Logo from "../../assets/Logo10.png";
-import Mentorship from "../../assets/About2/Mentorship.svg";
+import Mentorship from "../../assets/About2/Mentorship (1).svg";
 import Find from "../../assets/About2/Courses.svg";
 import Coaching from "../../assets/About2/Coaching.svg";
 
+import Find1 from "../../assets/About2/Finding your course.svg";
+import Mentorship1 from "../../assets/About2/Mentorship.svg";
+import Coaching1 from "../../assets/About2/Coaching (1).svg";
+
 import { Space } from "antd";
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useMediaQuery } from "@mui/material";
 import { Drawer } from "antd";
 import { Menu } from "antd";
@@ -496,9 +500,31 @@ const Navbar = ({
 }) => {
   const isMd = useMediaQuery("(max-width:986px)");
   const [open, setOpen] = useState(false);
-
+  const [mentor, setMentor] = useState(false);
+  const [find, setFind] = useState(false);
+  const [course, setCourse] = useState(false);
   const showDrawer = () => {
     setOpen(!open);
+  };
+
+  const handleMentorMouseOver = () => {
+    setMentor(true);
+  };
+  const handleMentorMouseOut = () => {
+    setMentor(false);
+  };
+
+  const handleFindMouseOver = () => {
+    setFind(true);
+  };
+  const handleFindMouseOut = () => {
+    setFind(false);
+  };
+  const handleCourseMouseOver = () => {
+    setCourse(true);
+  };
+  const handleCorseMouseOut = () => {
+    setCourse(false);
   };
 
   const onClose = () => {
@@ -663,9 +689,11 @@ const Navbar = ({
                   to="/Mentorship"
                   className="whatwedo-section2 whatwedo-section1 Link_route onhoverMentorshipCard"
                   onClick={hanldeCloseSubheader}
+                  onMouseOver={handleMentorMouseOver}
+                  onMouseOut={handleMentorMouseOut}
                 >
                   <div className="mentorship-imagecard">
-                    <img src={Mentorship} alt="" />
+                    <img src={mentor ? Mentorship1 : Mentorship} alt="" />
                   </div>
                   <div className="mentorship-text-card">
                     <h2>Mentorship</h2>
@@ -680,9 +708,11 @@ const Navbar = ({
                   to="/FindYourCourse"
                   className="whatwedo-section2 Link_route onhoverMentorshipCard"
                   onClick={hanldeCloseSubheader}
+                  onMouseOver={handleFindMouseOver}
+                  onMouseOut={handleFindMouseOut}
                 >
                   <div className="mentorship-imagecard">
-                    <img src={Find} alt="" />
+                    <img src={find ? Find1 : Find} alt="" />
                   </div>
                   <div className="mentorship-text-card">
                     <h2>Finding Your Course</h2>
@@ -696,9 +726,11 @@ const Navbar = ({
                   to="/Coaching"
                   className="whatwedo-section2 Link_route onhoverMentorshipCard"
                   onClick={hanldeCloseSubheader}
+                  onMouseOver={handleCourseMouseOver}
+                  onMouseOut={handleCorseMouseOut}
                 >
                   <div className="mentorship-imagecard">
-                    <img src={Coaching} alt="" />
+                    <img src={course ? Coaching1 : Coaching} alt="" />
                   </div>
                   <div className="mentorship-text-card">
                     <h2>Coaching</h2>

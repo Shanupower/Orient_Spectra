@@ -32,6 +32,7 @@ body {
   --text-color-darkblack: #1e1e1e;
   --text-color-blue: #1f7aff;
   --bg-color: #e7e7e7;
+
 }
 
 img {
@@ -60,4 +61,3 @@ html {
 .section2 {
   padding: 1rem 6%;
 }
-

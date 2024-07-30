@@ -4,7 +4,6 @@
 }
 
 .event-hero-section {
-  background-color: var(--bg-color);
   width: 100%;
   height: 96vh;
   border-radius: 20px;
@@ -12,16 +11,23 @@
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+ 
 }
 
 .event-hero-leftcard {
   display: flex;
   gap: 2rem;
   flex-wrap: wrap;
+  
 }
 
 .Experience-leftcard {
   width: calc(50% - 1rem);
+  background-color: #ffffff75;
+  padding: 1rem;
 }
 .Experience-leftcard > h1 {
   font-size: 50px;
@@ -32,15 +38,19 @@
 }
 .Experience-leftcard > p {
   width: 60%;
-  color: var(--text-color-darkgray);
+  color: var(--text-color-darkblack);
   line-height: 1.2;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .Experience-rightcard {
-  width: calc(50% - 1rem);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  height: 100%;
 }
 .eventLandscapeIcon {
   font-size: 60px !important;
@@ -265,9 +275,6 @@
     font-size: 40px;
   }
   .event-hero-section {
-  
     height: 90vh;
- 
   }
-  
 }

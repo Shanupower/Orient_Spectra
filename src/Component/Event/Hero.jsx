@@ -21,18 +21,16 @@ const Hero = ({ eventData }) => {
   return (
     <div className="Event-hero-container section2">
       <div className="event-hero-section">
+        <div className="Experience-rightcard">
+          <img
+            src={`http://157.173.222.81:1337${eventData[EventId]?.attributes?.Poster?.data?.attributes.url}`}
+            alt=""
+          />
+        </div>
         <div className="event-hero-leftcard">
           <div className="Experience-leftcard">
             <h1>{eventData[EventId]?.attributes?.Headline}</h1>
             <p>{eventData[EventId]?.attributes?.Shortdescription}</p>
-          </div>
-          <div className="Experience-rightcard">
-            {/* <LandscapeIcon className="eventLandscapeIcon" /> */}
-
-            <img
-              src={`http://157.173.222.81:1337${eventData[EventId]?.attributes?.Poster?.data?.attributes.url}`}
-              alt=""
-            />
           </div>
         </div>
         <div className="bookPass-container">
