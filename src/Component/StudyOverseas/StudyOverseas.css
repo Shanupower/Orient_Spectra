@@ -4,7 +4,6 @@
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
-
 }
 
 .study-overseas-container > p {
@@ -60,7 +59,9 @@
   line-height: 1.2;
   margin-top: 2rem;
 }
-
+.gZawxH {
+  height: 18rem !important;
+}
 .eBWRJw:not(.using-icon).active {
   background-color: var(--text-color-blue) !important;
   border-color: var(--text-color-blue) !important;

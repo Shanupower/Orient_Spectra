@@ -7,11 +7,13 @@ import "./index.css";
 const Events = () => {
   const [upcomingEventdata, setUpcominngEventData] = useState([]);
   const [CompletedEventdata, setCompletedEventData] = useState([]);
+  const formattedDate = new Date();
+  const currentDate = formattedDate.toISOString().split("T")[0];
 
   const fetchUpcomingEventData = async () => {
     try {
       const response = await axios.get(
-        "http://157.173.222.81:1337/api/events?sort[0]=Date_of_the_event&populate=*"
+        `http://157.173.222.81:1337/api/events?filters[Date_of_the_event][$gt]=${currentDate}?sort[0]=Date_of_the_event&populate=*`
       );
       if (response?.status === 200) {
         setUpcominngEventData(response?.data.data);
@@ -23,10 +25,10 @@ const Events = () => {
   const fetchCompletedEventdata = async () => {
     try {
       const response = await axios.get(
-        "http://157.173.222.81:1337/api/completed-events&populate=*"
+        `http://157.173.222.81:1337/api/events?filters[Date_of_the_event][$lt]=${currentDate}?sort[0]=Date_of_the_event&populate=*`
       );
       if (response?.status === 200) {
-        console.log("fetchCompletedEventdata", response);
+      
         setCompletedEventData(response?.data.data);
       }
     } catch (error) {
@@ -84,7 +86,7 @@ const Events = () => {
           visible: { opacity: 1, y: 0 },
         }}
       >
-        <EventDargCard Eventdata={upcomingEventdata} />
+        <EventDargCard Eventdata={CompletedEventdata} />
       </motion.div>
     </div>
   );

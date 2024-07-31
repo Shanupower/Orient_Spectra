@@ -49,9 +49,6 @@ const LandingPage = () => {
     fetchEventData();
   }, []);
 
-  console.log("blog", blog);
-  console.log("event", event);
-
   return (
     <>
       <Hero blog={blog} event={event} />
