@@ -21,7 +21,7 @@ const TextData = [
       text: "Canada",
       lat: 30,
       lng: 20,
-      alt: 0.14,
+      alt: 0.22,
       color: "#1f7aff",
     },
     { lat: -10, lng: -200, alt: 0.16, text: "30+", color: "rgb(285 120 0)" },
@@ -31,100 +31,100 @@ const TextData = [
       text: "United Kingdom",
       lat: 30,
       lng: 20,
-      alt: 0.14,
+      alt: 0.34,
       color: "#1f7aff",
     },
-    { lat: -30, lng: -200, alt: 0.16, text: "50+", color: "rgb(285 120 0)" },
+    { lat: -10, lng: -200, alt: 0.16, text: "50+", color: "rgb(285 120 0)" },
   ],
   [
     {
       text: "Australia",
       lat: 30,
       lng: 20,
-      alt: 0.14,
+      alt: 0.22,
       color: "#1f7aff",
     },
-    { lat: -30, lng: -200, alt: 0.16, text: "20+", color: "rgb(285 120 0)" },
+    { lat: -10, lng: -200, alt: 0.16, text: "20+", color: "rgb(285 120 0)" },
   ],
   [
     {
       text: "France",
       lat: 30,
       lng: 20,
-      alt: 0.14,
+      alt: 0.2,
       color: "#1f7aff",
     },
-    { lat: -30, lng: -200, alt: 0.16, text: "20+", color: "rgb(285 120 0)" },
+    { lat: -10, lng: -200, alt: 0.16, text: "20+", color: "rgb(285 120 0)" },
   ],
   [
     {
       text: "Germany",
       lat: 30,
       lng: 20,
-      alt: 0.14,
+      alt: 0.22,
       color: "#1f7aff",
     },
-    { lat: -30, lng: -200, alt: 0.16, text: "100+", color: "rgb(285 120 0)" },
+    { lat: -10, lng: -200, alt: 0.16, text: "100+", color: "rgb(285 120 0)" },
   ],
   [
     {
       text: "Switzerland",
       lat: 30,
       lng: 20,
-      alt: 0.14,
+      alt: 0.25,
       color: "#1f7aff",
     },
-    { lat: -30, lng: -200, alt: 0.16, text: "15+", color: "rgb(285 120 0)" },
+    { lat: -10, lng: -200, alt: 0.16, text: "15+", color: "rgb(285 120 0)" },
   ],
   [
     {
       text: "Singapore",
       lat: 30,
       lng: 20,
-      alt: 0.14,
+      alt: 0.23,
       color: "#1f7aff",
     },
-    { lat: -30, lng: -200, alt: 0.16, text: "30+", color: "rgb(285 120 0)" },
+    { lat: -10, lng: -200, alt: 0.16, text: "30+", color: "rgb(285 120 0)" },
   ],
   [
     {
       text: "Dubai",
       lat: 30,
       lng: 20,
-      alt: 0.14,
+      alt: 0.2,
       color: "#1f7aff",
     },
-    { lat: -30, lng: -200, alt: 0.16, text: "10+", color: "rgb(285 120 0)" },
+    { lat: -10, lng: -200, alt: 0.16, text: "10+", color: "rgb(285 120 0)" },
   ],
   [
     {
       text: "Sweden",
       lat: 30,
       lng: 20,
-      alt: 0.14,
+      alt: 0.2,
       color: "#1f7aff",
     },
-    { lat: -30, lng: -200, alt: 0.16, text: "10+", color: "rgb(285 120 0)" },
+    { lat: -10, lng: -200, alt: 0.16, text: "10+", color: "rgb(285 120 0)" },
   ],
   [
     {
       text: "Portland",
       lat: 30,
       lng: 20,
-      alt: 0.14,
+      alt: 0.24,
       color: "#1f7aff",
     },
-    { lat: -30, lng: -200, alt: 0.16, text: "10+", color: "rgb(285 120 0)" },
+    { lat: -10, lng: -200, alt: 0.16, text: "10+", color: "rgb(285 120 0)" },
   ],
   [
     {
       text: "Malta",
       lat: 30,
       lng: 20,
-      alt: 0.14,
+      alt: 0.2,
       color: "#1f7aff",
     },
-    { lat: -30, lng: -200, alt: 0.16, text: "25+", color: "rgb(285 120 0)" },
+    { lat: -10, lng: -200, alt: 0.16, text: "25+", color: "rgb(285 120 0)" },
   ],
 ];
 
@@ -191,7 +191,6 @@ const countryData = [
   },
 ];
 
-
 const Counselors = () => {
   const isMd = useMediaQuery("(max-width:986px)");
   const globeEl = useRef();
@@ -233,7 +232,7 @@ const Counselors = () => {
   const createTextCard = (text, color) => {
     const canvas = document.createElement("canvas");
     const context = canvas.getContext("2d");
-    const padding = 20;
+    const padding = 80;
     const fontSize = 100;
     context.font = `${fontSize}px Arial`;
     const textMetrics = context.measureText(text);
@@ -243,11 +242,11 @@ const Counselors = () => {
     const height = textHeight + padding * 2 + 20;
     canvas.width = width;
     canvas.height = height;
-    context.shadowColor = "rgba(0, 0, 0, 0.3)";
-    context.shadowBlur = 10;
-    context.shadowOffsetX = 5;
-    context.shadowOffsetY = 5;
-    const radius = 20;
+    // context.shadowColor = "rgba(0, 0, 0, 0.3)";
+    // context.shadowBlur = 10;
+    // context.shadowOffsetX = 5;
+    // context.shadowOffsetY = 5;
+    const radius = 80;
     const tailWidth = 0;
     const tailHeight = 0;
     context.fillStyle = color;
@@ -296,7 +295,7 @@ const Counselors = () => {
   const handleNext = () => {
     const controls = globeEl.current.controls();
     controls.autoRotateSpeed = targetRotationSpeed;
-    
+
     setCountryNum((prev) => {
       const newNum = (prev + 1) % countryData.length;
       setRotationSpeed(targetRotationSpeed);
@@ -314,7 +313,7 @@ const Counselors = () => {
   const handlePrev = () => {
     const controls = globeEl.current.controls();
     controls.autoRotateSpeed = targetRotationSpeed;
-    
+
     setCountryNum((prev) => {
       const newNum = (prev - 1 + countryData.length) % countryData.length;
       setRotationSpeed(targetRotationSpeed);
@@ -365,7 +364,9 @@ const Counselors = () => {
         <div className="progress-bar">
           <div className="progress">
             <p
-              className={`progressLine ${rotateGlobe && "progressLineAnimation"}`}
+              className={`progressLine ${
+                rotateGlobe && "progressLineAnimation"
+              }`}
             >
               |
             </p>
@@ -390,7 +391,7 @@ const Counselors = () => {
           labelLat={(d) => d.lat}
           labelLng={(d) => d.lon}
           labelText={(d) => d.country}
-          labelSize={1.2}
+          labelSize={2.6}
           labelColor={() => "rgba(255, 165, 0, 0.75)"}
           labelDotRadius={0.5}
           labelResolution={2}
@@ -401,10 +402,10 @@ const Counselors = () => {
           arcEndLat={(d) => d.endLat}
           arcEndLng={(d) => d.endLng}
           arcColor={(d) => d.color}
-          arcAltitude={0.2}
+          arcAltitude={0.4}
           arcStroke={0.5}
           arcDashLength={0.3}
-          arcDashGap={0.01}
+          arcDashGap={0.1}
           arcDashAnimateTime={30000}
           arcsTransitionDuration={1000}
           backgroundColor="#fff"
