@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Globe with Text Cards</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #globeViz {
+            width: 100%;
+            height: 80vh;
+             pointer-events:none
+        }
+
+        .button-container {
+            position: fixed;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+        }
+
+        button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+    <script src="//unpkg.com/globe.gl"></script>
+</head>
+
+<body>
+    <div class="button-container">
+        <button id="button1">Change Text to 2 and 1</button>
+        <button id="button2">Change Text to 3 and 4</button>
+    </div>
+    <div id="globeViz"></div>
+
+    <script type="module">
+        import * as THREE from '//unpkg.com/three/build/three.module.js';
+
+            let textData = 
+            [
+                [
+               { lat: 30, lng: 20, alt: 0.5, text: "Hello World!", color: '#1f7aff' },
+                { lat: -30, lng: -200, alt: 0.5, text: "Three.js Text Card", color: 'rgb(285 120 0)' }
+                 ]
+    
+                  [
+                    { lat: 30, lng: 20, alt: 0.5, text: "Hello World!", color: '#1f7aff' },
+                    { lat: -30, lng: -200, alt: 0.5, text: "Three.js Text Card", color: 'rgb(285 120 0)' }
+                 ]
+                ]            ;
+            
+        let rotationSpeed = 0.15; // Initial rotation speed
+        let targetRotationSpeed = 0.15; // Target rotation speed
+
+   const createTextCard = (text, color) => {
+        const canvas = document.createElement('canvas');
+        const context = canvas.getContext('2d');
+        const padding = 20; // Padding around the text
+        const fontSize = 100; // Font size
+        context.font = `${fontSize}px Arial`;
+
+        // Calculate text width and canvas dimensions
+        const textMetrics = context.measureText(text);
+        const textWidth = textMetrics.width;
+        const textHeight = fontSize; // Approximate height of the text
+        const width = textWidth + padding * 2;
+        const height = textHeight + padding * 2 + 20; // Additional space for the tail
+        canvas.width = width;
+        canvas.height = height;
+
+        // Set shadow properties for 3D depth
+        context.shadowColor = 'rgba(0, 0, 0, 0.3)';
+        context.shadowBlur = 10;
+        context.shadowOffsetX = 5;
+        context.shadowOffsetY = 5;
+
+        // Draw the background with rounded corners and a tail at the corner
+        const radius = 20; // Radius of the rounded corners
+        const tailWidth = 0;
+        const tailHeight = 0;
+
+        context.fillStyle = color; // Background color
+        context.beginPath();
+        context.moveTo(radius, 0);
+        context.lineTo(width - radius, 0);
+        context.quadraticCurveTo(width, 0, width, radius);
+        context.lineTo(width, height - radius - tailHeight);
+        context.quadraticCurveTo(width, height - tailHeight, width - radius, height - tailHeight);
+        context.lineTo(tailWidth + radius, height - tailHeight);
+        context.quadraticCurveTo(tailWidth, height - tailHeight, tailWidth, height - tailHeight + radius);
+        context.lineTo(tailWidth, height);
+        context.lineTo(tailWidth / 2, height - tailHeight);
+        context.lineTo(radius, height - tailHeight);
+        context.quadraticCurveTo(0, height - tailHeight, 0, height - radius - tailHeight);
+        context.lineTo(0, radius);
+        context.quadraticCurveTo(0, 0, radius, 0);
+        context.closePath();
+        context.fill();
+
+        // Reset shadow properties for text
+        context.shadowColor = 'transparent';
+
+        // Draw the text
+        context.font = `${fontSize}px Arial`; // Font size and type
+        context.fillStyle = 'white'; // Text color
+        context.fillText(text, padding, height / 2 + textHeight / 2 - 10); // Centered text position
+
+        const texture = new THREE.CanvasTexture(canvas);
+        const material = new THREE.SpriteMaterial({ map: texture });
+        const sprite = new THREE.Sprite(material);
+
+        // Scale sprite relative to the canvas size
+        sprite.scale.set(width / 10, height / 10, 1);
+
+        return sprite;
+    };
+
+
+
+        const world = Globe()
+            (document.getElementById('globeViz'))
+            .globeImageUrl('//unpkg.com/three-globe/example/img/earth-blue-marble.jpg')
+            .bumpImageUrl('//unpkg.com/three-globe/example/img/earth-topology.png')
+            .pointOfView({ altitude: 3.5 })
+            .customLayerData(textData)
+             .enablePointerInteraction(false)
+            .customThreeObject(d => createTextCard(d.text, d.color))
+            .customThreeObjectUpdate((obj, d) => {
+                const coords = world.getCoords(d.lat, d.lng, d.alt);
+                Object.assign(obj.position, coords);
+
+            });
+           
+        // Animate the text cards to revolve around the equator
+        (function moveCards() {
+            rotationSpeed += (targetRotationSpeed - rotationSpeed) * 0.1;
+
+            textData.forEach(d => {
+                d.lng += rotationSpeed; // Use the current rotation speed
+                if (d.lng >= 180) d.lng -= 360; // Reset longitude to keep it within bounds
+            });
+            world.customLayerData(textData); // Update the layer data
+            requestAnimationFrame(moveCards);
+        })();
+
+        // Function to update text data with animation
+        const updateTextData = (newData) => {
+            const currentData = [...textData]; // Store current data for animation
+            let animationDuration = 1000; // Duration of the animation in milliseconds
+            let startTime = null;
+
+            const animate = (timestamp) => {
+                if (!startTime) startTime = timestamp;
+                const elapsed = timestamp - startTime;
+
+                // Calculate the interpolation factor (0 to 1)
+                const t = Math.min(elapsed / animationDuration, 1);
+
+                // Update positions of the cards based on the interpolation
+                textData.forEach((d, index) => {
+                    d.lng = currentData[index].lng + (5);
+                    d.lat = currentData[index].lat + (newData[index].lat - currentData[index].lat) * t;
+                });
+
+                world.customLayerData(textData); // Update the layer data
+
+                if (t < 1) {
+                    requestAnimationFrame(animate);
+                } else {
+                    // Once animation is done, update the text
+                    textData.forEach((d, index) => {
+                        d.text = newData[index].text; // Update the text
+                        d.color = newData[index].color; // Update the color
+                    });
+                    // Recreate the text cards to render updated text and color
+                    world.customLayerData(textData.map(d => ({ ...d, text: d.text, color: d.color })));
+                }
+            };
+
+            requestAnimationFrame(animate);
+        };
+
+        // Change text data when button 1 is clicked
+        document.getElementById('button1').addEventListener('click', () => {
+            const newData = [
+                { lat: 30, lng: 20, alt: 0.5, text: "2", color: 'green' }, // Green color for the first card
+                { lat: -30, lng: 20, alt: 0.5, text: "1", color: 'orange' } // Orange color for the second card
+            ];
+            updateTextData(newData);
+            targetRotationSpeed = 0.3; // Set the target rotation speed
+        });
+
+        // Change text data when button 2 is clicked
+        document.getElementById('button2').addEventListener('click', () => {
+            const newData = [
+                { lat: 30, lng: 20, alt: 0.5, text: "", color: 'purple' }, // Purple color for the first card
+                { lat: -30, lng: -200, alt: 0.5, text: "4", color: 'cyan' } // Cyan color for the second card
+            ];
+            updateTextData(newData);
+            targetRotationSpeed = 0.3; // Set the target rotation speed
+        });
+    </script>
+</body>
+
+</html>

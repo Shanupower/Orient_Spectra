@@ -21,7 +21,7 @@ const TextData = [
       text: "Canada",
       lat: 30,
       lng: 20,
-      alt: 0.14,
+      alt: 0.22,
       color: "#1f7aff",
     },
     { lat: -10, lng: -200, alt: 0.16, text: "30+", color: "rgb(285 120 0)" },
@@ -31,100 +31,100 @@ const TextData = [
       text: "United Kingdom",
       lat: 30,
       lng: 20,
-      alt: 0.14,
+      alt: 0.34,
       color: "#1f7aff",
     },
-    { lat: -30, lng: -200, alt: 0.16, text: "50+", color: "rgb(285 120 0)" },
+    { lat: -10, lng: -200, alt: 0.16, text: "50+", color: "rgb(285 120 0)" },
   ],
   [
     {
       text: "Australia",
       lat: 30,
       lng: 20,
-      alt: 0.14,
+      alt: 0.22,
       color: "#1f7aff",
     },
-    { lat: -30, lng: -200, alt: 0.16, text: "20+", color: "rgb(285 120 0)" },
+    { lat: -10, lng: -200, alt: 0.16, text: "20+", color: "rgb(285 120 0)" },
   ],
   [
     {
       text: "France",
       lat: 30,
       lng: 20,
-      alt: 0.14,
+      alt: 0.2,
       color: "#1f7aff",
     },
-    { lat: -30, lng: -200, alt: 0.16, text: "20+", color: "rgb(285 120 0)" },
+    { lat: -10, lng: -200, alt: 0.16, text: "20+", color: "rgb(285 120 0)" },
   ],
   [
     {
       text: "Germany",
       lat: 30,
       lng: 20,
-      alt: 0.14,
+      alt: 0.22,
       color: "#1f7aff",
     },
-    { lat: -30, lng: -200, alt: 0.16, text: "100+", color: "rgb(285 120 0)" },
+    { lat: -10, lng: -200, alt: 0.16, text: "100+", color: "rgb(285 120 0)" },
   ],
   [
     {
       text: "Switzerland",
       lat: 30,
       lng: 20,
-      alt: 0.14,
+      alt: 0.25,
       color: "#1f7aff",
     },
-    { lat: -30, lng: -200, alt: 0.16, text: "15+", color: "rgb(285 120 0)" },
+    { lat: -10, lng: -200, alt: 0.16, text: "15+", color: "rgb(285 120 0)" },
   ],
   [
     {
       text: "Singapore",
       lat: 30,
       lng: 20,
-      alt: 0.14,
+      alt: 0.23,
       color: "#1f7aff",
     },
-    { lat: -30, lng: -200, alt: 0.16, text: "30+", color: "rgb(285 120 0)" },
+    { lat: -10, lng: -200, alt: 0.16, text: "30+", color: "rgb(285 120 0)" },
   ],
   [
     {
       text: "Dubai",
       lat: 30,
       lng: 20,
-      alt: 0.14,
+      alt: 0.2,
       color: "#1f7aff",
     },
-    { lat: -30, lng: -200, alt: 0.16, text: "10+", color: "rgb(285 120 0)" },
+    { lat: -10, lng: -200, alt: 0.16, text: "10+", color: "rgb(285 120 0)" },
   ],
   [
     {
       text: "Sweden",
       lat: 30,
       lng: 20,
-      alt: 0.14,
+      alt: 0.2,
       color: "#1f7aff",
     },
-    { lat: -30, lng: -200, alt: 0.16, text: "10+", color: "rgb(285 120 0)" },
+    { lat: -10, lng: -200, alt: 0.16, text: "10+", color: "rgb(285 120 0)" },
   ],
   [
     {
       text: "Portland",
       lat: 30,
       lng: 20,
-      alt: 0.14,
+      alt: 0.24,
       color: "#1f7aff",
     },
-    { lat: -30, lng: -200, alt: 0.16, text: "10+", color: "rgb(285 120 0)" },
+    { lat: -10, lng: -200, alt: 0.16, text: "10+", color: "rgb(285 120 0)" },
   ],
   [
     {
       text: "Malta",
       lat: 30,
       lng: 20,
-      alt: 0.14,
+      alt: 0.2,
       color: "#1f7aff",
     },
-    { lat: -30, lng: -200, alt: 0.16, text: "25+", color: "rgb(285 120 0)" },
+    { lat: -10, lng: -200, alt: 0.16, text: "25+", color: "rgb(285 120 0)" },
   ],
 ];
 
@@ -193,12 +193,11 @@ const countryData = [
 
 const Counselors = () => {
   const isMd = useMediaQuery("(max-width:986px)");
-
   const globeEl = useRef();
   const [selectedMarker, setSelectedMarker] = useState(0);
   const [countryNum, setCountryNum] = useState(0);
-  const [rotationSpeed, setRotationSpeed] = useState(2);
-  const targetRotationSpeed = 0.15;
+  let [rotationSpeed, setRotationSpeed] = useState(2);
+  const targetRotationSpeed = 30;
   const [arcsData, setArcsData] = useState([]);
   const [rotateGlobe, setRotateGlobe] = useState(false);
   const [textData, setTextData] = useState(TextData[countryNum]);
@@ -207,7 +206,6 @@ const Counselors = () => {
     const controls = globeEl.current.controls();
     controls.autoRotate = true;
     controls.autoRotateSpeed = rotationSpeed;
-
     controls.enableZoom = false;
     controls.enablePan = false;
     controls.enableDamping = true;
@@ -217,8 +215,7 @@ const Counselors = () => {
   const handleButtonClick = (index) => {
     const marker = countryData[index];
     setSelectedMarker(index);
-
-    globeEl.current.pointOfView({ lat: marker.lat, lng: marker.lon }, 4000); // Remove altitude to prevent zoom
+    globeEl.current.pointOfView({ lat: marker.lat, lng: marker.lon }, 4000);
 
     const newArcsData = countryData
       .filter((_, i) => i !== index)
@@ -235,31 +232,24 @@ const Counselors = () => {
   const createTextCard = (text, color) => {
     const canvas = document.createElement("canvas");
     const context = canvas.getContext("2d");
-    const padding = 20; // Padding around the text
+    const padding = 80;
     const fontSize = 100;
     context.font = `${fontSize}px Arial`;
-
-    // Calculate text width and canvas dimensions
     const textMetrics = context.measureText(text);
     const textWidth = textMetrics.width;
-    const textHeight = fontSize; // Approximate height of the text
+    const textHeight = fontSize;
     const width = textWidth + padding * 2;
-    const height = textHeight + padding * 2 + 20; // Additional space for the tail
+    const height = textHeight + padding * 2 + 20;
     canvas.width = width;
     canvas.height = height;
-
-    // Set shadow properties for 3D depth
-    context.shadowColor = "rgba(0, 0, 0, 0.3)";
-    context.shadowBlur = 10;
-    context.shadowOffsetX = 5;
-    context.shadowOffsetY = 5;
-
-    // Draw the background with rounded corners and a tail at the corner
-    const radius = 20; // Radius of the rounded corners
+    // context.shadowColor = "rgba(0, 0, 0, 0.3)";
+    // context.shadowBlur = 10;
+    // context.shadowOffsetX = 5;
+    // context.shadowOffsetY = 5;
+    const radius = 80;
     const tailWidth = 0;
     const tailHeight = 0;
-
-    context.fillStyle = color; // Background color
+    context.fillStyle = color;
     context.beginPath();
     context.moveTo(radius, 0);
     context.lineTo(width - radius, 0);
@@ -291,102 +281,81 @@ const Counselors = () => {
     context.quadraticCurveTo(0, 0, radius, 0);
     context.closePath();
     context.fill();
-
-    // Reset shadow properties for text
     context.shadowColor = "transparent";
-
-    // Draw the text
     context.font = `${fontSize}px Arial`;
-
-    context.fillStyle = "white"; // Text color
-    context.fillText(text, padding, height / 2 + textHeight / 2 - 10); // Centered text position
-
+    context.fillStyle = "white";
+    context.fillText(text, padding, height / 2 + textHeight / 2 - 10);
     const texture = new THREE.CanvasTexture(canvas);
     const material = new THREE.SpriteMaterial({ map: texture });
     const sprite = new THREE.Sprite(material);
-
-    // Scale sprite relative to the canvas size
     sprite.scale.set(width / 10, height / 10, 1);
-
     return sprite;
   };
 
   const handleNext = () => {
+    const controls = globeEl.current.controls();
+    controls.autoRotateSpeed = targetRotationSpeed;
+
     setCountryNum((prev) => {
       const newNum = (prev + 1) % countryData.length;
-      setTextData(TextData[newNum]);
-
-      setRotationSpeed(6); // Increase rotation speed
-      setTimeout(() => setRotationSpeed(2), 1500); // Increase rotation speed
+      setRotationSpeed(targetRotationSpeed);
+      setTimeout(() => setRotationSpeed(8), 1500);
       setRotateGlobe(true);
       updateTextData(TextData[newNum]);
       setTimeout(() => {
         setRotateGlobe(false);
-      }, 10000);
-
+        controls.autoRotateSpeed = 8;
+      }, 1000); // Match the duration of the revolution animation
       return newNum;
     });
   };
 
   const handlePrev = () => {
+    const controls = globeEl.current.controls();
+    controls.autoRotateSpeed = targetRotationSpeed;
+
     setCountryNum((prev) => {
       const newNum = (prev - 1 + countryData.length) % countryData.length;
-      setTextData(TextData[newNum]);
-      // targetRotationSpeed = 0.3
-      setRotationSpeed(0.3); // Increase rotation speed
-      setTimeout(() => setRotationSpeed(0.15), 1500); // Reset speed after 2 seconds
+      setRotationSpeed(targetRotationSpeed);
+      setTimeout(() => setRotationSpeed(8), 1500);
       setRotateGlobe(true);
       updateTextData(TextData[newNum]);
       setTimeout(() => {
         setRotateGlobe(false);
-      }, 10000);
+        controls.autoRotateSpeed = 8;
+      }, 1000); // Match the duration of the revolution animation
       return newNum;
     });
   };
 
   const updateTextData = (newData) => {
-    const currentData = [...textData]; // Store current data for animation
-    let animationDuration = 1000; // Duration of the animation in milliseconds
+    const currentData = textData.map((d) => ({ ...d }));
     let startTime = null;
-    let requestId;
+    const animationDuration = 800; // Duration of the revolution animation
     const animate = (timestamp) => {
       if (!startTime) startTime = timestamp;
       const elapsed = timestamp - startTime;
-      // Calculate the interpolation factor (0 to 1)
       const t = Math.min(elapsed / animationDuration, 1);
 
-      // Update positions of the cards based on the interpolation
-      const updatedData = currentData.map((d, index) => ({
-        ...d,
-        lat: d.lat + (newData[index].lat - d.lat) * t,
-        lng: d.lng + (newData[index].lng - d.lng) * t,
-      }));
+      const updatedData = currentData.map((d, index) => {
+        const newLng = d.lng + 360 * t; // Make a complete revolution
+        return {
+          ...d,
+          lat: d.lat + (newData[index].lat - d.lat) * t,
+          lng: newLng > 180 ? newLng - 360 : newLng,
+        };
+      });
 
       setTextData(updatedData);
-
       if (t < 1) {
-        requestId = requestAnimationFrame(animate);
+        requestAnimationFrame(animate);
       } else {
         setTextData(newData);
       }
     };
-
-    requestId = requestAnimationFrame(animate);
+    requestAnimationFrame(animate);
   };
 
-  useEffect(() => {
-    const moveCards = () => {
-      setTextData((prevData) =>
-        prevData.map((d) => ({
-          ...d,
-          lng: (d.lng + rotationSpeed) % 360,
-        }))
-      );
-      requestAnimationFrame(moveCards);
-    };
-
-    moveCards();
-  }, [rotationSpeed]);
   return (
     <div className="Counselors_container section">
       <div className="counselor_left_side">
@@ -395,7 +364,7 @@ const Counselors = () => {
         <div className="progress-bar">
           <div className="progress">
             <p
-              className={`progressLine  ${
+              className={`progressLine ${
                 rotateGlobe && "progressLineAnimation"
               }`}
             >
@@ -407,12 +376,9 @@ const Counselors = () => {
           <button className="GlowbLeftIccon" onClick={handlePrev}>
             <ArrowForwardIcon />
           </button>
-
           <button className="GlobRightArrow" onClick={handleNext}>
             <ArrowForwardIcon />
           </button>
-
-          {/* <p>{countryData[selectedMarker].country}</p> */}
         </div>
       </div>
       <div className="globe-container">
@@ -425,21 +391,21 @@ const Counselors = () => {
           labelLat={(d) => d.lat}
           labelLng={(d) => d.lon}
           labelText={(d) => d.country}
-          labelSize={1.2}
+          labelSize={2.6}
           labelColor={() => "rgba(255, 165, 0, 0.75)"}
           labelDotRadius={0.5}
           labelResolution={2}
           arcsData={arcsData}
-          arcLabel={() => ""} // Disable labels on hover
+          arcLabel={() => ""}
           arcStartLat={(d) => d.startLat}
           arcStartLng={(d) => d.startLng}
           arcEndLat={(d) => d.endLat}
           arcEndLng={(d) => d.endLng}
           arcColor={(d) => d.color}
-          arcAltitude={0.2}
+          arcAltitude={0.4}
           arcStroke={0.5}
           arcDashLength={0.3}
-          arcDashGap={0.01}
+          arcDashGap={0.1}
           arcDashAnimateTime={30000}
           arcsTransitionDuration={1000}
           backgroundColor="#fff"
@@ -451,12 +417,6 @@ const Counselors = () => {
             Object.assign(obj.position, coords);
           }}
         />
-        {/* <div className="text-cards">
-          <div className="text-card text-card1">{messages.messages1}</div>
-          <div className="text-card text-card2">
-            {messages.messages2} Universities
-          </div>
-        </div> */}
       </div>
     </div>
   );
