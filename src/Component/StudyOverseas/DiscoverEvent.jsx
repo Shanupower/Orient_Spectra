@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from "react";
 import { create } from "@lottiefiles/lottie-interactivity";
 import lottie from "lottie-web";
 
-import LineAnimation from "../../assets/Country/Lottie.json";
+import LineAnimation from "../../assets/Country/LineAnim_StartYourJourney_.json";
 import "./StudyOverseas.css";
 const DiscoverEvent = () => {
   const lottieContainer = useRef(null);
@@ -13,7 +13,7 @@ const DiscoverEvent = () => {
       const lottieInstance = lottie.loadAnimation({
         container: lottieContainer.current,
         renderer: "svg",
-        loop: true,
+        loop: false, // Disable looping
         autoplay: false,
         animationData: LineAnimation,
       });
@@ -25,12 +25,21 @@ const DiscoverEvent = () => {
           {
             visibility: [0, 1],
             type: "seek",
-            frames: [0, 260],
+            frames: [0, 320],
           },
         ],
       });
 
-      return () => lottieInstance.destroy();
+      lottieInstance.addEventListener("complete", () => {
+        lottieInstance.pause();
+      });
+
+      return () => {
+        lottieInstance.removeEventListener("complete", () => {
+          lottieInstance.pause();
+        });
+        lottieInstance.destroy();
+      };
     }
   }, []);
   return (

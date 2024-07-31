@@ -2,117 +2,222 @@ import React, { useRef, useState, useEffect } from "react";
 import Globe from "react-globe.gl";
 import GlobeImge1 from "../assets/images/earth-night.jpg";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-
+import * as THREE from "three";
 import "./index.css";
+import { useMediaQuery } from "@mui/material";
+const TextData = [
+  [
+    {
+      text: "USA",
+      lat: 30,
+      lng: 20,
+      alt: 0.14,
+      color: "#1f7aff",
+    },
+    { lat: -10, lng: -200, alt: 0.16, text: "150+", color: "rgb(285 120 0)" },
+  ],
+  [
+    {
+      text: "Canada",
+      lat: 30,
+      lng: 20,
+      alt: 0.14,
+      color: "#1f7aff",
+    },
+    { lat: -10, lng: -200, alt: 0.16, text: "30+", color: "rgb(285 120 0)" },
+  ],
+  [
+    {
+      text: "United Kingdom",
+      lat: 30,
+      lng: 20,
+      alt: 0.14,
+      color: "#1f7aff",
+    },
+    { lat: -30, lng: -200, alt: 0.16, text: "50+", color: "rgb(285 120 0)" },
+  ],
+  [
+    {
+      text: "Australia",
+      lat: 30,
+      lng: 20,
+      alt: 0.14,
+      color: "#1f7aff",
+    },
+    { lat: -30, lng: -200, alt: 0.16, text: "20+", color: "rgb(285 120 0)" },
+  ],
+  [
+    {
+      text: "France",
+      lat: 30,
+      lng: 20,
+      alt: 0.14,
+      color: "#1f7aff",
+    },
+    { lat: -30, lng: -200, alt: 0.16, text: "20+", color: "rgb(285 120 0)" },
+  ],
+  [
+    {
+      text: "Germany",
+      lat: 30,
+      lng: 20,
+      alt: 0.14,
+      color: "#1f7aff",
+    },
+    { lat: -30, lng: -200, alt: 0.16, text: "100+", color: "rgb(285 120 0)" },
+  ],
+  [
+    {
+      text: "Switzerland",
+      lat: 30,
+      lng: 20,
+      alt: 0.14,
+      color: "#1f7aff",
+    },
+    { lat: -30, lng: -200, alt: 0.16, text: "15+", color: "rgb(285 120 0)" },
+  ],
+  [
+    {
+      text: "Singapore",
+      lat: 30,
+      lng: 20,
+      alt: 0.14,
+      color: "#1f7aff",
+    },
+    { lat: -30, lng: -200, alt: 0.16, text: "30+", color: "rgb(285 120 0)" },
+  ],
+  [
+    {
+      text: "Dubai",
+      lat: 30,
+      lng: 20,
+      alt: 0.14,
+      color: "#1f7aff",
+    },
+    { lat: -30, lng: -200, alt: 0.16, text: "10+", color: "rgb(285 120 0)" },
+  ],
+  [
+    {
+      text: "Sweden",
+      lat: 30,
+      lng: 20,
+      alt: 0.14,
+      color: "#1f7aff",
+    },
+    { lat: -30, lng: -200, alt: 0.16, text: "10+", color: "rgb(285 120 0)" },
+  ],
+  [
+    {
+      text: "Portland",
+      lat: 30,
+      lng: 20,
+      alt: 0.14,
+      color: "#1f7aff",
+    },
+    { lat: -30, lng: -200, alt: 0.16, text: "10+", color: "rgb(285 120 0)" },
+  ],
+  [
+    {
+      text: "Malta",
+      lat: 30,
+      lng: 20,
+      alt: 0.14,
+      color: "#1f7aff",
+    },
+    { lat: -30, lng: -200, alt: 0.16, text: "25+", color: "rgb(285 120 0)" },
+  ],
+];
+
+const countryData = [
+  {
+    country: "United States America",
+    lat: 37.0902,
+    lon: -95.7129,
+  },
+  {
+    country: "Canada",
+    lat: 56.1304,
+    lon: -106.3468,
+  },
+  {
+    country: "United Kingdom",
+    lat: 55.3781,
+    lon: -3.436,
+  },
+  {
+    country: "Australia",
+    lat: -25.2744,
+    lon: 133.7751,
+  },
+  {
+    country: "France",
+    lat: 46.6034,
+    lon: 1.8883,
+  },
+  {
+    country: "Germany",
+    lat: 51.1657,
+    lon: 10.4515,
+  },
+  {
+    country: "Switzerland",
+    lat: 46.8182,
+    lon: 8.2275,
+  },
+  {
+    country: "Singapore",
+    lat: 1.3521,
+    lon: 103.8198,
+  },
+  {
+    country: "Dubai",
+    lat: 25.2048,
+    lon: 55.2708,
+  },
+  {
+    country: "Sweden",
+    lat: 60.1282,
+    lon: 18.6435,
+  },
+  {
+    country: "Portland",
+    lat: 45.5152,
+    lon: -122.6784,
+  },
+  {
+    country: "Malta",
+    lat: 35.9375,
+    lon: 14.3754,
+  },
+];
+
 const Counselors = () => {
+  const isMd = useMediaQuery("(max-width:986px)");
+
   const globeEl = useRef();
   const [selectedMarker, setSelectedMarker] = useState(0);
-  const [messages, setMessages] = useState({ messages1: "", messages2: "" });
+  const [countryNum, setCountryNum] = useState(0);
+  const [rotationSpeed, setRotationSpeed] = useState(2);
+  const targetRotationSpeed = 30;
   const [arcsData, setArcsData] = useState([]);
   const [rotateGlobe, setRotateGlobe] = useState(false);
-
-  const countryData = [
-    {
-      country: "United States America",
-      lat: 37.0902,
-      lon: -95.7129,
-      messages1: " United States of America",
-      messages2: "150+",
-    },
-    {
-      country: "Canada",
-      lat: 56.1304,
-      lon: -106.3468,
-      messages1: "Canada  ",
-      messages2: "30+",
-    },
-    {
-      country: "United Kingdom",
-      lat: 55.3781,
-      lon: -3.436,
-      messages1: "United  Kingdom",
-      messages2: "50+",
-    },
-    {
-      country: "Australia",
-      lat: -25.2744,
-      lon: 133.7751,
-      messages1: "Australia  ",
-      messages2: "20+",
-    },
-    {
-      country: "France",
-      lat: 46.6034,
-      lon: 1.8883,
-      messages1: "France  ",
-      messages2: "20+",
-    },
-    {
-      country: "Germany",
-      lat: 51.1657,
-      lon: 10.4515,
-      messages1: "Germany ",
-      messages2: "100+",
-    },
-    {
-      country: "Switzerland",
-      lat: 46.8182,
-      lon: 8.2275,
-      messages1: "Switzerland  ",
-      messages2: "15+",
-    },
-    {
-      country: "Singapore",
-      lat: 1.3521,
-      lon: 103.8198,
-      messages1: "Singapore  ",
-      messages2: "30+",
-    },
-    {
-      country: "Dubai",
-      lat: 25.2048,
-      lon: 55.2708,
-      messages1: "Dubai  ",
-      messages2: "10+",
-    },
-    {
-      country: "Sweden",
-      lat: 60.1282,
-      lon: 18.6435,
-      messages1: "Sweden  ",
-      messages2: "10+",
-    },
-    {
-      country: "Portland",
-      lat: 45.5152,
-      lon: -122.6784,
-      messages1: "Portland  ",
-      messages2: "10+",
-    },
-    {
-      country: "Malta",
-      lat: 35.9375,
-      lon: 14.3754,
-      messages1: "Malta  ",
-      messages2: "25+",
-    },
-  ];
+  const [textData, setTextData] = useState(TextData[countryNum]);
 
   useEffect(() => {
     const controls = globeEl.current.controls();
     controls.autoRotate = true;
-    controls.autoRotateSpeed = 1;
-    controls.enableZoom = false; // Disable zooming
-    controls.enablePan = false; // Disable panning
-    controls.enableDamping = true; // Enable inertia damping for smoother interaction
-    controls.dampingFactor = 0.1;
-    handleButtonClick(0); // Initial display
+    controls.autoRotateSpeed = rotationSpeed;
+
+    controls.enableZoom = false;
+    controls.enablePan = false;
+    controls.enableDamping = true;
+    handleButtonClick(0);
   }, []);
 
   const handleButtonClick = (index) => {
     const marker = countryData[index];
     setSelectedMarker(index);
-    setMessages({ messages1: marker.messages1, messages2: marker.messages2 });
+
     globeEl.current.pointOfView({ lat: marker.lat, lng: marker.lon }, 4000); // Remove altitude to prevent zoom
 
     const newArcsData = countryData
@@ -122,28 +227,153 @@ const Counselors = () => {
         startLng: marker.lon,
         endLat: end.lat,
         endLng: end.lon,
-        color: ["orange", "orange"], // Set arc color to orange
+        color: ["orange", "orange"],
       }));
     setArcsData(newArcsData);
   };
+  const createTextCard = (text, color) => {
+    const canvas = document.createElement("canvas");
+    const context = canvas.getContext("2d");
+    const padding = 20; // Padding around the text
+    const fontSize = 100;
+    context.font = `${fontSize}px Arial`;
+
+    // Calculate text width and canvas dimensions
+    const textMetrics = context.measureText(text);
+    const textWidth = textMetrics.width;
+    const textHeight = fontSize; // Approximate height of the text
+    const width = textWidth + padding * 2;
+    const height = textHeight + padding * 2 + 20; // Additional space for the tail
+    canvas.width = width;
+    canvas.height = height;
+
+    // Set shadow properties for 3D depth
+    context.shadowColor = "rgba(0, 0, 0, 0.3)";
+    context.shadowBlur = 10;
+    context.shadowOffsetX = 5;
+    context.shadowOffsetY = 5;
+
+    // Draw the background with rounded corners and a tail at the corner
+    const radius = 20; // Radius of the rounded corners
+    const tailWidth = 0;
+    const tailHeight = 0;
+
+    context.fillStyle = color; // Background color
+    context.beginPath();
+    context.moveTo(radius, 0);
+    context.lineTo(width - radius, 0);
+    context.quadraticCurveTo(width, 0, width, radius);
+    context.lineTo(width, height - radius - tailHeight);
+    context.quadraticCurveTo(
+      width,
+      height - tailHeight,
+      width - radius,
+      height - tailHeight
+    );
+    context.lineTo(tailWidth + radius, height - tailHeight);
+    context.quadraticCurveTo(
+      tailWidth,
+      height - tailHeight,
+      tailWidth,
+      height - tailHeight + radius
+    );
+    context.lineTo(tailWidth, height);
+    context.lineTo(tailWidth / 2, height - tailHeight);
+    context.lineTo(radius, height - tailHeight);
+    context.quadraticCurveTo(
+      0,
+      height - tailHeight,
+      0,
+      height - radius - tailHeight
+    );
+    context.lineTo(0, radius);
+    context.quadraticCurveTo(0, 0, radius, 0);
+    context.closePath();
+    context.fill();
+
+    // Reset shadow properties for text
+    context.shadowColor = "transparent";
+
+    // Draw the text
+    context.font = `${fontSize}px Arial`;
+
+    context.fillStyle = "white"; // Text color
+    context.fillText(text, padding, height / 2 + textHeight / 2 - 10); // Centered text position
+
+    const texture = new THREE.CanvasTexture(canvas);
+    const material = new THREE.SpriteMaterial({ map: texture });
+    const sprite = new THREE.Sprite(material);
+
+    // Scale sprite relative to the canvas size
+    sprite.scale.set(width / 10, height / 10, 1);
+
+    return sprite;
+  };
 
   const handleNext = () => {
-    const nextIndex = (selectedMarker + 1) % countryData.length;
-    handleButtonClick(nextIndex);
-    setRotateGlobe(true);
-    setTimeout(() => {
-      setRotateGlobe(false);
-    }, 10000);  
+    setCountryNum((prev) => {
+      const newNum = (prev + 1) % countryData.length;
+      setTextData(TextData[newNum]);
+
+      setRotationSpeed(targetRotationSpeed); // Increase rotation speed
+      setTimeout(() => setRotationSpeed(8), 1500); // Reset speed after 2 seconds
+      setRotateGlobe(true);
+      updateTextData(TextData);
+      setTimeout(() => {
+        setRotateGlobe(false);
+      }, 10000);
+
+      return newNum;
+    });
   };
 
   const handlePrev = () => {
-    const prevIndex =
-      (selectedMarker - 1 + countryData.length) % countryData.length;
-    handleButtonClick(prevIndex);
-    setRotateGlobe(true);
-    setTimeout(() => {
-      setRotateGlobe(false);
-    }, 10000);
+    setCountryNum((prev) => {
+      const newNum = (prev - 1 + countryData.length) % countryData.length;
+      setTextData(countryData[newNum]);
+      setRotationSpeed(targetRotationSpeed); // Increase rotation speed
+      setTimeout(() => setRotationSpeed(8), 1500); // Reset speed after 2 seconds
+      setRotateGlobe(true);
+      setTimeout(() => {
+        setRotateGlobe(false);
+      }, 10000);
+      return newNum;
+    });
+  };
+
+  const updateTextData = (newData) => {
+    const currentData = [...textData]; // Store current data for animation
+    let animationDuration = 1000; // Duration of the animation in milliseconds
+    let startTime = null;
+
+    const animate = (timestamp) => {
+      if (!startTime) startTime = timestamp;
+      const elapsed = timestamp - startTime;
+      // Calculate the interpolation factor (0 to 1)
+      const t = Math.min(elapsed / animationDuration, 1);
+
+      // Update positions of the cards based on the interpolation
+      textData.forEach((d, index) => {
+        d.lng = currentData[index].lng + 5;
+        d.lat =
+          currentData[index].lat +
+          (newData[index].lat - currentData[index].lat) * t;
+      });
+
+      globeEl.customLayerData = textData;
+
+      if (t < 1) {
+        requestAnimationFrame(animate);
+      } else {
+        textData.forEach((d, index) => {
+          d.text = newData[index].text; // Update the text
+        });
+        // Recreate the text cards to render updated text
+        globeEl.customLayerData = textData.map((d) => ({ ...d, text: d.text }));
+      }
+    };
+
+    requestAnimationFrame(animate);
   };
 
   return (
@@ -171,14 +401,14 @@ const Counselors = () => {
             <ArrowForwardIcon />
           </button>
 
-          <p>{countryData[selectedMarker].country}</p>
+          {/* <p>{countryData[selectedMarker].country}</p> */}
         </div>
       </div>
       <div className="globe-container">
         <Globe
           ref={globeEl}
-          width={840} // Increased width by 40%
-          height={700} // Increased height by 40%
+          width={isMd ? 340 : 840}
+          height={isMd ? 400 : 700}
           globeImageUrl={GlobeImge1}
           labelsData={countryData}
           labelLat={(d) => d.lat}
@@ -203,13 +433,19 @@ const Counselors = () => {
           arcsTransitionDuration={1000}
           backgroundColor="#fff"
           atmosphereColor="transparent"
+          customLayerData={textData}
+          customThreeObject={(d) => createTextCard(d.text, d.color)}
+          customThreeObjectUpdate={(obj, e) => {
+            const coords = globeEl.current.getCoords(e.lat, e.lng, e.alt);
+            Object.assign(obj.position, coords);
+          }}
         />
-        <div className="text-cards">
+        {/* <div className="text-cards">
           <div className="text-card text-card1">{messages.messages1}</div>
           <div className="text-card text-card2">
             {messages.messages2} Universities
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

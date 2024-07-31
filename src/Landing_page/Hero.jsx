@@ -70,7 +70,6 @@ const Hero = ({ blog, event }) => {
     }
   };
 
-  console.log(isLoading);
   return (
     <div className="HeroBlock">
       <div className="HeroContainer">

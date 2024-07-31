@@ -25,7 +25,6 @@ const News = () => {
 
     fetchData();
   }, []);
-  console.log(NewsData, ">>>>><<<<<<<<");
   return (
     <>
       <div className="section News-container">

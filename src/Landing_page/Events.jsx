@@ -28,7 +28,7 @@ const Events = () => {
         `http://157.173.222.81:1337/api/events?filters[Date_of_the_event][$lt]=${currentDate}?sort[0]=Date_of_the_event&populate=*`
       );
       if (response?.status === 200) {
-        console.log("fetchCompletedEventdata", response);
+      
         setCompletedEventData(response?.data.data);
       }
     } catch (error) {
