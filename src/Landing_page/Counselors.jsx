@@ -191,13 +191,13 @@ const countryData = [
   },
 ];
 
+
 const Counselors = () => {
   const isMd = useMediaQuery("(max-width:986px)");
-
   const globeEl = useRef();
   const [selectedMarker, setSelectedMarker] = useState(0);
   const [countryNum, setCountryNum] = useState(0);
-  const [rotationSpeed, setRotationSpeed] = useState(2);
+  let [rotationSpeed, setRotationSpeed] = useState(2);
   const targetRotationSpeed = 30;
   const [arcsData, setArcsData] = useState([]);
   const [rotateGlobe, setRotateGlobe] = useState(false);
@@ -207,7 +207,6 @@ const Counselors = () => {
     const controls = globeEl.current.controls();
     controls.autoRotate = true;
     controls.autoRotateSpeed = rotationSpeed;
-
     controls.enableZoom = false;
     controls.enablePan = false;
     controls.enableDamping = true;
@@ -217,8 +216,7 @@ const Counselors = () => {
   const handleButtonClick = (index) => {
     const marker = countryData[index];
     setSelectedMarker(index);
-
-    globeEl.current.pointOfView({ lat: marker.lat, lng: marker.lon }, 4000); // Remove altitude to prevent zoom
+    globeEl.current.pointOfView({ lat: marker.lat, lng: marker.lon }, 4000);
 
     const newArcsData = countryData
       .filter((_, i) => i !== index)
@@ -231,34 +229,28 @@ const Counselors = () => {
       }));
     setArcsData(newArcsData);
   };
+
   const createTextCard = (text, color) => {
     const canvas = document.createElement("canvas");
     const context = canvas.getContext("2d");
-    const padding = 20; // Padding around the text
+    const padding = 20;
     const fontSize = 100;
     context.font = `${fontSize}px Arial`;
-
-    // Calculate text width and canvas dimensions
     const textMetrics = context.measureText(text);
     const textWidth = textMetrics.width;
-    const textHeight = fontSize; // Approximate height of the text
+    const textHeight = fontSize;
     const width = textWidth + padding * 2;
-    const height = textHeight + padding * 2 + 20; // Additional space for the tail
+    const height = textHeight + padding * 2 + 20;
     canvas.width = width;
     canvas.height = height;
-
-    // Set shadow properties for 3D depth
     context.shadowColor = "rgba(0, 0, 0, 0.3)";
     context.shadowBlur = 10;
     context.shadowOffsetX = 5;
     context.shadowOffsetY = 5;
-
-    // Draw the background with rounded corners and a tail at the corner
-    const radius = 20; // Radius of the rounded corners
+    const radius = 20;
     const tailWidth = 0;
     const tailHeight = 0;
-
-    context.fillStyle = color; // Background color
+    context.fillStyle = color;
     context.beginPath();
     context.moveTo(radius, 0);
     context.lineTo(width - radius, 0);
@@ -290,89 +282,78 @@ const Counselors = () => {
     context.quadraticCurveTo(0, 0, radius, 0);
     context.closePath();
     context.fill();
-
-    // Reset shadow properties for text
     context.shadowColor = "transparent";
-
-    // Draw the text
     context.font = `${fontSize}px Arial`;
-
-    context.fillStyle = "white"; // Text color
-    context.fillText(text, padding, height / 2 + textHeight / 2 - 10); // Centered text position
-
+    context.fillStyle = "white";
+    context.fillText(text, padding, height / 2 + textHeight / 2 - 10);
     const texture = new THREE.CanvasTexture(canvas);
     const material = new THREE.SpriteMaterial({ map: texture });
     const sprite = new THREE.Sprite(material);
-
-    // Scale sprite relative to the canvas size
     sprite.scale.set(width / 10, height / 10, 1);
-
     return sprite;
   };
 
   const handleNext = () => {
+    const controls = globeEl.current.controls();
+    controls.autoRotateSpeed = targetRotationSpeed;
+    
     setCountryNum((prev) => {
       const newNum = (prev + 1) % countryData.length;
-      setTextData(TextData[newNum]);
-
-      setRotationSpeed(targetRotationSpeed); // Increase rotation speed
-      setTimeout(() => setRotationSpeed(8), 1500); // Reset speed after 2 seconds
+      setRotationSpeed(targetRotationSpeed);
+      setTimeout(() => setRotationSpeed(8), 1500);
       setRotateGlobe(true);
-      updateTextData(TextData);
+      updateTextData(TextData[newNum]);
       setTimeout(() => {
         setRotateGlobe(false);
-      }, 10000);
-
+        controls.autoRotateSpeed = 8;
+      }, 1000); // Match the duration of the revolution animation
       return newNum;
     });
   };
 
   const handlePrev = () => {
+    const controls = globeEl.current.controls();
+    controls.autoRotateSpeed = targetRotationSpeed;
+    
     setCountryNum((prev) => {
       const newNum = (prev - 1 + countryData.length) % countryData.length;
-      setTextData(countryData[newNum]);
-      setRotationSpeed(targetRotationSpeed); // Increase rotation speed
-      setTimeout(() => setRotationSpeed(8), 1500); // Reset speed after 2 seconds
+      setRotationSpeed(targetRotationSpeed);
+      setTimeout(() => setRotationSpeed(8), 1500);
       setRotateGlobe(true);
+      updateTextData(TextData[newNum]);
       setTimeout(() => {
         setRotateGlobe(false);
-      }, 10000);
+        controls.autoRotateSpeed = 8;
+      }, 1000); // Match the duration of the revolution animation
       return newNum;
     });
   };
 
   const updateTextData = (newData) => {
-    const currentData = [...textData]; // Store current data for animation
-    let animationDuration = 1000; // Duration of the animation in milliseconds
+    const currentData = textData.map((d) => ({ ...d }));
     let startTime = null;
-
+    const animationDuration = 800; // Duration of the revolution animation
     const animate = (timestamp) => {
       if (!startTime) startTime = timestamp;
       const elapsed = timestamp - startTime;
-      // Calculate the interpolation factor (0 to 1)
       const t = Math.min(elapsed / animationDuration, 1);
 
-      // Update positions of the cards based on the interpolation
-      textData.forEach((d, index) => {
-        d.lng = currentData[index].lng + 5;
-        d.lat =
-          currentData[index].lat +
-          (newData[index].lat - currentData[index].lat) * t;
+      const updatedData = currentData.map((d, index) => {
+        const newLng = d.lng + 360 * t; // Make a complete revolution
+        return {
+          ...d,
+          lat: d.lat + (newData[index].lat - d.lat) * t,
+          lng: newLng > 180 ? newLng - 360 : newLng,
+        };
       });
 
-      globeEl.customLayerData = textData;
-
+      setTextData(updatedData);
       if (t < 1) {
         requestAnimationFrame(animate);
       } else {
-        textData.forEach((d, index) => {
-          d.text = newData[index].text; // Update the text
-        });
-        // Recreate the text cards to render updated text
-        globeEl.customLayerData = textData.map((d) => ({ ...d, text: d.text }));
+        setTextData(newData);
       }
     };
-
     requestAnimationFrame(animate);
   };
 
@@ -384,9 +365,7 @@ const Counselors = () => {
         <div className="progress-bar">
           <div className="progress">
             <p
-              className={`progressLine  ${
-                rotateGlobe && "progressLineAnimation"
-              }`}
+              className={`progressLine ${rotateGlobe && "progressLineAnimation"}`}
             >
               |
             </p>
@@ -396,12 +375,9 @@ const Counselors = () => {
           <button className="GlowbLeftIccon" onClick={handlePrev}>
             <ArrowForwardIcon />
           </button>
-
           <button className="GlobRightArrow" onClick={handleNext}>
             <ArrowForwardIcon />
           </button>
-
-          {/* <p>{countryData[selectedMarker].country}</p> */}
         </div>
       </div>
       <div className="globe-container">
@@ -419,7 +395,7 @@ const Counselors = () => {
           labelDotRadius={0.5}
           labelResolution={2}
           arcsData={arcsData}
-          arcLabel={() => ""} // Disable labels on hover
+          arcLabel={() => ""}
           arcStartLat={(d) => d.startLat}
           arcStartLng={(d) => d.startLng}
           arcEndLat={(d) => d.endLat}
@@ -440,12 +416,6 @@ const Counselors = () => {
             Object.assign(obj.position, coords);
           }}
         />
-        {/* <div className="text-cards">
-          <div className="text-card text-card1">{messages.messages1}</div>
-          <div className="text-card text-card2">
-            {messages.messages2} Universities
-          </div>
-        </div> */}
       </div>
     </div>
   );
