@@ -198,7 +198,7 @@ const Counselors = () => {
   const [selectedMarker, setSelectedMarker] = useState(0);
   const [countryNum, setCountryNum] = useState(0);
   const [rotationSpeed, setRotationSpeed] = useState(2);
-  const targetRotationSpeed = 30;
+  const targetRotationSpeed = 0.15;
   const [arcsData, setArcsData] = useState([]);
   const [rotateGlobe, setRotateGlobe] = useState(false);
   const [textData, setTextData] = useState(TextData[countryNum]);
@@ -231,6 +231,7 @@ const Counselors = () => {
       }));
     setArcsData(newArcsData);
   };
+
   const createTextCard = (text, color) => {
     const canvas = document.createElement("canvas");
     const context = canvas.getContext("2d");
@@ -315,10 +316,10 @@ const Counselors = () => {
       const newNum = (prev + 1) % countryData.length;
       setTextData(TextData[newNum]);
 
-      setRotationSpeed(targetRotationSpeed); // Increase rotation speed
-      setTimeout(() => setRotationSpeed(8), 1500); // Reset speed after 2 seconds
+      setRotationSpeed(6); // Increase rotation speed
+      setTimeout(() => setRotationSpeed(2), 1500); // Increase rotation speed
       setRotateGlobe(true);
-      updateTextData(TextData);
+      updateTextData(TextData[newNum]);
       setTimeout(() => {
         setRotateGlobe(false);
       }, 10000);
@@ -330,10 +331,12 @@ const Counselors = () => {
   const handlePrev = () => {
     setCountryNum((prev) => {
       const newNum = (prev - 1 + countryData.length) % countryData.length;
-      setTextData(countryData[newNum]);
-      setRotationSpeed(targetRotationSpeed); // Increase rotation speed
-      setTimeout(() => setRotationSpeed(8), 1500); // Reset speed after 2 seconds
+      setTextData(TextData[newNum]);
+      // targetRotationSpeed = 0.3
+      setRotationSpeed(0.3); // Increase rotation speed
+      setTimeout(() => setRotationSpeed(0.15), 1500); // Reset speed after 2 seconds
       setRotateGlobe(true);
+      updateTextData(TextData[newNum]);
       setTimeout(() => {
         setRotateGlobe(false);
       }, 10000);
@@ -345,7 +348,7 @@ const Counselors = () => {
     const currentData = [...textData]; // Store current data for animation
     let animationDuration = 1000; // Duration of the animation in milliseconds
     let startTime = null;
-
+    let requestId;
     const animate = (timestamp) => {
       if (!startTime) startTime = timestamp;
       const elapsed = timestamp - startTime;
@@ -353,29 +356,37 @@ const Counselors = () => {
       const t = Math.min(elapsed / animationDuration, 1);
 
       // Update positions of the cards based on the interpolation
-      textData.forEach((d, index) => {
-        d.lng = currentData[index].lng + 5;
-        d.lat =
-          currentData[index].lat +
-          (newData[index].lat - currentData[index].lat) * t;
-      });
+      const updatedData = currentData.map((d, index) => ({
+        ...d,
+        lat: d.lat + (newData[index].lat - d.lat) * t,
+        lng: d.lng + (newData[index].lng - d.lng) * t,
+      }));
 
-      globeEl.customLayerData = textData;
+      setTextData(updatedData);
 
       if (t < 1) {
-        requestAnimationFrame(animate);
+        requestId = requestAnimationFrame(animate);
       } else {
-        textData.forEach((d, index) => {
-          d.text = newData[index].text; // Update the text
-        });
-        // Recreate the text cards to render updated text
-        globeEl.customLayerData = textData.map((d) => ({ ...d, text: d.text }));
+        setTextData(newData);
       }
     };
 
-    requestAnimationFrame(animate);
+    requestId = requestAnimationFrame(animate);
   };
 
+  useEffect(() => {
+    const moveCards = () => {
+      setTextData((prevData) =>
+        prevData.map((d) => ({
+          ...d,
+          lng: (d.lng + rotationSpeed) % 360,
+        }))
+      );
+      requestAnimationFrame(moveCards);
+    };
+
+    moveCards();
+  }, [rotationSpeed]);
   return (
     <div className="Counselors_container section">
       <div className="counselor_left_side">
