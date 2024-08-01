@@ -57,7 +57,7 @@ const Blog = () => {
           </div>
         </div>
         <div className="rightBlogsCantainer">
-          {blogData.slice(1, 5).map((item) => (
+          {blogData.slice(1, 4).map((item) => (
             <Link
               to={`blog-content/${item?.id}`}
               className="rightcard1 Link_route"

@@ -11,10 +11,16 @@ const TextData = [
       text: "USA",
       lat: 30,
       lng: 20,
-      alt: 0.14,
+      alt: 0.2,
       color: "#1f7aff",
     },
-    { lat: -10, lng: -200, alt: 0.16, text: "150+", color: "rgb(285 120 0)" },
+    {
+      lat: -10,
+      lng: -200,
+      alt: 0.4,
+      text: "150+ Universities",
+      color: "rgb(285 120 0)",
+    },
   ],
   [
     {
@@ -24,7 +30,13 @@ const TextData = [
       alt: 0.22,
       color: "#1f7aff",
     },
-    { lat: -10, lng: -200, alt: 0.16, text: "30+", color: "rgb(285 120 0)" },
+    {
+      lat: -10,
+      lng: -200,
+      alt: 0.16,
+      text: "30+ Universities",
+      color: "rgb(285 120 0)",
+    },
   ],
   [
     {
@@ -34,7 +46,13 @@ const TextData = [
       alt: 0.34,
       color: "#1f7aff",
     },
-    { lat: -10, lng: -200, alt: 0.16, text: "50+", color: "rgb(285 120 0)" },
+    {
+      lat: -10,
+      lng: -200,
+      alt: 0.26,
+      text: "50+ Universities",
+      color: "rgb(285 120 0)",
+    },
   ],
   [
     {
@@ -44,7 +62,13 @@ const TextData = [
       alt: 0.22,
       color: "#1f7aff",
     },
-    { lat: -10, lng: -200, alt: 0.16, text: "20+", color: "rgb(285 120 0)" },
+    {
+      lat: -10,
+      lng: -200,
+      alt: 0.16,
+      text: "20+ Universities",
+      color: "rgb(285 120 0)",
+    },
   ],
   [
     {
@@ -54,7 +78,13 @@ const TextData = [
       alt: 0.2,
       color: "#1f7aff",
     },
-    { lat: -10, lng: -200, alt: 0.16, text: "20+", color: "rgb(285 120 0)" },
+    {
+      lat: -10,
+      lng: -200,
+      alt: 0.16,
+      text: "20+ Universities",
+      color: "rgb(285 120 0)",
+    },
   ],
   [
     {
@@ -64,7 +94,13 @@ const TextData = [
       alt: 0.22,
       color: "#1f7aff",
     },
-    { lat: -10, lng: -200, alt: 0.16, text: "100+", color: "rgb(285 120 0)" },
+    {
+      lat: -10,
+      lng: -200,
+      alt: 0.16,
+      text: "100+ Universities",
+      color: "rgb(285 120 0)",
+    },
   ],
   [
     {
@@ -74,7 +110,13 @@ const TextData = [
       alt: 0.25,
       color: "#1f7aff",
     },
-    { lat: -10, lng: -200, alt: 0.16, text: "15+", color: "rgb(285 120 0)" },
+    {
+      lat: -10,
+      lng: -200,
+      alt: 0.16,
+      text: "15+ Universities",
+      color: "rgb(285 120 0)",
+    },
   ],
   [
     {
@@ -84,7 +126,13 @@ const TextData = [
       alt: 0.23,
       color: "#1f7aff",
     },
-    { lat: -10, lng: -200, alt: 0.16, text: "30+", color: "rgb(285 120 0)" },
+    {
+      lat: -10,
+      lng: -200,
+      alt: 0.16,
+      text: "30+ Universities",
+      color: "rgb(285 120 0)",
+    },
   ],
   [
     {
@@ -94,7 +142,13 @@ const TextData = [
       alt: 0.2,
       color: "#1f7aff",
     },
-    { lat: -10, lng: -200, alt: 0.16, text: "10+", color: "rgb(285 120 0)" },
+    {
+      lat: -10,
+      lng: -200,
+      alt: 0.16,
+      text: "10+ Universities",
+      color: "rgb(285 120 0)",
+    },
   ],
   [
     {
@@ -104,7 +158,13 @@ const TextData = [
       alt: 0.2,
       color: "#1f7aff",
     },
-    { lat: -10, lng: -200, alt: 0.16, text: "10+", color: "rgb(285 120 0)" },
+    {
+      lat: -10,
+      lng: -200,
+      alt: 0.16,
+      text: "10+ Universities",
+      color: "rgb(285 120 0)",
+    },
   ],
   [
     {
@@ -114,7 +174,13 @@ const TextData = [
       alt: 0.24,
       color: "#1f7aff",
     },
-    { lat: -10, lng: -200, alt: 0.16, text: "10+", color: "rgb(285 120 0)" },
+    {
+      lat: -10,
+      lng: -200,
+      alt: 0.16,
+      text: "10+ Universities",
+      color: "rgb(285 120 0)",
+    },
   ],
   [
     {
@@ -124,7 +190,13 @@ const TextData = [
       alt: 0.2,
       color: "#1f7aff",
     },
-    { lat: -10, lng: -200, alt: 0.16, text: "25+", color: "rgb(285 120 0)" },
+    {
+      lat: -10,
+      lng: -200,
+      alt: 0.16,
+      text: "25+ Universities",
+      color: "rgb(285 120 0)",
+    },
   ],
 ];
 
@@ -196,7 +268,7 @@ const Counselors = () => {
   const globeEl = useRef();
   const [selectedMarker, setSelectedMarker] = useState(0);
   const [countryNum, setCountryNum] = useState(0);
-  let [rotationSpeed, setRotationSpeed] = useState(2);
+  let [rotationSpeed, setRotationSpeed] = useState(1);
   const targetRotationSpeed = 30;
   const [arcsData, setArcsData] = useState([]);
   const [rotateGlobe, setRotateGlobe] = useState(false);
@@ -359,17 +431,23 @@ const Counselors = () => {
   return (
     <div className="Counselors_container section">
       <div className="counselor_left_side">
-        <p>Countries We Are in</p>
+        <div className="countryName_sectiuon">
+          <strong>Countries</strong>
+          <p> We Are in</p>
+        </div>
         <span>10+ Countries</span>
         <div className="progress-bar">
-          <div className="progress">
-            <p
-              className={`progressLine ${
-                rotateGlobe && "progressLineAnimation"
-              }`}
-            >
-              |
-            </p>
+          <div className="progressLinebar-container">
+            {[...Array(TextData.length)].map((item, index) => (
+              <span
+                key={index}
+                className={`progressLinebar ${
+                  countryNum === index && "activeprogressLinebar"
+                }`}
+              >
+                |
+              </span>
+            ))}
           </div>
         </div>
         <div className="leftandrightArrow">
@@ -379,6 +457,7 @@ const Counselors = () => {
           <button className="GlobRightArrow" onClick={handleNext}>
             <ArrowForwardIcon />
           </button>
+          {TextData[countryNum][0].text}
         </div>
       </div>
       <div className="globe-container">
@@ -392,7 +471,8 @@ const Counselors = () => {
           labelLng={(d) => d.lon}
           labelText={(d) => d.country}
           labelSize={2.6}
-          labelColor={() => "rgba(255, 165, 0, 0.75)"}
+          // labelColor={() => "rgba(255, 165, 0, 0.75)"}
+          labelColor={() => "#1f7aff"}
           labelDotRadius={0.5}
           labelResolution={2}
           arcsData={arcsData}
@@ -402,10 +482,10 @@ const Counselors = () => {
           arcEndLat={(d) => d.endLat}
           arcEndLng={(d) => d.endLng}
           arcColor={(d) => d.color}
-          arcAltitude={0.4}
-          arcStroke={0.5}
-          arcDashLength={0.3}
-          arcDashGap={0.1}
+          arcAltitude={0}
+          arcStroke={0}
+          arcDashLength={0}
+          arcDashGap={0}
           arcDashAnimateTime={30000}
           arcsTransitionDuration={1000}
           backgroundColor="#fff"
