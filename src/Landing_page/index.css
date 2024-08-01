@@ -836,7 +836,7 @@
 .rightBlogsCantainer > .rightcard1 {
   border: 1px solid gray;
   box-shadow: var(--box-shadow);
-  height: 16vh;
+  min-height: 16vh;
   border-radius: 16px;
   padding: 0.8rem 1rem 1rem 2rem;
   box-shadow: var(--box-shadow);
@@ -914,15 +914,23 @@
   display: flex;
   flex-direction: column;
   justify-content: left;
+  width: 40%;
 }
-.counselor_left_side > p {
+.countryName_sectiuon > strong {
+  font-size: 60px;
+  line-height: 1.1;
+  color: var(--text-color-darkblack);
+}
+.countryName_sectiuon {
+  margin-bottom: 2rem;
+}
+.countryName_sectiuon > p {
   font-weight: 400;
-  font-size: 72px;
-  letter-spacing: -2px;
+  font-size: 66px;
   display: flex;
-  width: 80%;
   text-align: left;
   line-height: 1.1;
+  color: var(--brand-color);
 }
 .counselor_left_side > span {
   color: var(--text-color-gray);
@@ -971,36 +979,27 @@
 }
 .progress-bar {
   height: 3px;
-  width: 60%;
+  width: 80%;
   background-color: #ddd;
   border-radius: 5px;
   margin-top: 2rem;
   position: relative;
 }
 
-.progress {
-  height: 100%;
-  border-radius: 5px;
+.progressLinebar-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
 }
 
-.progressLine {
-  position: absolute;
-  top: -0.8rem;
-  left: 0.2rem;
+.progressLinebar {
+  transform: translateY(-50%);
+  font-size: 16px;
+  font-weight: 500;
+}
+.activeprogressLinebar{
   color: var(--brand-color);
-  font-weight: 1000;
-  font-size: 18px;
-}
-.progressLineAnimation {
-  animation: progressbar 9.9s linear;
-}
-@keyframes progressbar {
-  from {
-    left: 0.2rem;
-  }
-  to {
-    left: 98%;
-  }
+  font-weight: 700;
 }
 .scene-container {
   width: 100% !important;
