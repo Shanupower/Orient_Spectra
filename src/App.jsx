@@ -25,14 +25,14 @@ import USACountry from "./Component/Country/Usa/Country";
 import { useState, useEffect } from "react";
 import Navbar from "./Component/Common/Navbar";
 import Footer from "./Component/Common/Footer";
-import Step1 from "./Component/StartYourJourney/Step1";
 import StartYourJourney from "./Component/StartYourJourney/StartYourJourney";
 import MoreBlogContent from "./Component/Blogs/MoreBlogContent";
+import Loading from "./Component/Common/Loading";
+
 function App() {
   const [openWhatwedo, setWhatwedoOpen] = useState(false);
   const [openbranches, setopenbranches] = useState(false);
   const [studyOverseas, setStudyOverseas] = useState(false);
-
   const [activeNavbar, setactiveNavbar] = useState(false);
   const hanldeCloseSubheader = () => {
     setWhatwedoOpen(false);
@@ -40,8 +40,13 @@ function App() {
     setactiveNavbar(false);
     setStudyOverseas(false);
   };
+  const [loading, setLoading] = useState(true);
 
-  const location = useLocation();
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -54,6 +59,10 @@ function App() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  if (loading) {
+    return <Loading />;
+  }
 
   return (
     <>
