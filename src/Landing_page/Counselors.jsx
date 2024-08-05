@@ -273,6 +273,7 @@ const Counselors = () => {
   const [arcsData, setArcsData] = useState([]);
   const [rotateGlobe, setRotateGlobe] = useState(false);
   const [textData, setTextData] = useState(TextData[countryNum]);
+  const [countryName, setCountryName] = useState([countryData[countryNum]]);
   useEffect(() => {
     const controls = globeEl.current.controls();
     controls.autoRotate = true;
@@ -284,7 +285,7 @@ const Counselors = () => {
   }, []);
 
   const handleButtonClick = (index) => {
-    const marker = countryData[index];    
+    const marker = countryData[index];
     setSelectedMarker(index);
     globeEl.current.pointOfView({ lat: marker.lat, lng: marker.lon }, 4000);
 
@@ -297,7 +298,7 @@ const Counselors = () => {
         endLng: marker.lon,
         color: ["orange", "orange"],
       }));
-    setArcsData(newArcsData); change
+    setArcsData(newArcsData);
   };
 
   const createTextCard = (text, color) => {
@@ -366,6 +367,7 @@ const Counselors = () => {
   const handleNext = () => {
     const controls = globeEl.current.controls();
     controls.autoRotateSpeed = targetRotationSpeed;
+
     setCountryNum((prev) => {
       const newNum = (prev + 1) % countryData.length;
       setRotationSpeed(targetRotationSpeed);
@@ -375,19 +377,20 @@ const Counselors = () => {
       setTimeout(() => {
         setRotateGlobe(false);
         controls.autoRotateSpeed = 4;
-      }, 1000); // Match the duration of the revolution animation
+      }, 1000);
+      setCountryName([countryData[newNum]]);
+
       return newNum;
     });
     setTimeout(() => {
-
-            handleButtonClick(countryNum+1);
-      }, 1000);
+      handleButtonClick(countryNum + 1);
+    }, 1000);
   };
 
   const handlePrev = () => {
     const controls = globeEl.current.controls();
     controls.autoRotateSpeed = targetRotationSpeed;
-
+    setCountryName(countryNum + 1);
     setCountryNum((prev) => {
       const newNum = (prev - 1 + countryData.length) % countryData.length;
       setRotationSpeed(targetRotationSpeed);
@@ -398,8 +401,13 @@ const Counselors = () => {
         setRotateGlobe(false);
         controls.autoRotateSpeed = 8;
       }, 1000); // Match the duration of the revolution animation
+      setCountryName([countryData[newNum]]);
+
       return newNum;
     });
+    setTimeout(() => {
+      handleButtonClick(countryNum - 1);
+    }, 1000);
   };
 
   const updateTextData = (newData) => {
@@ -428,7 +436,6 @@ const Counselors = () => {
       }
     };
     requestAnimationFrame(animate);
-
   };
 
   return (
@@ -469,7 +476,7 @@ const Counselors = () => {
           width={isMd ? 340 : 840}
           height={isMd ? 400 : 700}
           globeImageUrl={GlobeImge1}
-          labelsData={countryData}
+          labelsData={countryName}
           labelLat={(d) => d.lat}
           labelLng={(d) => d.lon}
           labelText={(d) => d.country}
