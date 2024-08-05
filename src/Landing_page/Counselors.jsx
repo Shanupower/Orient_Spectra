@@ -199,8 +199,14 @@ const TextData = [
     },
   ],
 ];
-
+const India = 
+  {
+    country: "India",
+    lat:20.5937,
+    lon: 78.9629,
+  }
 const countryData = [
+  
   {
     country: "United States America",
     lat: 37.0902,
@@ -379,7 +385,7 @@ const Counselors = () => {
         controls.autoRotateSpeed = 4;
       }, 1000);
       setCountryName([countryData[newNum]]);
-
+     
       return newNum;
     });
     setTimeout(() => {
@@ -402,7 +408,7 @@ const Counselors = () => {
         controls.autoRotateSpeed = 8;
       }, 1000); // Match the duration of the revolution animation
       setCountryName([countryData[newNum]]);
-
+      
       return newNum;
     });
     setTimeout(() => {
@@ -471,12 +477,14 @@ const Counselors = () => {
         </div>
       </div>
       <div className="globe-container">
+            
         <Globe
           ref={globeEl}
           width={isMd ? 340 : 840}
           height={isMd ? 400 : 700}
           globeImageUrl={GlobeImge1}
-          labelsData={countryName}
+          labelsData={[...countryName, India]}
+
           labelLat={(d) => d.lat}
           labelLng={(d) => d.lon}
           labelText={(d) => d.country}
@@ -492,14 +500,14 @@ const Counselors = () => {
           arcEndLat={(d) => d.endLat}
           arcEndLng={(d) => d.endLng}
           arcColor={(d) => d.color}
-          arcAltitude={0.6}
-          arcStroke={1}
-          arcDashLength={0.3}
-          arcDashGap={0}
+          arcAltitude={0.3}
+          arcStroke={0.5}
+          arcDashLength={0.1}
+          arcDashGap={0.02}
           arcDashAnimateTime={30000}
           arcsTransitionDuration={1000}
           backgroundColor="#fff"
-          atmosphereColor="transparent"
+          atmosphereColor="#fff"
           customLayerData={textData}
           customThreeObject={(d) => createTextCard(d.text, d.color)}
           customThreeObjectUpdate={(obj, e) => {

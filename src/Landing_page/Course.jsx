@@ -89,16 +89,8 @@ const Course = () => {
     <>
       <div className="section course_container">
         <div className=" course_container_inner">
-          <Tabs activeKey={activeKey} onChange={setActiveKey}>
-            {items.map((item) => (
-              <TabPane
-                key={item.key}
-                tab={item.label}
-                className="eventDivCaard"
-              >
-                {item.children}
-              </TabPane>
-            ))}
+          <Tabs activeKey={activeKey} onChange={setActiveKey} items={items}>
+            
           </Tabs>
         </div>
       </div>
