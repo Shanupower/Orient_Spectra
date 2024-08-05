@@ -78,7 +78,7 @@ const getItems = (panelStyle) => [
     style: panelStyle,
   },
 ];
-const UKCountry = () => {
+const GermanyCountry = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -97,4 +97,4 @@ const UKCountry = () => {
   );
 };
 
-export default UKCountry;
+export default GermanyCountry;
