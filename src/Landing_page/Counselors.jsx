@@ -273,7 +273,6 @@ const Counselors = () => {
   const [arcsData, setArcsData] = useState([]);
   const [rotateGlobe, setRotateGlobe] = useState(false);
   const [textData, setTextData] = useState(TextData[countryNum]);
-
   useEffect(() => {
     const controls = globeEl.current.controls();
     controls.autoRotate = true;
@@ -285,20 +284,20 @@ const Counselors = () => {
   }, []);
 
   const handleButtonClick = (index) => {
-    const marker = countryData[index];
+    const marker = countryData[index];    
     setSelectedMarker(index);
     globeEl.current.pointOfView({ lat: marker.lat, lng: marker.lon }, 4000);
 
     const newArcsData = countryData
       .filter((_, i) => i !== index)
       .map((end) => ({
-        startLat: marker.lat,
-        startLng: marker.lon,
-        endLat: end.lat,
-        endLng: end.lon,
+        startLat: 20.5937,
+        startLng: 78.9629,
+        endLat: marker.lat,
+        endLng: marker.lon,
         color: ["orange", "orange"],
       }));
-    setArcsData(newArcsData);
+    setArcsData(newArcsData); change
   };
 
   const createTextCard = (text, color) => {
@@ -367,7 +366,6 @@ const Counselors = () => {
   const handleNext = () => {
     const controls = globeEl.current.controls();
     controls.autoRotateSpeed = targetRotationSpeed;
-
     setCountryNum((prev) => {
       const newNum = (prev + 1) % countryData.length;
       setRotationSpeed(targetRotationSpeed);
@@ -376,10 +374,14 @@ const Counselors = () => {
       updateTextData(TextData[newNum]);
       setTimeout(() => {
         setRotateGlobe(false);
-        controls.autoRotateSpeed = 8;
+        controls.autoRotateSpeed = 4;
       }, 1000); // Match the duration of the revolution animation
       return newNum;
     });
+    setTimeout(() => {
+
+            handleButtonClick(countryNum+1);
+      }, 1000);
   };
 
   const handlePrev = () => {
@@ -426,6 +428,7 @@ const Counselors = () => {
       }
     };
     requestAnimationFrame(animate);
+
   };
 
   return (
@@ -482,9 +485,9 @@ const Counselors = () => {
           arcEndLat={(d) => d.endLat}
           arcEndLng={(d) => d.endLng}
           arcColor={(d) => d.color}
-          arcAltitude={0}
-          arcStroke={0}
-          arcDashLength={0}
+          arcAltitude={0.6}
+          arcStroke={1}
+          arcDashLength={0.3}
           arcDashGap={0}
           arcDashAnimateTime={30000}
           arcsTransitionDuration={1000}
