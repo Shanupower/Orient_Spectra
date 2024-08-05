@@ -18,15 +18,15 @@ import Icon12 from "../../../assets/Country/Evidence.png";
 const AdmissionData = [
   {
     icon: Icon1,
-    title: "Cop of a valid passport",
+    title: "Copy of a valid passport",
   },
   {
     icon: Icon2,
-    title: "Proof of English proficiency (OEFL/IELTS test scores)",
+    title: "Proof of English proficiency (TOEFL/IELTS test scores)",
   },
   {
     icon: Icon3,
-    title: "ACT/SAT/LSAT forUG programs, GMAT/GRE scores for PG programs",
+    title: "ACT/SAT/LSAT for UG programs, GMAT/GRE scores for PG programs",
   },
   {
     icon: Icon4,
@@ -39,7 +39,7 @@ const AdmissionData = [
   },
   {
     icon: Icon6,
-    title: "Letters of recommendation fromthe employer/manager (if applicable)",
+    title: "Letters of recommendation from the employer/manager (if applicable)",
   },
   {
     icon: Icon7,
@@ -51,7 +51,7 @@ const AdmissionData = [
   },
   {
     icon: Icon9,
-    title: "Essays (if dmanded by the university)",
+    title: "Essays (if demanded by the university)",
   },
   {
     icon: Icon10,
@@ -59,7 +59,7 @@ const AdmissionData = [
   },
   {
     icon: Icon11,
-    title: "      Certificates of extracurricular activities      ",
+    title: "Certificates of extracurricular activities",
   },
   {
     icon: Icon12,
@@ -73,6 +73,7 @@ const AdmitionRequired = () => {
         <h1>
           Admission Requirements for <br />
           <b>United States Study Abroad</b>
+          <p>Here are the major requirements to study in the USA, which you need to ensure while applying to a USA university:</p>
         </h1>
       </div>
 

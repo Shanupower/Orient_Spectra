@@ -12,41 +12,36 @@ import { useEffect } from "react";
 const getItems = (panelStyle) => [
   {
     key: "1",
-    label: "What are the entry requirements for studying in Australia?",
+    label: "What are the general steps to apply to a university in the USA? ",
     children: (
       <p className="textContent">
-        Entry requirements vary depending on the course and institution.
-        Generally, you will need to provide evidence of your previous academic
-        qualifications, English language proficiency (such as IELTS or PTE
-        scores), and in some cases, work experience or portfolio submissions.
+       The general steps include researching universities, preparing for standardized tests (like SAT, ACT, GRE, GMAT), 
+       obtaining recommendation letters, writing personal statements, completing the application forms, submitting transcripts, 
+       and applying for a student visa.
       </p>
     ),
     style: panelStyle,
   },
   {
     key: "2",
-    label: "How much does it cost to study in Australia?",
+    label: "What types of student visas are available for international students?",
     children: (
       <p className="textContent">
         {" "}
-        The cost of studying in Australia varies by institution and course. On
-        average, undergraduate degrees can range from AUD 20,000 to AUD 45,000
-        per year, while postgraduate degrees can range from AUD 22,000 to AUD
-        50,000 per year. Additionally, you should budget for living expenses,
-        which average around AUD 20,000 per year.
+        The most common student visas are the F-1 visa for academic studies and the J-1 visa for exchange programs. 
+        The M-1 visa is for vocational or non-academic programs.
       </p>
     ),
     style: panelStyle,
   },
   {
     key: "3",
-    label: " Can international students work while studying in Australia?",
+    label: " How important are standardized tests for admission to U.S. universities?",
     children: (
       <p className="textContent">
-        Yes, international students on a Student Visa (Subclass 500) are allowed
-        to work up to 40 hours every two weeks while their course is in session
-        and unlimited hours during scheduled course breaks. This helps students
-        gain work experience and supplement their living expenses.
+        Standardized tests like the SAT, ACT, GRE, and GMAT are important as they are often
+         required by universities as part of the admissions process. However, their importance 
+         can vary by institution and program.
       </p>
     ),
     style: panelStyle,
@@ -54,39 +49,92 @@ const getItems = (panelStyle) => [
   {
     key: "4",
     label:
-      "What scholarships are available for international students in Australia?",
+      "What are the English language proficiency requirements?",
     children: (
       <p className="textContent">
-        Various scholarships are available for international students, including
-        those offered by the Australian government, educational institutions,
-        and other organizations. Notable scholarships include the Australia
-        Awards, Destination Australia, and institutional scholarships that can
-        cover tuition fees, living expenses, and travel costs.
+        Most universities require international students to demonstrate English proficiency 
+        through tests such as TOEFL or IELTS. Minimum score requirements vary by institution.
+        .
       </p>
     ),
     style: panelStyle,
   },
   {
     key: "5",
-    label: "How do I apply for an Australian student visa?",
+    label: "Are there scholarships available for international students?",
     children: (
       <p className="textContent">
         {" "}
-        To apply for an Australian student visa (Subclass 500), you need: <br />
-        1. Receive an offer of admission from an Australian educational
-        institution.
-        <br />
-        2. Obtain a Confirmation of Enrolment (CoE).
-        <br />
-        3. Create an account and apply online through the ImmiAccount portal.
-        <br />
-        4. Provide required documents, such as your CoE, passport, English
-        proficiency test results, financial evidence, and Overseas Student
-        Health Cover(OSHC).
-        <br />
-        5. Pay the visa application fee and attend a visa interview if required.
-        The processing time typically ranges from 1 to 3 months.
-        <br />
+        Yes, many universities offer scholarships for international students based on merit, need, 
+        or specific talents. Additionally, there are external scholarships and grants available from 
+        various organizations.
+      </p>
+    ),
+    style: panelStyle,
+  },
+  {
+    key: "6",
+    label: "Can international students work while studying in the USA?",
+    children: (
+      <p className="textContent">
+        {" "}
+        Yes, international students with an F-1 visa can work on-campus for up to 20 hours per 
+        week during the academic year and full-time during breaks. Off-campus work is permitted
+        under certain conditions, such as Curricular Practical Training (CPT) and Optional Practical Training (OPT).
+
+      </p>
+    ),
+    style: panelStyle,
+  },
+  {
+    key: "7",
+    label: "What is the typical academic year like in U.S. universities?",
+    children: (
+      <p className="textContent">
+        {" "}
+        The academic year is typically divided into two semesters (fall and spring) or quarters, 
+        depending on the institution. There may also be a summer session for additional courses.
+
+      </p>
+    ),
+    style: panelStyle,
+  },
+  {
+    key: "8",
+    label: "What kind of academic support is available for international students?",
+    children: (
+      <p className="textContent">
+        {" "}
+        Universities offer various support services, including tutoring centers, writing labs, academic advising, and 
+        international student offices to help with academic and cultural adjustment
+      </p>
+    ),
+    style: panelStyle,
+  },
+  {
+    key: "9",
+    label: "What are the options for staying in the USA after graduation?",
+    children: (
+      <p className="textContent">
+        {" "}
+        International students can apply for Optional Practical Training (OPT), which allows 
+        them to work in their field of study for up to 12 months (or up to 36 months for STEM graduates). 
+        Additionally, some may pursue H-1B work visas if they secure a job offer from a U.S. employer.
+
+      </p>
+    ),
+    style: panelStyle,
+  },
+  {
+    key: "10",
+    label: "How can I build a professional network while studying in the USA?",
+    children: (
+      <p className="textContent">
+        {" "}
+        Students can build their network by joining student organizations, participating in 
+        internships, attending career fairs, engaging in on-campus events, and connecting 
+        with alumni through university career services.
+
       </p>
     ),
     style: panelStyle,

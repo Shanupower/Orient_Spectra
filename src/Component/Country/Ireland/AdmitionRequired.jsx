@@ -17,54 +17,43 @@ import Icon12 from "../../../assets/Country/Evidence.png";
 
 const AdmissionData = [
   {
-    icon: Icon1,
-    title: "Cop of a valid passport",
+    icon: Icon4,
+    title: "Academic Tanscripts",
   },
   {
     icon: Icon2,
-    title: "Proof of English proficiency (OEFL/IELTS test scores)",
+    title: "Proof of Graduation",
   },
   {
     icon: Icon3,
-    title: "ACT/SAT/LSAT forUG programs, GMAT/GRE scores for PG programs",
+    title: "Standardized Test Scores",
   },
-  {
-    icon: Icon4,
-    title: "Academic Tanscripts from the previous study",
-  },
+  
   {
     icon: Icon5,
-    title:
-      "Academic Refrence Letters, the number of reference letters depends from university to university",
+    title:"Valid Visa:",
   },
   {
     icon: Icon6,
-    title: "Letters of recommendation fromthe employer/manager (if applicable)",
+    title: "Letters of Recommendation",
   },
   {
     icon: Icon7,
     title: "CV/Resume",
   },
   {
-    icon: Icon8,
-    title: "Statement of Purpose (SOP)",
-  },
-  {
-    icon: Icon9,
-    title: "Essays (if dmanded by the university)",
-  },
-  {
     icon: Icon10,
     title: "Portfolio (for specific courses)",
   },
   {
-    icon: Icon11,
-    title: "      Certificates of extracurricular activities      ",
+    icon: Icon8,
+    title: "Statement of Purpose (SOP)",
   },
   {
-    icon: Icon12,
-    title: "Evidence of Funds",
+    icon: Icon2,
+    title: "Proof of English Proficiency",
   },
+
 ];
 const AdmitionRequired = () => {
   return (
@@ -72,7 +61,12 @@ const AdmitionRequired = () => {
       <div className="admissioncard-sticy">
         <h1>
           Admission Requirements for <br />
-          <b>United States Study Abroad</b>
+          <b>Studying in Ireland</b>
+          <p>Admission requirements can vary depending on the university and the course you are applying for. 
+            Before starting the application process, it is essential to check the specific criteria and keep 
+            all necessary documents ready. Pay close attention to the application procedures, fees, and deadlines 
+            as they can differ between institutions. To ensure a fair chance of consideration, apply at least 4-6 months before the deadline.
+          </p>
         </h1>
       </div>
 

@@ -71,8 +71,12 @@ const AdmitionRequired = () => {
     <div className="section Admition-required-container">
       <div className="admissioncard-sticy">
         <h1>
-          Admission Requirements for <br />
-          <b>United States Study Abroad</b>
+          Admission Process to <br />
+          <b>Study Abroad in Canada</b>
+          <p>The process for overseas education can differ from what you're accustomed to, so if 
+            you have specific questions, contact the university to which you're applying. Here 
+            are some of the steps involved in the admission process when planning to study abroad in Canada.
+          </p>
         </h1>
       </div>
 

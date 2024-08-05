@@ -368,6 +368,15 @@
   font-weight: 600;
   color: var(--brand-color);
 }
+.admissioncard-sticy > h1 > p {
+  width: calc(90% - 1rem);
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--text-color-black);
+  line-height: 1.3;
+  position: sticky;
+  margin-top: 2rem;
+}
 .admission-container {
   display: flex;
   flex-direction: column;
