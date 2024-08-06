@@ -273,7 +273,7 @@ const Counselors = () => {
   const [arcsData, setArcsData] = useState([]);
   const [rotateGlobe, setRotateGlobe] = useState(false);
   const [textData, setTextData] = useState(TextData[countryNum]);
-
+  const [countryName, setCountryName] = useState([countryData[countryNum]]);
   useEffect(() => {
     const controls = globeEl.current.controls();
     controls.autoRotate = true;
@@ -292,10 +292,10 @@ const Counselors = () => {
     const newArcsData = countryData
       .filter((_, i) => i !== index)
       .map((end) => ({
-        startLat: marker.lat,
-        startLng: marker.lon,
-        endLat: end.lat,
-        endLng: end.lon,
+        startLat: 20.5937,
+        startLng: 78.9629,
+        endLat: marker.lat,
+        endLng: marker.lon,
         color: ["orange", "orange"],
       }));
     setArcsData(newArcsData);
@@ -376,16 +376,21 @@ const Counselors = () => {
       updateTextData(TextData[newNum]);
       setTimeout(() => {
         setRotateGlobe(false);
-        controls.autoRotateSpeed = 8;
-      }, 1000); // Match the duration of the revolution animation
+        controls.autoRotateSpeed = 4;
+      }, 1000);
+      setCountryName([countryData[newNum]]);
+
       return newNum;
     });
+    setTimeout(() => {
+      handleButtonClick(countryNum + 1);
+    }, 1000);
   };
 
   const handlePrev = () => {
     const controls = globeEl.current.controls();
     controls.autoRotateSpeed = targetRotationSpeed;
-
+    setCountryName(countryNum + 1);
     setCountryNum((prev) => {
       const newNum = (prev - 1 + countryData.length) % countryData.length;
       setRotationSpeed(targetRotationSpeed);
@@ -396,8 +401,13 @@ const Counselors = () => {
         setRotateGlobe(false);
         controls.autoRotateSpeed = 8;
       }, 1000); // Match the duration of the revolution animation
+      setCountryName([countryData[newNum]]);
+
       return newNum;
     });
+    setTimeout(() => {
+      handleButtonClick(countryNum - 1);
+    }, 1000);
   };
 
   const updateTextData = (newData) => {
@@ -466,7 +476,7 @@ const Counselors = () => {
           width={isMd ? 340 : 840}
           height={isMd ? 400 : 700}
           globeImageUrl={GlobeImge1}
-          labelsData={countryData}
+          labelsData={countryName}
           labelLat={(d) => d.lat}
           labelLng={(d) => d.lon}
           labelText={(d) => d.country}
@@ -482,9 +492,9 @@ const Counselors = () => {
           arcEndLat={(d) => d.endLat}
           arcEndLng={(d) => d.endLng}
           arcColor={(d) => d.color}
-          arcAltitude={0}
-          arcStroke={0}
-          arcDashLength={0}
+          arcAltitude={0.6}
+          arcStroke={1}
+          arcDashLength={0.3}
           arcDashGap={0}
           arcDashAnimateTime={30000}
           arcsTransitionDuration={1000}
