@@ -18,53 +18,41 @@ import Icon12 from "../../../assets/Country/Evidence.png";
 const AdmissionData = [
   {
     icon: Icon1,
-    title: "Cop of a valid passport",
+    title: "Copy of a valid passport scores",
   },
   {
     icon: Icon2,
-    title: "Proof of English proficiency (OEFL/IELTS test scores)",
-  },
-  {
-    icon: Icon3,
-    title: "ACT/SAT/LSAT forUG programs, GMAT/GRE scores for PG programs",
+    title: "French Language Test",
   },
   {
     icon: Icon4,
-    title: "Academic Tanscripts from the previous study",
+    title: "Academic Tanscripts",
   },
   {
-    icon: Icon5,
-    title:
-      "Academic Refrence Letters, the number of reference letters depends from university to university",
-  },
-  {
-    icon: Icon6,
-    title: "Letters of recommendation fromthe employer/manager (if applicable)",
-  },
-  {
-    icon: Icon7,
-    title: "CV/Resume",
-  },
+    icon: Icon10,
+    title: "Portfolio (for specific courses) ",
+  }, 
   {
     icon: Icon8,
     title: "Statement of Purpose (SOP)",
   },
   {
-    icon: Icon9,
-    title: "Essays (if dmanded by the university)",
+    icon: Icon3,
+    title: "GMAT/GRE scores for PG programs",
   },
   {
-    icon: Icon10,
-    title: "Portfolio (for specific courses)",
+    icon: Icon2,
+    title: "TOEFL/IELTS/C1 Advanced",
   },
   {
-    icon: Icon11,
-    title: "      Certificates of extracurricular activities      ",
+    icon: Icon6,
+    title: "Letters of recommendation (LOR)",
   },
   {
-    icon: Icon12,
-    title: "Evidence of Funds",
+    icon: Icon7,
+    title: "A CV (if applicable)",
   },
+
 ];
 const AdmitionRequired = () => {
   return (
@@ -72,7 +60,8 @@ const AdmitionRequired = () => {
       <div className="admissioncard-sticy">
         <h1>
           Admission Requirements for <br />
-          <b>United States Study Abroad</b>
+          <b>France Study Abroad</b>
+          <p>Here are the major requirements to study in France which we need to ensure while applying to a France university</p>
         </h1>
       </div>
 

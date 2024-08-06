@@ -16,8 +16,7 @@ const getItems = (panelStyle) => [
     children: (
       <p className="textContent">
         Most programs in Poland are taught in English, and proficiency in Polish
-        is usually not required. However, basic Polish skills may be beneficial
-        socially.
+        is usually not required but may be beneficial socially.
       </p>
     ),
     style: panelStyle,
@@ -27,10 +26,8 @@ const getItems = (panelStyle) => [
     label: "Are scholarships available for international students in Poland?",
     children: (
       <p className="textContent">
-        Yes, many Polish universities offer scholarships for international
-        students. Additionally, students should explore scholarship
-        opportunities from their home country's government and international
-        programs.
+        Yes, many Polish universities offer scholarships also check 
+        with your home country's government and international programs.
       </p>
     ),
     style: panelStyle,
@@ -40,10 +37,8 @@ const getItems = (panelStyle) => [
     label: "Can international students work while studying in Poland?",
     children: (
       <p className="textContent">
-        Yes, students from EU/EEA countries can work in Poland without
-        restrictions. Non-EU/EEA students typically have limited work
-        opportunities, often restricted to part-time work during the academic
-        year and full-time during holidays.
+        Yes, students from EU/EEA countries can work without restrictions 
+        non-EU/EEA students typically have limited work opportunities.
       </p>
     ),
     style: panelStyle,
@@ -53,9 +48,9 @@ const getItems = (panelStyle) => [
     label: "What is the cost of living for international students in Poland?",
     children: (
       <p className="textContent">
-        Living costs for international students in Poland are moderate,
-        averaging around EUR 500-800 per month. This includes expenses such as
-        accommodation, food, transportation, and other personal expenses.
+        Living costs are moderate, with expenses like accommodation, 
+        food, and transportation averaging around EUR 500-800 per month.
+
       </p>
     ),
     style: panelStyle,

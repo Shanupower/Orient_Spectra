@@ -15,7 +15,7 @@ import UKCountry from "./Component/Country/UK/Country";
 import AustraliaCountry from "./Component/Country/Australia/Country";
 import CanadaCountry from "./Component/Country/Canada/Country";
 import FranceCountry from "./Component/Country/France/Country";
-import GermanyCountry from "./Component/Country/France/Country";
+import GermanyCountry from "./Component/Country/Germany/Country";
 import IrelandCountry from "./Component/Country/Ireland/Country";
 import MaltaCountry from "./Component/Country/Malta/Country";
 import PolandCountry from "./Component/Country/Poland/Country";

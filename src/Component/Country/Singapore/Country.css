@@ -251,6 +251,15 @@
   justify-content: space-between;
   color: var(--text-color-darkblack);
 }
+.trending-course > p{
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--text-color-black);
+  line-height: 1.3;
+  position: relative;
+  margin-top: 2rem;
+}
+
 .trending-course > h1::after,
 .univercity-card > h1::after {
   content: "";

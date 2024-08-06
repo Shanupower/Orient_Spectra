@@ -68,6 +68,7 @@ const Hero = ({ blog, event }) => {
     } else if (data.link == "event") {
       navigate("/events", { state: { data: event } });
     }
+    
   };
 
   return (

@@ -26,9 +26,8 @@ const getItems = (panelStyle) => [
     label: "What is the cost of living in Singapore?",
     children: (
       <p className="textContent">
-        Monthly expenses for international students in Singapore range from SGD
-        1,000 to SGD 2,500. This includes accommodation, food, transport, and
-        other personal expenses.
+        Monthly expenses range from SGD 1,000 to SGD 2,500, 
+        including accommodation, food, transport, and other personal expenses
       </p>
     ),
     style: panelStyle,
@@ -38,9 +37,8 @@ const getItems = (panelStyle) => [
     label: "Are scholarships available for international students?",
     children: (
       <p className="textContent">
-        Yes, international students in Singapore have access to various
-        scholarships offered by universities, the Singapore government, and
-        private organizations.
+        Yes, various scholarships are offered by universities, 
+        the Singapore government, and private organizations.
       </p>
     ),
     style: panelStyle,
@@ -50,8 +48,8 @@ const getItems = (panelStyle) => [
     label: "Can international students work part-time?",
     children: (
       <p className="textContent">
-        Yes, international students in Singapore can work up to 16 hours per
-        week during term time and full-time during vacations.
+        Yes, students can work up to 16 hours per week during 
+        term time and full-time during vacations.
       </p>
     ),
     style: panelStyle,
@@ -61,9 +59,9 @@ const getItems = (panelStyle) => [
     label: "What are the accommodation options?",
     children: (
       <p className="textContent">
-        Accommodation options for students in Singapore include on-campus
-        hostels, off-campus private housing, and shared apartments. Costs vary
-        depending on the type and location of accommodation.
+        Options include on-campus hostels, off-campus private housing, 
+        and shared apartments, with costs varying by type and location.
+
       </p>
     ),
     style: panelStyle,

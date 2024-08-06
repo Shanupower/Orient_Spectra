@@ -15,9 +15,9 @@ const getItems = (panelStyle) => [
     label: "What are the language requirements for studying in Switzerland?",
     children: (
       <p className="textContent">
-        Most universities in Switzerland offer programs in German, French, or
-        Italian. English-taught programs are also available and typically
-        require proof of English proficiency such as TOEFL or IELTS scores.
+        Most universities offer programs in German, French, or Italian, 
+        but many also offer English-taught programs requiring proof of English proficiency.
+
       </p>
     ),
     style: panelStyle,
@@ -27,9 +27,8 @@ const getItems = (panelStyle) => [
     label: "How much does it cost to study in Switzerland?",
     children: (
       <p className="textContent">
-        Tuition fees at public universities in Switzerland range from CHF 500 to
-        CHF 2,000 per semester. Living expenses are relatively high, averaging
-        around CHF 1,500 per month.
+        Tuition fees range from CHF 500 to CHF 2,000 per semester for public universities, 
+        but living expenses can be high, averaging CHF 1,500 per month.
       </p>
     ),
     style: panelStyle,
@@ -39,9 +38,8 @@ const getItems = (panelStyle) => [
     label: "Can international students work while studying in Switzerland?",
     children: (
       <p className="textContent">
-        Yes, international students in Switzerland can work up to 15 hours per
-        week during semesters and full-time during holidays. However, there are
-        restrictions for non-EU/EFTA students.
+        Yes, international students can work up to 15 hours per week during semesters 
+        and full-time during holidays, but restrictions apply for non-EU/EFTA students.
       </p>
     ),
     style: panelStyle,
@@ -51,9 +49,8 @@ const getItems = (panelStyle) => [
     label: "What are the visa requirements for studying in Switzerland?",
     children: (
       <p className="textContent">
-        Non-EU/EFTA students need a student visa, proof of financial resources,
-        acceptance from a Swiss university, and health insurance. EU/EFTA
-        students must register with local authorities.
+        Non-EU/EFTA students need a student visa, proof of financial resources, university acceptance, and
+        health insurance. EU/EFTA students require registration with local authorities.
       </p>
     ),
     style: panelStyle,
@@ -64,10 +61,8 @@ const getItems = (panelStyle) => [
       "Are scholarships available for international students in Switzerland?",
     children: (
       <p className="textContent">
-        Yes, international students in Switzerland have access to various
-        scholarships offered by the Swiss government, universities, and private
-        organizations. These scholarships are often based on academic merit or
-        specific criteria.
+        Yes, various scholarships are available from the Swiss government, universities, 
+        and private organizations, often based on academic merit or specific criteria.
       </p>
     ),
     style: panelStyle,
