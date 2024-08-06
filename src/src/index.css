@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "OverusedGrotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  word-spacing: 2px;
+  letter-spacing: 0.2px;
+}
+@font-face {
+  font-family: "OverusedGrotesk";
+  src: url("src/fonts/woff/OverusedGrotesk-Light.woff") format("woff");
+}
+
+body {
+  min-width: 100%;
+  min-height: 100vh;
+  -ms-overflow-style: none;
+}
+:root {
+  --brand-color: #ff7300;
+  --brand-color-light: #eb7a1e;
+
+  --text-color-white: #fefefe;
+  --text-color-lightwhite: #f2f2f2;
+
+  --text-color-black: #3a3a3a;
+  --text-color-gray: #bfbfbf;
+  --text-color-darkgray: rgba(122, 122, 122, 1);
+  --box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  --text-color-darkblack: #1e1e1e;
+  --text-color-blue: #1f7aff;
+  --bg-color: #e7e7e7;
+  --rbrand-color: #03118d8a;
+
+
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.Link_route {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+html {
+  scrollbar-width: none;
+}
+
+.section {
+  padding: 0.5rem 6%;
+}
+
+.section2 {
+  padding: 1rem 6%;
+}
