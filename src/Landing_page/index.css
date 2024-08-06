@@ -2284,6 +2284,22 @@ canvas {
     right: -8rem;
     bottom: 1rem;
   }
+  .countryName_sectiuon > strong {
+    font-size: 36px;
+    line-height: 1.1;
+    color: var(--text-color-darkblack);
+  }
+  .countryName_sectiuon {
+    margin-bottom: 2rem;
+  }
+  .countryName_sectiuon > p {
+    font-weight: 400;
+    font-size: 36px;
+    display: flex;
+    text-align: left;
+    line-height: 1.1;
+    color: var(--brand-color);
+  }
 }
 
 .discovermoreButton {
@@ -2458,6 +2474,9 @@ canvas {
     width: 100%;
     flex-direction: column-reverse;
     margin-bottom: 4rem;
+  }
+  .counselor_left_side{
+    width: 100%;
   }
   .counselor_left_side > p {
     font-weight: 400;

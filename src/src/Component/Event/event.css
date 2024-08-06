@@ -1,0 +1,280 @@
+.Event-hero-container {
+  width: 100%;
+  height: 100vh;
+}
+
+.event-hero-section {
+  width: 100%;
+  height: 96vh;
+  border-radius: 20px;
+  padding: 3.2rem;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+ 
+}
+
+.event-hero-leftcard {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  
+}
+
+.Experience-leftcard {
+  width: calc(50% - 1rem);
+  background-color: #ffffff75;
+  padding: 1rem;
+}
+.Experience-leftcard > h1 {
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 1rem;
+  color: var(--text-color-darkblack);
+}
+.Experience-leftcard > p {
+  width: 60%;
+  color: var(--text-color-darkblack);
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.Experience-rightcard {
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+.eventLandscapeIcon {
+  font-size: 60px !important;
+  color: var(--text-color-white);
+}
+
+.bookPass-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 6rem;
+}
+.eventarrowcard {
+  width: calc(50% - 1rem);
+  display: flex;
+  gap: 1.2rem;
+}
+.eventRightCircleAroow,
+.eventLEftCircleAroow {
+  color: var(--text-color-darkgray);
+  border: 1px solid var(--text-color-darkgray);
+}
+.eventLEftCircleAroow {
+  rotate: 180deg;
+}
+.eventUpcomingcard > h1 {
+  color: var(--text-color-darkblack);
+  font-size: 28px;
+}
+.bookPass-cardd {
+  display: flex;
+  background-color: var(--text-color-white);
+  padding: 2rem;
+  border-radius: 16px;
+  gap: 2rem;
+  align-items: center;
+  width: calc(50% - 1rem);
+  justify-content: space-between;
+}
+.BookRightCircleAroow {
+  color: var(--text-color-darkgray);
+  border: 1px solid var(--text-color-darkgray);
+  height: 50px !important;
+  width: 50px !important;
+}
+
+.success-story-container {
+  margin-block: 2rem;
+}
+.event-datecard {
+  display: flex;
+  gap: 2rem;
+}
+.event-datecard > b {
+  width: calc(50% - 1rem);
+  font-size: 20px;
+  color: var(--text-color-darkblack);
+}
+.event-datecard > p {
+  width: calc(50% - 1rem);
+  font-size: 22px;
+  color: var(--text-color-darkblack);
+}
+.success-stroy-section {
+  margin-top: 3.2rem;
+}
+.success-stroy-section > h2,
+.success-stroy-section > h1 {
+  font-size: 50px;
+  font-weight: 500;
+  color: var(--text-color-darkblack);
+  line-height: 1.2;
+}
+.success-stroy-section > h1 {
+  color: var(--brand-color);
+}
+
+.success-stroy-section > h2 {
+  border-bottom: 2px solid var(--text-color-black);
+  padding-bottom: 1rem;
+}
+
+.envet-date-coontainer {
+  margin-block: 2rem;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.event-leftdate-section {
+  width: calc(30% - 1rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.event-leftdate-section > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.51rem;
+}
+.event-leftdate-section > div > h1 {
+  font-size: 28px;
+  color: var(--text-color-darkblack);
+}
+.event-leftdate-section > div > b {
+  font-size: 18px;
+  color: var(--text-color-darkgray);
+}
+.enevtdateArrowdown,
+.enevtdateArrowUp {
+  color: var(--text-color-darkgray);
+  border: 1px solid var(--text-color-darkgray);
+  height: 50px !important;
+  width: 50px !important;
+}
+.enevtdateArrowdown {
+  rotate: 90deg;
+}
+.enevtdateArrowUp {
+  rotate: -90deg;
+}
+.event-rightdate-section {
+  width: calc(64% - 1rem);
+}
+
+.success-storytitle-container {
+  display: flex;
+  gap: 2rem;
+}
+.Mui-expanded {
+  transform: rotate(0deg) !important;
+}
+.css-1086bdv-MuiPaper-root-MuiAccordion-root {
+  box-shadow: none !important;
+  padding-block: 0.8rem;
+}
+.success-titleleft-card {
+  width: calc(100%);
+}
+.no-data-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: var(--text-color-darkgray);
+}
+.success-titleRight-card {
+  width: calc(60% - 1rem);
+}
+.success-titleleft-card > h3 {
+  font-size: 18px;
+  color: var(--text-color-darkblack);
+  margin-bottom: 0.6rem;
+}
+.success-titleleft-card > span {
+  color: var(--text-color-darkgray);
+}
+.success-titleRight-card > h2 {
+  font-size: 18px;
+  font-weight: 500;
+}
+.success-titleRight-card > p {
+  font-size: 16px;
+  color: var(--text-color-darkgray);
+  line-height: 1.2;
+  margin-top: 0.6rem;
+}
+
+.event-list-card {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  /* gap: 2rem; */
+  border-top: 2px solid var(--text-color-darkgray);
+}
+.event-list-card > div {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--text-color-darkgray);
+  padding: 1.2rem 0;
+  cursor: pointer;
+}
+.event-list-card > div > p {
+  font-size: 18px;
+  width: 70%;
+  color: var(--text-color-darkblack);
+  font-weight: 600;
+}
+.event-list-card > div > span {
+  font-size: 14px;
+  color: var(--text-color-darkgray);
+}
+.eventLeftCircleArrow {
+  rotate: 180deg;
+}
+
+@media (max-width: 1067px) {
+  .Event-hero-container {
+    margin-block: 6rem;
+  }
+  .event-hero-section {
+    padding: 1rem;
+  }
+  .envet-date-coontainer,
+  .bookPass-container,
+  .bookPass-cardd,
+  .event-hero-leftcard {
+    flex-direction: column;
+  }
+  .event-rightdate-section,
+  .event-leftdate-section,
+  .bookPass-cardd,
+  .eventarrowcard,
+  .Experience-rightcard,
+  .Experience-leftcard > p,
+  .Experience-leftcard {
+    width: 100%;
+  }
+  .Experience-leftcard > h1 {
+    font-size: 40px;
+  }
+  .event-hero-section {
+    height: 90vh;
+  }
+}

@@ -1,6 +1,9 @@
 import React, { useRef, useState, useEffect } from "react";
 import Globe from "react-globe.gl";
 import GlobeImge1 from "../assets/images/earth-night.jpg";
+import GlobeImg2 from "../assets/11443-NNB1FG-01.png"
+import GlobeImg3 from "../assets/727 [Converted]-01.png"
+
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import * as THREE from "three";
 import "./index.css";
@@ -33,7 +36,7 @@ const TextData = [
     {
       lat: -10,
       lng: -200,
-      alt: 0.16,
+      alt: 0.4,
       text: "30+ Universities",
       color: "rgb(285 120 0)",
     },
@@ -49,7 +52,7 @@ const TextData = [
     {
       lat: -10,
       lng: -200,
-      alt: 0.26,
+      alt: 0.4,
       text: "50+ Universities",
       color: "rgb(285 120 0)",
     },
@@ -59,13 +62,13 @@ const TextData = [
       text: "Australia",
       lat: 30,
       lng: 20,
-      alt: 0.22,
+      alt: 0.4,
       color: "#1f7aff",
     },
     {
       lat: -10,
       lng: -200,
-      alt: 0.16,
+      alt: 0.4,
       text: "20+ Universities",
       color: "rgb(285 120 0)",
     },
@@ -81,7 +84,7 @@ const TextData = [
     {
       lat: -10,
       lng: -200,
-      alt: 0.16,
+       alt: 0.4,
       text: "20+ Universities",
       color: "rgb(285 120 0)",
     },
@@ -97,7 +100,7 @@ const TextData = [
     {
       lat: -10,
       lng: -200,
-      alt: 0.16,
+       alt: 0.4,
       text: "100+ Universities",
       color: "rgb(285 120 0)",
     },
@@ -113,7 +116,7 @@ const TextData = [
     {
       lat: -10,
       lng: -200,
-      alt: 0.16,
+       alt: 0.4,
       text: "15+ Universities",
       color: "rgb(285 120 0)",
     },
@@ -129,7 +132,7 @@ const TextData = [
     {
       lat: -10,
       lng: -200,
-      alt: 0.16,
+       alt: 0.4,
       text: "30+ Universities",
       color: "rgb(285 120 0)",
     },
@@ -145,7 +148,7 @@ const TextData = [
     {
       lat: -10,
       lng: -200,
-      alt: 0.16,
+       alt: 0.4,
       text: "10+ Universities",
       color: "rgb(285 120 0)",
     },
@@ -161,7 +164,7 @@ const TextData = [
     {
       lat: -10,
       lng: -200,
-      alt: 0.16,
+       alt: 0.4,
       text: "10+ Universities",
       color: "rgb(285 120 0)",
     },
@@ -177,7 +180,7 @@ const TextData = [
     {
       lat: -10,
       lng: -200,
-      alt: 0.16,
+       alt: 0.4,
       text: "10+ Universities",
       color: "rgb(285 120 0)",
     },
@@ -193,7 +196,7 @@ const TextData = [
     {
       lat: -10,
       lng: -200,
-      alt: 0.16,
+       alt: 0.4,
       text: "25+ Universities",
       color: "rgb(285 120 0)",
     },
@@ -468,7 +471,7 @@ const Counselors = () => {
         </div>
         <div className="leftandrightArrow">
           <button className="GlowbLeftIccon" onClick={handlePrev}>
-            <ArrowForwardIcon />
+            <ArrowForwardIcon /> 
           </button>
           <button className="GlobRightArrow" onClick={handleNext}>
             <ArrowForwardIcon />
@@ -482,7 +485,7 @@ const Counselors = () => {
           ref={globeEl}
           width={isMd ? 340 : 840}
           height={isMd ? 400 : 700}
-          globeImageUrl={GlobeImge1}
+          globeImageUrl={GlobeImg3}
           labelsData={[...countryName, India]}
 
           labelLat={(d) => d.lat}
