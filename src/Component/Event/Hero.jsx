@@ -27,12 +27,12 @@ const Hero = ({ eventData }) => {
             alt=""
           />
         </div>
-        <div className="event-hero-leftcard">
+        {/* <div className="event-hero-leftcard">
           <div className="Experience-leftcard">
             <h1>{eventData[EventId]?.attributes?.Headline}</h1>
             <p>{eventData[EventId]?.attributes?.Shortdescription}</p>
           </div>
-        </div>
+        </div> */}
         <div className="bookPass-container">
           <div className="eventarrowcard">
             <CircleArrow

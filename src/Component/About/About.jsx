@@ -23,7 +23,7 @@ const About = () => {
       <Counselors />
       <Consectetuer />
       <Founders />
-      <AboutCountry />
+      {/* <AboutCountry /> */}
       <Awarded />
       <Events />
       <Testimonial />

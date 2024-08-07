@@ -40,17 +40,19 @@ const Blog = () => {
             />
           </div>
           <div className="titleblogContent">
-            <span>New</span>
-            <p>
+            {/* <span>New</span> */}
+            {/* <p>
               {blogData[0]?.attributes?.Title.split(" ").slice(0, 3).join(" ")}
             </p>
             <strong>
               {blogData[0]?.attributes?.Title.split(" ").slice(3).join(" ")}
-            </strong>
+            </strong> */}
           </div>
           <div className="blogContent">
             {" "}
-            <p>{blogData[0]?.attributes?.Short_Description}</p>
+            <p>
+              {/* {blogData[0]?.attributes?.Short_Description} */}
+              </p>
             <Link to={`blog-content/${blogData[0]?.id}`}>
               <ArrowForwardIcon className="rightArrowBlog" />
             </Link>

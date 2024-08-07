@@ -4,6 +4,7 @@ import Cource from "../assets/GroupImg1.png";
 import { NavLink } from "react-router-dom";
 import Img2 from "../assets/GroupImg2.png";
 import Img3 from "../assets/Asset 1@2x 2 (1).png";
+import Img4 from "../assets/About2/Mentorship3.svg";
 const Explore = () => {
   return (
     <>
@@ -17,14 +18,20 @@ const Explore = () => {
             <div className="explore_rightCard_img">
               <img src={Img3} alt="" />
             </div>
-            <div>
-              <h3>Mentorship</h3>
-              <p className="courseText">
-                Orient Spectra empowers students to achieve academic and career
-                goals through personalized mentorship. Our program guides
-                students at all stages of their study abroad journey, from
-                initial exploration to program application.
-              </p>
+            <div className="mentorShipSection-container">
+              <div className="Image4Card">
+                <img src={Img4} alt="" />
+              </div>
+              <div className="mentorShip_card">
+                <h3>Mentorship</h3>
+                <p className="courseText">
+                  Orient Spectra empowers students to achieve academic and
+                  career goals through personalized mentorship. Our program
+                  guides students at all stages of their study abroad journey,
+                  from initial exploration to program application.
+                </p>
+              </div>
+
               <NavLink style={{ color: "#fff" }} to={"/Mentorship"}>
                 <ArrowForwardIcon
                   sx={{ fontSize: "40px" }}

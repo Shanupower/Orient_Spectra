@@ -493,7 +493,7 @@ const Counselors = () => {
           labelText={(d) => d.country}
           labelSize={2.6}
           // labelColor={() => "rgba(255, 165, 0, 0.75)"}
-          labelColor={() => "#1f7aff"}
+          labelColor={() => "#fff"}
           labelDotRadius={0.5}
           labelResolution={2}
           arcsData={arcsData}

@@ -18,7 +18,7 @@ const Events = () => {
       if (response?.status === 200) {
         setUpcominngEventData(response?.data.data);
       }
-    } catch (error) {
+    } catch (error) {   
       console.log("ERROR OCCURED WHILE FETCHING:", error.message);
     }
   };

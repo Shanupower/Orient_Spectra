@@ -49,9 +49,9 @@ const Hero = ({ blog, event }) => {
       },
       {
         id: 4,
-        heading: event?.attributes?.Headline || "Reasons to Study in Germany",
+        heading: "",
         bgImage: `http://157.173.222.81:1337${event?.attributes?.Poster?.data?.attributes.url}`,
-        subtext: event?.attributes?.Shortdescription,
+        subtext: "",
         link: "event",
       },
     ],
@@ -68,7 +68,6 @@ const Hero = ({ blog, event }) => {
     } else if (data.link == "event") {
       navigate("/events", { state: { data: event } });
     }
-    
   };
 
   return (
