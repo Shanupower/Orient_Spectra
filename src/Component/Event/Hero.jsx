@@ -23,7 +23,7 @@ const Hero = ({ eventData }) => {
       <div className="event-hero-section">
         <div className="Experience-rightcard">
           <img
-            src={`http://157.173.222.81:1337${eventData[EventId]?.attributes?.Poster?.data?.attributes.url}`}
+            src={`https://strapi.orientspectra.com${eventData[EventId]?.attributes?.Poster?.data?.attributes.url}`}
             alt=""
           />
         </div>

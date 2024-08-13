@@ -48,7 +48,7 @@ const YouMightAlsoLike = ({ RecentBlogs }) => {
                   />
                 )}{" "}
                 <img
-                  src={`http://157.173.222.81:1337${value?.data?.attributes?.Headline_image?.data?.attributes?.formats?.thumbnail?.url}`}
+                  src={`https://strapi.orientspectra.com${value?.data?.attributes?.Headline_image?.data?.attributes?.formats?.thumbnail?.url}`}
                   alt="alty"
                   onLoad={() => setIsLoading(false)}
                 />
@@ -81,7 +81,7 @@ export default function BlogBody() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://157.173.222.81:1337/api/blogs/${id}/?populate=*  `
+          `https://strapi.orientspectra.com/api/blogs/${id}/?populate=*  `
         );
         if (response?.status === 200) {
           setBlogContent(response?.data.data);
@@ -98,7 +98,7 @@ export default function BlogBody() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://157.173.222.81:1337/api/blogs/?populate=*&fields[0]=Title&fields[1]=Date&fields[2]=Short_Description `
+          `https://strapi.orientspectra.com/api/blogs/?populate=*&fields[0]=Title&fields[1]=Date&fields[2]=Short_Description `
         );
         if (response?.status === 200) {
           setPostData(response?.data.data);
@@ -144,7 +144,7 @@ export default function BlogBody() {
               />
             )}{" "}
             <img
-              src={`http://157.173.222.81:1337${blogContent?.attributes?.Headline_image?.data?.attributes?.formats?.large?.url}`}
+              src={`https://strapi.orientspectra.com${blogContent?.attributes?.Headline_image?.data?.attributes?.formats?.large?.url}`}
               alt="blog"
               onLoad={() => setIsLoading(false)}
             />

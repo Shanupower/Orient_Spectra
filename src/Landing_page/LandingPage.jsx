@@ -23,7 +23,7 @@ const LandingPage = () => {
   const fetchBlogData = async () => {
     try {
       const response = await axios.get(
-        `http://157.173.222.81:1337/api/blogs?populate=*`
+        `https://strapi.orientspectra.com/api/blogs?populate=*`
       );
       if (response?.status === 200) {
         setBlog(response?.data.data[0]);
@@ -36,7 +36,7 @@ const LandingPage = () => {
   const fetchEventData = async () => {
     try {
       const response = await axios.get(
-        `http://157.173.222.81:1337/api/events?filters[Date_of_the_event][$gt]=${currentDate}?sort[0]=Date_of_the_event&populate=*`
+        `https://strapi.orientspectra.com/api/events?sort[0]=Date_of_the_event&populate=*`
       );
       if (response?.status === 200) {
         setEvent(response?.data.data[0]);
@@ -49,6 +49,10 @@ const LandingPage = () => {
     fetchBlogData();
     fetchEventData();
   }, []);
+  console.log(event);
+  console.log(blog);
+
+ 
 
   return (
     <>

@@ -29,7 +29,7 @@ const EventDargCard = ({ Eventdata }) => {
             <span>{item?.attributes?.Date_of_the_event}</span>
             <div className="eventCard-image-containeer">
               <img
-                src={` http://157.173.222.81:1337${item?.attributes?.Poster?.data?.attributes?.formats?.thumbnail?.url}`}
+                src={` https://strapi.orientspectra.com${item?.attributes?.Poster?.data?.attributes?.formats?.thumbnail?.url}`}
                 alt=""
               />
             </div>

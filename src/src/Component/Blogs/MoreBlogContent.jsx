@@ -38,7 +38,10 @@ const YouMightAlsoLike = ({ RecentBlogs }) => {
             <div className="youmight-img-content">
               <div className="youmight-img-card">
                 {value.img && (
-                  <img src={`http://157.173.222.81:1337${value?.img}`} alt="" />
+                  <img
+                    src={`https://strapi.orientspectra.com${value?.img}`}
+                    alt=""
+                  />
                 )}
               </div>
               <p>{value.date}</p>
@@ -67,7 +70,7 @@ export default function MoreBlogContent() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://157.173.222.81:1337/api/blogs?populate=*"
+          "https://strapi.orientspectra.com/api/blogs?populate=*"
         );
         if (response?.status === 200) {
           setPostData(response?.data.data);
@@ -130,7 +133,7 @@ export default function MoreBlogContent() {
           </div>
           <div className="singleBlogImgae-container">
             <img
-              src={`http://157.173.222.81:1337${attributes?.Headline_image.data.attributes.formats.large.url}`}
+              src={`https://strapi.orientspectra.com${attributes?.Headline_image.data.attributes.formats.large.url}`}
               alt="blog"
             />
           </div>

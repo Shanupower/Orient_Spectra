@@ -15,7 +15,7 @@ const Event = () => {
   const fetchUpcomingEventData = async () => {
     try {
       const response = await axios.get(
-        `http://157.173.222.81:1337/api/events?filters[Date_of_the_event][$gt]=${currentDate}?sort[0]=Date_of_the_event&populate=*`
+        `https://strapi.orientspectra.com/api/events?filters[Date_of_the_event][$gt]=${currentDate}?sort[0]=Date_of_the_event&populate=*`
       );
       if (response?.status === 200) {
         setUpcominngEventData(response?.data.data);
@@ -27,7 +27,7 @@ const Event = () => {
   const fetchCompletedEventdata = async () => {
     try {
       const response = await axios.get(
-        `http://157.173.222.81:1337/api/events?filters[Date_of_the_event][$lt]=${currentDate}?sort[0]=Date_of_the_event&populate=*`
+        `https://strapi.orientspectra.com/api/events?filters[Date_of_the_event][$lt]=${currentDate}?sort[0]=Date_of_the_event&populate=*`
       );
       if (response?.status === 200) {
         setCompletedEventData(response?.data.data);

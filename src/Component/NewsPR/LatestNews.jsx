@@ -19,7 +19,7 @@ const LatestNews = ({ NewsData }) => {
             />
           )}{" "}
           <img
-            src={`http://157.173.222.81:1337${NewsData?.attributes?.Headline_image?.data[0]?.attributes?.formats?.large?.url}`}
+            src={`https://strapi.orientspectra.com${NewsData?.attributes?.Headline_image?.data[0]?.attributes?.formats?.large?.url}`}
             alt=""
           />
         </div>
