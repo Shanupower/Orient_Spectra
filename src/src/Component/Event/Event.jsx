@@ -14,7 +14,7 @@ const Event = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://157.173.222.81:1337/api/events?sort[0]=Date_of_the_event&populate=*"
+          "https://strapi.orientspectra.com/api/events?sort[0]=Date_of_the_event&populate=*"
         );
         if (response?.status === 200) {
           setEventData(response?.data.data);
@@ -30,7 +30,7 @@ const Event = () => {
     const fetchCompletedData = async () => {
       try {
         const response = await axios.get(
-          "http://157.173.222.81:1337/api/completed-events&populate=*"
+          "https://strapi.orientspectra.com/api/completed-events&populate=*"
         );
         if (response?.status === 200) {
           setCompletedEventdata(response?.data.data);

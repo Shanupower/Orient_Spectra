@@ -44,7 +44,7 @@ const BestBlog = ({ data }) => {
                 />
               )}
               <img
-                src={`http://157.173.222.81:1337${item?.attributes?.Headline_image?.data?.attributes?.formats?.thumbnail?.url}`}
+                src={`https://strapi.orientspectra.com${item?.attributes?.Headline_image?.data?.attributes?.formats?.thumbnail?.url}`}
                 alt="Blog Image 1"
                 className="blog-image"
                 onLoad={() => setIsLoading(false)}

@@ -41,7 +41,7 @@ const Hero = ({ blog, event }) => {
       {
         id: 3,
         heading: blog?.attributes?.Title || "Rise of new education",
-        bgImage: `http://157.173.222.81:1337${blog?.attributes?.Headline_image?.data?.attributes?.formats?.large?.url}`,
+        bgImage: `https://strapi.orientspectra.com${blog?.attributes?.Headline_image?.data?.attributes?.formats?.large?.url}`,
         subtext:
           blog?.attributes?.Short_Description ||
           "– US, UK, Australia and Canada – face headwinds",
@@ -49,9 +49,9 @@ const Hero = ({ blog, event }) => {
       },
       {
         id: 4,
-        heading: event?.attributes?.Headline || "Reasons to Study in Germany",
-        bgImage: `http://157.173.222.81:1337${event?.attributes?.Poster?.data?.attributes.url}`,
-        subtext: event?.attributes?.Shortdescription,
+        heading: "",
+        bgImage: `https://strapi.orientspectra.com${event?.attributes?.Poster?.data?.attributes?.url}`,
+        subtext: "",
         link: "event",
       },
     ],
@@ -68,7 +68,6 @@ const Hero = ({ blog, event }) => {
     } else if (data.link == "event") {
       navigate("/events", { state: { data: event } });
     }
-    
   };
 
   return (

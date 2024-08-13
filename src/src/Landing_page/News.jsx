@@ -13,7 +13,7 @@ const News = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://157.173.222.81:1337/api/news-and-prs?populate=*"
+          "https://strapi.orientspectra.com/api/news-and-prs?populate=*"
         );
         if (response?.status === 200) {
           setNewsData(response?.data?.data || []);
@@ -34,7 +34,7 @@ const News = () => {
             <div className="media-card" key={item?.id}>
               <div className="media-video">
                 <img
-                  src={`http://157.173.222.81:1337${item?.attributes?.Headline_image?.data[0]?.attributes?.formats?.large?.url}`}
+                  src={`https://strapi.orientspectra.com${item?.attributes?.Headline_image?.data[0]?.attributes?.formats?.large?.url}`}
                   alt=""
                 />
                 {/* <img className="playIcon" src={Play} alt="" /> */}

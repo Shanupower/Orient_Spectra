@@ -25,7 +25,7 @@ const Hero = ({ data }) => {
             />
           )}
           <img
-            src={`http://157.173.222.81:1337${data[0]?.attributes?.Headline_image?.data?.attributes?.formats?.large?.url}`}
+            src={`https://strapi.orientspectra.com${data[0]?.attributes?.Headline_image?.data?.attributes?.formats?.large?.url}`}
             alt="Blog Image 1"
             onLoad={() => setIsLoading(false)}
             className="blog-image"
@@ -56,7 +56,7 @@ const Hero = ({ data }) => {
               />
             )}
             <img
-              src={`http://157.173.222.81:1337${data[1]?.attributes?.Headline_image?.data?.attributes?.formats?.large?.url}`}
+              src={`https://strapi.orientspectra.com${data[1]?.attributes?.Headline_image?.data?.attributes?.formats?.large?.url}`}
               alt="Blog Image 1"
               className="blog-image"
               onLoad={() => setIsLoading(false)}
@@ -82,7 +82,7 @@ const Hero = ({ data }) => {
               />
             )}
             <img
-              src={`http://157.173.222.81:1337${data[2]?.attributes?.Headline_image?.data?.attributes?.formats?.thumnail?.url}`}
+              src={`https://strapi.orientspectra.com${data[2]?.attributes?.Headline_image?.data?.attributes?.formats?.thumnail?.url}`}
               alt=""
               className="blog-image"
               onLoad={() => setIsLoading(false)}

@@ -7,48 +7,47 @@ import SuccessStory from "./SuccessStory";
 import axios from "axios";
 
 const Event = () => {
-  const [Eventdata, setEventData] = useState([]);
-  const [CompletedEventdata, setCompletedEventdata] = useState([]);
+  const [upcomingEventdata, setUpcominngEventData] = useState([]);
+  const [CompletedEventdata, setCompletedEventData] = useState([]);
+  const formattedDate = new Date();
+  const currentDate = formattedDate.toISOString().split("T")[0];
+
+  const fetchUpcomingEventData = async () => {
+    try {
+      const response = await axios.get(
+        `https://strapi.orientspectra.com/api/events?filters[Date_of_the_event][$gt]=${currentDate}?sort[0]=Date_of_the_event&populate=*`
+      );
+      if (response?.status === 200) {
+        setUpcominngEventData(response?.data.data);
+      }
+    } catch (error) {
+      console.log("ERROR OCCURED WHILE FETCHING:", error.message);
+    }
+  };
+  const fetchCompletedEventdata = async () => {
+    try {
+      const response = await axios.get(
+        `https://strapi.orientspectra.com/api/events?filters[Date_of_the_event][$lt]=${currentDate}?sort[0]=Date_of_the_event&populate=*`
+      );
+      if (response?.status === 200) {
+        setCompletedEventData(response?.data.data);
+      }
+    } catch (error) {
+      console.log("ERROR OCCURED WHILE FETCHING:", error.message);
+    }
+  };
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(
-          "http://157.173.222.81:1337/api/events?sort[0]=Date_of_the_event&populate=*"
-        );
-        if (response?.status === 200) {
-          setEventData(response?.data.data);
-        }
-      } catch (error) {
-        console.log("ERROR OCCURED WHILE FETCHING:", error.message);
-      }
-    };
-
-    fetchData();
-  }, []);
-  useEffect(() => {
-    const fetchCompletedData = async () => {
-      try {
-        const response = await axios.get(
-          "http://157.173.222.81:1337/api/completed-events&populate=*"
-        );
-        if (response?.status === 200) {
-          setCompletedEventdata(response?.data.data);
-        }
-      } catch (error) {
-        console.log("ERROR OCCURED WHILE FETCHING:", error.message);
-      }
-    };
-
-    // fetchCompletedData();
+    fetchUpcomingEventData();
+    fetchCompletedEventdata();
   }, []);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
     <>
-      <Hero eventData={Eventdata} />
-      <SuccessStory CompletedEventdata={Eventdata} />
+      <Hero eventData={upcomingEventdata} />
+      <SuccessStory CompletedEventdata={CompletedEventdata} />
       <GetTuchWithUs />
     </>
   );

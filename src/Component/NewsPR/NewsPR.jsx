@@ -15,7 +15,7 @@ const NewsPR = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://157.173.222.81:1337/api/news-and-prs?populate=*"
+          "https://strapi.orientspectra.com/api/news-and-prs?populate=*"
         );
         if (response?.status === 200) {
           setNewsData(response?.data?.data || []);

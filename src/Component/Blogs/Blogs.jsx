@@ -11,7 +11,7 @@ const Blogs = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://157.173.222.81:1337/api/blogs/?populate=*&fields[0]=Title&fields[1]=Date&fields[2]=Short_Description `
+          `https://strapi.orientspectra.com/api/blogs/?populate=*&fields[0]=Title&fields[1]=Date&fields[2]=Short_Description `
         );
         if (response?.status === 200) {
           const sortedData = response.data.data.sort(
@@ -27,7 +27,7 @@ const Blogs = () => {
 
     fetchData();
   }, []);
-console.log("DAATAATTA",data);
+  console.log("DAATAATTA", data);
   return (
     <>
       <Hero data={data.slice(0, 3)} />

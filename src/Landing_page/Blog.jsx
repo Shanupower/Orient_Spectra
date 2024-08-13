@@ -12,7 +12,7 @@ const Blog = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://157.173.222.81:1337/api/blogs?populate=*`
+          `https://strapi.orientspectra.com/api/blogs?populate=*`
         );
         if (response?.status === 200) {
           const sortedData = response.data.data.sort(
@@ -35,22 +35,22 @@ const Blog = () => {
         <div className="leftBlogCard">
           <div className="leftBlogCard-image-card">
             <img
-              src={`http://157.173.222.81:1337${blogData[0]?.attributes?.Headline_image?.data?.attributes?.formats?.thumbnail?.url}`}
+              src={`https://strapi.orientspectra.com${blogData[0]?.attributes?.Headline_image?.data?.attributes?.formats?.thumbnail?.url}`}
               alt="Blog Image 1"
             />
           </div>
           <div className="titleblogContent">
-            <span>New</span>
-            <p>
+            {/* <span>New</span> */}
+            {/* <p>
               {blogData[0]?.attributes?.Title.split(" ").slice(0, 3).join(" ")}
             </p>
             <strong>
               {blogData[0]?.attributes?.Title.split(" ").slice(3).join(" ")}
-            </strong>
+            </strong> */}
           </div>
           <div className="blogContent">
             {" "}
-            <p>{blogData[0]?.attributes?.Short_Description}</p>
+            <p>{/* {blogData[0]?.attributes?.Short_Description} */}</p>
             <Link to={`blog-content/${blogData[0]?.id}`}>
               <ArrowForwardIcon className="rightArrowBlog" />
             </Link>
@@ -66,7 +66,7 @@ const Blog = () => {
               {item?.attributes?.Headline_image?.data && (
                 <div className="leftBlogCard-image-card1">
                   <img
-                    src={`http://157.173.222.81:1337${item?.attributes?.Headline_image?.data?.attributes.formats.small.url}`}
+                    src={`https://strapi.orientspectra.com${item?.attributes?.Headline_image?.data?.attributes.formats.small.url}`}
                     alt="Blog Image 1"
                   />
                 </div>

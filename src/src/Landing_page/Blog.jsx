@@ -12,7 +12,7 @@ const Blog = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `http://157.173.222.81:1337/api/blogs?populate=*`
+          `https://strapi.orientspectra.com/api/blogs?populate=*`
         );
         if (response?.status === 200) {
           const sortedData = response.data.data.sort(
@@ -35,7 +35,7 @@ const Blog = () => {
         <div className="leftBlogCard">
           <div className="leftBlogCard-image-card">
             <img
-              src={`http://157.173.222.81:1337${blogData[0]?.attributes?.Headline_image?.data?.attributes?.formats?.thumbnail?.url}`}
+              src={`https://strapi.orientspectra.com${blogData[0]?.attributes?.Headline_image?.data?.attributes?.formats?.thumbnail?.url}`}
               alt="Blog Image 1"
             />
           </div>
@@ -66,7 +66,7 @@ const Blog = () => {
               {item?.attributes?.Headline_image?.data && (
                 <div className="leftBlogCard-image-card1">
                   <img
-                    src={`http://157.173.222.81:1337${item?.attributes?.Headline_image?.data?.attributes.formats.small.url}`}
+                    src={`https://strapi.orientspectra.com${item?.attributes?.Headline_image?.data?.attributes.formats.small.url}`}
                     alt="Blog Image 1"
                   />
                 </div>

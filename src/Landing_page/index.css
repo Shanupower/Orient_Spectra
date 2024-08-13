@@ -187,8 +187,6 @@
 }
 .acedemic_image_container {
   width: 180px;
-  min-width: 180px;
-  height: 100px;
 }
 .foreignAcedemic_image_container {
   width: 260px;
@@ -306,7 +304,7 @@
   margin-top: 1.4rem;
   background-color: rgba(255, 115, 0, 1);
 }
-.explore_rightCard:nth-child(1) > div > h3 {
+.mentorShip_card h3 {
   font-size: 36px;
   margin-bottom: 0.4rem;
   padding-left: 3.2rem;
@@ -320,7 +318,7 @@
   justify-content: space-between;
 }
 
-.explore_rightCard:nth-child(1) > div > p {
+.courseText {
   font-size: 16px;
   width: 60%;
   color: var(--text-color-lightwhite);
@@ -997,7 +995,7 @@
   font-size: 16px;
   font-weight: 500;
 }
-.activeprogressLinebar{
+.activeprogressLinebar {
   color: var(--brand-color);
   font-weight: 700;
 }
@@ -2475,7 +2473,7 @@ canvas {
     flex-direction: column-reverse;
     margin-bottom: 4rem;
   }
-  .counselor_left_side{
+  .counselor_left_side {
     width: 100%;
   }
   .counselor_left_side > p {
@@ -2520,7 +2518,7 @@ canvas {
   .explore_rightCard {
     padding: 1rem;
   }
-  .explore_rightCard:nth-child(1) > div > h3 {
+  .mentorShip_card h3 {
     font-size: 30px;
     padding-left: 1.2rem;
     padding-bottom: 0.8rem;
@@ -2537,4 +2535,18 @@ button {
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
+}
+
+.mentorShipSection-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.Image4Card{
+  width: 120px;
+  height: 80px;
+  position: absolute;
+  top: -24.6rem;
+  left: 1.2rem;
 }

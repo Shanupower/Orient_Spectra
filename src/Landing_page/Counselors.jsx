@@ -208,70 +208,68 @@ const India =
     lat:20.5937,
     lon: 78.9629,
   }
-const countryData = [
-  
-  {
-    country: "United States America",
-    lat: 37.0902,
-    lon: -95.7129,
-  },
-  {
-    country: "Canada",
-    lat: 56.1304,
-    lon: -106.3468,
-  },
-  {
-    country: "United Kingdom",
-    lat: 55.3781,
-    lon: -3.436,
-  },
-  {
-    country: "Australia",
-    lat: -25.2744,
-    lon: 133.7751,
-  },
-  {
-    country: "France",
-    lat: 46.6034,
-    lon: 1.8883,
-  },
-  {
-    country: "Germany",
-    lat: 51.1657,
-    lon: 10.4515,
-  },
-  {
-    country: "Switzerland",
-    lat: 46.8182,
-    lon: 8.2275,
-  },
-  {
-    country: "Singapore",
-    lat: 1.3521,
-    lon: 103.8198,
-  },
-  {
-    country: "Dubai",
-    lat: 25.2048,
-    lon: 55.2708,
-  },
-  {
-    country: "Sweden",
-    lat: 60.1282,
-    lon: 18.6435,
-  },
-  {
-    country: "Portland",
-    lat: 45.5152,
-    lon: -122.6784,
-  },
-  {
-    country: "Malta",
-    lat: 35.9375,
-    lon: 14.3754,
-  },
-];
-
+  const countryData = [
+    {
+      country: "United States of America",
+      lat: 37.0902,
+      lon: -95.7129,
+    },
+    {
+      country: "Canada",
+      lat: 56.1304,
+      lon: -106.3468,
+    },
+    {
+      country: "United Kingdom",
+      lat: 55.3781,
+      lon: -3.4360,
+    },
+    {
+      country: "Australia",
+      lat: -25.2744,
+      lon: 133.7751,
+    },
+    {
+      country: "France",
+      lat: 46.6034,
+      lon: 1.8883,
+    },
+    {
+      country: "Germany",
+      lat: 51.1657,
+      lon: 10.4515,
+    },
+    {
+      country: "Switzerland",
+      lat: 46.8182,
+      lon: 8.2275,
+    },
+    {
+      country: "Singapore",
+      lat: 1.3521,
+      lon: 103.8198,
+    },
+    {
+      country: "Dubai",
+      lat: 23.4241,
+      lon: 53.8478,
+    },
+   {
+      country: "Portland",
+      lat: 45.5152,
+      lon: -122.6784,
+    },
+    {
+      country: "Sweden",
+      lat: 60.1282,
+      lon: 18.6435,
+    },
+    {
+      country: "Malta",
+      lat: 35.9375,
+      lon: 14.3754,
+    },
+  ];
 const Counselors = () => {
   const isMd = useMediaQuery("(max-width:986px)");
   const globeEl = useRef();
@@ -493,7 +491,7 @@ const Counselors = () => {
           labelText={(d) => d.country}
           labelSize={2.6}
           // labelColor={() => "rgba(255, 165, 0, 0.75)"}
-          labelColor={() => "#1f7aff"}
+          labelColor={() => "#fff"}
           labelDotRadius={0.5}
           labelResolution={2}
           arcsData={arcsData}
