@@ -31,6 +31,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 
 import "./index.css";
 
+
 const StudyCountry = [
   {
     name: "USA",
@@ -771,10 +772,17 @@ const Navbar = ({
                   <h2>Kothapet</h2>
 
                   <div className="whatweddo-card branchCardLocation">
+                  
                     <p>
+                    <Link 
+                      to="https://www.google.com/maps/place/Orient+Spectra/@17.3638988,78.541126,17z/data=!3m1!4b1!4m6!3m5!1s0x3bcb99427a18787d:0x5d90a9e3d04c3edf!8m2!3d17.3638988!4d78.5437009!16s%2Fg%2F11vqmzhz90?entry=ttu"
+                      target="_blank"
+                      className="linkStyle">
                       4th floor, Baheti Spectrum, National Highway 65,
                       Polkampally, Margadarshi Colony, Kothapet, Hyderabad,
                       Telangana 500035
+                    </Link>
+
                     </p>
                     <KeyboardArrowRightIcon className="KeyboardArrowRightIcon" />
                   </div>
@@ -787,8 +795,13 @@ const Navbar = ({
 
                   <div className="whatweddo-card branchCardLocation">
                     <p>
+                    <Link 
+                      to="https://www.google.com/maps/place/Orient+Spectra/@17.4049567,78.4793968,18z/data=!3m2!4b1!5s0x3bcb99e0af8360cb:0x27697391eabdb411!4m6!3m5!1s0x3bcb99e0af99c383:0xf52e853634bc5ce0!8m2!3d17.4049567!4d78.4801039!16s%2Fg%2F1v27syxh?entry=ttu"
+                      target="_blank"
+                      className="linkStyle">
                       1st Floor, Sanatana Eternal, Himayatnagar Rd, Gagan Mahal,
                       Basheer Bagh, Hyderabad, Telangana, 500029
+                      </Link>
                     </p>
                     <KeyboardArrowRightIcon className="KeyboardArrowRightIcon" />
                   </div>
@@ -801,8 +814,13 @@ const Navbar = ({
 
                   <div className="whatweddo-card branchCardLocation">
                     <p>
+                    <Link 
+                      to="https://www.google.com/maps/place/Orient+Spectra/@17.4918389,78.3887201,17z/data=!3m2!4b1!5s0x3bcb91921221fff5:0x8023b6854609efde!4m6!3m5!1s0x3bcb919391e28989:0x565610b6dc461ae5!8m2!3d17.491839!4d78.393591!16s%2Fg%2F11c0rp2vc0?entry=ttu"
+                      target="_blank"
+                      className="linkStyle">
                       502, 5th floor, Manjeera Majestic Commercial, JNTU Rd,
                       KPHB, Kukatpally, Hyderabad, Telangana, 500072
+                      </Link>
                     </p>
                     <KeyboardArrowRightIcon className="KeyboardArrowRightIcon" />
                   </div>

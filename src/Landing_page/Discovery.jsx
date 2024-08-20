@@ -27,7 +27,7 @@ const Discovery = () => {
         </p>
 
         <div className="Marguee">
-          <Marquee className="MargueeText" speed={100}> Abraod Education Simplified.</Marquee>
+          <Marquee className="MargueeText" speed={100}> Abroad Education Simplified.</Marquee>
         </div>
       </div>
       <Divider />

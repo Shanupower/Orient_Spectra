@@ -16,9 +16,10 @@ const items = [
         <div className="course_container_inner_left">
           <h1>Well Established Overseas Education Consultancy in Hyderabad</h1>
           <p>
-          The consultancy has built a strong reputation over the years and represents over 400 universities globally, including institutions in the UK, USA, Germany, France, Ireland.
-The consultancy is known for its individualized approach, providing detailed attention and tailored advice to each student, leveraging the extensive experience of our counsellors.
-The consultancy's commitment to quality service has been recognized widely, including by the Times Business Award 2023, which acknowledged it as one of the top 50 overseas education consultants in hyderabad. Students have praised Orient Spectra for their thorough and supportive approach, making it a recommended choice for those seeking to pursue higher education overseas.
+          The consultancy has built a strong reputation over the years and represents over 400 universities globally, including institutions in the UK, USA, Germany, France, and Ireland. 
+          The consultancy is known for its individualized approach, providing detailed attention and tailored advice to each student, leveraging the extensive experience of our counselors. 
+          The consultancy's commitment to quality service has been recognized widely, including the Times Business Award 2023, which acknowledged it as one of the top 50 overseas education consultants in Hyderabad. 
+          Students have praised Orient Spectra for their thorough and supportive approach, making it a recommended choice for those seeking to pursue higher education overseas.
 
           </p>
           <Button text=" Find Your Course" arrow={true} />
@@ -61,7 +62,7 @@ They facilitate direct interactions between students and university representati
           <p>
           Studying abroad is more than just an academic pursuit—it's a transformative journey that broadens your educational horizons and enhances your future. By immersing yourself in a new cultural and academic environment, you'll gain access to a diverse array of courses, cutting-edge research opportunities, and hands-on skill development.
 
-Embrace the chance to expand your global perspective, build a professional network, and acquire valuable international experience. By studying abroad, you'll engage with diverse perspectives and gain insights that are crucial for success in the global job market. With our expert guidance, your dream of pursuing international education becomes a well-crafted reality, designed to elevate your academic and professional aspirations.
+Embrace the chance to expand your global perspective, build a professional network, and acquire valuable international experience. By studying abroad, you'll engage with diverse perspectives and gain insights crucial for success in the global job market. With our expert guidance, your dream of pursuing international education becomes a well-crafted reality, designed to elevate your academic and professional aspirations.
           </p>
           <Button text=" Find Your Course" arrow={true} />
         </div>

@@ -21,46 +21,31 @@ import Skeleton from "@mui/material/Skeleton";
 const getItems = (panelStyle) => [
   {
     key: "1",
-    label: "Personalized Approach",
+    label: "Personalized Guidance",
     children: (
       <p className="textContent">
-        We recognize that each student’s situation is unique. Our counselors
-        provide personalized guidance tailored to your specific needs and
-        circumstances. • From choosing the right course and institution to
-        preparing your visa application, we are with you every step of the way.
+        We recognize that each student situation is unique. We understand that every student is unique, with their own aspirations, 
+        strengths, and challenges. That's why our mentors take the time to get to know you personally, tailoring their guidance to 
+        your specific needs and goals.
       </p>
     ),
     style: panelStyle,
   },
   {
     key: "2",
-    label: "Comprehensive Information",
+    label: "Expert Advice",
     children: (
       <p className="textContent">
         {" "}
-        We understand that every student is unique, with their own aspirations,
-        strengths, and challenges. That's why our mentors take the time to get
-        to know you personally, tailoring their guidance to your specific needs
-        and goals.
+        Our mentors are highly experienced professionals who have themselves studied abroad and navigated the complexities of 
+        the application process. They have firsthand knowledge of the challenges you may face and can offer valuable insights 
+        and advice to help you overcome them
       </p>
     ),
     style: panelStyle,
   },
   {
     key: "3",
-    label: " Expert Advice",
-    children: (
-      <p className="textContent">
-        Our mentors are highly experienced professionals who have themselves
-        studied abroad and navigated the complexities of the application
-        process. They have firsthand knowledge of the challenges you may face
-        and can offer valuable insights and advice to help you overcome them.
-      </p>
-    ),
-    style: panelStyle,
-  },
-  {
-    key: "4",
     label: "Comprehensive Support",
     children: (
       <p className="textContent">
@@ -73,7 +58,7 @@ const getItems = (panelStyle) => [
     style: panelStyle,
   },
   {
-    key: "5",
+    key: "4",
     label: "Continuous Assistance",
     children: (
       <p className="textContent">

@@ -8,7 +8,7 @@
   position: relative;
 }
 .discovery-section {
-  padding: 0.6rem 6%;
+  padding: 2rem 6%;
 }
 .slick-dots li {
   width: 166.39px !important;
@@ -91,9 +91,9 @@
 }
 
 .dicovery_card > p {
-  color: var(--text-color-gray);
+  color: var(--text-color-darkblack);
   font-size: 1.2rem;
-  line-height: 1;
+  line-height: 2;
 }
 
 .discoverTextCard {
@@ -165,7 +165,7 @@
 }
 .Acedemic_cantainer__header > p {
   font-size: 26px;
-  color: var(--text-color-gray);
+  color: var(--text-color-darkblack);
   margin-bottom: 1rem;
 }
 .foreignAcedemic_marquee,
@@ -214,7 +214,7 @@
 }
 .foreignAcedemic > p {
   text-align: center;
-  color: var(--text-color-gray);
+  color: var(--text-color-darkblack);
   font-size: 30px;
 }
 .discoverButton > p {
@@ -346,7 +346,7 @@
   }
 }
 /* StudyAbroad */
-
+.GetInTouch,
 .StudyAbroad {
   display: flex;
   align-items: center;
@@ -1855,6 +1855,14 @@ canvas {
     justify-content: flex-start;
     flex-direction: column;
   }
+  .GetInTouch {
+    display: flex;
+    align-items: center;
+    padding-block: 2rem;
+    margin-top: 4rem;
+    justify-content: flex-start;
+    flex-direction: row;
+  }
   .hero_Heading {
     font-size: 42px;
     line-height: 1.2;
@@ -1963,6 +1971,12 @@ canvas {
   .Getcontent,
   .content {
     margin-bottom: 1rem;
+  }
+  .GetTuchArrow {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    /* margin-top: 1.4rem; */
   }
   .testimonial_lftSide > p {
     margin-bottom: -1.2rem;
@@ -2549,4 +2563,77 @@ button {
   position: absolute;
   top: -24.6rem;
   left: 1.2rem;
+}
+
+.country-section {
+  padding: 0.6rem 6%; 
+}
+.country-section > strong {
+  font-size: 50px;
+  line-height: 1.1;
+  color: var(--brand-color);
+}
+.country-section > p {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: var(--text-color-darkblack);
+}
+.country_Container {
+ display: flex;
+ gap: 4rem;
+ overflow-x: auto;
+ margin-block: 3rem;
+}
+.country-Card {
+  min-width: 328px;
+  min-height: 30vh; 
+}
+.counrtyImage-card {
+  width: 100%;
+  height: 50vh;
+  border-radius: 20px;
+  margin-bottom: 0.6rem;
+  overflow: hidden;
+}
+.counrtyImage-card > img{
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+.image-text-overlay {
+  position: absolute;
+  bottom: 40px; 
+  left: 30px;   
+  color: white; 
+  background-color: rgba(31, 122, 255, 1);;
+  padding: 5px 10px;
+  font-size: 30px;
+  font-weight: 600;
+  border-radius: 15px;
+}
+
+/*Swiper Arrows Styling*/
+.swiper-button-next,
+.swiper-button-prev {
+  color: white !important; 
+  background-color: #ff7300 !important;
+  transform: scale(0.8); 
+  padding: 30px !important;
+  border-radius: 30px !important;
+}
+
+@media (max-width:986px) {
+  .image-text-overlay {
+    font-size: 25px;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    transform: scale(0.6); 
+  }
+  .country-Card {
+    min-width: 250px;
+    min-height: 15vh;
+  }
+  
 }

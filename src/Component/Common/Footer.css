@@ -104,7 +104,7 @@
   }
   .centerCard > h3 {
     font-size: 20px;
-    line-height: 2.6;
+    line-height: 1.5;
   }
   .centerCard > p {
     font-size: 14px;
@@ -162,15 +162,21 @@
     justify-content: space-between;
     flex-direction: column;
     gap: 1rem;
+    padding: 10px;
   }
   .leftSideItem2 {
     color: var(--text-color-white);
   }
-  .footercenterleftContent {
+  .footercenterleftContent,
+  .centerCard {
     width: 100%;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    flex-direction: column;
     gap: 1rem;
+    padding: 5px;
+  }
+  .centerCard > p {
+
   }
 }
