@@ -17,7 +17,6 @@ const Events = () => {
       );
       if (response?.status === 200) {
         setUpcominngEventData(response?.data.data);
-        console.log(response.data);
         
       }
     } catch (error) {   

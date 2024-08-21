@@ -1,7 +1,7 @@
 .HeroBlock {
   position: relative;
   width: 100%;
-  height: 84vh;
+  height: 100vh;
 }
 .HeroContainer {
   width: 100%;
@@ -18,11 +18,15 @@
   justify-content: left !important;
   left: 6% !important;
 }
-
+.blogsKnowledge {
+  margin-block: 5.2rem 2rem;
+  font-size: 40px;
+  font-weight: 600;
+}
 .Hero_container {
   background-size: cover;
   width: 100%;
-  height: 84vh;
+  height: 100vh;
   display: flex;
   position: relative;
 }
@@ -165,7 +169,7 @@
 }
 .Acedemic_cantainer__header > p {
   font-size: 26px;
-  color: var(--text-color-gray);
+  color: var(--text-color-black);
   margin-bottom: 1rem;
 }
 .foreignAcedemic_marquee,
@@ -214,7 +218,7 @@
 }
 .foreignAcedemic > p {
   text-align: center;
-  color: var(--text-color-gray);
+  color: var(--text-color-black);
   font-size: 30px;
 }
 .discoverButton > p {
@@ -1103,8 +1107,8 @@ canvas {
 }
 
 .event_leftContent > b {
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 22px;
+  font-weight: 600;
 }
 .eventsRigtImage {
   width: 60%;
@@ -1406,6 +1410,11 @@ canvas {
     font-weight: 500;
     margin-top: 2rem;
   }
+  .blogsKnowledge {
+    margin-block: 3.2rem 2rem;
+    font-size: 28px;
+    font-weight: 600;
+  }
   .Counselore_container {
     display: flex;
     align-items: center;
@@ -1510,7 +1519,7 @@ canvas {
   }
   .Acedemic_cantainer__header > p {
     font-size: 18px;
-    color: var(--text-color-gray);
+    color: var(--text-color-black);
   }
   .foreignAcedemic > p {
     font-size: 20px;
@@ -1671,12 +1680,12 @@ canvas {
   .HeroBlock {
     position: relative;
     width: 100%;
-    height: 80vh;
+    height: 100vh;
   }
   .Hero_container {
     background-size: cover;
     min-width: 100%;
-    height: 80vh;
+    height: 100vh;
     display: flex;
     position: relative;
   }
@@ -2543,10 +2552,22 @@ button {
   justify-content: space-between;
 }
 
-.Image4Card{
+.Image4Card {
   width: 120px;
   height: 80px;
   position: absolute;
   top: -24.6rem;
   left: 1.2rem;
+}
+
+.blogCOntentArrow {
+  background-color: #fff !important;
+  color: #000 !important;
+  border-radius: 50% !important;
+  height: 60px !important;
+  width: 60px !important;
+}
+.blogCOntentArrow:hover {
+  background-color: var(--brand-color) !important;
+  color: #fff !important;
 }

@@ -12,22 +12,24 @@ const Discovery = () => {
         </div>
         <div className="dicovery_card">
           <h1>15000+</h1>
-          <p>Successful Admits
-          </p>
+          <p>Successful Admits</p>
         </div>
         <div className="dicovery_card">
           <h1>98%</h1>
-          <p>Visa Success Rate
-          </p>
+          <p>Visa Success Rate</p>
         </div>
       </div>
       <div className="discoverTextCard">
         <p>
-        Discover why countless students choose Orient Spectra to shape their international education journey.
+          Discover why countless students choose Orient Spectra to shape their
+          international education journey.
         </p>
 
         <div className="Marguee">
-          <Marquee className="MargueeText" speed={100}> Abraod Education Simplified.</Marquee>
+          <Marquee className="MargueeText" speed={100}>
+            {" "}
+            Abroad Education Simplified.
+          </Marquee>
         </div>
       </div>
       <Divider />

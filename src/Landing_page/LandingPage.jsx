@@ -49,8 +49,7 @@ const LandingPage = () => {
     fetchBlogData();
     fetchEventData();
   }, []);
-  console.log(event);
-  console.log(blog);
+
 
  
 

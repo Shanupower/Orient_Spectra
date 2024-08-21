@@ -12,7 +12,6 @@ import "./event.css";
 const SuccessStory = ({ CompletedEventdata }) => {
   const currentYear = new Date().getFullYear();
   const [Year, setYear] = useState(currentYear);
-  console.log("CompletedEventdata", CompletedEventdata);
   const handleYeardata = (status) => {
     if (status == "next" && Year < currentYear) {
       setYear(Year + 1);
@@ -27,7 +26,6 @@ const SuccessStory = ({ CompletedEventdata }) => {
         new Date(data.attributes.Date_of_the_event).getFullYear() === Year
     );
   }, [Year, CompletedEventdata]);
-  console.log("activeYearData", activeYearData);
   return (
     <div className="success-story-container section">
       <div className="event-datecard">
