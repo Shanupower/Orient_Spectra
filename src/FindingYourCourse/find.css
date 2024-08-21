@@ -131,6 +131,11 @@
   margin-top: 0.6rem;
   padding-inline: 0.6rem;
 }
+.text-content > ul,
+.text-content > li {
+  margin-left: 1rem;
+}
+
 
 @media (max-width: 1076px) {
   .story-rightcard,
@@ -154,4 +159,8 @@
     min-height: 40vh;
     margin-block: 2rem;
   }
+  .text-content > ul,
+.text-content > li {
+  font-size: 18px;
+}
 }

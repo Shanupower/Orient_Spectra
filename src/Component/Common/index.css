@@ -441,6 +441,13 @@
   font-size: 32px !important;
   color: var(--text-color-darkgray);
 }
+.linkStyle {
+  color: var(--text-color-darkgray);
+  text-decoration: none;
+}
+.linkStyle:hover {
+  color: var(--brand-color);
+}
 .whatwedo-section:hover > .whatweddo-card > p {
   color: var(--brand-color);
 }

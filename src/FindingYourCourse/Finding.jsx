@@ -36,9 +36,8 @@ const getItems = (panelStyle) => [
     children: (
       <p className="textContent">
         {" "}
-        The most common student visas are the F-1 visa for academic studies and
-        the J-1 visa for exchange programs. The M-1 visa is for vocational or
-        non-academic programs.
+        With access to a vast database of universities and courses worldwide, we provide comprehensive information 
+        about various programs, including curriculum details, admission requirements, and career prospects.
       </p>
     ),
     style: panelStyle,
@@ -48,9 +47,9 @@ const getItems = (panelStyle) => [
     label: " Expert Advice",
     children: (
       <p className="textContent">
-        : Standardized tests like the SAT, ACT, GRE, and GMAT are important as
-        they are often required by universities as part of the admissions
-        process. However, their importance can vary by institution and program
+        Our counselors are seasoned professionals with years of experience in the field of overseas education. 
+        They stay updated with the latest trends and developments in the education sector to offer you the most 
+        relevant and up-to-date advice.
       </p>
     ),
     style: panelStyle,
@@ -60,9 +59,9 @@ const getItems = (panelStyle) => [
     label: "Streamlined Process",
     children: (
       <p className="textContent">
-        Most universities require international students to demonstrate English
-        proficiency through tests such as TOEFL or IELTS. Minimum score
-        requirements vary by institution.
+        Navigating the application process can be overwhelming, especially for international students. 
+        Our counselors streamline the entire process, from shortlisting universities to preparing application 
+        materials, to make it as smooth and hassle-free as possible
       </p>
     ),
     style: panelStyle,
@@ -88,9 +87,9 @@ const getItems2 = (panelStyle) => [
     children: (
       <p className="textContent">
         {" "}
-        The most common student visas are the F-1 visa for academic studies and
-        the J-1 visa for exchange programs. The M-1 visa is for vocational or
-        non-academic programs.
+        Based on the information gathered during the consultation, our counselors conduct a thorough assessment of 
+        your profile to identify suitable courses and universities that match your criteria.
+
       </p>
     ),
     style: panelStyle,
@@ -100,9 +99,9 @@ const getItems2 = (panelStyle) => [
     label: "Guided Exploration",
     children: (
       <p className="textContent">
-        : Standardized tests like the SAT, ACT, GRE, and GMAT are important as
-        they are often required by universities as part of the admissions
-        process. However, their importance can vary by institution and program
+        We provide you with detailed insights into various courses, including information about the curriculum, 
+        faculty, facilities, and campus life. Our counselors guide you through this exploration process to help 
+        you make well-informed decisions.
       </p>
     ),
     style: panelStyle,
@@ -112,9 +111,9 @@ const getItems2 = (panelStyle) => [
     label: "Application Assistance",
     children: (
       <p className="textContent">
-        Most universities require international students to demonstrate English
-        proficiency through tests such as TOEFL or IELTS. Minimum score
-        requirements vary by institution.
+        Once you've identified your preferred courses and universities, we assist you in preparing your application materials, 
+        including essays, resumes, and recommendation letters. We also provide guidance on standardized tests such as the GRE, 
+        GMAT, TOEFL, and IELTS.
       </p>
     ),
     style: panelStyle,
@@ -124,9 +123,8 @@ const getItems2 = (panelStyle) => [
     label: "Post-Application Support",
     children: (
       <p className="textContent">
-        Most universities require international students to demonstrate English
-        proficiency through tests such as TOEFL or IELTS. Minimum score
-        requirements vary by institution.
+        Our support doesn't end with the submission of your applications. We continue to assist you throughout the admission 
+        process, including interview preparation, scholarship applications, and visa guidance
       </p>
     ),
     style: panelStyle,

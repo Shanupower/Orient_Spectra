@@ -40,7 +40,7 @@ const GetTuchWithUs = () => {
           visible: { opacity: 1, x: 0 },
         }}
       >
-        <div className="section StudyAbroad">
+        <div className="section GetInTouch">
           <div className="studySection useInViewcard">
             <p>Get in touch </p>
             <p className={`Getcontent ${isAnimated ? "animated" : ""}`}>
