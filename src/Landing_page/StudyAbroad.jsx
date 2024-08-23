@@ -22,12 +22,12 @@ const StudyAbroad = () => {
         }}
       >
         <div className="studySection useInViewcard">
-          <p>Study Abroad </p>
-          <p className={`content ${isAnimated ? "animated" : ""}`}> With Us</p>
+          <p>Study Abroad With Us</p>
+          {/* <p className={`content ${isAnimated ? "animated" : ""}`}> With Us</p> */}
         </div>
 
         <Button
-          text="Start your journey Now"
+          text="Talk To A Counsellor"
           className={`exploreButton ${isAnimated ? "buttonfadeIn" : ""}`}
         />
       </motion.div>

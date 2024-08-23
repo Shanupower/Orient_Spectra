@@ -8,7 +8,7 @@
   position: relative;
 }
 .discovery-section {
-  padding: 0.6rem 6%;
+  padding: 2rem 6%;
 }
 .slick-dots li {
   width: 166.39px !important;
@@ -95,9 +95,9 @@
 }
 
 .dicovery_card > p {
-  color: var(--text-color-gray);
+  color: var(--text-color-darkblack);
   font-size: 1.2rem;
-  line-height: 1;
+  line-height: 2;
 }
 
 .discoverTextCard {
@@ -110,8 +110,8 @@
 }
 .discoverTextCard > p {
   color: var(--text-color-black);
-  font-size: 36px;
-  width: 46%;
+  font-size: 25px;
+  width: 48%;
 }
 
 .Marguee {
@@ -166,6 +166,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-image: url("https://strapi.orientspectra.com/uploads/Banner_Final_97b9da5dd8.jpg");
+  padding: 2rem;
+  border-radius: 20px;
 }
 .Acedemic_cantainer__header > p {
   font-size: 26px;
@@ -228,7 +231,7 @@
   margin-bottom: 4rem;
 }
 .MargueeImage {
-  margin-block: 2rem 8rem;
+  margin-block: 2rem 6rem;
 }
 
 /* Explore_container */
@@ -242,7 +245,7 @@
   display: flex;
   padding-block: 2rem;
   gap: 6%;
-  min-height: 100vh;
+  min-height: 60vh;
 }
 .Explore_leftSide {
   width: 30%;
@@ -272,19 +275,17 @@
   overflow: hidden;
 }
 .explore_rightCard:nth-child(1) {
-  width: 100%;
-  height: 40rem;
-  background-size: cover;
-  /* background-color: #ff7300; */
-  position: relative;
-  padding: 0;
+  width: 49%;
+  height: 26rem;
+  margin-top: 1.4rem;
+  background-color: rgba(31, 122, 255, 1);
 }
-.explore_rightCard_img {
+/* .explore_rightCard_img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   z-index: -1;
-}
+} */
 .explore_rightCard > div {
   position: absolute;
   left: 0;
@@ -294,9 +295,9 @@
   width: 49%;
   height: 26rem;
   margin-top: 1.4rem;
-  background-color: rgba(31, 122, 255, 1);
+  background-color: rgba(255, 115, 0, 1);
 }
-.menthosihpArrow {
+/* .menthosihpArrow {
   position: absolute;
   right: 4rem;
   bottom: 6rem;
@@ -312,7 +313,7 @@
   font-size: 36px;
   margin-bottom: 0.4rem;
   padding-left: 3.2rem;
-}
+} */
 .explore_rightCard > h3 {
   font-size: 30px;
   margin-bottom: 0.4rem;
@@ -322,13 +323,13 @@
   justify-content: space-between;
 }
 
-.courseText {
+/* .courseText {
   font-size: 16px;
   width: 60%;
   color: var(--text-color-lightwhite);
   padding-left: 3.2rem;
   padding-bottom: 3.2rem;
-}
+} */
 
 .explore_rightCard > p {
   font-size: 16px;
@@ -350,13 +351,16 @@
   }
 }
 /* StudyAbroad */
-
+.GetInTouch,
 .StudyAbroad {
   display: flex;
   align-items: center;
   padding-block: 10rem 12rem;
-  margin-top: 4rem;
+  margin: 6rem;
   justify-content: space-between;
+  background-image: url("https://strapi.orientspectra.com/uploads/Banner_Final_97b9da5dd8.jpg");
+  border-radius: 20px;
+
 }
 .Getcontent,
 .content {
@@ -371,15 +375,16 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  padding: 2rem 0 2rem;
 }
 .studySection > p {
-  font-size: 63px;
+  font-size: 40px;
   font-size: 500;
-  color: var(--text-color-black);
-  line-height: 1.1;
+  color: var(--text-color-white);
+  line-height: 1.2;
 }
 
-.content::after {
+/* .content::after {
   content: "";
   display: block;
   width: 70%;
@@ -389,12 +394,12 @@
   bottom: 20%;
   left: 24%;
   transform: translateY(-50%);
-}
+} */
 
 .exploreButton {
-  margin-top: 2.4rem;
+  margin-top: 1rem;
 }
-.buttonfadeIn {
+/* .buttonfadeIn {
   animation: buttonFade 2s linear;
 }
 @keyframes buttonFade {
@@ -407,7 +412,7 @@
   100% {
     opacity: 1;
   }
-}
+} */
 .Getcontent::after {
   content: "";
   display: block;
@@ -436,6 +441,7 @@
   justify-content: space-between;
   padding-block: 2rem;
   margin-top: 4rem;
+  margin-bottom: 4rem;
   gap: 1rem;
 }
 .testimonialDataCard {
@@ -675,6 +681,10 @@
 
 .News-container > h2 {
   font-size: 40px;
+  font-weight: 500;
+}
+.News-container > h2 > span {
+  color: var(--brand-color);
   font-weight: 600;
 }
 
@@ -1094,8 +1104,9 @@ canvas {
   border-radius: 16px;
   display: flex;
   justify-content: space-between;
-  padding: 2em;
+  padding: 2rem;
   gap: 2rem;
+  margin-top: 2rem;
 }
 
 .event_leftContent {
@@ -1274,6 +1285,16 @@ canvas {
   padding-block: 2rem;
   margin-block: 6rem;
 }
+.course_container > p {
+  font-size: 2.8rem;
+  font-weight: 500;
+  color: var(--text-color-darkblack);
+  margin-bottom: 2rem;
+}
+.course_container > p > span {
+  color: var(--brand-color);
+  font-weight: 600;
+}
 .course_container_inner {
   background: rgba(255, 232, 217, 1);
   border-radius: 13px;
@@ -1294,7 +1315,7 @@ canvas {
   font-size: 50px;
   color: var(--text-color-black);
   font-weight: 600;
-  line-height: 1;
+  line-height: 1.2;
 }
 .course_container_inner_left > p {
   font-size: 18px;
@@ -1373,6 +1394,21 @@ canvas {
 }
 
 @media (max-width: 1024px) {
+  .hero_Heading {
+    font-size: 35px;
+    line-height: 1.2;
+  }
+  .heroSubtext {
+    font-size: 14px;
+  }
+  .StudyButtonCard {
+    margin-top: 2rem;
+  }
+  .StudyButton {
+    padding: 1.2rem 1.5rem;
+    border-radius: 30px;
+    font-size: 15px;
+  }
   .foreignAcedemic_image_container {
     width: 160px;
     height: 140px;
@@ -1380,28 +1416,38 @@ canvas {
 
   .Explore_container {
     flex-direction: column;
+    min-height: 30vh;
   }
   .Explore_leftSide {
     width: 100%;
     font-size: 24px;
   }
   .explore_rightSide {
-    width: 100%;
+    width: 100%;  
   }
   .studySection {
     display: flex;
+    margin: 1rem;
+  }
+  .StudyAbroad {
+    margin: 4rem 3rem 2rem 3rem;
   }
   .studySection > p {
-    font-size: 32px;
+    font-size: 35px;
     font-size: 500;
-    color: var(--text-color-black);
+    color: var(--text-color-white);
     width: 100%;
+    margin-top: -20px;
+    margin-bottom: -20px;
   }
-  .content::after {
+  .exploreButton {
+    margin-top: 0.4rem;
+  }
+  /* .content::after {
     content: "";
     display: block;
     /* width: 100%; */
-  }
+  /* }  */
   .course_container_inner {
     padding: 2rem;
   }
@@ -1445,6 +1491,7 @@ canvas {
   }
   .leftBlogCard {
     flex: 1 1 100%;
+    width: 100%;
   }
   .titleblogContent > strong,
   .titleblogContent > p {
@@ -1474,7 +1521,7 @@ canvas {
   }
   .News-container > h2 {
     font-size: 28px;
-    font-weight: 600;
+    font-weight: 500;
   }
   .media-container {
     flex-wrap: nowrap;
@@ -1484,7 +1531,8 @@ canvas {
     width: 33%;
   }
   .testimonial_rigtSide {
-    max-width: 50%;
+    max-width: 100%;
+    padding-top: 2rem;
   }
   .media-video {
     border-radius: 20px;
@@ -1494,11 +1542,11 @@ canvas {
   }
   .discoverTextCard > p {
     color: var(--text-color-black);
-    font-size: 20px;
+    font-size: 18px;
     width: 50%;
   }
   .testimonial_centerSide {
-    width: 80%;
+    width: 100%;
     height: 50vh;
 
     border-radius: 26px;
@@ -1518,8 +1566,8 @@ canvas {
     padding-top: 4.2rem;
   }
   .Acedemic_cantainer__header > p {
-    font-size: 18px;
-    color: var(--text-color-black);
+    font-size: 24px;
+    color: var(--text-color-white);
   }
   .foreignAcedemic > p {
     font-size: 20px;
@@ -1553,21 +1601,25 @@ canvas {
   .event_leftContent {
     width: 50%;
   }
-  .explore_rightCard:nth-child(1) {
-    height: 20rem;
-  }
-  .explore_rightCard:nth-child(2) {
+  /* .explore_rightCard:nth-child(1) {
+    height: 26rem;
+  } */
+  /* .explore_rightCard:nth-child(2) {
     min-height: 18rem;
   }
   .explore_rightCard:nth-child(3) {
     min-height: 18rem;
-  }
-  .explore_rightCard:nth-child(1) > h3 {
+  } */
+  /* .explore_rightCard:nth-child(1) > h3 {
     font-size: 30px;
     margin-bottom: 0.4rem;
   }
+  .explore_rightCard:nth-child(2) > h3 {
+    font-size: 30px;
+    margin-bottom: 0.4rem;
+  } */
   .explore_rightCard > h3 {
-    font-size: 20px;
+    font-size: 30px;
     width: 100%;
   }
   .explore_rightCard {
@@ -1584,7 +1636,7 @@ canvas {
   }
   .explore_rightCard:nth-child(1) > p {
     font-size: 14px;
-    width: 60%;
+    width: 100%;
     color: var(--text-color-lightwhite);
   }
   .FaQ_container > h1 {
@@ -1592,7 +1644,7 @@ canvas {
     color: var(--text-color-black);
   }
   .testimonial_lftSide {
-    width: 50%;
+    width: 100%;
   }
   .testimonial_lftSide > span {
     font-size: 18px;
@@ -1635,14 +1687,25 @@ canvas {
     font-size: 50px;
     cursor: pointer;
   }
+  .studentCard {
+    width: 20%;
+  background: rgba(31, 122, 255, 1);
+  width: 20%;
+  text-align: center;
+  font-size: 18px;
+  padding: 1rem;
+  border-radius: 30px;
+  color: var(--text-color-white);
+  }
   .studentcard > p {
-    font-size: 14px;
+    font-size: 20px;
   }
   .RightArrow > img,
   .leftArrow > img {
     width: 70%;
     height: 10px;
   }
+  
 }
 
 @media (max-width: 768px) {
@@ -1699,10 +1762,19 @@ canvas {
   .Marguee {
     width: 100%;
   }
+  .MargueeImage {
+    margin-block: 2rem 3rem;
+  }
   .Acedemic_cantainer__header {
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
-    gap: 2rem;
+  }
+  .Acedemic_cantainer__header > p {
+    font-size: 20px;
+    color: var(--text-color-white);
+    font-weight: 550;
+    margin-top: 20px;
+    text-align: center;
   }
   .event_leftSide {
     flex: 1 1 100%;
@@ -1790,8 +1862,22 @@ canvas {
   }
   .discoverTextCard > p {
     color: var(--text-color-black);
-    font-size: 22px;
+    font-size: 20px;
     width: 100%;
+  }
+  .course_container {
+    padding-block: 2rem;
+    margin-block: 4rem;
+  }
+  .course_container > p {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--text-color-darkblack);
+    margin-bottom: 2rem;
+  }
+  .course_container > p > span {
+    color: var(--brand-color);
+    font-weight: 600;
   }
   .course_container_innerDiv {
     display: flex;
@@ -1824,19 +1910,35 @@ canvas {
     font-size: 40px;
     color: var(--text-color-black);
   }
-  .explore_rightCard:nth-child(2) {
+  .explore_rightCard:nth-child(1) > h3{
+    font-size: 20px;
+  }
+  .explore_rightCard:nth-child(1) > p {
+    font-size: 14px;
     width: 100%;
-    /* height: 26rem; */
+    color: var(--text-color-lightwhite);
+  }
+  .explore_rightCard:nth-child(1) {
+    width: 100%;
+    height: 26rem;
     margin-top: 1.4rem;
     background-color: rgba(31, 122, 255, 1);
   }
-
-  .explore_rightCard:nth-child(3) {
+ 
+  .explore_rightCard:nth-child(2) {
     width: 100%;
     /* height: 26rem; */
     margin-top: 1.4rem;
     background-color: rgba(255, 115, 0, 1);
   }
+  /* .explore_rightCard:nth-child(2) > h3{
+    font-size: 20px;
+  }
+  .explore_rightCard:nth-child(2) > p {
+    font-size: 14px;
+    width: 100%;
+    color: var(--text-color-lightwhite);
+  } */
   .explore_rightSide {
     flex-direction: column;
   }
@@ -1860,8 +1962,26 @@ canvas {
     display: flex;
     align-items: center;
     padding-block: 2rem;
-    margin-top: 4rem;
+    margin: 1rem;
     justify-content: flex-start;
+    flex-direction: column;
+  }
+  .studySection > p {
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: -50px;
+  }
+  .exploreButton {
+    margin-top: -20px;
+    margin-bottom: 30px;
+
+  }
+  .GetInTouch {
+    display: flex;
+    align-items: center;
+    padding-block: 2rem;
+    margin: 2rem;
+    justify-content: space-between;
     flex-direction: column;
   }
   .hero_Heading {
@@ -1871,6 +1991,7 @@ canvas {
   .heroSubtext {
     font-size: 14px;
   }
+  
 }
 
 .css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-completed {
@@ -1900,6 +2021,9 @@ canvas {
 .expliore {
   font-size: 54px;
   line-height: 1.1;
+}
+.Capabilities {
+  color: var(--brand-color)
 }
 @media (max-width: 968px) {
   .media-card {
@@ -1972,6 +2096,12 @@ canvas {
   .Getcontent,
   .content {
     margin-bottom: 1rem;
+  }
+  .GetTuchArrow {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1.4rem;
   }
   .testimonial_lftSide > p {
     margin-bottom: -1.2rem;
@@ -2182,8 +2312,8 @@ canvas {
 @media (max-width: 968px) {
   .popUpBotton {
     position: absolute;
-    right: 2.6rem;
-    bottom: 4.6rem;
+    right: 1rem;
+    bottom: 0;
     z-index: 100;
   }
   .menu-container {
@@ -2313,6 +2443,7 @@ canvas {
   display: flex;
   justify-content: right;
   padding-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 /* Globe */
@@ -2560,14 +2691,128 @@ button {
   left: 1.2rem;
 }
 
-.blogCOntentArrow {
-  background-color: #fff !important;
-  color: #000 !important;
-  border-radius: 50% !important;
-  height: 60px !important;
-  width: 60px !important;
+.Blog-section,
+.country-section {
+  padding: 0.6rem 6%; 
 }
-.blogCOntentArrow:hover {
-  background-color: var(--brand-color) !important;
-  color: #fff !important;
+.country-section > strong {
+  font-size: 50px;
+  line-height: 1.1;
+  color: var(--brand-color);
+}
+.News-container > h2 > span {
+  color: var(--brand-color);
+  font-weight: 600;
+}
+.News-container > h2,
+.Blog-section > p,
+.country-section > p {
+  font-size: 2.8rem;
+  font-weight: 500;
+  color: var(--text-color-darkblack);
+}
+.News-container > h2 > span,
+.Blog-section > p > span,
+.country-section > p > span {
+  color: var(--brand-color);
+  font-size: 2.8rem;
+  font-weight: 600;
+}
+.country_Container {
+ display: flex;
+ gap: 4rem;
+ overflow-x: auto;
+ margin-block: 3rem;
+}
+.country-Card {
+  min-width: 328px;
+  min-height: 30vh;
+}
+.counrtyImage-card {
+  width: 100%;
+  height: 50vh;
+  border-radius: 20px;
+  margin-bottom: 0.6rem;
+  overflow: hidden;
+  box-shadow: 0px 3px 4px #464545;
+  transition: all 0.3s ease-in-out;
+}
+
+.counrtyImage-card > img{
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+
+}
+.image-text-card {
+  position: absolute;
+  width: 45%;
+  background-color: rgba(31, 122, 255, 1);
+  bottom: 40px; 
+  margin-left: 2rem;
+  border-radius: 50px;
+}
+.image-text-overlay {
+  color: white; 
+  /* background-color: rgba(31, 122, 255, 1); */
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  /* border-radius: 70px; */
+}
+
+/*Swiper Arrows Styling*/
+.swiper-button-next,
+.swiper-button-prev {
+  color: white !important; 
+  background-color: #ff7300 !important;
+  transform: scale(0.8); 
+  padding: 30px !important;
+  border-radius: 30px !important;
+}
+
+@media (max-width:1024px) {
+  .image-text-card {
+    width: 50%;
+  }
+  .image-text-overlay {
+    font-size: 16px;
+  }
+}
+@media (max-width:986px) {
+  .image-text-card {
+    width: 50%;
+  }
+  .image-text-overlay {
+    font-size: 16px;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    transform: scale(0.6); 
+  }
+  .country-Card {
+    min-width: 250px;
+    min-height: 10vh;
+  }
+  .counrtyImage-card {
+    height: 20%;
+  }
+  .News-container > h2,
+  .Blog-section > p,
+  .country-section > p {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--text-color-darkblack);
+    line-height: 1.2;
+  }
+  .News-container > h2 > span,
+  .Blog-section > p > span,
+  .country-section > p > span {
+    color: var(--brand-color);
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  
 }

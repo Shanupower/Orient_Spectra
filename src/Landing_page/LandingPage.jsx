@@ -3,6 +3,7 @@ import Navbar from "../Component/Common/Navbar";
 import Acedemic from "./Acedemic";
 import Blog from "./Blog";
 import Counselors from "./Counselors";
+import Country from "./Country";
 import Course from "./Course";
 import Discovery from "./Discovery";
 import Events from "./Events";
@@ -62,7 +63,8 @@ const LandingPage = () => {
       <Explore />
       <StudyAbroad />
       <Course />
-      <Counselors />
+      <Country/>
+      {/* <Counselors /> */}
       <Testimonial />
       <Blog />
       <News />

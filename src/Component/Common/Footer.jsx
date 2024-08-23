@@ -8,12 +8,12 @@ const Footer = () => {
     <div className="footerContrainer">
       <div className="foterTopContaner">
         <div className="leftSide ">
-          <Link className="Link_route leftSideItem">Study Overseas</Link>
-          <Link className="Link_route leftSideItem">About Us</Link>
+          <Link to="/study-overseas" className="Link_route leftSideItem">Study Overseas</Link>
+          <Link to="/about" className="Link_route leftSideItem">About Us</Link>
           <Link className="Link_route leftSideItem">What we do</Link>
           <Link className="Link_route leftSideItem">Our Branches</Link>
-          <Link className="Link_route leftSideItem">Blogs</Link>
-          <Link className="Link_route leftSideItem">Daily News</Link>
+          <Link to="/blogs" className="Link_route leftSideItem">Blogs</Link>
+          <Link to="/news-&-pr" className="Link_route leftSideItem">Daily News</Link>
         </div>
         <div className="rightSide">
           <p>hello@orientspectra.com</p>
@@ -29,7 +29,7 @@ const Footer = () => {
             </p>
           </div>
           <div className="centerCard">
-            <h3>Himayath Nagar</h3>
+            <h3>Himayatnagar</h3>
             <p>
               1st Floor, Sanatana Eternal, Himayatnagar Rd, Gagan Mahal, Basheer
               Bagh, Hyderabad, Telangana, 500029
@@ -58,7 +58,14 @@ const Footer = () => {
             Instagram
           </Link>
 
-          <Link className="Link_route socialMedia">YouTube</Link>
+          <Link 
+            to="https://www.youtube.com/@orientspectra1729"
+            className="Link_route socialMedia"
+            > 
+              YouTube
+          </Link>
+
+
           <Link
             to="https://www.linkedin.com/company/orientspectra/"
             className="Link_route socialMedia"

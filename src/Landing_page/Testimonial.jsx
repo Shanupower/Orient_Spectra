@@ -25,7 +25,7 @@ const TestimonialData = [
     userName: "Sakshit",
     usrImg: img1,
     content:
-      "✨ Join Orient Spectra on a journey to fulfill your academic dreams! At Orient Spectra, our dedicated team is committed to guiding students through the Complexities of higher education. Our experienced counsellors offer personalized assistance at every stage, ensuring you find the perfect fit for your academic journey. From initial inquiries to securing your place at the university, Orient Spectra provides unwavering support throughout the entire process.",
+      "✨ Join Orient Spectra on a journey to fulfill your academic dreams! At Orient Spectra, our dedicated team is committed to guiding students through the Complexities of higher education. Our experienced counselors offer personalized assistance at every stage, ensuring you find the perfect fit for your academic journey. From initial inquiries to securing your place at the university, Orient Spectra provides unwavering support throughout the process.",
   },
   {
     id: 2,
@@ -34,7 +34,7 @@ const TestimonialData = [
     userName: "Madhu Kumar M",
     usrImg: img2,
     content:
-      "Congratulating Mr. Madhu Kumar for flying to the USA✈️ and achieving his dream. Under our guidance, Madhu Kumar got all the information related to the university. We provide I20 guidance and visa mock interviews at no extra cost. Now he is ready to fly to the USA!",
+      "Congratulations Mr. Madhu Kumar for flying to the USA✈️ and achieving his dream. Under our guidance, Madhu Kumar got all the information related to the university. We provide I20 guidance and visa mock interviews at no extra cost. Now he is ready to fly to the USA!",
   },
   {
     id: 3,
@@ -43,7 +43,7 @@ const TestimonialData = [
     userName: "Shashi Kumar",
     usrImg: img3,
     content:
-      "Student mother extends her appreciation to Orient Spectra! Hear is her heartfelt thanks as we helped to achieve her son's dream of studying in Germany. Your success stories inspire us every day!",
+      "Student mother extends her appreciation to Orient Spectra! Here is her heartfelt thanks as we helped to achieve her son's dream of studying in US. Your success stories inspire us every day!",
   },
   {
     id: 4,
@@ -58,7 +58,7 @@ const TestimonialData = [
     id: 5,
     videoLink: "https://www.instagram.com/orient.spectra.1/",
     videoUrl: Video5,
-    userName: "Jaya Sri",
+    userName: "Jaishree",
     usrImg: img5,
     content:
       "Spectra! Students looking to study in Europe, had their doubts clarified by our amazing delegates: Yesoda Kamala (SRH University of Applied Sciences), Manisha Reddy (Macromedia University of Applied Sciences), Gopi Krishna (EU Business School), Preeti Sujith (Berlin School of Business & Innovation), and Pooja Lingampally (American Business School). Here’s to new academic journeys!",
@@ -105,8 +105,8 @@ const Testimonial = () => {
         {isMd ? (
           <>
             <div className="testimonial_lftSide">
-              <p>See what our</p>
-              <h3>Students Have To say about us</h3>
+            <p>Here’s What</p>
+            <h3>Our Students Have To Say</h3>
               <div className="testimonial_rigtSide">
                 <div
                   className={`testimonial_centerSide ${
@@ -141,8 +141,8 @@ const Testimonial = () => {
           <>
             <div className="testimonial_lftSide">
               <span>Testimonials</span>
-              <p>See what our</p>
-              <h3>Students Have To say about us</h3>
+              <p>Here’s What </p>
+              <h3>Our Students Have To Say</h3>
             </div>
             <Link
               className={`testimonial_centerSide `}

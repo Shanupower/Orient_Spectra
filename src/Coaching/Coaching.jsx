@@ -24,11 +24,14 @@ const getItems = (panelStyle) => [
     key: "1",
     label: "Expert Guidance",
     children: (
-      <p className="textContent">
-        • Our team consists of highly qualified professionals with extensive
-        knowledge of visa procedures for various countries. • We stay updated
-        with the latest changes in visa policies and requirements, ensuring that
-        you receive accurate and timely advice.
+      <p className="text-content">
+      <ul>
+        <li> Our team consists of highly qualified professionals with extensive
+        knowledge of visa procedures for various countries. </li>
+        
+        <li> We stay updatedwith the latest changes in visa policies and requirements, ensuring that
+        you receive accurate and timely advice.</li>
+      </ul>
       </p>
     ),
     style: panelStyle,
@@ -37,12 +40,15 @@ const getItems = (panelStyle) => [
     key: "2",
     label: " Personalized Counseling",
     children: (
-      <p className="textContent">
+      <p className="text-content">
+        <ul>
         {" "}
-        • We recognize that each student’s situation is unique. Our counselors
+        <li> We recognize that each student’s situation is unique. Our counselors
         provide personalized guidance tailored to your specific needs and
-        circumstances. • From choosing the right course and institution to
-        preparing your visa application, we are with you every step of the way
+        circumstances. </li> 
+        <li> From choosing the right course and institution to
+        preparing your visa application, we are with you every step of the way.</li>
+        </ul>
       </p>
     ),
     style: panelStyle,
@@ -51,14 +57,17 @@ const getItems = (panelStyle) => [
     key: "3",
     label: " Comprehensive Support:",
     children: (
-      <p className="textContent">
-        •Document Preparation: Assistance with gathering and organizing all
+      <p className="text-content">
+        <ul>
+        <li>Document Preparation: Assistance with gathering and organizing all
         necessary documents to ensure your application is complete and meets all
-        requirements. • Application Assistance: Step-by-step support in filling
-        out visa application forms correctly to avoid any errors or omissions. •
-        Interview Preparation: Coaching to prepare you for visa interviews,
+        requirements. </li>
+        <li> Application Assistance: Step-by-step support in filling
+        out visa application forms correctly to avoid any errors or omissions.</li> 
+        <li>Interview Preparation: Coaching to prepare you for visa interviews,
         including mock interviews to build your confidence and improve your
-        chances of success.
+        chances of success.</li>
+        </ul>
       </p>
     ),
     style: panelStyle,
@@ -67,10 +76,12 @@ const getItems = (panelStyle) => [
     key: "4",
     label: " Experienced Counselors",
     children: (
-      <p className="textContent">
-        • Our counselors have years of experience in the field of overseas
-        education and student visa applications. • They have successfully helped
-        numerous students achieve their dreams of studying abroad.
+      <p className="text-content">
+        <ul>
+       <li> Our counselors have years of experience in the field of overseas
+        education and student visa applications.</li>
+        <li> They have successfully helped
+        numerous students achieve their dreams of studying abroad.</li></ul>
       </p>
     ),
     style: panelStyle,
@@ -79,10 +90,13 @@ const getItems = (panelStyle) => [
     key: "5",
     label: " Proven Track Record",
     children: (
-      <p className="textContent">
-        • We pride ourselves on our high success rate in securing student visas
-        for our clients. • Testimonials from our satisfied students attest to
-        our commitment and effectiveness
+      <p className="text-content">
+        <ul>
+        <li>We pride ourselves on our high success rate in securing student visas
+        for our clients.</li> 
+        <li> Testimonials from our satisfied students attest to
+        our commitment and effectiveness.</li>
+        </ul>
       </p>
     ),
     style: panelStyle,
@@ -94,10 +108,13 @@ const getItems2 = (panelStyle) => [
     key: "1",
     label: "Visa Application Process",
     children: (
-      <p className="textContent">
-        Detailed guidance on the entire visa application process. Assistance
+      <p className="text-content">
+        <ul>
+        <li>Detailed guidance on the entire visa application process.</li>
+        <li>Assistance
         with understanding and fulfilling visa requirements for various
-        countries.
+        countries.</li>
+        </ul>
       </p>
     ),
     style: panelStyle,
@@ -106,11 +123,14 @@ const getItems2 = (panelStyle) => [
     key: "2",
     label: "Financial Guidance",
     children: (
-      <p className="textContent">
+      <p className="text-content">
         {" "}
-        Advice on financial documentation and proof of funds required for the
-        visa application. Information on scholarships and financial aid
-        opportunities.
+        <ul>
+        <li>Advice on financial documentation and proof of funds required for the
+        visa application.</li> 
+        <li>Information on scholarships and financial aid
+        opportunities.</li>
+        </ul>
       </p>
     ),
     style: panelStyle,

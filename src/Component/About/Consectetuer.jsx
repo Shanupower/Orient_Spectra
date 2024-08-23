@@ -6,7 +6,7 @@ const Consectetuer = () => {
     <div className="consectetuer-container section">
       <h1>
         <strong> Founded in 2005</strong>, Orient Spectra excels in overseas
-        education consultancy, partnering with 1500+ universities worldwide and
+        education, partnering with 1500+ universities worldwide and
         with 15000+ Successful admissions
       </h1>
       <Button
