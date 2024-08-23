@@ -105,8 +105,8 @@ const Testimonial = () => {
         {isMd ? (
           <>
             <div className="testimonial_lftSide">
-              <p>See what our</p>
-              <h3>Students Have To say about us</h3>
+            <p>Here’s What</p>
+            <h3>Our Students Have To Say</h3>
               <div className="testimonial_rigtSide">
                 <div
                   className={`testimonial_centerSide ${
@@ -141,8 +141,8 @@ const Testimonial = () => {
           <>
             <div className="testimonial_lftSide">
               <span>Testimonials</span>
-              <p>See what our</p>
-              <h3>Students Have To say about us</h3>
+              <p>Here’s What </p>
+              <h3>Our Students Have To Say</h3>
             </div>
             <Link
               className={`testimonial_centerSide `}

@@ -29,7 +29,7 @@ const Footer = () => {
             </p>
           </div>
           <div className="centerCard">
-            <h3>Himayat Nagar</h3>
+            <h3>Himayatnagar</h3>
             <p>
               1st Floor, Sanatana Eternal, Himayatnagar Rd, Gagan Mahal, Basheer
               Bagh, Hyderabad, Telangana, 500029

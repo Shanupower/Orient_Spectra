@@ -28,7 +28,7 @@ const News = () => {
   return (
     <>
       <div className="section News-container">
-        <h2>News & Media</h2>
+        <h2>Glimpses of Our <span>Contribution</span></h2>
         <div className="media-container">
           {NewsData?.map((item) => (
             <div className="media-card" key={item?.id}>

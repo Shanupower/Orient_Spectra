@@ -23,19 +23,21 @@ const Hero = ({ blog, event }) => {
     () => [   
       {
         id: 1,
-        text: "Your Pathway to",
-        heading: "Global Education",
+        text: "Make Your Study Abroad ",
+        heading: "Dream A Reality",
         bgImage: "https://strapi.orientspectra.com/uploads/Banner1_d46bc11483.jpg",
         subtext:
-          "Empowering Students with Comprehensive, Personalized Study Abroad Guidance.",
+          "We helped over 15000+ students in their journey to study abroad across USA, UK, Germany, Australia, and so on.",
+        buttonText: "Get Dedicated Counsellor",
       },
       {
         id: 2,
-        text: "Want to know",
-        heading: "how to study abroad?",
+        text: "Want To Know",
+        heading: "How To Study Abroad?",
         bgImage: Img1,
         subtext:
-          "Comprehensive and Personalized Study Abroad Planning, Dedicated to Ensuring Your Academic and Career Success.",
+          "Our expert counsellors will help you through the visa application process, and ensure you land in your dream course.",
+        buttonText: "Talk To Our Expert",
       },
       {
         id: 3,
@@ -45,6 +47,7 @@ const Hero = ({ blog, event }) => {
           blog?.attributes?.Short_Description ||
           "– US, UK, Australia and Canada – face headwinds",
         link: "blog",
+        buttonText:"Book A Guidance Call",
       },
       {
         id: 4,
@@ -52,6 +55,7 @@ const Hero = ({ blog, event }) => {
         bgImage: `https://strapi.orientspectra.com${event?.attributes?.Poster?.data?.attributes?.url}`,
         subtext: "",
         link: "event",
+        buttonText:"Share Your Interest",
       },
     ],
     [blog, event]
@@ -100,7 +104,7 @@ const Hero = ({ blog, event }) => {
                   className="StudyButtonCard"
                   onClick={() => handleNavigate(data)}
                 >
-                  <Button text="Study Abroad" arrow={true} />
+                  <Button text={data.buttonText} arrow={true} />
                 </div>
               </div>
             </div>
