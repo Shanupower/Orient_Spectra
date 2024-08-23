@@ -31,6 +31,9 @@ const Blog = () => {
 
   return (
     <>
+    <div className="Blog-section">
+        <p>Latest from Our <span>Knowledge Base</span></p>
+        </div>
       <div className="section BlogContainer">
         <div className="leftBlogCard">
           <div className="leftBlogCard-image-card">

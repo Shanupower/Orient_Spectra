@@ -42,10 +42,10 @@ const GetTuchWithUs = () => {
       >
         <div className="section GetInTouch">
           <div className="studySection useInViewcard">
-            <p>Get in touch </p>
-            <p className={`Getcontent ${isAnimated ? "animated" : ""}`}>
+            <p>We’re Recognized Overseas <br/>Education Consultants</p>
+            {/* <p className={`Getcontent ${isAnimated ? "animated" : ""}`}>
               With Us
-            </p>
+            </p> */}
           </div>
           <Button
             arrow={true}

@@ -10,11 +10,11 @@ const Explore = () => {
     <>
       <div className="section Explore_container">
         <div className="Explore_leftSide">
-          <p className="expliore">Explore</p>
-          <h2 className="Capabilities">Our Capabilities</h2>
+          <p className="expliore">Services</p>
+          <h2 className="Capabilities">We Offer</h2>
         </div>
         <div className="explore_rightSide">
-          <div className="explore_rightCard">
+          {/* <div className="explore_rightCard">
             <div className="explore_rightCard_img">
               <img src={Img3} alt="" />
             </div>
@@ -39,7 +39,7 @@ const Explore = () => {
                 />
               </NavLink>
             </div>
-          </div>
+          </div> */}
           <div className="explore_rightCard">
             {" "}
             <img src={Cource} alt="" className="corcesImage" />
@@ -50,25 +50,23 @@ const Explore = () => {
               </NavLink>
             </h3>
             <p>
-              Orient Spectra simplifies course selection for your academic and
-              career goals. Our experienced counselors provide expert guidance,
-              helping you navigate program options and make informed decisions
-              aligned with your aspirations.
+            Orient Spectra simplifies course selection to help you with your overseas education process. 
+            Our experienced counselors provide expert guidance, helping you navigate international 
+            study program options and make informed decisions that align with your aspirations. 
             </p>
           </div>
           <div className="explore_rightCard">
             {" "}
             <img src={Img2} alt="" className="corcesImage" />
             <h3>
-              Coaching
+            Study Abroad Coaching 
               <NavLink style={{ color: "#fff" }} to={"/Coaching"}>
                 <ArrowForwardIcon sx={{ fontSize: "40px" }} />
               </NavLink>
             </h3>
             <p>
-              Orient Spectra streamlines the student visa process. Our expert
-              counselors provide comprehensive support, ensuring a smooth
-              journey to your international education.
+            Orient Spectra helps you with your student visa application process. We have an army of experienced counselors 
+            who will provide comprehensive support, ensuring a smooth journey to your international education.
             </p>
           </div>
         </div>

@@ -14,13 +14,12 @@ const items = [
     children: (
       <div className="course_container_innerDiv">
         <div className="course_container_inner_left">
-          <h1>Well Established Overseas Education Consultancy in Hyderabad</h1>
+          <h1>Reputed Overseas Education Consultancy in Hyderabad</h1>
           <p>
-          The consultancy has built a strong reputation over the years and represents over 400 universities globally, including institutions in the UK, USA, Germany, France, and Ireland. 
-          The consultancy is known for its individualized approach, providing detailed attention and tailored advice to each student, leveraging the extensive experience of our counselors. 
-          The consultancy's commitment to quality service has been recognized widely, including the Times Business Award 2023, which acknowledged it as one of the top 50 overseas education consultants in Hyderabad. 
-          Students have praised Orient Spectra for their thorough and supportive approach, making it a recommended choice for those seeking to pursue higher education overseas.
-
+          Orient Spectra has a strong market reputation as overseas education consultants with over 20 years of experience. 
+          We represent over 400 universities globally, including institutions in the UK, USA, Germany, France, Ireland and 
+          Australia. We are known for our individualized approach, providing detailed attention and tailored advice to each 
+          student, leveraging the extensive experience of our counsellors.
           </p>
           <Button text=" Find Your Course" arrow={true} />
         </div>
@@ -36,13 +35,13 @@ const items = [
     children: (
       <div className="course_container_innerDiv">
         <div className="course_container_inner_left">
-          <h1>You Gain A Global Perspective </h1>
+          <h1>Recognized by Global Universities</h1>
           <p>
-          We are recognized by various international educational organizations, including The British Council, IDP, and PTE, which underscores their credibility and adherence to high standards in education consulting. 
-
-The consultancy has an in-house R&D center dedicated to exploring new educational opportunities and ensuring that students have access to the latest information.
-They facilitate direct interactions between students and university representatives, offering valuable insights and helping students make more informed decisions.
-
+          Orient Spectra is recognized by various international educational organizations, including The British 
+          Council, IDP, and PTE, underscoring our credibility and adherence to high standards in overseas education 
+          consulting. We have an in-house R&D center dedicated to exploring new educational opportunities and ensuring 
+          that students have access to the latest information. We also facilitate direct interactions between students 
+          and university representatives.
           </p>
           <Button text=" Find Your Course" arrow={true} />
         </div>
@@ -54,15 +53,16 @@ They facilitate direct interactions between students and university representati
   },
   {
     key: "3",
-    label: "Lifetime Experience",
+    label: "Seamless Experience",
     children: (
       <div className="course_container_innerDiv">
         <div className="course_container_inner_left">
-          <h1>An experience of a lifetime</h1>
+          <h1>Offers an experience of a lifetime</h1>
           <p>
-          Studying abroad is more than just an academic pursuit—it's a transformative journey that broadens your educational horizons and enhances your future. By immersing yourself in a new cultural and academic environment, you'll gain access to a diverse array of courses, cutting-edge research opportunities, and hands-on skill development.
-
-Embrace the chance to expand your global perspective, build a professional network, and acquire valuable international experience. By studying abroad, you'll engage with diverse perspectives and gain insights crucial for success in the global job market. With our expert guidance, your dream of pursuing international education becomes a well-crafted reality, designed to elevate your academic and professional aspirations.
+          Orient Spectra understands that studying abroad is more than just an academic pursuit—it's a transformative journey. 
+          Our counsellors help you better immerse yourself in a new cultural and academic environment through access to a diverse 
+          array of courses. With our expert guidance, your dream of pursuing international education becomes a well-crafted reality, 
+          designed to elevate your academic and professional aspirations.
           </p>
           <Button text=" Find Your Course" arrow={true} />
         </div>
@@ -89,6 +89,7 @@ const Course = () => {
   return (
     <>
       <div className="section course_container">
+        <p>Why Choose <span>Orient Spectra ?</span></p>
         <div className=" course_container_inner">
           <Tabs activeKey={activeKey} onChange={setActiveKey} items={items}>
             
