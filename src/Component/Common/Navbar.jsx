@@ -19,7 +19,7 @@ import Australia from "../../assets/CountryFlags/Asset 13.svg";
 import Uk from "../../assets/CountryFlags/Asset 12.svg";
 import Dubai from "../../assets/CountryFlags/Asset 6.svg";
 import Sweden from "../../assets/CountryFlags/Asset 5.svg";
-import Poland from  "../../assets/CountryFlags/Asset 4.svg";
+import Poland from "../../assets/CountryFlags/Asset 4.svg";
 import Switzerland from "../../assets/CountryFlags/Asset 3.svg";
 import Malta from "../../assets/CountryFlags/Asset 9.svg";
 import Singapore from "../../assets/CountryFlags/Asset 7.svg";
@@ -547,7 +547,6 @@ const Navbar = ({
   const handleMouseOver = () => {
     setWhatwedoOpen(false);
     setopenbranches(false);
-
     setactiveNavbar(true);
     setStudyOverseas(true);
   };
@@ -659,10 +658,7 @@ const Navbar = ({
             </div>
 
             <div onClick={hanldeCloseSubheader}>
-              <Link
-                className={`Link_route DailyNews ${activeNavbar && "DalyText"}`}
-                to="/about"
-              >
+              <Link className={`Link_route DailyNews`} to="/about">
                 <Space>About us</Space>
               </Link>
             </div>
@@ -829,17 +825,15 @@ const Navbar = ({
             </div>
 
             <div onClick={hanldeCloseSubheader}>
-              <Link
-                className={`Link_route DailyNews ${activeNavbar && "DalyText"}`}
-                to={"/blogs"}
-              >
+              <Link className={`Link_route DailyNews`} to={"/blogs"}>
                 Blogs
               </Link>
             </div>
 
             <div onClick={hanldeCloseSubheader}>
               <Link
-                className={`Link_route DailyNews ${activeNavbar && "DalyText"}`}
+                className={`Link_route DailyNews
+                  `}
                 to={"/news-&-pr"}
               >
                 News & PR
@@ -847,7 +841,8 @@ const Navbar = ({
             </div>
             <div onClick={hanldeCloseSubheader}>
               <Link
-                className={`Link_route DailyNews ${activeNavbar && "DalyText"}`}
+                className={`Link_route DailyNews
+                  `}
                 to={"/events"}
               >
                 Events

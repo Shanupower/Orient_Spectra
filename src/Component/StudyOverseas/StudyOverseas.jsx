@@ -8,6 +8,8 @@ import Footer from "../Common/Footer";
 import Navbar from "../Common/Navbar";
 import DiscoverEvent from "./DiscoverEvent";
 import Hero from "./Hero";
+import { useMediaQuery } from "@mui/material";
+import MobileDiscoverEvent from "./mobileDiscoverEvent/MobileDiscoverEvent";
 const getItems = (panelStyle) => [
   {
     key: "1",
@@ -144,13 +146,16 @@ const getItems = (panelStyle) => [
   },
 ];
 const StudyOverseas = () => {
+  const isMd = useMediaQuery("(max-width:986px)");
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
     <>
       <Hero />
-      <DiscoverEvent />
+      {isMd ? <MobileDiscoverEvent /> : <DiscoverEvent />}
+
       <Counselors />
       <Testimonial />
       <Events />

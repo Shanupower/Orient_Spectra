@@ -12,13 +12,11 @@ const Discovery = () => {
         </div>
         <div className="dicovery_card">
           <h1>15000+</h1>
-          <p>Successful Admits
-          </p>
+          <p>Successful Admits</p>
         </div>
         <div className="dicovery_card">
           <h1>98%</h1>
-          <p>Visa Success Rate
-          </p>
+          <p>Visa Success Rate</p>
         </div>
       </div>
       <div className="discoverTextCard">

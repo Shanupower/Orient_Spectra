@@ -4,9 +4,12 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 import "./index.css";
+import Button from "../Component/Common/Button";
+import { useMediaQuery } from "@mui/material";
 
 const Blog = () => {
   const [blogData, setBlogData] = useState([]);
+  const isMd = useMediaQuery("(max-width:986px)");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -31,9 +34,7 @@ const Blog = () => {
 
   return (
     <>
-    <div className="Blog-section">
-        <p>Latest from Our <span>Knowledge Base</span></p>
-        </div>
+      <h1 className="section blogsKnowledge ">Explore our Knowledge base</h1>
       <div className="section BlogContainer">
         <div className="leftBlogCard">
           <div className="leftBlogCard-image-card">
@@ -42,22 +43,18 @@ const Blog = () => {
               alt="Blog Image 1"
             />
           </div>
-          <div className="titleblogContent">
-            {/* <span>New</span> */}
-            {/* <p>
-              {blogData[0]?.attributes?.Title.split(" ").slice(0, 3).join(" ")}
-            </p>
-            <strong>
-              {blogData[0]?.attributes?.Title.split(" ").slice(3).join(" ")}
-            </strong> */}
-          </div>
-          <div className="blogContent">
-            {" "}
-            <p>{/* {blogData[0]?.attributes?.Short_Description} */}</p>
-            <Link to={`blog-content/${blogData[0]?.id}`}>
-              <ArrowForwardIcon className="rightArrowBlog" />
-            </Link>
-          </div>
+        
+          {!isMd && (
+            <div className="blogContent">
+              {" "}
+              <p></p>
+              <Button
+                arrow={true}
+                link={`blog-content/${blogData[0]?.id}`}
+                className="blogCOntentArrow"
+              />
+            </div>
+          )}
         </div>
         <div className="rightBlogsCantainer">
           {blogData.slice(1, 4).map((item) => (
@@ -86,6 +83,7 @@ const Blog = () => {
           <Link to={"/blogs"} className="Link_route findMore">
             Find More <ArrowForwardIcon className="blogarrrow" />
           </Link>
+          {/* <Button arrow={true} link="/blogs" /> */}
         </div>
       </div>
     </>
