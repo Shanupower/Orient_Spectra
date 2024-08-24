@@ -25,7 +25,7 @@ const Hero = ({ blog, event }) => {
         id: 1,
         text: "Make Your Study Abroad ",
         heading: "Dream A Reality",
-        bgImage: "https://strapi.orientspectra.com/uploads/Banner1_d46bc11483.jpg",
+        bgImage: "https://strapi.orientspectra.com/uploads/Banner_03_07b8ebd9f0.jpg",
         subtext:
           "We helped over 15000+ students in their journey to study abroad across USA, UK, Germany, Australia, and so on.",
         buttonText: "Get Dedicated Counsellor",
@@ -34,15 +34,16 @@ const Hero = ({ blog, event }) => {
         id: 2,
         text: "Want To Know",
         heading: "How To Study Abroad?",
-        bgImage: Img1,
+        bgImage: "https://strapi.orientspectra.com/uploads/USA_Banner_5a5338b6e3.jpg",
         subtext:
           "Our expert counsellors will help you through the visa application process, and ensure you land in your dream course.",
         buttonText: "Talk To Our Expert",
       },
       {
         id: 3,
-        heading: blog?.attributes?.Title || "Rise of new education",
-        bgImage: `https://strapi.orientspectra.com${blog?.attributes?.Headline_image?.data?.attributes?.formats?.large?.url}`,
+        // heading: blog?.attributes?.Title || "Rise of new education",
+        heading: "Masters in UK",
+        bgImage: `https://strapi.orientspectra.com/uploads/UK_Banner_9a54aba2cf.jpg`,
         subtext:
           blog?.attributes?.Short_Description ||
           "– US, UK, Australia and Canada – face headwinds",
@@ -51,9 +52,9 @@ const Hero = ({ blog, event }) => {
       },
       {
         id: 4,
-        heading: "",
-        bgImage: `https://strapi.orientspectra.com${event?.attributes?.Poster?.data?.attributes?.url}`,
-        subtext: "",
+        heading: "Masters in USA",
+        bgImage: "https://strapi.orientspectra.com/uploads/Banner_02_e1eeeb63a7.jpg",
+        subtext: "Our expert counsellors will help you through the visa application process, and ensure you land in your dream course.",
         link: "event",
         buttonText:"Share Your Interest",
       },

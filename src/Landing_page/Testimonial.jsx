@@ -20,15 +20,6 @@ import "./index.css";
 const TestimonialData = [
   {
     id: 1,
-    videoLink: "https://www.instagram.com/reel/C37Bh3oso_1/",
-    videoUrl: Video1,
-    userName: "Sakshit",
-    usrImg: img1,
-    content:
-      "✨ Join Orient Spectra on a journey to fulfill your academic dreams! At Orient Spectra, our dedicated team is committed to guiding students through the Complexities of higher education. Our experienced counselors offer personalized assistance at every stage, ensuring you find the perfect fit for your academic journey. From initial inquiries to securing your place at the university, Orient Spectra provides unwavering support throughout the process.",
-  },
-  {
-    id: 2,
     videoLink: "https://www.instagram.com/reel/C4F6nXLgW3J/",
     videoUrl: Video2,
     userName: "Madhu Kumar M",
@@ -37,7 +28,7 @@ const TestimonialData = [
       "Congratulations Mr. Madhu Kumar for flying to the USA✈️ and achieving his dream. Under our guidance, Madhu Kumar got all the information related to the university. We provide I20 guidance and visa mock interviews at no extra cost. Now he is ready to fly to the USA!",
   },
   {
-    id: 3,
+    id: 2,
     videoLink: "https://www.instagram.com/orient.spectra.1/",
     videoUrl: Video3,
     userName: "Shashi Kumar",
@@ -46,7 +37,7 @@ const TestimonialData = [
       "Student mother extends her appreciation to Orient Spectra! Here is her heartfelt thanks as we helped to achieve her son's dream of studying in US. Your success stories inspire us every day!",
   },
   {
-    id: 4,
+    id: 3,
     videoLink: "https://www.instagram.com/reel/CsK6PekLpkp/",
     videoUrl: Video4,
     userName: "Ashritha",
@@ -55,7 +46,7 @@ const TestimonialData = [
       "Meet Ms. Arshita, from Hyderabad. With the guidance and support from our expert counsellors, she got her acceptance letter after which she applied for her US visa. Now she is ready to take the flight of her dreams!",
   },
   {
-    id: 5,
+    id: 4,
     videoLink: "https://www.instagram.com/orient.spectra.1/",
     videoUrl: Video5,
     userName: "Jaishree",
