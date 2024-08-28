@@ -17,9 +17,19 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import "./index.css";
 
 
-const TestimonialData = [
+const TestimonialData = [ 
   {
     id: 1,
+    videoLink: "https://www.instagram.com/orient.spectra.1/",
+    videoUrl: Video3,
+    userName: "Shashi Kumar",
+    universityName: "Franklin University",
+    usrImg: img3,
+    content:
+      "Student mother extends her appreciation to Orient Spectra! Here is her heartfelt thanks as we helped to achieve her son's dream of studying in US. Your success stories inspire us every day!",
+  },
+  {
+    id: 2,
     videoLink: "https://www.instagram.com/reel/C4F6nXLgW3J/",
     videoUrl: Video2,
     userName: "Madhu Kumar M",
@@ -28,19 +38,11 @@ const TestimonialData = [
       "Congratulations Mr. Madhu Kumar for flying to the USA✈️ and achieving his dream. Under our guidance, Madhu Kumar got all the information related to the university. We provide I20 guidance and visa mock interviews at no extra cost. Now he is ready to fly to the USA!",
   },
   {
-    id: 2,
-    videoLink: "https://www.instagram.com/orient.spectra.1/",
-    videoUrl: Video3,
-    userName: "Shashi Kumar",
-    usrImg: img3,
-    content:
-      "Student mother extends her appreciation to Orient Spectra! Here is her heartfelt thanks as we helped to achieve her son's dream of studying in US. Your success stories inspire us every day!",
-  },
-  {
     id: 3,
     videoLink: "https://www.instagram.com/reel/CsK6PekLpkp/",
     videoUrl: Video4,
     userName: "Ashritha",
+    universityName: 'George Mason University',
     usrImg: img4,
     content:
       "Meet Ms. Arshita, from Hyderabad. With the guidance and support from our expert counsellors, she got her acceptance letter after which she applied for her US visa. Now she is ready to take the flight of her dreams!",
@@ -117,7 +119,7 @@ const Testimonial = () => {
                 <ArrowForwardIcon className="leftarrowicon" />
                 </p>
                 <p className="studentCard studentename">
-                  {currentTestimonial.userName}
+                  {currentTestimonial.userName} <br/> <span>{currentTestimonial.universityName}</span>
                 </p>
                 <p className="RightArrow" onClick={handleClickRight}>
                 <ArrowForwardIcon className="rightarrowicon" />
@@ -154,18 +156,13 @@ const Testimonial = () => {
             </Link>
             <div className="testimonial_rigtSide">
               <div className="studentcard">
-                <div className="stuImage">
-                  <img
-                    src={currentTestimonial.usrImg}
-                    alt={currentTestimonial.userName}
-                  />
-                </div>
                 <p
                   className={`studentCard ${
                     isAnimatingLeft || (isAnimatingRight && "textFadeAnimation")
                   }`}
                 >
                   {currentTestimonial.userName}
+                  <p>{currentTestimonial.universityName}</p>
                 </p>
               </div>
               <p>{currentTestimonial.content}</p>

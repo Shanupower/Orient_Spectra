@@ -1,11 +1,10 @@
-import Img1 from "../assets/WhatsApp Image 2024-05-31 at 2.22.46 PM.jpeg";
-import Img2 from "../assets/WhatsApp Image 2024-05-31 at 2.05.55 PM.jpeg";
-import Img3 from "../assets/DSC02094.jpeg";
 import axios from "axios";
-
 import Play from "../assets/playIcon.png";
 import "./index.css";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+
 const News = () => {
   const [NewsData, setNewsData] = useState([]);
 
@@ -44,6 +43,11 @@ const News = () => {
             </div>
           ))}
         </div>
+          <div className="findmoreButton Container">
+            <Link to={"/blogs"} className="Link_route findMore">
+                Find More <ArrowForwardIcon className="blogarrrow" />
+              </Link>
+          </div>
       </div>
     </>
   );

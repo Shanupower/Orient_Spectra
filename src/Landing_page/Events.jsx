@@ -57,7 +57,8 @@ const Events = () => {
         }}
       >
         <div className="event_leftContent">
-          <b className="upcomingText">Upcoming Events</b>
+          <div className="textBox">
+          <b className="upcomingText">Upcoming Events</b></div>
           <div className="dateEvent">
             <p>Date of the event</p>
             <span>{upcomingEventdata[0]?.attributes?.Date_of_the_event}</span>

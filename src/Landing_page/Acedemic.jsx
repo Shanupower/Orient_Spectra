@@ -18,7 +18,7 @@ const Acedemic = () => {
       </Marquee>
 
       <div className="Acedemic_cantainer__header">
-        <p>Transform Your Skills for Admission to <br/>Leading Global Universities</p>
+        <p>Fastrack your Admission to Leading <br/>Global Universities</p>
         <div className="discovermoreButton">
           <Button text="Schedule A Call" arrow={true} />
         </div>

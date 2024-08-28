@@ -22,7 +22,7 @@ const Discovery = () => {
         </div>
         <div className="dicovery_card">
           <h1>500+</h1>
-          <p>Universities
+          <p>Global Universities
           </p>
         </div>
         <div className="dicovery_card">
