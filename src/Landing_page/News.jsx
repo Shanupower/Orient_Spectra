@@ -44,7 +44,7 @@ const News = () => {
           ))}
         </div>
           <div className="findmoreButton Container">
-            <Link to={"/blogs"} className="Link_route findMore">
+            <Link to={"/news-&-pr"} className="Link_route findMore">
                 Find More <ArrowForwardIcon className="blogarrrow" />
               </Link>
           </div>
