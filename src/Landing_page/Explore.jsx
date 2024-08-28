@@ -12,35 +12,35 @@ const Explore = () => {
       <p>Services <span>We Offer</span></p>
       <div className="services-card-container section">
         <div className="services-card">
-          <img src="https://strapi.orientspectra.com/uploads/1_89b76eb043.png"/>
+          <img src="https://strapi.orientspectra.com/uploads/8_76268d6d72.png"/>
           <p>Free Expert Counselling</p>
         </div>
         <div className="services-card">
-          <img src="https://strapi.orientspectra.com/uploads/4_Country_nad_course_selection_0efd5f716b.png" />
+          <img src="https://strapi.orientspectra.com/uploads/4_Country_nad_course_selection_y_6264faccc0.png" />
           <p>Country & Course Selection</p>
         </div>
         <div className="services-card">
-          <img src="https://strapi.orientspectra.com/uploads/3_Application_process_9c560a57cb.png" />
+          <img src="https://strapi.orientspectra.com/uploads/3_Application_066e86c717.png" />
           <p>Application Processing</p>
         </div>
         <div className="services-card">
-          <img src="https://strapi.orientspectra.com/uploads/2_Admission_Guidance_0397dcea0f.png" />
+          <img src="https://strapi.orientspectra.com/uploads/2_Admission_6060ba44b7.png" />
           <p>Admission Guidance</p>
         </div>
         <div className="services-card">
-          <img src="https://strapi.orientspectra.com/uploads/7_m_Scholarship_07c9399503.png" />
+          <img src="https://strapi.orientspectra.com/uploads/7_m_Scholarshi_d40d4c4ad6.png" />
           <p>Scholarship Guidance</p>
         </div>
         <div className="services-card">
-          <img src="https://strapi.orientspectra.com/uploads/1_removebg_preview_820ccc207b.png"/>
+          <img src="https://strapi.orientspectra.com/uploads/1_removebg_6aa5377e16.png"/>
           <p>Education Loans Guidance</p>
         </div>
         <div className="services-card">
-          <img src="https://strapi.orientspectra.com/uploads/5_possport_60b2752461.png" />
+          <img src="https://strapi.orientspectra.com/uploads/5_posspor_796b9cc899.png" />
           <p>Visa Process Guidance</p>
         </div>
         <div className="services-card">
-          <img src="https://strapi.orientspectra.com/uploads/6_pre_departure_c73f9d1211.png" />
+          <img src="https://strapi.orientspectra.com/uploads/6_pre_departur_230a6954af.png" />
           <p>Pre-departure Guidance</p>
         </div>
     </div>

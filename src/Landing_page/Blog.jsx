@@ -80,10 +80,11 @@ const Blog = () => {
               </div>
             </Link>
           ))}
-          <Link to={"/blogs"} className="Link_route findMore">
-            Find More <ArrowForwardIcon className="blogarrrow" />
-          </Link>
-          {/* <Button arrow={true} link="/blogs" /> */}
+          <div className="findmoreButton2 Container">
+            <Link to={"/blogs"} className="Link_route findMore">
+                Find More <ArrowForwardIcon className="blogarrrow" />
+              </Link>
+          </div>
         </div>
       </div>
     </>
