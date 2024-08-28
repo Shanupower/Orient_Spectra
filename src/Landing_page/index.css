@@ -1,7 +1,7 @@
 .HeroBlock {
   position: relative;
   width: 100%;
-  height: 84vh;
+  height: 90vh;
 }
 .HeroContainer {
   width: 100%;
@@ -22,12 +22,12 @@
 .Hero_container {
   background-size: cover;
   width: 100%;
-  height: 84vh;
+  height: 90vh;
   display: flex;
   position: relative;
 }
 .Hero_Content {
-  width: 50%;
+  width: 60%;
   position: absolute;
   bottom: 8rem;
   padding: 0 6%;
@@ -272,7 +272,8 @@
 }
 .services-card {
   width: 100%;
-  background: linear-gradient(120deg,  rgba(31, 122, 255, 1) 69%, rgba(98, 207, 244, 1) 100%);
+  /* background: linear-gradient(120deg,  rgba(31, 122, 255, 1) 69%, rgba(98, 207, 244, 1) 100%); */
+  background: rgba(31, 122, 255, 1);
   border-radius: 10px;
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
   padding: 2rem;
@@ -321,6 +322,10 @@
   }
   .services-card > p {
     font-size: 15px;
+  }
+  .services-card > img {
+    width: 70px;
+    height: 70px;
   }
   .Services-container > p {
     font-size: 2rem;
@@ -659,6 +664,7 @@
   justify-content: center;
   font-size: 50px;
   cursor: pointer;
+  color: var(--text-color-black);
 }
 
 .RightArrow > img,
@@ -822,7 +828,14 @@
 }
 .findmoreButton {
   margin-top: -50px;
+  display: flex;
+  justify-content: flex-end;
 }
+.findmoreButton2 {
+  display: flex;
+  justify-content: flex-end;
+}
+
 @media (max-width: 768px) {
   .media-card {
     flex: 1 1 100%;
@@ -995,13 +1008,16 @@
 
 .findMore {
   font-size: 20px;
-  color: var(--text-color-black);
+  color: var(--text-color-white);
   margin-top: 2rem;
   cursor: pointer;
   font-weight: bold;
   display: flex;
   gap: 1rem;
   align-items: center;
+  border-radius: 20px;
+  background-color: #ff7300;
+  padding: 1rem;
 }
 .findMore:hover {
   color: var(--brand-color);
@@ -1625,7 +1641,7 @@ canvas {
   }
   .media-container {
     flex-wrap: nowrap;
-    overflow: auto;
+    /* overflow: auto; */
   }
   .media-card {
     width: 33%;
@@ -1636,6 +1652,7 @@ canvas {
   }
   .media-video {
     border-radius: 20px;
+    width: 90%;
     height: 300px;
     margin-bottom: 2rem;
     position: relative;
@@ -2078,7 +2095,7 @@ canvas {
     display: flex;
     align-items: center;
     padding-block: 2rem;
-    margin: 1rem;
+    margin: 2rem;
     justify-content: flex-start;
     flex-direction: column;
   }
@@ -2148,11 +2165,24 @@ canvas {
     min-width: 330px;
   }
   .media-video {
-    width: 330px;
+    width: 98%;
   }
   .findmoreButton {
-    margin-top: -40px;
-    
+    margin-top: -65px;
+    display: flex;
+    justify-content: center;   
+  }
+  .findmoreButton2 {
+    margin-top: -20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .findMore {
+    border-radius: 20px;
+  background-color: #ff7300;
+  padding: 1rem;
+  font-size: 15px;
   }
   .eventsRigtImage > img {
     width: 100%;

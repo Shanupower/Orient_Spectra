@@ -83,9 +83,11 @@ const Blog = () => {
               </div>
             </Link>
           ))}
-          <Link to={"/blogs"} className="Link_route findMore">
-            Find More <ArrowForwardIcon className="blogarrrow" />
-          </Link>
+          <div className="findmoreButton2 Container">
+            <Link to={"/news-&-pr"} className="Link_route findMore">
+                Find More <ArrowForwardIcon className="blogarrrow" />
+              </Link>
+          </div>
         </div>
       </div>
     </>
