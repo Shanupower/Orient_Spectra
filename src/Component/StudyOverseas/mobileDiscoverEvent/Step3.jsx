@@ -1,20 +1,31 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { create } from "@lottiefiles/lottie-interactivity";
 import lottie from "lottie-web";
-import Step1Lottie from "../../../assets/study-overseas/StudyOverseas_Responsive_03.json";
 
 import ".././StudyOverseas.css";
+
 const Step3 = () => {
   const lottieContainer = useRef(null);
+  const [animationData, setAnimationData] = useState(null);
 
   useEffect(() => {
-    if (lottieContainer.current) {
+    // Fetch the JSON data for the animation
+    fetch(
+      "https://strapi.orientspectra.com/uploads/Study_Overseas_Responsive_03_dbef2dae14.json"
+    )
+      .then((response) => response.json())
+      .then((data) => setAnimationData(data))
+      .catch((error) => console.error("Error loading animation data:", error));
+  }, []);
+
+  useEffect(() => {
+    if (lottieContainer.current && animationData) {
       const lottieInstance = lottie.loadAnimation({
         container: lottieContainer.current,
         renderer: "svg",
         loop: false,
         autoplay: false,
-        animationData: Step1Lottie,
+        animationData: animationData,
       });
 
       create({
@@ -40,7 +51,8 @@ const Step3 = () => {
         lottieInstance.destroy();
       };
     }
-  }, []);
+  }, [animationData]); // Adding animationData as a dependency
+
   return (
     <div className="step1-lottie-container">
       <div className="step1-card">
