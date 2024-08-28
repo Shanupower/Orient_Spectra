@@ -1,6 +1,6 @@
 import "./index.css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Scrollbar } from "swiper/modules";
+import { Autoplay, Navigation, Scrollbar } from "swiper/modules";
 import "swiper/swiper-bundle.css";
 import { useMediaQuery } from "@mui/material";
 import { Link } from "react-router-dom";
@@ -10,69 +10,69 @@ import { Link } from "react-router-dom";
 const CountryImages =[
     {
         id: 1,
-        img: "https://strapi.orientspectra.com/uploads/Canada_6b2e90734d.jpg",
-        name: "Study In Canada",
-        link: "/country/Canada"
-    },
-    {
-        id: 2,
-        img: "https://strapi.orientspectra.com/uploads/USA_3242ce66ba.jpg",
+        img: "https://strapi.orientspectra.com/uploads/usa_77c7453180.jpg",
         name:"Study In USA",
         link: "/country/Usa",
     },
     {
+        id: 2,
+        img: "https://strapi.orientspectra.com/uploads/uk_c662bda403.jpg",
+        name:"Study In UK",
+        link: "/country/UK",
+    }, 
+    {
         id: 3,
-        img: "https://strapi.orientspectra.com/uploads/Germany_6c951c7a97.jpg",
+        img: "https://strapi.orientspectra.com/uploads/Germany_43e3a4167c.jpg",
         name: "Study In Germany",
         link: "/country/Germany",
     },
     {
         id: 4,
-        img: "https://strapi.orientspectra.com/uploads/UK_7f308498f1.jpg",
-        name:"Study In UK",
-        link: "/country/UK",
+        img: "https://strapi.orientspectra.com/uploads/canada_400_14f22221e0.jpg",
+        name: "Study In Canada",
+        link: "/country/Canada"
     },
     {
         id: 5,
-        img: "https://strapi.orientspectra.com/uploads/Singapore_dda3600af6.jpg",
+        img: "https://strapi.orientspectra.com/uploads/singapore_46e5082b2e.jpg",
         name:"Study In Singapore",
         link: "/country/Singapore",
     },
     {
         id: 6,
-        img: "https://strapi.orientspectra.com/uploads/Australia_19dfdcdabd.jpg",
+        img: "https://strapi.orientspectra.com/uploads/australia_93c150352c.jpg",
         name:"Study In Australia",
         link: "/country/Australia",
     },
     {
         id: 7,
-        img: "https://strapi.orientspectra.com/uploads/France_c4dd7afc72.jpg",
+        img: "https://strapi.orientspectra.com/uploads/france_ac43543a72.jpg",
         name:"Study In France",
         link: "/country/France",
     },
     {
         id: 8,
-        img: "https://strapi.orientspectra.com/uploads/Swizterland_a26126d9ad.jpg",
+        img: "https://strapi.orientspectra.com/uploads/switzerland_a4b6b430a3.jpg",
         name:"Study In Switzerland",
         link: "/country/Switzerland",
-    },
+    },  
     {
         id: 9,
-        img: "https://strapi.orientspectra.com/uploads/Malta_4ed05e85ec.jpg",
-        name:"Study In Malta",
-        link: "/country/Malta",
-    },
-    {
-        id: 10,
-        img: "https://strapi.orientspectra.com/uploads/Dubai_03df400689.jpg",
+        img: "https://strapi.orientspectra.com/uploads/dubai_e759968474.jpg",
         name:"Study In Dubai",
         link: "/country/Dubai",
     },
     {
-        id: 11,
-        img: "https://strapi.orientspectra.com/uploads/Poland_ff7ddfde1f.jpg",
+        id: 10,
+        img: "https://strapi.orientspectra.com/uploads/poland_34b13cd814.jpg",
         name:"Study In Poland",
         link: "/country/Poland",
+    },
+    {
+        id: 11,
+        img: "https://strapi.orientspectra.com/uploads/malta_fb20ccd378.jpg",
+        name:"Study In Malta",
+        link: "/country/Malta",
     },
 ]
 
@@ -89,12 +89,12 @@ const Country = () =>{
             spaceBetween={30}
                slidesPerView={isSm ? 1 : isMd ? 2 : 3}
                className="country_Container"
-               modules={[Navigation, Scrollbar]}
+               modules={[Navigation, Scrollbar, Autoplay]}
                autoplay={{
                 delay: 2500,
                 disableOnInteraction: true,
               }}
-            //   speed={1000}
+               speed={1000}
                navigation>
             <div>
                 {CountryImages.map((item)=>(

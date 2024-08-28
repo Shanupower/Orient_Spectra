@@ -17,15 +17,16 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import "./index.css";
 
 
-const TestimonialData = [
+const TestimonialData = [ 
   {
     id: 1,
-    videoLink: "https://www.instagram.com/reel/C37Bh3oso_1/",
-    videoUrl: Video1,
-    userName: "Sakshit",
-    usrImg: img1,
+    videoLink: "https://www.instagram.com/orient.spectra.1/",
+    videoUrl: Video3,
+    userName: "Shashi Kumar",
+    universityName: "Franklin University",
+    usrImg: img3,
     content:
-      "✨ Join Orient Spectra on a journey to fulfill your academic dreams! At Orient Spectra, our dedicated team is committed to guiding students through the Complexities of higher education. Our experienced counselors offer personalized assistance at every stage, ensuring you find the perfect fit for your academic journey. From initial inquiries to securing your place at the university, Orient Spectra provides unwavering support throughout the process.",
+      "Student mother extends her appreciation to Orient Spectra! Here is her heartfelt thanks as we helped to achieve her son's dream of studying in US. Your success stories inspire us every day!",
   },
   {
     id: 2,
@@ -38,24 +39,16 @@ const TestimonialData = [
   },
   {
     id: 3,
-    videoLink: "https://www.instagram.com/orient.spectra.1/",
-    videoUrl: Video3,
-    userName: "Shashi Kumar",
-    usrImg: img3,
-    content:
-      "Student mother extends her appreciation to Orient Spectra! Here is her heartfelt thanks as we helped to achieve her son's dream of studying in US. Your success stories inspire us every day!",
-  },
-  {
-    id: 4,
     videoLink: "https://www.instagram.com/reel/CsK6PekLpkp/",
     videoUrl: Video4,
     userName: "Ashritha",
+    universityName: 'George Mason University',
     usrImg: img4,
     content:
       "Meet Ms. Arshita, from Hyderabad. With the guidance and support from our expert counsellors, she got her acceptance letter after which she applied for her US visa. Now she is ready to take the flight of her dreams!",
   },
   {
-    id: 5,
+    id: 4,
     videoLink: "https://www.instagram.com/orient.spectra.1/",
     videoUrl: Video5,
     userName: "Jaishree",
@@ -126,7 +119,7 @@ const Testimonial = () => {
                 <ArrowForwardIcon className="leftarrowicon" />
                 </p>
                 <p className="studentCard studentename">
-                  {currentTestimonial.userName}
+                  {currentTestimonial.userName} <br/> <span>{currentTestimonial.universityName}</span>
                 </p>
                 <p className="RightArrow" onClick={handleClickRight}>
                 <ArrowForwardIcon className="rightarrowicon" />
@@ -163,18 +156,13 @@ const Testimonial = () => {
             </Link>
             <div className="testimonial_rigtSide">
               <div className="studentcard">
-                <div className="stuImage">
-                  <img
-                    src={currentTestimonial.usrImg}
-                    alt={currentTestimonial.userName}
-                  />
-                </div>
                 <p
                   className={`studentCard ${
                     isAnimatingLeft || (isAnimatingRight && "textFadeAnimation")
                   }`}
                 >
                   {currentTestimonial.userName}
+                  <p>{currentTestimonial.universityName}</p>
                 </p>
               </div>
               <p>{currentTestimonial.content}</p>

@@ -13,7 +13,7 @@ const GetTuchWithUs = () => {
   return (
     <>
       <div className="foreignAcedemic section">
-        <p>Foreign Education Consultancy - Accreditations</p>
+        <p>Foreign Education Consultancy - <span>Accreditations</span></p>
         <div className="foreignAcedemic_marquee">
           <div className="foreignAcedemic_image_container">
             <img src={Img6} alt="" />
