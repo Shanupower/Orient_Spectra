@@ -17,8 +17,8 @@ const Acedemic = () => {
 
       <div className="Acedemic_cantainer__header">
         <p>
-          Transform Your Skills for Admission to <br />
-          Leading Global Universities
+          Fastrack your Admission to Leading <br />
+          Global Universities
         </p>
         <div className="discovermoreButton">
           <Button

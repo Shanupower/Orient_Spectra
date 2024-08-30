@@ -15,6 +15,16 @@ const Discovery = () => {
           <p>Successful Admits</p>
         </div>
         <div className="dicovery_card">
+          <h1>10+</h1>
+          <p>Study Destinations
+          </p>
+        </div>
+        <div className="dicovery_card">
+          <h1>500+</h1>
+          <p>Global Universities
+          </p>
+        </div>
+        <div className="dicovery_card">
           <h1>98%</h1>
           <p>Visa Success Rate</p>
         </div>

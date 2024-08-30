@@ -8,12 +8,50 @@ import Img4 from "../assets/About2/Mentorship3.svg";
 const Explore = () => {
   return (
     <>
-      <div className="section Explore_container">
+    <div className="section Services-container">
+      <p>Services <span>We Offer</span></p>
+      <div className="services-card-container section">
+        <div className="services-card">
+          <img src="https://strapi.orientspectra.com/uploads/8_76268d6d72.png"/>
+          <p>Free Expert Counselling</p>
+        </div>
+        <div className="services-card">
+          <img src="https://strapi.orientspectra.com/uploads/4_Country_nad_course_selection_y_6264faccc0.png" />
+          <p>Country & Course Selection</p>
+        </div>
+        <div className="services-card">
+          <img src="https://strapi.orientspectra.com/uploads/3_Application_066e86c717.png" />
+          <p>Application Processing</p>
+        </div>
+        <div className="services-card">
+          <img src="https://strapi.orientspectra.com/uploads/2_Admission_6060ba44b7.png" />
+          <p>Admission Guidance</p>
+        </div>
+        <div className="services-card">
+          <img src="https://strapi.orientspectra.com/uploads/7_m_Scholarshi_d40d4c4ad6.png" />
+          <p>Scholarship Guidance</p>
+        </div>
+        <div className="services-card">
+          <img src="https://strapi.orientspectra.com/uploads/1_removebg_6aa5377e16.png"/>
+          <p>Education Loans Guidance</p>
+        </div>
+        <div className="services-card">
+          <img src="https://strapi.orientspectra.com/uploads/5_posspor_796b9cc899.png" />
+          <p>Visa Process Guidance</p>
+        </div>
+        <div className="services-card">
+          <img src="https://strapi.orientspectra.com/uploads/6_pre_departur_230a6954af.png" />
+          <p>Pre-departure Guidance</p>
+        </div>
+    </div>
+    </div>
+    
+      {/* <div className="section Explore_container">
         <div className="Explore_leftSide">
           <p className="expliore">Services</p>
           <h2 className="Capabilities">We Offer</h2>
         </div>
-        <div className="explore_rightSide">
+        <div className="explore_rightSide"> */}
           {/* <div className="explore_rightCard">
             <div className="explore_rightCard_img">
               <img src={Img3} alt="" />
@@ -40,7 +78,7 @@ const Explore = () => {
               </NavLink>
             </div>
           </div> */}
-          <div className="explore_rightCard">
+          {/* <div className="explore_rightCard">
             {" "}
             <img src={Cource} alt="" className="corcesImage" />
             <h3>
@@ -70,7 +108,7 @@ const Explore = () => {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };

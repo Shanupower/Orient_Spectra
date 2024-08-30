@@ -12,23 +12,6 @@ const GetTuchWithUs = () => {
   const isAnimated = useInViewport();
   return (
     <>
-      <div className="foreignAcedemic section">
-        <p>Foreign Education Consultancy - Accreditations</p>
-        <div className="foreignAcedemic_marquee">
-          <div className="foreignAcedemic_image_container">
-            <img src={Img6} alt="" />
-          </div>
-          <div className="foreignAcedemic_image_container">
-            <img src={Img7} alt="" />
-          </div>
-          <div className="foreignAcedemic_image_container">
-            <img src={Img8} alt="" />
-          </div>
-          <div className="foreignAcedemic_image_container">
-            <img src={Img9} alt="" />
-          </div>
-        </div>
-      </div>
       <motion.div
         className="GetContterCard"
         initial="hidden"
@@ -57,6 +40,28 @@ const GetTuchWithUs = () => {
           />
         </div>
       </motion.div>
+      <div className="foreignAcedemic section">
+        <p>
+          Foreign Education Consultancy - <span>Accreditations</span>
+        </p>
+        <div className="foreignAcedemic_marquee">
+          <div className="foreignAcedemic_image_container">
+            <img src={Img6} alt="" />
+          </div>
+          <div className="foreignAcedemic_image_container">
+            <img src={Img7} alt="" />
+          </div>
+          <div className="foreignAcedemic_image_container">
+            <img
+              src="https://strapi.orientspectra.com/uploads/British_Council_full_0e44af3596.png"
+              alt=""
+            />
+          </div>
+          <div className="foreignAcedemic_image_container">
+            <img src={Img9} alt="" />
+          </div>
+        </div>
+      </div>
     </>
   );
 };

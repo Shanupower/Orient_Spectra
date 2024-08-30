@@ -34,7 +34,9 @@ const Blog = () => {
 
   return (
     <>
-      <h1 className="section blogsKnowledge ">Explore our Knowledge base</h1>
+    <div className="Blog-section">
+        <p>Latest from Our <span>Knowledge Base</span></p>
+        </div>
       <div className="section BlogContainer">
         <div className="leftBlogCard">
           <div className="leftBlogCard-image-card">
@@ -80,10 +82,11 @@ const Blog = () => {
               </div>
             </Link>
           ))}
-          <Link to={"/blogs"} className="Link_route findMore">
-            Find More <ArrowForwardIcon className="blogarrrow" />
-          </Link>
-          {/* <Button arrow={true} link="/blogs" /> */}
+          <div className="findmoreButton2 Container">
+            <Link to={"/blogs"} className="Link_route findMore">
+                Find More <ArrowForwardIcon className="blogarrrow" />
+              </Link>
+          </div>
         </div>
       </div>
     </>

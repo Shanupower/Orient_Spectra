@@ -60,10 +60,10 @@ const LandingPage = () => {
       <Discovery />
       <Acedemic />
       <Events />
+      <Country/>
       <Explore />
       <StudyAbroad />
       <Course />
-      <Country/>
       {/* <Counselors /> */}
       <Testimonial />
       <Blog />
