@@ -32,6 +32,7 @@ const GetTuchWithUs = () => {
           <Button
             arrow={true}
             className={`GetTuchArrow ${isAnimated ? "buttonfadeIn" : ""}`}
+            link="/start-your-journey"
           />
         </div>
       </motion.div>

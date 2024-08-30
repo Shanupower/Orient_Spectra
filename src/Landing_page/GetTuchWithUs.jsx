@@ -30,7 +30,7 @@ const GetTuchWithUs = () => {
         </div>
       </div>
       <motion.div
-      className="GetContterCard"
+        className="GetContterCard"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
@@ -42,7 +42,10 @@ const GetTuchWithUs = () => {
       >
         <div className="section GetInTouch">
           <div className="studySection useInViewcard">
-            <p>We’re Recognized Overseas <br/>Education Consultants</p>
+            <p>
+              We’re Recognized Overseas <br />
+              Education Consultants
+            </p>
             {/* <p className={`Getcontent ${isAnimated ? "animated" : ""}`}>
               With Us
             </p> */}
@@ -50,6 +53,7 @@ const GetTuchWithUs = () => {
           <Button
             arrow={true}
             className={`GetTuchArrow ${isAnimated ? "buttonfadeIn" : ""}`}
+            link="/start-your-journey"
           />
         </div>
       </motion.div>

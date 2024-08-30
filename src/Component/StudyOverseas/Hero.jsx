@@ -9,11 +9,15 @@ const Hero = () => {
           Start Your <br /> Journey Today
         </h1>
         <div>
-          <Button text="Start Your Journey " arrow={true} />
+          <Button
+            text="Start Your Journey "
+            arrow={true}
+            link="/start-your-journey"
+          />
         </div>
       </div>
     </div>
   );
-}; 
+};
 
 export default Hero;

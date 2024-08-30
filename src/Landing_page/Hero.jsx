@@ -20,12 +20,13 @@ const Hero = ({ blog, event }) => {
 
   const [isLoading, setIsLoading] = useState(true);
   const HeroPagedata = useMemo(
-    () => [   
+    () => [
       {
         id: 1,
         text: "Make Your Study Abroad ",
         heading: "Dream A Reality",
-        bgImage: "https://strapi.orientspectra.com/uploads/Banner1_d46bc11483.jpg",
+        bgImage:
+          "https://strapi.orientspectra.com/uploads/Banner1_d46bc11483.jpg",
         subtext:
           "We helped over 15000+ students in their journey to study abroad across USA, UK, Germany, Australia, and so on.",
         buttonText: "Get Dedicated Counsellor",
@@ -47,7 +48,7 @@ const Hero = ({ blog, event }) => {
           blog?.attributes?.Short_Description ||
           "– US, UK, Australia and Canada – face headwinds",
         link: "blog",
-        buttonText:"Book A Guidance Call",
+        buttonText: "Book A Guidance Call",
       },
       {
         id: 4,
@@ -55,7 +56,7 @@ const Hero = ({ blog, event }) => {
         bgImage: `https://strapi.orientspectra.com${event?.attributes?.Poster?.data?.attributes?.url}`,
         subtext: "",
         link: "event",
-        buttonText:"Share Your Interest",
+        buttonText: "Share Your Interest",
       },
     ],
     [blog, event]
@@ -104,7 +105,11 @@ const Hero = ({ blog, event }) => {
                   className="StudyButtonCard"
                   onClick={() => handleNavigate(data)}
                 >
-                  <Button text={data.buttonText} arrow={true} />
+                  <Button
+                    text={data.buttonText}
+                    arrow={true}
+                    link="/start-your-journey"
+                  />
                 </div>
               </div>
             </div>

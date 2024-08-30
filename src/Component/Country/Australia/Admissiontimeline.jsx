@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
+
 import "./Country.css";
+
 const Admissiontimeline = () => {
   return (
     <>
@@ -56,4 +58,3 @@ const Admissiontimeline = () => {
 };
 
 export default Admissiontimeline;
-

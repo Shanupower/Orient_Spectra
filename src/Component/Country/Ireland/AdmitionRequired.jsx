@@ -28,10 +28,10 @@ const AdmissionData = [
     icon: Icon3,
     title: "Standardized Test Scores",
   },
-  
+
   {
     icon: Icon5,
-    title:"Valid Visa:",
+    title: "Valid Visa:",
   },
   {
     icon: Icon6,
@@ -53,7 +53,6 @@ const AdmissionData = [
     icon: Icon2,
     title: "Proof of English Proficiency",
   },
-
 ];
 const AdmitionRequired = () => {
   return (
@@ -62,10 +61,14 @@ const AdmitionRequired = () => {
         <h1>
           Admission Requirements for <br />
           <b>Studying in Ireland</b>
-          <p>Admission requirements can vary depending on the university and the course you are applying for. 
-            Before starting the application process, it is essential to check the specific criteria and keep 
-            all necessary documents ready. Pay close attention to the application procedures, fees, and deadlines 
-            as they can differ between institutions. To ensure a fair chance of consideration, apply at least 4-6 months before the deadline.
+          <p>
+            Admission requirements can vary depending on the university and the
+            course you are applying for. Before starting the application
+            process, it is essential to check the specific criteria and keep all
+            necessary documents ready. Pay close attention to the application
+            procedures, fees, and deadlines as they can differ between
+            institutions. To ensure a fair chance of consideration, apply at
+            least 4-6 months before the deadline.
           </p>
         </h1>
       </div>

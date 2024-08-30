@@ -15,7 +15,11 @@ const Hero = () => {
         <h1>
           Quest Through the <br /> Poland
         </h1>
-        <Button text="Start Your Journey" arrow={true} />
+        <Button
+          text="Start Your Journey"
+          arrow={true}
+          link="/start-your-journey"
+        />
       </div>
     </div>
   );
