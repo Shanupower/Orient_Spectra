@@ -18,12 +18,14 @@ const Footer = () => {
           <div className="footercenterRightContent">
           <Link
             to="https://www.facebook.com/orient.spectra.1"
+            target="_blank"
             className="Link_route socialMedia"
           >
             <FacebookOutlinedIcon style={{fontSize: isMd ? 25 : 35}}/>
           </Link>
           <Link
             to="https://www.instagram.com/orient.spectra.1?igsh=dHpkZzV1YjdyaTMz"
+            target="_blank"
             className="Link_route socialMedia"
           >
             <InstagramIcon style={{fontSize: isMd ? 25 : 35}}/>
@@ -31,6 +33,7 @@ const Footer = () => {
 
           <Link 
             to="https://www.youtube.com/@orientspectra1729"
+            target="_blank"
             className="Link_route socialMedia"
             > 
               <YouTubeIcon style={{fontSize: isMd ? 25 : 35}}/>
@@ -39,6 +42,7 @@ const Footer = () => {
 
           <Link
             to="https://www.linkedin.com/company/orientspectra/"
+            target="_blank"
             className="Link_route socialMedia"
           >
             <LinkedInIcon style={{fontSize: isMd ? 25 : 35}}/>
@@ -46,7 +50,7 @@ const Footer = () => {
         </div>
         </div>
         <div className="qrImage">
-          <img src={QrLink} alt="" />
+          <img src="https://strapi.orientspectra.com/uploads/Watsapp_Qr_9ad1331dd0.png" alt="" />
           <p>91+ 9000456765</p>
           <p>info@orientspectra.com</p>
         </div>
@@ -93,12 +97,14 @@ const Footer = () => {
         <div className="footercenterRightContent2">
           <Link
             to="https://www.facebook.com/orient.spectra.1"
+            target="_blank"
             className="Link_route socialMedia"
           >
             <FacebookOutlinedIcon />
           </Link>
           <Link
             to="https://www.instagram.com/orient.spectra.1?igsh=dHpkZzV1YjdyaTMz"
+            target="_blank"
             className="Link_route socialMedia"
           >
            <InstagramIcon />
@@ -107,6 +113,7 @@ const Footer = () => {
           <Link className="Link_route socialMedia"><YouTubeIcon/></Link>
           <Link
             to="https://www.linkedin.com/company/orientspectra/"
+            target="_blank"
             className="Link_route socialMedia"
           >
            <LinkedInIcon/>

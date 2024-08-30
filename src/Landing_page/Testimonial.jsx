@@ -78,14 +78,14 @@ const Testimonial = () => {
 
   const handleClickLeft = () => {
     if (testimonialNum > 1) {
-      setIsAnimatingLeft(true);
+      setIsAnimatingRight(true);
       setTestimonialNum(testimonialNum - 1);
     }
   };
 
   const handleClickRight = () => {
     if (testimonialNum < TestimonialData.length) {
-      setIsAnimatingRight(true);
+      setIsAnimatingLeft(true);
       setTestimonialNum(testimonialNum + 1);
     }
   };
