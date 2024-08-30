@@ -73,9 +73,12 @@ const AdmitionRequired = () => {
         <h1>
           Admission Process to <br />
           <b>Study Abroad in Canada</b>
-          <p>The process for overseas education can differ from what you're accustomed to, so if 
-            you have specific questions, contact the university to which you're applying. Here 
-            are some of the steps involved in the admission process when planning to study abroad in Canada.
+          <p>
+            The process for overseas education can differ from what you're
+            accustomed to, so if you have specific questions, contact the
+            university to which you're applying. Here are some of the steps
+            involved in the admission process when planning to study abroad in
+            Canada.
           </p>
         </h1>
       </div>

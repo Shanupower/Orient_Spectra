@@ -1,8 +1,8 @@
 import Img1 from "../../../assets/Property 1=Default (1).png";
 import Quote from "../../../assets/Country/quote.png";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-
 import "./Country.css";
+import { Link } from "react-router-dom";
 
 const UnitedState = () => {
   return (
@@ -25,7 +25,9 @@ const UnitedState = () => {
         <div className="ReadMoreCard">
           <p>Read More</p>
 
-          <ArrowForwardIcon className="rightArrowBlog" />
+          <Link to="/start-your-journey">
+            <ArrowForwardIcon className="rightArrowBlog" />
+          </Link>
         </div>
       </div>
     </div>

@@ -12,8 +12,8 @@ const GetTuchWithUs = () => {
   const isAnimated = useInViewport();
   return (
     <>
-    <motion.div
-      className="GetContterCard"
+      <motion.div
+        className="GetContterCard"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
@@ -25,7 +25,10 @@ const GetTuchWithUs = () => {
       >
         <div className="section GetInTouch">
           <div className="studySection useInViewcard">
-            <p>We’re Recognized Overseas <br/>Education Consultants</p>
+            <p>
+              We’re Recognized Overseas <br />
+              Education Consultants
+            </p>
             {/* <p className={`Getcontent ${isAnimated ? "animated" : ""}`}>
               With Us
             </p> */}
@@ -33,11 +36,14 @@ const GetTuchWithUs = () => {
           <Button
             arrow={true}
             className={`GetTuchArrow ${isAnimated ? "buttonfadeIn" : ""}`}
+            link="/start-your-journey"
           />
         </div>
       </motion.div>
       <div className="foreignAcedemic section">
-        <p>Foreign Education Consultancy - <span>Accreditations</span></p>
+        <p>
+          Foreign Education Consultancy - <span>Accreditations</span>
+        </p>
         <div className="foreignAcedemic_marquee">
           <div className="foreignAcedemic_image_container">
             <img src={Img6} alt="" />
@@ -46,14 +52,16 @@ const GetTuchWithUs = () => {
             <img src={Img7} alt="" />
           </div>
           <div className="foreignAcedemic_image_container">
-            <img src="https://strapi.orientspectra.com/uploads/British_Council_full_0e44af3596.png" alt="" />
+            <img
+              src="https://strapi.orientspectra.com/uploads/British_Council_full_0e44af3596.png"
+              alt=""
+            />
           </div>
           <div className="foreignAcedemic_image_container">
             <img src={Img9} alt="" />
           </div>
         </div>
       </div>
-      
     </>
   );
 };

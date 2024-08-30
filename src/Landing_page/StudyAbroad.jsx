@@ -29,6 +29,7 @@ const StudyAbroad = () => {
         <Button
           text="Talk To A Counsellor"
           className={`exploreButton ${isAnimated ? "buttonfadeIn" : ""}`}
+          link="/start-your-journey"
         />
       </motion.div>
     </>

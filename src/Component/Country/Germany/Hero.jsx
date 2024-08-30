@@ -13,9 +13,14 @@ const Hero = () => {
       <div className="hero-content">
         <p>Orient Spectra - Countries We are at</p>
         <h1>
-          Quest Through the <br />Germany
+          Quest Through the <br />
+          Germany
         </h1>
-        <Button text="Start Your Journey" arrow={true} />
+        <Button
+          text="Start Your Journey"
+          arrow={true}
+          link="/start-your-journey"
+        />
       </div>
     </div>
   );

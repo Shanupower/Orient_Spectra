@@ -31,7 +31,7 @@ const AdmissionData = [
   {
     icon: Icon10,
     title: "Portfolio (for specific courses) ",
-  }, 
+  },
   {
     icon: Icon8,
     title: "Statement of Purpose (SOP)",
@@ -52,7 +52,6 @@ const AdmissionData = [
     icon: Icon7,
     title: "A CV (if applicable)",
   },
-
 ];
 const AdmitionRequired = () => {
   return (
@@ -61,7 +60,10 @@ const AdmitionRequired = () => {
         <h1>
           Admission Requirements for <br />
           <b>France Study Abroad</b>
-          <p>Here are the major requirements to study in France which we need to ensure while applying to a France university</p>
+          <p>
+            Here are the major requirements to study in France which we need to
+            ensure while applying to a France university
+          </p>
         </h1>
       </div>
 

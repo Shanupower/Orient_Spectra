@@ -20,12 +20,13 @@ const Hero = ({ blog, event }) => {
 
   const [isLoading, setIsLoading] = useState(true);
   const HeroPagedata = useMemo(
-    () => [   
+    () => [
       {
         id: 1,
         text: "Make Your Study Abroad ",
         heading: "Dream A Reality",
-        bgImage: "https://strapi.orientspectra.com/uploads/Banner_03_07b8ebd9f0.jpg",
+        bgImage:
+          "https://strapi.orientspectra.com/uploads/Banner_03_07b8ebd9f0.jpg",
         subtext:
           "We helped over 15000+ students in their journey to study abroad across USA, UK, Germany, Australia, and so on.",
         buttonText: "Get Dedicated Counsellor",
@@ -34,16 +35,19 @@ const Hero = ({ blog, event }) => {
         id: 2,
         text: "Want To Know",
         heading: "How To Study Abroad?",
-        bgImage: "https://strapi.orientspectra.com/uploads/Banner_02_ab30739bfe.jpg",
-        subtext: "Our expert counsellors will help you through the visa application process, and ensure you land in your dream course.",
+        bgImage:
+          "https://strapi.orientspectra.com/uploads/Banner_02_ab30739bfe.jpg",
+        subtext:
+          "Our expert counsellors will help you through the visa application process, and ensure you land in your dream course.",
         link: "event",
-        buttonText:"Share Your Interest",
+        buttonText: "Share Your Interest",
       },
       {
         id: 3,
         text: "Begin Your Journey",
         heading: " of MS in USA",
-        bgImage: "https://strapi.orientspectra.com/uploads/USA_Banner_5a5338b6e3.jpg",
+        bgImage:
+          "https://strapi.orientspectra.com/uploads/USA_Banner_5a5338b6e3.jpg",
         subtext:
           "Get complete guidance on your visa application, university intakes, and scholarship opportunities. Talk to our counsellors.",
         link: "blog",
@@ -55,7 +59,7 @@ const Hero = ({ blog, event }) => {
       //   heading: "Masters in UK",
       //   bgImage: `https://strapi.orientspectra.com/uploads/UK_Banner_9a54aba2cf.jpg`,
       //   subtext:
-      //     // blog?.attributes?.Short_Description || 
+      //     // blog?.attributes?.Short_Description ||
       //     "UK university graduates are prepared with the ability to think critically and creatively.",
       //     // "– US, UK, Australia and Canada – face headwinds",
       //   link: "blog",
@@ -65,10 +69,11 @@ const Hero = ({ blog, event }) => {
         id: 4,
         text: "",
         heading: "",
-        bgImage: "https://strapi.orientspectra.com/uploads/USA_Event_Banner_3c0ca81ade.jpg",
+        bgImage:
+          "https://strapi.orientspectra.com/uploads/USA_Event_Banner_3c0ca81ade.jpg",
         subtext: "",
         link: "event",
-        buttonText:"Register Your Slot",
+        buttonText: "Register Your Slot",
       },
     ],
     [blog, event]
@@ -117,7 +122,11 @@ const Hero = ({ blog, event }) => {
                   className="StudyButtonCard"
                   onClick={() => handleNavigate(data)}
                 >
-                  <Button text={data.buttonText} arrow={true} />
+                  <Button
+                    text={data.buttonText}
+                    arrow={true}
+                    link="/start-your-journey"
+                  />
                 </div>
               </div>
             </div>

@@ -1,6 +1,5 @@
 import Img1 from "../../../assets/Country/conc.png";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-
 import "./Country.css";
 import { Univercitydata } from "../../../Container/data/Universities";
 const Univercity = () => {

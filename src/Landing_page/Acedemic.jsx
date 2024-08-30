@@ -7,8 +7,6 @@ import { ImgGallery } from "../Container/data/Universities";
 const Acedemic = () => {
   return (
     <div className="Acedemic_cantainer section">
-  
-
       <Marquee className="MargueeImage" speed={100} pauseOnHover>
         {ImgGallery.map((data, index) => (
           <div className="acedemic_image_container" key={index}>
@@ -18,12 +16,18 @@ const Acedemic = () => {
       </Marquee>
 
       <div className="Acedemic_cantainer__header">
-        <p>Fastrack your Admission to Leading <br/>Global Universities</p>
+        <p>
+          Fastrack your Admission to Leading <br />
+          Global Universities
+        </p>
         <div className="discovermoreButton">
-          <Button text="Schedule A Call" arrow={true} />
+          <Button
+            text="Schedule A Call"
+            arrow={true}
+            link="/start-your-journey"
+          />
         </div>
       </div>
- 
     </div>
   );
 };

@@ -39,7 +39,8 @@ const AdmissionData = [
   },
   {
     icon: Icon6,
-    title: "Letters of recommendation from the employer/manager (if applicable)",
+    title:
+      "Letters of recommendation from the employer/manager (if applicable)",
   },
   {
     icon: Icon7,
@@ -73,7 +74,10 @@ const AdmitionRequired = () => {
         <h1>
           Admission Requirements for <br />
           <b>United States Study Abroad</b>
-          <p>Here are the major requirements to study in the USA, which you need to ensure while applying to a USA university:</p>
+          <p>
+            Here are the major requirements to study in the USA, which you need
+            to ensure while applying to a USA university:
+          </p>
         </h1>
       </div>
 

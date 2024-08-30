@@ -1,11 +1,12 @@
 .Event-hero-container {
   width: 100%;
   height: 100vh;
+  margin-top: 5rem;
 }
 
 .event-hero-section {
   width: 100%;
-  height: 96vh;
+  height: 84vh;
   border-radius: 20px;
   padding: 3.2rem;
   display: flex;
@@ -14,14 +15,12 @@
   position: relative;
   overflow: hidden;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
- 
 }
 
 .event-hero-leftcard {
   display: flex;
   gap: 2rem;
   flex-wrap: wrap;
-  
 }
 
 .Experience-leftcard {
@@ -52,6 +51,7 @@
   left: 0;
   height: 100%;
 }
+
 .eventLandscapeIcon {
   font-size: 60px !important;
   color: var(--text-color-white);
