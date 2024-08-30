@@ -198,6 +198,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
   margin-top: 4rem;
+  margin-bottom: 5rem;
   gap: 2rem;
 }
 
@@ -609,6 +610,13 @@
   height: 100%;
   aspect-ratio: 9/16;
 }
+.NewsVideo {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1/1;
+  background-color: #ff7300;
+}
+
 
 .testimonial_rigtSide {
   max-width: 30%;
@@ -811,6 +819,31 @@
   height: 320px;
   margin-bottom: 2rem;
   position: relative;
+}
+
+@media (max-width:1280px) {
+  .media-container {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 2rem;
+    gap: 4rem;
+    overflow-x: auto;
+  }
+  .media-card {
+    width: 420px;
+    min-width: 300px;
+    padding-bottom: 1rem;
+    /* box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3); */
+  }
+  
+  .media-video {
+    border: 1px solid var(--text-color-darkgray);
+    border-radius: 20px;
+    overflow: hidden;
+    height: 320px;
+    margin-bottom: 2rem;
+    position: relative;
+  }
 }
 
 .media-card > p {
@@ -1866,9 +1899,9 @@ canvas {
   .slick-dots li {
     width: 40.39px !important;
   }
-  /* .exploreButton {
-    margin-top:-2rem;
-  } */
+ .playIcon {
+  display: none;
+ }
   .PopUpButton {
     position: absolute;
     bottom: 6rem;
@@ -1970,6 +2003,15 @@ canvas {
   .mySwiper {
     width: 80% !important;
   }
+  .swiper-button-next,
+.swiper-button-prev {
+  color: white !important; 
+  background-color: #ff7300 !important;
+  transform: scale(0.8); 
+  padding: 30px !important;
+  border-radius: 30px !important;
+  /* margin-top: -50px !important; */
+}
   .card {
     width: 90%;
     height: 40vh;
@@ -2116,11 +2158,11 @@ canvas {
   .studySection > p {
     text-align: center;
     font-size: 25px;
+    margin: 0;
     /* margin-bottom: -50px; */
   }
   .exploreButton {
     margin-bottom: 30px;
-
   }
   .GetInTouch {
     display: flex;
@@ -2137,6 +2179,11 @@ canvas {
   }
   .heroSubtext {
     font-size: 14px;
+  }
+  .NewsVideo {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1/1;
   }
   
 }
@@ -2278,6 +2325,7 @@ canvas {
     width: 50px;
     height: 50px;
     margin-bottom: 1.4rem;
+    margin-top: -1rem;
   }
   .testimonial_lftSide > p {
     margin-bottom: -1.2rem;

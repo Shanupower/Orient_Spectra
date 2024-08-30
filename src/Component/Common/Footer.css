@@ -88,6 +88,10 @@
   font-size: 15px;
   text-align: center;
 }
+.qrImage > img {
+  width: 150px;
+    height: 150px;
+}
 
 @media (max-width: 1024px) {
   .footerContrainer {
@@ -132,9 +136,9 @@
   .logoImage > img {
     object-fit: contain;
   }
-  .qrImage {
-    width: 80px;
-    height: 80px;
+  .qrImage > img {
+    width: 100px;
+    height: 100px;
   }
   .componnylogo_container {
     display: flex;
