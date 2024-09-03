@@ -118,16 +118,16 @@ const Hero = ({ blog, event }) => {
                 <p className="hero_Heading">{data?.text}</p>
                 <h1 className="hero_Heading BoldHeading">{data.heading}</h1>
                 <p className="heroSubtext">{data.subtext}</p>
-                <div
+                {/* <div
                   className="StudyButtonCard"
                   onClick={() => handleNavigate(data)}
-                >
-                  <Button
-                    text={data.buttonText}
-                    arrow={true}
-                    link="/start-your-journey"
-                  />
-                </div>
+                > */}
+                <Button
+                  text={data.buttonText}
+                  arrow={true}
+                  link="/start-your-journey"
+                />
+                {/* </div> */}
               </div>
             </div>
           ))}
