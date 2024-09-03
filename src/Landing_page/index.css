@@ -333,16 +333,22 @@
     
   }
 }
-/* .corcesImage {
-  width: 100px;
+
+
+
+/*Mission Vision */
+.corcesImage {
+  width: 150px;
   object-fit: contain;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  margin-left: -30px;
 }
-.Explore_container {
+.Mission_container {
   display: flex;
   padding-block: 2rem;
+  margin-block: 6rem;
   gap: 6%;
-  min-height: 60vh;
+  min-height: 40vh;
 }
 .Explore_leftSide {
   width: 30%;
@@ -376,14 +382,14 @@
   height: 26rem;
   margin-top: 1.4rem;
   background-color: rgba(31, 122, 255, 1);
-} */
+}
 /* .explore_rightCard_img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   z-index: -1;
 } */
-/* .explore_rightCard > div {
+.explore_rightCard > div {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -393,8 +399,8 @@
   height: 26rem;
   margin-top: 1.4rem;
   background-color: rgba(255, 115, 0, 1);
-} */
-/* .menthosihpArrow {
+}
+.menthosihpArrow {
   position: absolute;
   right: 4rem;
   bottom: 6rem;
@@ -406,19 +412,19 @@
   margin-top: 1.4rem;
   background-color: rgba(255, 115, 0, 1);
 }
-.mentorShip_card h3 {
-  font-size: 36px;
+/* .mentorShip_card > h3 {
+  font-size: 45px;
   margin-bottom: 0.4rem;
   padding-left: 3.2rem;
 } */
-/* .explore_rightCard > h3 {
-  font-size: 30px;
+.explore_rightCard > h3 {
+  font-size: 29px;
   margin-bottom: 0.4rem;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-} */
+}
 
 /* .courseText {
   font-size: 16px;
@@ -428,24 +434,43 @@
   padding-bottom: 3.2rem;
 } */
 
-/* .explore_rightCard > p {
-  font-size: 16px;
+.explore_rightCard > p {
+  font-size: 18px;
   color: var(--text-color-lightwhite);
-  display: none;
+  display: block;
+  font-weight: 500;
 }
-.explore_rightCard:hover > p {
+/* .explore_rightCard:hover > p {
   font-size: 16px;
   color: var(--text-color-lightwhite);
   animation: textshow 0.6s linear;
   display: block;
-}
-@keyframes textshow {
+} */
+/* @keyframes textshow {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
   }
+} */
+  
+
+/* .explore_rightCard {
+  color: var(--text-color-white);
+  border-radius: 28px;
+  padding: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  overflow: hidden;
+}
+.explore_rightCard:nth-child(1) {
+  width: 49%;
+  height: 26rem;
+  margin-top: 1.4rem;
+  background-color: rgba(31, 122, 255, 1);
 } */
 /* StudyAbroad */
 .StudyAbroad {
@@ -582,8 +607,8 @@
 }
 
 .testimonial_centerSide {
-  width: 30%;
-  height: 100vh;
+  width: 340px;
+  height: 650px;
   border-radius: 26px;
   display: flex;
   align-items: center;
@@ -606,12 +631,7 @@
   height: 100%;
   aspect-ratio: 9/16;
 }
-.NewsVideo {
-  width: 100%;
-  height: 100%;
-  aspect-ratio: 1/1;
-  background-color: #ff7300;
-}
+
 
 
 .testimonial_rigtSide {
@@ -1537,6 +1557,12 @@ canvas {
 .course_container_inner_right {
   animation: eventCard 2s ease-out 8s infinite backwards;
 }
+.NewsVideo {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1/1;
+  background-color: #ff7300;
+}
 
 .studentCard {
   font-size: 17px;
@@ -1565,9 +1591,8 @@ canvas {
   }
 
 
-  .Explore_container {
+  .Mission_container {
     flex-direction: column;
-    min-height: 30vh;
   }
   .Explore_leftSide {
     width: 100%;
@@ -1575,6 +1600,9 @@ canvas {
   }
   .explore_rightSide {
     width: 100%;  
+  }
+  .corcesImage {
+    margin-left: 0;
   }
   .studySection {
     display: flex;
@@ -1682,6 +1710,8 @@ canvas {
   .testimonial_rigtSide {
     max-width: 100%;
     padding-top: 2rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
   .media-video {
     border-radius: 20px;
@@ -1697,8 +1727,7 @@ canvas {
   }
   .testimonial_centerSide {
     width: 100%;
-    height: 50vh;
-
+    height: 400px;
     border-radius: 26px;
     overflow: hidden;
   }
@@ -1875,6 +1904,8 @@ canvas {
   }
 }
 
+
+
 @media (max-width: 986px) {
   .Hero_Content {
     width: 100%;
@@ -1966,8 +1997,8 @@ canvas {
     height: 90%;
   }
   .testimonial_centerSide {
-    width: 80%;
-    height: 30vh;
+    width: 100%;
+    height: 250px;
     /* border: 1px solid gray; */
     border-radius: 26px;
     overflow: hidden;
@@ -1998,6 +2029,15 @@ canvas {
   border-radius: 30px !important;
   /* margin-top: -50px !important; */
 }
+/* .swiper-button-next_1,
+.swiper-button-prev_1 {
+  color: white !important; 
+  background-color: #ff7300 !important;
+  transform: scale(0.8); 
+  padding: 30px !important;
+  border-radius: 30px !important;
+  margin-top: -50px !important;
+} */
   .card {
     width: 90%;
     height: 40vh;
@@ -2031,6 +2071,7 @@ canvas {
   }
   .testimonial_rigtSide {
     max-width: 100%;
+    padding: 0%;
   }
   .testimonials_Container {
     gap: 2rem;
@@ -2085,38 +2126,45 @@ canvas {
     font-size: 40px;
     color: var(--text-color-black);
   }
-  .explore_rightCard:nth-child(1) > h3{
-    font-size: 20px;
-  }
-  .explore_rightCard:nth-child(1) > p {
-    font-size: 14px;
-    width: 100%;
-    color: var(--text-color-lightwhite);
-  }
+  
   .explore_rightCard:nth-child(1) {
     width: 100%;
     height: 26rem;
     margin-top: 1.4rem;
     background-color: rgba(31, 122, 255, 1);
   }
+  .explore_rightCard:nth-child(1) > h3{
+    font-size: 25px;
+  }
+  .explore_rightCard:nth-child(1) > p {
+    font-size: 15px;
+    width: 100%;
+    color: var(--text-color-lightwhite);
+  }
  
   .explore_rightCard:nth-child(2) {
     width: 100%;
-    /* height: 26rem; */
+    height: 26rem;
     margin-top: 1.4rem;
     background-color: rgba(255, 115, 0, 1);
   }
-  /* .explore_rightCard:nth-child(2) > h3{
-    font-size: 20px;
+  .explore_rightCard:nth-child(2) > h3{
+    font-size: 25px;
   }
   .explore_rightCard:nth-child(2) > p {
-    font-size: 14px;
+    font-size: 15px;
     width: 100%;
     color: var(--text-color-lightwhite);
-  } */
+  }
   .explore_rightSide {
     flex-direction: column;
   }
+  .corcesImage {
+    width: 150px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+    margin-left: 0;
+}
   .media-container {
     flex-wrap: nowrap;
     width: 100%;
@@ -2209,7 +2257,7 @@ canvas {
   .media-card {
     flex: 1 1 100%;
     width: 320px;
-    min-width: 330px;
+    min-width: 100%;
   }
   .media-video {
     width: 98%;
@@ -3000,7 +3048,6 @@ button {
   padding: 30px !important;
   border-radius: 30px !important;
 }
-
 @media (max-width:1024px) {
   .image-text-card {
     width: 50%;
@@ -3025,7 +3072,7 @@ button {
   }
   .swiper-button-next,
   .swiper-button-prev {
-    transform: scale(0.6); 
+    transform: scale(0.6);
   }
   .country-section {
     padding-top: 3.5rem;
