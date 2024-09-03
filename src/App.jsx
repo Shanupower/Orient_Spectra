@@ -28,6 +28,7 @@ import Footer from "./Component/Common/Footer";
 import StartYourJourney from "./Component/StartYourJourney/StartYourJourney";
 import MoreBlogContent from "./Component/Blogs/MoreBlogContent";
 import Loading from "./Component/Common/Loading";
+import Error from "./Component/Common/ErrorPage";
 
 function App() {
   const [openWhatwedo, setWhatwedoOpen] = useState(false);
@@ -108,8 +109,9 @@ function App() {
 
         {/* Start your Journey */}
         <Route path="/start-your-journey" element={<StartYourJourney />} />
-        <Route path="*" element={<p>Request URL Invalid</p>} />
+        <Route path="*" element={<Error />} />
       </Routes>
+
       <Footer />
     </>
   );
