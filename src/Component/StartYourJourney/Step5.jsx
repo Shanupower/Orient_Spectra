@@ -166,9 +166,9 @@ const Step5 = ({
             </div>
           ))}
         </div>
-        {Subject.length <= 4 ? <p>Please Select minimum 5 subject</p> : ""}
+        {Subject.length <= 1 ? <p>Please Select minimum 1 subject</p> : ""}
 
-        {Subject.length >= 5 ? (
+        {Subject.length >= 1 ? (
           <NextStepComponent handleStepCount={handleStepCount} />
         ) : (
           <NextStepComponent />

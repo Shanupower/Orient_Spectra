@@ -8,25 +8,22 @@ const State = () => {
     <div className="section">
       <div className="state-container ">
         <h1>United State of America</h1>
-        <p>
-          A Quotation from lorium ipusum Lorem ipsum dolor sit amet,
-          consectetuer adipiscing{" "}
-        </p>
+        <p>USA is a premier destination for overseas education housing some of 
+          the world’s top universities and institutes.{" "}</p>
         <div>
-          Dive into a world of diverse destina - tions, prestigious
-          universities, and exciting courses.
+        Get expert guidance to help you get closer to your dream of studying in the USA and fastrack your US visa application process. 
         </div>
       </div>
 
       <div className="capital-container1">
         <div className="leftcapital-container">
           <span>Capital</span>
-          <h3>CanberraPopulation</h3>
+          <h3>Washinton D.C.</h3>
         </div>
         <div className="Rightcapital-container">
           <div className="about-capital-card1">
             <span>Population </span>
-            <h2>25.77 Million</h2>
+            <h2>33.33 crores</h2>
           </div>
           <div className="about-capital-card1">
             <span>Language </span>
@@ -34,7 +31,7 @@ const State = () => {
           </div>
           <div className="about-capital-card1">
             <span>Currency </span>
-            <h2>Australian Dollar</h2>
+            <h2>United States Dollar</h2>
           </div>
         </div>
       </div>
@@ -58,8 +55,8 @@ const State = () => {
           </div>
         </div>
         <div className="International-conatiner">
-          <p>International Students</p>
-          <h1>869,709</h1>
+          <p>Indian Students in US: </p>
+          <h1>465,700</h1>
         </div>
       </div>
     </div>

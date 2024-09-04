@@ -182,11 +182,29 @@
   font-size: 60px;
   font-stretch: 2rem;
   font-weight: 500;
-  border-bottom: 1px solid var(--text-color-darkblack);
+  border-bottom: none;
   line-height: 1;
 }
+.unitedstate-continar > p {
+  padding-block: 2rem;
+  color: var(--text-color-darkblack);
+  font-size: 23px;
+  font-stretch: 2rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.whyWeStudy-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; 
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
 
-.aboutstateCard {
+/* .aboutstateCard {
   display: flex;
   margin-top: 4rem;
   gap: 2rem;
@@ -199,17 +217,33 @@
   max-height: 60vh;
   border-radius: 10px;
   overflow: hidden;
-}
+} */
 .StudyingCard {
   background-color: var(--brand-color);
-  width: 32%;
+  width: 23%;
   border-radius: 10px;
-  padding: 3rem 2rem;
+  padding:  2rem;
   font-size: 26px;
   color: var(--text-color-white);
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
-.quoteImge {
+.StudyingCard > h3 {
+  font-size: 25px;
+  font-weight: 600;
+  text-align: center;
+  width: 100%;
+}
+
+.StudyingCard > p {
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 3%;
+}
+/* .quoteImge {
   width: 50px;
   height: 40px;
   margin-bottom: 2rem;
@@ -235,7 +269,7 @@
   height: 50px !important;
   border-radius: 50%;
   color: #fff;
-}
+} */
 
 /* Univercity */
 

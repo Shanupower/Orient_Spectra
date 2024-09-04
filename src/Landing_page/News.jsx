@@ -32,16 +32,13 @@ const News = () => {
     fetchData();
   }, []);
 
-  const handleVideoPlay =(e)=>{
-    e.stopPropagation();
-    if(videoRef.current) {
+  const handleVideoPlay =()=>{
       if(isPlaying && isshowCover) {
         videoRef.current.pause();
         setShowControls(false);
       } else {
         videoRef.current.play();
       }
-    } 
     setIsPlaying(false);
     setShowCover(false);
   }
@@ -73,7 +70,7 @@ const News = () => {
         <div className="media-container">
           {NewsData?.map((item) => (
             <SwiperSlide className="media-card" key={item?.id}>
-              <div className="media-video" onTouchStart={handleVideoPlay} onClick={handleVideoPlay}>
+              <div className="media-video" onClick={handleVideoPlay}>
                 {item?.attributes?.Headline_image?.data[0]?.attributes?.mime === 'video/mp4'? (
                   <>
                   {!isshowCover ? (
@@ -96,7 +93,7 @@ const News = () => {
                     {!isPlaying ? (
                     <img className="playIcon" src={Play} alt="" />
                     ): ''}
-                  <video className="NewsVideo" controls onPause={handlePause} onPlay={handlePlay}>
+                  <video className="NewsVideo" muted controls onPause={handlePause} onPlay={handlePlay}>
                   <source src={`https://strapi.orientspectra.com${item?.attributes?.Headline_image?.data[0]?.attributes?.url}`} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
