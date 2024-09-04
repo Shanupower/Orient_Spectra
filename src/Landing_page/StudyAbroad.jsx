@@ -22,12 +22,12 @@ const StudyAbroad = () => {
         }}
       >
         <div className="studySection useInViewcard">
-          <p>Study Abroad With Us</p>
+          <p>Get Expert Advice – <br/> Schedule Your Virtual Appointment</p>
           {/* <p className={`content ${isAnimated ? "animated" : ""}`}> With Us</p> */}
         </div>
 
         <Button
-          text="Talk To A Counsellor"
+          text="Book An Appointment"
           className={`exploreButton ${isAnimated ? "buttonfadeIn" : ""}`}
           link="/start-your-journey"
         />

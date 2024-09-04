@@ -11,11 +11,13 @@ import Explore from "./Explore";
 import Faq from "./Faq";
 import GetTuchWithUs from "./GetTuchWithUs";
 import Hero from "./Hero";
+import Mission_Vision from "./Mission_Vision";
 import News from "./News";
 import StudyAbroad from "./StudyAbroad";
 import Testimonial from "./Testimonial";
 import axios from "axios";
 import { useEffect, useState } from "react";
+
 const LandingPage = () => {
   const [blog, setBlog] = useState({});
   const [event, setEvent] = useState({});
@@ -34,6 +36,7 @@ const LandingPage = () => {
       console.log("ERROR OCCURED WHILE FETCHING:", error.message);
     }
   };
+
   const fetchEventData = async () => {
     try {
       const response = await axios.get(
@@ -63,6 +66,7 @@ const LandingPage = () => {
       <Country/>
       <Explore />
       <StudyAbroad />
+      <Mission_Vision />
       <Course />
       {/* <Counselors /> */}
       <Testimonial />

@@ -29,6 +29,8 @@ import StartYourJourney from "./Component/StartYourJourney/StartYourJourney";
 import MoreBlogContent from "./Component/Blogs/MoreBlogContent";
 import Loading from "./Component/Common/Loading";
 import Error from "./Component/Common/ErrorPage";
+import USA_EDU_FAIR from "./Ads landing page/USA_EDU_FAIR";
+import ThankYou from "./Ads landing page/ThankYou";
 
 function App() {
   const [openWhatwedo, setWhatwedoOpen] = useState(false);
@@ -110,6 +112,9 @@ function App() {
         {/* Start your Journey */}
         <Route path="/start-your-journey" element={<StartYourJourney />} />
         <Route path="*" element={<Error />} />
+
+        <Route path="/usa_education_fair_2024" element={<USA_EDU_FAIR />} />
+        <Route path="/thank-you" element={<ThankYou />} />
       </Routes>
 
       <Footer />
