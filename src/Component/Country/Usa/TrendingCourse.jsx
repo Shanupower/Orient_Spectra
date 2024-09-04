@@ -37,7 +37,7 @@ const courseData =[
 const TrendingCourse = () => {
   return (
     <div className="section trending-course">
-      <h1>Top Trending Courses in USA for Masters</h1>
+      <h1>Top Trending Courses in <span>USA for Masters</span></h1>
       <Marquee speed={100} pauseOnHover>
         <div className="univercity-section-card">
           {courseData.map((item) => (

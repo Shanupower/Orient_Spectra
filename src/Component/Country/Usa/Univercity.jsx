@@ -35,93 +35,123 @@ import Marquee from "react-fast-marquee";
 const universityData =[
   {
     img: Img1,
+    universityName: "Concordia University Chicago",
   },
   {
     img: Img2,
+    universityName: "Clark University",
   },
   {
     img: Img3,
+    universityName: "Saint Martin's University",
   },
   {
     img: Img4,
+    universityName: "Christian Brothers University",
   },
   {
     img: Img5,
+    universityName: "DePaul University",
   },
   {
     img: Img6,
+    universityName: "Drexel University",
   },
   {
     img: Img7,
+    universityName: "Elmhurst University",
   },
   {
     img: Img8,
+    universityName: "Florida Atlantic University",
   },
   {
     img: Img9,
+    universityName: "Franklin University",
   },
   {
     img: Img10,
+    universityName: "Golden Gate University",
   },
   {
     img: Img11,
+    universityName: "Lawrence Technological University",
   },
   {
     img: Img12,
+    universityName: "Miami University",
   },
   {
     img: Img13,
+    universityName: "Middle Tennessee University",
   },
   {
     img: Img14,
+    universityName: "Rowan University",
   },
   {
     img: Img15,
+    universityName: "Roosevelt University",
   },
   {
     img: Img16,
+    universityName: "Arkansas State University",
   },
   {
     img: Img17,
+    universityName: "Dallas Baptist University",
   },
   {
     img: Img18,
+    universityName: "Southern New Hampshire University",
   },
   {
     img: Img19,
+    universityName: "Saint Louis University",
   },
   {
     img: Img20,
+    universityName: "Texas State University",
   },
   {
     img: Img21,
+    universityName: "The University of Akron",
   },
   {
     img: Img22,
+    universityName: "University of St.Thomas",
   },
   {
     img: Img23,
+    universityName: "University of BridgePort",
   },
   {
     img: Img24,
+    universityName: "University of Missouri Kansas City",
   },
   {
     img: Img25,
+    universityName: "University of Illinois Springfield",
   },
   {
     img: Img26,
+    universityName: "UMASS Boston University",
   },
   {
     img: Img27,
+    universityName: "University of Illinois Chicago",
   },
   {
     img: Img28,
+    universityName: "Webster University",
   },
   {
     img: Img29,
+    universityName: "Western New England University",
   },
   {
     img: Img30,
+    universityName: "Massachusetts College of Pharmacy & Health Sciences",
   },
 
 ]
@@ -129,7 +159,7 @@ const universityData =[
 const Univercity = () => {
   return (
     <div className="section univercity-card">
-      <h1>Find Your Dream University to study in USA</h1>
+      <h1>Find Your Dream University to <span>Study in USA</span></h1>
       <Marquee speed={200} pauseOnHover>
       <div className="univercity-section-card">
         {universityData.map((item) => (
@@ -139,17 +169,21 @@ const Univercity = () => {
             </div>
             <div className="Concordia-container">
               <div className="ConcordiaCard">
-                <p>Concordia University Chicago</p>
+                <p>{item.universityName}</p>
                 <ArrowForwardIcon className="rightArrowB" />
               </div>
               <div className="ConcordiaCard Ietes">
-                <div>
-                  <h2>7</h2>
-                  <p>Minimum IELTS Required</p>
-                </div>
-                <div>
+              <div>
                   <h2>16</h2>
                   <p>Global Ranking</p>
+                </div>
+                <div>
+                  <h2>7</h2>
+                  <p>Eligibility Criteria</p>
+                </div>
+                <div>
+                  <h2>7</h2>
+                  <p>Backlogs Accepted</p>
                 </div>
               </div>
             </div>

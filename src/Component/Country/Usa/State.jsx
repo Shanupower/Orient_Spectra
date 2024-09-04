@@ -7,10 +7,11 @@ const State = () => {
     <div className="section">
       <div className="state-container ">
         <h1>United State of America</h1>
-        <p>USA is a premier destination for overseas education housing some of 
-          the world’s top universities and institutes.{" "}</p>
+        <p>Get expert guidance to help you get closer to your dream of studying in the 
+          USA and fastrack your US visa application process.{" "}</p>
         <div>
-        Get expert guidance to help you get closer to your dream of studying in the USA and fastrack your US visa application process. 
+        USA is a premier destination for overseas education housing some of 
+        the world’s top universities and institutes.
         </div>
       </div>
 

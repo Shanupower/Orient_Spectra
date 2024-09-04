@@ -107,6 +107,8 @@ function App() {
         <Route path="/blog" element={<SelectedBlog />}></Route>
         <Route path="/blog-content/:id" element={<BlogBody />} />
         <Route path="/selected-blog" element={<MoreBlogContent />} />
+        <Route path="/offline-marketing-club" />
+
 
         {/* Start your Journey */}
         <Route path="/start-your-journey" element={<StartYourJourney />} />
@@ -114,6 +116,7 @@ function App() {
 
         <Route path="/usa_education_fair_2024" element={<USA_EDU_FAIR />} />
         <Route path="/thank-you" element={<ThankYou />} />
+        
 
 
       </Routes>
