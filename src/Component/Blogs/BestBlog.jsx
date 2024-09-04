@@ -32,39 +32,36 @@ const BestBlog = ({ data }) => {
         className="owl-theme"
       >
         {data.map((item) => (
-          <div className="bestblog-leftside-container" key={item.id}>
-            <div className="blog-image-section">
-              {!isLoading && (
-                <Skeleton
-                  animation="wave"
-                  variant="rectangular"
-                  width={"100%"}
-                  height={"100%"}
-                  sx={{ bgcolor: "grey.500" }}
+          <>
+            <div className="bestblog-leftside-container" key={item.id}>
+              <div className="blog-image-section-bottom">
+                {!isLoading && (
+                  <Skeleton
+                    animation="wave"
+                    variant="rectangular"
+                    width={"100%"}
+                    height={"100%"}
+                    sx={{ bgcolor: "grey.500" }}
+                  />
+                )}
+                <img
+                  src={`https://strapi.orientspectra.com${item?.attributes?.Headline_image?.data?.attributes?.formats?.thumbnail?.url}`}
+                  alt="Blog Image 1"
+                  className="blog-image borrImage"
+                  onLoad={() => setIsLoading(false)}
                 />
-              )}
-              <img
-                src={`https://strapi.orientspectra.com${item?.attributes?.Headline_image?.data?.attributes?.formats?.thumbnail?.url}`}
-                alt="Blog Image 1"
-                className="blog-image"
-                onLoad={() => setIsLoading(false)}
-              />
-            </div>
-            <div className="bestblog-leftside-card1">
-              <p>Best of the Week</p>
-              <h1>
+              </div>
+              <div className="bestblog-leftside-card1">
+                <p className="Best_of_thisWeek">Best of the Week</p>
                 <h1>{item?.attributes?.Title}</h1>
-                <br />
-              </h1>
+              </div>
+              <div className="bestblog-leftside-card2">
+                <Link to={`/blog-content/${item?.id}`} className="Link_route">
+                  <CircleArrow className={"CircleArrow "} />
+                </Link>
+              </div>
             </div>
-            <div className="bestblog-leftside-card2">
-              <p>{item?.attributes.Short_Description}</p>
-
-              <Link to={`/blog-content/${item?.id}`} className="Link_route">
-                <CircleArrow className={"CircleArrow "} />
-              </Link>
-            </div>
-          </div>
+          </>
         ))}
       </OwlCarousel>
     </div>

@@ -68,10 +68,10 @@
   height: 36px;
 }
 .SelectedCountry {
-  border: 1px solid var(--bg-color);
   background-color: #ffffff;
   padding-left: 0.6rem;
   border-radius: 4px;
+  border: 2px solid var(--brand-color);
 }
 .destination-item > span {
   font-size: 12px;

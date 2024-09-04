@@ -1,10 +1,7 @@
 import { useEffect, useState } from "react";
 import "./ADS.css";
-import { event } from "jquery";
-import { useMediaQuery } from "@mui/material";
-import { maxWidth } from "@mui/system";
-import { Link } from "react-router-dom";
 import axios from "axios";
+import emailjs from "emailjs-com";
 
 const Hero = () => {
   useEffect(() => {
@@ -18,11 +15,10 @@ const Hero = () => {
     Mobile: "",
     Intake_year: "",
     Intake_month: "",
-    // Course: "",
-    // Comment: "",
   });
 
   const [errors, setErrors] = useState({});
+
   const handleSubmitData = async () => {
     const api = "https://strapi.orientspectra.com/api/ads-landing-pages/";
     try {
@@ -31,6 +27,30 @@ const Hero = () => {
       });
       if (response.status === 200) {
         alert("Form submitted successfully");
+
+        // Send email via EmailJS
+        // emailjs
+        //   .send(
+        //     "service_28ul4yvw",
+        //     "template_7z0xwsi1",
+        //     {
+        //       First_name: formData.First_name,
+        //       Last_name: formData.Last_name,
+        //       Email: formData.Email,
+        //       Mobile: formData.Mobile,
+        //       Intake_year: formData.Intake_year,
+        //       Intake_month: formData.Intake_month,
+        //     },
+        //     "6612831"
+        //   )
+        //   .then((result) => {
+        //     console.log("Email sent successfully:", result.text);
+        //   })
+        //   .catch((error) => {
+        //     console.error("Failed to send email:", error);
+        //   });
+
+        // Reset form data
         setFormData({
           First_name: "",
           Last_name: "",
@@ -38,21 +58,18 @@ const Hero = () => {
           Mobile: "",
           Intake_year: "",
           Intake_month: "",
-          // Course: "",
-          // Comment: "",
         });
-        console.log(response);
       }
     } catch (errors) {
       console.log(errors);
     }
   };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
 
-    if (name === "mobile") {
+    if (name === "Mobile") {
       if (/^\d*$/.test(value) && value.length <= 10) {
-        // Allow only numeric characters and limit to 10 digits
         setFormData((prevFormData) => ({
           ...prevFormData,
           [name]: value,
@@ -91,9 +108,6 @@ const Hero = () => {
     if (formData.Intake_month === "") {
       newErrors.Intake_month = "Intake Month is Required";
     }
-    // if (formData.Course === "") {
-    //   newErrors.Course = "Course is Required";
-    // }
     return newErrors;
   };
 
@@ -101,8 +115,6 @@ const Hero = () => {
     event.preventDefault();
     const validationErrors = Validation();
     if (Object.keys(validationErrors).length === 0) {
-      console.log(formData);
-
       handleSubmitData();
     } else {
       setErrors(validationErrors);
@@ -148,7 +160,7 @@ const Hero = () => {
               <input
                 type="text"
                 name="Last_name"
-                placeholder="last Name"
+                placeholder="Last Name"
                 className="input-field"
                 onChange={handleChange}
                 value={formData.Last_name}
@@ -206,11 +218,7 @@ const Hero = () => {
               )}
             </div>
           </div>
-          <button
-            className="form-container-button"
-            type="submit"
-            onClick={handleSubmitValidation}
-          >
+          <button className="form-container-button" type="submit">
             GET ASSISTANCE
           </button>
         </form>
@@ -218,4 +226,5 @@ const Hero = () => {
     </div>
   );
 };
+
 export default Hero;
