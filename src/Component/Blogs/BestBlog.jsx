@@ -19,7 +19,6 @@ const BestBlog = ({ data }) => {
   return (
     <div className="bestblog-conntainer section">
       <div className="continue-reading-card">
-        <p>Continue Reading</p>
       </div>
 
       <OwlCarousel
