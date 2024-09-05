@@ -24,10 +24,12 @@ const UnitedState = () => {
         </div>
         <div className="ReadMoreCard">
           <p>Read More</p>
-
-          <Link to="/start-your-journey">
+          <a
+            href="https://strapi.orientspectra.com/uploads/OS_Brochure_Digital_bfcefac1d3.pdf"
+            target="_blank"
+          >
             <ArrowForwardIcon className="rightArrowBlog" />
-          </Link>
+          </a>
         </div>
       </div>
     </div>
