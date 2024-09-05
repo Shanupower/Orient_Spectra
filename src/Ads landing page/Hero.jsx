@@ -219,7 +219,7 @@ const Hero = () => {
             </div>
           </div>
           <button className="form-container-button" type="submit">
-            GET ASSISTANCE
+            REGISTER NOW
           </button>
         </form>
       </div>
