@@ -4,7 +4,7 @@ import Universities from "./Universities";
 import EventDetails from "./EventDetails";
 import Benifits from "./Benifits";
 
-const USA_EDU_FAIR =() =>{
+const UK_EDU_FAIR =() =>{
     return(
     <>
     <Hero />
@@ -14,4 +14,4 @@ const USA_EDU_FAIR =() =>{
     </>
     )
 }
-export default USA_EDU_FAIR;
+export default UK_EDU_FAIR;

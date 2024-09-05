@@ -1,45 +1,48 @@
-import Img1 from "../../../assets/Property 1=Default (1).png";
-import Quote from "../../../assets/Country/quote.png";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import "./Country.css";
-import { Link } from "react-router-dom";
-
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 const StudyData =[
   {
     id: 1,
+    img: "https://strapi.orientspectra.com/uploads/world_class_Education_71b72a914c.png",
     title:"World-Class Education",
-    description:"The USA boasts some of the best universities in the world, renowned for their academic excellence and innovative research. By choosing to study abroad in the USA, you gain access to top-tier education that can open doors to global career opportunities",
+    description:"Top universities renowned for their academic & research excellence.",
   },
   {
     id: 2,
+    img: "https://strapi.orientspectra.com/uploads/curriculum_9e777e3b3e.png",
     title:"Diverse Course Offerings",
-    description:"American universities offer a wide range of programs and courses, allowing you to tailor your education to your interests and career goals. Whether you’re interested in engineering, business, arts, or sciences, studying in the USA provides endless possibilities.",
+    description:"A wide range of programs & courses tailored to your career goals.",
   },
   {
     id: 3,
-    title:"Cutting-Edge Research and Technology",
-    description:"The USA is a leader in research and technological advancements. As an international student, you will have the opportunity to work with state-of-the-art facilities and be at the forefront of innovation.",
+    img: "https://strapi.orientspectra.com/uploads/technology_db90794e03.png",
+    title:"Cutting-Edge Research",
+    description:"Opportunity to work with advanced facilities & lead modern innovation.",
   },
   {
     id: 4,
+    img: "https://strapi.orientspectra.com/uploads/cultural_sensitivity_b317fd3821.png",
     title:"Cultural Diversity",
-    description:"The USA is a melting pot of cultures, providing a rich and diverse environment for international students. Studying abroad in such a dynamic setting will broaden your perspective and enhance your global awareness.",
+    description:"A melting pot of cultures, providing a rich and diverse experience.",
   },
   {
     id: 5,
+    img: "https://strapi.orientspectra.com/uploads/customer_service_bee18264a3.png",
     title:"Comprehensive Support Services",
-    description:"American universities are known for their extensive support services for international students. From academic advising to career counseling, you will receive the guidance you need to succeed in your overseas education journey.",
+    description:" Complete guidance to succeed in your overseas education journey.",
   },
   {
     id: 6,
+    img: "https://strapi.orientspectra.com/uploads/sollege_life_d8bbf45949.png",
     title:"Vibrant Campus Life",
-    description:"Campus life in the USA is vibrant and engaging, with numerous extracurricular activities, clubs, and organizations. By studying abroad in the USA, you will have the chance to develop new interests, build lifelong friendships, and create unforgettable memories.",
+    description:"Vibrant campus life with numerous extracurricular activities, and clubs.",
   },
   {
     id: 7,
+    img:"https://strapi.orientspectra.com/uploads/career_promotion_33a073a512.png",
     title:"Strong Career Prospects",
-    description:"A degree from a US university is highly respected worldwide, giving you a competitive edge in the job market. Many American universities also offer internship and job placement services to help you kickstart your career.",
+    description:"Internship and job opportunities to kickstart your career.",
   },
 ]
 
@@ -53,32 +56,17 @@ const UnitedState = () => {
       <div className="whyWeStudy-container">
           {StudyData.map((item)=>(
                 <div className="StudyingCard" key={item.id}>
-                    <h3 >{item.title}</h3>
+                  <img src={item.img} alt="" />
+                    <h3>{item.title}{" "}</h3>
                     <p>{item.description}{" "}</p>
                   </div>
                 ))}
+              <div className="ReadMoreCard">
+                 <p>Read More</p>
+          <ArrowForwardIcon className="rightArrowBlog" />
+        </div>  
       </div>
-      {/* <div className="aboutstateCard">
-        <div className="unitedImge">
-          <img src={Img1} alt="" />
-        </div>
-        <div className="StudyingCard">
-          <div className="quoteImge">
-            <img src={Quote} alt="" />
-          </div>
-          <p>
-            Studying abroad offers a world of opportunities, and the USA stands
-            out as a premier destination for overseas education.{" "}
-          </p>
-        </div>
-        <div className="ReadMoreCard">
-          <p>Read More</p>
-
-          <Link to="/start-your-journey">
-            <ArrowForwardIcon className="rightArrowBlog" />
-          </Link>
-        </div>
-      </div> */}
+      
     </div>
   );
 };

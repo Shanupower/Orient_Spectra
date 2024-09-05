@@ -29,7 +29,7 @@ import StartYourJourney from "./Component/StartYourJourney/StartYourJourney";
 import MoreBlogContent from "./Component/Blogs/MoreBlogContent";
 import Loading from "./Component/Common/Loading";
 import Error from "./Component/Common/ErrorPage";
-import USA_EDU_FAIR from "./Ads landing page/USA_EDU_FAIR";
+import UK_EDU_FAIR from "./Ads landing page/UK_EDU_FAIR";
 import ThankYou from "./Ads landing page/ThankYou";
 
 function App() {
@@ -108,12 +108,14 @@ function App() {
         <Route path="/blog" element={<SelectedBlog />}></Route>
         <Route path="/blog-content/:id" element={<BlogBody />} />
         <Route path="/selected-blog" element={<MoreBlogContent />} />
+        <Route path="/offline-marketing-club" />
+
 
         {/* Start your Journey */}
         <Route path="/start-your-journey" element={<StartYourJourney />} />
         <Route path="*" element={<Error />} />
 
-        <Route path="/usa_education_fair_2024" element={<USA_EDU_FAIR />} />
+        <Route path="/uk-november-2024" element={<UK_EDU_FAIR />} />
         <Route path="/thank-you" element={<ThankYou />} />
       </Routes>
 
