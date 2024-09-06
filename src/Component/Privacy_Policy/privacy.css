@@ -1,0 +1,31 @@
+.privacy_image {
+  margin-top: 6rem;
+  width: 100%;
+  height: 54vh;
+  overflow: hidden;
+  border-radius: 16px;
+}
+.privacy_image > img {
+  object-fit: cover;
+  object-position: 50% 75%;
+}
+.privacy_text {
+  margin-block: 2rem;
+}
+.privacy_text > h1 {
+  font-size: 32px;
+  text-align: center;
+}
+
+.text-container > p {
+  font-size: 20px;
+  margin-top: 1.6rem;
+  margin-bottom: 1.4rem;
+}
+.text-container > ul {
+  padding-left: 2rem;
+  font-size: 20px;
+}
+.privacy_text2 > h1 {
+  font-size: 32px;
+}
