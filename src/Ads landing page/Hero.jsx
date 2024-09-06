@@ -1,143 +1,216 @@
 import { useEffect, useState } from "react";
 import "./ADS.css";
-import { event } from "jquery";
-import { useMediaQuery } from "@mui/material";
-import { maxWidth } from "@mui/system";
-import { Link } from "react-router-dom";
+import axios from "axios";
+import emailjs from "emailjs-com";
 
+const Hero = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+//   const [source, setSource] = useState("");
+  const [formData, setFormData] = useState({
+    First_name: "",
+    Last_name: "",
+    Email: "",
+    Mobile: "",
+    Intake_year: "",
+    Intake_month: "",
+    Source: "/uk-november-2024",
+  });
 
-const Hero =()=>{
-    useEffect(() => {
-        window.scrollTo(0, 0);
-      }, []);
+  const [errors, setErrors] = useState({});
 
-    const [formData, setFormData] = useState({
-        firstName: '',
-        lastName: '',
-        email: '',
-        mobile: '',
-        intakeYear: '',
-        intakeMonth: '',
-        course: '',
-        comments: '',
+  const handleSubmitData = async () => {
+    const api = "https://strapi.orientspectra.com/api/ads-landing-pages/";
+    try {
+      const response = await axios.post(api, {
+        data: formData,
       });
-    
-      const [errors, setErrors] = useState({});
-    
-      const handleChange = (e) => {
-        const { name, value } = e.target;
+      if (response.status === 200) {
+        alert("Form submitted successfully");
 
-        if (name === "mobile") {
-            if (/^\d*$/.test(value) && value.length <= 10) {  // Allow only numeric characters and limit to 10 digits
-                setFormData(prevFormData => ({
-                    ...prevFormData,
-                    [name]: value
-                }));
-            }
-        } else {
-            setFormData ({
-              ...formData,
-              [name]: value,
-            });
-        }  
-      };
-
-      const Validation = () =>{
-        const newErrors = {};
-
-        if(formData.firstName === "") {
-            newErrors.firstName = "First Name is Required";
-        }
-        if(formData.lastName === "") {
-            newErrors.lastName = "Last Name is Required"
-        }
-        if(formData.email === ""){
-            newErrors.email = "Email Id is Required";
-        } else if(!/\S+@\S+\.\S+/.test(formData.email)) {
-            newErrors.email ="Email is not valid";
-        }
-        if(formData.mobile === ""){
-            newErrors.mobile = "Enter the Mobile Number";
-        } else if(!/^\d{10}$/.test(formData.mobile)) {
-            newErrors.mobile = "Enter the valid 10 digit mobile number"
-        }
-        if(formData.intakeYear === "") {
-            newErrors.intakeYear = "Intake Year is Required"
-        }
-        if(formData.intakeMonth === ""){
-            newErrors.intakeMonth = "Intake Month is Required"
-        }
-        if(formData.course === "") {
-            newErrors.course = "Course is Required"
-        }
-        return newErrors;
+       
+        setFormData({
+          First_name: "",
+          Last_name: "",
+          Email: "",
+          Mobile: "",
+          Intake_year: "",
+          Intake_month: "",
+          Source: "/uk-november-2024",
+        });
       }
+    } catch (errors) {
+      console.log(errors);
+    }
+  };
 
-      const handleValidation = (event) => {
-        event.preventDefault();
-        const validationErrors = Validation();
-        if (Object.keys(validationErrors).length === 0) {
-            // No errors, form can be submitted
-            console.log(formData);
-            // You can also submit the form data or perform any other action here
-        } else {
-            // There are errors, update the errors state
-            setErrors(validationErrors);
-        }
-    };
-      
-    return(
-        <div className="Leadgeneration-container section">
-            <div className="Leadgeneration-content section">
-            <h1>November 2024 Intake for UK is Now Open</h1>
-            <p>This is the last opportunity for students to begin their UK study journey this year.
-            Attend our UK Education Fair 2024 to talk directly with university delegates and select the best university and course for your career goal. 
-            Our experts will walk you through application process, scholarship and loan opportunities, and guide you through visa process.</p>
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    if (name === "Mobile") {
+      if (/^\d*$/.test(value) && value.length <= 10) {
+        setFormData((prevFormData) => ({
+          ...prevFormData,
+          [name]: value,
+        }));
+      }
+    } else {
+      setFormData({
+        ...formData,
+        [name]: value,
+      });
+    }
+  };
 
-              <ul>
-                <li>Direct interaction with University representatives</li>
-                <li>Application submission within 24 hours</li>
-                <li>Affordable tuition fees</li>
-                <li>Scholarship opportunities</li>
-              </ul>
-           
+  const Validation = () => {
+    const newErrors = {};
+
+    if (formData.First_name === "") {
+      newErrors.First_name = "First Name is Required";
+    }
+    if (formData.Last_name === "") {
+      newErrors.Last_name = "Last Name is Required";
+    }
+    if (formData.Email === "") {
+      newErrors.Email = "Email Id is Required";
+    } else if (!/\S+@\S+\.\S+/.test(formData.Email)) {
+      newErrors.Email = "Email is not valid";
+    }
+    if (formData.Mobile === "") {
+      newErrors.Mobile = "Enter the Mobile Number";
+    } else if (!/^\d{10}$/.test(formData.Mobile)) {
+      newErrors.Mobile = "Enter the valid 10 digit mobile number";
+    }
+    if (formData.Intake_year === "") {
+      newErrors.Intake_year = "Intake Year is Required";
+    }
+    if (formData.Intake_month === "") {
+      newErrors.Intake_month = "Intake Month is Required";
+    }
+    return newErrors;
+  };
+
+  const handleSubmitValidation = (event) => {
+    event.preventDefault();
+    const validationErrors = Validation();
+    if (Object.keys(validationErrors).length === 0) {
+      handleSubmitData();
+    } else {
+      setErrors(validationErrors);
+    }
+  };
+
+//   handleOpenForm =()=>{
+//     const url = "/uk-november-2024";
+//     setSource(url);
+//   }
+  
+
+  return (
+    <div className="Leadgeneration-container section">
+      <div className="Leadgeneration-content section">
+      <h1>November 2024 Intake for UK is Now Open</h1>
+        <p>This is the last opportunity for students to begin their UK study journey this year.
+        Attend our UK Education Fair 2024 to talk directly with university delegates and 
+        select the best university and course for your career goal. Our experts will walk 
+        you through application process, scholarship and loan opportunities, and guide you 
+        through visa process.</p>
+
+        <ul>
+          <li>Direct interaction with University representatives</li>
+          <li>Application submission within 24 hours</li>
+          <li>Affordable tuition fees</li>
+          <li>Scholarship opportunities</li>
+        </ul>
+      </div>
+      <div className="form-container">
+        <p>Fill out the form below to register now:</p>
+        <form onSubmit={handleSubmitValidation}>
+          <div className="text-feild-container">
+            <div className="form-group">
+              <input
+                type="text"
+                name="First_name"
+                placeholder="First Name"
+                className="input-field"
+                onChange={handleChange}
+                value={formData.First_name}
+              />
+              {errors.First_name && (
+                <p style={{ color: "red" }}>{errors.First_name}</p>
+              )}
             </div>
-            <div className="form-container" >
-                <p>Fill out the form below to register now:</p>
-                <form onSubmit={handleValidation}>
-                <div className="text-feild-container"> 
-                    <div className="form-group">  
-                        <input type="text" name="firstName" placeholder="First Name" className="input-field" onChange={handleChange}  value={formData.firstName} />
-                        {errors.firstName && <p style={{color:"red"}} >{errors.firstName}</p>}
-                    </div>
-                    <div className="form-group">  
-                        <input type="text" name="lastName" placeholder="last Name" className="input-field" onChange={handleChange}  value={formData.lastName} />
-                        {errors.lastName && <p style={{color:"red"}} >{errors.lastName}</p>}
-                    </div>
-                    <div className="form-group">
-                        <input type="text" name="email" placeholder="Email" className="input-field"  onChange={handleChange} value={formData.email}/>
-                        {errors.email && <p style={{color:"red"}} >{errors.email}</p>}
-                    </div>
-                    <div className="form-group">
-                        <input type="text" name="mobile" placeholder="Mobile Number" className="input-field" onChange={handleChange} value={formData.mobile}/>
-                        {errors.mobile && <p style={{color:"red"}} >{errors.mobile}</p>}
-
-                    </div>
-                    <div className="form-group">
-                        <input type="text" name="intakeYear" placeholder="Intake Year" className="input-field" onChange={handleChange}value={formData.intakeYear}/>
-                        {errors.intakeYear && <p style={{color:"red"}} >{errors.intakeYear}</p>}
-
-                    </div>
-                    <div className="form-group">
-                         <input type="text" name="intakeMonth" placeholder="Intake Month" className="input-field" onChange={handleChange} value={formData.intakeMonth}/>
-                        {errors.intakeMonth && <p style={{color:"red"}} >{errors.intakeMonth}</p>}
-                    </div>
-                </div>
-                    <button className="form-container-button" type="submit">GET ASSISTANCE</button>
-                </form>
+            <div className="form-group">
+              <input
+                type="text"
+                name="Last_name"
+                placeholder="Last Name"
+                className="input-field"
+                onChange={handleChange}
+                value={formData.Last_name}
+              />
+              {errors.Last_name && (
+                <p style={{ color: "red" }}>{errors.Last_name}</p>
+              )}
             </div>
-            
-        </div>
-    );
+            <div className="form-group">
+              <input
+                type="text"
+                name="Email"
+                placeholder="Email"
+                className="input-field"
+                onChange={handleChange}
+                value={formData.Email}
+              />
+              {errors.Email && <p style={{ color: "red" }}>{errors.Email}</p>}
+            </div>
+            <div className="form-group">
+              <input
+                type="text"
+                name="Mobile"
+                placeholder="Mobile Number"
+                className="input-field"
+                onChange={handleChange}
+                value={formData.Mobile}
+              />
+              {errors.Mobile && <p style={{ color: "red" }}>{errors.Mobile}</p>}
+            </div>
+            <div className="form-group">
+              <input
+                type="text"
+                name="Intake_year"
+                placeholder="Intake Year"
+                className="input-field"
+                onChange={handleChange}
+                value={formData.Intake_year}
+              />
+              {errors.Intake_year && (
+                <p style={{ color: "red" }}>{errors.Intake_year}</p>
+              )}
+            </div>
+            <div className="form-group">
+              <input
+                type="text"
+                name="Intake_month"
+                placeholder="Intake Month"
+                className="input-field"
+                onChange={handleChange}
+                value={formData.Intake_month}
+              />
+              {errors.Intake_month && (
+                <p style={{ color: "red" }}>{errors.Intake_month}</p>
+              )}
+              
+            </div>
+               <input type="hidden" name="source" className="input-field" value={formData.Source} />
+          </div>
+          <button className="form-container-button" type="submit">
+            REGISTER NOW
+          </button>
+        </form>
+      </div>
+    </div>
+  );
 };
+
 export default Hero;

@@ -36,122 +36,212 @@ const universityData =[
   {
     img: Img1,
     universityName: "Concordia University Chicago",
+    ielts: "6.0",
+    tofel: "90",
+    backlogs: "10",
   },
   {
     img: Img2,
     universityName: "Clark University",
+    ielts: "6.0",
+    tofel: "85",
+    backlogs: "0",
   },
   {
     img: Img3,
     universityName: "Saint Martin's University",
+    ielts: "6.0",
+    tofel: "71",
+    backlogs: "0",
   },
   {
     img: Img4,
     universityName: "Christian Brothers University",
+    ielts: "6.0",
+    tofel: "75",
+    backlogs: "0",
   },
   {
     img: Img5,
     universityName: "DePaul University",
+    ielts: "6.5",
+    tofel: "80",
+    backlogs: "0",
   },
   {
     img: Img6,
     universityName: "Drexel University",
+    ielts: "6.0",
+    tofel: "90",
+    backlogs: "0",
   },
   {
     img: Img7,
     universityName: "Elmhurst University",
+    ielts: "6.5",
+    tofel: "79",
+    backlogs: "0",
   },
   {
     img: Img8,
     universityName: "Florida Atlantic University",
+    ielts: "6.0",
+    tofel: "79",
+    backlogs: "9",
   },
   {
     img: Img9,
     universityName: "Franklin University",
+    ielts: "6.5",
+    tofel: "79",
+    backlogs: "10",
   },
   {
     img: Img10,
     universityName: "Golden Gate University",
+    ielts: "6.5",
+    tofel: "79",
+    backlogs: "10",
   },
   {
     img: Img11,
     universityName: "Lawrence Technological University",
+    ielts: "6.0",
+    tofel: "79",
+    backlogs: "0",
   },
   {
     img: Img12,
     universityName: "Miami University",
+    ielts: "6.5",
+    tofel: "80",
+    backlogs: "0",
   },
   {
     img: Img13,
     universityName: "Middle Tennessee University",
+    ielts: "5.5",
+    tofel: "61",
+    backlogs: "0",
   },
   {
     img: Img14,
     universityName: "Rowan University",
+    ielts: "6.0",
+    tofel: "70",
+    backlogs: "0",
   },
   {
     img: Img15,
     universityName: "Roosevelt University",
+    ielts: "6.5",
+    tofel: "80",
+    backlogs: "0",
   },
   {
     img: Img16,
     universityName: "Arkansas State University",
+    ielts: "6.5",
+    tofel: "90",
+    backlogs: "0",
   },
   {
     img: Img17,
     universityName: "Dallas Baptist University",
+    ielts: "6.0",
+    tofel: "79",
+    backlogs: "10",
   },
   {
     img: Img18,
     universityName: "Southern New Hampshire University",
+    ielts: "6.0",
+    tofel: "71",
+    backlogs: "0",
   },
   {
     img: Img19,
     universityName: "Saint Louis University",
+    ielts: "6.5",
+    tofel: "80",
+    backlogs: "10",
   },
   {
     img: Img20,
     universityName: "Texas State University",
+    ielts: "6.5",
+    tofel: "78",
+    backlogs: "10",
   },
   {
     img: Img21,
     universityName: "The University of Akron",
+    ielts: "6.0",
+    tofel: "71",
+    backlogs: "0",
   },
   {
     img: Img22,
     universityName: "University of St.Thomas",
+    ielts: "6.5",
+    tofel: "79",
+    backlogs: "0",
   },
   {
     img: Img23,
     universityName: "University of BridgePort",
+    ielts: "6.0",
+    tofel: "80",
+    backlogs: "20",
   },
   {
     img: Img24,
     universityName: "University of Missouri Kansas City",
+    ielts: "6.5",
+    tofel: "80",
+    backlogs: "0",
   },
   {
     img: Img25,
     universityName: "University of Illinois Springfield",
+    ielts: "6.0",
+    tofel: "79",
+    backlogs: "10",
   },
   {
     img: Img26,
     universityName: "UMASS Boston University",
+    ielts: "6.5",
+    tofel: "79",
+    backlogs: "5",
   },
   {
     img: Img27,
     universityName: "University of Illinois Chicago",
+    ielts: "6.5",
+    tofel: "80",
+    backlogs: "5",
   },
   {
     img: Img28,
     universityName: "Webster University",
+    ielts: "6.0",
+    tofel: "80",
+    backlogs: "10",
   },
   {
     img: Img29,
     universityName: "Western New England University",
+    ielts: "6.0",
+    tofel: "80",
+    backlogs: "25",
   },
   {
     img: Img30,
     universityName: "Massachusetts College of Pharmacy & Health Sciences",
+    ielts: "6.5",
+    tofel: "79",
+    backlogs: "0",
   },
 
 ]
@@ -163,7 +253,7 @@ const Univercity = () => {
       <Marquee speed={200} pauseOnHover>
       <div className="univercity-section-card">
         {universityData.map((item) => (
-          <div className="univercityList" key={item}>
+          <div className="univercityList" key={item.id}>
             <div className="univercityList-Img">
               <img src={item.img} alt="" />
             </div>
@@ -174,15 +264,15 @@ const Univercity = () => {
               </div>
               <div className="ConcordiaCard Ietes">
               <div>
-                  <h2>16</h2>
-                  <p>Global Ranking</p>
+                  <h2>{item.ielts}</h2>
+                  <p>IELTS</p>
                 </div>
                 <div>
-                  <h2>7</h2>
-                  <p>Eligibility Criteria</p>
+                  <h2>{item.tofel}</h2>
+                  <p>TOEFL</p>
                 </div>
                 <div>
-                  <h2>7</h2>
+                  <h2>{item.backlogs}</h2>
                   <p>Backlogs Accepted</p>
                 </div>
               </div>

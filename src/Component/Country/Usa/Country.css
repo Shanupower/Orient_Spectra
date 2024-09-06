@@ -623,6 +623,18 @@
   .ReadMoreCard {
     margin-left: 0%;
   }
+  .univercity-section-card {
+    margin-right: 0;
+  }
+  .univercityList {
+    min-width: 326px;
+  }
+  .ConcordiaCard > div > h2 {
+    font-size: 26px;
+  }
+  .univercityList-Img {
+    height: 25vh !important;
+  }
 
   .Rightcapital-container ,
 
@@ -762,7 +774,9 @@
     width: 80%;
   }
   .ReadMoreCard {
-    margin-left: 60%;
+    margin-left: 0;
   }
-  
+  .univercityList-Img {
+    height: 15vh;
+  }
 }
