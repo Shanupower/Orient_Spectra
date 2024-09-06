@@ -32,6 +32,7 @@ import Error from "./Component/Common/ErrorPage";
 import UK_EDU_FAIR from "./Ads landing page/UK_EDU_FAIR";
 import ThankYou from "./Ads landing page/ThankYou";
 import UK_Jan_2025 from "./Ads landing page/UK_Januuary_2025/UK_Jan_2025";
+import Privacy_Policy from "./Component/Privacy_Policy/Privacy_Policy";
 
 function App() {
   const [openWhatwedo, setWhatwedoOpen] = useState(false);
@@ -111,7 +112,6 @@ function App() {
         <Route path="/selected-blog" element={<MoreBlogContent />} />
         <Route path="/offline-marketing-club" />
 
-
         {/* Start your Journey */}
         <Route path="/start-your-journey" element={<StartYourJourney />} />
         <Route path="*" element={<Error />} />
@@ -119,6 +119,7 @@ function App() {
         <Route path="/uk-november-2024" element={<UK_EDU_FAIR />} />
         <Route path="/uk-january-2025" element={<UK_Jan_2025 />} />
         <Route path="/thank-you" element={<ThankYou />} />
+        <Route path="/privacy-policy" element={<Privacy_Policy />} />
       </Routes>
 
       <Footer />
