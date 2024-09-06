@@ -125,6 +125,7 @@ const Hero = ({ blog, event }) => {
                   text={data.buttonText}
                   arrow={true}
                   link="/start-your-journey"
+                  className="StudyButtonCard"
                 />
                 {/* </div> */}
               </div>
