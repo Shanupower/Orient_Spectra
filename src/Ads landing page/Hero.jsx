@@ -7,7 +7,6 @@ const Hero = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
   const [formData, setFormData] = useState({
     First_name: "",
     Last_name: "",
@@ -15,6 +14,7 @@ const Hero = () => {
     Mobile: "",
     Intake_year: "",
     Intake_month: "",
+    Source: "/uk-november-2024",
   });
 
   const [errors, setErrors] = useState({});
@@ -36,6 +36,7 @@ const Hero = () => {
           Mobile: "",
           Intake_year: "",
           Intake_month: "",
+          Source: "/uk-november-2024",
         });
       }
     } catch (errors) {
@@ -193,7 +194,9 @@ const Hero = () => {
               {errors.Intake_month && (
                 <p style={{ color: "red" }}>{errors.Intake_month}</p>
               )}
+              
             </div>
+               <input type="hidden" name="source" className="input-field" value={formData.Source} />
           </div>
           <button className="form-container-button" type="submit">
             REGISTER NOW
