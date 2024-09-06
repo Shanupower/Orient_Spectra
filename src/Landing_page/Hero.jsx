@@ -69,8 +69,7 @@ const Hero = ({ blog, event }) => {
         id: 4,
         text: "",
         heading: "",
-        bgImage:
-          "https://strapi.orientspectra.com/uploads/USA_Event_Banner_3c0ca81ade.jpg",
+        bgImage: "https://strapi.orientspectra.com/uploads/Website_Event_Banner_UK_382d03b7ea.jpg",
         subtext: "",
         link: "event",
         buttonText: "Register Your Slot",

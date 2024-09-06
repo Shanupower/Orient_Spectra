@@ -22,55 +22,48 @@ const TestimonialData = [
   {
     id: 1,
     videoLink: "https://www.instagram.com/orient.spectra.1/",
-    videoUrl: Video3,
-    userName: "Shashi Kumar",
-    universityName: "Franklin University",
-    usrImg: "https://strapi.orientspectra.com/uploads/340_x_650_cb9bf3248d.jpg",
-    // usrImg2: "https://strapi.orientspectra.com/uploads/002_GERMANY_1931dcc2e4.jpg",
+    videoUrl: Video5,
+    userName: "Jaishree",
+    universityName: "University of East London",
+    usrImg: "https://strapi.orientspectra.com/uploads/10_b4ff89b5ac.jpg",
+    usrImg2: "https://strapi.orientspectra.com/uploads/001_UK_512a971774.jpg",
     content:
-      "Student mother extends her appreciation to Orient Spectra! Here is her heartfelt thanks as we helped to achieve her son's dream of studying in US. Your success stories inspire us every day!",
+      "Orient spectra has helped me a lot in my master's process. My university offer letter came within five days and I got my visa within 15 days.",
   },
-
   {
-    id: 1,
+    id: 2,
     videoLink: "https://www.instagram.com/orient.spectra.1/",
     videoUrl: Video3,
     userName: "Shashi Kumar",
     universityName: "Franklin University",
-    // usrImg: "https://strapi.orientspectra.com/uploads/340_x_650_cb9bf3248d.jpg",
-    // usrImg2: "https://strapi.orientspectra.com/uploads/002_GERMANY_1931dcc2e4.jpg",
+    usrImg: "https://strapi.orientspectra.com/uploads/USA_97a14e4b74.jpg",
+    usrImg2: "https://strapi.orientspectra.com/uploads/004_USA_6771f9d0ef.jpg",
     content:
       "Student mother extends her appreciation to Orient Spectra! Here is her heartfelt thanks as we helped to achieve her son's dream of studying in US. Your success stories inspire us every day!",
   },
-
-  // {
-  //   id: 2,
-  //   videoLink: "https://www.instagram.com/reel/C4F6nXLgW3J/",
-  //   videoUrl: Video2,
-  //   userName: "Madhu Kumar M",
-  //   usrImg: "https://strapi.orientspectra.com/uploads/4_USA_orange_d468fd1a92.jpg",
-  //   content:
-  //     "Congratulations Mr. Madhu Kumar for flying to the USA✈️ and achieving his dream. Under our guidance, Madhu Kumar got all the information related to the university. We provide I20 guidance and visa mock interviews at no extra cost. Now he is ready to fly to the USA!",
-  // },
-  // {
-  //   id: 3,
-  //   videoLink: "https://www.instagram.com/reel/CsK6PekLpkp/",
-  //   videoUrl: Video4,
-  //   userName: "Ashritha",
-  //   universityName: 'George Mason University',
-  //   usrImg: img4,
-  //   content:
-  //     "Meet Ms. Arshita, from Hyderabad. With the guidance and support from our expert counsellors, she got her acceptance letter after which she applied for her US visa. Now she is ready to take the flight of her dreams!",
-  // },
+  {
+    id: 3,
+    videoLink: "https://www.instagram.com/orient.spectra.1/",
+    videoUrl: "https://strapi.orientspectra.com/uploads/swetha_sree_568cad99fc.mp4",
+    userName: "Swetha Sree",
+    universityName: "International University of Applied Sciences",
+    usrImg: "https://strapi.orientspectra.com/uploads/3_GERMANY_aea2e1a5b1.jpg",
+    usrImg2: "https://strapi.orientspectra.com/uploads/GERMANY_350_W_2fba8f5568.jpg",
+    content:
+      "I got admission at University of Europe in Berlin for an MBA International Business. I would like to thank Ramya and Nandini actually for providing me complete support since the beginning of the application process then getting to the visa documents.",
+  },
   {
     id: 4,
     videoLink: "https://www.instagram.com/orient.spectra.1/",
-    videoUrl: Video5,
-    userName: "Jaishree",
-    usrImg: img5,
+    videoUrl: "https://strapi.orientspectra.com/uploads/alekhya_Review_54832075bb.mp4",
+    userName: "Alekhya",
+    universityName: "University of New Haven",
+    usrImg: "https://strapi.orientspectra.com/uploads/4_USA_orange_a2f2a00f12.jpg",
+    usrImg2: "https://strapi.orientspectra.com/uploads/003_USA_b554c163c4.jpg",
     content:
-      "Spectra! Students looking to study in Europe, had their doubts clarified by our amazing delegates: Yesoda Kamala (SRH University of Applied Sciences), Manisha Reddy (Macromedia University of Applied Sciences), Gopi Krishna (EU Business School), Preeti Sujith (Berlin School of Business & Innovation), and Pooja Lingampally (American Business School). Here’s to new academic journeys!",
+      "I've got to know about Orient Spectra from my brother who's doing his Master's in London, University of East London. They have helped me with the university listings and admission process.",
   },
+ 
 ];
 
 const Testimonial = () => {
@@ -227,7 +220,7 @@ const Testimonial = () => {
                   }`}
                 >
                   {currentTestimonial.userName}
-                  <p>{currentTestimonial.universityName}</p>
+                  <div>{currentTestimonial.universityName}</div>
                 </p>
               </div>
               <p>{currentTestimonial.content}</p>

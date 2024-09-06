@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./ADS.css";
 import axios from "axios";
-import emailjs from "emailjs-com";
+// import emailjs from "emailjs-com";
 
 const Hero = () => {
   useEffect(() => {
@@ -28,7 +28,29 @@ const Hero = () => {
       if (response.status === 200) {
         alert("Form submitted successfully");
 
-       
+        // Send email via EmailJS
+        // emailjs
+        //   .send(
+        //     "service_28ul4yvw",
+        //     "template_7z0xwsi1",
+        //     {
+        //       First_name: formData.First_name,
+        //       Last_name: formData.Last_name,
+        //       Email: formData.Email,
+        //       Mobile: formData.Mobile,
+        //       Intake_year: formData.Intake_year,
+        //       Intake_month: formData.Intake_month,
+        //     },
+        //     "6612831"
+        //   )
+        //   .then((result) => {
+        //     console.log("Email sent successfully:", result.text);
+        //   })
+        //   .catch((error) => {
+        //     console.error("Failed to send email:", error);
+        //   });
+
+        // Reset form data
         setFormData({
           First_name: "",
           Last_name: "",
@@ -45,6 +67,7 @@ const Hero = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+
     if (name === "Mobile") {
       if (/^\d*$/.test(value) && value.length <= 10) {
         setFormData((prevFormData) => ({
@@ -97,23 +120,22 @@ const Hero = () => {
       setErrors(validationErrors);
     }
   };
-  
 
   return (
     <div className="Leadgeneration-container section">
       <div className="Leadgeneration-content section">
-      <h1>November 2024 Intake for UK is Now Open</h1>
-        <p>This is the last opportunity for students to begin their UK study journey this year.
-        Attend our UK Education Fair 2024 to talk directly with university delegates and 
-        select the best university and course for your career goal. Our experts will walk 
-        you through application process, scholarship and loan opportunities, and guide you 
-        through visa process.</p>
+        <h1>Apply for January 2025 Intake for Early-Bird Scholarships</h1>
+        <p>
+        Attend our UK Education Fair 2024 to talk directly with university delegates and select the best 
+        university and course for your career goal. Our experts will walk you through 
+        application process, scholarship and loan opportunities, and guide you through visa process.
+        </p>
 
         <ul>
-          <li>Direct interaction with University representatives</li>
+          <li>Early-bird scholarship opportunities</li>
+          <li>Direct interaction with University delegates</li>
           <li>Application submission within 24 hours</li>
           <li>Affordable tuition fees</li>
-          <li>Scholarship opportunities</li>
         </ul>
       </div>
       <div className="form-container">

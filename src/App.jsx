@@ -31,6 +31,7 @@ import Loading from "./Component/Common/Loading";
 import Error from "./Component/Common/ErrorPage";
 import UK_EDU_FAIR from "./Ads landing page/UK_EDU_FAIR";
 import ThankYou from "./Ads landing page/ThankYou";
+import UK_Jan_2025 from "./Ads landing page/UK_Januuary_2025/UK_Jan_2025";
 
 function App() {
   const [openWhatwedo, setWhatwedoOpen] = useState(false);
@@ -116,6 +117,7 @@ function App() {
         <Route path="*" element={<Error />} />
 
         <Route path="/uk-november-2024" element={<UK_EDU_FAIR />} />
+        <Route path="/uk-january-2025" element={<UK_Jan_2025 />} />
         <Route path="/thank-you" element={<ThankYou />} />
       </Routes>
 
