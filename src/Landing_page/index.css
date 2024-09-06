@@ -607,7 +607,7 @@
 }
 
 .testimonial_centerSide {
-  width: 340px;
+  width: 370px;
   height: 650px;
   border-radius: 26px;
   display: flex;
@@ -667,6 +667,9 @@
   padding: 1rem;
   font-size: 20px;
   margin-bottom: 2rem;
+}
+.studentcard > p > div {
+  font-size: 13px;
 }
 
 .testimonial_rigtSide > p {

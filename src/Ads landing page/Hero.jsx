@@ -89,10 +89,10 @@ const Hero =()=>{
     return(
         <div className="Leadgeneration-container section">
             <div className="Leadgeneration-content section">
-            <h1>UK Education Fair 2024</h1>
-            <p>Study abroad in UK by applying for either
-              November 2024 or January 2025 intakes. Apply now to get early bird scholarships.
-              Attend the event to get personal one-on-one interaction with UK university delegates, and get all your doubts cleared.</p>
+            <h1>November 2024 Intake for UK is Now Open</h1>
+            <p>This is the last opportunity for students to begin their UK study journey this year.
+            Attend our UK Education Fair 2024 to talk directly with university delegates and select the best university and course for your career goal. 
+            Our experts will walk you through application process, scholarship and loan opportunities, and guide you through visa process.</p>
 
               <ul>
                 <li>Direct interaction with University representatives</li>
