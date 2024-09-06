@@ -33,6 +33,7 @@ import UK_EDU_FAIR from "./Ads landing page/UK_EDU_FAIR";
 import ThankYou from "./Ads landing page/ThankYou";
 import UK_Jan_2025 from "./Ads landing page/UK_Januuary_2025/UK_Jan_2025";
 import Privacy_Policy from "./Component/Privacy_Policy/Privacy_Policy";
+import USA_SEPTEMBER_FAIR_2024 from "./Ads landing page/USA_SEPT_FAIR_2024/USA_SEPTEMBER_FAIR_2024";
 
 function App() {
   const [openWhatwedo, setWhatwedoOpen] = useState(false);
@@ -118,6 +119,7 @@ function App() {
 
         <Route path="/uk-november-2024" element={<UK_EDU_FAIR />} />
         <Route path="/uk-january-2025" element={<UK_Jan_2025 />} />
+        <Route path="/usa-september-fair-2024" element={<USA_SEPTEMBER_FAIR_2024 />} />
         <Route path="/thank-you" element={<ThankYou />} />
         <Route path="/privacy-policy" element={<Privacy_Policy />} />
       </Routes>

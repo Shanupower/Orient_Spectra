@@ -5,27 +5,27 @@ const servicesData = [
     {
         id:1,
         img: "https://strapi.orientspectra.com/uploads/0d611578_798d_418d_bd15_4e5ee5488f3f_copy_6f22f967a4.png",
-        title: "Apply now get early bird scholarships",
+        title: "Direct access to University delegates",
     },
     {
         id:2,
         img: "https://strapi.orientspectra.com/uploads/0d611578_798d_418d_bd15_4e5ee5488f3f_copy_6f22f967a4.png",
-        title: "No IELTS or English language test ",
+        title: "On spot profile evaluation",
     },
     {
         id:3,
         img: "https://strapi.orientspectra.com/uploads/0d611578_798d_418d_bd15_4e5ee5488f3f_copy_6f22f967a4.png",
-        title: "2 year courses with 1 year internship’s",
+        title: "Opportunity to get scholarships of over $12,000",
     },
     {
         id:4,
         img: "https://strapi.orientspectra.com/uploads/0d611578_798d_418d_bd15_4e5ee5488f3f_copy_6f22f967a4.png",
-        title: "2 years stay back option",
+        title: "Get application fee waivers",
     },
     {
         id:5,
         img: "https://strapi.orientspectra.com/uploads/0d611578_798d_418d_bd15_4e5ee5488f3f_copy_6f22f967a4.png",
-        title: "One-on-one interaction with University delegates",
+        title: "Register to get free IELTS coaching",
     },
     {
         id:6,
@@ -36,7 +36,7 @@ const servicesData = [
 const Benifits = () => {
     return(
         <div className="Benifts_container">
-            <h1>Why Should You Attend</h1>
+            <h1>Why You Should Attend</h1>
             <div className="Benifits_content">
             {servicesData.map((item)=> (  
                 <div className="Benifits_Box">
