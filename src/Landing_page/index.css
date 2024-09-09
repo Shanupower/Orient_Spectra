@@ -74,12 +74,12 @@
   gap: 1rem;
 }
 @media (max-width: 986px) {
- .StudyButtonCard {
-  margin-bottom: -2rem;
- }
- .StudyButton {
-  font-size: 18px;
- }
+  .StudyButtonCard {
+    margin-bottom: -2rem;
+  }
+  .StudyButton {
+    font-size: 18px;
+  }
 }
 
 /* Discovery */
@@ -310,7 +310,6 @@
     width: 30%;
     border-radius: 10px;
   }
-  
 }
 
 @media (max-width: 986px) {
@@ -334,11 +333,8 @@
   }
   .Services-container > p {
     font-size: 2rem;
-    
   }
 }
-
-
 
 /*Mission Vision */
 .corcesImage {
@@ -458,7 +454,6 @@
     opacity: 1;
   }
 } */
-  
 
 /* .explore_rightCard {
   color: var(--text-color-white);
@@ -635,8 +630,6 @@
   height: 100%;
   aspect-ratio: 9/16;
 }
-
-
 
 .testimonial_rigtSide {
   max-width: 30%;
@@ -844,7 +837,7 @@
   position: relative;
 }
 
-@media (max-width:1280px) {
+@media (max-width: 1280px) {
   .media-container {
     display: flex;
     flex-wrap: nowrap;
@@ -858,7 +851,7 @@
     padding-bottom: 1rem;
     /* box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3); */
   }
-  
+
   .media-video {
     border: 1px solid var(--text-color-darkgray);
     border-radius: 20px;
@@ -1274,13 +1267,14 @@ canvas {
   box-shadow: var(--box-shadow);
   background: rgba(31, 122, 255, 1);
   border-radius: 16px;
+  margin-top: 2rem;
+}
+.swiperLeftSide {
   display: flex;
   justify-content: space-between;
   padding: 2rem;
   gap: 2rem;
-  margin-top: 2rem;
 }
-
 .event_leftContent {
   width: 50%;
   display: flex;
@@ -1602,7 +1596,6 @@ canvas {
     height: 140px;
   }
 
-
   .Mission_container {
     flex-direction: column;
   }
@@ -1611,7 +1604,7 @@ canvas {
     font-size: 24px;
   }
   .explore_rightSide {
-    width: 100%;  
+    width: 100%;
   }
   .corcesImage {
     margin-left: 0;
@@ -1798,13 +1791,12 @@ canvas {
   .event_leftContent {
     width: 60%;
   }
-  .textBox{
+  .textBox {
     width: 55%;
     border-radius: 15px;
   }
-  .textBox > b{
+  .textBox > b {
     font-size: 13px;
-
   }
   /* .explore_rightCard:nth-child(1) {
     height: 26rem;
@@ -1894,14 +1886,14 @@ canvas {
   }
   .studentCard {
     /* width: 20%; */
-  background: rgba(31, 122, 255, 1);
-  width: 20%;
-  text-align: center;
-  font-size: 18px;
-  padding: 1rem;
-  border-radius: 30px;
-  color: var(--text-color-white);
-  margin-left: 0;
+    background: rgba(31, 122, 255, 1);
+    width: 20%;
+    text-align: center;
+    font-size: 18px;
+    padding: 1rem;
+    border-radius: 30px;
+    color: var(--text-color-white);
+    margin-left: 0;
   }
   .studentcard > p {
     font-size: 20px;
@@ -1912,7 +1904,6 @@ canvas {
     width: 70%;
     height: 10px;
   }
-  
 }
 
 @media (max-width: 768px) {
@@ -1920,8 +1911,6 @@ canvas {
     flex: 1 1 100%;
   }
 }
-
-
 
 @media (max-width: 986px) {
   .Hero_Content {
@@ -1933,9 +1922,9 @@ canvas {
   .slick-dots li {
     width: 40.39px !important;
   }
- .playIcon {
-  display: none;
- }
+  .playIcon {
+    display: none;
+  }
   .PopUpButton {
     position: absolute;
     bottom: 6rem;
@@ -1979,7 +1968,7 @@ canvas {
     align-items: center;
     flex-direction: column;
     background-repeat: repeat;
-  background-size: cover;
+    background-size: cover;
   }
   .Acedemic_cantainer__header > p {
     font-size: 26px;
@@ -1993,13 +1982,15 @@ canvas {
     box-shadow: var(--box-shadow);
     background: rgba(31, 122, 255, 1);
     border-radius: 16px;
+  }
+  .swiperLeftSide {
     display: flex;
     justify-content: center;
     padding: 2rem;
     flex-direction: column-reverse;
     gap: 2rem;
   }
-  
+
   .event_leftContent {
     width: 100%;
     display: flex;
@@ -2020,7 +2011,7 @@ canvas {
     border-radius: 26px;
     overflow: hidden;
   }
-  
+
   .Events__container {
     display: flex;
     padding-block: 2rem;
@@ -2038,15 +2029,15 @@ canvas {
     width: 80% !important;
   }
   .swiper-button-next,
-.swiper-button-prev {
-  color: white !important; 
-  background-color: #ff7300 !important;
-  transform: scale(0.8); 
-  padding: 30px !important;
-  border-radius: 30px !important;
-  /* margin-top: -50px !important; */
-}
-/* .swiper-button-next_1,
+  .swiper-button-prev {
+    color: white !important;
+    background-color: #ff7300 !important;
+    transform: scale(0.8);
+    padding: 30px !important;
+    border-radius: 30px !important;
+    /* margin-top: -50px !important; */
+  }
+  /* .swiper-button-next_1,
 .swiper-button-prev_1 {
   color: white !important; 
   background-color: #ff7300 !important;
@@ -2143,14 +2134,14 @@ canvas {
     font-size: 40px;
     color: var(--text-color-black);
   }
-  
+
   .explore_rightCard:nth-child(1) {
     width: 100%;
     height: 26rem;
     margin-top: 1.4rem;
     background-color: rgba(31, 122, 255, 1);
   }
-  .explore_rightCard:nth-child(1) > h3{
+  .explore_rightCard:nth-child(1) > h3 {
     font-size: 25px;
   }
   .explore_rightCard:nth-child(1) > p {
@@ -2158,14 +2149,14 @@ canvas {
     width: 100%;
     color: var(--text-color-lightwhite);
   }
- 
+
   .explore_rightCard:nth-child(2) {
     width: 100%;
     height: 26rem;
     margin-top: 1.4rem;
     background-color: rgba(255, 115, 0, 1);
   }
-  .explore_rightCard:nth-child(2) > h3{
+  .explore_rightCard:nth-child(2) > h3 {
     font-size: 25px;
   }
   .explore_rightCard:nth-child(2) > p {
@@ -2181,7 +2172,7 @@ canvas {
     object-fit: contain;
     margin-bottom: 1rem;
     margin-left: 0;
-}
+  }
   .media-container {
     flex-wrap: nowrap;
     width: 100%;
@@ -2236,7 +2227,6 @@ canvas {
     height: 100%;
     aspect-ratio: 1/1;
   }
-  
 }
 
 .css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-completed {
@@ -2268,7 +2258,7 @@ canvas {
   line-height: 1.1;
 }
 .Capabilities {
-  color: var(--brand-color)
+  color: var(--brand-color);
 }
 @media (max-width: 968px) {
   .media-card {
@@ -2282,19 +2272,19 @@ canvas {
   .findmoreButton {
     margin-top: -65px;
     display: flex;
-    justify-content: center;   
+    justify-content: center;
   }
   .findmoreButton2 {
     margin-top: -20px;
     display: flex;
     justify-content: center;
   }
-  
+
   .findMore {
     border-radius: 20px;
-  background-color: #ff7300;
-  padding: 1rem;
-  font-size: 15px;
+    background-color: #ff7300;
+    padding: 1rem;
+    font-size: 15px;
   }
   .eventsRigtImage > img {
     width: 100%;
@@ -2385,7 +2375,6 @@ canvas {
   }
   .testimonial_lftSide > h3 {
     font-weight: 600;
-
   }
   .stuImage {
     display: none;
@@ -2404,7 +2393,7 @@ canvas {
     border-radius: 18px;
     color: var(--text-color-white);
   }
-  .studentename > span{
+  .studentename > span {
     font-size: 15px;
   }
   .RightArrow,
@@ -2892,12 +2881,10 @@ canvas {
   overflow: hidden;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
 }
-@media (max-width:986px) {
+@media (max-width: 986px) {
   .eventCard-image-containeer {
     height: 20vh;
-    
   }
-  
 }
 /* End */
 
@@ -2988,7 +2975,7 @@ button {
 
 .Blog-section,
 .country-section {
-  padding: 0.6rem 6%; 
+  padding: 0.6rem 6%;
 }
 .country-section > strong {
   font-size: 50px;
@@ -3014,10 +3001,10 @@ button {
   font-weight: 600;
 }
 .country_Container {
- display: flex;
- gap: 4rem;
- overflow-x: auto;
- margin-block: 3rem;
+  display: flex;
+  gap: 4rem;
+  overflow-x: auto;
+  margin-block: 3rem;
 }
 .country-Card {
   min-width: 328px;
@@ -3033,23 +3020,22 @@ button {
   transition: all 0.3s ease-in-out;
 }
 
-.counrtyImage-card > img{
+.counrtyImage-card > img {
   width: 100%;
   height: 100%;
   border-radius: 20px;
   object-fit: cover;
-
 }
 .image-text-card {
   position: absolute;
   width: 45%;
   background-color: rgba(31, 122, 255, 1);
-  bottom: 40px; 
+  bottom: 40px;
   margin-left: 2rem;
   border-radius: 50px;
 }
 .image-text-overlay {
-  color: white; 
+  color: white;
   padding: 15px;
   font-size: 16px;
   font-weight: 600;
@@ -3059,13 +3045,13 @@ button {
 /*Swiper Arrows Styling*/
 .swiper-button-next,
 .swiper-button-prev {
-  color: white !important; 
+  color: white !important;
   background-color: #ff7300 !important;
-  transform: scale(0.8); 
+  transform: scale(0.8);
   padding: 30px !important;
   border-radius: 30px !important;
 }
-@media (max-width:1024px) {
+@media (max-width: 1024px) {
   .image-text-card {
     width: 50%;
   }
@@ -3074,13 +3060,13 @@ button {
   }
   .swiper-button-next,
   .swiper-button-prev {
-    transform: scale(0.8); 
+    transform: scale(0.8);
   }
   .counrtyImage-card {
     height: 60vh;
   }
 }
-@media (max-width:986px) {
+@media (max-width: 986px) {
   .image-text-card {
     width: 50%;
   }
@@ -3115,5 +3101,5 @@ button {
     color: var(--brand-color);
     font-size: 2rem;
     font-weight: 600;
-  }  
+  }
 }
