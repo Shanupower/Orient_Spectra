@@ -210,6 +210,15 @@
     gap: 1rem;
     /* margin-top: 10%; */
   }
+  .FaQ_container > h1 > span {
+    font-weight: 500;
+    color: var(--text-color-black);
+  }
+  .FaQ_container > h1 {
+    font-size: 35px;
+    color: var(--brand-color);
+    line-height: 1.2;
+  }
 }
 
 .navMenuResponsive {
@@ -277,10 +286,11 @@
 }
 .FaQ_container > h1 > span {
   font-weight: 500;
+  color: var(--text-color-black);
 }
 .FaQ_container > h1 {
   font-size: 42px;
-  color: var(--text-color-black);
+  color: var(--brand-color);
 }
 
 .accordionConatiner {
@@ -387,7 +397,7 @@
   width: 60%;
 }
 .mentorship-text-card > h2 {
-  font-size: 26px;
+  font-size: 20px;
   margin-bottom: 1rem;
 }
 .mentorship-text-card > p {
