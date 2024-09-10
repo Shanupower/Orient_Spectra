@@ -35,7 +35,7 @@ const servicesData = [
 const Benifits = () => {
   return (
     <div className="Benifts_container">
-      <h1>Services We Offer</h1>
+      <h1>Why Should You Attend</h1>
       <div className="Benifits_content">
         {servicesData.map((item) => (
           <div className="Benifits_Box" key={item.id}>

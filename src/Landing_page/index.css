@@ -131,6 +131,39 @@
   white-space: nowrap;
 }
 
+.text-feild-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem !important;
+  padding: 3rem 2.5rem 2rem 2.5rem !important;
+}
+.form-group {
+  margin-bottom: 0.5rem; /* Space between form fields */
+  position: relative; /* Ensure error message is positioned relative to this container */
+  width: 47% !important;
+}
+.input-field {
+  width: 100%;
+  font-size: 15px;
+  padding: 10px;
+}
+.form-container-button {
+  width: 100%;
+  font-size: 20px;
+  font-weight: 700;
+  background-color: var(--brand-color);
+  border: none;
+  color: white;
+  margin-top: 0 !important;
+  cursor: pointer;
+}
+.Marguee > h1 {
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 1;
+  color: white;
+  text-align: center;
+}
 .marquee {
   width: 100%;
   overflow: hidden;
@@ -163,6 +196,8 @@
   margin-block: 4rem 2.8rem;
   border-radius: 22px;
   width: 46%;
+  padding: 1.5rem;
+  background-color: #1f7aff;
 }
 .MargueeText {
   font-size: 160px;
@@ -1575,6 +1610,8 @@ canvas {
   margin-left: 20px;
 }
 
+
+
 @media (max-width: 1024px) {
   .hero_Heading {
     font-size: 35px;
@@ -1744,6 +1781,26 @@ canvas {
   .MargueeText {
     font-size: 70px;
     color: var(--brand-color);
+  }
+  .text-feild-container {
+    padding: 2rem 0.5rem 2rem 0.5rem !important;
+  }
+  .form-group {
+    margin-bottom: 0.5rem; /* Space between form fields */
+    position: relative; /* Ensure error message is positioned relative to this container */
+    width: 45% !important;
+  }
+  .input-field {
+    width: 100%;
+    font-size: 15px;
+    padding: 10px;
+  }
+  .form-container-button {
+    font-size: 18px !important;
+    margin-bottom: -20px;
+  }
+  .Marguee > h1 {
+    font-size: 18px;
   }
   .discovery_Container {
     /* display: none; */
@@ -1959,10 +2016,30 @@ canvas {
   }
   .Marguee {
     width: 100%;
-    display: none;
+    /* display: none; */
   }
   .MargueeImage {
     margin-block: 2rem 3rem;
+  }
+  .text-feild-container {
+    padding: 2rem 0.5rem 2rem 0.5rem !important;
+  }
+  .form-group {
+    margin-bottom: 0.5rem; /* Space between form fields */
+    position: relative; /* Ensure error message is positioned relative to this container */
+    width: 100% !important;
+  }
+  .input-field {
+    width: 100%;
+    font-size: 15px;
+    padding: 10px;
+  }
+  .form-container-button {
+    font-size: 18px !important;
+    margin-bottom: -20px;
+  }
+  .Marguee > h1 {
+    font-size: 16px;
   }
   .Acedemic_cantainer__header {
     align-items: center;

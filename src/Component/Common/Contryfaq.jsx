@@ -24,9 +24,9 @@ const CountryFaq = ({ getItems }) => {
             defaultActiveKey={["1"]}
             expandIcon={({ isActive }) =>
               isActive ? (
-                <UpOutlined style={{ fontSize: "24px", color: "#ff7300" }} />
+                <UpOutlined style={{ fontSize: "20px", color: "#ff7300" }} />
               ) : (
-                <PlusOutlined style={{ fontSize: "24px", color: "#ff7300" }} />
+                <PlusOutlined style={{ fontSize: "20px", color: "#ff7300" }} />
               )
             }
             style={{

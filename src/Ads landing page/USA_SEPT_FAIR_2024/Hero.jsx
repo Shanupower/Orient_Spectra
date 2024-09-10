@@ -15,7 +15,7 @@ const Hero = () => {
     Mobile: "",
     Intake_year: "",
     Intake_month: "",
-    Source:"/uk-january-2025",
+    Source:"/usa-september-fair-2024",
   });
 
   const [errors, setErrors] = useState({});
@@ -126,22 +126,21 @@ const Hero = () => {
   return (
     <div className="Leadgeneration-container section">
       <div className="Leadgeneration-content section">
-        <h1>Apply for January 2025 Intake for Early-Bird Scholarships</h1>
+        <h1>USA Education Fair 2024</h1>
         <p>
-        Attend our UK Education Fair 2024 to talk directly with university delegates and select the best 
-        university and course for your career goal. Our experts will walk you through 
-        application process, scholarship and loan opportunities, and guide you through visa process.
+        Applications for January 2025 intake are now open! Get personalized study abroad recommendations from university delegates. 
+        Our experts will walk you through the entire process right from course selection to visa processing.
         </p>
 
         <ul>
-          <li>Early-bird scholarship opportunities</li>
-          <li>Direct interaction with University delegates</li>
-          <li>Application submission within 24 hours</li>
-          <li>Affordable tuition fees</li>
+          <li>Direct interaction with university delegates</li>
+          <li>Register for free & get Duolingo coupon</li>
+          <li>Claim application fee waivers</li>
+          <li>Free IELTS coaching for attendees</li>
         </ul>
       </div>
       <div className="form-container">
-        <p>Fill out the form below to register now:</p>
+        <p> Register Now To Claim Duolingo Coupon</p>
         <form onSubmit={handleSubmitValidation}>
           <div className="text-feild-container">
             <div className="form-group">
