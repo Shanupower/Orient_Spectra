@@ -199,7 +199,7 @@ const Hero = () => {
                <input type="hidden" name="source" className="input-field" value={formData.Source} />
           </div>
           <button className="form-container-button" type="submit">
-            REGISTER NOW
+          Book A Free Call
           </button>
         </form>
       </div>
