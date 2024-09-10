@@ -26,8 +26,8 @@ const getItems = (panelStyle) => [
     label: "Are scholarships available for international students in Poland?",
     children: (
       <p className="textContent">
-        Yes, many Polish universities offer scholarships also check 
-        with your home country's government and international programs.
+        Yes, many Polish universities offer scholarships also check with your
+        home country's government and international programs.
       </p>
     ),
     style: panelStyle,
@@ -37,7 +37,7 @@ const getItems = (panelStyle) => [
     label: "Can international students work while studying in Poland?",
     children: (
       <p className="textContent">
-        Yes, students from EU/EEA countries can work without restrictions 
+        Yes, students from EU/EEA countries can work without restrictions
         non-EU/EEA students typically have limited work opportunities.
       </p>
     ),
@@ -48,9 +48,8 @@ const getItems = (panelStyle) => [
     label: "What is the cost of living for international students in Poland?",
     children: (
       <p className="textContent">
-        Living costs are moderate, with expenses like accommodation, 
-        food, and transportation averaging around EUR 500-800 per month.
-
+        Living costs are moderate, with expenses like accommodation, food, and
+        transportation averaging around EUR 500-800 per month.
       </p>
     ),
     style: panelStyle,
@@ -68,7 +67,7 @@ const PolandCountry = () => {
       <Univercity />
       <TrendingCourse />
       <AdmitionRequired />
-      {/* <Admissiontimeline /> */}
+      <Admissiontimeline />
       <Personalized />
       <CountryFaq getItems={getItems} />
     </>

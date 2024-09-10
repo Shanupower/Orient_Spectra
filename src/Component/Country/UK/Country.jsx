@@ -131,7 +131,7 @@ const UKCountry = () => {
       <Univercity />
       <TrendingCourse />
       <AdmitionRequired />
-      {/* <Admissiontimeline /> */}
+      <Admissiontimeline />
       <Personalized />
       <CountryFaq getItems={getItems} />
     </>

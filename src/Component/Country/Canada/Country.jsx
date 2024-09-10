@@ -206,7 +206,7 @@ const CanadaCountry = () => {
       <Univercity />
       <TrendingCourse />
       <AdmitionRequired />
-      {/* <Admissiontimeline /> */}
+      <Admissiontimeline />
       <Personalized />
       <CountryFaq getItems={getItems} />
     </>
