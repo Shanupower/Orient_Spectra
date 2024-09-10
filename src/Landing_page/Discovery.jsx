@@ -176,7 +176,7 @@ const Discovery = () => {
             </div>
             <input type="hidden" name="Source" className="input-field" value={formData.Source} />
             <button className="form-container-button" type="submit">
-            REGISTER NOW
+            Book A Free Call
           </button>
           </div>
           
