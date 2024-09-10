@@ -60,7 +60,6 @@
   width: calc(80% / 3 - 1rem);
 }
 
-
 /* H */
 .capital-container1 {
   display: flex;
@@ -83,8 +82,8 @@
   justify-content: space-between;
   gap: 1rem;
   background-color: var(--text-color-blue);
-  padding:1.6rem 4rem;
-  border-radius: 16px; 
+  padding: 1.6rem 4rem;
+  border-radius: 16px;
 }
 .about-capital-card1 {
   display: flex;
@@ -95,7 +94,7 @@
 .about-capital-card1 > span {
   font-size: 18px;
 }
-.about-capital-card1 >h2 {
+.about-capital-card1 > h2 {
   font-size: 22px;
 }
 /*  */
@@ -218,7 +217,7 @@
   font-size: 20px;
   font-weight: 600;
   text-align: center;
-  width: 100%
+  width: 100%;
 }
 
 .StudyingCard > p {
@@ -273,11 +272,11 @@
   background-color: var(--text-color-darkblack);
   margin-top: 0.4rem;
 }
- .trending-course > h1 > span,
- .univercity-card > h1 > span {
+.trending-course > h1 > span,
+.univercity-card > h1 > span {
   color: var(--brand-color);
   font-weight: 600;
- }
+}
 
 .univercity-section-card {
   display: flex;
@@ -477,23 +476,35 @@
   border-radius: 10px;
 }
 .Popular_Universities {
-  min-height: 60vh;
-
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+  overflow-y: auto;
+  height: 90vh;
+  padding: 1rem;
 }
 .Popular_Universities-container > h1 {
   font-size: 28px;
   color: var(--text-color-darkblack);
   margin-bottom: 1rem;
 }
-.university-card {
-  background-color: #efefef;
-  border-radius: 20px;
-  min-height: 60px;
+.howApllycard >ul{
+  padding-left: 2rem;
 }
-
+.university-card {
+  border-radius: 20px;
+  min-height: 150px;
+  padding: .4rem  ;
+  background-color: transparent;
+  box-shadow: 0 0 1px 1px rgba(0,0,0,0.1);
+}
+.university-card >img{
+  object-fit: contain;
+}
+.activeCard{
+  background-color: var(--brand-color);
+  color: var(--text-color-white);
+}
 .howApllycard {
   color: var(--text-color-darkblack);
 }
@@ -513,15 +524,22 @@
 }
 .program-card {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   margin-top: 1rem;
   gap: 1rem;
 }
-
-.program-card > p {
+.prgram-item-container {
   display: flex;
   align-items: center;
   gap: 0.4rem;
+}
+.program-name {
+  font-size: 15px;
+  line-height: 1.1;
+}
+.icon_image {
+  width: 40px;
+  height: 40px;
 }
 .FiberManualRecordIcon {
   color: #878787 !important;
@@ -577,10 +595,9 @@
 }
 
 @media (max-width: 987px) {
-  
-.hero-content > h1 {
-  font-size: 40px;
-}
+  .hero-content > h1 {
+    font-size: 40px;
+  }
   .state-container {
     flex-direction: column;
   }
@@ -636,8 +653,7 @@
     height: 25vh !important;
   }
 
-  .Rightcapital-container ,
-
+  .Rightcapital-container,
   .capital-container1,
   .Expense-card,
   .admissionTime-container,
@@ -646,7 +662,7 @@
   .GDP-container {
     flex-direction: column !important;
   }
-  .Rightcapital-container ,
+  .Rightcapital-container,
   .leftcapital-container,
   .Expertcard,
   .Popular_Universities-container,
@@ -674,12 +690,12 @@
   /*Capitals Section */
   .Rightcapital-container {
     gap: 1.5rem;
-    padding:2rem;
+    padding: 2rem;
   }
   .about-capital-card1 > span {
     font-size: 15px;
   }
-  .about-capital-card1 >h2 {
+  .about-capital-card1 > h2 {
     font-size: 20px;
   }
 
@@ -701,13 +717,13 @@
     width: 75%;
   }
   .trending-course > h1,
-.univercity-card > h1 {
-  font-size: 30px;
-  line-height: 1.2;
-}
+  .univercity-card > h1 {
+    font-size: 30px;
+    line-height: 1.2;
+  }
 }
 
-@media (max-width:1024px) {
+@media (max-width: 1024px) {
   .state-container > h1 {
     font-size: 35px !important;
   }
@@ -725,12 +741,12 @@
   }
   .Rightcapital-container {
     gap: 1.5rem;
-    padding:2rem;
+    padding: 2rem;
   }
   .about-capital-card1 > span {
     font-size: 15px;
   }
-  .about-capital-card1 >h2 {
+  .about-capital-card1 > h2 {
     font-size: 18px;
   }
   .gdp-card {

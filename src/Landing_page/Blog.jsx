@@ -17,6 +17,7 @@ const Blog = () => {
         const response = await axios.get(
           `https://strapi.orientspectra.com/api/blogs?populate=*`
         );
+
         if (response?.status === 200) {
           const sortedData = response.data.data.sort(
             (a, b) => new Date(b.attributes.Date) - new Date(a.attributes.Date)
@@ -31,12 +32,15 @@ const Blog = () => {
 
     fetchData();
   }, []);
+  console.log(blogData.length);
 
   return (
     <>
-    <div className="Blog-section">
-        <p>Latest from Our <span>Knowledge Base</span></p>
-        </div>
+      <div className="Blog-section">
+        <p>
+          Latest from Our <span>Knowledge Base</span>
+        </p>
+      </div>
       <div className="section BlogContainer">
         <div className="leftBlogCard">
           <div className="leftBlogCard-image-card">
@@ -45,7 +49,7 @@ const Blog = () => {
               alt="Blog Image 1"
             />
           </div>
-        
+
           {!isMd && (
             <div className="blogContent">
               {" "}
@@ -84,8 +88,8 @@ const Blog = () => {
           ))}
           <div className="findmoreButton2 Container">
             <Link to={"/blogs"} className="Link_route findMore">
-                Find More <ArrowForwardIcon className="blogarrrow" />
-              </Link>
+              Find More <ArrowForwardIcon className="blogarrrow" />
+            </Link>
           </div>
         </div>
       </div>

@@ -26,8 +26,8 @@ const getItems = (panelStyle) => [
     label: "What is the cost of living in Singapore?",
     children: (
       <p className="textContent">
-        Monthly expenses range from SGD 1,000 to SGD 2,500, 
-        including accommodation, food, transport, and other personal expenses
+        Monthly expenses range from SGD 1,000 to SGD 2,500, including
+        accommodation, food, transport, and other personal expenses
       </p>
     ),
     style: panelStyle,
@@ -37,8 +37,8 @@ const getItems = (panelStyle) => [
     label: "Are scholarships available for international students?",
     children: (
       <p className="textContent">
-        Yes, various scholarships are offered by universities, 
-        the Singapore government, and private organizations.
+        Yes, various scholarships are offered by universities, the Singapore
+        government, and private organizations.
       </p>
     ),
     style: panelStyle,
@@ -48,8 +48,8 @@ const getItems = (panelStyle) => [
     label: "Can international students work part-time?",
     children: (
       <p className="textContent">
-        Yes, students can work up to 16 hours per week during 
-        term time and full-time during vacations.
+        Yes, students can work up to 16 hours per week during term time and
+        full-time during vacations.
       </p>
     ),
     style: panelStyle,
@@ -59,9 +59,8 @@ const getItems = (panelStyle) => [
     label: "What are the accommodation options?",
     children: (
       <p className="textContent">
-        Options include on-campus hostels, off-campus private housing, 
-        and shared apartments, with costs varying by type and location.
-
+        Options include on-campus hostels, off-campus private housing, and
+        shared apartments, with costs varying by type and location.
       </p>
     ),
     style: panelStyle,
@@ -79,7 +78,7 @@ const SingaporeCountry = () => {
       <Univercity />
       <TrendingCourse />
       <AdmitionRequired />
-      {/* <Admissiontimeline /> */}
+      <Admissiontimeline />
       <Personalized />
       <CountryFaq getItems={getItems} />
     </>
