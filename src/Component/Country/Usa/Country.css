@@ -475,6 +475,9 @@
   padding: 1rem;
   border-radius: 10px;
 }
+.PopularProgram_card {
+  border-top: 1px solid rgb(0, 0, 0);
+}
 .Popular_Universities {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -488,20 +491,20 @@
   color: var(--text-color-darkblack);
   margin-bottom: 1rem;
 }
-.howApllycard >ul{
+.howApllycard > ul {
   padding-left: 2rem;
 }
 .university-card {
   border-radius: 20px;
   min-height: 150px;
-  padding: .4rem  ;
+  padding: 0.4rem;
   background-color: transparent;
-  box-shadow: 0 0 1px 1px rgba(0,0,0,0.1);
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
 }
-.university-card >img{
+.university-card > img {
   object-fit: contain;
 }
-.activeCard{
+.activeCard {
   background-color: var(--brand-color);
   color: var(--text-color-white);
 }
@@ -522,9 +525,12 @@
   color: var(--text-color-darkblack);
   margin-top: 1.8rem;
 }
+.PopularProgram_card > h2 {
+  margin-top: 1rem;
+}
 .program-card {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   margin-top: 1rem;
   gap: 1rem;
 }
@@ -532,10 +538,45 @@
   display: flex;
   align-items: center;
   gap: 0.4rem;
+  border: 2px solid var(--brand-color);
+  background: #fff;
+  padding: 0.5rem 0.4rem;
+  border-radius: 10px;
+}
+.intakesCOntainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem  ;
+  margin-top: 0.6rem;
+}
+.intakesCard {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+.imageContainer {
+  width: 90px;
+  height:54px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.imageContainer > img {
+  object-fit: fill;
+}
+.intackText >b{
+  color: var(--brand-color);
+
+}
+.intackText >p{
+  color: var(--text-color-black);
+  line-height: 1;
+  letter-spacing: -1px;
+  
 }
 .program-name {
   font-size: 15px;
   line-height: 1.1;
+  text-align: center;
 }
 .icon_image {
   width: 40px;
