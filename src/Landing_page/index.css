@@ -1298,7 +1298,7 @@ canvas {
 }
 
 .event_leftSide {
-  flex: 1 1 60%;
+  width: 60%;
   box-shadow: var(--box-shadow);
   background: rgba(31, 122, 255, 1);
   border-radius: 16px;
@@ -1609,8 +1609,6 @@ canvas {
   font-size: 17px;
   margin-left: 20px;
 }
-
-
 
 @media (max-width: 1024px) {
   .hero_Heading {
@@ -2055,10 +2053,11 @@ canvas {
     text-align: center;
   }
   .event_leftSide {
-    flex: 1 1 100%;
+    width: 100%;
     box-shadow: var(--box-shadow);
     background: rgba(31, 122, 255, 1);
     border-radius: 16px;
+    height: 80%;
   }
   .swiperLeftSide {
     display: flex;

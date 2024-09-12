@@ -80,14 +80,19 @@ const Admissiontimeline = () => {
                     Candidate must have attended any of the below English
                     proficiency tests:
                   </li>
-                  <li> IELTS: 6 or 6.5</li>
-                  <li>TOEFL: 80</li>
-                  <li>Duolingo: 115</li>
+                  <div style={{ paddingLeft: "1.4rem" }}>
+                    <li> IELTS: 6 or 6.5</li>
+                    <li>TOEFL: 80</li>
+                    <li>Duolingo: 115</li>
+                  </div>
                   <li>
                     The candidate must’ve also scored below points in
                     standardized test:
                   </li>
-                  <li> SAT: 1200 and above</li>
+
+                  <div style={{ paddingLeft: "1.4rem" }}>
+                    <li> SAT: 1200 and above</li>
+                  </div>
                 </ul>
               ) : (
                 <ul>
@@ -99,43 +104,82 @@ const Admissiontimeline = () => {
                     Candidate must have attended any of the below English
                     proficiency tests:
                   </li>
-                  <li> IELTS: 6 or 6.5</li>
-                  <li>TOEFL: 80</li>
-                  <li>Duolingo: 115</li>
+                  <div style={{ paddingLeft: "1.4rem" }}>
+                    <li> IELTS: 6 or 6.5</li>
+                    <li>TOEFL: 80</li>
+                    <li>Duolingo: 115</li>
+                  </div>
+
                   <li>
                     The candidate must’ve also scored below points in
                     standardized test:
                   </li>
                   <li> GRE : 300 and above</li>
-                  <li> GMAT : 650 and above</li>
+                  <div style={{ paddingLeft: "1.4rem" }}>
+                    <li> GMAT : 650 and above</li>
+                  </div>
                 </ul>
               )}
             </div>
 
             <div className="howApllycard Estimate">
               <h3>Intakes</h3>
-              <ul>
-                <li>
-                  Fall - September of every year Spring - January of every year
-                </li>
-                <li> Spring - January of every year</li>
-                <li>Summer - May of every year</li>
-              </ul>
+
+              <div className="intakesCOntainer">
+                <div className="intakesCard">
+                  <div className="imageContainer">
+                    <img
+                      src="https://strapi.orientspectra.com/uploads/fall_1c6257491c.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div className="intackText">
+                    <b>Fall</b>
+                    <p> September of every year</p>
+                  </div>
+                </div>
+                <div className="intakesCard">
+                  <div className="imageContainer">
+                    <img
+                      src="https://strapi.orientspectra.com/uploads/67de7faf_5f92_402d_929e_75686635e0d9_a95c028b0f.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div className="intackText">
+                    <b>Spring</b>
+                    <p> January of every year</p>
+                  </div>
+                </div>
+                <div className="intakesCard">
+                  <div className="imageContainer">
+                    <img
+                      src="https://strapi.orientspectra.com/uploads/Summer_6b20b10000.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div className="intackText">
+                    <b>Summer</b>
+                    <p> May of every year</p>
+                  </div>
+                </div>
+              </div>
             </div>
+
             <div className="PopularProgram_card">
               <h2>Popular Programs</h2>
               <div className="program-card">
                 {Programdata?.map((item, index) => (
                   <div key={index} className="prgram-item-container">
-                    <div className="icon_image">
+                    {/* <div className="icon_image">
                       <img src={item.icon} alt="" />
-                    </div>
+                    </div> */}
                     <p className="program-name"> {item.text}</p>
                   </div>
                 ))}
               </div>
             </div>
           </div>
+
           <div className="Popular_Universities-container">
             <h1>Popular Universities</h1>
             <div className="Popular_Universities">
