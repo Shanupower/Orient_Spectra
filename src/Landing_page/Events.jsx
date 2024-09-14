@@ -70,7 +70,7 @@ const Events = () => {
                 </div>
                 <div className="event_bottomContent">
                   <h4 className="explaintag">{e?.attributes?.Headline}</h4>
-                  <span>{e?.attributes?.Shortdescription}</span>
+                  {/* <span>{e?.attributes?.Shortdescription}</span> */}
                 </div>
               </div>
               <div className="eventsRigtImage">
@@ -83,8 +83,8 @@ const Events = () => {
             </div>
           </SwiperSlide>
         ))}
-
-        {/* <motion.div
+      </Swiper>
+      {/* <motion.div
           className="event_leftSide"
           initial="hidden"
           whileInView="visible"
@@ -118,8 +118,6 @@ const Events = () => {
             />
           </div>
         </motion.div> */}
-      </Swiper>
-
       <motion.div
         className="event_rightSide"
         initial="hidden"

@@ -5,36 +5,25 @@ import { useState } from "react";
 
 const Programdata = [
   {
-    icon: "https://strapi.orientspectra.com/uploads/CSE_7598ac7df1.svg",
-    text: "Computer Science Engineering",
+    text: "MSc in Artificial Intelligence & Machine Learning",
   },
   {
-    icon: "https://strapi.orientspectra.com/uploads/Software_Engineering_adb32cb9ba.svg",
-    text: "Software Engineering",
+    text: "MSc Environmental Technology",
   },
   {
-    icon: "https://strapi.orientspectra.com/uploads/Aerospace_75fdb708d2.svg",
-    text: "Aerospace Engineering",
+    text: "MSc in Public Health",
   },
   {
-    icon: "https://strapi.orientspectra.com/uploads/Mechanical_Engineering_91b8797d38.svg",
-    text: "Mechanical Engineering",
+    text: "MSc in Project Management",
   },
   {
-    icon: "https://strapi.orientspectra.com/uploads/Data_Science_3725376790.svg",
-    text: "Data Science",
+    text: "MSc in Aeronautical Engineering",
   },
   {
-    icon: "https://strapi.orientspectra.com/uploads/Information_technology_fc6638b4a8.svg",
-    text: "Information Technology",
+    text: "MSc in Management and Marketing",
   },
   {
-    icon: "https://strapi.orientspectra.com/uploads/Cyber_Security_6781432414.svg",
-    text: "Cyber Security",
-  },
-  {
-    icon: "https://strapi.orientspectra.com/uploads/Pharmaceutical_Sciences_df07155bdd.svg",
-    text: "Pharmaceutical Sciences",
+    text: "MSc in Business Analytics",
   },
 ];
 const Admissiontimeline = () => {
@@ -93,20 +82,50 @@ const Admissiontimeline = () => {
 
             <div className="howApllycard Estimate">
               <h3>Intakes</h3>
-              <ul>
-                <li>Spring Intake (February)</li>
-                <li> Spring - January of every year</li>
-                <li>Fall Intake (September)</li>
-              </ul>
+              <div className="intakesCOntainer">
+                <div className="intakesCard">
+                  <div className="imageContainer">
+                    <img
+                      src="https://strapi.orientspectra.com/uploads/fall_1c6257491c.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div className="intackText">
+                    <b>Fall</b>
+                    <p> September of every year</p>
+                  </div>
+                </div>
+                <div className="intakesCard">
+                  <div className="imageContainer">
+                    <img
+                      src="https://strapi.orientspectra.com/uploads/67de7faf_5f92_402d_929e_75686635e0d9_a95c028b0f.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div className="intackText">
+                    <b>Spring</b>
+                    <p> January of every year</p>
+                  </div>
+                </div>
+                <div className="intakesCard">
+                  <div className="imageContainer">
+                    <img
+                      src="https://strapi.orientspectra.com/uploads/Summer_6b20b10000.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div className="intackText">
+                    <b>Summer</b>
+                    <p> May of every year</p>
+                  </div>
+                </div>
+              </div>
             </div>
             <div className="PopularProgram_card">
               <h2>Popular Programs</h2>
               <div className="program-card">
                 {Programdata?.map((item, index) => (
                   <div key={index} className="prgram-item-container">
-                    <div className="icon_image">
-                      <img src={item.icon} alt="" />
-                    </div>
                     <p className="program-name"> {item.text}</p>
                   </div>
                 ))}
