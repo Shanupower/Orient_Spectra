@@ -59,7 +59,7 @@ const AdmitionRequired = () => {
       <div className="admissioncard-sticy">
         <h1>
           Admission Requirements for <br />
-          <b>France Study Abroad</b>
+          <b>Study Abroad in France</b>
           <p>
             Here are the major requirements to study in France which we need to
             ensure while applying to a France university

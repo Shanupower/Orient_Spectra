@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const UnitedState = () => {
   return (
     <div className="unitedstate-continar section">
-      <h1>Why United States</h1>
+      <h1>Why Canada</h1>
 
       <div className="aboutstateCard">
         <div className="unitedImge">

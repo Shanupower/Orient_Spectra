@@ -72,7 +72,7 @@ const AdmitionRequired = () => {
       <div className="admissioncard-sticy">
         <h1>
           Admission Requirements for <br />
-          <b>United States Study Abroad</b>
+          <b>Study Abroad in Germany</b>
         </h1>
       </div>
 

@@ -5,7 +5,7 @@ import { Univercitydata } from "../../../Container/data/Universities";
 const Univercity = () => {
   return (
     <div className="section univercity-card">
-      <h1>Find Your Dream University to study in USA</h1>
+      <h1>Find Your Dream University to <span>Study in France</span></h1>
       <div className="univercity-section-card">
         {Univercitydata.map((item) => (
           <div className="univercityList" key={item}>

@@ -36,67 +36,62 @@ const StudyCountry = [
   {
     name: "USA",
     image: Us,
-    link: "/country/Usa",
-  },
-  {
-    name: "Canada",
-    image: Canada,
-    link: "/country/Canada",
-  },
-  {
-    name: "Australia",
-    image: Australia,
-    link: "/country/Australia",
+    link: "/country/study-in-usa",
   },
   {
     name: "United Kingdom",
     image: Uk,
-    link: "/country/UK",
-  },
-  {
-    name: "Dubai",
-    image: Dubai,
-    link: "/country/Dubai",
-  },
-  {
-    name: "Sweden",
-    image: Sweden,
-    link: "/country/Sweden",
-  },
-  {
-    name: "Poland",
-    image: Poland,
-    link: "/country/Poland",
-  },
-  {
-    name: "Switzerland",
-    image: Switzerland,
-    link: "/country/Switzerland",
-  },
-  {
-    name: "Malta",
-    image: Malta,
-    link: "/country/Malta",
-  },
-  {
-    name: "Singapore",
-    image: Singapore,
-    link: "/country/Singapore",
-  },
-  {
-    name: "Ireland",
-    image: Ireland,
-    link: "/country/Ireland",
+    link: "/country/study-in-uk",
   },
   {
     name: "Germany",
     image: Germany,
-    link: "/country/Germany",
+    link: "/country/study-in-germany",
   },
   {
     name: "France",
     image: France,
-    link: "/country/France",
+    link: "/country/study-in-france",
+  },
+  {
+    name: "Australia",
+    image: Australia,
+    link: "/country/study-in-australia",
+  },
+  {
+    name: "Canada",
+    image: Canada,
+    link: "/country/study-in-canada",
+  },
+  {
+    name: "Sweden",
+    image: Sweden,
+    link: "/country/study-in-sweden",
+  },
+  {
+    name: "Switzerland",
+    image: Switzerland,
+    link: "/country/study-in-switzerland",
+  },
+  {
+    name: "Singapore",
+    image: Singapore,
+    link: "/country/study-in-singapore",
+  },
+  {
+    name: "Ireland",
+    image: Ireland,
+    link: "/country/study-in-ireland",
+  },
+  {
+    name: "Poland",
+    image: Poland,
+    link: "/country/study-in-poland",
+  },
+  {
+    name: "Malta",
+    image: Malta,
+    link: "/country/study-in-malta",
   },
 ];
 
@@ -282,7 +277,7 @@ const Menuitem = [
         key: "0",
         label: (
           <Link style={{ textDecoration: "none" }} to="/study-overseas">
-            Study Overseas
+           Countries
           </Link>
         ),
       },
@@ -631,7 +626,7 @@ const Navbar = ({
                 onMouseOver={handleMouseOver}
                 className={`DailyNews ${activeNavbar && "DalyText"}`}
               >
-                Study Overseas
+                Countries
               </div>
 
               <div

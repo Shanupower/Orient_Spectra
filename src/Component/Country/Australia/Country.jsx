@@ -9,6 +9,8 @@ import Univercity from "./Univercity";
 import CountryFaq from "../../Common/Contryfaq";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
+import StudyAbroad from "../../../Landing_page/StudyAbroad";
+
 const getItems = (panelStyle) => [
   {
     key: "1",
@@ -105,7 +107,8 @@ const AustraliaCountry = () => {
       <TrendingCourse />
       <AdmitionRequired />
       <Admissiontimeline />
-      <Personalized />
+      <StudyAbroad />
+      {/* <Personalized /> */}
       <CountryFaq getItems={getItems} />
     </>
   );

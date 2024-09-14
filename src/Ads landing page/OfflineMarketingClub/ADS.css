@@ -1,0 +1,601 @@
+.Leadgeneration-container {
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://strapi.orientspectra.com/uploads/london_city_skyline_scaled_1_b27deb558e.jpg");
+    background-blend-mode: darken;
+    background-color: #00000094;
+    background-size: cover;
+    gap: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 3rem;
+  }
+  .Leadgeneration-content {
+    width: 50%;
+  }
+  .Leadgeneration-content > h1{
+    font-size: 40px;
+    font-weight: 600;
+    color: white;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+  }
+  .Leadgeneration-content > p {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.3;
+    color: var(--text-color-white);
+    margin-bottom: 1rem;
+  }
+  .Leadgeneration-content > ul > li {
+    color: white;
+    margin-left: 20px;
+    font-size: 20px;
+  }
+  .form-container {
+    width: 40%;
+    background-color: white;
+    padding: 2rem;
+  }
+  .form-container > p {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--text-color-black);
+    padding: 1rem;
+    text-align: center;
+  }
+  .form-container > span {
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--text-color-black);
+  }
+  .form-container-button {
+    width: 100%;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: var(--brand-color);
+    border: none;
+    color: white;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+  .text-feild-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .form-group {
+    margin-bottom: 1rem; /* Space between form fields */
+    position: relative; /* Ensure error message is positioned relative to this container */
+    width: 45%;
+}
+  .input-field {
+    width:100%;
+    font-size:15px;
+    padding: 10px;
+  }
+  .input-field1{
+    padding: 1rem;
+  }
+  .input-field2 {
+    font-size:15px;
+    width: 90%;
+    padding: 10px;
+  }
+  .text-area_container {
+    width: 100%;
+    display: block;
+  }
+  .text_area {
+    padding: 10px;
+    font-size:15px;
+  }
+ 
+  .MargueeImage {
+    margin-block: 2rem 3rem;
+  }
+  .USA_image_container {
+    margin-right: 6rem;
+  }
+  .USA_image_container > img {
+    filter: grayscale(100%);
+    object-fit: contain;
+  }
+  .USA_image_container {
+    width: 180px;
+  }
+  .Acedemic_cantainer__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url("https://strapi.orientspectra.com/uploads/Banner_Final_c475bb6fa7.jpg");
+    background-repeat: repeat;
+    background-size: cover;
+    padding: 2rem;
+    border-radius: 20px;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+  }
+.Acedemic_cantainer__header > p {
+  font-size: 35px;
+  color: var(--text-color-white);
+  font-weight: 500;
+  margin-left: 20px;
+}
+.discovermoreButton {
+  margin-top: 1rem;
+}
+.Event_container {
+  padding: 2rem 6%;
+}
+.Event_content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+  flex-wrap: wrap;
+}
+.Event_details {
+  width: 48%;
+}
+.Event_details > h1 {
+  font-size: 3rem;
+  color: #306398;
+  margin-bottom: 2rem;
+}
+.Event_details > h1 > span {
+  color: #e37d25;
+}
+.Event_details > p > span {
+  color: #306398;
+  font-weight: 600;
+}
+.Event_details > p {
+  color: var(--text-color-black);
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+.Image_container{
+  width: 40%;
+}
+.Image_container > img {
+  object-fit: cover;
+  border-radius: 20px;
+  border: 2px solid var(--text-color-gray);
+  width: 90%;
+  height: 80%;
+  align-items: end;
+}
+.whyOs-container {
+  padding: 2rem 6%;
+  background-image: url("https://strapi.orientspectra.com/uploads/testimonial_map_45da579353.png");
+}
+.whyOs-container > h1{
+ font-size: 3.3rem;
+ text-align: center;
+ color: #306398;
+ font-weight: 600;
+ margin-block: 2rem;
+}
+.whyOs-container > h1 > span{
+  color: var(--brand-color);
+  font-weight: 600;
+ }
+ .WhyOsBox-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 2rem;
+ }
+ .WhyOsBox {
+  width: 30%;
+  background-color: #ff7300;
+  border-radius: 20px;
+  padding: 2rem;
+ }
+ .WhyOsBox > img {
+  display: block;
+  width: 90px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 90px;
+ }
+ .WhyOsBox > h1 {
+  font-size: 22px;
+  color: white;
+  text-align: center;
+  margin-bottom: 15px;
+ }
+ .WhyOsBox > p {
+  font-size: 20px;
+  color: white;
+  text-align: center;
+ }
+.Why-should-attend {
+  background-image: url("https://strapi.orientspectra.com/uploads/testimonial_map_45da579353.png");
+  background-blend-mode: multiply;
+  color: white;
+  background-color: #134b8a ;
+  background-size: cover;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.Why-should-attend-content {
+  width: 50%;
+  padding: 3rem 0 2rem 7rem;
+
+}
+.Why-should-attend-content > h1 {
+  font-size: 3rem;
+  color: var(--brand-color);
+  font-weight: 700;
+}
+.Why-should-attend-content > p {
+  margin-top: 2%;
+  font-size: 22px;
+  margin-bottom: 2%;
+  /* border-style: solid; 
+  border-width: 0 0 0 2px; */
+  
+}
+.Benifits_Box {
+  width: 100%;
+  display: flex;
+  gap: 2%;
+  padding: 5px;
+}
+.Benifits_Box > img {
+  width: 30px;
+  object-fit: contain;
+}
+.Benifits_Box > p{
+  font-size: 22px;
+  text-align: left;
+  font-weight: 500;
+}
+.Why-should-attend-Image{
+  object-fit: contain;
+  width: 45%;
+  padding-right: 2px;
+}
+.Testimonial_section {
+  padding: 2rem 6%;
+}
+.Testimonial_Box_Container {
+  display: flex;
+  gap: 4rem;
+  margin-right: 1rem;
+  height: auto;
+  padding: 3rem;
+}
+.Testimonial_Box {
+  flex: 0 0 30%; /* Ensures the width is 30% and doesn't grow/shrink */
+  height: auto;
+  max-width: 400px;
+  background-color: white;
+  box-shadow: 2px 2px 12px rgba(105, 105, 105, 0.3);
+  /* border: 1px solid; */
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-sizing: border-box; /* Include padding in the element's width and height */
+  overflow: hidden; /* Prevent overflow in case of long text */
+}
+.Testimonial_Box > p {
+  font-size: 20px;
+  white-space: normal;
+  word-wrap: break-word;
+  line-height: 1.5;
+  margin: 0;
+}
+.Testimonial_Box > h1 {
+  text-align: end;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--brand-color);
+  margin-top: 1rem;
+}
+.quoteImge {
+  width: 50px;
+  height: 40px;
+  margin-bottom: 2rem;
+}
+.quoteImge > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+.Thank_you_container {
+  background-color: rgba(31, 122, 255, 1);
+  padding: 10rem;
+}
+.Thank_you_container > img {
+  width: 30%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.Thank_you_container > h1 {
+  font-size: 6rem;
+  text-align: center;
+  color: white;
+}
+.Thank_you_container > p{
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.Thank_you_link > h3 {
+  font-size: 1.5rem;
+  text-align: center;
+  color: white;
+  text-decoration: underline;
+}
+
+
+@media (max-width:1024px) {
+  .Leadgeneration-container {
+    padding: 2rem;
+    height: fit-content;
+  }
+  .Leadgeneration-content > h1 {
+    font-size: 25px;
+  }
+  .Leadgeneration-content > p {
+    font-size: 15px;
+  }
+  .Leadgeneration-content > ul > li {
+    margin-left: 12px;
+    font-size: 15px;
+  }
+  .form-container {
+    width: 45%;
+    margin-top: 10%;
+  }
+  .input-field {
+    font-size:13px;
+    width: 100%;
+    padding: 10px;
+  }
+  .discoverButton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 4.2rem;
+  }
+  .Acedemic_cantainer__header > p {
+    font-size: 24px;
+    color: var(--text-color-white);
+    background-size: contain;
+  }
+  .Event_details > h1 {
+    font-size: 30px;
+  }
+  .Event_details > p {
+    font-size: 18px;
+  }
+  .Why-should-attend {
+    padding: 3rem;
+    background-size: contain;
+  }
+  .Why-should-attend-content {
+    width: 100%;
+    padding: 2rem;
+  }
+  .Why-should-attend-content > h1 {
+    font-size: 35px;
+  }
+  .Why-should-attend-content > p {
+    margin-top: 2%;
+    font-size: 18px;
+  }
+  .Benifits_Box {
+    width: 100%;
+    display: flex;
+    padding: 0.5rem;
+    gap: 2%;
+  }
+  .Benifits_Box > img {
+    width: 22px;
+    object-fit: contain;
+  }
+  .Benifits_Box > p{
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .Why-should-attend-Image {
+    display: none;
+  }
+
+  .whyOs-container > h1{
+   font-size: 38px;
+  }
+   .WhyOsBox {
+    padding: 1.5rem;
+   }
+   .WhyOsBox > img {
+    display: block;
+    width: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 70px;
+   }
+   .WhyOsBox > h1 {
+    font-size: 22px;
+   }
+   .WhyOsBox > p {
+    font-size: 20px;
+   }
+
+  .Thank_you_container > h1 {
+    font-size: 2.5rem;
+  }
+  .Thank_you_container > p{
+    font-size: 1rem;
+  }
+  .Thank_you_link > h3 {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width:986px) {
+  .Leadgeneration-container,
+    .Leadgeneration-content {
+      width: 100%;
+      padding: 5rem 1rem 1rem 1rem;
+      height: fit-content;
+    }
+    .Leadgeneration-content > h1 {
+      font-size: 20px;
+      margin-bottom: 2rem;
+    }
+    .Leadgeneration-content > p {
+      font-size: 15px;
+      margin-bottom: 0.5rem;
+    }
+    .form-container {
+      display: block;
+      width: 100%;
+      gap:1rem;
+      padding: 1rem;
+    }
+    .form-group {
+      width:100%;
+      margin-bottom: 0;
+    }
+    .input-field {
+      font-size:13px;
+      width: 100%;
+      padding: 10px;
+    }
+    .MargueeImage {
+      margin-block: 2rem 3rem;
+    }
+    .Acedemic_cantainer__header {
+      align-items: center;
+      flex-direction: column;
+      background-repeat: repeat;
+      background-size: cover;
+    }
+    .Acedemic_cantainer__header > p {
+      font-size: 26px;
+      color: var(--text-color-white);
+      font-weight: 550;
+      margin-top: 20px;
+      text-align: center;
+    }
+    .Event_details{
+      width: 100%;
+    }
+    .Event_details > h1 {
+      font-size: 30px;
+    }
+    .Event_details > p {
+      font-size: 18px;
+    }
+    .Image_container{
+      width: 100%;
+    }
+    .Image_container > img {
+      object-fit: cover;
+      border-radius: 20px;
+      border: 2px solid var(--text-color-gray);
+    }
+    .Why-should-attend {
+      padding: 2rem;
+    }
+    .Why-should-attend-content {
+      width: 100%;
+      padding: 0;
+    }
+    .Why-should-attend-content > h1 {
+      font-size: 30px;
+    }
+    .Why-should-attend-content > p {
+      margin-top: 2%;
+      font-size: 18px;
+    }
+    .Benifits_Box {
+      width: 100%;
+      display: flex;
+      padding: 0.5rem;
+      gap: 5%;
+    }
+    .Benifits_Box > img {
+      width: 22px;
+      object-fit: contain;
+    }
+    .Benifits_Box > p{
+      font-size: 16px;
+      font-weight: 400;
+    }
+    .Why-should-attend-Image {
+      display: none;
+    }
+    .whyOs-container > h1{
+      font-size: 32px;
+      text-align: left;
+      line-height: 1.2;
+     }
+      .WhyOsBox-container {
+       padding: 1rem;
+      }
+      .WhyOsBox {
+       width: 100%;
+       padding: 1rem;
+      }
+      .WhyOsBox > h1 {
+       font-size: 20px;
+      }
+      .WhyOsBox > p {
+       font-size: 18px;
+      }
+
+
+    .Leadgeneration-content > ul > li {
+      margin-left: 12px;
+      font-size: 15px;
+    }
+    .Thank_you_container {
+      padding: 8rem 3rem 8rem 3rem;
+    }
+    .Thank_you_container > img {
+      width: 50%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .Thank_you_container > h1 {
+      font-size: 2.5rem;
+    }
+    .Thank_you_container > p{
+      font-size: 1rem;
+    }
+    .Thank_you_link > h3 {
+      font-size: 0.8rem;
+    }
+    .Testimonial_Box {
+      flex: 0 0 30%; /* Ensures the width is 30% and doesn't grow/shrink */
+      max-width: 330px;
+    }
+    .Testimonial_Box > p {
+      font-size: 18px;
+    }
+}
+
+@media (max-width: 1280px) {
+  .Benifits_Box > p{
+    font-size: 18px;
+  }
+}

@@ -34,6 +34,8 @@ import ThankYou from "./Ads landing page/ThankYou";
 import UK_Jan_2025 from "./Ads landing page/UK_Januuary_2025/UK_Jan_2025";
 import Privacy_Policy from "./Component/Privacy_Policy/Privacy_Policy";
 import USA_SEPTEMBER_FAIR_2024 from "./Ads landing page/USA_SEPT_FAIR_2024/USA_SEPTEMBER_FAIR_2024";
+import Europe_Jan_2025 from "./Ads landing page/Europe_education_fair_2024/Europe_Jan_2025";
+import Offline_Marketing_Club from "./Ads landing page/OfflineMarketingClub/Offline_Marketing_Club";
 
 function App() {
   const [openWhatwedo, setWhatwedoOpen] = useState(false);
@@ -85,20 +87,20 @@ function App() {
       />
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/country/Usa" element={<USACountry />} />
-        <Route path="/country/UK" element={<UKCountry />} />
+        <Route path="/country/study-in-usa" element={<USACountry />} />
+        <Route path="/country/study-in-uk" element={<UKCountry />} />
 
-        <Route path="/country/Australia" element={<AustraliaCountry />} />
-        <Route path="/country/Canada" element={<CanadaCountry />} />
-        <Route path="/country/France" element={<FranceCountry />} />
-        <Route path="/country/Germany" element={<GermanyCountry />} />
-        <Route path="/country/Ireland" element={<IrelandCountry />} />
-        <Route path="/country/Malta" element={<MaltaCountry />} />
-        <Route path="/country/Poland" element={<PolandCountry />} />
-        <Route path="/country/Singapore" element={<SingaporeCountry />} />
-        <Route path="/country/Switzerland" element={<SwitzerlandCountry />} />
+        <Route path="/country/study-in-australia" element={<AustraliaCountry />} />
+        <Route path="/country/study-in-canada" element={<CanadaCountry />} />
+        <Route path="/country/study-in-france" element={<FranceCountry />} />
+        <Route path="/country/study-in-germany" element={<GermanyCountry />} />
+        <Route path="/country/study-in-ireland" element={<IrelandCountry />} />
+        <Route path="/country/study-in-malta" element={<MaltaCountry />} />
+        <Route path="/country/study-in-poland" element={<PolandCountry />} />
+        <Route path="/country/study-in-singapore" element={<SingaporeCountry />} />
+        <Route path="/country/study-in-switzerland" element={<SwitzerlandCountry />} />
         <Route path="/country/Dubai" element={<SwitzerlandCountry />} />
-        <Route path="/country/Sweden" element={<SwitzerlandCountry />} />
+        <Route path="/country/study-in-sweden" element={<SwitzerlandCountry />} />
 
         <Route path="/about" element={<About />} />
         <Route path="/blogs" element={<Blogs />} />
@@ -111,15 +113,16 @@ function App() {
         <Route path="/blog" element={<SelectedBlog />}></Route>
         <Route path="/blog-content/:id" element={<BlogBody />} />
         <Route path="/selected-blog" element={<MoreBlogContent />} />
-        <Route path="/offline-marketing-club" />
 
         {/* Start your Journey */}
         <Route path="/start-your-journey" element={<StartYourJourney />} />
         <Route path="*" element={<Error />} />
+        <Route path="/offline-marketing-club" element= {<Offline_Marketing_Club/>} />
 
         <Route path="/uk-november-2024" element={<UK_EDU_FAIR />} />
         <Route path="/uk-january-2025" element={<UK_Jan_2025 />} />
         <Route path="/usa-september-fair-2024" element={<USA_SEPTEMBER_FAIR_2024 />} />
+        <Route path="/europe-education-fair-2024" element={<Europe_Jan_2025 />} />
         <Route path="/thank-you" element={<ThankYou />} />
         <Route path="/privacy-policy" element={<Privacy_Policy />} />
       </Routes>

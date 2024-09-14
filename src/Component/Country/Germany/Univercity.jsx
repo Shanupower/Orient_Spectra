@@ -36,7 +36,7 @@ const universityData = [
 const Univercity = () => {
   return (
     <div className="section univercity-card">
-      <h1>Top Private Universities to Study in Germany </h1>
+      <h1>Top Private Universities to <span>Study in Germany </span></h1>
       <Marquee speed={200} pauseOnHover>
         <div className="univercity-section-card">
           {universityData.map((item) => (
