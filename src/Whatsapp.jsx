@@ -2,7 +2,7 @@ import"./index.css";
 
 const WhatsApp =() =>{
 
-    const phoneNumber = "+916305077358";
+    const phoneNumber = "+919052891111";
   
     const handleClick = () => {
       const url = `https://wa.me/${phoneNumber}`;
