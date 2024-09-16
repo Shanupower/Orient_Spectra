@@ -184,7 +184,7 @@ const Discovery = () => {
           {/* <Marquee className="MargueeText" speed={100}> Start Your Abroad Study Journey. </Marquee> */}
         </div>
       </div>
-      <Divider />
+      {/* <Divider /> */}
     </div>
   );
 };

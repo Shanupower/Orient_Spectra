@@ -61,7 +61,7 @@ const LandingPage = () => {
     <>
       <Hero blog={blog} event={event} />
       <Discovery />
-      <Acedemic />
+      {/* <Acedemic /> */}
       <Events />
       <Country/>
       <Explore />

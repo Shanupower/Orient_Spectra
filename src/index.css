@@ -63,3 +63,35 @@ html {
 .section2 {
   padding: 1rem 6%;
 }
+
+.WhatsApp {
+  /* display: block; */
+  position: fixed;
+  bottom:20px;
+  z-index: 6;
+  right: 10px;
+}
+.WhatsApp > img {
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px ) and (max-width: 912px ) {
+  .WhatsApp > img {
+    bottom: 35px !important;
+    right: 15px;
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* For extra small screens */
+@media (max-width: 576px) {
+  .WhatsApp > img {
+    margin-bottom: 50px !important;
+    right: 10px;
+    width: 60px;
+    height: 60px;
+  }
+}

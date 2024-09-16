@@ -36,6 +36,7 @@ import Privacy_Policy from "./Component/Privacy_Policy/Privacy_Policy";
 import USA_SEPTEMBER_FAIR_2024 from "./Ads landing page/USA_SEPT_FAIR_2024/USA_SEPTEMBER_FAIR_2024";
 import Europe_Jan_2025 from "./Ads landing page/Europe_education_fair_2024/Europe_Jan_2025";
 import Offline_Marketing_Club from "./Ads landing page/OfflineMarketingClub/Offline_Marketing_Club";
+import WhatsApp from "./Whatsapp";
 
 function App() {
   const [openWhatwedo, setWhatwedoOpen] = useState(false);
@@ -127,6 +128,7 @@ function App() {
         <Route path="/thank-you" element={<ThankYou />} />
         <Route path="/privacy-policy" element={<Privacy_Policy />} />
       </Routes>
+      <WhatsApp />
       <Footer />
     </>
   );

@@ -134,7 +134,7 @@ const Hero = ({ blog, event }) => {
         </Carousel>
       </div>
       {/* Pop up Button */}
-      <div className="popUpBotton">
+      {/* <div className="popUpBotton">
         <div className="menu-container">
           <div className="menu-button" onClick={toggleMenu}>
             <AddIcon
@@ -154,7 +154,7 @@ const Hero = ({ blog, event }) => {
             </a>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
