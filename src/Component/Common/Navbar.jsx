@@ -276,7 +276,7 @@ const Menuitem = [
       {
         key: "0",
         label: (
-          <Link style={{ textDecoration: "none" }} to="/study-overseas">
+          <Link style={{ textDecoration: "none" }} to="/countries">
            Countries
           </Link>
         ),
@@ -554,7 +554,7 @@ const Navbar = ({
   };
 
   const hanldeCloseSubheader2 = () => {
-    window.location.href = "/study-overseas";
+    window.location.href = "/countries";
   };
 
   const handlegetTuchwithus = () => {

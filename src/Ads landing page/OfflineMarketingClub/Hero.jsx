@@ -1,12 +1,15 @@
 import { useEffect, useState } from "react";
 import "./ADS.css";
 import axios from "axios";
+import { useLocation } from "react-router-dom";
 // import emailjs from "emailjs-com";
 
 const Hero = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const location =useLocation();
 
   const [formData, setFormData] = useState({
     First_name: "",
@@ -15,7 +18,7 @@ const Hero = () => {
     Mobile: "",
     Intake_year: "",
     Intake_month: "",
-    Source:"/uk-january-2025",
+    Source: location.pathname,
   });
 
   const [errors, setErrors] = useState({});
@@ -59,7 +62,7 @@ const Hero = () => {
           Mobile: "",
           Intake_year: "",
           Intake_month: "",
-          Source:"",
+          Source: location.pathname,
         });
       }
     } catch (errors) {
@@ -143,7 +146,7 @@ const Hero = () => {
       <div className="form-container">
         <p>Fill out the form below to register now:</p>
         <form onSubmit={handleSubmitValidation}>
-          <div className="text-feild-container">
+          <div className="text-container">
             <div className="form-group">
               <input
                 type="text"

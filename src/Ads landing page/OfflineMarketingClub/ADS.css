@@ -62,7 +62,7 @@
     margin-top: 20px;
     cursor: pointer;
   }
-  .text-feild-container {
+  .text-container {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
@@ -174,7 +174,9 @@
 }
 .whyOs-container {
   padding: 2rem 6%;
-  background-image: url("https://strapi.orientspectra.com/uploads/testimonial_map_45da579353.png");
+  /* background-image: url("https://strapi.orientspectra.com/uploads/testimonial_map_45da579353.png"); */
+  background-image: url("https://strapi.orientspectra.com/uploads/1682_x_623_7608d4dedc.jpg");
+  background-size: cover;
 }
 .whyOs-container > h1{
  font-size: 3.3rem;
