@@ -11,13 +11,10 @@ const Blogs = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `https://strapi.orientspectra.com/api/blogs/?populate=*&fields[0]=Title&fields[1]=Date&fields[2]=Short_Description `
+          `https://strapi.orientspectra.com/api/blogs?sort[0]=Date:desc&populate=*&fields[0]=Title&fields[1]=Date&fields[2]=Short_Description `
         );
         if (response?.status === 200) {
-          const sortedData = response.data.data.sort(
-            (a, b) => new Date(b.attributes.Date) - new Date(a.attributes.Date)
-          );
-          setData(sortedData);
+          setData(response.data.data);
         }
       } catch (error) {
         console.log("status is:", response?.status);

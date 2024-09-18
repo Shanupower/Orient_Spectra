@@ -4,12 +4,12 @@ import CircleArrow from "../Common/CircleArrow";
 import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
 import "./blog.css";
+import axios from "axios";
 
 const MoreBlog = ({ data }) => {
   const [currentPage, setCurrentPage] = useState(1);
+  const [pageCount, setPageCount] = useState(null);
   const itemsPerPage = 6;
-  const pageCount = Math.ceil(data.length / itemsPerPage);
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -21,6 +21,27 @@ const MoreBlog = ({ data }) => {
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
   );
+
+  const [blogDatas, setBlogData] = useState([]);
+  const fetchData = async () => {
+    try {
+      const response = await axios.get(
+        // `https://strapi.orientspectra.com/api/blogs?sort[0]=Date:desc&populate=*&fields[0]=Title&fields[1]=Short_Description `
+        `https://strapi.orientspectra.com/api/blogs?populate=*&fields[0]=Title&fields[1]=Short_Description&pagination[page]=${currentPage}&pagination[pageSize]=6`
+      );
+      console.log(response.data.meta.pagination.pageCount);
+
+      if (response?.status === 200) {
+        setBlogData(response.data.data);
+        setPageCount(response.data.meta.pagination.pageCount);
+      }
+    } catch (error) {
+      console.log("ERROR OCCURED WHILE FETCHING:", error.message);
+    }
+  };
+  useEffect(() => {
+    fetchData();
+  }, [currentPage]);
 
   return (
     <div className="section moreBlog-ccontainer">
@@ -36,7 +57,7 @@ const MoreBlog = ({ data }) => {
         </Stack>
       </div>
       <div className="blog-section-card">
-        {currentData.map((item) => (
+        {blogDatas.map((item) => (
           <div className="blogcontainer1" key={item?.id}>
             <div className="blogcard1">
               <h3>{item?.attributes.Title}</h3>
