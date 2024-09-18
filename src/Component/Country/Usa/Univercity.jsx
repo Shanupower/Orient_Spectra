@@ -34,6 +34,7 @@ import Marquee from "react-fast-marquee";
 
 const universityData = [
   {
+    id:1,
     img: Img1,
     universityName: "Concordia University Chicago",
     ielts: "6.0",
@@ -41,6 +42,7 @@ const universityData = [
     backlogs: "10",
   },
   {
+    id:2,
     img: Img2,
     universityName: "Clark University",
     ielts: "6.0",
@@ -48,6 +50,7 @@ const universityData = [
     backlogs: "0",
   },
   {
+    id:3,
     img: Img3,
     universityName: "Saint Martin's University",
     ielts: "6.0",
@@ -55,6 +58,7 @@ const universityData = [
     backlogs: "0",
   },
   {
+    id:4,
     img: Img4,
     universityName: "Christian Brothers University",
     ielts: "6.0",
@@ -62,6 +66,7 @@ const universityData = [
     backlogs: "0",
   },
   {
+    id:5,
     img: Img5,
     universityName: "DePaul University",
     ielts: "6.5",
@@ -69,6 +74,7 @@ const universityData = [
     backlogs: "0",
   },
   {
+    id:6,
     img: Img6,
     universityName: "Drexel University",
     ielts: "6.0",
@@ -76,6 +82,7 @@ const universityData = [
     backlogs: "0",
   },
   {
+    id:7,
     img: Img7,
     universityName: "Elmhurst University",
     ielts: "6.5",
@@ -83,6 +90,7 @@ const universityData = [
     backlogs: "0",
   },
   {
+    id:8,
     img: Img8,
     universityName: "Florida Atlantic University",
     ielts: "6.0",
@@ -90,6 +98,7 @@ const universityData = [
     backlogs: "9",
   },
   {
+    id:9,
     img: Img9,
     universityName: "Franklin University",
     ielts: "6.5",
@@ -97,6 +106,7 @@ const universityData = [
     backlogs: "10",
   },
   {
+    id:10,
     img: Img10,
     universityName: "Golden Gate University",
     ielts: "6.5",
@@ -104,6 +114,7 @@ const universityData = [
     backlogs: "10",
   },
   {
+    id:11,
     img: Img11,
     universityName: "Lawrence Technological University",
     ielts: "6.0",
@@ -111,6 +122,7 @@ const universityData = [
     backlogs: "0",
   },
   {
+    id:12,
     img: Img12,
     universityName: "Miami University",
     ielts: "6.5",
@@ -118,6 +130,7 @@ const universityData = [
     backlogs: "0",
   },
   {
+    id:13,
     img: Img13,
     universityName: "Middle Tennessee University",
     ielts: "5.5",
@@ -125,6 +138,7 @@ const universityData = [
     backlogs: "0",
   },
   {
+    id:14,
     img: Img14,
     universityName: "Rowan University",
     ielts: "6.0",
@@ -132,6 +146,7 @@ const universityData = [
     backlogs: "0",
   },
   {
+    id:15,
     img: Img15,
     universityName: "Roosevelt University",
     ielts: "6.5",
@@ -139,6 +154,7 @@ const universityData = [
     backlogs: "0",
   },
   {
+    id:16,
     img: Img16,
     universityName: "Arkansas State University",
     ielts: "6.5",
@@ -146,6 +162,7 @@ const universityData = [
     backlogs: "0",
   },
   {
+    id:17,
     img: Img17,
     universityName: "Dallas Baptist University",
     ielts: "6.0",
@@ -153,6 +170,7 @@ const universityData = [
     backlogs: "10",
   },
   {
+    id:18,
     img: Img18,
     universityName: "Southern New Hampshire University",
     ielts: "6.0",
@@ -160,6 +178,7 @@ const universityData = [
     backlogs: "0",
   },
   {
+    id:19,
     img: Img19,
     universityName: "Saint Louis University",
     ielts: "6.5",
@@ -167,6 +186,7 @@ const universityData = [
     backlogs: "10",
   },
   {
+    id:20,
     img: Img20,
     universityName: "Texas State University",
     ielts: "6.5",
@@ -174,6 +194,7 @@ const universityData = [
     backlogs: "10",
   },
   {
+    id:21,
     img: Img21,
     universityName: "The University of Akron",
     ielts: "6.0",
@@ -181,6 +202,7 @@ const universityData = [
     backlogs: "0",
   },
   {
+    id:22,
     img: Img22,
     universityName: "University of St.Thomas",
     ielts: "6.5",
@@ -188,6 +210,7 @@ const universityData = [
     backlogs: "0",
   },
   {
+    id:23,
     img: Img23,
     universityName: "University of BridgePort",
     ielts: "6.0",
@@ -195,6 +218,7 @@ const universityData = [
     backlogs: "20",
   },
   {
+    id:24,
     img: Img24,
     universityName: "University of Missouri Kansas City",
     ielts: "6.5",
@@ -202,6 +226,7 @@ const universityData = [
     backlogs: "0",
   },
   {
+    id:25,
     img: Img25,
     universityName: "University of Illinois Springfield",
     ielts: "6.0",
@@ -209,6 +234,7 @@ const universityData = [
     backlogs: "10",
   },
   {
+    id:26,
     img: Img26,
     universityName: "UMASS Boston University",
     ielts: "6.5",
@@ -216,6 +242,7 @@ const universityData = [
     backlogs: "5",
   },
   {
+    id:27,
     img: Img27,
     universityName: "University of Illinois Chicago",
     ielts: "6.5",
@@ -223,6 +250,7 @@ const universityData = [
     backlogs: "5",
   },
   {
+    id:28,
     img: Img28,
     universityName: "Webster University",
     ielts: "6.0",
@@ -230,6 +258,7 @@ const universityData = [
     backlogs: "10",
   },
   {
+    id:29,
     img: Img29,
     universityName: "Western New England University",
     ielts: "6.0",
@@ -237,6 +266,7 @@ const universityData = [
     backlogs: "25",
   },
   {
+    id:30,
     img: Img30,
     universityName: "Massachusetts College of Pharmacy & Health Sciences",
     ielts: "6.5",

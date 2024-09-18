@@ -38,7 +38,7 @@ const TrendingCourse = () => {
       <Marquee speed={100} pauseOnHover>
         <div className="univercity-section-card">
           {courseData.map((item) => (
-            <div className="Bussiness-card">
+            <div className="Bussiness-card" key={item.key}>
               <p>{item.couseName}</p>
               <SchoolIcon className="Bussinesscenicon" />
             </div>

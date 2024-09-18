@@ -134,7 +134,7 @@ const items = [
         </div>
       </a>
     ),
-    key: "3",
+    key: "2",
   },
   {
     label: (
@@ -160,7 +160,7 @@ const items = [
         </div>
       </a>
     ),
-    key: "3",
+    key: "4",
   },
   {
     label: (
@@ -173,7 +173,7 @@ const items = [
         </div>
       </a>
     ),
-    key: "3",
+    key: "5",
   },
   {
     label: (
@@ -186,7 +186,7 @@ const items = [
         </div>
       </a>
     ),
-    key: "3",
+    key: "6",
   },
   {
     label: (
@@ -199,7 +199,7 @@ const items = [
         </div>
       </a>
     ),
-    key: "3",
+    key: "7",
   },
   {
     label: (
@@ -212,7 +212,7 @@ const items = [
         </div>
       </a>
     ),
-    key: "3",
+    key: "8",
   },
   {
     label: (
@@ -225,7 +225,7 @@ const items = [
         </div>
       </a>
     ),
-    key: "3",
+    key: "9",
   },
   {
     label: (
@@ -238,7 +238,7 @@ const items = [
         </div>
       </a>
     ),
-    key: "3",
+    key: "10",
   },
   {
     label: (
@@ -251,7 +251,7 @@ const items = [
         </div>
       </a>
     ),
-    key: "3",
+    key: "11",
   },
   {
     label: (
@@ -264,7 +264,7 @@ const items = [
         </div>
       </a>
     ),
-    key: "3",
+    key: "12",
   },
 ];
 const Menuitem = [
@@ -284,7 +284,7 @@ const Menuitem = [
       {
         key: "1",
         label: (
-          <Link style={{ textDecoration: "none" }} to="/country/Usa">
+          <Link style={{ textDecoration: "none" }} to="/country/study-in-usa">
             United States
           </Link>
         ),
@@ -292,95 +292,95 @@ const Menuitem = [
       {
         key: "2",
         label: (
-          <Link style={{ textDecoration: "none" }} to="/country/Canada">
-            Canada
+          <Link style={{ textDecoration: "none" }} to="/country/study-in-uk">
+            United Kingdom
           </Link>
         ),
       },
       {
         key: "3",
         label: (
-          <Link style={{ textDecoration: "none" }} to="/country/UK">
-            United Kingdom
+          <Link style={{ textDecoration: "none" }} to="/country/study-in-germany">
+            Germany
           </Link>
         ),
       },
       {
         key: "4",
         label: (
-          <Link style={{ textDecoration: "none" }} to="/country/Australia">
-            Australia
+          <Link style={{ textDecoration: "none" }} to="/country/study-in-france">
+            France
           </Link>
         ),
       },
       {
         key: "5",
         label: (
-          <Link style={{ textDecoration: "none" }} to="/country/France">
-            France
+          <Link style={{ textDecoration: "none" }} to="/country/study-in-australia">
+            Australia
           </Link>
         ),
       },
       {
-        key: "15",
+        key: "6",
         label: (
-          <Link style={{ textDecoration: "none" }} to="/country/Germany">
-            Germany
+          <Link style={{ textDecoration: "none" }} to="/country/study-in-canada">
+            Canada
           </Link>
         ),
       },
       {
-        key: "61",
+        key: "7",
         label: (
-          <Link style={{ textDecoration: "none" }} to="/country/Switzerland">
+          <Link style={{ textDecoration: "none" }} to="/country/study-in-switzerland">
             Switzerland
           </Link>
         ),
       },
       {
-        key: "15",
+        key: "8",
         label: (
-          <Link style={{ textDecoration: "none" }} to="/country/Ireland">
+          <Link style={{ textDecoration: "none" }} to="/country/study-in-ireland">
             Ireland
           </Link>
         ),
       },
       {
-        key: "41",
+        key: "9",
         label: (
-          <Link style={{ textDecoration: "none" }} to="/country/Singapore">
+          <Link style={{ textDecoration: "none" }} to="/country/study-in-singapore">
             Singapore
+          </Link>
+        ),
+      },
+      {
+        key: "10",
+        label: (
+          <Link style={{ textDecoration: "none" }} to="/country/study-in-dubai">
+            Dubai
+          </Link>
+        ),
+      },
+      {
+        key: "11",
+        label: (
+          <Link style={{ textDecoration: "none" }} to="/country/study-in-sweden">
+            Sweden
           </Link>
         ),
       },
       {
         key: "12",
         label: (
-          <Link style={{ textDecoration: "none" }} to="/country/Dubai">
-            Dubai
-          </Link>
-        ),
-      },
-      {
-        key: "16",
-        label: (
-          <Link style={{ textDecoration: "none" }} to="/country/Sweden">
-            Sweden
-          </Link>
-        ),
-      },
-      {
-        key: "164",
-        label: (
-          <Link style={{ textDecoration: "none" }} to="/country/Poland">
+          <Link style={{ textDecoration: "none" }} to="/country/study-in-poland">
             Poland
           </Link>
         ),
       },
       {
-        key: "132",
+        key: "13",
         label: (
-          <Link style={{ textDecoration: "none" }} to="/country/Malta">
+          <Link style={{ textDecoration: "none" }} to="/country/study-in-malta">
             Malta
           </Link>
         ),
@@ -475,7 +475,7 @@ const Menuitem = [
     ),
   },
   {
-    key: "News & PR",
+    key: "Events",
     label: (
       <Link style={{ textDecoration: "none" }} to="/events">
         Events

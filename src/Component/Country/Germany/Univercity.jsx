@@ -11,24 +11,31 @@ import Marquee from "react-fast-marquee";
 
 const universityData = [
   {
+    key:1,
     img: Img1,
   },
   {
+    key:2,
     img: Img2,
   },
   {
+    key:3,
     img: Img3,
   },
   {
+    key:4,
     img: Img4,
   },
   {
+    key:5,
     img: Img5,
   },
   {
+    key:6,
     img: Img6,
   },
   {
+    key:7,
     img: Img7,
   },
 ];
@@ -40,7 +47,7 @@ const Univercity = () => {
       <Marquee speed={200} pauseOnHover>
         <div className="univercity-section-card">
           {universityData.map((item) => (
-            <div className="univercityList" key={item}>
+            <div className="univercityList" key={item.key}>
               <div className="univercityList-Img">
                 <img src={item.img} alt="" />
               </div>

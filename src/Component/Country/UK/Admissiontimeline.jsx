@@ -2,16 +2,31 @@ import { Link } from "react-router-dom";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import "./Country.css";
 import { useState } from "react";
+import Img2 from "../../../assets/University Images/UK/2.png";
+import Img3 from "../../../assets/University Images/UK/3.jpg";
+import Img4 from "../../../assets/University Images/UK/4.png";
+import Img6 from "../../../assets/University Images/UK/6.png";
+import Img8 from "../../../assets/University Images/UK/8.png";
+import Img9 from "../../../assets/University Images/UK/9.png";
+import Img10 from "../../../assets/University Images/UK/10.png";
+import Img13 from "../../../assets/University Images/UK/13.png";
+import Img16 from "../../../assets/University Images/UK/16.jpg";
+import Img18 from "../../../assets/University Images/UK/18.png";
+import Img19 from "../../../assets/University Images/UK/19.jpg";
+import Img22 from "../../../assets/University Images/UK/22.jpg";
 
 const Programdata = [
   {
-    text: "	Data science ",
+    text: "MBA",
   },
   {
-    text: "	Cyber security ",
+    text: "	Data science",
   },
   {
-    text: "Computer science ",
+    text: "	Cyber security",
+  },
+  {
+    text: "Computer science",
   },
   {
     text: "	AI and Robotics",
@@ -19,9 +34,7 @@ const Programdata = [
   {
     text: "	Aerospace engineering",
   },
-  {
-    text: "MBA",
-  },
+ 
   {
     text: "	Construction project management with BIM",
   },
@@ -29,10 +42,10 @@ const Programdata = [
     text: "Telecommunication ",
   },
   {
-    text: "		Electrical and electronics engineering ",
+    text: "		Electrical and electronics engineering",
   },
   {
-    text: "Biomedical science ",
+    text: "Biomedical science",
   },
 ];
 const Admissiontimeline = () => {
@@ -45,7 +58,7 @@ const Admissiontimeline = () => {
       <div className="section Addmission-timeline-container">
         <div className="admissionTime-container">
           <div className="admissintimeline-card">
-            <h2>Admission Timeline</h2>
+            <h2>Admission Details</h2>
             <div className="coursemaster">
               <Link
                 onClick={() => handleAdmissionType("Graduates")}
@@ -73,20 +86,7 @@ const Admissiontimeline = () => {
                   <li>
                     Candidate must’ve cleared graduation with 60% of above marks
                   </li>
-                  <li>
-                    Candidate must have attended any of the below English
-                    proficiency tests:
-                  </li>
-                  <div style={{ paddingLeft: "1.4rem" }}>
-                    <li> IELTS: 6 or 6.5</li>
-                    <li>TOEFL: 89</li>
-                  </div>
-
-                  <li>
-                    Candidate can have multiple backlogs as there is no limit of
-                    backlogs
-                  </li>
-                  <li> There is no age limit for the applicant</li>
+                  <li>Candidate must’ve scored above 70 Marks in English.</li>
                 </ul>
               ) : (
                 <ul>
@@ -97,8 +97,10 @@ const Admissiontimeline = () => {
                     Candidate must have attended any of the below English
                     proficiency tests:
                   </li>
-                  <li> IELTS: 6 or 6.5</li>
-                  <li>TOEFL: 89</li>
+                  <div style={{ paddingLeft: "1.4rem" }}>
+                    <li> IELTS: 6 or 6.5</li>
+                    <li>TOEFL: 89</li>
+                  </div>
                   <li>
                     Candidate can have multiple backlogs as there is no limit of
                     backlogs
@@ -165,74 +167,74 @@ const Admissiontimeline = () => {
             <div className="Popular_Universities">
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/University_of_Cincinnati_a00123d710.png"
-                  alt=""
+                  src={Img3}
+                  alt="Edinburgh Napier University"
                 />
               </div>
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/Northeastern_University_Logo_1ac770efc3.png"
-                  alt=""
+                  src={Img6}
+                  alt="Heroit Watt Univrsity"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/George_Mason_University_b9fb5b4192.png"
-                  alt=""
+                  src={Img8}
+                  alt="Malvern House London"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/University_of_Houston_Main_Campus_d3e90f8c69.png"
-                  alt=""
+                  src={Img10}
+                  alt="Northumbria University"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/University_of_Maryland_Baltimore_County_cb629dab69.png"
-                  alt=""
+                  src={Img16}
+                  alt="University of Wolverhampton"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/University_at_Buffalo_logo_4c62684ee5.png"
-                  alt=""
+                  src={Img18}
+                  alt="University of Hertfordshire"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/California_State_University_Long_Beach_98122890c0.png"
-                  alt=""
+                  src={Img19}
+                  alt="University of East London"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/Umass_b17269ab7e.png"
-                  alt=""
+                  src={Img4}
+                  alt="Wrexham University"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/stony_brook_0fc916d964.jpeg"
-                  alt=""
+                  src={Img9}
+                  alt="Middlesex University"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/arizona_state_university_963dab0ee7.png"
-                  alt=""
+                  src={Img13}
+                  alt="SaintPeter's University"
                 />
               </div>
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/Drexel_University_b963377272.png"
-                  alt=""
+                  src={Img22}
+                  alt="York st John University"
                 />
               </div>
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/John_Hopkins_University_06d1f2734d.png"
-                  alt=""
+                  src={Img2}
+                  alt="Bradley University"
                 />
               </div>
             </div>

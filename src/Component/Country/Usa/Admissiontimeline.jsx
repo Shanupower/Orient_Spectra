@@ -47,7 +47,7 @@ const Admissiontimeline = () => {
       <div className="section Addmission-timeline-container">
         <div className="admissionTime-container">
           <div className="admissintimeline-card">
-            <h2>Admission Timeline</h2>
+            <h2>Admission Details</h2>
             <div className="coursemaster">
               <Link
                 onClick={() => handleAdmissionType("Graduates")}
@@ -135,7 +135,7 @@ const Admissiontimeline = () => {
                   </div>
                   <div className="intackText">
                     <b>Fall</b>
-                    <p> September of every year</p>
+                    <p> September Intake</p>
                   </div>
                 </div>
                 <div className="intakesCard">
@@ -147,7 +147,7 @@ const Admissiontimeline = () => {
                   </div>
                   <div className="intackText">
                     <b>Spring</b>
-                    <p> January of every year</p>
+                    <p> January Intake</p>
                   </div>
                 </div>
                 <div className="intakesCard">
@@ -159,7 +159,7 @@ const Admissiontimeline = () => {
                   </div>
                   <div className="intackText">
                     <b>Summer</b>
-                    <p> May of every year</p>
+                    <p> May Intake</p>
                   </div>
                 </div>
               </div>

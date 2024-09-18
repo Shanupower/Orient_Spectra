@@ -50,7 +50,7 @@ const Admissiontimeline = () => {
       <div className="section Addmission-timeline-container">
         <div className="admissionTime-container">
           <div className="admissintimeline-card">
-            <h2>Admission Timeline</h2>
+            <h2>Admission Details</h2>
             <div className="coursemaster">
               <Link
                 onClick={() => handleAdmissionType("Graduates")}
@@ -105,7 +105,7 @@ const Admissiontimeline = () => {
                   </div>
                   <div className="intackText">
                     <b>Fall</b>
-                    <p> September of every year</p>
+                    <p> September Intake</p>
                   </div>
                 </div>
                 <div className="intakesCard">
@@ -117,7 +117,7 @@ const Admissiontimeline = () => {
                   </div>
                   <div className="intackText">
                     <b>Spring</b>
-                    <p> January of every year</p>
+                    <p> January Intake</p>
                   </div>
                 </div>
                 <div className="intakesCard">
@@ -129,7 +129,7 @@ const Admissiontimeline = () => {
                   </div>
                   <div className="intackText">
                     <b>Summer</b>
-                    <p> May of every year</p>
+                    <p> May Intake</p>
                   </div>
                 </div>
               </div>
@@ -153,74 +153,56 @@ const Admissiontimeline = () => {
             <div className="Popular_Universities">
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/University_of_Cincinnati_a00123d710.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/UW_Logo_2_L_horz_e3bb6b24f3.png"
+                  alt="University of Windsor"
                 />
               </div>
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/Northeastern_University_Logo_1ac770efc3.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/waterloo_0_removebg_preview_6fc1a68275.png"
+                  alt="University of Waterloo"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/George_Mason_University_b9fb5b419png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/University_of_Toronto_369f30d99e.webp"
+                  alt="University-of-Toronto"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/University_of_Houston_Main_Campus_d3e90f8c69.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/Mc_Master_University_logo_1ded05fa78.svg"
+                  alt="McMaster_University_logo"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/University_of_Maryland_Baltimore_County_cb629dab69.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/a_of_u_removebg_preview_5a5971a6e3.png"
+                  alt="University of Alberta"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/University_at_Buffalo_logo_4c62684ee5.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/images_removebg_preview_d388a981f3.png"
+                  alt="University of Calgary"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/California_State_University_Long_Beach_98122890c0.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/Dalhousie_University_2_54e654032a.webp"
+                  alt="Dalhousie-University-2"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/Umass_b17269ab7e.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/images_removebg_preview_1_dffefb34ea.png"
+                  alt="Toronto Metropolitan University"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/stony_brook_0fc916d964.jpeg"
-                  alt=""
-                />
-              </div>{" "}
-              <div className="university-card">
-                <img
-                  src="https://strapi.orientspectra.com/uploads/arizona_state_university_963dab0ee7.png"
-                  alt=""
-                />
-              </div>
-              <div className="university-card">
-                <img
-                  src="https://strapi.orientspectra.com/uploads/Drexel_University_b963377272.png"
-                  alt=""
-                />
-              </div>
-              <div className="university-card">
-                <img
-                  src="https://strapi.orientspectra.com/uploads/John_Hopkins_University_06d1f2734d.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/Wilfrid_Laurier_University_63463d4638.png"
+                  alt="Wilfrid Laurier University"
                 />
               </div>
             </div>

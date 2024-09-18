@@ -39,7 +39,7 @@ const Admissiontimeline = () => {
       <div className="section Addmission-timeline-container">
         <div className="admissionTime-container">
           <div className="admissintimeline-card">
-            <h2>Admission Timeline</h2>
+            <h2>Admission Details</h2>
             <div className="coursemaster">
               <Link
                 onClick={() => handleAdmissionType("Graduates")}
@@ -99,7 +99,7 @@ const Admissiontimeline = () => {
                     </div>
                     <div className="intackText">
                       <b>Fall</b>
-                      <p> September of every year</p>
+                      <p> October Intake</p>
                     </div>
                   </div>
                   <div className="intakesCard">
@@ -111,21 +111,10 @@ const Admissiontimeline = () => {
                     </div>
                     <div className="intackText">
                       <b>Spring</b>
-                      <p> January of every year</p>
+                      <p> January / February Intake</p>
                     </div>
                   </div>
-                  <div className="intakesCard">
-                    <div className="imageContainer">
-                      <img
-                        src="https://strapi.orientspectra.com/uploads/Summer_6b20b10000.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div className="intackText">
-                      <b>Summer</b>
-                      <p> May of every year</p>
-                    </div>
-                  </div>
+      
                 </div>
               </ul>
             </div>
@@ -145,74 +134,74 @@ const Admissiontimeline = () => {
             <div className="Popular_Universities">
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/University_of_Cincinnati_a00123d710.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/images_0a82f55b7a.png"
+                  alt="Avaincity University"
                 />
               </div>
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/Northeastern_University_Logo_1ac770efc3.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/images_1_5a5abf792e.png"
+                  alt="Paris School of Business"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/George_Mason_University_b9fb5b4192.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/NEOMA_LOGOTYPE_RVB_dc7f3d584f.jpg"
+                  alt="NEOMA Business School"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/University_of_Houston_Main_Campus_d3e90f8c69.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/LOGO_ESSCA_VERTICAL_01_1_b788331589.png"
+                  alt="ESSCA Business School"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/University_of_Maryland_Baltimore_County_cb629dab69.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/inseec_msc_and_mba_logo_vector_2d2825d28f.png"
+                  alt="INSEEC Business School"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/University_at_Buffalo_logo_4c62684ee5.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/Logo_icn_business_school_dfbcdd18e6.png"
+                  alt="ICN Business School"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/California_State_University_Long_Beach_98122890c0.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/Rennes_School_of_Business_Unframed_Thinking_ccbeeb365c.jpg"
+                  alt="Rennes School of Business"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/Umass_b17269ab7e.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/EM_Normandie_Logo_c4acc3543b.jpg"
+                  alt="EM Normandie Business School"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/stony_brook_0fc916d964.jpeg"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/ESCE_53bb5633f9.png"
+                  alt="ESCE"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/arizona_state_university_963dab0ee7.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/ECE_LOGO_20240226114033_ef71cfffe5.jpg"
+                  alt="ECE"
                 />
               </div>
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/Drexel_University_b963377272.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/IUM_logo_849a1b2cdb.jpg"
+                  alt="IUM"
                 />
               </div>
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/John_Hopkins_University_06d1f2734d.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/supdepub_logo_88ee806908.png"
+                  alt="SupdePub"
                 />
               </div>
             </div>

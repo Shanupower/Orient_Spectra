@@ -72,7 +72,7 @@ const AdmitionRequired = () => {
 
       <div className="admission-container">
         {AdmissionData.map((item) => (
-          <div className="admission-detailscard" key={item}>
+          <div className="admission-detailscard" key={item.id}>
             <div className="Possporticon">
               <img src={item.icon} alt="icon" className="possporticon" />
             </div>

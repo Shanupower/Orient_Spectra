@@ -17,51 +17,63 @@ import Icon12 from "../../../assets/Country/Evidence.png";
 
 const AdmissionData = [
   {
+    key:1,
     icon: Icon1,
     title: "Cop of a valid passport",
   },
   {
+    key:2,
     icon: Icon2,
     title: "Proof of English proficiency (OEFL/IELTS test scores)",
   },
   {
+    key:3,
     icon: Icon3,
     title: "ACT/SAT/LSAT forUG programs, GMAT/GRE scores for PG programs",
   },
   {
+    key:4,
     icon: Icon4,
     title: "Academic Tanscripts from the previous study",
   },
   {
+    key:5,
     icon: Icon5,
     title:
       "Academic Refrence Letters, the number of reference letters depends from university to university",
   },
   {
+    key:6,
     icon: Icon6,
     title: "Letters of recommendation fromthe employer/manager (if applicable)",
   },
   {
+    key:7,
     icon: Icon7,
     title: "CV/Resume",
   },
   {
+    key:8,
     icon: Icon8,
     title: "Statement of Purpose (SOP)",
   },
   {
+    key:9,
     icon: Icon9,
     title: "Essays (if dmanded by the university)",
   },
   {
+    key:10,
     icon: Icon10,
     title: "Portfolio (for specific courses)",
   },
   {
+    key:11,
     icon: Icon11,
     title: "      Certificates of extracurricular activities      ",
   },
   {
+    key:12,
     icon: Icon12,
     title: "Evidence of Funds",
   },
@@ -78,7 +90,7 @@ const AdmitionRequired = () => {
 
       <div className="admission-container">
         {AdmissionData.map((item) => (
-          <div className="admission-detailscard" key={item}>
+          <div className="admission-detailscard" key={item.key}>
             <div className="Possporticon">
               <img src={item.icon} alt="icon" className="possporticon" />
             </div>

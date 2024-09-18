@@ -30,7 +30,7 @@ const universityData = [
     img: Img1,
     universityName: "Abertay University",
     ielts: "6.5",
-    tofel: "79",
+    tofel: "92",
     backlogs: "0",
   },
   {
@@ -45,8 +45,8 @@ const universityData = [
     id:3,
     img: Img3,
     universityName: "Edinburgh Napier University",
-    ielts: "6.5",
-    tofel: "79",
+    ielts: "6.0",
+    tofel: "80",
     backlogs: "0",
   },
   {
@@ -60,7 +60,7 @@ const universityData = [
   {
     id:5,
     img: Img5,
-    universityName: "University for the creative arts",
+    universityName: "University for the Creative Arts",
     ielts: "6.5",
     tofel: "79",
     backlogs: "0",

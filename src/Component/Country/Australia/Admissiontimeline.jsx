@@ -33,7 +33,7 @@ const Admissiontimeline = () => {
       <div className="section Addmission-timeline-container">
         <div className="admissionTime-container">
           <div className="admissintimeline-card">
-            <h2>Admission Timeline</h2>
+            <h2>Admission Details</h2>
             <div className="coursemaster">
               <Link
                 onClick={() => handleAdmissionType("Graduates")}
@@ -61,16 +61,16 @@ const Admissiontimeline = () => {
                   <li>Bachelors Score: 60%</li>
                   <li>IELTS Score: 5.5</li>
                   <li> Toefl Score: 80</li>
-                  <li>Backlogs Limit:No</li>
-                  <li>Age Limit:No</li>
+                  <li>Backlogs Limit: No</li>
+                  <li>Age Limit: No</li>
                 </ul>
               ) : (
                 <ul>
                   <li>Bachelors Score: 60%</li>
                   <li>IELTS Score: 5.5</li>
                   <li> Toefl Score: 80</li>
-                  <li>Backlogs Limit:No</li>
-                  <li>Age Limit:No</li>
+                  <li>Backlogs Limit: No</li>
+                  <li>Age Limit: No</li>
                 </ul>
               )}
             </div>
@@ -87,7 +87,7 @@ const Admissiontimeline = () => {
                   </div>
                   <div className="intackText">
                     <b>Fall</b>
-                    <p> September of every year</p>
+                    <p> November Intake</p>
                   </div>
                 </div>
                 <div className="intakesCard">
@@ -99,7 +99,7 @@ const Admissiontimeline = () => {
                   </div>
                   <div className="intackText">
                     <b>Spring</b>
-                    <p> January of every year</p>
+                    <p> February Intake</p>
                   </div>
                 </div>
                 <div className="intakesCard">
@@ -111,7 +111,7 @@ const Admissiontimeline = () => {
                   </div>
                   <div className="intackText">
                     <b>Summer</b>
-                    <p> May of every year</p>
+                    <p>July Intake</p>
                   </div>
                 </div>
               </div>
@@ -132,74 +132,56 @@ const Admissiontimeline = () => {
             <div className="Popular_Universities">
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/University_of_Cincinnati_a00123d710.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/channels4_profile_fbccddc0da.jpg"
+                  alt="the university of melbourne"
+                />
+              </div>{" "}
+              <div className="university-card">
+                <img
+                  src="https://strapi.orientspectra.com/uploads/U_Syd_Logo_1_removebg_preview_4eadf23bc9.png"
+                  alt="The University of Sydney"
+                />
+              </div>{" "}
+              <div className="university-card">
+                <img
+                  src="https://strapi.orientspectra.com/uploads/download_removebg_preview_875f65d9d6.png"
+                  alt="University of New South Wales (UNSW Sydney)"
+                />
+              </div>{" "}
+              <div className="university-card">
+                <img
+                  src="https://strapi.orientspectra.com/uploads/Untitled_design_47_removebg_preview_c489fdf123.png"
+                  alt="University of Queensland (UQ)"
+                />
+              </div>{" "}
+              <div className="university-card">
+                <img
+                  src="https://strapi.orientspectra.com/uploads/download_removebg_preview_1_0b2805f151.png"
+                  alt="Monash University"
+                />
+              </div>{" "}
+              <div className="university-card">
+                <img
+                  src="https://strapi.orientspectra.com/uploads/The_University_of_Western_Australia_logo_removebg_preview_6aa670811d.png"
+                  alt="The-University-of-Western-Australia-logo"
+                />
+              </div>{" "}
+              <div className="university-card">
+                <img
+                  src="https://strapi.orientspectra.com/uploads/download_removebg_preview_2_a1315cfc13.png"
+                  alt="The University of Adelaide"
                 />
               </div>
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/Northeastern_University_Logo_1ac770efc3.png"
-                  alt=""
-                />
-              </div>{" "}
-              <div className="university-card">
-                <img
-                  src="https://strapi.orientspectra.com/uploads/George_Mason_University_b9fb5b4192.png"
-                  alt=""
-                />
-              </div>{" "}
-              <div className="university-card">
-                <img
-                  src="https://strapi.orientspectra.com/uploads/University_of_Houston_Main_Campus_d3e90f8c69.png"
-                  alt=""
-                />
-              </div>{" "}
-              <div className="university-card">
-                <img
-                  src="https://strapi.orientspectra.com/uploads/University_of_Maryland_Baltimore_County_cb629dab69.png"
-                  alt=""
-                />
-              </div>{" "}
-              <div className="university-card">
-                <img
-                  src="https://strapi.orientspectra.com/uploads/University_at_Buffalo_logo_4c62684ee5.png"
-                  alt=""
-                />
-              </div>{" "}
-              <div className="university-card">
-                <img
-                  src="https://strapi.orientspectra.com/uploads/California_State_University_Long_Beach_98122890c0.png"
-                  alt=""
-                />
-              </div>{" "}
-              <div className="university-card">
-                <img
-                  src="https://strapi.orientspectra.com/uploads/Umass_b17269ab7e.png"
-                  alt=""
-                />
-              </div>{" "}
-              <div className="university-card">
-                <img
-                  src="https://strapi.orientspectra.com/uploads/stony_brook_0fc916d964.jpeg"
-                  alt=""
-                />
-              </div>{" "}
-              <div className="university-card">
-                <img
-                  src="https://strapi.orientspectra.com/uploads/arizona_state_university_963dab0ee7.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/download_removebg_preview_3_825d492b62.png"
+                  alt="RMIT University"
                 />
               </div>
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/Drexel_University_b963377272.png"
-                  alt=""
-                />
-              </div>
-              <div className="university-card">
-                <img
-                  src="https://strapi.orientspectra.com/uploads/John_Hopkins_University_06d1f2734d.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/uts_1b15e165f2.webp"
+                  alt="University of Technology Sydney (UTS)"
                 />
               </div>
             </div>

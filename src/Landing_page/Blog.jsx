@@ -32,7 +32,6 @@ const Blog = () => {
 
     fetchData();
   }, []);
-  console.log(blogData.length);
 
   return (
     <>

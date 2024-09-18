@@ -1,38 +1,45 @@
 import { Link } from "react-router-dom";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
+import Img1 from "../../../assets/University Images/Germany/1.png";
+import Img2 from "../../../assets/University Images/Germany/2.png";
+import Img3 from "../../../assets/University Images/Germany/3.png";
+import Img4 from "../../../assets/University Images/Germany/4.png";
+import Img5 from "../../../assets/University Images/Germany/5.png";
+import Img6 from "../../../assets/University Images/Germany/6.png";
+import Img7 from "../../../assets/University Images/Germany/7.png";
 import "./Country.css";
 import { useState } from "react";
 
 const Programdata = [
   {
-    text: "	Data Science ",
+    text: "Data Science",
   },
   {
-    text: "Business Analytics",
+    text: " Business Analytics",
   },
   {
     text: "Finance",
   },
   {
-    text: "	Hospitality Management ",
+    text: "Hospitality Management",
   },
   {
-    text: "	Engineering Management ",
+    text: "Engineering Management",
   },
   {
-    text: "	Automotive ",
+    text: "	Automotive",
   },
   {
-    text: "	Manufacturing",
+    text: "Manufacturing",
   },
   {
-    text: "Supply Chain Management ",
+    text: "Supply Chain Management",
   },
   {
-    text: "	Healthcare ",
+    text: "Healthcare",
   },
   {
-    text: "AI & ML  ",
+    text: "AI & ML ",
   },
 ];
 const Admissiontimeline = () => {
@@ -45,7 +52,7 @@ const Admissiontimeline = () => {
       <div className="section Addmission-timeline-container">
         <div className="admissionTime-container">
           <div className="admissintimeline-card">
-            <h2>Admission Timeline</h2>
+            <h2>Admission Details</h2>
             <div className="coursemaster">
               <Link
                 onClick={() => handleAdmissionType("Graduates")}
@@ -118,7 +125,7 @@ const Admissiontimeline = () => {
                   </div>
                   <div className="intackText">
                     <b>Fall</b>
-                    <p> September of every year</p>
+                    <p> October Intake</p>
                   </div>
                 </div>
                 <div className="intakesCard">
@@ -130,21 +137,10 @@ const Admissiontimeline = () => {
                   </div>
                   <div className="intackText">
                     <b>Spring</b>
-                    <p> January of every year</p>
+                    <p> February / April Intake</p>
                   </div>
                 </div>
-                <div className="intakesCard">
-                  <div className="imageContainer">
-                    <img
-                      src="https://strapi.orientspectra.com/uploads/Summer_6b20b10000.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div className="intackText">
-                    <b>Summer</b>
-                    <p> May of every year</p>
-                  </div>
-                </div>
+
               </div>
             </div>
             <div className="PopularProgram_card">
@@ -163,68 +159,76 @@ const Admissiontimeline = () => {
             <div className="Popular_Universities">
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/Northeastern_University_Logo_1ac770efc3.png"
-                  alt=""
+                  src={Img1}
+                  alt="EU Business School"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/George_Mason_University_b9fb5b4192.png"
-                  alt=""
+                  src={Img5}
+                  alt="GISMA University of Applied Sciences "
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/University_of_Houston_Main_Campus_d3e90f8c69.png"
-                  alt=""
+                  src={Img2}
+                  alt="University of Europe for Applied Sciences "
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/University_of_Maryland_Baltimore_County_cb629dab69.png"
-                  alt=""
+                  src={Img3}
+                  alt="IU University of Applied Sciences "
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/University_at_Buffalo_logo_4c62684ee5.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/Logo_update_6af66a1318.webp"
+                  alt="New European College"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/California_State_University_Long_Beach_98122890c0.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/hochschule_macromedia_logo_rgb_blueberry_e296c7e1d4.webp"
+                  alt="Marcomedia University"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/Umass_b17269ab7e.png"
-                  alt=""
+                  src={Img4}
+                  alt="SRH University"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/stony_brook_0fc916d964.jpeg"
-                  alt=""
-                />
-              </div>{" "}
-              <div className="university-card">
-                <img
-                  src="https://strapi.orientspectra.com/uploads/arizona_state_university_963dab0ee7.png"
-                  alt=""
+                  src={Img7}
+                  alt="Bersin School of Business & Innovation"
                 />
               </div>
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/Drexel_University_b963377272.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/1545396559_HSF_Logo_RZ_RGB_2748269be1.jpg"
+                  alt="Fresenius University of Applied Sciences "
                 />
               </div>
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/John_Hopkins_University_06d1f2734d.png"
-                  alt=""
+                  src={Img6}
+                  alt="Steinbeis University"
+                />
+              </div>
+
+              <div className="university-card">
+                <img
+                  src="https://strapi.orientspectra.com/uploads/channels4_profile_removebg_preview_333e855e4d.png"
+                  alt="DIU(Dresden International University)"
+                />
+              </div>
+
+              <div className="university-card">
+                <img
+                  src="https://strapi.orientspectra.com/uploads/1718285496_arden_univerrsity_logo_a26cdefcb8.png"
+                  alt="DIU(Dresden International University)"
                 />
               </div>
             </div>
