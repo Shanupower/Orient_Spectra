@@ -700,7 +700,7 @@
   font-size: 20px;
   margin-bottom: 2rem;
 }
-.studentcard > p > div {
+.studentcard > div > p {
   font-size: 13px;
 }
 
@@ -1949,6 +1949,9 @@ canvas {
     border-radius: 30px;
     color: var(--text-color-white);
     margin-left: 0;
+  }
+  .studentCard > span {
+    font-size: 16px;
   }
   .studentcard > p {
     font-size: 20px;

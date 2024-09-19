@@ -214,14 +214,14 @@ const Testimonial = () => {
             </div>
             <div className="testimonial_rigtSide">
               <div className="studentcard">
-                <p
+                <div
                   className={`studentCard ${
                     isAnimatingLeft || (isAnimatingRight && "textFadeAnimation")
                   }`}
                 >
                   {currentTestimonial.userName}
-                  <div>{currentTestimonial.universityName}</div>
-                </p>
+                  <p>{currentTestimonial.universityName}</p>
+                </div>
               </div>
               <p>{currentTestimonial.content}</p>
               <div className="left_rigtCard">
