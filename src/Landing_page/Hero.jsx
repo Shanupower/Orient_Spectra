@@ -56,18 +56,6 @@ const Hero = ({ blog, event }) => {
         link: "blog",
         buttonText: "Book A Guidance Call",
       },
-      // {
-      //   id: 3,
-      //   // heading: blog?.attributes?.Title || "Rise of new education",
-      //   heading: "Masters in UK",
-      //   bgImage: `https://strapi.orientspectra.com/uploads/UK_Banner_9a54aba2cf.jpg`,
-      //   subtext:
-      //     // blog?.attributes?.Short_Description ||
-      //     "UK university graduates are prepared with the ability to think critically and creatively.",
-      //     // "– US, UK, Australia and Canada – face headwinds",
-      //   link: "blog",
-      //   buttonText:"Book A Guidance Call",
-      // },
       {
         id: 4,
         text: "",
@@ -121,44 +109,17 @@ const Hero = ({ blog, event }) => {
                 <p className="hero_Heading">{data?.text}</p>
                 <h1 className="hero_Heading BoldHeading">{data.heading}</h1>
                 <p className="heroSubtext">{data.subtext}</p>
-                {/* <div
-                  className="StudyButtonCard"
-                  onClick={() => handleNavigate(data)}
-                > */}
                 <Button
                   text={data.buttonText}
                   arrow={true}
                   link="/start-your-journey"
                   className="StudyButtonCard"
                 />
-                {/* </div> */}
               </div>
             </div>
           ))}
         </Carousel>
       </div>
-      {/* Pop up Button */}
-      {/* <div className="popUpBotton">
-        <div className="menu-container">
-          <div className="menu-button" onClick={toggleMenu}>
-            <AddIcon
-              sx={{ fontSize: isMd ? "20px" : "34px" }}
-              className={isOpen ? "buttonnRotate" : "reverceRotete"}
-            />
-          </div>
-          <div className={`menu-items ${isOpen ? "open" : ""}`}>
-            <a href="#" className="menu-item call">
-              <img src={Whatsapp} alt="" />
-            </a>
-            <a href="#" className="menu-item window">
-              <img src={Window} alt="" />
-            </a>
-            <a href="#" className="menu-item whatsapp">
-              <img src={Mic} alt="" />
-            </a>
-          </div>
-        </div>
-      </div> */}
     </div>
   );
 };

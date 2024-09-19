@@ -72,7 +72,6 @@ const LandingPage = () => {
       <Testimonial />
       <Blog />
       <News />
-      {/* <Faq /> */}
       <GetTuchWithUs />
     </>
   );

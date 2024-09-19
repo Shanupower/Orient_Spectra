@@ -1,21 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useMediaQuery } from "@mui/material";
-import { Link } from "react-router-dom";
-import img1 from "../assets/pic-01.jpg";
-import img2 from "../assets/4-01.jpg";
-import img3 from "../assets/5-01.jpg"; 
-import img4 from "../assets/2-01.jpg";
-import img5 from "../assets/3-01.jpg";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import Arrowleft from "../assets/Line 21.png";
-import Video1 from "../assets/Testimonials_01.mp4";
-import Video2 from "../assets/Testimonial_02.mp4";
 import Video3 from "../assets/Testimonial_03.mp4";
-import Video4 from "../assets/Testimonial_04.mp4";
 import Video5 from "../assets/Testimonial_05.mp4";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import "./index.css";
-import Play from "../assets/playIcon.png";
 
 
 const TestimonialData = [ 

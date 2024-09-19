@@ -101,7 +101,7 @@ const Country = () =>{
                     <SwiperSlide className="country-Card" key={item.id}>
                     <div  className="counrtyImage-card" >
                     <Link to={item.link}>
-                    <img src={item.img} alt=""  />
+                    <img src={item.img} alt="Country"  />
                     <div className="image-text-card">
                         <div className="image-text-overlay">
                             {item.name}

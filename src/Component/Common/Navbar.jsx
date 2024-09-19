@@ -568,7 +568,7 @@ const Navbar = ({
         <div className={`navMenuResponsive `}>
           <div className="navMenuLeft">
             <div className="logoContainer">
-              <img src={Logo} alt="" />
+              <img src="https://strapi.orientspectra.com/uploads/Logo10_050f32fdad.webp" alt="Orient Spectra Logo" />
             </div>
           </div>
           <div className="navMenuRight">
@@ -617,7 +617,7 @@ const Navbar = ({
               className="Link_route logo"
               onClick={hanldeCloseSubheader}
             >
-              <img src={Logo} alt="" />
+              <img src="https://strapi.orientspectra.com/uploads/Logo10_050f32fdad.webp" alt="Orient Spectra Logo" />
             </Link>
 
             <div>

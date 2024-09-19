@@ -14,7 +14,7 @@ const Footer = () => {
     <div className="footerContrainer">
       <div className="componnylogo_container">
         <div className="logoImage">
-          <img src={Logo} alt="" />
+          <img src="https://strapi.orientspectra.com/uploads/Layer_1_ff782153b5.webp" alt="Orient Spectra" />
           <div className="footercenterRightContent">
             <Link
               to="https://www.facebook.com/orient.spectra.1"
@@ -50,8 +50,8 @@ const Footer = () => {
         </div>
         <div className="qrImage">
           <img
-            src="https://strapi.orientspectra.com/uploads/Watsapp_Qr_9ad1331dd0.png"
-            alt=""
+            src="https://strapi.orientspectra.com/uploads/Watsapp_Qr_9ad1331dd0_2ff73ee08e.webp"
+            alt="WhatsApp QR"
           />
           <p>91+ 9000456765</p>
           <p>info@orientspectra.com</p>
