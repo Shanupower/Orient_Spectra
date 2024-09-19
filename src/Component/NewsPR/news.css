@@ -125,11 +125,11 @@
   margin-top: 0.3rem;
 }
 
-@media (max-width:786px) {
+/* @media (max-width:786px) {
   .hero-news-and-pr-container {
-    margin-top: 20% !important;
+    margin-top: 15% !important;
   }
-}
+} */
 
 @media (max-width:986px) {
   .hero-news-and-pr-container {
@@ -152,7 +152,7 @@
 
 @media (max-width:1024px) {
   .hero-news-and-pr-container {
-    margin-top: 10%;
+    margin-top: 10% !important;
   }
   .hero-news-and-pr-container > h1 {
     font-size: 3rem;

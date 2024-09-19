@@ -26,7 +26,8 @@ const Hero = ({ blog, event }) => {
         text: "Make Your Study Abroad ",
         heading: "Dream A Reality",
         bgImage:
-          "https://strapi.orientspectra.com/uploads/Banner_03_07b8ebd9f0.jpg",
+          "https://strapi.orientspectra.com/uploads/Banner_03_91ff06ff51.webp",
+        alt:"Banner3",
         subtext:
           "We helped over 15000+ students in their journey to study abroad across USA, UK, Germany, Australia, and so on.",
         buttonText: "Get Dedicated Counsellor",
@@ -36,7 +37,8 @@ const Hero = ({ blog, event }) => {
         text: "Want To Know",
         heading: "How To Study Abroad?",
         bgImage:
-          "https://strapi.orientspectra.com/uploads/Banner_02_ab30739bfe.jpg",
+          "https://strapi.orientspectra.com/uploads/Banner_02_ab30739bfe_f492f9774c.webp",
+        alt:"Study Abroad",
         subtext:
           "Our expert counsellors will help you through the visa application process, and ensure you land in your dream course.",
         link: "event",
@@ -47,7 +49,8 @@ const Hero = ({ blog, event }) => {
         text: "Begin Your Journey",
         heading: " of MS in USA",
         bgImage:
-          "https://strapi.orientspectra.com/uploads/USA_Banner_5a5338b6e3.jpg",
+          "https://strapi.orientspectra.com/uploads/USA_Banner_f047158782.webp",
+        alt:"USA",
         subtext:
           "Get complete guidance on your visa application, university intakes, and scholarship opportunities. Talk to our counsellors.",
         link: "blog",
@@ -69,7 +72,8 @@ const Hero = ({ blog, event }) => {
         id: 4,
         text: "",
         heading: "",
-        bgImage: "https://strapi.orientspectra.com/uploads/Website_Event_Banner_UK_382d03b7ea.jpg",
+        bgImage: "https://strapi.orientspectra.com/uploads/Website_Event_Banner_UK_382d03b7ea_8ab7a45b7d.webp",
+        alt:"event",
         subtext: "",
         link: "event",
         buttonText: "Register Your Slot",
@@ -108,7 +112,7 @@ const Hero = ({ blog, event }) => {
                 )}
                 <img
                   src={data.bgImage}
-                  alt=""
+                  alt={data.alt}
                   onLoad={() => setIsLoading(false)}
                 />
               </div>
