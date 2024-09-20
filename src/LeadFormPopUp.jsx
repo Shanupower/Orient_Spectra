@@ -16,13 +16,13 @@ const LeadFormPopUp = () => {
     Email: "",
     Mobile: "",
     Intake_Year: "",
-    Source: "Homepage",
+    Source: "Eroupe EDU FAIR",
   });
   const [errors, setErrors] = useState({});
   const [formSubmitted, setFormSubmitted] = useState(false);
 
   const handleSubmitData = async () => {
-    const api = "https://strapi.orientspectra.com/api/lead-form-hompages";
+    const api = "https://strapi.orientspectra.com/api/leadform-popups";
     try {
       const response = await axios.post(api, {
         data: formData,
@@ -36,7 +36,7 @@ const LeadFormPopUp = () => {
           Email: "",
           Mobile: "",
           Intake_Year: "",
-          Source: "Homepage",
+          Source: "Eroupe EDU FAIR",
         });
       }
     } catch (errors) {
