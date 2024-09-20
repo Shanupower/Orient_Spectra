@@ -181,6 +181,7 @@ const Testimonial = () => {
                   top: 0,
                   left: 0,
                   objectFit: 'contain',
+                  loading:"lazy"
                   // zIndex: 1,
                 }}
              />

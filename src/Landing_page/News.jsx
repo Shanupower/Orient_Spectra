@@ -77,6 +77,7 @@ const News = () => {
                     <img
                     src="https://strapi.orientspectra.com/uploads/australia_d22eb37527.jpg"
                     alt="Video thumbnail"
+                    loading="lazy"
                     className="video-thumbnail"
                     style={{
                       width: '100%',
@@ -91,7 +92,7 @@ const News = () => {
                   ) :''}
 
                     {!isPlaying ? (
-                    <img className="playIcon" src={Play} alt="" />
+                    <img className="playIcon" src={Play} alt="" loading="lazy"/>
                     ): ''}
                   <video className="NewsVideo" muted controls onPause={handlePause} onPlay={handlePlay}>
                   <source src={`https://strapi.orientspectra.com${item?.attributes?.Headline_image?.data[0]?.attributes?.url}`} type="video/mp4" />
@@ -103,6 +104,7 @@ const News = () => {
                   <img
                     src={`https://strapi.orientspectra.com${item?.attributes?.Headline_image?.data[0]?.attributes?.formats?.large?.url}`}
                     alt=""
+                    loading="lazy"
                   />
                 )}
                 

@@ -77,6 +77,124 @@ html {
   cursor: pointer;
 }
 
+.Dailog-container {
+  padding: 2rem;
+  background-color: #306398;
+}
+.popup-dialog-title {
+  font-size: 20px;
+}
+.popup-text-feild {
+  width: 100%;
+}
+.popup-form-group {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.popup-input-field {
+  width: 100%;
+  font-size: 15px;
+  padding: 10px;
+}
+.DailogTitle {
+  font-size: 30px;
+  text-align: center;
+  color: white;
+}
+.Dailog-container > h3 {
+  font-size: 20px;
+  color: white;
+  font-weight: 500;
+  text-align: center;
+}
+.Dailog-container > p {
+  font-size: 18px;
+  color: white;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 5px;
+}
+.popup-form-container-button {
+  width: 100%;
+  font-size: 20px;
+  font-weight: 700;
+  background-color: var(--brand-color);
+  border: none;
+  color: white;
+  margin-top: 0 !important;
+  cursor: pointer;
+}
+.success-message {
+  padding: 3rem;
+  background-color: #306398;
+}
+.success-message > img{
+  width: 100px;
+  object-fit: contain;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.success-message > h2{
+  color: white;
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+}
+.success-message > p{
+  color: var(--brand-color);
+  text-decoration: underline;
+  font-size: 23px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 10px;  
+}
+.SkipNow {
+  color: white;
+  text-decoration: underline;
+  font-size: 23px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 10px; 
+}
+@media (max-width: 986px) {
+  .DailogBox {
+    margin-left: -15px;
+    margin-right: 20px;
+  }
+  .Dailog-container {
+    padding: 1.2rem;
+  }
+  .Dailog-container > h3 {
+    font-size: 16px;
+    color: white;
+    font-weight: 500;
+    text-align: center;
+  }
+  .Dailog-container > p {
+    font-size: 15px;
+    color: white;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 5px;
+  }
+  .DailogTitle {
+    font-size: 22px;
+    text-align: center;
+  }
+  .success-message {
+    padding: 2rem;
+  }
+  .success-message > h2{
+    font-size: 20px;
+  }
+  .success-message > p,
+  .SkipNow {
+    font-size: 18px;
+  }
+}
 @media (max-width: 768px ) and (max-width: 912px ) {
   .WhatsApp > img {
     bottom: 35px !important;

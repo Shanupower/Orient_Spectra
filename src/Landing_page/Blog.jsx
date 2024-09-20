@@ -45,7 +45,7 @@ const Blog = () => {
           <div className="leftBlogCard-image-card">
             <img
               src={`https://strapi.orientspectra.com${blogData[0]?.attributes?.Headline_image?.data?.attributes?.formats?.thumbnail?.url}`}
-              alt="Blog Image 1"
+              alt="Blog Image 1" loading="lazy"
             />
           </div>
 
@@ -72,7 +72,7 @@ const Blog = () => {
                 <div className="leftBlogCard-image-card1">
                   <img
                     src={`https://strapi.orientspectra.com${item?.attributes?.Headline_image?.data?.attributes.formats.small.url}`}
-                    alt="Blog Image 1"
+                    alt="Blog Image 1" loading="lazy"
                   />
                 </div>
               )}

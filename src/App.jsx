@@ -37,6 +37,7 @@ import USA_SEPTEMBER_FAIR_2024 from "./Ads landing page/USA_SEPT_FAIR_2024/USA_S
 import Europe_Jan_2025 from "./Ads landing page/Europe_education_fair_2024/Europe_Jan_2025";
 import Offline_Marketing_Club from "./Ads landing page/OfflineMarketingClub/Offline_Marketing_Club";
 import WhatsApp from "./Whatsapp";
+import LeadFormPopUp from "./LeadFormPopUp";
 
 function App() {
   const [openWhatwedo, setWhatwedoOpen] = useState(false);
@@ -75,6 +76,7 @@ function App() {
 
   return (
     <>
+    <LeadFormPopUp />
       <Navbar
         openWhatwedo={openWhatwedo}
         setWhatwedoOpen={setWhatwedoOpen}

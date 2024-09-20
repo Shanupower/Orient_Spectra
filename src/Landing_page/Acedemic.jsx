@@ -10,7 +10,7 @@ const Acedemic = () => {
       <Marquee className="MargueeImage" speed={100} pauseOnHover>
         {ImgGallery.map((data, index) => (
           <div className="acedemic_image_container" key={index}>
-            <img src={data.img} alt="" style={{ objectFit: "contain" }} />
+            <img src={data.img} alt="" style={{ objectFit: "contain" }} loading="lazy" />
           </div>
         ))}
       </Marquee>

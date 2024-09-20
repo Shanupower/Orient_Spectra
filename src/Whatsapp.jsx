@@ -11,7 +11,7 @@ const WhatsApp =() =>{
 
     return(
         <div className="WhatsApp section" onClick={handleClick}>
-            <img src="https://strapi.orientspectra.com/uploads/whatsapp_9450bbb097.webp" alt="WhatsApp" />
+            <img src="https://strapi.orientspectra.com/uploads/whatsapp_9450bbb097.webp" alt="WhatsApp" loading="lazy"/>
         </div>
     )
 }
