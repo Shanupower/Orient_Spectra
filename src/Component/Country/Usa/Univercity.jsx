@@ -1,33 +1,3 @@
-import Img1 from "../../../assets/University Images/USA/1.png";
-import Img2 from "../../../assets/University Images/USA/2.png";
-import Img3 from "../../../assets/University Images/USA/3.png";
-import Img4 from "../../../assets/University Images/USA/4.png";
-import Img5 from "../../../assets/University Images/USA/5.png";
-import Img6 from "../../../assets/University Images/USA/6.png";
-import Img7 from "../../../assets/University Images/USA/7.png";
-import Img8 from "../../../assets/University Images/USA/8.png";
-import Img9 from "../../../assets/University Images/USA/9.png";
-import Img10 from "../../../assets/University Images/USA/10.jpg";
-import Img11 from "../../../assets/University Images/USA/11.png";
-import Img12 from "../../../assets/University Images/USA/12.png";
-import Img13 from "../../../assets/University Images/USA/13.png";
-import Img14 from "../../../assets/University Images/USA/14.png";
-import Img15 from "../../../assets/University Images/USA/15.png";
-import Img16 from "../../../assets/University Images/USA/16.png";
-import Img17 from "../../../assets/University Images/USA/17.png";
-import Img18 from "../../../assets/University Images/USA/18.png";
-import Img19 from "../../../assets/University Images/USA/19.png";
-import Img20 from "../../../assets/University Images/USA/20.jpg";
-import Img21 from "../../../assets/University Images/USA/21.png";
-import Img22 from "../../../assets/University Images/USA/22.jpg";
-import Img23 from "../../../assets/University Images/USA/23.png";
-import Img24 from "../../../assets/University Images/USA/24.png";
-import Img25 from "../../../assets/University Images/USA/25.png";
-import Img26 from "../../../assets/University Images/USA/26.jpg";
-import Img27 from "../../../assets/University Images/USA/27.png";
-import Img28 from "../../../assets/University Images/USA/28.png";
-import Img29 from "../../../assets/University Images/USA/29.png";
-import Img30 from "../../../assets/University Images/USA/30.png";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import "./Country.css";
 import Marquee from "react-fast-marquee";
@@ -35,7 +5,7 @@ import Marquee from "react-fast-marquee";
 const universityData = [
   {
     id:1,
-    img: Img1,
+    img: "https://strapi.orientspectra.com/uploads/1_8d2a22d015.webp",
     universityName: "Concordia University Chicago",
     ielts: "6.0",
     tofel: "90",
@@ -43,7 +13,7 @@ const universityData = [
   },
   {
     id:2,
-    img: Img2,
+    img: "https://strapi.orientspectra.com/uploads/2_de0a32c4f0.webp",
     universityName: "Clark University",
     ielts: "6.0",
     tofel: "85",
@@ -51,7 +21,7 @@ const universityData = [
   },
   {
     id:3,
-    img: Img3,
+    img: "https://strapi.orientspectra.com/uploads/3_f420e86d10.webp",
     universityName: "Saint Martin's University",
     ielts: "6.0",
     tofel: "71",
@@ -59,7 +29,7 @@ const universityData = [
   },
   {
     id:4,
-    img: Img4,
+    img: "https://strapi.orientspectra.com/uploads/4_e2c548eaa9.webp",
     universityName: "Christian Brothers University",
     ielts: "6.0",
     tofel: "75",
@@ -67,7 +37,7 @@ const universityData = [
   },
   {
     id:5,
-    img: Img5,
+    img: "https://strapi.orientspectra.com/uploads/5_0c0fbbebe1.webp",
     universityName: "DePaul University",
     ielts: "6.5",
     tofel: "80",
@@ -75,7 +45,7 @@ const universityData = [
   },
   {
     id:6,
-    img: Img6,
+    img: "https://strapi.orientspectra.com/uploads/Drexel_University_b963377272_be190230ba.webp",
     universityName: "Drexel University",
     ielts: "6.0",
     tofel: "90",
@@ -83,7 +53,7 @@ const universityData = [
   },
   {
     id:7,
-    img: Img7,
+    img: "https://strapi.orientspectra.com/uploads/7_5fdff1c791.webp",
     universityName: "Elmhurst University",
     ielts: "6.5",
     tofel: "79",
@@ -91,7 +61,7 @@ const universityData = [
   },
   {
     id:8,
-    img: Img8,
+    img: "https://strapi.orientspectra.com/uploads/8_3d53a4e887.webp",
     universityName: "Florida Atlantic University",
     ielts: "6.0",
     tofel: "79",
@@ -99,7 +69,7 @@ const universityData = [
   },
   {
     id:9,
-    img: Img9,
+    img: "https://strapi.orientspectra.com/uploads/9_6d90c52e9d.webp",
     universityName: "Franklin University",
     ielts: "6.5",
     tofel: "79",
@@ -107,7 +77,7 @@ const universityData = [
   },
   {
     id:10,
-    img: Img10,
+    img: "https://strapi.orientspectra.com/uploads/10_223ae02f56.webp",
     universityName: "Golden Gate University",
     ielts: "6.5",
     tofel: "79",
@@ -115,7 +85,7 @@ const universityData = [
   },
   {
     id:11,
-    img: Img11,
+    img: "https://strapi.orientspectra.com/uploads/11_171ec4845f.webp",
     universityName: "Lawrence Technological University",
     ielts: "6.0",
     tofel: "79",
@@ -123,7 +93,7 @@ const universityData = [
   },
   {
     id:12,
-    img: Img12,
+    img: "https://strapi.orientspectra.com/uploads/12_43df1af268.webp",
     universityName: "Miami University",
     ielts: "6.5",
     tofel: "80",
@@ -131,7 +101,7 @@ const universityData = [
   },
   {
     id:13,
-    img: Img13,
+    img: "https://strapi.orientspectra.com/uploads/13_9199144523.webp",
     universityName: "Middle Tennessee University",
     ielts: "5.5",
     tofel: "61",
@@ -139,7 +109,7 @@ const universityData = [
   },
   {
     id:14,
-    img: Img14,
+    img: "https://strapi.orientspectra.com/uploads/14_cc731f511c.webp",
     universityName: "Rowan University",
     ielts: "6.0",
     tofel: "70",
@@ -147,7 +117,7 @@ const universityData = [
   },
   {
     id:15,
-    img: Img15,
+    img: "https://strapi.orientspectra.com/uploads/15_1d10bc99a6.webp",
     universityName: "Roosevelt University",
     ielts: "6.5",
     tofel: "80",
@@ -155,7 +125,7 @@ const universityData = [
   },
   {
     id:16,
-    img: Img16,
+    img: "https://strapi.orientspectra.com/uploads/16_aaeb23b30e.webp",
     universityName: "Arkansas State University",
     ielts: "6.5",
     tofel: "90",
@@ -163,7 +133,7 @@ const universityData = [
   },
   {
     id:17,
-    img: Img17,
+    img: "https://strapi.orientspectra.com/uploads/17_8f584cf868.webp",
     universityName: "Dallas Baptist University",
     ielts: "6.0",
     tofel: "79",
@@ -171,7 +141,7 @@ const universityData = [
   },
   {
     id:18,
-    img: Img18,
+    img: "https://strapi.orientspectra.com/uploads/18_8fe9baae03.webp",
     universityName: "Southern New Hampshire University",
     ielts: "6.0",
     tofel: "71",
@@ -179,7 +149,7 @@ const universityData = [
   },
   {
     id:19,
-    img: Img19,
+    img: "https://strapi.orientspectra.com/uploads/19_1c0a1297fe.webp",
     universityName: "Saint Louis University",
     ielts: "6.5",
     tofel: "80",
@@ -187,7 +157,7 @@ const universityData = [
   },
   {
     id:20,
-    img: Img20,
+    img: "https://strapi.orientspectra.com/uploads/20_961d001a59.webp",
     universityName: "Texas State University",
     ielts: "6.5",
     tofel: "78",
@@ -195,7 +165,7 @@ const universityData = [
   },
   {
     id:21,
-    img: Img21,
+    img: "https://strapi.orientspectra.com/uploads/21_f2a8e2623d.webp",
     universityName: "The University of Akron",
     ielts: "6.0",
     tofel: "71",
@@ -203,7 +173,7 @@ const universityData = [
   },
   {
     id:22,
-    img: Img22,
+    img: "https://strapi.orientspectra.com/uploads/22_9b6f6a2758.webp",
     universityName: "University of St.Thomas",
     ielts: "6.5",
     tofel: "79",
@@ -211,7 +181,7 @@ const universityData = [
   },
   {
     id:23,
-    img: Img23,
+    img: "https://strapi.orientspectra.com/uploads/23_8c28ad33c8.webp",
     universityName: "University of BridgePort",
     ielts: "6.0",
     tofel: "80",
@@ -219,7 +189,7 @@ const universityData = [
   },
   {
     id:24,
-    img: Img24,
+    img: "https://strapi.orientspectra.com/uploads/24_44d3fba583.webp",
     universityName: "University of Missouri Kansas City",
     ielts: "6.5",
     tofel: "80",
@@ -227,7 +197,7 @@ const universityData = [
   },
   {
     id:25,
-    img: Img25,
+    img: "https://strapi.orientspectra.com/uploads/25_b1b03626ab.webp",
     universityName: "University of Illinois Springfield",
     ielts: "6.0",
     tofel: "79",
@@ -235,7 +205,7 @@ const universityData = [
   },
   {
     id:26,
-    img: Img26,
+    img: "https://strapi.orientspectra.com/uploads/Umass_b17269ab7e_16f9ef5405.webp",
     universityName: "UMASS Boston University",
     ielts: "6.5",
     tofel: "79",
@@ -243,7 +213,7 @@ const universityData = [
   },
   {
     id:27,
-    img: Img27,
+    img: "https://strapi.orientspectra.com/uploads/27_fe9a926f35.webp",
     universityName: "University of Illinois Chicago",
     ielts: "6.5",
     tofel: "80",
@@ -251,7 +221,7 @@ const universityData = [
   },
   {
     id:28,
-    img: Img28,
+    img: "https://strapi.orientspectra.com/uploads/28_a4ac1cad51.webp",
     universityName: "Webster University",
     ielts: "6.0",
     tofel: "80",
@@ -259,7 +229,7 @@ const universityData = [
   },
   {
     id:29,
-    img: Img29,
+    img: "https://strapi.orientspectra.com/uploads/29_da2cf94c05.webp",
     universityName: "Western New England University",
     ielts: "6.0",
     tofel: "80",
@@ -267,7 +237,7 @@ const universityData = [
   },
   {
     id:30,
-    img: Img30,
+    img: "https://strapi.orientspectra.com/uploads/30_578d52440e.webp",
     universityName: "Massachusetts College of Pharmacy & Health Sciences",
     ielts: "6.5",
     tofel: "79",
@@ -284,7 +254,7 @@ const Univercity = () => {
         {universityData.map((item) => (
           <div className="univercityList" key={item.id}>
             <div className="univercityList-Img">
-              <img src={item.img} alt="" />
+              <img src={item.img} alt="University Image" loading="lazy"/>
             </div>
             <div className="Concordia-container">
               <div className="ConcordiaCard">

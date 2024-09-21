@@ -1,7 +1,4 @@
 import "./Country.css";
-import { Link } from "react-router-dom";
-import Img1 from "../../../assets/Country/Clip path group.png";
-import Img2 from "../../../assets/Country/graph.png";
 import { useState } from "react";
 import axios from "axios";
 
@@ -186,12 +183,12 @@ const State = () => {
           <span>GDP</span>
           <h3>£2.274 trillion</h3>
           <div className="imageCardGdp">
-            <img src={Img2} alt="" />
+            <img src="https://strapi.orientspectra.com/uploads/graph_ecd0e550a3.webp" alt="GDPgraph" />
           </div>
         </div>
         <div className="univercity-container">
           <div className="imageCardGdp2">
-            <img src={Img1} alt="" />
+            <img src="https://strapi.orientspectra.com/uploads/Clip_path_group_953a37abb6.webp" alt="University" />
           </div>
 
           <div className="univercity-card2">

@@ -200,8 +200,8 @@ const State = () => {
           </div>
         </div>
         <div className="International-conatiner">
-          <p>International Students</p>
-          <h1>458,210</h1>
+          <p>Indian Students in Germany</p>
+          <h1>49,483</h1>
         </div>
       </div>
     </div>

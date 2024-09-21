@@ -1,42 +1,43 @@
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import Img1 from "../../../assets/University Images/Germany/1.png";
-import Img2 from "../../../assets/University Images/Germany/2.png";
-import Img3 from "../../../assets/University Images/Germany/3.png";
-import Img4 from "../../../assets/University Images/Germany/4.png";
-import Img5 from "../../../assets/University Images/Germany/5.png";
-import Img6 from "../../../assets/University Images/Germany/6.png";
-import Img7 from "../../../assets/University Images/Germany/7.png";
 import "./Country.css";
 import Marquee from "react-fast-marquee";
 
 const universityData = [
   {
     key:1,
-    img: Img1,
+    img: "https://strapi.orientspectra.com/uploads/1_61d4a89cef.webp",
+    title: "EU Business School"
   },
   {
     key:2,
-    img: Img2,
+    img: "https://strapi.orientspectra.com/uploads/2_a6101c1a73.webp",
+    title: "University of Europe for Applied Sciences"
+
   },
   {
     key:3,
-    img: Img3,
+    img: "https://strapi.orientspectra.com/uploads/3_35008e0c54.webp",
+    title: "IU of Applied Sciences"
   },
   {
     key:4,
-    img: Img4,
+    img: "https://strapi.orientspectra.com/uploads/4_ab74fddb01.webp",
+    title: "SRH Berlin University of Applied Sciences"
   },
   {
     key:5,
-    img: Img5,
+    img: "https://strapi.orientspectra.com/uploads/5_e70654ef5b.webp",
+    title: "Gisma University of Applied Sciences"
   },
   {
     key:6,
-    img: Img6,
+    img: "https://strapi.orientspectra.com/uploads/6_67f8497b5d.webp",
+    title: "Steinbies University"
   },
   {
     key:7,
-    img: Img7,
+    img: "https://strapi.orientspectra.com/uploads/7_ebd0f3ee88.webp",
+    title: "Berlin of School Business & Inovation"
   },
 ];
 
@@ -49,11 +50,11 @@ const Univercity = () => {
           {universityData.map((item) => (
             <div className="univercityList" key={item.key}>
               <div className="univercityList-Img">
-                <img src={item.img} alt="" />
+                <img src={item.img} alt="University" loading="lazy" />
               </div>
               <div className="Concordia-container">
                 <div className="ConcordiaCard">
-                  <p>Concordia University Chicago</p>
+                  <p>{item.title}</p>
                   <ArrowForwardIcon className="rightArrowB" />
                 </div>
                 <div className="ConcordiaCard Ietes">

@@ -1,12 +1,4 @@
 import { Link } from "react-router-dom";
-import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
-import Img1 from "../../../assets/University Images/Germany/1.png";
-import Img2 from "../../../assets/University Images/Germany/2.png";
-import Img3 from "../../../assets/University Images/Germany/3.png";
-import Img4 from "../../../assets/University Images/Germany/4.png";
-import Img5 from "../../../assets/University Images/Germany/5.png";
-import Img6 from "../../../assets/University Images/Germany/6.png";
-import Img7 from "../../../assets/University Images/Germany/7.png";
 import "./Country.css";
 import { useState } from "react";
 
@@ -119,8 +111,9 @@ const Admissiontimeline = () => {
                 <div className="intakesCard">
                   <div className="imageContainer">
                     <img
-                      src="https://strapi.orientspectra.com/uploads/fall_1c6257491c.jpg"
-                      alt=""
+                     src="https://strapi.orientspectra.com/uploads/fall_1c6257491c_d2e984953b.webp"
+                     alt="Fall"
+                     loading="lazy"
                     />
                   </div>
                   <div className="intackText">
@@ -131,8 +124,9 @@ const Admissiontimeline = () => {
                 <div className="intakesCard">
                   <div className="imageContainer">
                     <img
-                      src="https://strapi.orientspectra.com/uploads/67de7faf_5f92_402d_929e_75686635e0d9_a95c028b0f.jpg"
-                      alt=""
+                      src="https://strapi.orientspectra.com/uploads/67de7faf_5f92_402d_929e_75686635e0d9_a95c028b0f_9c384ade6f.webp"
+                      alt="Spring"
+                      loading="lazy"
                     />
                   </div>
                   <div className="intackText">
@@ -159,76 +153,88 @@ const Admissiontimeline = () => {
             <div className="Popular_Universities">
               <div className="university-card">
                 <img
-                  src={Img1}
+                  src="https://strapi.orientspectra.com/uploads/1_61d4a89cef.webp"
                   alt="EU Business School"
+                  loading="lazy"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src={Img5}
+                  src="https://strapi.orientspectra.com/uploads/5_e70654ef5b.webp"
                   alt="GISMA University of Applied Sciences "
+                  loading="lazy"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src={Img2}
+                  src="https://strapi.orientspectra.com/uploads/2_a6101c1a73.webp"
                   alt="University of Europe for Applied Sciences "
+                  loading="lazy"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src={Img3}
+                  src="https://strapi.orientspectra.com/uploads/3_35008e0c54.webp"
                   alt="IU University of Applied Sciences "
+                  loading="lazy"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
                   src="https://strapi.orientspectra.com/uploads/Logo_update_6af66a1318.webp"
                   alt="New European College"
+                  loading="lazy"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
                   src="https://strapi.orientspectra.com/uploads/hochschule_macromedia_logo_rgb_blueberry_e296c7e1d4.webp"
                   alt="Marcomedia University"
+                  loading="lazy"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src={Img4}
+                  src="https://strapi.orientspectra.com/uploads/4_ab74fddb01.webp"
                   alt="SRH University"
+                  loading="lazy"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src={Img7}
+                  src="https://strapi.orientspectra.com/uploads/7_ebd0f3ee88.webp"
                   alt="Bersin School of Business & Innovation"
+                  loading="lazy"
                 />
               </div>
               <div className="university-card">
                 <img
                   src="https://strapi.orientspectra.com/uploads/1545396559_HSF_Logo_RZ_RGB_2748269be1.jpg"
                   alt="Fresenius University of Applied Sciences "
+                  loading="lazy"
                 />
               </div>
               <div className="university-card">
                 <img
-                  src={Img6}
+                  src="https://strapi.orientspectra.com/uploads/6_67f8497b5d.webp"
                   alt="Steinbeis University"
+                  loading="lazy"
                 />
               </div>
 
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/channels4_profile_removebg_preview_333e855e4d.png"
+                  src="https://strapi.orientspectra.com/uploads/thumbnail_channels4_profile_removebg_preview_333e855e4d_ad670dbaf2.webp"
                   alt="DIU(Dresden International University)"
+                  loading="lazy"
                 />
               </div>
 
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/1718285496_arden_univerrsity_logo_a26cdefcb8.png"
-                  alt="DIU(Dresden International University)"
+                  src="https://strapi.orientspectra.com/uploads/thumbnail_1718285496_arden_univerrsity_logo_a26cdefcb8_dfa35e1129.webp"
+                  alt="Andren University"
+                  loading="lazy"
                 />
               </div>
             </div>

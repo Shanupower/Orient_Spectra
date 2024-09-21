@@ -1,58 +1,49 @@
-import Icon1 from "../../../assets/Country/possport.png";
 import "./Country.css";
-import Icon2 from "../../../assets/Country/certificate.png";
-import Icon4 from "../../../assets/Country/Academic.png";
-import Icon5 from "../../../assets/Country/Refrence.png";
-import Icon6 from "../../../assets/Country/Letters.png";
-import Icon7 from "../../../assets/Country/Resume.png";
-import Icon8 from "../../../assets/Country/Statement.png";
-import Icon11 from "../../../assets/Country/Certificates.png";
-import Icon12 from "../../../assets/Country/Evidence.png";
 
 const AdmissionData = [
   {
     id:1,
-    icon: Icon1,
+    icon: "https://strapi.orientspectra.com/uploads/possport_0c65803b78.webp",
     title: "A Valid Passport",
   },
   {
     id:2,
-    icon: Icon2,
+    icon: "https://strapi.orientspectra.com/uploads/certificate_2b2662d10c.webp",
     title: "Proof of English Proficiency (Not Mandatory for all Universities)",
   },
   {
     id:3,
-    icon: Icon4,
+    icon: "https://strapi.orientspectra.com/uploads/Academic_0e24a00ca2.webp",
     title: "Academic Tanscripts",
   },
   {
     id:4,
-    icon: Icon5,
+    icon: "https://strapi.orientspectra.com/uploads/Refrence_d4804c3d2c.webp",
     title: "Academic Reference Letters",
   },
   {
     id:5,
-    icon: Icon6,
+    icon: "https://strapi.orientspectra.com/uploads/Letters_7e2220fd8a.webp",
     title: "Letters of Recommendation",
   },
   {
     id:6,
-    icon: Icon7,
+    icon: "https://strapi.orientspectra.com/uploads/Portfolio_6a09763c1d.webp",
     title: "CV/Resume",
   },
   {
     id:7,
-    icon: Icon8,
+    icon: "https://strapi.orientspectra.com/uploads/Statement_b50bc660b6.webp",
     title: "Statement of Purpose (SOP)",
   },
   {
     id:8,
-    icon: Icon11,
+    icon: "https://strapi.orientspectra.com/uploads/Certificates_734a5b9296.webp",
     title: "Certificate of Extracurricular Activities",
   },
   {
     id:9,
-    icon: Icon12,
+    icon: "https://strapi.orientspectra.com/uploads/Evidence_a35d42d28c.webp",
     title: "Evidence of Funds",
   },
 ];
@@ -74,7 +65,7 @@ const AdmitionRequired = () => {
         {AdmissionData.map((item) => (
           <div className="admission-detailscard" key={item.id}>
             <div className="Possporticon">
-              <img src={item.icon} alt="icon" className="possporticon" />
+              <img src={item.icon} alt="icon" className="possporticon" loading="lazy"/>
             </div>
             <p>{item.title}</p>
           </div>

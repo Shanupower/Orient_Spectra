@@ -21,11 +21,11 @@
 }
 .hero-content > p {
   font-size: 20px;
-  color: var(--text-color-darkblack);
+  color: white;
 }
 
 .hero-content > h1 {
-  color: var(--text-color-darkblack);
+  color: white;
   font-size: 48px;
   margin-block: 1rem;
   line-height: 1.2;
@@ -395,18 +395,16 @@
 }
 .Bussiness-card {
   background-color: rgb(241, 241, 241);
-  min-width: 400px;
+  width: 500px;
   border-radius: 20px;
   display: flex;
-  justify-content: space-between;
-  gap: 1.5rem;
-  margin-right: 1rem;
+  /* justify-content: space-between; */
+  gap: 5%;
   padding: 1.2rem 2rem;
   align-items: center;
 }
 .Bussiness-card > p {
-  font-size: 28px;
-  width: 70%;
+  font-size: 25px;
 }
 .Bussinesscenicon {
   font-size: 50px !important;
@@ -738,6 +736,15 @@
   }
   .univercityList-Img {
     height: 25vh !important;
+  }
+  .Bussiness-card {
+    width: 200px;
+    gap: 2%;
+    padding: 1.2rem 2rem;
+    align-items: center;
+  }
+  .Bussiness-card > p {
+    font-size: 18px;
   }
 
   .Rightcapital-container,

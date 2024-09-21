@@ -1,19 +1,6 @@
 import { Link } from "react-router-dom";
-import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import "./Country.css";
 import { useState } from "react";
-import Img2 from "../../../assets/University Images/UK/2.png";
-import Img3 from "../../../assets/University Images/UK/3.jpg";
-import Img4 from "../../../assets/University Images/UK/4.png";
-import Img6 from "../../../assets/University Images/UK/6.png";
-import Img8 from "../../../assets/University Images/UK/8.png";
-import Img9 from "../../../assets/University Images/UK/9.png";
-import Img10 from "../../../assets/University Images/UK/10.png";
-import Img13 from "../../../assets/University Images/UK/13.png";
-import Img16 from "../../../assets/University Images/UK/16.jpg";
-import Img18 from "../../../assets/University Images/UK/18.png";
-import Img19 from "../../../assets/University Images/UK/19.jpg";
-import Img22 from "../../../assets/University Images/UK/22.jpg";
 
 const Programdata = [
   {
@@ -116,8 +103,9 @@ const Admissiontimeline = () => {
                 <div className="intakesCard">
                   <div className="imageContainer">
                     <img
-                      src="https://strapi.orientspectra.com/uploads/fall_1c6257491c.jpg"
-                      alt=""
+                      src="https://strapi.orientspectra.com/uploads/fall_1c6257491c_d2e984953b.webp"
+                      alt="Fall"
+                      loading="lazy"
                     />
                   </div>
                   <div className="intackText">
@@ -128,8 +116,9 @@ const Admissiontimeline = () => {
                 <div className="intakesCard">
                   <div className="imageContainer">
                     <img
-                      src="https://strapi.orientspectra.com/uploads/67de7faf_5f92_402d_929e_75686635e0d9_a95c028b0f.jpg"
-                      alt=""
+                      src="https://strapi.orientspectra.com/uploads/67de7faf_5f92_402d_929e_75686635e0d9_a95c028b0f_9c384ade6f.webp"
+                      alt="Spring"
+                      loading="lazy"
                     />
                   </div>
                   <div className="intackText">
@@ -140,8 +129,9 @@ const Admissiontimeline = () => {
                 <div className="intakesCard">
                   <div className="imageContainer">
                     <img
-                      src="https://strapi.orientspectra.com/uploads/Summer_6b20b10000.jpg"
-                      alt=""
+                      src="https://strapi.orientspectra.com/uploads/Summer_6b20b10000_7979b72c34.webp"
+                      alt="Summer"
+                      loading="lazy"
                     />
                   </div>
                   <div className="intackText">
@@ -167,74 +157,85 @@ const Admissiontimeline = () => {
             <div className="Popular_Universities">
               <div className="university-card">
                 <img
-                  src={Img3}
+                  src="https://strapi.orientspectra.com/uploads/3_347d1f2c02.webp"
                   alt="Edinburgh Napier University"
+                  loading="lazy"
                 />
               </div>
               <div className="university-card">
                 <img
-                  src={Img6}
+                  src="https://strapi.orientspectra.com/uploads/6_ed0f9c0444.webp"
                   alt="Heroit Watt Univrsity"
+                  loading="lazy"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src={Img8}
+                  src="https://strapi.orientspectra.com/uploads/8_45019bf872.webp"
                   alt="Malvern House London"
+                  loading="lazy"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src={Img10}
+                  src="https://strapi.orientspectra.com/uploads/10_a73aebfada.webp"
                   alt="Northumbria University"
+                  loading="lazy"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src={Img16}
+                  src="https://strapi.orientspectra.com/uploads/16_3d3cc82a92.webp"
                   alt="University of Wolverhampton"
+                  loading="lazy"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src={Img18}
+                  src="https://strapi.orientspectra.com/uploads/18_d6f55d3a07.webp"
                   alt="University of Hertfordshire"
+                  loading="lazy"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src={Img19}
+                  src="https://strapi.orientspectra.com/uploads/19_bd7397c9ee.webp"
                   alt="University of East London"
+                  loading="lazy"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src={Img4}
+                  src="https://strapi.orientspectra.com/uploads/4_d5a5c04af5.webp"
                   alt="Wrexham University"
+                  loading="lazy"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src={Img9}
+                  src="https://strapi.orientspectra.com/uploads/9_23357945cf.webp"
                   alt="Middlesex University"
+                  loading="lazy"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src={Img13}
+                  src="https://strapi.orientspectra.com/uploads/13_447ed85804.webp"
                   alt="SaintPeter's University"
                 />
               </div>
               <div className="university-card">
                 <img
-                  src={Img22}
+                  src="https://strapi.orientspectra.com/uploads/22_e6bf53e162.webp"
                   alt="York st John University"
+                  loading="lazy"
                 />
               </div>
               <div className="university-card">
                 <img
-                  src={Img2}
+                  src="https://strapi.orientspectra.com/uploads/2_d0f68ec276.webp"
                   alt="Bradley University"
+                  loading="lazy"
                 />
               </div>
             </div>
