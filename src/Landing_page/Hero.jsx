@@ -102,7 +102,6 @@ const Hero = ({ blog, event }) => {
                   src={data.bgImage}
                   alt={data.alt}
                   onLoad={() => setIsLoading(false)}
-                  loading="lazy"
                 />
               </div>
 
