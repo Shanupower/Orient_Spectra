@@ -34,6 +34,8 @@ import ThankYou from "./Ads landing page/ThankYou";
 import UK_Jan_2025 from "./Ads landing page/UK_Januuary_2025/UK_Jan_2025";
 import Privacy_Policy from "./Component/Privacy_Policy/Privacy_Policy";
 import USA_SEPTEMBER_FAIR_2024 from "./Ads landing page/USA_SEPT_FAIR_2024/USA_SEPTEMBER_FAIR_2024";
+import NewsDetails from "./Component/NewsPR/NewsDetails";
+import EventDetails from "./Component/Event/EventDetails";
 
 function App() {
   const [openWhatwedo, setWhatwedoOpen] = useState(false);
@@ -103,8 +105,10 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/events" element={<Event />} />
+        <Route path="/event-details/:id" element={<EventDetails />} />
         <Route path="/study-overseas" element={<StudyOverseas />} />
         <Route path="/news-&-pr" element={<NewsPR />} />
+        <Route path="/news-&-pr-detail/:id" element={<NewsDetails />} />
         <Route path="/FindYourCourse" element={<Finding />}></Route>
         <Route path="/Coaching" element={<Coaching />}></Route>
         <Route path="/Mentorship" element={<Mentorship />}></Route>
@@ -119,7 +123,10 @@ function App() {
 
         <Route path="/uk-november-2024" element={<UK_EDU_FAIR />} />
         <Route path="/uk-january-2025" element={<UK_Jan_2025 />} />
-        <Route path="/usa-september-fair-2024" element={<USA_SEPTEMBER_FAIR_2024 />} />
+        <Route
+          path="/usa-september-fair-2024"
+          element={<USA_SEPTEMBER_FAIR_2024 />}
+        />
         <Route path="/thank-you" element={<ThankYou />} />
         <Route path="/privacy-policy" element={<Privacy_Policy />} />
       </Routes>

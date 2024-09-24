@@ -17,9 +17,12 @@ const Hero = ({ eventData }) => {
       }
     }
   };
+  const handleSingleEvnet = () => {
+    window.location.href = `event-details/${eventData[EventId]?.id}`;
+  };
 
   return (
-    <div className="Event-hero-container section2">
+    <div className="Event-hero-container section2" onClick={handleSingleEvnet}>
       <div className="event-hero-section">
         <div className="Experience-rightcard">
           <img

@@ -91,6 +91,7 @@ const Step5 = ({
   Subject,
 }) => {
   const [userInput, setUserInput] = useState("");
+  
   const filteredSubject = useMemo(() => {
     if (!userInput) {
       return null;
@@ -101,7 +102,9 @@ const Step5 = ({
     );
   }, [CourseData, userInput]);
 
-  console.log(Subject);
+
+
+
 
   const handleSubject = (item) => () => {
     if (!Subject.some((sub) => sub.id === item.id)) {

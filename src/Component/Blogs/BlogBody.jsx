@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import Aos from "aos";
 import "./SelectedBlog.css";
 import GetTuchWithUs from "../../Landing_page/GetTuchWithUs2";
 import Skeleton from "@mui/material/Skeleton";
