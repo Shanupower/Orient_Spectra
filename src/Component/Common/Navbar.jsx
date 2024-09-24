@@ -64,6 +64,11 @@ const StudyCountry = [
     link: "/country/study-in-canada",
   },
   {
+    name: "Ireland",
+    image: Ireland,
+    link: "/country/study-in-ireland",
+  },
+  {
     name: "Sweden",
     image: Sweden,
     link: "/country/study-in-sweden",
@@ -77,11 +82,6 @@ const StudyCountry = [
     name: "Singapore",
     image: Singapore,
     link: "/country/study-in-singapore",
-  },
-  {
-    name: "Ireland",
-    image: Ireland,
-    link: "/country/study-in-ireland",
   },
   {
     name: "Poland",
@@ -332,19 +332,20 @@ const Menuitem = [
       {
         key: "7",
         label: (
-          <Link style={{ textDecoration: "none" }} to="/country/study-in-switzerland">
-            Switzerland
+          <Link style={{ textDecoration: "none" }} to="/country/study-in-ireland">
+            Ireland
           </Link>
         ),
       },
       {
         key: "8",
         label: (
-          <Link style={{ textDecoration: "none" }} to="/country/study-in-ireland">
-            Ireland
+          <Link style={{ textDecoration: "none" }} to="/country/study-in-switzerland">
+            Switzerland
           </Link>
         ),
       },
+      
       {
         key: "9",
         label: (

@@ -55,8 +55,6 @@ const LandingPage = () => {
   }, []);
 
 
- 
-
   return (
     <>
       <Hero blog={blog} event={event} />

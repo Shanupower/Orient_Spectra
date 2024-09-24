@@ -97,7 +97,7 @@ const State = () => {
         <h1><span>Study Abroad in </span>France</h1>
         <p>
         Get expert guidance to help you get closer to your dream of studying in the France
-        and fastrack your US visa application process.{" "}
+        and fastrack your visa application process.{" "}
         </p>
         <div className="lead-form-container">
         <h3>Register for Personalized Counselling</h3>
@@ -168,7 +168,7 @@ const State = () => {
         <div className="Rightcapital-container">
           <div className="about-capital-card1">
             <span>Population </span>
-            <h2>64.88 Million</h2>
+            <h2>67 Million</h2>
           </div>
           <div className="about-capital-card1">
             <span>Language </span>
@@ -176,7 +176,7 @@ const State = () => {
           </div>
           <div className="about-capital-card1">
             <span>Currency </span>
-            <h2>Franc</h2>
+            <h2>Euro (€)</h2>
           </div>
         </div>
       </div>
@@ -184,7 +184,7 @@ const State = () => {
       <div className="GDP-container">
         <div className="gdp-card">
           <span>GDP</span>
-          <h3>$ 2.95 Trillon</h3>
+          <h3>$ 3 Trillon</h3>
           <div className="imageCardGdp">
             <img src={Img2} alt="" />
           </div>
@@ -200,8 +200,8 @@ const State = () => {
           </div>
         </div>
         <div className="International-conatiner">
-          <p>International Students</p>
-          <h1>412,000</h1>
+          <p>Indian Students in France</p>
+          <h1>10,000</h1>
         </div>
       </div>
     </div>

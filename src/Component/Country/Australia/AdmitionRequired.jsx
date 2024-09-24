@@ -18,7 +18,7 @@ import Icon12 from "../../../assets/Country/Evidence.png";
 const AdmissionData = [
   {
     icon: Icon1,
-    title: "Cop of a valid passport",
+    title: "Copy of a valid passport",
   },
   {
     icon: Icon2,

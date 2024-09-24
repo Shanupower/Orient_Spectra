@@ -117,7 +117,7 @@ const LeadFormPopUp = () => {
         ):(
           <div className="Dailog-container">
           <h2 className="DailogTitle">Europe Education Fair 2024</h2>
-          <h3>5th Oct 2024 | Hyatt Palace Hyderabad</h3>
+          <h3>5th Oct 2024 | Hyatt Place Hyderabad</h3>
           <p>Fill out the form below to register now:</p>
           <DialogContent>
             <form onSubmit={handleSubmitValidation}>

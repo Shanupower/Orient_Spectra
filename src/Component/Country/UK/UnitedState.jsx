@@ -51,6 +51,11 @@ const UnitedState = () => {
   return (
     <div className="unitedstate-continar section">
       <h1>Why United Kingdom</h1>
+      <p>Studying in the UK for a master's degree offers unparalleled advantages.The UK's strong 
+        innovation and critical thinking focus prepares you for the global job market. 
+        Choose overseas education in the UK to gain a prestigious degree, experience a vibrant lifestyle, 
+        and access exceptional resources, ensuring a bright future.
+      </p>
       <div className="whyWeStudy-container-UK">
         {StudyData.map((item) => (
           <div className="StudyingCard" key={item.id}>

@@ -40,7 +40,7 @@ const courseData = [
 const TrendingCourse = () => {
   return (
     <div className="section trending-course">
-      <h1>Top Courses in Singapore for Study Abroad Programs</h1>
+      <h1>Top Trending Courses in  <span>Singapore</span></h1>
       <p>
         Singapore offers a wide range of courses that are attractive to
         international students due to its high educational standards and vibrant

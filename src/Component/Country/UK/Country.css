@@ -385,6 +385,9 @@
 .ConcordiaCard > div > h2 {
   font-size: 32px;
 }
+.ConcordiaCard > div > h2 > span{
+  font-size: 22px;
+}
 
 .course-section-card {
   display: flex;

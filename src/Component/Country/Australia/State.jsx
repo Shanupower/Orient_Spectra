@@ -96,7 +96,7 @@ const State = () => {
         <h1><span>Study Abroad in </span>Australia</h1>
         <p>
         Get expert guidance to help you get closer to your dream of studying in the Australia
-        and fastrack your US visa application process.
+        and fastrack your visa application process.
         </p>
         <div className="lead-form-container">
         <h3>Register for Personalized Counselling</h3>
@@ -162,12 +162,12 @@ const State = () => {
       <div className="capital-container1">
         <div className="leftcapital-container">
           <span>Capital</span>
-          <h3>CanberraPopulation</h3>
+          <h3>Canberra</h3>
         </div>
         <div className="Rightcapital-container">
           <div className="about-capital-card1">
             <span>Population </span>
-            <h2>25.77 Million</h2>
+            <h2>26 Million</h2>
           </div>
           <div className="about-capital-card1">
             <span>Language </span>
@@ -175,7 +175,7 @@ const State = () => {
           </div>
           <div className="about-capital-card1">
             <span>Currency </span>
-            <h2>Australian Dollar</h2>
+            <h2>Australian Dollar (AUD)</h2>
           </div>
         </div>
       </div>
@@ -183,9 +183,9 @@ const State = () => {
       <div className="GDP-container">
         <div className="gdp-card">
           <span>GDP</span>
-          <h3>$ 1.74 Trillion</h3>
+          <h3>$ 1.7 Trillion</h3>
           <div className="imageCardGdp">
-            <img src={Img2} alt="" />
+            <img src="https://strapi.orientspectra.com/uploads/graph_ecd0e550a3.webp" alt="GDPgraph" />
           </div>
         </div>
         <div className="univercity-container">
@@ -195,12 +195,12 @@ const State = () => {
 
           <div className="univercity-card2">
             <p>Universities</p>
-            <h2>43</h2>
+            <h2>42</h2>
           </div>
         </div>
         <div className="International-conatiner">
-          <p>International Students</p>
-          <h1>869,709</h1>
+          <p>Indian Students in Australia</p>
+          <h1>1,18,109</h1>
         </div>
       </div>
     </div>

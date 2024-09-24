@@ -10,6 +10,24 @@ import "./index.css";
 
 const GetTuchWithUs = () => {
   const isAnimated = useInViewport();
+//   const handleClick = () => {
+//     // Create the span element
+//     const badge = document.createElement('span');
+//     badge.id = 'iasBadge';
+//     badge.setAttribute('data-account-id', '5815');
+
+//     // Append the span to the body (or a specific container)
+//     document.body.appendChild(badge);
+
+//     // Create and append the script
+//     const script = document.createElement('script');
+//     script.src = "https://www-cdn.icef.com/scripts/iasbadgeid.js";
+//     script.async = true;
+//     script.defer = true;
+//     script.crossOrigin = "anonymous";
+
+//     document.body.appendChild(script);
+// };
   return (
     <>
       <motion.div
@@ -43,7 +61,9 @@ const GetTuchWithUs = () => {
         </p>
         <div className="foreignAcedemic_marquee">
           <div className="foreignAcedemic_image_container">
-            <img src="https://strapi.orientspectra.com/uploads/Asset_4_2x_5_89df66b2f3.webp" alt="Asset 24"  loading="lazy"/>
+            <img src="https://strapi.orientspectra.com/uploads/Asset_4_2x_5_89df66b2f3.webp" 
+            alt="Asset 24"  
+            loading="lazy"/>
           </div>
           <div className="foreignAcedemic_image_container">
             <img src="https://strapi.orientspectra.com/uploads/Asset_2_2x_34ea0388b6.webp" alt="IELTS" loading="lazy" />

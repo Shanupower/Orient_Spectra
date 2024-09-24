@@ -5,33 +5,45 @@ import Marquee from "react-fast-marquee";
 const courseData = [
   {
     key: "1",
-    couseName: "Hotel & Hospitality Management",
+    couseName: "Hospitality ",
   },
   {
     key: "2",
-    couseName: "Business Management",
+    couseName: "Digital Business",
   },
   {
     key: "3",
-    couseName: "Interdisciplinary Sciences",
+    couseName: "Global Business Management",
   },
   {
     key: "4",
-    couseName: "Banking & Finance",
+    couseName: "Culinary Arts ",
   },
   {
     key: "5",
+    couseName: "MBA",
+  },
+  {
+    key: "6",
+    couseName: "Finance",
+  },
+  {
+    key: "6",
+    couseName: "Material Science",
+  },
+  {
+    key: "6",
     couseName: "Applied Mathematics",
   },
   {
     key: "6",
-    couseName: "Artificial Intelligence",
+    couseName: "Biomedical Engineering",
   },
 ];
 const TrendingCourse = () => {
   return (
     <div className="section trending-course">
-      <h1>Popular courses in Switzerland</h1>
+      <h1>Popular courses in <span>Switzerland</span></h1>
       <Marquee speed={100} pauseOnHover>
         <div className="univercity-section-card">
           {courseData.map((item) => (
