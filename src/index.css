@@ -65,11 +65,11 @@ html {
 }
 
 .WhatsApp {
-  /* display: block; */
+  display: none;
   position: fixed;
   bottom:20px;
   z-index: 6;
-  right: -35px;
+  left: 0rem;;
 }
 .WhatsApp > img {
   width: 70px;
