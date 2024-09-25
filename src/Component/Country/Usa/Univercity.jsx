@@ -254,7 +254,7 @@ const Univercity = () => {
         {universityData.map((item) => (
           <div className="univercityList" key={item.id}>
             <div className="univercityList-Img">
-              <img src={item.img} alt="University Image" loading="lazy"/>
+              <img src={item.img} alt="University Image"/>
             </div>
             <div className="Concordia-container">
               <div className="ConcordiaCard">
