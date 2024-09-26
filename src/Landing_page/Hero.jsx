@@ -72,20 +72,6 @@ const Hero = ({ blog, event }) => {
     [blog, event]
   );
 
-  /*Preloading the Images */
-
-  useEffect(() => {
-    const imageUrls = HeroPagedata.map((data) => data.bgImage);
-    preloadImages(imageUrls);
-  }, [HeroPagedata]);
-
-  const preloadImages = (imageUrls) => {
-    imageUrls.forEach((url) => {
-      const img = new Image();
-      img.src = url;
-    });
-  };
-
   const handleNavigate = (data) => {
     if (data.isPopUp) {
       setIsOpen(true);
