@@ -1,8 +1,8 @@
-import Hero from "./Hero";
+import Hero from "./OfflineHero";
 import "./ADS.css";
-import Universities from "./Universities";
-import EventDetails from "./EventDetails";
-import Benifits from "./Benifits";
+import Universities from "./OfflineUniversities";
+import EventDetails from "./OfflineEventDetails";
+import Benifits from "./OfflineBenifits";
 import WhyOs from "./WhyOS";
 import Testimonials from "./Testimonials";
 

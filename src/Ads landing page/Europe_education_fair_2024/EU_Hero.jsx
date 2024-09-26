@@ -29,28 +29,6 @@ const Hero = () => {
       if (response.status === 200) {
         alert("Form submitted successfully");
 
-        // Send email via EmailJS
-        // emailjs
-        //   .send(
-        //     "service_28ul4yvw",
-        //     "template_7z0xwsi1",
-        //     {
-        //       First_name: formData.First_name,
-        //       Last_name: formData.Last_name,
-        //       Email: formData.Email,
-        //       Mobile: formData.Mobile,
-        //       Intake_year: formData.Intake_year,
-        //       Intake_month: formData.Intake_month,
-        //     },
-        //     "6612831"
-        //   )
-        //   .then((result) => {
-        //     console.log("Email sent successfully:", result.text);
-        //   })
-        //   .catch((error) => {
-        //     console.error("Failed to send email:", error);
-        //   });
-
         // Reset form data
         setFormData({
           First_name: "",

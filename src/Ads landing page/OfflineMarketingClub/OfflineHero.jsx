@@ -1,12 +1,15 @@
 import { useEffect, useState } from "react";
 import "./ADS.css";
 import axios from "axios";
+import { useLocation } from "react-router-dom";
 // import emailjs from "emailjs-com";
 
 const Hero = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const location =useLocation();
 
   const [formData, setFormData] = useState({
     First_name: "",
@@ -15,7 +18,7 @@ const Hero = () => {
     Mobile: "",
     Intake_year: "",
     Intake_month: "",
-    Source:"/usa-september-fair-2024",
+    Source: location.pathname,
   });
 
   const [errors, setErrors] = useState({});
@@ -29,28 +32,6 @@ const Hero = () => {
       if (response.status === 200) {
         alert("Form submitted successfully");
 
-        // Send email via EmailJS
-        // emailjs
-        //   .send(
-        //     "service_28ul4yvw",
-        //     "template_7z0xwsi1",
-        //     {
-        //       First_name: formData.First_name,
-        //       Last_name: formData.Last_name,
-        //       Email: formData.Email,
-        //       Mobile: formData.Mobile,
-        //       Intake_year: formData.Intake_year,
-        //       Intake_month: formData.Intake_month,
-        //     },
-        //     "6612831"
-        //   )
-        //   .then((result) => {
-        //     console.log("Email sent successfully:", result.text);
-        //   })
-        //   .catch((error) => {
-        //     console.error("Failed to send email:", error);
-        //   });
-
         // Reset form data
         setFormData({
           First_name: "",
@@ -59,7 +40,7 @@ const Hero = () => {
           Mobile: "",
           Intake_year: "",
           Intake_month: "",
-          Source:"",
+          Source: location.pathname,
         });
       }
     } catch (errors) {
@@ -126,23 +107,24 @@ const Hero = () => {
   return (
     <div className="Leadgeneration-container section">
       <div className="Leadgeneration-content section">
-        <h1>USA Education Fair 2024</h1>
+        <h1>January  2025 Intake for Germany & France  is Now Open</h1>
         <p>
-        Applications for January 2025 intake are now open! Get personalized study abroad recommendations from university delegates. 
-        Our experts will walk you through the entire process right from course selection to visa processing.
+        Attend our Europe  Education Fair 2024 to talk directly with university delegates and select the best university 
+        and course for your career goal. Our experts will walk you through application process, scholarship and loan opportunities, 
+        and guide you through visa process.
         </p>
 
         <ul>
-          <li>Direct interaction with university delegates</li>
-          <li>Register for free & get Duolingo coupon</li>
-          <li>Claim application fee waivers</li>
-          <li>Free IELTS coaching for attendees</li>
+          <li>Direct interaction with University representatives</li>
+          <li>Application submission within 24 hours</li>
+          <li>Affordable tuition fees</li>
+          <li>Scholarship opportunities</li>
         </ul>
       </div>
       <div className="form-container">
-        <p> Register Now To Claim Duolingo Coupon</p>
+        <p>Fill out the form below to register now:</p>
         <form onSubmit={handleSubmitValidation}>
-          <div className="text-feild-container">
+          <div className="text-container">
             <div className="form-group">
               <input
                 type="text"

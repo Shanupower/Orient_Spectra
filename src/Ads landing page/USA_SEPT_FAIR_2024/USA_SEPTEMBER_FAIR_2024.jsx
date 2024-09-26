@@ -1,8 +1,8 @@
-import Hero from "./Hero";
+import Hero from "./USA_Hero";
 import "./ADS.css";
-import Universities from "./Universities";
-import EventDetails from "./EventDetails";
-import Benifits from "./Benifits";
+import Universities from "./USA_Universities";
+import EventDetails from "./USA_EventDetails";
+import Benifits from "./USA_Benifits";
 
 const USA_SEPTEMBER_FAIR_2024 =() =>{
     return(

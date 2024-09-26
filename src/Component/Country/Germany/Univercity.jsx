@@ -6,38 +6,129 @@ const universityData = [
   {
     key:1,
     img: "https://strapi.orientspectra.com/uploads/1_61d4a89cef.webp",
-    title: "EU Business School"
+    title: "EU Business School",
+    ielts: "6.5",
+    toefl: "89",
   },
   {
     key:2,
     img: "https://strapi.orientspectra.com/uploads/2_a6101c1a73.webp",
-    title: "University of Europe for Applied Sciences"
+    title: "University of Europe for Applied Sciences",
+    ielts: "5.5",
+    toefl: "72",
 
   },
   {
     key:3,
     img: "https://strapi.orientspectra.com/uploads/3_35008e0c54.webp",
-    title: "IU of Applied Sciences"
+    title: "IU of Applied Sciences",
+    ielts: "6.0",
+    toefl: "80",
   },
   {
     key:4,
     img: "https://strapi.orientspectra.com/uploads/4_ab74fddb01.webp",
-    title: "SRH Berlin University of Applied Sciences"
+    title: "SRH Berlin University of Applied Sciences",
+    ielts: "6.0",
+    toefl: "74",
   },
   {
     key:5,
     img: "https://strapi.orientspectra.com/uploads/5_e70654ef5b.webp",
-    title: "Gisma University of Applied Sciences"
+    title: "Gisma University of Applied Sciences",
+    ielts: "6.5",
+    toefl: "80",
   },
   {
     key:6,
     img: "https://strapi.orientspectra.com/uploads/6_67f8497b5d.webp",
-    title: "Steinbies University"
+    title: "Steinbies University",
+    ielts: "6.0",
+    toefl: "80",
   },
   {
     key:7,
     img: "https://strapi.orientspectra.com/uploads/7_ebd0f3ee88.webp",
-    title: "Berlin of School Business & Inovation"
+    title: "Berlin of School Business & Inovation",
+    ielts: "6.0",
+    toefl: "80",
+  },
+  // {
+  //   key:8,
+  //   img: "https://strapi.orientspectra.com/uploads/Logo_update_6af66a1318.webp",
+  //   title: "New European College",
+  //   ielts: "6.0",
+  //   toefl: "80",
+  // },
+  // {
+  //   key:9,
+  //   img: "https://strapi.orientspectra.com/uploads/hochschule_macromedia_logo_rgb_blueberry_e296c7e1d4.webp",
+  //   title: "Macromedia University of Applied Sciences",
+  //   ielts: "6.0",
+  //   toefl: "72",
+  // },
+  {
+    key:10,
+    img: "https://strapi.orientspectra.com/uploads/thumbnail_1545396559_HSF_Logo_RZ_RGB_2748269be1_ee75f83ce9.webp",
+    title: "Fresenius University of Applied Sciences",
+    ielts: "6.0",
+    toefl: "70",
+  },
+  {
+    key:11,
+    img: "https://strapi.orientspectra.com/uploads/thumbnail_channels4_profile_removebg_preview_333e855e4d_ad670dbaf2.webp",
+    title: "DIU(Dresden International University)",
+    ielts: "6.0",
+    toefl: "79",
+  },
+  {
+    key:12,
+    img: "https://strapi.orientspectra.com/uploads/thumbnail_1718285496_arden_univerrsity_logo_a26cdefcb8_dfa35e1129.webp",
+    title: "Arden University",
+    ielts: "6.0",
+    toefl: "60",
+  },
+  {
+    key:13,
+    img: "https://strapi.orientspectra.com/uploads/schiller_60yrs_color_80bc39a669.png",
+    title: "Schiller University- Germany",
+    ielts: "6.5",
+    toefl: "89",
+  },
+  {
+    key:14,
+    img: "https://strapi.orientspectra.com/uploads/ISM_ea654b47a3.png",
+    title: "ISM (International School of Management)",
+    ielts: "6.0",
+    toefl: "80",
+  },
+  {
+    key:15,
+    img: "https://strapi.orientspectra.com/uploads/SRH_University_Hamburg_20d9953426.jpg",
+    title: "SRH University Hamburg",
+    ielts: "6.5",
+    toefl: "87",
+  },
+  {
+    key:16,
+    img: "https://strapi.orientspectra.com/uploads/SRH_University_Heildeberg_45db6646b1.png",
+    title: "SRH University Heildeberg",
+    ielts: "6.5",
+    toefl: "80",
+  },
+  {
+    key:17,
+    img: "https://strapi.orientspectra.com/uploads/SRH_University_Hamm_89f434c67d.jpg",
+    title: "SRH University Hamm",
+    ielts: "6.5",
+    toefl: "80",
+  },
+  {
+    key:18,
+    img: "https://strapi.orientspectra.com/uploads/SRH_CAMPUS_LEIPZIG_9b2622fe26.png",
+    title: "SRH University Leipzig",
+    ielts: "6.5",
+    toefl: "87",
   },
 ];
 

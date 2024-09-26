@@ -101,6 +101,7 @@ const Hero = ({ blog, event }) => {
                 <img
                   src={data.bgImage}
                   alt={data.alt}
+                  crossOrigin="anonymous"
                   onLoad={() => setIsLoading(false)}
                 />
               </div>

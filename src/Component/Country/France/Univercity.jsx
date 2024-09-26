@@ -10,41 +10,36 @@ const universityData = [
     id:1,
     img: "https://strapi.orientspectra.com/uploads/LOGO_ESSCA_VERTICAL_01_1_b788331589.png",
     universityName: "ESSCA Business School",
-    ielts: "6.5",
-    tofel: "92",
-    backlogs: "0",
+    ielts: "6.0",
+    tofel: "85",
   },
   {
     id:2,
     img: "https://strapi.orientspectra.com/uploads/images_0a82f55b7a.png",
     universityName: "Avaincity University",
-    ielts: "6.5",
-    tofel: "79",
-    backlogs: "0",
+    ielts: "6.0",
+    tofel: "83",
   },
   {
     id:3,
     img: "https://strapi.orientspectra.com/uploads/images_1_5a5abf792e.png",
     universityName: "Paris School of Business",
-    ielts: "6.0",
-    tofel: "80",
-    backlogs: "0",
+    ielts: "5.5",
+    tofel: "70",
   },
   {
     id:4,
     img: "https://strapi.orientspectra.com/uploads/NEOMA_LOGOTYPE_RVB_dc7f3d584f.jpg",
     universityName: "NEOMA Business School",
-    ielts: "6.5",
-    tofel: "79",
-    backlogs: "0",
+    ielts: "6.0",
+    tofel: "83",
   },
   {
     id:5,
     img: "https://strapi.orientspectra.com/uploads/inseec_msc_and_mba_logo_vector_2d2825d28f.png",
     universityName: "INSEEC Business School",
     ielts: "6.5",
-    tofel: "79",
-    backlogs: "0",
+    tofel: "90",
   },
   {
     id:6,
@@ -52,15 +47,13 @@ const universityData = [
     universityName: "ICN Business School",
     ielts: "6.5",
     tofel: "79",
-    backlogs: "0",
   },
   {
     id: 7,
     img: "https://strapi.orientspectra.com/uploads/Rennes_School_of_Business_Unframed_Thinking_ccbeeb365c.jpg",
     universityName: "Rennes School of Business",
     ielts: "6.5",
-    tofel: "79",
-    backlogs: "0",
+    tofel: "80",
   },
   {
     id: 8,
@@ -68,47 +61,41 @@ const universityData = [
     universityName: "EM Normandie Business School",
     ielts: "6.5",
     tofel: "79",
-    backlogs: "0",
   },
   {
     id: 9,
     img: "https://strapi.orientspectra.com/uploads/ESCE_53bb5633f9.png",
-    universityName: "ESCE",
+    universityName: "ESCE International Business School",
     ielts: "6.5",
-    tofel: "79",
-    backlogs: "0",
+    tofel: "80",
   },
   {
     id: 10,
     img: "https://strapi.orientspectra.com/uploads/ECE_LOGO_20240226114033_ef71cfffe5.jpg",
     universityName: "ECE",
-    ielts: "6.5",
-    tofel: "79",
-    backlogs: "0",
+    ielts: "6.0",
+    tofel: "83",
   },
   {
     id: 11,
     img: "https://strapi.orientspectra.com/uploads/IUM_logo_849a1b2cdb.jpg",
     universityName: "IUM",
-    ielts: "6.5",
+    ielts: "6.0",
     tofel: "79",
-    backlogs: "0",
   },
   {
     id: 12,
     img: "https://strapi.orientspectra.com/uploads/supdepub_logo_88ee806908.png",
     universityName: "SupdePub University",
-    ielts: "6.5",
-    tofel: "79",
-    backlogs: "0",
+    ielts: "6.0",
+    tofel: "83",
   },
   {
     id: 13,
     img: "https://strapi.orientspectra.com/uploads/logo_6f60eed507.png",
     universityName: "CREA OMENS Education",
     ielts: "6.5",
-    tofel: "79",
-    backlogs: "0",
+    tofel: "80",
   },
   {
     id: 14,
@@ -116,39 +103,69 @@ const universityData = [
     universityName: "INSEEC MSc & MBA",
     ielts: "6.5",
     tofel: "79",
-    backlogs: "0",
   },
   {
     id: 15,
     img: "https://strapi.orientspectra.com/uploads/HEIP_a62b9b1544.png",
-    universityName: "Hautes Etudes Internationales & Politiques",
+    universityName: "HEIP",
     ielts: "6.5",
-    tofel: "79",
-    backlogs: "0",
+    tofel: "90",
   },
   {
     id: 16,
     img: "https://strapi.orientspectra.com/uploads/esamalumni_6a827c99cc.png",
     universityName: "ESAM Management Finance & Law",
     ielts: "6.5",
-    tofel: "79",
-    backlogs: "0",
+    tofel: "80",
   },
   {
     id: 17,
     img: "https://strapi.orientspectra.com/uploads/14044818275b59d00e941fb_3c104a7b37.jpg",
     universityName: "American Business School",
     ielts: "6.5",
-    tofel: "79",
-    backlogs: "0",
+    tofel: "80",
   },
   {
     id: 18,
     img: "https://strapi.orientspectra.com/uploads/ICD_Business_School_logo_1_1d14172aaf.png",
     universityName: "ICD Business School",
     ielts: "6.5",
-    tofel: "79",
-    backlogs: "0",
+    tofel: "80",
+  },
+  {
+    id: 19,
+    img: "https://strapi.orientspectra.com/uploads/Logo_MBS_Quadri_142x150_jpg_bd6fb61985.webp",
+    universityName: "Montpellier Business School",
+    ielts: "6.0",
+    tofel: "88",
+  },
+  {
+    id: 20,
+    img: "https://strapi.orientspectra.com/uploads/Istec_4cce9ccf92.png",
+    universityName: "ISTEC Business School",
+    ielts: "6.0",
+    tofel: "83",
+  },
+  {
+    id: 21,
+    img: "https://strapi.orientspectra.com/uploads/Logo_EMLV_dd9059bee5.png",
+    universityName: "EMLV",
+    ielts: "6.0",
+    tofel: "80",
+  },
+  {
+    id: 22,
+    img: "https://strapi.orientspectra.com/uploads/CEDS_d6036483cb.png",
+    universityName: "CEDS",
+    ielts: "6.5",
+    tofel: "90",
+  },
+  {
+    id: 23,
+    img: "https://strapi.orientspectra.com/uploads/LOGO_IPI_GIGS_VERTICAL_WEB_2021_22_V2_bfd95db14e.png",
+    universityName: "IPI - Paris",
+    ielts: "6.0",
+    tofel: "83",
   },
 ];
 
@@ -170,12 +187,12 @@ const Univercity = () => {
               </div>
               <div className="ConcordiaCard Ietes">
                 <div>
-                  <h2>7</h2>
-                  <p>Minimum IELTS Required</p>
+                  <h2>{item.ielts}</h2>
+                  <p>IELTS</p>
                 </div>
                 <div>
-                  <h2>16</h2>
-                  <p>Global Ranking</p>
+                  <h2>{item.tofel}</h2>
+                  <p>TOEFL</p>
                 </div>
               </div>
             </div>
