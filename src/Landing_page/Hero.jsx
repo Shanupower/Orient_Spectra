@@ -12,6 +12,7 @@ import { fabClasses, useMediaQuery } from "@mui/material";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import "./index.css";
 import Skeleton from "@mui/material/Skeleton";
+import HeroLeadFormPopUp from "./HeroLeadFormPopUp";
 
 const Hero = ({ blog, event }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -65,20 +66,31 @@ const Hero = ({ blog, event }) => {
         subtext: "",
         link: "event",
         buttonText: "Register Your Slot",
+        isPopUp: true,
       },
     ],
     [blog, event]
   );
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
+  /*Preloading the Images */
+
+  useEffect(() => {
+    const imageUrls = HeroPagedata.map((data) => data.bgImage);
+    preloadImages(imageUrls);
+  }, [HeroPagedata]);
+
+  const preloadImages = (imageUrls) => {
+    imageUrls.forEach((url) => {
+      const img = new Image();
+      img.src = url;
+    });
   };
 
   const handleNavigate = (data) => {
-    if (data.link == "blog") {
-      navigate("/content", { state: { data: blog } });
-    } else if (data.link == "event") {
-      navigate("/events", { state: { data: event } });
+    if (data.isPopUp) {
+      setIsOpen(true);
+    } else {
+      navigate("/start-your-journey");
     }
   };
 
@@ -101,7 +113,6 @@ const Hero = ({ blog, event }) => {
                 <img
                   src={data.bgImage}
                   alt={data.alt}
-                  crossOrigin="anonymous"
                   onLoad={() => setIsLoading(false)}
                 />
               </div>
@@ -113,7 +124,7 @@ const Hero = ({ blog, event }) => {
                 <Button
                   text={data.buttonText}
                   arrow={true}
-                  link="/start-your-journey"
+                  onClick={()=>handleNavigate(data)}
                   className="StudyButtonCard"
                 />
               </div>
@@ -121,6 +132,11 @@ const Hero = ({ blog, event }) => {
           ))}
         </Carousel>
       </div>
+      {isOpen &&  
+      <div role="dialog" aria-hidden={!isOpen}>
+        <HeroLeadFormPopUp />
+        </div> 
+        }
     </div>
   );
 };

@@ -150,12 +150,12 @@ const Univercity = () => {
                 </div>
                 <div className="ConcordiaCard Ietes">
                   <div>
-                    <h2>7</h2>
-                    <p>Minimum IELTS Required</p>
+                    <h2>{item.ielts}</h2>
+                    <p>IELTS</p>
                   </div>
                   <div>
-                    <h2>16</h2>
-                    <p>Global Ranking</p>
+                    <h2>{item.toefl}</h2>
+                    <p>TOEFL</p>
                   </div>
                 </div>
               </div>
