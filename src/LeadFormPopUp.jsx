@@ -103,6 +103,13 @@ const LeadFormPopUp = () => {
         onClose={handleClose}
         aria-labelledby="popup-dialog-title"
         aria-describedby="popup-dialog-description"
+        maxWidth="lg" // Adjust maxWidth here (e.g., 'xs', 'sm', 'md', 'lg', 'xl')
+        PaperProps={{
+          sx: {
+            width: { xs: '100%', sm: '80%', md: '70%', lg: '50%' }, // Customize the width for responsiveness
+            maxWidth: 'none', // Disable the default max-width for complete control
+          },
+        }}
         className='DailogBox'
       >
         {formSubmitted ? (
@@ -115,8 +122,10 @@ const LeadFormPopUp = () => {
         </div>
         </div>
         ):(
+          <>
           <div className="Dailog-container">
-          <h2 className="DailogTitle">Europe Education Fair 2024</h2>
+          <div className='DailogContent'>
+          <h2 className="DailogTitle">Europe Education Fair <span>2024</span></h2>
           <h3>5th Oct 2024 | Hyatt Place Hyderabad</h3>
           <p>Fill out the form below to register now:</p>
           <DialogContent>
@@ -178,9 +187,11 @@ const LeadFormPopUp = () => {
             </form>
             <p onClick={handleClose} className='SkipNow'>Skip Now </p>
           </DialogContent>
-          
           </div>
-
+          <img src="https://strapi.orientspectra.com/uploads/391_x_520_EU_Event_Banner_6605cc7233.jpg" alt="EventImage" className='ImageContainer'/>
+          </div>
+           
+          </>
         )}
       </Dialog>
     </div>

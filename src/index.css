@@ -81,43 +81,61 @@ html {
   height: 70px;
   cursor: pointer;
 }
-
 .Dailog-container {
   padding: 2rem;
-  background-color: #306398;
+  background-color: white;
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  background-image: url("https://strapi.orientspectra.com/uploads/testimonial_map_45da579353.png");
+  background-size:cover;
+  background-repeat: no-repeat;
 }
 .popup-dialog-title {
   font-size: 20px;
 }
 .popup-text-feild {
   width: 100%;
+  margin-top: 10px;
 }
 .popup-form-group {
   width: 100%;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 .popup-input-field {
   width: 100%;
   font-size: 15px;
   padding: 10px;
+  border: 1px solid var(--brand-color);
+  border-radius: 20px;
+}
+.DailogContent {
+  width: 70%;
 }
 .DailogTitle {
-  font-size: 30px;
+  font-size: 28px;
   text-align: center;
-  color: white;
+  color: #306398;
 }
-.Dailog-container > h3 {
+.DailogTitle > span {
+  color: var(--brand-color);
+}
+.DailogContent > h3 {
   font-size: 20px;
-  color: white;
-  font-weight: 500;
+  color: #306398;
+  font-weight: 600;
   text-align: center;
 }
-.Dailog-container > p {
+.DailogContent > p {
   font-size: 18px;
-  color: white;
-  font-weight: 500;
+  color: black;
+  font-weight: 600;
   text-align: center;
-  margin-top: 5px;
+  margin-top: 10px;
+}
+.ImageContainer {
+  width: 50%;
+  border-radius: 20px;
 }
 .popup-form-container-button {
   width: 100%;
@@ -128,6 +146,7 @@ html {
   color: white;
   margin-top: 0 !important;
   cursor: pointer;
+  border-radius: 20px;
 }
 .success-message {
   padding: 3rem;
@@ -156,39 +175,45 @@ html {
   margin-top: 10px;  
 }
 .SkipNow {
-  color: white;
+  color: black;
   text-decoration: underline;
-  font-size: 23px;
+  font-size: 20px;
   font-weight: 600;
   text-align: center;
   cursor: pointer;
   margin-top: 10px; 
 }
 @media (max-width: 986px) {
+  .ImageContainer {
+    display: none;
+  }
   .DailogBox {
     margin-left: -15px;
     margin-right: 20px;
   }
   .Dailog-container {
     padding: 1.2rem;
+
   }
-  .Dailog-container > h3 {
+  .DailogContent {
+    width: 100%;
+  }
+  .DailogContent > h3 {
+    font-size: 17px;
+    color: #306398;
+    font-weight: 600;
+    text-align: center;
+  }
+  .DailogContent > p {
     font-size: 16px;
-    color: white;
-    font-weight: 500;
+    color: black;
     text-align: center;
-  }
-  .Dailog-container > p {
-    font-size: 15px;
-    color: white;
-    font-weight: 500;
-    text-align: center;
-    margin-top: 5px;
   }
   .DailogTitle {
-    font-size: 22px;
+    font-size: 25px;
     text-align: center;
   }
+
   .success-message {
     padding: 2rem;
   }
