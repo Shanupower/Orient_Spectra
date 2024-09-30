@@ -47,7 +47,7 @@ const Admissiontimeline = () => {
       <div className="section Addmission-timeline-container">
         <div className="admissionTime-container">
           <div className="admissintimeline-card">
-            <h2>Admission Timeline</h2>
+            <h2>Admission Details</h2>
             <div className="coursemaster">
               <Link
                 onClick={() => handleAdmissionType("Graduates")}
@@ -129,37 +129,40 @@ const Admissiontimeline = () => {
                 <div className="intakesCard">
                   <div className="imageContainer">
                     <img
-                      src="https://strapi.orientspectra.com/uploads/fall_1c6257491c.jpg"
-                      alt=""
+                      src="https://strapi.orientspectra.com/uploads/fall_1c6257491c_d2e984953b.webp"
+                      alt="fall"
+                      loading="lazy"
                     />
                   </div>
                   <div className="intackText">
                     <b>Fall</b>
-                    <p> September of every year</p>
+                    <p> September Intake</p>
                   </div>
                 </div>
                 <div className="intakesCard">
                   <div className="imageContainer">
                     <img
-                      src="https://strapi.orientspectra.com/uploads/67de7faf_5f92_402d_929e_75686635e0d9_a95c028b0f.jpg"
-                      alt=""
+                      src="https://strapi.orientspectra.com/uploads/67de7faf_5f92_402d_929e_75686635e0d9_a95c028b0f_9c384ade6f.webp"
+                      alt="Spring"
+                      loading="lazy"
                     />
                   </div>
                   <div className="intackText">
                     <b>Spring</b>
-                    <p> January of every year</p>
+                    <p> January Intake</p>
                   </div>
                 </div>
                 <div className="intakesCard">
                   <div className="imageContainer">
                     <img
-                      src="https://strapi.orientspectra.com/uploads/Summer_6b20b10000.jpg"
-                      alt=""
+                      src="https://strapi.orientspectra.com/uploads/Summer_6b20b10000_7979b72c34.webp"
+                      alt="Summer"
+                      loading="lazy"
                     />
                   </div>
                   <div className="intackText">
                     <b>Summer</b>
-                    <p> May of every year</p>
+                    <p> May Intake</p>
                   </div>
                 </div>
               </div>
@@ -170,9 +173,6 @@ const Admissiontimeline = () => {
               <div className="program-card">
                 {Programdata?.map((item, index) => (
                   <div key={index} className="prgram-item-container">
-                    {/* <div className="icon_image">
-                      <img src={item.icon} alt="" />
-                    </div> */}
                     <p className="program-name"> {item.text}</p>
                   </div>
                 ))}
@@ -185,74 +185,86 @@ const Admissiontimeline = () => {
             <div className="Popular_Universities">
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/University_of_Cincinnati_a00123d710.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/University_of_Cincinnati_a00123d710_38fdac210d.webp"
+                  alt="niversity_of_Cincinnati"
+                  loading="lazy"
                 />
               </div>
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/Northeastern_University_Logo_1ac770efc3.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/Northeastern_University_Logo_1ac770efc3_920d385bec.webp"
+                  alt="NorthEastern University"
+                  loading="lazy"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/George_Mason_University_b9fb5b4192.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/George_Mason_University_b9fb5b4192_e8dc9da285.webp"
+                  alt="George_Mason_University"
+                  loading="lazy"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/University_of_Houston_Main_Campus_d3e90f8c69.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/University_of_Houston_Main_Campus_d3e90f8c69_60dae98bb5.webp"
+                  alt="University_of_Houston" 
+                  loading="lazy"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/University_of_Maryland_Baltimore_County_cb629dab69.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/California_State_University_Long_Beach_98122890c0_c4b9650b13.webp"
+                  alt="California_State_University"
+                  loading="lazy"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/University_at_Buffalo_logo_4c62684ee5.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/University_at_Buffalo_logo_4c62684ee5_56f57bb3b5.webp"
+                  alt="University_at_Buffalo"
+                  loading="lazy"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/California_State_University_Long_Beach_98122890c0.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/Drexel_University_b963377272_be190230ba.webp"
+                  alt="Drexel_University"
+                  loading="lazy"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/Umass_b17269ab7e.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/Umass_b17269ab7e_16f9ef5405.webp"
+                  alt="Umass"
+                  loading="lazy"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/stony_brook_0fc916d964.jpeg"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/stony_brook_0fc916d964_3caec65243.webp"
+                  alt="stony_brook"
+                  loading="lazy"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/arizona_state_university_963dab0ee7.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/arizona_state_university_963dab0ee7_4096837dd7.webp"
+                  alt="arizona_state_university"
+                  loading="lazy"
                 />
               </div>
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/Drexel_University_b963377272.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/John_Hopkins_University_06d1f2734d_a9450a9f94.webp"
+                  alt="John_Hopkins_University"
+                  loading="lazy"
                 />
               </div>
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/John_Hopkins_University_06d1f2734d.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/University_of_Maryland_Baltimore_County_cb629dab69_ba3e2d0469.webp"
+                  alt="University_of_Maryland_Baltimore_County"
+                  loading="lazy"
                 />
               </div>
             </div>

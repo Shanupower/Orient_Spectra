@@ -17,53 +17,34 @@ import Icon12 from "../../../assets/Country/Evidence.png";
 
 const AdmissionData = [
   {
-    icon: Icon1,
-    title: "Cop of a valid passport",
-  },
-  {
-    icon: Icon2,
-    title: "Proof of English proficiency (OEFL/IELTS test scores)",
-  },
-  {
+    key: 1,
     icon: Icon3,
-    title: "ACT/SAT/LSAT forUG programs, GMAT/GRE scores for PG programs",
+    title: "Choose Your Program and University",
   },
   {
-    icon: Icon4,
-    title: "Academic Tanscripts from the previous study",
+    key: 2,
+    icon: Icon2,
+    title: "Check Admission Requirements",
   },
   {
+    key: 3,
     icon: Icon5,
     title:
-      "Academic Refrence Letters, the number of reference letters depends from university to university",
+      "Prepare Your Documents",
   },
   {
-    icon: Icon6,
-    title: "Letters of recommendation fromthe employer/manager (if applicable)",
+    key: 4,
+    icon: Icon4,
+    title: "Apply Online",
   },
   {
-    icon: Icon7,
-    title: "CV/Resume",
+    key: 5,
+    icon: Icon1,
+    title: "Obtain a Student Visa",
   },
   {
-    icon: Icon8,
-    title: "Statement of Purpose (SOP)",
-  },
-  {
-    icon: Icon9,
-    title: "Essays (if dmanded by the university)",
-  },
-  {
-    icon: Icon10,
-    title: "Portfolio (for specific courses)",
-  },
-  {
-    icon: Icon11,
-    title: "      Certificates of extracurricular activities      ",
-  },
-  {
-    icon: Icon12,
-    title: "Evidence of Funds",
+    icon: "https://strapi.orientspectra.com/uploads/resident_bd19a54281.webp",
+    title: "Arrange Accommodation",
   },
 ];
 const AdmitionRequired = () => {
@@ -72,7 +53,7 @@ const AdmitionRequired = () => {
       <div className="admissioncard-sticy">
         <h1>
           Admission Requirements for <br />
-          <b>United States Study Abroad</b>
+          <b>Poland Study Abroad</b>
         </h1>
       </div>
 

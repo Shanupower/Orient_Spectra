@@ -21,11 +21,11 @@
 }
 .hero-content > p {
   font-size: 20px;
-  color: var(--text-color-darkblack);
+  color: white;
 }
 
 .hero-content > h1 {
-  color: var(--text-color-darkblack);
+  color: white;
   font-size: 48px;
   margin-block: 1rem;
   line-height: 1.2;
@@ -41,12 +41,19 @@
   flex-wrap: wrap;
   margin-block: 3rem;
 }
-
+.state-container > h1 > span {
+  color: var(--text-color-darkblack);
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 500;
+}
 .state-container > h1 {
-  width: calc(70% / 3 - 1rem);
+  width: calc(70 / 3 - 1rem) !important;
   color: var(--brand-color);
   font-size: 48px;
   line-height: 1.2;
+  align-self: center;
+  margin-top: -50px;
 }
 
 .state-container > p {
@@ -54,10 +61,48 @@
   font-size: 28px;
   line-height: 1.2;
   color: var(--text-color-darkblack);
+  align-self: center;
 }
 
-.state-container > div {
-  width: calc(80% / 3 - 1rem);
+.lead-form-container {
+  width: calc(95% / 3 - 1rem);
+  background-color: #1f7aff;
+  padding: 1.5rem 3rem 1.5rem 3rem;
+  border-radius: 20px;
+
+}
+
+/*lead-form Container */
+.lead-form-container > h3 {
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: white;
+}
+.text-feild {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem !important;
+}
+.form-fields {
+  margin-bottom: 0.5rem; /* Space between form fields */
+  position: relative; /* Ensure error message is positioned relative to this container */
+  width: 100% !important;
+}
+.input-fields {
+  width: 100%;
+  font-size: 15px;
+  padding: 5px;
+}
+.form-button {
+  width: 100%;
+  font-size: 20px;
+  font-weight: 700;
+  background-color: var(--brand-color);
+  border: none;
+  color: white;
+  margin-top: 0 !important;
+  cursor: pointer;
 }
 
 /* H */
@@ -350,18 +395,16 @@
 }
 .Bussiness-card {
   background-color: rgb(241, 241, 241);
-  min-width: 400px;
+  width: 500px;
   border-radius: 20px;
   display: flex;
-  justify-content: space-between;
-  gap: 1.5rem;
-  margin-right: 1rem;
+  /* justify-content: space-between; */
+  gap: 5%;
   padding: 1.2rem 2rem;
   align-items: center;
 }
 .Bussiness-card > p {
-  font-size: 28px;
-  width: 70%;
+  font-size: 25px;
 }
 .Bussinesscenicon {
   font-size: 50px !important;
@@ -645,6 +688,7 @@
   .state-container > h1 {
     width: 100% !important;
     font-size: 38px !important;
+    margin-top: 10px !important;
   }
   .state-container > p {
     width: 100% !important;
@@ -692,6 +736,15 @@
   }
   .univercityList-Img {
     height: 25vh !important;
+  }
+  .Bussiness-card {
+    width: 200px;
+    gap: 2%;
+    padding: 1.2rem 2rem;
+    align-items: center;
+  }
+  .Bussiness-card > p {
+    font-size: 18px;
   }
 
   .Rightcapital-container,
@@ -770,7 +823,7 @@
   }
   .state-container > p {
     /* width: 100% !important; */
-    font-size: 22px !important;
+    font-size: 22px;
   }
   .state-container > div {
     /* width: 100% !important; */

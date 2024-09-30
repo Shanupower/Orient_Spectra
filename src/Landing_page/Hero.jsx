@@ -12,6 +12,7 @@ import { fabClasses, useMediaQuery } from "@mui/material";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import "./index.css";
 import Skeleton from "@mui/material/Skeleton";
+import HeroLeadFormPopUp from "./HeroLeadFormPopUp";
 
 const Hero = ({ blog, event }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,7 +27,8 @@ const Hero = ({ blog, event }) => {
         text: "Make Your Study Abroad ",
         heading: "Dream A Reality",
         bgImage:
-          "https://strapi.orientspectra.com/uploads/Banner_03_07b8ebd9f0.jpg",
+          "https://strapi.orientspectra.com/uploads/Banner_03_91ff06ff51.webp",
+        alt:"Banner3",
         subtext:
           "We helped over 15000+ students in their journey to study abroad across USA, UK, Germany, Australia, and so on.",
         buttonText: "Get Dedicated Counsellor",
@@ -36,7 +38,8 @@ const Hero = ({ blog, event }) => {
         text: "Want To Know",
         heading: "How To Study Abroad?",
         bgImage:
-          "https://strapi.orientspectra.com/uploads/Banner_02_ab30739bfe.jpg",
+          "https://strapi.orientspectra.com/uploads/Banner_02_ab30739bfe_f492f9774c.webp",
+        alt:"Study Abroad",
         subtext:
           "Our expert counsellors will help you through the visa application process, and ensure you land in your dream course.",
         link: "event",
@@ -47,46 +50,33 @@ const Hero = ({ blog, event }) => {
         text: "Begin Your Journey",
         heading: " of MS in USA",
         bgImage:
-          "https://strapi.orientspectra.com/uploads/USA_Banner_5a5338b6e3.jpg",
+          "https://strapi.orientspectra.com/uploads/USA_Banner_f047158782.webp",
+        alt:"USA",
         subtext:
           "Get complete guidance on your visa application, university intakes, and scholarship opportunities. Talk to our counsellors.",
         link: "blog",
         buttonText: "Book A Guidance Call",
       },
-      // {
-      //   id: 3,
-      //   // heading: blog?.attributes?.Title || "Rise of new education",
-      //   heading: "Masters in UK",
-      //   bgImage: `https://strapi.orientspectra.com/uploads/UK_Banner_9a54aba2cf.jpg`,
-      //   subtext:
-      //     // blog?.attributes?.Short_Description ||
-      //     "UK university graduates are prepared with the ability to think critically and creatively.",
-      //     // "– US, UK, Australia and Canada – face headwinds",
-      //   link: "blog",
-      //   buttonText:"Book A Guidance Call",
-      // },
       {
         id: 4,
         text: "",
         heading: "",
-        bgImage: "https://strapi.orientspectra.com/uploads/Website_Event_Banner_UK_382d03b7ea.jpg",
+        bgImage: "https://strapi.orientspectra.com/uploads/EU_Website_Event_Banner_e1a4b40be6.webp",
+        alt:"event",
         subtext: "",
         link: "event",
         buttonText: "Register Your Slot",
+        isPopUp: true,
       },
     ],
     [blog, event]
   );
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
   const handleNavigate = (data) => {
-    if (data.link == "blog") {
-      navigate("/content", { state: { data: blog } });
-    } else if (data.link == "event") {
-      navigate("/events", { state: { data: event } });
+    if (data.isPopUp) {
+      setIsOpen(true);
+    } else {
+      navigate("/start-your-journey");
     }
   };
 
@@ -108,7 +98,7 @@ const Hero = ({ blog, event }) => {
                 )}
                 <img
                   src={data.bgImage}
-                  alt=""
+                  alt={data.alt}
                   onLoad={() => setIsLoading(false)}
                 />
               </div>
@@ -117,44 +107,22 @@ const Hero = ({ blog, event }) => {
                 <p className="hero_Heading">{data?.text}</p>
                 <h1 className="hero_Heading BoldHeading">{data.heading}</h1>
                 <p className="heroSubtext">{data.subtext}</p>
-                {/* <div
-                  className="StudyButtonCard"
-                  onClick={() => handleNavigate(data)}
-                > */}
                 <Button
                   text={data.buttonText}
                   arrow={true}
-                  link="/start-your-journey"
+                  onClick={()=>handleNavigate(data)}
                   className="StudyButtonCard"
                 />
-                {/* </div> */}
               </div>
             </div>
           ))}
         </Carousel>
       </div>
-      {/* Pop up Button */}
-      <div className="popUpBotton">
-        <div className="menu-container">
-          <div className="menu-button" onClick={toggleMenu}>
-            <AddIcon
-              sx={{ fontSize: isMd ? "20px" : "34px" }}
-              className={isOpen ? "buttonnRotate" : "reverceRotete"}
-            />
-          </div>
-          <div className={`menu-items ${isOpen ? "open" : ""}`}>
-            <a href="#" className="menu-item call">
-              <img src={Whatsapp} alt="" />
-            </a>
-            <a href="#" className="menu-item window">
-              <img src={Window} alt="" />
-            </a>
-            <a href="#" className="menu-item whatsapp">
-              <img src={Mic} alt="" />
-            </a>
-          </div>
-        </div>
-      </div>
+      {isOpen &&  
+      <div role="dialog" aria-hidden={!isOpen}>
+        <HeroLeadFormPopUp />
+        </div> 
+        }
     </div>
   );
 };

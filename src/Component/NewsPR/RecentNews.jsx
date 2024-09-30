@@ -12,7 +12,7 @@ const RecentNews = ({ NewsData }) => {
   return (
     <div className="Recent-newws-container section">
       {NewsData?.map((item) => (
-        <div key={item} className="recent_news_section">
+        <div key={item.id} className="recent_news_section">
           <div className="Recentnews-card">
             <div className="recentnews-card-img">
               {isLoading && (

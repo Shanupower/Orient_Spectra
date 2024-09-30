@@ -24,7 +24,7 @@ const items = [
           <Button text=" Find Your Course" arrow={true} />
         </div>
         <div className="course_container_inner_right">
-          <img src={Banner1} alt="" />
+          <img src="https://strapi.orientspectra.com/uploads/Frame_6_22ef29815f.webp" alt="Diverse" loading="lazy"/>
         </div>
       </div>
     ),
@@ -46,7 +46,7 @@ const items = [
           <Button text=" Find Your Course" arrow={true} />
         </div>
         <div className="course_container_inner_right">
-          <img src={Banner2} alt="" />
+          <img src="https://strapi.orientspectra.com/uploads/Property_1_Default_dfeaa102ab.webp" alt="Global" loading="lazy"/>
         </div>
       </div>
     ),
@@ -67,7 +67,7 @@ const items = [
           <Button text=" Find Your Course" arrow={true} />
         </div>
         <div className="course_container_inner_right">
-          <img src={Banner3} alt="" />
+          <img src="https://strapi.orientspectra.com/uploads/Property_1_Default_1_1aa38fd23d.webp" alt="Experience" loading="lazy"/>
         </div>
       </div>
     ),

@@ -11,6 +11,7 @@ import Consectetuer from "./Consectetuer";
 import Founders from "./Founders";
 import Hero from "./Hero";
 import Story from "./Story";
+import Country from "../../Landing_page/Country";
 
 const About = () => {
   useEffect(() => {
@@ -20,7 +21,8 @@ const About = () => {
     <>
       <Hero />
       <Story />
-      <Counselors />
+      <Country />
+      {/* <Counselors /> */}
       <Consectetuer />
       <Founders />
       {/* <AboutCountry /> */}

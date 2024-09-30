@@ -41,25 +41,68 @@
   flex-wrap: wrap;
   margin-block: 3rem;
 }
-
+.state-container > h1 > span {
+  color: var(--text-color-darkblack);
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 500;
+}
 .state-container > h1 {
-  width: calc(70% / 3 - 1rem);
+  width: calc(70 / 3 - 1rem) !important;
   color: var(--brand-color);
   font-size: 48px;
   line-height: 1.2;
+  align-self: center;
+  margin-top: -50px;
 }
 
 .state-container > p {
   width: calc(80% / 3 - 1rem);
-  font-size: 28px;
+  font-size: 28px !important;
   line-height: 1.2;
   color: var(--text-color-darkblack);
+  align-self: center;
 }
 
-.state-container > div {
-  width: calc(80% / 3 - 1rem);
+.lead-form-container {
+  width: calc(95% / 3 - 1rem) !important;
+  background-color: #1f7aff;
+  padding: 1.5rem 3rem 1.5rem 3rem;
+  border-radius: 20px;
 }
 
+/*lead-form Container */
+.lead-form-container > h3 {
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: white;
+}
+.text-feild {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem !important;
+}
+.form-fields {
+  margin-bottom: 0.5rem; /* Space between form fields */
+  position: relative; /* Ensure error message is positioned relative to this container */
+  width: 100% !important;
+}
+.input-fields {
+  width: 100%;
+  font-size: 15px;
+  padding: 5px;
+}
+.form-button {
+  width: 100%;
+  font-size: 20px;
+  font-weight: 700;
+  background-color: var(--brand-color);
+  border: none;
+  color: white;
+  margin-top: 0 !important;
+  cursor: pointer;
+}
 
 /* H */
 .capital-container1 {
@@ -83,8 +126,8 @@
   justify-content: space-between;
   gap: 1rem;
   background-color: var(--text-color-blue);
-  padding:1.6rem 4rem;
-  border-radius: 16px; 
+  padding: 1.6rem 4rem;
+  border-radius: 16px;
 }
 .about-capital-card1 {
   display: flex;
@@ -95,7 +138,7 @@
 .about-capital-card1 > span {
   font-size: 18px;
 }
-.about-capital-card1 >h2 {
+.about-capital-card1 > h2 {
   font-size: 22px;
 }
 /*  */
@@ -197,13 +240,13 @@
   line-height: 1.5;
 }
 
-.whyWeStudy-container {
+.whyWeStudy-container-UK {
   width: 100%;
   height: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
-  margin-top: 1rem;
+  margin-top: 1.5rem !important;
   margin-bottom: 5rem;
 }
 
@@ -218,7 +261,7 @@
   font-size: 20px;
   font-weight: 600;
   text-align: center;
-  width: 100%
+  width: 100%;
 }
 
 .StudyingCard > p {
@@ -258,7 +301,8 @@
   margin-block: 4rem;
 }
 .trending-course > h1,
-.univercity-card > h1 {
+.univercity-card > h1,
+.Scholarship-container > h1 {
   font-size: 2.8rem;
   font-weight: 500;
   display: block;
@@ -273,11 +317,12 @@
   background-color: var(--text-color-darkblack);
   margin-top: 0.4rem;
 }
- .trending-course > h1 > span,
- .univercity-card > h1 > span {
+.trending-course > h1 > span,
+.univercity-card > h1 > span,
+.Scholarship-container > h1 > span {
   color: var(--brand-color);
   font-weight: 600;
- }
+}
 
 .univercity-section-card {
   display: flex;
@@ -340,6 +385,9 @@
 .ConcordiaCard > div > h2 {
   font-size: 32px;
 }
+.ConcordiaCard > div > h2 > span{
+  font-size: 22px;
+}
 
 .course-section-card {
   display: flex;
@@ -365,7 +413,7 @@
   width: 70%;
 }
 .Bussinesscenicon {
-  font-size: 50px !important;
+  font-size: 55px !important;
 }
 
 .Admition-required-container {
@@ -432,6 +480,7 @@
   width: 87%;
 }
 
+
 /*  Addmission-timeline-container*/
 
 .Addmission-timeline-container {
@@ -477,23 +526,35 @@
   border-radius: 10px;
 }
 .Popular_Universities {
-  min-height: 60vh;
-
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+  overflow-y: auto;
+  height: 90vh;
+  padding: 1rem;
 }
 .Popular_Universities-container > h1 {
   font-size: 28px;
   color: var(--text-color-darkblack);
   margin-bottom: 1rem;
 }
-.university-card {
-  background-color: #efefef;
-  border-radius: 20px;
-  min-height: 60px;
+.howApllycard >ul{
+  padding-left: 2rem;
 }
-
+.university-card {
+  border-radius: 20px;
+  min-height: 150px;
+  padding: .4rem  ;
+  background-color: transparent;
+  box-shadow: 0 0 1px 1px rgba(0,0,0,0.1);
+}
+.university-card >img{
+  object-fit: contain;
+}
+.activeCard{
+  background-color: var(--brand-color);
+  color: var(--text-color-white);
+}
 .howApllycard {
   color: var(--text-color-darkblack);
 }
@@ -513,15 +574,22 @@
 }
 .program-card {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   margin-top: 1rem;
   gap: 1rem;
 }
-
-.program-card > p {
+.prgram-item-container {
   display: flex;
   align-items: center;
   gap: 0.4rem;
+}
+.program-name {
+  font-size: 15px;
+  line-height: 1.1;
+}
+.icon_image {
+  width: 40px;
+  height: 40px;
 }
 .FiberManualRecordIcon {
   color: #878787 !important;
@@ -577,20 +645,21 @@
 }
 
 @media (max-width: 987px) {
-  
-.hero-content > h1 {
-  font-size: 40px;
-}
+  .hero-content > h1 {
+    font-size: 40px;
+  }
   .state-container {
     flex-direction: column;
   }
   .state-container > h1 {
     width: 100% !important;
     font-size: 38px !important;
+    margin-top: 10px !important;
   }
   .state-container > p {
     width: 100% !important;
     font-size: 18px !important;
+    margin-bottom: 20px;
   }
   .state-container > div {
     width: 100% !important;
@@ -636,8 +705,7 @@
     height: 25vh !important;
   }
 
-  .Rightcapital-container ,
-
+  .Rightcapital-container,
   .capital-container1,
   .Expense-card,
   .admissionTime-container,
@@ -646,7 +714,7 @@
   .GDP-container {
     flex-direction: column !important;
   }
-  .Rightcapital-container ,
+  .Rightcapital-container,
   .leftcapital-container,
   .Expertcard,
   .Popular_Universities-container,
@@ -674,12 +742,12 @@
   /*Capitals Section */
   .Rightcapital-container {
     gap: 1.5rem;
-    padding:2rem;
+    padding: 2rem;
   }
   .about-capital-card1 > span {
     font-size: 15px;
   }
-  .about-capital-card1 >h2 {
+  .about-capital-card1 > h2 {
     font-size: 20px;
   }
 
@@ -701,13 +769,13 @@
     width: 75%;
   }
   .trending-course > h1,
-.univercity-card > h1 {
-  font-size: 30px;
-  line-height: 1.2;
-}
+  .univercity-card > h1{
+    font-size: 30px;
+    line-height: 1.2;
+  }
 }
 
-@media (max-width:1024px) {
+@media (max-width: 1024px) {
   .state-container > h1 {
     font-size: 35px !important;
   }
@@ -715,9 +783,12 @@
     /* width: 100% !important; */
     font-size: 22px !important;
   }
-  .state-container > div {
-    /* width: 100% !important; */
-    font-size: 18px;
+  .lead-form-container {
+    width: calc(104% / 3 - 1rem) !important;
+    padding: 1.5rem 2rem 1.5rem 2rem !important;  
+  }
+  .lead-form-container > h3 {
+    font-size: 18px !important;
   }
   /*Capitals Section */
   .leftcapital-container {
@@ -725,12 +796,12 @@
   }
   .Rightcapital-container {
     gap: 1.5rem;
-    padding:2rem;
+    padding: 2rem;
   }
   .about-capital-card1 > span {
     font-size: 15px;
   }
-  .about-capital-card1 >h2 {
+  .about-capital-card1 > h2 {
     font-size: 18px;
   }
   .gdp-card {
@@ -778,10 +849,5 @@
   }
   .univercityList-Img {
     height: 15vh;
-  }
-  .trending-course > h1,
-  .univercity-card > h1 {
-    font-size: 35px !important;
-    line-height: 1.2;
   }
 }

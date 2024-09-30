@@ -24,10 +24,8 @@ const GetTuchWithUs = () => {
       >
         <div className="section StudyAbroad">
           <div className="studySection useInViewcard">
-            <p>Get in touch </p>
-            <p className={`Getcontent ${isAnimated ? "animated" : ""}`}>
-              With Us
-            </p>
+              
+              <p>Get in touch With Us</p>
           </div>
           <Button
             arrow={true}

@@ -8,7 +8,7 @@ const EventDetail = () => {
   const { id } = useParams();
   const [event, setEvent] = useState({});
   const [bookEventForm, setBookEventForm] = useState(false);
-  const api = `https://strapi.orientspectra.com/api/events/${id}&populate=*`;
+  const api = `https://strapi.orientspectra.com/api/events/${id}?populate=*`;
   const FetchEventDetails = async () => {
     try {
       const response = await axios.get(api);
@@ -25,6 +25,7 @@ const EventDetail = () => {
   useEffect(() => {
     FetchEventDetails();
   }, []);
+  console.log(event);
 
   return (
     <>
@@ -39,10 +40,8 @@ const EventDetail = () => {
       <div className="event-details-conatiner section">
         <div className="event-image">
           <img
-            src={
-              "https://strapi.orientspectra.com/uploads/391_x_520_EU_Event_Banner_6605cc7233.jpg"
-            }
-            alt="event"
+            src={`https://strapi.orientspectra.com${event?.attributes?.Poster?.data?.attributes?.formats?.small?.url}`}
+            alt="blog"
           />
 
           <Button

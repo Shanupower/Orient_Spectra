@@ -178,13 +178,10 @@ const Discovery = () => {
             <button className="form-container-button" type="submit">
             Book A Free Call
           </button>
-          </div>
-          
+          </div>   
         </form>
-          {/* <Marquee className="MargueeText" speed={100}> Start Your Abroad Study Journey. </Marquee> */}
         </div>
       </div>
-      <Divider />
     </div>
   );
 };

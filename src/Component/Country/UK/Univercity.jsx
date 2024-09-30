@@ -1,129 +1,95 @@
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import Img1 from "../../../assets/University Images/UK/1.png";
-import Img2 from "../../../assets/University Images/UK/2.png";
-import Img3 from "../../../assets/University Images/UK/3.jpg";
-import Img4 from "../../../assets/University Images/UK/4.png";
-import Img5 from "../../../assets/University Images/UK/5.png";
-import Img6 from "../../../assets/University Images/UK/6.png";
-import Img7 from "../../../assets/University Images/UK/7.png";
-import Img8 from "../../../assets/University Images/UK/8.png";
-import Img9 from "../../../assets/University Images/UK/9.png";
-import Img10 from "../../../assets/University Images/UK/10.png";
-import Img11 from "../../../assets/University Images/UK/11.png";
-import Img12 from "../../../assets/University Images/UK/12.png";
-import Img13 from "../../../assets/University Images/UK/13.png";
-import Img14 from "../../../assets/University Images/UK/14.png";
-import Img15 from "../../../assets/University Images/UK/15.jpg";
-import Img16 from "../../../assets/University Images/UK/16.jpg";
-import Img17 from "../../../assets/University Images/UK/17.jpg";
-import Img18 from "../../../assets/University Images/UK/18.png";
-import Img19 from "../../../assets/University Images/UK/19.jpg";
-import Img20 from "../../../assets/University Images/UK/20.jpg";
-import Img21 from "../../../assets/University Images/UK/21.png";
-import Img22 from "../../../assets/University Images/UK/22.jpg";
 import "./Country.css";
 import Marquee from "react-fast-marquee";
 
 const universityData = [
   {
     id:1,
-    img: Img1,
+    img: "https://strapi.orientspectra.com/uploads/1_6138480f08.webp",
     universityName: "Abertay University",
-    ielts: "6.5",
-    tofel: "79",
-    backlogs: "0",
+    UG: "65%",
+    GapAccepted: "3",
   },
   {
     id:2,
-    img: Img2,
+    img: "https://strapi.orientspectra.com/uploads/2_d0f68ec276.webp",
     universityName: "Bradley University",
-    ielts: "6.5",
-    tofel: "79",
-    backlogs: "0",
+    UG: "75%",
+    GapAccepted: "0",
   },
   {
     id:3,
-    img: Img3,
+    img: "https://strapi.orientspectra.com/uploads/3_347d1f2c02.webp",
     universityName: "Edinburgh Napier University",
-    ielts: "6.5",
-    tofel: "79",
-    backlogs: "0",
+    UG: "60%",
+    GapAccepted: "2",
   },
   {
     id:4,
-    img: Img4,
+    img: "https://strapi.orientspectra.com/uploads/4_d5a5c04af5.webp",
     universityName: "Prifysgol wrecsam wrexham University",
-    ielts: "6.5",
-    tofel: "79",
-    backlogs: "0",
+    UG: "60%",
+    GapAccepted: "2",
   },
   {
     id:5,
-    img: Img5,
-    universityName: "University for the creative arts",
-    ielts: "6.5",
-    tofel: "79",
-    backlogs: "0",
+    img: "https://strapi.orientspectra.com/uploads/5_087f2aff35.webp",
+    universityName: "University for the Creative Arts",
+    UG: "60%",
+    GapAccepted: "2",
   },
   {
     id:6,
-    img: Img6,
+    img: "https://strapi.orientspectra.com/uploads/6_ed0f9c0444.webp",
     universityName: "Heroit Watt Univrsity",
-    ielts: "6.5",
-    tofel: "79",
-    backlogs: "0",
+    UG: "65%",
+    GapAccepted: "3",
   },
   {
     id: 7,
-    img: Img7,
+    img: "https://strapi.orientspectra.com/uploads/7_6a79b25866.webp",
     universityName: "London South Bank University",
-    ielts: "6.5",
-    tofel: "79",
-    backlogs: "0",
+    UG: "65%",
+    GapAccepted: "0",
   },
   {
     id: 8,
-    img: Img8,
+    img: "https://strapi.orientspectra.com/uploads/8_45019bf872.webp",
     universityName: "Malvern House London",
-    ielts: "6.5",
-    tofel: "79",
-    backlogs: "0",
+    UG: "60%",
+    GapAccepted: "5",
   },
   {
     id: 9,
-    img: Img9,
+    img: "https://strapi.orientspectra.com/uploads/9_23357945cf.webp",
     universityName: "Middlesex University",
-    ielts: "6.5",
-    tofel: "79",
-    backlogs: "0",
+    UG: "60%",
+    GapAccepted: "3",
   },
   {
     id: 10,
-    img: Img10,
+    img: "https://strapi.orientspectra.com/uploads/10_a73aebfada.webp",
     universityName: "Northumbria University Newcastle",
-    ielts: "6.5",
-    tofel: "79",
-    backlogs: "0",
+    UG: "65%",
+    GapAccepted: "2",
   },
   {
     id: 11,
-    img: Img11,
-    universityName: "Prifysgol Cymru Y Drindod Dewi Sant University of wales Trinity sant David",
-    ielts: "6.5",
-    tofel: "79",
-    backlogs: "0",
+    img: "https://strapi.orientspectra.com/uploads/11_9020889701.webp",
+    universityName: "Prifysgol Cymru Y Drindod Dewi Sant University",
+    UG: "70%",
+    GapAccepted: "2",
   },
   {
     id: 12,
-    img: Img12,
+    img: "https://strapi.orientspectra.com/uploads/12_3fde036b77.webp",
     universityName: "Royal Holloway University of London",
-    ielts: "6.5",
-    tofel: "79",
-    backlogs: "0",
+    UG: "65%",
+    GapAccepted: "2",
   },
   {
     id: 13,
-    img: Img13,
+    img: "https://strapi.orientspectra.com/uploads/13_447ed85804.webp",
     universityName: "SaintPeter's University",
     ielts: "6.5",
     tofel: "79",
@@ -131,75 +97,59 @@ const universityData = [
   },
   {
     id: 14,
-    img: Img14,
+    img: "https://strapi.orientspectra.com/uploads/14_1ad92941fc.webp",
     universityName: "University of College Brimingham",
-    ielts: "6.5",
-    tofel: "79",
-    backlogs: "0",
+    UG: "60%",
+    GapAccepted: "2",
   },
   {
     id: 15,
-    img: Img15,
-    universityName: "Study Group",
-    ielts: "6.5",
-    tofel: "79",
-    backlogs: "0",
+    img: "https://strapi.orientspectra.com/uploads/16_3d3cc82a92.webp",
+    universityName: "University of Wolverhampton",
+    UG: "68%",
+    GapAccepted: "3",
   },
   {
     id: 16,
-    img: Img16,
-    universityName: "University of Wolverhampton",
-    ielts: "6.5",
-    tofel: "79",
-    backlogs: "0",
+    img: "https://strapi.orientspectra.com/uploads/17_f389eb9793.webp",
+    universityName: "University of Gloucestershire",
+    UG: "65%",
+    GapAccepted: "2",
   },
   {
     id: 17,
-    img: Img17,
-    universityName: "University of Gloucestershire",
-    ielts: "6.5",
-    tofel: "79",
-    backlogs: "0",
+    img: "https://strapi.orientspectra.com/uploads/18_d6f55d3a07.webp",
+    universityName: "University of Hertfordshire",
+    UG: "60%",
+    GapAccepted: "3",
   },
   {
     id: 18,
-    img: Img18,
-    universityName: "University of Hertfordshire",
-    ielts: "6.5",
-    tofel: "79",
-    backlogs: "0",
+    img: "https://strapi.orientspectra.com/uploads/19_bd7397c9ee.webp",
+    universityName: "University of East London",
+    UG: "60%",
+    GapAccepted: "3",
   },
   {
     id: 19,
-    img: Img19,
-    universityName: "University of East London",
-    ielts: "6.5",
-    tofel: "79",
-    backlogs: "0",
+    img: "https://strapi.orientspectra.com/uploads/20_4201ba4e6a.webp",
+    universityName: "University of West London",
+    UG: "60%",
+    GapAccepted: "2",
   },
   {
     id: 20,
-    img: Img20,
-    universityName: "University of West London",
-    ielts: "6.5",
-    tofel: "79",
-    backlogs: "0",
+    img: "https://strapi.orientspectra.com/uploads/21_22c17d051f.webp",
+    universityName: "University of the West of England",
+    UG: "65%",
+    GapAccepted: "10",
   },
   {
     id: 21,
-    img: Img21,
-    universityName: "University of the West of England",
-    ielts: "6.5",
-    tofel: "79",
-    backlogs: "0",
-  },
-  {
-    id: 22,
-    img: Img22,
+    img: "https://strapi.orientspectra.com/uploads/22_e6bf53e162.webp",
     universityName: "York st John University",
-    ielts: "6.5",
-    tofel: "79",
-    backlogs: "0",
+    UG: "65%",
+    GapAccepted: "2",
   },
 ];
 
@@ -212,21 +162,21 @@ const Univercity = () => {
           {universityData.map((item) => (
             <div className="univercityList" key={item.id}>
               <div className="univercityList-Img">
-                <img src={item.img} alt="" />
+                <img src={item.img} alt="Universities" />
               </div>
               <div className="Concordia-container">
                 <div className="ConcordiaCard">
                   <p>{item.universityName}</p> 
                   <ArrowForwardIcon className="rightArrowB" />
                 </div>
-                <div className="ConcordiaCard Ietes">
+                <div className="ConcordiaCard Ietels">
                   <div>
-                    <h2>7</h2>
-                    <p>Minimum IELTS Required</p>
+                    <p>UG percentage</p>
+                    <h2>{item.UG}</h2>
                   </div>
                   <div>
-                    <h2>16</h2>
-                    <p>Global Ranking</p>
+                    <p>GAP Acceptance</p>
+                    <h2>{item.GapAccepted} <span>Years</span></h2>
                   </div>
                 </div>
               </div>

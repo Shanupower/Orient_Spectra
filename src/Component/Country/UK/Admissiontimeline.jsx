@@ -1,17 +1,19 @@
 import { Link } from "react-router-dom";
-import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import "./Country.css";
 import { useState } from "react";
 
 const Programdata = [
   {
-    text: "	Data science ",
+    text: "MBA",
   },
   {
-    text: "	Cyber security ",
+    text: "	Data science",
   },
   {
-    text: "Computer science ",
+    text: "	Cyber security",
+  },
+  {
+    text: "Computer science",
   },
   {
     text: "	AI and Robotics",
@@ -19,9 +21,7 @@ const Programdata = [
   {
     text: "	Aerospace engineering",
   },
-  {
-    text: "MBA",
-  },
+ 
   {
     text: "	Construction project management with BIM",
   },
@@ -29,10 +29,10 @@ const Programdata = [
     text: "Telecommunication ",
   },
   {
-    text: "		Electrical and electronics engineering ",
+    text: "		Electrical and electronics engineering",
   },
   {
-    text: "Biomedical science ",
+    text: "Biomedical science",
   },
 ];
 const Admissiontimeline = () => {
@@ -45,7 +45,7 @@ const Admissiontimeline = () => {
       <div className="section Addmission-timeline-container">
         <div className="admissionTime-container">
           <div className="admissintimeline-card">
-            <h2>Admission Timeline</h2>
+            <h2>Admission Details</h2>
             <div className="coursemaster">
               <Link
                 onClick={() => handleAdmissionType("Graduates")}
@@ -73,20 +73,7 @@ const Admissiontimeline = () => {
                   <li>
                     Candidate must’ve cleared graduation with 60% of above marks
                   </li>
-                  <li>
-                    Candidate must have attended any of the below English
-                    proficiency tests:
-                  </li>
-                  <div style={{ paddingLeft: "1.4rem" }}>
-                    <li> IELTS: 6 or 6.5</li>
-                    <li>TOEFL: 89</li>
-                  </div>
-
-                  <li>
-                    Candidate can have multiple backlogs as there is no limit of
-                    backlogs
-                  </li>
-                  <li> There is no age limit for the applicant</li>
+                  <li>Candidate must’ve scored above 70 Marks in English.</li>
                 </ul>
               ) : (
                 <ul>
@@ -97,8 +84,10 @@ const Admissiontimeline = () => {
                     Candidate must have attended any of the below English
                     proficiency tests:
                   </li>
-                  <li> IELTS: 6 or 6.5</li>
-                  <li>TOEFL: 89</li>
+                  <div style={{ paddingLeft: "1.4rem" }}>
+                    <li> IELTS: 6 or 6.5</li>
+                    <li>TOEFL: 89</li>
+                  </div>
                   <li>
                     Candidate can have multiple backlogs as there is no limit of
                     backlogs
@@ -114,8 +103,9 @@ const Admissiontimeline = () => {
                 <div className="intakesCard">
                   <div className="imageContainer">
                     <img
-                      src="https://strapi.orientspectra.com/uploads/fall_1c6257491c.jpg"
-                      alt=""
+                      src="https://strapi.orientspectra.com/uploads/fall_1c6257491c_d2e984953b.webp"
+                      alt="Fall"
+                      loading="lazy"
                     />
                   </div>
                   <div className="intackText">
@@ -126,8 +116,9 @@ const Admissiontimeline = () => {
                 <div className="intakesCard">
                   <div className="imageContainer">
                     <img
-                      src="https://strapi.orientspectra.com/uploads/67de7faf_5f92_402d_929e_75686635e0d9_a95c028b0f.jpg"
-                      alt=""
+                      src="https://strapi.orientspectra.com/uploads/67de7faf_5f92_402d_929e_75686635e0d9_a95c028b0f_9c384ade6f.webp"
+                      alt="Spring"
+                      loading="lazy"
                     />
                   </div>
                   <div className="intackText">
@@ -138,8 +129,9 @@ const Admissiontimeline = () => {
                 <div className="intakesCard">
                   <div className="imageContainer">
                     <img
-                      src="https://strapi.orientspectra.com/uploads/Summer_6b20b10000.jpg"
-                      alt=""
+                      src="https://strapi.orientspectra.com/uploads/Summer_6b20b10000_7979b72c34.webp"
+                      alt="Summer"
+                      loading="lazy"
                     />
                   </div>
                   <div className="intackText">
@@ -165,74 +157,85 @@ const Admissiontimeline = () => {
             <div className="Popular_Universities">
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/University_of_Cincinnati_a00123d710.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/3_347d1f2c02.webp"
+                  alt="Edinburgh Napier University"
+                  loading="lazy"
                 />
               </div>
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/Northeastern_University_Logo_1ac770efc3.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/6_ed0f9c0444.webp"
+                  alt="Heroit Watt Univrsity"
+                  loading="lazy"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/George_Mason_University_b9fb5b4192.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/8_45019bf872.webp"
+                  alt="Malvern House London"
+                  loading="lazy"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/University_of_Houston_Main_Campus_d3e90f8c69.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/10_a73aebfada.webp"
+                  alt="Northumbria University"
+                  loading="lazy"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/University_of_Maryland_Baltimore_County_cb629dab69.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/16_3d3cc82a92.webp"
+                  alt="University of Wolverhampton"
+                  loading="lazy"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/University_at_Buffalo_logo_4c62684ee5.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/18_d6f55d3a07.webp"
+                  alt="University of Hertfordshire"
+                  loading="lazy"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/California_State_University_Long_Beach_98122890c0.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/19_bd7397c9ee.webp"
+                  alt="University of East London"
+                  loading="lazy"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/Umass_b17269ab7e.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/4_d5a5c04af5.webp"
+                  alt="Wrexham University"
+                  loading="lazy"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/stony_brook_0fc916d964.jpeg"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/9_23357945cf.webp"
+                  alt="Middlesex University"
+                  loading="lazy"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/arizona_state_university_963dab0ee7.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/13_447ed85804.webp"
+                  alt="SaintPeter's University"
                 />
               </div>
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/Drexel_University_b963377272.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/22_e6bf53e162.webp"
+                  alt="York st John University"
+                  loading="lazy"
                 />
               </div>
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/John_Hopkins_University_06d1f2734d.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/2_d0f68ec276.webp"
+                  alt="Bradley University"
+                  loading="lazy"
                 />
               </div>
             </div>

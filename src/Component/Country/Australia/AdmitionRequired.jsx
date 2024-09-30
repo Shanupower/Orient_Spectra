@@ -18,7 +18,7 @@ import Icon12 from "../../../assets/Country/Evidence.png";
 const AdmissionData = [
   {
     icon: Icon1,
-    title: "Cop of a valid passport",
+    title: "Copy of a valid passport",
   },
   {
     icon: Icon2,
@@ -71,8 +71,8 @@ const AdmitionRequired = () => {
     <div className="section Admition-required-container">
       <div className="admissioncard-sticy">
         <h1>
-          Admission Requirements for <br />
-          <b>United States Study Abroad</b>
+          Admission Requirements for 
+          <b> Study Abroad in Australia</b>
         </h1>
       </div>
 

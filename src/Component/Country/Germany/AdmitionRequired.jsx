@@ -17,53 +17,35 @@ import Icon12 from "../../../assets/Country/Evidence.png";
 
 const AdmissionData = [
   {
-    icon: Icon1,
-    title: "Cop of a valid passport",
-  },
-  {
-    icon: Icon2,
-    title: "Proof of English proficiency (OEFL/IELTS test scores)",
-  },
-  {
+    key:1,
     icon: Icon3,
-    title: "ACT/SAT/LSAT forUG programs, GMAT/GRE scores for PG programs",
+    title: "Choose Your Program",
   },
   {
+    key:2,
     icon: Icon4,
-    title: "Academic Tanscripts from the previous study",
+    title: "Meet the Requirements",
   },
   {
+    key:3,
     icon: Icon5,
     title:
-      "Academic Refrence Letters, the number of reference letters depends from university to university",
+      "Apply to Universities",
   },
   {
-    icon: Icon6,
-    title: "Letters of recommendation fromthe employer/manager (if applicable)",
-  },
-  {
-    icon: Icon7,
-    title: "CV/Resume",
-  },
-  {
-    icon: Icon8,
-    title: "Statement of Purpose (SOP)",
-  },
-  {
-    icon: Icon9,
-    title: "Essays (if dmanded by the university)",
-  },
-  {
-    icon: Icon10,
-    title: "Portfolio (for specific courses)",
-  },
-  {
-    icon: Icon11,
-    title: "      Certificates of extracurricular activities      ",
-  },
-  {
+    key:4,
     icon: Icon12,
-    title: "Evidence of Funds",
+    title: "Secure Funding",
+  },
+  {
+    key:5,
+    icon: Icon1,
+    title: "Apply for a Visa",
+  },
+  {
+    key:6,
+    icon: "https://strapi.orientspectra.com/uploads/travel_c64ff0ffe2.webp",
+    title: "Prepare for Departure",
   },
 ];
 const AdmitionRequired = () => {
@@ -72,13 +54,13 @@ const AdmitionRequired = () => {
       <div className="admissioncard-sticy">
         <h1>
           Admission Requirements for <br />
-          <b>United States Study Abroad</b>
+          <b>Study Abroad in Germany</b>
         </h1>
       </div>
 
       <div className="admission-container">
         {AdmissionData.map((item) => (
-          <div className="admission-detailscard" key={item}>
+          <div className="admission-detailscard" key={item.key}>
             <div className="Possporticon">
               <img src={item.icon} alt="icon" className="possporticon" />
             </div>

@@ -14,7 +14,7 @@
 }
 
 .founderImage_card {
-  width: 80%;
+  width: 90%;
   height: 38vh;
   border-radius: 8px;
   overflow: hidden;
@@ -427,6 +427,38 @@
   border: none !important;
 }
 
+@media (max-width: 986px) {
+  .story-containers > h1 {
+    font-size: 40px;
+    word-spacing: 5px;
+  }
+  .storytext-card > h3 {
+    text-align: left;
+  }
+  .stroy-center-card > p {
+    font-size: 18px;
+  }
+  .stroy-right-card {
+    align-self: self-end;
+    margin-right: 10px;
+  }
+  .success-admit-container {
+    margin-block: 2rem;
+    margin-bottom: -10%;
+  }
+  .Quotation-card > p {
+    width: 100%;
+    font-size: 18px;
+    margin-top: 0;
+  }
+  .founder-card > h1 {
+    font-size: 25px;
+  }
+  .founder-card > span {
+    font-size: 14px;
+  }
+}
+
 @media (max-width: 1067px) {
   .hero-conntainer {
     display: flex;
@@ -466,7 +498,7 @@
   }
   .consectetuer-container > h1 {
     width: 100%;
-    font-size: 30px;
+    font-size: 25px;
   }
   .founders-card {
     align-items: left;

@@ -1,8 +1,8 @@
-import Hero from "./Hero";
+import Hero from "./UK_Hero";
 import "./ADS.css";
-import Universities from "./Universities";
-import EventDetails from "./EventDetails";
-import Benifits from "./Benifits";
+import Universities from "./UK_Universities";
+import EventDetails from "./UK_EventDetails";
+import Benifits from "./UK_Benifits";
 
 const UK_Jan_2025 =() =>{
     return(

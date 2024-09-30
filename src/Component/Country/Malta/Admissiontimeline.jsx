@@ -141,74 +141,85 @@ const Admissiontimeline = () => {
             <div className="Popular_Universities">
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/University_of_Cincinnati_a00123d710.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/3_347d1f2c02.webp"
+                  alt="Edinburgh Napier University"
+                  loading="lazy"
                 />
               </div>
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/Northeastern_University_Logo_1ac770efc3.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/6_ed0f9c0444.webp"
+                  alt="Heroit Watt Univrsity"
+                  loading="lazy"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/George_Mason_University_b9fb5b4192.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/8_45019bf872.webp"
+                  alt="Malvern House London"
+                  loading="lazy"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/University_of_Houston_Main_Campus_d3e90f8c69.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/10_a73aebfada.webp"
+                  alt="Northumbria University"
+                  loading="lazy"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/University_of_Maryland_Baltimore_County_cb629dab69.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/16_3d3cc82a92.webp"
+                  alt="University of Wolverhampton"
+                  loading="lazy"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/University_at_Buffalo_logo_4c62684ee5.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/18_d6f55d3a07.webp"
+                  alt="University of Hertfordshire"
+                  loading="lazy"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/California_State_University_Long_Beach_98122890c0.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/19_bd7397c9ee.webp"
+                  alt="University of East London"
+                  loading="lazy"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/Umass_b17269ab7e.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/4_d5a5c04af5.webp"
+                  alt="Wrexham University"
+                  loading="lazy"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/stony_brook_0fc916d964.jpeg"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/9_23357945cf.webp"
+                  alt="Middlesex University"
+                  loading="lazy"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/arizona_state_university_963dab0ee7.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/13_447ed85804.webp"
+                  alt="SaintPeter's University"
                 />
               </div>
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/Drexel_University_b963377272.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/22_e6bf53e162.webp"
+                  alt="York st John University"
+                  loading="lazy"
                 />
               </div>
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/John_Hopkins_University_06d1f2734d.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/2_d0f68ec276.webp"
+                  alt="Bradley University"
+                  loading="lazy"
                 />
               </div>
             </div>

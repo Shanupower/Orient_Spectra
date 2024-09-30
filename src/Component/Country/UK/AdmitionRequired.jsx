@@ -1,68 +1,49 @@
-import Icon1 from "../../../assets/Country/possport.png";
 import "./Country.css";
-import ForwardToInboxIcon from "@mui/icons-material/ForwardToInbox";
-import SaveAsRoundedIcon from "@mui/icons-material/SaveAsRounded";
-import CreditScoreIcon from "@mui/icons-material/CreditScore";
-import Icon2 from "../../../assets/Country/certificate.png";
-import Icon3 from "../../../assets/Country/program.png";
-import Icon4 from "../../../assets/Country/Academic.png";
-import Icon5 from "../../../assets/Country/Refrence.png";
-import Icon6 from "../../../assets/Country/Letters.png";
-import Icon7 from "../../../assets/Country/Resume.png";
-import Icon8 from "../../../assets/Country/Statement.png";
-import Icon9 from "../../../assets/Country/Essays.png";
-import Icon10 from "../../../assets/Country/Portfolio.png";
-import Icon11 from "../../../assets/Country/Certificates.png";
-import Icon12 from "../../../assets/Country/Evidence.png";
 
 const AdmissionData = [
   {
-    icon: Icon1,
-    title: "Cop of a valid passport",
+    id:1,
+    icon: "https://strapi.orientspectra.com/uploads/possport_0c65803b78.webp",
+    title: "A Valid Passport",
   },
   {
-    icon: Icon2,
-    title: "Proof of English proficiency (OEFL/IELTS test scores)",
+    id:2,
+    icon: "https://strapi.orientspectra.com/uploads/certificate_2b2662d10c.webp",
+    title: "Proof of English Proficiency (Not Mandatory for all Universities)",
   },
   {
-    icon: Icon3,
-    title: "ACT/SAT/LSAT forUG programs, GMAT/GRE scores for PG programs",
+    id:3,
+    icon: "https://strapi.orientspectra.com/uploads/Academic_0e24a00ca2.webp",
+    title: "Academic Tanscripts",
   },
   {
-    icon: Icon4,
-    title: "Academic Tanscripts from the previous study",
+    id:4,
+    icon: "https://strapi.orientspectra.com/uploads/Refrence_d4804c3d2c.webp",
+    title: "Academic Reference Letters",
   },
   {
-    icon: Icon5,
-    title:
-      "Academic Refrence Letters, the number of reference letters depends from university to university",
+    id:5,
+    icon: "https://strapi.orientspectra.com/uploads/Letters_7e2220fd8a.webp",
+    title: "Letters of Recommendation",
   },
   {
-    icon: Icon6,
-    title: "Letters of recommendation fromthe employer/manager (if applicable)",
-  },
-  {
-    icon: Icon7,
+    id:6,
+    icon: "https://strapi.orientspectra.com/uploads/Portfolio_6a09763c1d.webp",
     title: "CV/Resume",
   },
   {
-    icon: Icon8,
+    id:7,
+    icon: "https://strapi.orientspectra.com/uploads/Statement_b50bc660b6.webp",
     title: "Statement of Purpose (SOP)",
   },
   {
-    icon: Icon9,
-    title: "Essays (if dmanded by the university)",
+    id:8,
+    icon: "https://strapi.orientspectra.com/uploads/Certificates_734a5b9296.webp",
+    title: "Certificate of Extracurricular Activities",
   },
   {
-    icon: Icon10,
-    title: "Portfolio (for specific courses)",
-  },
-  {
-    icon: Icon11,
-    title: "      Certificates of extracurricular activities      ",
-  },
-  {
-    icon: Icon12,
+    id:9,
+    icon: "https://strapi.orientspectra.com/uploads/Evidence_a35d42d28c.webp",
     title: "Evidence of Funds",
   },
 ];
@@ -72,15 +53,19 @@ const AdmitionRequired = () => {
       <div className="admissioncard-sticy">
         <h1>
           Admission Requirements for <br />
-          <b>United States Study Abroad</b>
+          <b>United Kingdom Study Abroad</b>
+          <p>
+          Here are the major requirements to study in the UK, which you 
+          need to ensure while applying to a UK university:
+        </p>
         </h1>
       </div>
 
       <div className="admission-container">
         {AdmissionData.map((item) => (
-          <div className="admission-detailscard" key={item}>
+          <div className="admission-detailscard" key={item.id}>
             <div className="Possporticon">
-              <img src={item.icon} alt="icon" className="possporticon" />
+              <img src={item.icon} alt="icon" className="possporticon" loading="lazy"/>
             </div>
             <p>{item.title}</p>
           </div>

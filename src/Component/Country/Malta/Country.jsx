@@ -7,7 +7,7 @@ import TrendingCourse from "./TrendingCourse";
 import UnitedState from "./UnitedState";
 import Univercity from "./Univercity";
 import CountryFaq from "../../Common/Contryfaq";
-import { useParams } from "react-router-dom";
+import StudyAbroad from "../../../Landing_page/StudyAbroad";
 import { useEffect } from "react";
 const getItems = (panelStyle) => [
   {
@@ -97,7 +97,8 @@ const MaltaCountry = () => {
       <TrendingCourse />
       <AdmitionRequired />
       <Admissiontimeline />
-      <Personalized />
+      <StudyAbroad />
+      {/* <Personalized /> */}
       <CountryFaq getItems={getItems} />
     </>
   );

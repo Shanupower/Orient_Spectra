@@ -2,19 +2,162 @@ import "./Country.css";
 import { Link } from "react-router-dom";
 import Img1 from "../../../assets/Country/Clip path group-3.png";
 import Img2 from "../../../assets/Country/graph.png";
+import { useState } from "react";
+import axios from "axios";
 
 const State = () => {
+
+  const [formData, setFormData] = useState({
+    Name: "",
+    Email: "",
+    Mobile: "",
+    Intake_Year: "",
+    Source: "FRANCE",
+  });
+
+  const [errors, setErrors] = useState({});
+
+  const handleSubmitData = async () => {
+    const api = "https://strapi.orientspectra.com/api/lead-form-hompages";
+    try {
+      const response = await axios.post(api, {
+        data: formData,
+      });
+      console.log(formData,"formdata");
+      if (response.status === 200) {
+        alert("Form submitted successfully");
+
+       
+        setFormData({
+          Name: "",
+          Email: "",
+          Mobile: "",
+          Intake_Year: "",
+          Source: "FRANCE",
+        });
+      }
+    } catch (errors) {
+      console.log(errors);
+    }
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    if (name === "Mobile") {
+      if (/^\d*$/.test(value) && value.length <= 10) {
+        setFormData((prevFormData) => ({
+          ...prevFormData,
+          [name]: value,
+        }));
+      }
+    } else {
+      setFormData({
+        ...formData,
+        [name]: value,
+      });
+    }
+  };
+
+  const Validation = () => {
+    const newErrors = {};
+
+    if (formData.Name === "") {
+      newErrors.Name = "First Name is Required";
+    }
+    if (formData.Email === "") {
+      newErrors.Email = "Email Id is Required";
+    } else if (!/\S+@\S+\.\S+/.test(formData.Email)) {
+      newErrors.Email = "Email is not valid";
+    }
+    if (formData.Mobile === "") {
+      newErrors.Mobile = "Enter the Mobile Number";
+    } else if (!/^\d{10}$/.test(formData.Mobile)) {
+      newErrors.Mobile = "Enter the valid 10 digit mobile number";
+    }
+    if (formData.Intake_Year === "") {
+      newErrors.Intake_Year = "Intake Year is Required";
+    }
+    return newErrors;
+  };
+
+  const handleSubmitValidation = (event) => {
+    event.preventDefault();
+    const validationErrors = Validation();
+    if (Object.keys(validationErrors).length === 0) {
+      handleSubmitData();
+    } else {
+      setErrors(validationErrors);
+    }
+  };
+
+
   return (
     <div className="section">
       <div className="state-container ">
-        <h1>France</h1>
+        <h1><span>Study Abroad in </span>France</h1>
         <p>
-          A Quotation from lorium ipusum Lorem ipsum dolor sit amet,
-          consectetuer adipiscing{" "}
+        Get expert guidance to help you get closer to your dream of studying in the France
+        and fastrack your visa application process.{" "}
         </p>
-        <div>
-          Dive into a world of diverse destina - tions, prestigious
-          universities, and exciting courses.
+        <div className="lead-form-container">
+        <h3>Register for Personalized Counselling</h3>
+        <form onSubmit={handleSubmitValidation}>
+          <div className="text-feild container">
+          <div className="form-fields">
+            <input
+                type="text"
+                name="Name"
+                placeholder="Name"
+                className="input-fields"
+                onChange={handleChange}
+                value={formData.Name}
+              />
+              {errors.Name && <p style={{ color: "red" }}>{errors.Name}</p>}
+              </div>
+
+              <div className="form-fields">
+                <input
+                  type="text"
+                  name="Email"
+                  placeholder="Email"
+                  className="input-fields"
+                  onChange={handleChange}
+                value={formData.Email}
+                />
+                {errors.Email && <p style={{ color: "red" }}>{errors.Email}</p>}
+              </div>
+
+              <div className="form-fields">
+                <input
+                  type="text"
+                  name="Mobile"
+                  placeholder="Mobile Number"
+                  className="input-fields"
+                  onChange={handleChange}
+                value={formData.Mobile}
+                />
+                {errors.Mobile && <p style={{ color: "red" }}>{errors.Mobile}</p>}
+              </div>
+
+              <div className="form-fields">
+                <input
+                 type="text"
+                 name="Intake_Year" 
+                 placeholder="Intake Year" 
+                 className="input-fields"
+                 onChange={handleChange}
+                value={formData.Intake_Year}
+                />
+                {errors.Intake_Year && (
+                <p style={{ color: "red" }}>{errors.Intake_Year}</p>
+              )}
+              </div>
+              <input type="hidden" name="Source" className="input-fields" />
+            <button className="form-button" type="submit">
+            Book A Free Call
+          </button>
+          </div>
+        </form>
         </div>
       </div>
       <div className="capital-container1">
@@ -25,7 +168,7 @@ const State = () => {
         <div className="Rightcapital-container">
           <div className="about-capital-card1">
             <span>Population </span>
-            <h2>64.88 Million</h2>
+            <h2>67 Million</h2>
           </div>
           <div className="about-capital-card1">
             <span>Language </span>
@@ -33,7 +176,7 @@ const State = () => {
           </div>
           <div className="about-capital-card1">
             <span>Currency </span>
-            <h2>Franc</h2>
+            <h2>Euro (€)</h2>
           </div>
         </div>
       </div>
@@ -41,7 +184,7 @@ const State = () => {
       <div className="GDP-container">
         <div className="gdp-card">
           <span>GDP</span>
-          <h3>$ 2.95 Trillon</h3>
+          <h3>$ 3 Trillon</h3>
           <div className="imageCardGdp">
             <img src={Img2} alt="" />
           </div>
@@ -57,8 +200,8 @@ const State = () => {
           </div>
         </div>
         <div className="International-conatiner">
-          <p>International Students</p>
-          <h1>412,000</h1>
+          <p>Indian Students in France</p>
+          <h1>10,000</h1>
         </div>
       </div>
     </div>

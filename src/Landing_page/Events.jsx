@@ -77,47 +77,13 @@ const Events = () => {
                 <b className="upcomingEvents">Upcoming Events</b>
                 <img
                   src={`https://strapi.orientspectra.com${e?.attributes?.Poster?.data?.attributes.url}`}
-                  alt=""
+                  alt="" loading="lazy"
                 />
               </div>
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
-      {/* <motion.div
-          className="event_leftSide"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.8 }}
-          variants={{
-            hidden: { opacity: 0, y: -200 },
-            visible: { opacity: 1, y: 0 },
-          }}
-        >
-          <div className="event_leftContent">
-            <div className="textBox">
-              <b className="upcomingText">Upcoming Events</b>
-            </div>
-            <div className="dateEvent">
-              <p>Date of the event</p>
-              <span>{upcomingEventdata[0]?.attributes?.Date_of_the_event}</span>
-            </div>
-            <div className="event_bottomContent">
-              <h4 className="explaintag">
-                {upcomingEventdata[0]?.attributes?.Headline}
-              </h4>
-              <span>{upcomingEventdata[0]?.attributes?.Shortdescription}</span>
-            </div>
-          </div>
-          <div className="eventsRigtImage">
-            <b className="upcomingEvents">Upcoming Events</b>
-            <img
-              src={`https://strapi.orientspectra.com${upcomingEventdata[0]?.attributes?.Poster?.data?.attributes.url}`}
-              alt=""
-            />
-          </div>
-        </motion.div> */}
       <motion.div
         className="event_rightSide"
         initial="hidden"

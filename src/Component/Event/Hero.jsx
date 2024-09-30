@@ -6,7 +6,10 @@ import { useState } from "react";
 const Hero = ({ eventData }) => {
   const [EventId, setEventId] = useState(0);
 
-  const handleEventdata = (status) => {
+  const handleEventdata = (status, e) => {
+    e.stopPropagation();
+
+    e.stopPropagation();
     if (status === "next") {
       if (EventId < eventData.length - 1) {
         setEventId(EventId + 1);
@@ -17,8 +20,12 @@ const Hero = ({ eventData }) => {
       }
     }
   };
+
   const handleSingleEvnet = () => {
     window.location.href = `event-details/${eventData[EventId]?.id}`;
+  };
+  const handleCardClick = (e) => {
+    e.stopPropagation();
   };
 
   return (
@@ -30,28 +37,24 @@ const Hero = ({ eventData }) => {
             alt=""
           />
         </div>
-        {/* <div className="event-hero-leftcard">
-          <div className="Experience-leftcard">
-            <h1>{eventData[EventId]?.attributes?.Headline}</h1>
-            <p>{eventData[EventId]?.attributes?.Shortdescription}</p>
-          </div>
-        </div> */}
+
         <div className="bookPass-container">
           <div className="eventarrowcard">
             <CircleArrow
               className="eventLeftCircleArrow"
-              onClick={() => handleEventdata("prev")}
+              onClick={(e) => handleEventdata("prev", e)}
             />
             <CircleArrow
               className="eventRightCircleArrow"
-              onClick={() => handleEventdata("next")}
+              onClick={(e) => handleEventdata("next", e)}
             />
           </div>
-          <div className="bookPass-cardd">
+          <div className="bookPass-cardd" onClick={handleCardClick}>
             <div className="eventUpcomingcard">
               <span>Upcoming Event</span>
               <h1>Book Your Passes</h1>
             </div>
+
             <CircleArrow className="BookRightCircleArrow" />
           </div>
         </div>

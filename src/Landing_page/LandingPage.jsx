@@ -55,13 +55,11 @@ const LandingPage = () => {
   }, []);
 
 
- 
-
   return (
     <>
       <Hero blog={blog} event={event} />
       <Discovery />
-      <Acedemic />
+      {/* <Acedemic /> */}
       <Events />
       <Country/>
       <Explore />
@@ -72,7 +70,6 @@ const LandingPage = () => {
       <Testimonial />
       <Blog />
       <News />
-      {/* <Faq /> */}
       <GetTuchWithUs />
     </>
   );

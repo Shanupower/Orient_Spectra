@@ -92,7 +92,7 @@ const Admissiontimeline = () => {
                   </div>
                   <div className="intackText">
                     <b>Fall</b>
-                    <p> September of every year</p>
+                    <p> September Intake</p>
                   </div>
                 </div>
                 <div className="intakesCard">
@@ -104,21 +104,10 @@ const Admissiontimeline = () => {
                   </div>
                   <div className="intackText">
                     <b>Spring</b>
-                    <p> January of every year</p>
+                    <p> February</p>
                   </div>
                 </div>
-                <div className="intakesCard">
-                  <div className="imageContainer">
-                    <img
-                      src="https://strapi.orientspectra.com/uploads/Summer_6b20b10000.jpg"
-                      alt=""
-                    />
-                  </div>
-                  <div className="intackText">
-                    <b>Summer</b>
-                    <p> May of every year</p>
-                  </div>
-                </div>
+                
               </div>
             </div>
             <div className="PopularProgram_card">
@@ -137,76 +126,60 @@ const Admissiontimeline = () => {
             <div className="Popular_Universities">
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/University_of_Cincinnati_a00123d710.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/Dublin_Institute_of_Technology_4b197dfbed.png"
+                  alt="Dublin_Institute_of_Technology"
                 />
               </div>
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/Northeastern_University_Logo_1ac770efc3.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/UL_new_logo_1_b77d17bf85.png"
+                  alt="University of Limerick"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/George_Mason_University_b9fb5b4192.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/DCU_Digital_Logo_Offiial_Navy_Landscape_0_c00367c1c0.png"
+                  alt="Dublin City University"
+                />
+              </div>{" "}
+              
+              <div className="university-card">
+                <img
+                  src="https://strapi.orientspectra.com/uploads/University_College_Cork_logo_svg_e07b3d4d2b.png"
+                  alt="University College Cork"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/University_of_Houston_Main_Campus_d3e90f8c69.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/griffith_logo_fb818363a4.webp"
+                  alt="Griffith College"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/University_of_Maryland_Baltimore_County_cb629dab69.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/NUI_Logo_SMC_removebg_preview_c4a7fdddab.png"
+                  alt="National University of Ireland"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/University_at_Buffalo_logo_4c62684ee5.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/Trinity_logo_bcb817f66f.webp"
+                  alt="Trinity College Dublin"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/California_State_University_Long_Beach_98122890c0.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/nu_f160e625cf.png"
+                  alt="Maynooth University"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/Umass_b17269ab7e.png"
-                  alt=""
-                />
-              </div>{" "}
-              <div className="university-card">
-                <img
-                  src="https://strapi.orientspectra.com/uploads/stony_brook_0fc916d964.jpeg"
-                  alt=""
-                />
-              </div>{" "}
-              <div className="university-card">
-                <img
-                  src="https://strapi.orientspectra.com/uploads/arizona_state_university_963dab0ee7.png"
-                  alt=""
+                  src="https://strapi.orientspectra.com/uploads/national_college_of_ireland_logo_f6b3328d2c.jpg"
+                  alt="national-college-of-ireland-logo"
                 />
               </div>
-              <div className="university-card">
-                <img
-                  src="https://strapi.orientspectra.com/uploads/Drexel_University_b963377272.png"
-                  alt=""
-                />
-              </div>
-              <div className="university-card">
-                <img
-                  src="https://strapi.orientspectra.com/uploads/John_Hopkins_University_06d1f2734d.png"
-                  alt=""
-                />
-              </div>
+          
             </div>
           </div>
         </div>
