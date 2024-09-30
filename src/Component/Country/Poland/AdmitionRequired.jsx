@@ -18,33 +18,43 @@ import Icon12 from "../../../assets/Country/Evidence.png";
 const AdmissionData = [
   {
     key: 1,
-    icon: Icon3,
-    title: "Choose Your Program and University",
+    icon: "https://strapi.orientspectra.com/uploads/possport_0c65803b78.webp",
+    title: "Completed visa application form",
   },
   {
     key: 2,
-    icon: Icon2,
-    title: "Check Admission Requirements",
+    icon: "https://strapi.orientspectra.com/uploads/certificate_2b2662d10c.webp",
+    title: "2 passport size photos",
   },
   {
     key: 3,
-    icon: Icon5,
-    title:
-      "Prepare Your Documents",
+    icon: "https://strapi.orientspectra.com/uploads/Refrence_d4804c3d2c.webp",
+    title: "Medical insurance that is valid in Europe",
   },
   {
     key: 4,
     icon: Icon4,
-    title: "Apply Online",
+    title: "Proof of having the required financial resources to cover your educational and living expenses during your course of study",
   },
   {
     key: 5,
-    icon: Icon1,
-    title: "Obtain a Student Visa",
+    icon: "https://strapi.orientspectra.com/uploads/Certificates_734a5b9296.webp",
+    title: "Certificate of acceptance from an educational institution in Poland",
   },
   {
+    key: 6,
     icon: "https://strapi.orientspectra.com/uploads/resident_bd19a54281.webp",
-    title: "Arrange Accommodation",
+    title: "Proof of Accommodation",
+  },
+  {
+    key: 7,
+    icon: "https://strapi.orientspectra.com/uploads/Essays_c9cdd737c1.webp",
+    title: "Receipt of payment of tuition fees for the first semester",
+  },
+  {
+    key: 8,
+    icon: "https://strapi.orientspectra.com/uploads/Essays_c9cdd737c1.webp",
+    title: "Receipt of payment of the visa application fees",
   },
 ];
 const AdmitionRequired = () => {

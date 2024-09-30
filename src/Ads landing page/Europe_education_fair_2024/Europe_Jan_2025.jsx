@@ -2,15 +2,23 @@ import Hero from "./EU_Hero";
 import "./ADS.css";
 import Universities from "./EU_Universities";
 import EventDetails from "./EU_EventDetails";
-import Benifits from "./EU_Benifits";
+import HowWeHelp from "./HowWeHelp";
+import Courses from "./Courses";
+import Testimonials from "../OfflineMarketingClub/Testimonials";
+import WhyChooseOs from "./WhyChooseOs";
+import FAQs from "./FAQ's";
 
 const Europe_Jan_2025 =() =>{
     return(
     <>
     <Hero />
     <EventDetails />
-    <Benifits />
+    <WhyChooseOs />
+    <Courses />
+    <HowWeHelp />
     <Universities/>
+    <Testimonials />
+    <FAQs/>
     </>
     )
 }

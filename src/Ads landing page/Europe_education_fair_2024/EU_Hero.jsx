@@ -118,11 +118,11 @@ const Hero = () => {
           <li>Scholarship opportunities</li>
         </ul>
       </div>
-      <div className="form-container">
+      <div className="form-Container">
         <p>Fill out the form below to register now:</p>
         <form onSubmit={handleSubmitValidation}>
-          <div className="text-feild-container">
-            <div className="form-group">
+          <div className="Text-feild-container">
+            <div className="Form-group">
               <input
                 type="text"
                 name="First_name"
@@ -140,7 +140,7 @@ const Hero = () => {
                 type="text"
                 name="Last_name"
                 placeholder="Last Name"
-                className="input-field"
+                className="Input-fields"
                 onChange={handleChange}
                 value={formData.Last_name}
               />
@@ -153,7 +153,7 @@ const Hero = () => {
                 type="text"
                 name="Email"
                 placeholder="Email"
-                className="input-field"
+                className="Input-fields"
                 onChange={handleChange}
                 value={formData.Email}
               />
@@ -164,7 +164,7 @@ const Hero = () => {
                 type="text"
                 name="Mobile"
                 placeholder="Mobile Number"
-                className="input-field"
+                className="Input-fields"
                 onChange={handleChange}
                 value={formData.Mobile}
               />
@@ -175,7 +175,7 @@ const Hero = () => {
                 type="text"
                 name="Intake_year"
                 placeholder="Intake Year"
-                className="input-field"
+                className="Input-fields"
                 onChange={handleChange}
                 value={formData.Intake_year}
               />
@@ -188,7 +188,7 @@ const Hero = () => {
                 type="text"
                 name="Intake_month"
                 placeholder="Intake Month"
-                className="input-field"
+                className="Input-fields"
                 onChange={handleChange}
                 value={formData.Intake_month}
               />
@@ -196,7 +196,7 @@ const Hero = () => {
                 <p style={{ color: "red" }}>{errors.Intake_month}</p>
               )}
             </div>
-            <input type="hidden" name="source" className="input-field" value={formData.Source} />
+            <input type="hidden" name="source" className="Input-fields" value={formData.Source} />
           </div>
           <button className="form-container-button" type="submit">
             REGISTER NOW

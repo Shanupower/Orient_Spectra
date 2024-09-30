@@ -31,12 +31,12 @@
     margin-left: 20px;
     font-size: 20px;
   }
-  .form-container {
+  .form-Container {
     width: 40%;
     background-color: white;
     padding: 2rem;
   }
-  .form-container > p {
+  .form-Container > p {
     font-size: 20px;
     font-weight: 600;
     line-height: 1.3;
@@ -60,30 +60,22 @@
     margin-top: 20px;
     cursor: pointer;
   }
-  .text-feild-container {
+  .Text-feild-container {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
-  .form-group {
+  .Form-group {
     margin-bottom: 1rem; /* Space between form fields */
     position: relative; /* Ensure error message is positioned relative to this container */
     width: 45%;
 
 }
-  .input-field {
+  .Input-fields {
     width:100%;
     font-size:15px;
-    padding: 10px;
-  }
-  .input-field1{
-    padding: 1rem;
-  }
-  .input-field2 {
-    font-size:15px;
-    width: 90%;
     padding: 10px;
   }
   .text-area_container {
@@ -108,6 +100,49 @@
   .USA_image_container {
     width: 180px;
   }
+
+  /* Top Universitis in Europe */
+
+  .Top-Universities {
+    padding: 2rem 6%;
+    margin-block: 3rem;
+  }
+  .Top-Universities > h1 {
+    font-size: 3rem;
+    color: #306398;
+    text-align: center;
+  }
+  .Top-Universities > h1 > span {
+    color: #e37d25;
+  }
+  .Top-Universities > p {
+    color: var(--text-color-black);
+    font-size: 25px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .University-container {
+    margin-block: 3%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2%;
+  }
+  .University-Images {
+    width: 250px;
+    object-fit: contain;
+  }
+  .University-button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 25px;
+    background-color: white;
+    border-radius: 50px;
+    border: 2px solid var(--brand-color);
+    margin-top: -20px;
+  }
   .Acedemic_cantainer__header {
     display: flex;
     justify-content: space-between;
@@ -131,6 +166,7 @@
 }
 .Event_container {
   padding: 2rem 6%;
+  margin-block: 2rem;
 }
 .Event_content {
   display: flex;
@@ -144,11 +180,16 @@
   width: 48%;
 }
 .Event_details > h1 {
-  font-size: 3rem;
+  font-size: 2rem;
   color: #306398;
-  margin-bottom: 2rem;
 }
-.Event_details > h1 > span {
+.Event_details > h3 {
+  margin-top: -25px;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  color: #306398;
+}
+.Event_details > h3 > span {
   color: #e37d25;
 }
 .Event_details > p > span {
@@ -164,46 +205,210 @@
   width: 40%;
 }
 .Image_container > img {
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 20px;
   border: 2px solid var(--text-color-gray);
 }
-.Benifts_container {
-  background-color: #f3f3f3f3 !important;
-  padding: 2rem 6%;
+/*Top Trending Courses in Europe */
+.Courses-container {
+  margin-block: 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1%;
 }
-.Benifts_container > h1 {
-  font-size: 3rem;
-  color: var(--brand-color);
-  font-weight: 700;
+.Courses-Images {
+  width: 250px;
+  border: 1px solid black;
+  padding: 20px;
+  border-radius: 20px;
+}
+.Courses-Images > img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+  object-fit: contain;
+}
+.Courses-Images > p {
   text-align: center;
+  font-size: 22px;
+  color: black;
+  font-weight: 600;
+  margin-top: 20px;
 }
-.Benifits_content {
+
+/*How We Help Container */
+.Help_container {
+  padding: 2rem 6%;
+  background-image: url("https://strapi.orientspectra.com/uploads/thumbnail_testimonial_map_45da579353_1_c7ba4b807e.webp");
+  background-size: cover;
+  background-blend-mode:color-burn;
+  background-color: #306398;
+}
+.Help_details {
+  width: 60%;
+}
+.Help_content {
   display: flex;
   align-items: center;
+  gap: 3rem;
   justify-content: space-between;
+  padding-bottom: 2rem;
   flex-wrap: wrap;
-  gap: 2rem;
-  text-align: center;
-  margin-top: 1rem;
-  padding: 5rem;
+  margin-top: 4rem;
 }
-.Benifits_Box {
-  width: 30%;
+.Help_details {
+  width: 48%;
+  align-self: self-start;
+}
+.Help_details > h1 {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 2rem;
+}
+.Help_details > p {
+  color:white;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+.HelpImage_container{
+  width: 45%;
+}
+.HelpImage_container > img {
+  object-fit: contain;
+  margin-right: 0;
+}
+.Help-list {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.Help-list-Box {
   padding: 5px;
   display: flex;
-  padding: 1.2rem 1.4rem;
   gap: 5%;
 }
-.Benifits_Box > img {
+.Help-list-Box > img {
   width: 40px;
   object-fit: contain;
 }
-.Benifits_Box > p{
+.Help-list-Box > p{
   font-size: 22px;
   text-align: left;
-  font-weight: 700;
+  font-weight: 500;
+  color: white;
 }
+
+/* Why choose Orient spectra */
+
+.whyOS-container {
+  padding: 2rem 6%;
+  background-image: url("https://strapi.orientspectra.com/uploads/1682_x_623_b8e5f56c6a.webp");
+  background-size: cover;
+  margin-top: -5rem;
+}
+.whyOS-container > h1{
+ font-size: 3rem;
+ text-align: center;
+ color: #306398;
+ font-weight: 600;
+ margin-block: 2rem;
+}
+.whyOS-container > h1 > span{
+  color: #e37d25;
+  font-weight: 600;
+}
+.whychoose-container {
+  padding: 2rem 7rem 3rem 7rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.whychoose-Box {
+  width: 350px;
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 25px;
+}
+.whychoose-Box > img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60px;
+  object-fit: contain;
+}
+.whychoose-Box > h1 {
+  font-size: 28px;
+  color: #306398;
+  font-weight: 600;
+  text-align: center;
+}
+.whychoose-Box > p {
+  font-size: 22px;
+  font-weight: 500;
+  color: black;
+  text-align: center;
+  margin-top: 10px;
+}
+/* FAQ'S CONTAINER */
+
+.FAQ_container {
+  padding: 2rem 6%;
+  margin-top: -5rem;
+}
+.FAQ_details {
+  width: 60%;
+}
+.FAQ_content {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+  flex-wrap: wrap;
+  margin-top: 4rem;
+}
+.FAQ_details {
+  width: 48%;
+  align-self: self-start;
+}
+.FAQImage_container > h1 {
+  font-size: 2rem;
+  color: #e37d25;
+}
+.FAQImage_container > h2 {
+  font-size: 2.5rem;
+  color: #306398;
+  margin-bottom: 2rem;
+}
+.FAQImage_container > p {
+  color: black;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+.FAQImage_container{
+  width: 45%;
+}
+.FAQImage_container > img {
+  object-fit: contain;
+  margin-right: 0;
+}
+.FAQs-list {
+  border-radius: 20px !important;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1) !important;
+  margin-top: 30px !important;
+  border: none;
+}
+.FAQ_Heading {
+  font-size: 19px !important;
+  padding: 2px !important;
+}
+.FAQ_Content {
+  font-size:  16px !important;
+}
+
 .Thank_you_container {
   background-color: rgba(31, 122, 255, 1);
   padding: 10rem;
@@ -248,11 +453,11 @@
     margin-left: 12px;
     font-size: 15px;
   }
-  .form-container {
+  .form-Container {
     width: 45%;
     margin-top: 10%;
   }
-  .input-field {
+  .Input-fields {
     font-size:13px;
     width: 100%;
     padding: 10px;
@@ -323,17 +528,17 @@
       font-size: 15px;
       margin-bottom: 0.5rem;
     }
-    .form-container {
+    .form-Container {
       display: block;
       width: 100%;
       gap:1rem;
       padding: 1rem;
     }
-    .form-group {
+    .Form-group {
       width:100%;
       margin-bottom: 0;
     }
-    .input-field {
+    .Input-fields {
       font-size:13px;
       width: 100%;
       padding: 10px;

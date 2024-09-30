@@ -92,11 +92,11 @@ const MaltaCountry = () => {
     <>
       <Hero />
       <State />
-      <UnitedState />
+      {/* <UnitedState />
       <Univercity />
-      <TrendingCourse />
+      <TrendingCourse /> */}
       <AdmitionRequired />
-      <Admissiontimeline />
+      {/* <Admissiontimeline /> */}
       <StudyAbroad />
       {/* <Personalized /> */}
       <CountryFaq getItems={getItems} />

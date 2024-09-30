@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Dialog, DialogTitle, DialogContent, DialogActions, Button, Typography } from '@mui/material';
+import { Dialog, DialogTitle, DialogContent, DialogActions, Button, Typography, IconButton, useMediaQuery } from '@mui/material';
 import "./index.css";
 import axios from 'axios';
+import CloseIcon from '@mui/icons-material/Close';
 
 const LeadFormPopUp = () => {
+  const isSm = useMediaQuery("(max-width:986px)");
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -108,6 +110,8 @@ const LeadFormPopUp = () => {
           sx: {
             width: { xs: '100%', sm: '80%', md: '70%', lg: '50%' }, // Customize the width for responsiveness
             maxWidth: 'none', // Disable the default max-width for complete control
+            position: 'relative',
+            overflow: 'visible', // Allow the icon to overflow the dialog
           },
         }}
         className='DailogBox'
@@ -123,6 +127,27 @@ const LeadFormPopUp = () => {
         </div>
         ):(
           <>
+           <IconButton
+              aria-label="close"
+              onClick={handleClose}
+              sx={{
+                position: 'absolute',
+                right: {xs: '-16px', lg:'-20px'},
+                top: {xs: '-16px', lg:'-20px'},
+                backgroundColor: '#e37d25',
+                borderRadius: {lg: '50%', md: '80%'},
+                boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.1)',
+                color: 'white', 
+                '&:hover': {
+                  backgroundColor: "#306398",
+                  zIndex: 2,
+                },
+                width: { xs: '30px', sm: '35px', md: '45px' },
+                height: { xs: '30px', sm: '35px', md: '45px' },
+              }}
+            >
+              <CloseIcon />
+            </IconButton>
           <div className="Dailog-container">
           <div className='DailogContent'>
           <h2 className="DailogTitle">Europe Education Fair <span>2024</span></h2>

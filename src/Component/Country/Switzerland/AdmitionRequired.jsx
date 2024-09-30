@@ -22,24 +22,20 @@ const AdmissionData = [
   },
   {
     icon: Icon2,
-    title: "Proof of English proficiency (OEFL/IELTS test scores)",
+    title: "Copies of TOEFL/IELTS",
   },
   {
     icon: Icon3,
-    title: "ACT/SAT/LSAT forUG programs, GMAT/GRE scores for PG programs",
-  },
-  {
-    icon: Icon4,
-    title: "Academic Tanscripts from the previous study",
+    title: "Photographs",
   },
   {
     icon: Icon5,
     title:
-      "Academic Refrence Letters, the number of reference letters depends from university to university",
+      "Letter from College",
   },
   {
     icon: Icon6,
-    title: "Letters of recommendation fromthe employer/manager (if applicable)",
+    title: "Two Letters of Recommendation",
   },
   {
     icon: Icon7,
@@ -50,20 +46,8 @@ const AdmissionData = [
     title: "Statement of Purpose (SOP)",
   },
   {
-    icon: Icon9,
-    title: "Essays (if dmanded by the university)",
-  },
-  {
-    icon: Icon10,
-    title: "Portfolio (for specific courses)",
-  },
-  {
     icon: Icon11,
-    title: "      Certificates of extracurricular activities      ",
-  },
-  {
-    icon: Icon12,
-    title: "Evidence of Funds",
+    title: "Degree / Provisional Certificates",
   },
 ];
 const AdmitionRequired = () => {
