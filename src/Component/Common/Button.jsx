@@ -1,8 +1,7 @@
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { Link } from "react-router-dom";
 import "./index.css";
-const Button = ({ text, link, arrow, className, onClick}) => {
-
+const Button = ({ text, link, arrow, className, onClick }) => {
   const handleClick = (e) => {
     if (onClick) {
       e.preventDefault();

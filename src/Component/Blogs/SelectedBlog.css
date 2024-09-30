@@ -149,13 +149,17 @@ img {
 .hero-section-blog {
   margin-top: 8rem;
 }
-
-.hero-section-blog > h1 {
+.blog-details-page-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: last baseline;
+}
+.blog-details-page-hero > h1 {
   font-size: 74px;
   font-weight: 500;
   color: var(--brand-color);
   width: 50%;
-  line-height: 1.2;
+  line-height: 1;
 }
 .hero-section-blog > div {
   display: flex;
@@ -185,14 +189,42 @@ img {
   display: flex;
   justify-content: flex-end;
 }
-
-@media (max-width:1067px) {
+.subscribe-container {
+  margin-block: 3.2rem 2rem;
+}
+.subscribe-container > h1 {
+  color: var(--brand-color);
+}
+.subscribe-container > form {
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+.subscribe-container > form > input {
+  width: calc(50% - 1rem);
+  border: none;
+  border-bottom: 2px solid rgb(180, 180, 180);
+  padding: 0.6rem 0rem;
+  font-size: 18px;
+  outline: none;
+  color: var(--text-color-darkblak);
+  padding-left: .6rem;
+}
+.SubcribeButton {
+  display: flex;
+  justify-content: end;
+  margin-top: 2rem;
+}
+/*  */
+@media (max-width: 1067px) {
   .hero-section-blog > h1 {
     font-size: 40px;
     width: 100%;
   }
   .hero-section-blog > div {
-   flex-direction: column;
+    flex-direction: column;
   }
   .hero-section-blog > div > p {
     width: 100%;
@@ -205,4 +237,3 @@ img {
     overflow: hidden;
   }
 }
-

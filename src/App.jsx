@@ -34,6 +34,8 @@ import ThankYou from "./Ads landing page/ThankYou";
 import UK_Jan_2025 from "./Ads landing page/UK_Januuary_2025/UK_Jan_2025";
 import Privacy_Policy from "./Component/Privacy_Policy/Privacy_Policy";
 import USA_SEPTEMBER_FAIR_2024 from "./Ads landing page/USA_SEPT_FAIR_2024/USA_SEPTEMBER_FAIR_2024";
+import NewsDetails from "./Component/NewsPR/NewsDetails";
+import EventDetails from "./Component/Event/EventDetails";
 import Europe_Jan_2025 from "./Ads landing page/Europe_education_fair_2024/Europe_Jan_2025";
 import Offline_Marketing_Club from "./Ads landing page/OfflineMarketingClub/Offline_Marketing_Club";
 import WhatsApp from "./Whatsapp";
@@ -76,7 +78,7 @@ function App() {
 
   return (
     <>
-    <LeadFormPopUp />
+      <LeadFormPopUp />
       <Navbar
         openWhatwedo={openWhatwedo}
         setWhatwedoOpen={setWhatwedoOpen}
@@ -93,23 +95,38 @@ function App() {
         <Route path="/country/study-in-usa" element={<USACountry />} />
         <Route path="/country/study-in-uk" element={<UKCountry />} />
 
-        <Route path="/country/study-in-australia" element={<AustraliaCountry />} />
+        <Route
+          path="/country/study-in-australia"
+          element={<AustraliaCountry />}
+        />
         <Route path="/country/study-in-canada" element={<CanadaCountry />} />
         <Route path="/country/study-in-france" element={<FranceCountry />} />
         <Route path="/country/study-in-germany" element={<GermanyCountry />} />
         <Route path="/country/study-in-ireland" element={<IrelandCountry />} />
         <Route path="/country/study-in-malta" element={<MaltaCountry />} />
         <Route path="/country/study-in-poland" element={<PolandCountry />} />
-        <Route path="/country/study-in-singapore" element={<SingaporeCountry />} />
-        <Route path="/country/study-in-switzerland" element={<SwitzerlandCountry />} />
+        <Route
+          path="/country/study-in-singapore"
+          element={<SingaporeCountry />}
+        />
+        <Route
+          path="/country/study-in-switzerland"
+          element={<SwitzerlandCountry />}
+        />
         <Route path="/country/Dubai" element={<SwitzerlandCountry />} />
-        <Route path="/country/study-in-sweden" element={<SwitzerlandCountry />} />
+        <Route
+          path="/country/study-in-sweden"
+          element={<SwitzerlandCountry />}
+        />
 
         <Route path="/about" element={<About />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/events" element={<Event />} />
+        <Route path="/event-details/:id" element={<EventDetails />} />
+        <Route path="/study-overseas" element={<StudyOverseas />} />
         <Route path="/countries" element={<StudyOverseas />} />
         <Route path="/news-&-pr" element={<NewsPR />} />
+        <Route path="/news-&-pr-detail/:id" element={<NewsDetails />} />
         <Route path="/FindYourCourse" element={<Finding />}></Route>
         <Route path="/Coaching" element={<Coaching />}></Route>
         <Route path="/Mentorship" element={<Mentorship />}></Route>
@@ -120,13 +137,21 @@ function App() {
         {/* Start your Journey */}
         <Route path="/start-your-journey" element={<StartYourJourney />} />
         <Route path="*" element={<Error />} />
-        <Route path="/offline-marketing-club" element= {<Offline_Marketing_Club/>} />
-
+        <Route
+          path="/offline-marketing-club"
+          element={<Offline_Marketing_Club />}
+        />
 
         <Route path="/uk-november-2024" element={<UK_EDU_FAIR />} />
         <Route path="/uk-january-2025" element={<UK_Jan_2025 />} />
-        <Route path="/usa-september-fair-2024" element={<USA_SEPTEMBER_FAIR_2024 />} />
-        <Route path="/europe-education-fair-2024" element={<Europe_Jan_2025 />} />
+        <Route
+          path="/usa-september-fair-2024"
+          element={<USA_SEPTEMBER_FAIR_2024 />}
+        />
+        <Route
+          path="/europe-education-fair-2024"
+          element={<Europe_Jan_2025 />}
+        />
         <Route path="/thank-you" element={<ThankYou />} />
         <Route path="/privacy-policy" element={<Privacy_Policy />} />
       </Routes>

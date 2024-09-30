@@ -10,6 +10,10 @@ const Step6 = ({
   email,
   setEmail,
   handleSubmitData,
+  name,
+  setName,
+  number,
+  setNumber,
 }) => {
   return (
     <div className="step1-container section">
@@ -27,11 +31,26 @@ const Step6 = ({
       <div className="step1-right-card">
         <div className="Email-card">
           <input
+            type="text"
+            name="name"
+            value={name}
+            placeholder="Please Enter Your Name"
+            onChange={(e) => setName(e.target.value)}
+          />
+          <input
+            style={{ marginBlock: "1rem" }}
             type="email"
             name="email"
             value={email}
             placeholder="Please Enter Your Valid Email Id"
             onChange={(e) => setEmail(e.target.value)}
+          />
+          <input
+            type="number"
+            name="number"
+            value={number}
+            placeholder="Please Enter Your Mobile Number"
+            onChange={(e) => setNumber(e.target.value)}
           />
           <p>
             By proceeding, you agree to the Terms & Conditions and Privacy
@@ -49,7 +68,7 @@ const Step6 = ({
           </div>
         ) : (
           <div className="Next-container">
-            Sign Up
+            Schedule Your Call
             <AddCircleOutlineOutlinedIcon style={{ fontSize: "50px" }} />
           </div>
         )}
