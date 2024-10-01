@@ -4,7 +4,7 @@ import "./index.css";
 import axios from 'axios';
 import CloseIcon from '@mui/icons-material/Close';
 
-const HeroLeadFormPopUp = () => {
+const HeroLeadFormPopUp = ({closePopup}) => {
   const [open, setOpen] = useState(true);
 
   const [formData, setFormData] = useState({
@@ -96,7 +96,7 @@ const HeroLeadFormPopUp = () => {
     <div>
       <Dialog
          open={open}
-         onClose={handleClose}
+         onClose={closePopup}
          aria-labelledby="popup-dialog-title"
          aria-describedby="popup-dialog-description"
          maxWidth="lg" // Adjust maxWidth here (e.g., 'xs', 'sm', 'md', 'lg', 'xl')
@@ -123,7 +123,7 @@ const HeroLeadFormPopUp = () => {
           <>
           <IconButton
               aria-label="close"
-              onClick={handleClose}
+              onClick={closePopup}
               sx={{
                 position: 'absolute',
                 right: {xs: '-16px', lg:'-20px'},
@@ -204,7 +204,7 @@ const HeroLeadFormPopUp = () => {
             </button>
             </div>  
             </form>
-            <p onClick={handleClose} className='SkipNow'>Skip Now </p>
+            <p onClick={closePopup} className='SkipNow'>Skip Now </p>
           </DialogContent>
           </div>
           <img src="https://strapi.orientspectra.com/uploads/391_x_520_EU_Event_Banner_6605cc7233.jpg" alt="EventImage" className='ImageContainer'/>

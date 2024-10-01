@@ -79,6 +79,10 @@ const Hero = ({ blog, event }) => {
       navigate("/start-your-journey");
     }
   };
+  
+  const closePopup = () => {
+    setIsOpen(false); 
+  };
 
   return (
     <div className="HeroBlock">
@@ -110,7 +114,7 @@ const Hero = ({ blog, event }) => {
                 <Button
                   text={data.buttonText}
                   arrow={true}
-                  onClick={()=>handleNavigate(data)}
+                  onClick={() => handleNavigate(data)}
                   className="StudyButtonCard"
                 />
               </div>
@@ -118,10 +122,11 @@ const Hero = ({ blog, event }) => {
           ))}
         </Carousel>
       </div>
-      {isOpen &&  
-      <div role="dialog" aria-hidden={!isOpen}>
-        <HeroLeadFormPopUp />
+      {isOpen &&  (
+        <div role="dialog" aria-hidden={!isOpen}>
+        <HeroLeadFormPopUp closePopup={closePopup} />
         </div> 
+      )
         }
     </div>
   );

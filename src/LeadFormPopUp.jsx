@@ -105,13 +105,13 @@ const LeadFormPopUp = () => {
         onClose={handleClose}
         aria-labelledby="popup-dialog-title"
         aria-describedby="popup-dialog-description"
-        maxWidth="lg" // Adjust maxWidth here (e.g., 'xs', 'sm', 'md', 'lg', 'xl')
+        maxWidth="lg"
         PaperProps={{
           sx: {
-            width: { xs: '100%', sm: '80%', md: '70%', lg: '50%' }, // Customize the width for responsiveness
-            maxWidth: 'none', // Disable the default max-width for complete control
+            width: { xs: '100%', sm: '80%', md: '70%', lg: '50%' },
+            maxWidth: 'none',
             position: 'relative',
-            overflow: 'visible', // Allow the icon to overflow the dialog
+            overflow: 'visible',
           },
         }}
         className='DailogBox'
