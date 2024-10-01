@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import Aos from "aos";
 import "./SelectedBlog.css";
 import GetTuchWithUs from "../../Landing_page/GetTuchWithUs2";
 import Skeleton from "@mui/material/Skeleton";
+import Button from "../Common/Button";
 
 const months = {
   1: "January",
@@ -24,7 +24,6 @@ const months = {
 
 const YouMightAlsoLike = ({ RecentBlogs }) => {
   const [isLoading, setIsLoading] = useState(true);
-  console.log("VVVRecentBlogs", RecentBlogs);
   return (
     <div className="YouMightAlsoLike section">
       <h2>You Might Also Like</h2>
@@ -73,9 +72,9 @@ export default function BlogBody() {
   const [isLoading, setIsLoading] = useState(true);
   const { id } = useParams();
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [blogContent]);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, [blogContent]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -128,7 +127,10 @@ export default function BlogBody() {
     <>
       <div className="singleblog-body section">
         <div className="hero-section-blog">
-          <h1> {blogContent?.attributes?.Title}</h1>
+          <div className="blog-details-page-hero">
+            <h1>{blogContent?.attributes?.Title}</h1>
+          </div>
+
           <div>
             <span> {blogContent?.attributes?.Date}</span>
             <p>{blogContent?.attributes?.Short_Description}</p>
@@ -154,6 +156,17 @@ export default function BlogBody() {
           <div
             dangerouslySetInnerHTML={{ __html: blogContent?.attributes?.text }}
           />
+        </div>
+
+        <div className="subscribe-container">
+          <h1>Get Updates</h1>
+          <form action="">
+            <input type="text" placeholder="Name" name="name" />
+            <input type="email" placeholder="Email" />
+          </form>
+          <div className="SubcribeButton">
+            <Button text="Subscribe" />
+          </div>
         </div>
       </div>
 

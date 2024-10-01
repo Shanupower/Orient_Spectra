@@ -13,6 +13,8 @@ const StartYourJourney = () => {
   const [Month, setMonth] = useState("");
   const [Subject, setSubject] = useState([]);
   const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [number, setNumber] = useState("");
 
   const [step, setStep] = useState(1);
 
@@ -88,6 +90,10 @@ const StartYourJourney = () => {
           handlePrevStep={handlePrevStep}
           email={email}
           setEmail={setEmail}
+          name={name}
+          setName={setName}
+          number={number}
+          setNumber={setNumber}
           handleSubmitData={handleSubmitData}
         />
       )}
