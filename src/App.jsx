@@ -40,6 +40,8 @@ import Europe_Jan_2025 from "./Ads landing page/Europe_education_fair_2024/Europ
 import Offline_Marketing_Club from "./Ads landing page/OfflineMarketingClub/Offline_Marketing_Club";
 import WhatsApp from "./Whatsapp";
 import LeadFormPopUp from "./LeadFormPopUp";
+import SwedenCountry from "./Component/Country/Sweden/Country";
+import DUBAICountry from "./Component/Country/Dubai/Country";
 
 function App() {
   const [openWhatwedo, setWhatwedoOpen] = useState(false);
@@ -113,10 +115,10 @@ function App() {
           path="/country/study-in-switzerland"
           element={<SwitzerlandCountry />}
         />
-        <Route path="/country/Dubai" element={<SwitzerlandCountry />} />
+        <Route path="/country/study-in-dubai" element={<DUBAICountry />} />
         <Route
           path="/country/study-in-sweden"
-          element={<SwitzerlandCountry />}
+          element={<SwedenCountry />}
         />
 
         <Route path="/about" element={<About />} />

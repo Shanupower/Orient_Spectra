@@ -74,6 +74,11 @@ const StudyCountry = [
     link: "/country/study-in-sweden",
   },
   {
+    name: "Dubai",
+    image: Dubai,
+    link: "/country/study-in-dubai",
+  },
+  {
     name: "Switzerland",
     image: Switzerland,
     link: "/country/study-in-switzerland",

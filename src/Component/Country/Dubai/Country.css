@@ -1,0 +1,892 @@
+.hero-container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero-image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.hero-image-container > video {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+.hero-content > p {
+  font-size: 20px;
+  color: white;
+}
+
+.hero-content > h1 {
+  color: white;
+  font-size: 48px;
+  margin-block: 1rem;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+/* State */
+
+.state-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-block: 3rem;
+}
+.state-container > h1 > span {
+  color: var(--text-color-darkblack);
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 500;
+}
+.state-container > h1 {
+  width: calc(70 / 3 - 1rem) !important;
+  color: var(--brand-color);
+  font-size: 48px;
+  line-height: 1.2;
+  align-self: center;
+  margin-top: -50px;
+}
+
+.state-container > p {
+  width: calc(80% / 3 - 1rem);
+  font-size: 28px;
+  line-height: 1.2;
+  color: var(--text-color-darkblack);
+  align-self: center;
+}
+
+.lead-form-container {
+  width: calc(95% / 3 - 1rem);
+  background-color: #1f7aff;
+  padding: 1.5rem 3rem 1.5rem 3rem;
+  border-radius: 20px;
+
+}
+
+/*lead-form Container */
+.lead-form-container > h3 {
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: white;
+}
+.text-feild {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem !important;
+}
+.form-fields {
+  margin-bottom: 0.5rem; /* Space between form fields */
+  position: relative; /* Ensure error message is positioned relative to this container */
+  width: 100% !important;
+}
+.input-fields {
+  width: 100%;
+  font-size: 15px;
+  padding: 5px;
+}
+.form-button {
+  width: 100%;
+  font-size: 20px;
+  font-weight: 700;
+  background-color: var(--brand-color);
+  border: none;
+  color: white;
+  margin-top: 0 !important;
+  cursor: pointer;
+}
+
+/* H */
+.capital-container1 {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-block: 6rem;
+}
+.leftcapital-container {
+  width: calc(20% - 1rem);
+  background-color: var(--brand-color);
+  padding: 1rem 2.5rem;
+  border-radius: 16px;
+  color: var(--text-color-white);
+  max-width: 100%;
+}
+.Rightcapital-container {
+  width: calc(80% - 1rem);
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  background-color: var(--text-color-blue);
+  padding: 1.6rem 4rem;
+  border-radius: 16px;
+}
+.about-capital-card1 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--text-color-white);
+}
+.about-capital-card1 > span {
+  font-size: 18px;
+}
+.about-capital-card1 > h2 {
+  font-size: 22px;
+}
+/*  */
+.GDP-container {
+  display: flex;
+  gap: 2rem;
+  align-items: stretch;
+  justify-content: space-between;
+}
+.gdp-card {
+  width: calc(22% - 1rem);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  border: 1px solid gray;
+}
+
+.gdp-card > h3 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.univercity-container {
+  width: calc(60% - 1rem);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  border: 1px solid gray;
+  display: flex;
+  align-items: flex-end;
+  gap: 2rem;
+}
+.imageCardGdp {
+  width: 200px;
+  height: 20vh;
+}
+.imageCardGdp2 {
+  width: 200px;
+  height: 100%;
+}
+.imageCardGdp > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.imageCardGd2 > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.univercity-card2 > h2 {
+  font-size: 48px;
+  color: var(--brand-color);
+  line-height: 1.2;
+}
+.univercity-card2 > p {
+  font-size: 18px;
+  color: var(--text-color-darkblack);
+  line-height: 1.2;
+}
+.International-conatiner {
+  width: calc(22% - 1rem);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  border: 1px solid gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.International-conatiner > p {
+  font-size: 22px;
+  color: var(--text-color-darkblack);
+  line-height: 1.3;
+}
+.International-conatiner > h1 {
+  font-size: 48px;
+  color: var(--brand-color);
+  line-height: 1.2;
+}
+
+/* United state */
+.unitedstate-continar {
+  background-color: rgba(255, 232, 217, 1);
+  margin-block: 6rem;
+}
+.unitedstate-continar > h1 {
+  padding-block: 3rem;
+  color: var(--text-color-darkblack);
+  font-size: 50px;
+  font-weight: 500;
+  border-bottom: none;
+  line-height: 1;
+  padding-bottom: 0%;
+}
+.unitedstate-continar > p {
+  padding-block: 2rem;
+  color: var(--text-color-darkblack);
+  font-size: 23px;
+  font-stretch: 2rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.whyWeStudy-container {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+}
+
+.StudyingCard {
+  background-color: var(--brand-color);
+  width: 100%;
+  border-radius: 10px;
+  color: var(--text-color-white);
+}
+
+.StudyingCard > h3 {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  width: 100%;
+}
+
+.StudyingCard > p {
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 3%;
+}
+.StudyingCard > img {
+  width: 60px;
+  height: 60px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ReadMoreCard {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  margin-left: 55%;
+}
+.ReadMoreCard > p {
+  font-size: 18px;
+  margin-bottom: 0.6rem;
+}
+.rightArrowBlog {
+  background-color: var(--brand-color);
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 50%;
+  color: #fff;
+}
+
+/* Univercity */
+
+.univercity-card {
+  margin-block: 4rem;
+}
+.trending-course > h1,
+.univercity-card > h1 {
+  font-size: 2.8rem;
+  font-weight: 500;
+  display: block;
+  color: var(--text-color-darkblack);
+}
+.trending-course > h1::after,
+.univercity-card > h1::after {
+  content: "";
+  display: none;
+  width: 36%;
+  height: 1px;
+  background-color: var(--text-color-darkblack);
+  margin-top: 0.4rem;
+}
+.trending-course > h1 > span,
+.univercity-card > h1 > span {
+  color: var(--brand-color);
+  font-weight: 600;
+}
+
+.univercity-section-card {
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  margin-top: 2rem;
+  gap: 4rem;
+  margin-right: 4rem;
+}
+.univercityList {
+  background-color: rgb(241, 241, 241);
+  min-width: 340px;
+  border-radius: 10px;
+  padding: 1rem;
+}
+.univercityList-Img {
+  width: 100%;
+  height: 25vh;
+  background-color: var(--text-color-white);
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 2rem;
+}
+.univercityList-Img > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.Concordia-container {
+  margin-top: 1.2rem;
+  background-color: var(--text-color-white);
+  border-radius: 20px;
+  padding: 2rem 1rem;
+}
+.ConcordiaCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ConcordiaCard > p {
+  width: 70%;
+  font-size: 18px;
+  color: var(--text-color-darkblack);
+}
+
+.Ietes {
+  gap: 1rem;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.ConcordiaCard > div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.ConcordiaCard > div > p {
+  line-height: 1;
+  font-size: 12px;
+}
+.ConcordiaCard > div > h2 {
+  font-size: 32px;
+}
+
+.course-section-card {
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  margin-top: 2rem;
+  gap: 4rem;
+  margin-right: 4rem;
+}
+.Bussiness-card {
+  background-color: rgb(241, 241, 241);
+  width: 500px;
+  border-radius: 20px;
+  display: flex;
+  /* justify-content: space-between; */
+  gap: 5%;
+  padding: 1.2rem 2rem;
+  align-items: center;
+}
+.Bussiness-card > p {
+  font-size: 25px;
+}
+.Bussinesscenicon {
+  font-size: 50px !important;
+}
+
+.Admition-required-container {
+  margin-block: 4rem;
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+}
+.admissioncard-sticy {
+  width: calc(50% - 1rem);
+}
+.admissioncard-sticy > h1 {
+  font-size: 44px;
+  font-weight: 500;
+  line-height: 1.1;
+  position: sticky;
+  top: 6rem;
+}
+.admissioncard-sticy > h1 > b {
+  font-size: 44px;
+  font-weight: 600;
+  color: var(--brand-color);
+}
+.admissioncard-sticy > h1 > p {
+  width: calc(80% - 1rem);
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--text-color-black);
+  line-height: 1.3;
+  position: sticky;
+  margin-top: 2rem;
+}
+.admission-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  width: calc(50% - 1rem);
+}
+
+.admission-detailscard {
+  display: flex;
+  border-radius: 20px;
+  padding: 1.2rem 1.4rem;
+  background-color: #efefef;
+  align-items: center;
+  justify-content: space-between;
+}
+.admission-detailscard:hover {
+  background-color: var(--brand-color);
+  color: var(--text-color-white);
+  cursor: pointer;
+}
+.Possporticon {
+  width: 60px;
+  height: 50px;
+}
+.possporticon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.admission-detailscard > p {
+  font-size: 22px;
+  width: 87%;
+}
+
+/*  Addmission-timeline-container*/
+
+.Addmission-timeline-container {
+  margin-block: 3rem;
+}
+.admissionTime-container {
+  background-color: #efefef;
+  min-height: 60vh;
+  width: 100%;
+  border-radius: 10px;
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  align-items: stretch;
+}
+.admissintimeline-card {
+  width: calc(50% - 2rem);
+}
+
+.coursemaster {
+  display: flex;
+  gap: 3rem;
+  width: 100%;
+  justify-content: space-between;
+  margin-block: 1rem 2.4rem;
+}
+.Graduates {
+  text-decoration: none;
+  background-color: var(--text-color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem;
+  border-radius: 20px;
+  width: 44%;
+  font-size: 18px;
+  color: var(--text-color-darkblack);
+}
+.Popular_Universities-container {
+  background-color: var(--text-color-white);
+  width: calc(50% - 2rem);
+  padding: 1rem;
+  border-radius: 10px;
+}
+.PopularProgram_card {
+  border-top: 1px solid rgb(0, 0, 0);
+}
+.Popular_Universities {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  overflow-y: auto;
+  height: 90vh;
+  padding: 1rem;
+}
+.Popular_Universities-container > h1 {
+  font-size: 28px;
+  color: var(--text-color-darkblack);
+  margin-bottom: 1rem;
+}
+.howApllycard > ul {
+  padding-left: 2rem;
+}
+.university-card {
+  border-radius: 20px;
+  min-height: 150px;
+  padding: 0.4rem;
+  background-color: transparent;
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+.university-card > img {
+  object-fit: contain;
+}
+.activeCard {
+  background-color: var(--brand-color);
+  color: var(--text-color-white);
+}
+.howApllycard {
+  color: var(--text-color-darkblack);
+}
+.howApllycard > h3 {
+  font-size: 20px;
+  line-height: 2;
+}
+.howApllycard > p {
+  font-size: 18px;
+}
+.Estimate {
+  margin-top: 1.4rem;
+}
+.PopularProgram_card {
+  color: var(--text-color-darkblack);
+  margin-top: 1.8rem;
+}
+.PopularProgram_card > h2 {
+  margin-top: 1rem;
+}
+.program-card {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 1rem;
+  gap: 1rem;
+}
+.prgram-item-container {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  border: 2px solid var(--brand-color);
+  background: #fff;
+  padding: 0.5rem 0.4rem;
+  border-radius: 10px;
+}
+.intakesCOntainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem  ;
+  margin-top: 0.6rem;
+}
+.intakesCard {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+.imageContainer {
+  width: 90px;
+  height:54px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.imageContainer > img {
+  object-fit: fill;
+}
+.intackText >b{
+  color: var(--brand-color);
+
+}
+.intackText >p{
+  color: var(--text-color-black);
+  line-height: 1;
+  letter-spacing: -1px;
+  
+}
+.program-name {
+  font-size: 15px;
+  line-height: 1.1;
+  text-align: center;
+}
+.icon_image {
+  width: 40px;
+  height: 40px;
+}
+.FiberManualRecordIcon {
+  color: #878787 !important;
+}
+
+.AccordionDetails {
+  font-size: 24px;
+}
+.ant-collapse-header {
+  flex-direction: row-reverse;
+}
+
+.Personalized-container {
+  margin-block: 2rem;
+}
+.Personalized-container > p {
+  font-size: 28px;
+  color: var(--text-color-darkblack);
+}
+.Expense-card {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.Expertcard {
+  display: flex;
+  width: 20%;
+  gap: 1rem;
+  align-items: center;
+}
+.Expense-card > p,
+.Expertcard > p {
+  font-size: 28px;
+  color: var(--text-color-darkblack);
+}
+
+.Expertcard > .rightArrowB {
+  rotate: 360deg;
+}
+.Expense-card > p {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+.Expense-card > p::after {
+  content: "";
+  display: block;
+  width: 66%;
+  height: 1px;
+  background-color: var(--text-color-darkblack);
+  margin-top: 0.4rem;
+}
+
+@media (max-width: 987px) {
+  .hero-content > h1 {
+    font-size: 40px;
+  }
+  .state-container {
+    flex-direction: column;
+  }
+  .state-container > h1 {
+    width: 100% !important;
+    font-size: 38px !important;
+    margin-top: 10px !important;
+  }
+  .state-container > p {
+    width: 100% !important;
+    font-size: 18px !important;
+  }
+  .state-container > div {
+    width: 100% !important;
+    font-size: 17px;
+  }
+  .capital-container {
+    flex-direction: column !important;
+  }
+  .capital-card {
+    width: 100% !important;
+    max-height: 80px;
+  }
+  .about-copital-container {
+    width: 100% !important;
+  }
+
+  .unitedstate-continar > h1 {
+    font-size: 35px;
+    line-height: 1.2;
+  }
+  .unitedstate-continar > p {
+    font-size: 18px;
+  }
+  .StudyingCard {
+    padding: 1.5rem;
+  }
+  .StudyingCard > p {
+    font-size: 17px;
+  }
+  .ReadMoreCard {
+    margin-left: 0%;
+  }
+  .univercity-section-card {
+    margin-right: 0;
+  }
+  .univercityList {
+    min-width: 326px;
+  }
+  .ConcordiaCard > div > h2 {
+    font-size: 26px;
+  }
+  .univercityList-Img {
+    height: 25vh !important;
+  }
+  .Bussiness-card {
+    width: 200px;
+    gap: 2%;
+    padding: 1.2rem 2rem;
+    align-items: center;
+  }
+  .Bussiness-card > p {
+    font-size: 18px;
+  }
+
+  .Rightcapital-container,
+  .capital-container1,
+  .Expense-card,
+  .admissionTime-container,
+  .Admition-required-container,
+  .aboutstateCard,
+  .GDP-container {
+    flex-direction: column !important;
+  }
+  .Rightcapital-container,
+  .leftcapital-container,
+  .Expertcard,
+  .Popular_Universities-container,
+  .PopularProgram_card,
+  .Popular_Universities-containe,
+  .admissintimeline-card,
+  .admission-container,
+  .admissioncard-sticy,
+  .ReadMoreCard,
+  .StudyingCard,
+  .unitedImge,
+  .International-conatiner,
+  .univercity-container,
+  .gdp-card {
+    width: 100% !important;
+  }
+  .Popular_Universities {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  .program-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /*Capitals Section */
+  .Rightcapital-container {
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+  .about-capital-card1 > span {
+    font-size: 15px;
+  }
+  .about-capital-card1 > h2 {
+    font-size: 20px;
+  }
+
+  /*Admission Timeline section */
+  .admissioncard-sticy > h1 {
+    width: 90%;
+    font-size: 35px;
+    line-height: 1.2;
+  }
+  .admissioncard-sticy > h1 > b {
+    font-size: 35px;
+    line-height: 1.2;
+  }
+  .admissioncard-sticy > h1 > p {
+    font-size: 18px;
+  }
+  .admission-detailscard > p {
+    font-size: 18px;
+    width: 75%;
+  }
+  .trending-course > h1,
+  .univercity-card > h1 {
+    font-size: 30px;
+    line-height: 1.2;
+  }
+}
+
+@media (max-width: 1024px) {
+  .state-container > h1 {
+    font-size: 35px !important;
+  }
+  .state-container > p {
+    /* width: 100% !important; */
+    font-size: 22px;
+  }
+  .state-container > div {
+    /* width: 100% !important; */
+    font-size: 18px;
+  }
+  /*Capitals Section */
+  .leftcapital-container {
+    padding: 1.3rem;
+  }
+  .Rightcapital-container {
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+  .about-capital-card1 > span {
+    font-size: 15px;
+  }
+  .about-capital-card1 > h2 {
+    font-size: 18px;
+  }
+  .gdp-card {
+    width: calc(23% - 1rem);
+  }
+  .gdp-card > h3 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .imageCardGdp {
+    width: 130px;
+    height: 20vh;
+  }
+  .univercity-card2 > h2 {
+    font-size: 43px;
+  }
+  .International-conatiner {
+    width: calc(23% - 1rem);
+  }
+  .International-conatiner > p {
+    font-size: 20px;
+  }
+  .International-conatiner > h1 {
+    font-size: 40px;
+  }
+
+  /*Admission Timeline section */
+  .admissioncard-sticy > h1 {
+    font-size: 35px;
+    line-height: 1.2;
+  }
+  .admissioncard-sticy > h1 > b {
+    font-size: 35px;
+    line-height: 1.2;
+  }
+  .admissioncard-sticy > h1 > p {
+    font-size: 18px;
+  }
+  .admission-detailscard > p {
+    font-size: 18px;
+    width: 80%;
+  }
+  .ReadMoreCard {
+    margin-left: 0;
+  }
+  .univercityList-Img {
+    height: 15vh;
+  }
+}
