@@ -248,7 +248,7 @@ html {
 
 @media (max-width: 768px) {
   .WhatsApp {
-    left: 30px;
+    right: 0px;
   }
 }
 
