@@ -261,3 +261,27 @@ html {
     height: 60px;
   }
 }
+
+@media (max-width: 1280px) {
+  .DailogContent > h3 {
+    font-size: 15px;
+    color: #306398;
+    font-weight: 600;
+    text-align: center;
+  }
+  .DailogContent > p {
+    font-size: 15px;
+    color: black;
+    text-align: center;
+  }
+  .DailogTitle {
+    font-size: 22px;
+    text-align: center;
+  }
+  .Dailog-container {
+    padding: 1.2rem;
+  }
+  .ImageContainer {
+   align-self: center;
+  }
+}
