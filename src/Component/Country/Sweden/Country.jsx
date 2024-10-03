@@ -10,7 +10,7 @@ import CountryFaq from "../../Common/Contryfaq";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import StudyAbroad from "../../../Landing_page/StudyAbroad";
-import { Helmet } from "react-helmet-async";
+// import { Helmet } from "react-helmet-async";
 const getItems = (panelStyle) => [
   {
     key: "1",
@@ -85,12 +85,12 @@ const SwedenCountry = () => {
   }, []);
   return (
     <>
-      <Helmet>
+      {/* <Helmet>
         <title>Study in Sweden | Sweden Universities, Intakes & Admissions</title>
         <meta 
           name="description" 
           content="Studying in Sweden is not as tough as you might think. With the guidance of our expert counsellors, you can easily learn about the top Sweden universities, student visa requirements, and other details for your study abroad dream." />
-      </Helmet>
+      </Helmet> */}
       <Hero />
       <State />
       {/* <UnitedState />

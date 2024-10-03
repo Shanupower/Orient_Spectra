@@ -9,7 +9,7 @@ import Univercity from "./Univercity";
 import CountryFaq from "../../Common/Contryfaq";
 import StudyAbroad from "../../../Landing_page/StudyAbroad";
 import { useEffect } from "react";
-import { Helmet } from "react-helmet-async";
+// import { Helmet } from "react-helmet-async";
 const getItems = (panelStyle) => [
   {
     key: "1",
@@ -73,12 +73,12 @@ const SingaporeCountry = () => {
   }, []);
   return (
     <>
-      <Helmet>
+      {/* <Helmet>
         <title>Study in Singapore | Singapore Universities, Intakes & Admissions</title>
         <meta 
           name="description" 
           content="Your decision to study in Singapore can be the best overseas education decision you will make. But you will need the guidance of our expert counsellors to learn about the top Singapore universities, student visa requirements, and other details." />
-      </Helmet>
+      </Helmet> */}
       <Hero />
       <State />
       {/* <UnitedState />

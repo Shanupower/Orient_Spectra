@@ -10,7 +10,7 @@ import CountryFaq from "../../Common/Contryfaq";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import StudyAbroad from "../../../Landing_page/StudyAbroad";
-import { Helmet } from "react-helmet-async";
+// import { Helmet } from "react-helmet-async";
 const getItems = (panelStyle) => [
   {
     key: "1",
@@ -127,12 +127,12 @@ const UKCountry = () => {
   }, []);
   return (
     <>
-    <Helmet>
+    {/* <Helmet>
           <title>Study in UK | UK Universities, Intakes & Admissions</title>
           <meta 
             name="description" 
             content="Dreaming of getting a degree from UK? With Orient Spectra, you get complete study abroad in UK guidance from selecting universities, courses to identifying scholarship and loan opportunities with expert guidance." />
-      </Helmet>
+      </Helmet> */}
       <Hero />
       <State />
       <UnitedState />

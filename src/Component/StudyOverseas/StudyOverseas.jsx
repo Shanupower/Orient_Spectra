@@ -10,7 +10,6 @@ import DiscoverEvent from "./DiscoverEvent";
 import Hero from "./Hero";
 import { useMediaQuery } from "@mui/material";
 import MobileDiscoverEvent from "./mobileDiscoverEvent/MobileDiscoverEvent";
-import { Helmet } from "react-helmet-async";
 const getItems = (panelStyle) => [
   {
     key: "1",
@@ -154,12 +153,6 @@ const StudyOverseas = () => {
   }, []);
   return (
     <>
-     <Helmet>
-        <title>Making Abroad Study Dream Possible</title>
-        <meta 
-          name="description" 
-          content="Planning to study abroad from Hyderabad? Get overseas education guidance from Orient Spectra for university admission, visa process, and loan assistance to study in your favourite study destination." />
-      </Helmet>
       <Hero />
       {isMd ? <MobileDiscoverEvent /> : <DiscoverEvent />}
 

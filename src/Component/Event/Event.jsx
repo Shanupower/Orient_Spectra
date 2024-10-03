@@ -5,7 +5,7 @@ import Navbar from "../Common/Navbar";
 import Hero from "./Hero";
 import SuccessStory from "./SuccessStory";
 import axios from "axios";
-import { Helmet } from "react-helmet-async";
+// import { Helmet } from "react-helmet-async";
 
 const Event = () => {
   const [upcomingEventdata, setUpcominngEventData] = useState([]);
@@ -47,12 +47,12 @@ const Event = () => {
   }, []);
   return (
     <>
-      <Helmet>
+      {/* <Helmet>
         <title>All Abroad Education Fairs & Events of Orient Spectra</title>
         <meta 
           name="description" 
           content="Read latest news about Orient Spectra's overseas education fairs, and other updates like student visa approvals and so on." />
-      </Helmet>
+      </Helmet> */}
       <Hero eventData={upcomingEventdata} />
       <SuccessStory CompletedEventdata={CompletedEventdata} />
       <GetTuchWithUs />

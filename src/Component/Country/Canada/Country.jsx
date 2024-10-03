@@ -10,7 +10,7 @@ import CountryFaq from "../../Common/Contryfaq";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import StudyAbroad from "../../../Landing_page/StudyAbroad";
-import { Helmet } from "react-helmet-async";
+// import { Helmet } from "react-helmet-async";
 
 const getItems = (panelStyle) => [
   {
@@ -203,12 +203,12 @@ const CanadaCountry = () => {
   }, []);
   return (
     <>
-      <Helmet>
+      {/* <Helmet>
         <title>Study in Canada | Canada Universities, Intakes & Admissions</title>
         <meta 
           name="description" 
           content="Looking to study abroad in Canada, but don't know how to select the right Canada universities for your higher education? Get in touch with Orient Spectra counsellor for end-to-end guidance for your study abroad aspiration." />
-      </Helmet>
+      </Helmet> */}
       <Hero />
       <State />
       <UnitedState />
