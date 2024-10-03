@@ -120,7 +120,7 @@ const Testimonial = () => {
                     isAnimatingLeft && "fade-left"
                   } ${isAnimatingRight && "fade-right"}`}
                 >
-                  {!isVideoPlaying && (
+                {!isVideoPlaying && !isAnimatingLeft && !isAnimatingRight &&  (
                 <img
                 src={currentTestimonial.usrImg2}
                 alt="Video thumbnail"
@@ -169,7 +169,7 @@ const Testimonial = () => {
             </div>
             <div className={`testimonial_centerSide `}>
              
-              {!isVideoPlaying && (
+              {!isVideoPlaying && !isAnimatingLeft && !isAnimatingRight &&  (
                 <img
                 src={currentTestimonial.usrImg}
                 alt="Video thumbnail"

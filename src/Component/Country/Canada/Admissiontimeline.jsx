@@ -6,38 +6,38 @@ import { useState } from "react";
 const Programdata = [
   {
     icon: "https://strapi.orientspectra.com/uploads/CSE_7598ac7df1.svg",
-    text: "	Masters in Human-Computer Interaction",
+    text: "Human-Computer Interaction",
   },
   {
     icon: "https://strapi.orientspectra.com/uploads/Software_Engineering_adb32cb9ba.svg",
-    text: "	Masters in Artificial Intelligence",
+    text: "Artificial Intelligence",
   },
   {
     icon: "https://strapi.orientspectra.com/uploads/Aerospace_75fdb708d2.svg",
-    text: "	Masters in Machine Learning",
+    text: "Machine Learning",
   },
   {
     icon: "https://strapi.orientspectra.com/uploads/Mechanical_Engineering_91b8797d38.svg",
-    text: "Masters in Data Science",
+    text: "Data Science",
   },
   {
     icon: "https://strapi.orientspectra.com/uploads/Data_Science_3725376790.svg",
-    text: "	MBA in Agile Analysis",
+    text: "Agile Analysis",
   },
   {
     icon: "https://strapi.orientspectra.com/uploads/Information_technology_fc6638b4a8.svg",
-    text: "MBA in Business Data Analytics",
+    text: "Business Data Analytics",
   },
   {
     icon: "https://strapi.orientspectra.com/uploads/Cyber_Security_6781432414.svg",
-    text: "	MBA in Cybersecurity Analysis",
+    text: "Cybersecurity Analysis",
   },
   {
     icon: "https://strapi.orientspectra.com/uploads/Pharmaceutical_Sciences_df07155bdd.svg",
-    text: "Master’s in Project Management",
+    text: "Project Management",
   },
   {
-    text:"	Master’s in Health Management"
+    text:"Health Management"
   }
 ];
 const Admissiontimeline = () => {

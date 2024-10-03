@@ -94,7 +94,7 @@ const Discovery = () => {
       <div className=" discovery_Container">
         <div className="dicovery_card">
           <h1>19+</h1>
-          <p>Years Experience</p>
+          <p>Years of Experience</p>
         </div>
         <div className="dicovery_card">
           <h1>15000+</h1>
@@ -118,7 +118,7 @@ const Discovery = () => {
       <div className="discoverTextCard">
         <p>
         Orient Spectra provides end-to-end guidance with your study abroad goal across university connects, visa application, 
-        and loan assistance. Our student-focussed offerings and expert counselling has made us the top overseas education consultants 
+        and loan assistance. Our student-focussed offerings and expert counselling has made us one of the top overseas education consultants 
         in Hyderabad.
         </p>
 

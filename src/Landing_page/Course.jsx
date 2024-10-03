@@ -21,7 +21,7 @@ const items = [
           Australia. We are known for our individualized approach, providing detailed attention and tailored advice to each 
           student, leveraging the extensive experience of our counsellors.
           </p>
-          <Button text=" Find Your Course" arrow={true} />
+          <Button link="/start-your-journey" text=" Find Your Course" arrow={true} />
         </div>
         <div className="course_container_inner_right">
           <img src="https://strapi.orientspectra.com/uploads/Frame_6_22ef29815f.webp" alt="Diverse" loading="lazy"/>
@@ -43,7 +43,7 @@ const items = [
           that students have access to the latest information. We also facilitate direct interactions between students 
           and university representatives.
           </p>
-          <Button text=" Find Your Course" arrow={true} />
+          <Button link="/start-your-journey" text=" Find Your Course" arrow={true} />
         </div>
         <div className="course_container_inner_right">
           <img src="https://strapi.orientspectra.com/uploads/Property_1_Default_dfeaa102ab.webp" alt="Global" loading="lazy"/>
@@ -64,7 +64,7 @@ const items = [
           array of courses. With our expert guidance, your dream of pursuing international education becomes a well-crafted reality, 
           designed to elevate your academic and professional aspirations.
           </p>
-          <Button text=" Find Your Course" arrow={true} />
+          <Button link="/start-your-journey" text=" Find Your Course" arrow={true} />
         </div>
         <div className="course_container_inner_right">
           <img src="https://strapi.orientspectra.com/uploads/Property_1_Default_1_1aa38fd23d.webp" alt="Experience" loading="lazy"/>

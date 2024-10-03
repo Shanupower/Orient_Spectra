@@ -11,7 +11,7 @@ const Hero = () => {
         </video>
       </div>
       <div className="hero-content">
-        <p>Orient Spectra - Countries We are at</p>
+        <p>Explore Switzerland Universities, Intakes, etc.,</p>
         <h1>
           Quest Through the <br />
           Switzerland

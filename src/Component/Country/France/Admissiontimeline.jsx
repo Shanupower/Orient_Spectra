@@ -5,7 +5,10 @@ import { useState } from "react";
 
 const Programdata = [
   {
-    text: "	Hospitality & Tourism Management ",
+    text: "	Hospitality ",
+  },
+  {
+    text: "	Tourism Management ",
   },
   {
     text: "	Data Science ",

@@ -66,7 +66,8 @@ const News = () => {
                 disableOnInteraction: true,
               }}
               //  speed={1000}
-               navigation>
+               navigation
+              >
         <div className="media-container">
           {NewsData?.map((item) => (
             <SwiperSlide className="media-card" key={item?.id}>

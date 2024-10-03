@@ -1295,6 +1295,7 @@ canvas {
   margin-block: 6rem;
   flex-wrap: wrap;
   gap: 2rem;
+  margin-top: 2rem;
 }
 
 .event_leftSide {
