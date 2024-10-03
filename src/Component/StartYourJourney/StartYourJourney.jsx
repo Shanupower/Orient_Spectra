@@ -5,6 +5,7 @@ import Step3 from "./Step3";
 import Step4 from "./Step4";
 import Step5 from "./Step5";
 import Step6 from "./Step6";
+import { Helmet } from "react-helmet-async";
 
 const StartYourJourney = () => {
   const [country, setCountry] = useState("");
@@ -37,6 +38,12 @@ const StartYourJourney = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Start Your Study Abroad Journey with Orient Spectra</title>
+        <meta 
+          name="description" 
+          content="Get your study abroad journey started with Orient Spectra's expert counselling and guidance through studenrt visa application process and university admission." />
+      </Helmet>
       {step === 1 && (
         <Step1
           step={step}

@@ -9,6 +9,7 @@ import Univercity from "./Univercity";
 import CountryFaq from "../../Common/Contryfaq";
 import StudyAbroad from "../../../Landing_page/StudyAbroad";
 import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 const getItems = (panelStyle) => [
   {
     key: "1",
@@ -90,6 +91,12 @@ const MaltaCountry = () => {
   }, []);
   return (
     <>
+      <Helmet>
+        <title>Study in Malta | Malta Universities, Intakes & Admissions</title>
+        <meta 
+          name="description" 
+          content="Want to study abroad in Malta? Learn about Malta's top universities and courses fit for your profile and preference through end-to-end guidance with Orient Spectra counsellers. Schedule a call now. " />
+      </Helmet>
       <Hero />
       <State />
       {/* <UnitedState />

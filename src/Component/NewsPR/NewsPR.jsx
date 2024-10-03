@@ -7,6 +7,7 @@ import Hero from "./Hero";
 import LatestNews from "./LatestNews";
 import RecentNews from "./RecentNews";
 import axios from "axios";
+import { Helmet } from "react-helmet-async";
 
 const NewsPR = () => {
   const [NewsData, setNewsData] = useState([]);
@@ -32,6 +33,12 @@ const NewsPR = () => {
   }, []);
   return (
     <>
+      <Helmet>
+        <title>Latest News about Orient Spectra</title>
+        <meta 
+          name="description" 
+          content="Press coverage of our education fairs, leadership thoughts, and other news updates of overseas education fair." />
+      </Helmet>
       {NewsData.length > 0 && <Hero NewsData={NewsData[0]} />}
       {NewsData.length > 0 && <LatestNews NewsData={NewsData[0]} />}
       {NewsData.length > 0 && <RecentNews NewsData={NewsData.slice(1, 5)} />}

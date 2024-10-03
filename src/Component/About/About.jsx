@@ -9,6 +9,7 @@ import Founders from "./Founders";
 import Hero from "./Hero";
 import Story from "./Story";
 import Country from "../../Landing_page/Country";
+import { Helmet } from "react-helmet-async";
 
 const About = () => {
   useEffect(() => {
@@ -16,6 +17,12 @@ const About = () => {
   }, []);
   return (
     <>
+      <Helmet>
+        <title>Study Abroad with Orient Spectra Consultancy Guidance</title>
+        <meta 
+          name="description" 
+          content="Orient Spectra is a leading overseas education consultancy that helped over thousands of students with their study abroad dream." />
+      </Helmet>
       <Hero />
       <Story />
       <Country />
