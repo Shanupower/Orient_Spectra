@@ -42,6 +42,7 @@ import WhatsApp from "./Whatsapp";
 import LeadFormPopUp from "./LeadFormPopUp";
 import SwedenCountry from "./Component/Country/Sweden/Country";
 import DUBAICountry from "./Component/Country/Dubai/Country";
+import { HelmetProvider } from "react-helmet-async";
 
 function App() {
   const [openWhatwedo, setWhatwedoOpen] = useState(false);
@@ -80,6 +81,7 @@ function App() {
 
   return (
     <>
+    <HelmetProvider >
       <LeadFormPopUp />
       <Navbar
         openWhatwedo={openWhatwedo}
@@ -159,6 +161,7 @@ function App() {
       </Routes>
       <WhatsApp />
       <Footer />
+      </HelmetProvider>
     </>
   );
 }

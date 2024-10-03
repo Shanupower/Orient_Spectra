@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Footer from "../Component/Common/Footer";
 import Navbar from "../Component/Common/Navbar";
 import Acedemic from "./Acedemic";
@@ -57,6 +58,10 @@ const LandingPage = () => {
 
   return (
     <>
+      <Helmet>
+          <title>Orient Spectra | #1 Overseas Education Consultancy</title>
+          <meta name="description" content="Orient Spectra is the top overseas education consultancy in Hyderabad with 3 branches in Himanaytnagar, Kothapet and Kukatpally. Orient Spectra helps students with their study abroad dream with right guidance." />
+      </Helmet>
       <Hero blog={blog} event={event} />
       <Discovery />
       {/* <Acedemic /> */}
