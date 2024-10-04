@@ -95,7 +95,7 @@ const Events = () => {
           visible: { opacity: 1, y: 0 },
         }}
       >
-        <EventDargCard Eventdata={CompletedEventdata} />
+        <EventDargCard Eventdata={[...CompletedEventdata]?.reverse()} />
       </motion.div>
     </div>
   );
