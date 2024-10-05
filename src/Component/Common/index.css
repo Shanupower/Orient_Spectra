@@ -544,3 +544,14 @@
   padding-inline: 1rem;
   justify-content: space-between;
 }
+
+@media (max-width: 986px) {
+  .ArrowForwardIcon {
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50%;
+    border: 2px solid black;
+    padding: 0.4rem;
+    cursor: pointer;
+  }
+}

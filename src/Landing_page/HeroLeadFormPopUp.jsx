@@ -12,7 +12,7 @@ const HeroLeadFormPopUp = ({closePopup}) => {
     Email: "",
     Mobile: "",
     Intake_Year: "",
-    Source: "Eroupe EDU FAIR",
+    Source: "MiddleSex University Event",
   });
   const [errors, setErrors] = useState({});
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -32,7 +32,7 @@ const HeroLeadFormPopUp = ({closePopup}) => {
           Email: "",
           Mobile: "",
           Intake_Year: "",
-          Source: "Eroupe EDU FAIR",
+          Source: "MiddleSex University Event",
         });
       }
     } catch (errors) {
@@ -144,8 +144,8 @@ const HeroLeadFormPopUp = ({closePopup}) => {
             </IconButton>
           <div className="Dailog-container">
           <div className='DailogContent'>
-          <h2 className="DailogTitle">Europe Education Fair <span>2024</span></h2>
-          <h3>5th Oct 2024 | Hyatt Place Hyderabad</h3>
+          <h2 className="DailogTitle">Meet Middlesex University Delegate<span> | Walk-in Event</span></h2>
+          <h3>14th Oct | Orient Spectra Himayatnagar</h3>
           <p>Fill out the form below to register now:</p>
           <DialogContent>
             <form onSubmit={handleSubmitValidation}>
@@ -207,7 +207,7 @@ const HeroLeadFormPopUp = ({closePopup}) => {
             <p onClick={closePopup} className='SkipNow'>Skip Now </p>
           </DialogContent>
           </div>
-          <img src="https://strapi.orientspectra.com/uploads/391_x_520_EU_Event_Banner_6605cc7233.jpg" alt="EventImage" className='ImageContainer'/>
+          <img src="https://strapi.orientspectra.com/uploads/388_X_516_a4d2a9e44a.jpg" alt="EventImage" className='ImageContainer'/>
           </div>
            
           </>

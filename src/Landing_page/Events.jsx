@@ -76,7 +76,7 @@ const Events = () => {
               <div className="eventsRigtImage">
                 <b className="upcomingEvents">Upcoming Events</b>
                 <img
-                  src={`https://strapi.orientspectra.com${e?.attributes?.Poster?.data?.attributes.url}`}
+                  src={`https://strapi.orientspectra.com${e?.attributes?.Thumbnail?.data[0]?.attributes.url}`}
                   alt="" loading="lazy"
                 />
               </div>

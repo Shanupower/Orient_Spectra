@@ -2,6 +2,7 @@ import LandscapeIcon from "@mui/icons-material/Landscape";
 import "./event.css";
 import CircleArrow from "../Common/CircleArrow";
 import { useState } from "react";
+import { useMediaQuery } from "@mui/material";
 
 const Hero = ({ eventData }) => {
   const [EventId, setEventId] = useState(0);
@@ -28,14 +29,24 @@ const Hero = ({ eventData }) => {
     e.stopPropagation();
   };
 
+  const isMd = useMediaQuery("(max-width:1024px)");
+
   return (
     <div className="Event-hero-container section2" onClick={handleSingleEvnet}>
       <div className="event-hero-section">
         <div className="Experience-rightcard">
-          <img
+          {isMd ? (
+            <img
+            src={`https://strapi.orientspectra.com${eventData[EventId]?.attributes?.Thumbnail?.data[0]?.attributes.url}`}
+            alt=""
+          />
+          ):(
+            <img
             src={`https://strapi.orientspectra.com${eventData[EventId]?.attributes?.Poster?.data?.attributes.url}`}
             alt=""
           />
+          )}
+         
         </div>
 
         <div className="bookPass-container">
