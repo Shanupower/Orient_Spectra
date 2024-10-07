@@ -106,7 +106,7 @@ const Hero = () => {
       <div className="Leadgeneration-content section">
         <h1>Europe Education Fair</h1>
         <p>
-        Attend our UK Education Fair 2024 to talk directly with university delegates and select the best 
+        Attend our Europe Education Fair 2024 to talk directly with university delegates and select the best 
         university and course for your career goal. Our experts will walk you through 
         application process, scholarship and loan opportunities, and guide you through visa process.
         </p>
