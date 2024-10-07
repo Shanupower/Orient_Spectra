@@ -53,7 +53,7 @@ const Footer = () => {
             src="https://strapi.orientspectra.com/uploads/Watsapp_Qr_9ad1331dd0_2ff73ee08e.webp"
             alt="WhatsApp QR" loading="lazy"
           />
-          <p>91+ 9000456765</p>
+          <p>+91 9000456765</p>
           <p>info@orientspectra.com</p>
         </div>
       </div>
