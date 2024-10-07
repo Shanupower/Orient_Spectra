@@ -5,7 +5,7 @@ import EventDetails from "./UK_EventDetails";
 import Benifits from "./UK_Benifits";
 import WhyOs from "../OfflineMarketingClub/WhyOS";
 
-const UK_Jan_2025 =() =>{
+const EuropeEDUFair =() =>{
     return(
     <>
     <Hero />
@@ -16,4 +16,4 @@ const UK_Jan_2025 =() =>{
     </>
     )
 }
-export default UK_Jan_2025;
+export default EuropeEDUFair;

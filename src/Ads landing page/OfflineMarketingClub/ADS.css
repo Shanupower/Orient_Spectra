@@ -1,6 +1,6 @@
 .Leadgeneration-container {
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     background-image: url("https://strapi.orientspectra.com/uploads/prague_banner_e754ae6f29.jpg");
     background-blend-mode: darken;
     background-color: #00000094;
@@ -365,6 +365,7 @@
   .form-container {
     width: 45%;
     margin-top: 10%;
+    padding: 1rem;
   }
   .input-field {
     font-size:13px;
@@ -423,6 +424,7 @@
 
   .whyOs-container > h1{
    font-size: 38px;
+   text-align: center;
   }
    .WhyOsBox {
     padding: 1.5rem;
@@ -523,7 +525,9 @@
       padding: 0;
     }
     .Why-should-attend-content > h1 {
-      font-size: 30px;
+      font-size: 32px;
+      text-align: left;
+      margin-bottom: 30px;
     }
     .Why-should-attend-content > p {
       margin-top: 2%;
@@ -547,7 +551,7 @@
       display: none;
     }
     .whyOs-container > h1{
-      font-size: 32px;
+      font-size: 38px;
       text-align: left;
       line-height: 1.2;
      }
