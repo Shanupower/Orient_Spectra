@@ -15,7 +15,7 @@ const Hero = () => {
     Mobile: "",
     Intake_year: "",
     Intake_month: "",
-    Source:"/uk-january-2025",
+    Source:"Europe Education Fair",
   });
 
   const [errors, setErrors] = useState({});
@@ -37,7 +37,7 @@ const Hero = () => {
           Mobile: "",
           Intake_year: "",
           Intake_month: "",
-          Source:"",
+          Source:"Europe Education Fair",
         });
       }
     } catch (errors) {
