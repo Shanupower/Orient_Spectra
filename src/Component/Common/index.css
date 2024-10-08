@@ -136,6 +136,34 @@
   color: #ffeeee;
   scale: 0.94;
 }
+
+.text-feild {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem !important;
+}
+.form-fields {
+  margin-bottom: 1rem !important; /* Space between form fields */
+  position: relative; /* Ensure error message is positioned relative to this container */
+  width: 100% !important;
+}
+.input-fields {
+  width: 100%;
+  font-size: 15px;
+  padding: 8px !important;
+}
+.form-button {
+  width: 100%;
+  font-size: 20px;
+  font-weight: 700;
+  background-color: var(--brand-color);
+  border: none;
+  color: white;
+  margin-top: 0 !important;
+  cursor: pointer;
+}
+
+
 @media (max-width: 900px) {
   .navBarContainer {
     display: flex;
