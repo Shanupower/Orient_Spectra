@@ -95,6 +95,18 @@
   text-align: center;
   margin-top: 1rem;
 }
+.discovery_content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 80%; 
+}
+.discovery_Container > img {
+  width: 15%;
+  object-fit: contain;
+}
 
 .dicovery_card > h1 {
   color: var(--brand-color);
@@ -1805,7 +1817,37 @@ canvas {
     font-size: 18px;
   }
   .discovery_Container {
-    /* display: none; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  .discovery_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    width: 55%; 
+  }
+  .discovery_Container > img {
+    width: 30%;
+    object-fit: contain;
+  }
+  
+  .dicovery_card > h1 {
+    color: var(--brand-color);
+    font-size: 3rem;
+    line-height: 1.2;
+  }
+  
+  .dicovery_card > p {
+    color: var(--text-color-darkblack);
+    font-size: 1.2rem;
+    line-height: 2;
   }
   .discoverButton {
     display: flex;
@@ -2016,12 +2058,25 @@ canvas {
     display: flex;
     position: relative;
   }
+  
   .discovery_Container {
     flex-direction: column;
+  }
+  .discovery_content {
+    display: block;
+    width: 100%;
+    /* gap: 2rem; */
+  }
+  .discovery_Container > img {
+    width: 200px;
+    height: 200px;
   }
   .discoverTextCard {
     align-items: flex-start;
     flex-direction: column;
+  }
+  .dicovery_card {
+    margin-bottom: 20px;
   }
   .Marguee {
     width: 100%;

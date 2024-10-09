@@ -1,10 +1,10 @@
 .Leadgeneration-container1 {
     width: 100%;
     height: 100vh;
-    background-image: url("https://strapi.orientspectra.com/uploads/panoramic_view_big_ben_from_bridge_london_66bd6494b4.jpg");
+    background-image: url("https://strapi.orientspectra.com/uploads/panoramic_view_big_ben_london_sunset_uk_4353a6e73d.webp");
     background-size: cover;
     background-blend-mode: darken;
-    background-color: rgba(0, 0, 0, 0.493);
+    background-color: rgba(0, 0, 0, 0.692);
     gap: 2rem;
     display: flex;
     flex-wrap: wrap;

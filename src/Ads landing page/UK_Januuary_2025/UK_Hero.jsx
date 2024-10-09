@@ -9,12 +9,10 @@ const Hero = () => {
   }, []);
 
   const [formData, setFormData] = useState({
-    First_name: "",
-    Last_name: "",
+    Full_name: "",
     Email: "",
     Mobile: "",
     Intake_year: "",
-    Intake_month: "",
     Source:"UK Education Fair",
   });
 
@@ -31,12 +29,10 @@ const Hero = () => {
 
         // Reset form data
         setFormData({
-          First_name: "",
-          Last_name: "",
+          Full_name: "",
           Email: "",
           Mobile: "",
           Intake_year: "",
-          Intake_month: "",
           Source:"UK Education Fair",
         });
       }
@@ -66,11 +62,8 @@ const Hero = () => {
   const Validation = () => {
     const newErrors = {};
 
-    if (formData.First_name === "") {
-      newErrors.First_name = "First Name is Required";
-    }
-    if (formData.Last_name === "") {
-      newErrors.Last_name = "Last Name is Required";
+    if (formData.Full_name === "") {
+      newErrors.Full_name = "Full Name is Required";
     }
     if (formData.Email === "") {
       newErrors.Email = "Email Id is Required";
@@ -85,9 +78,7 @@ const Hero = () => {
     if (formData.Intake_year === "") {
       newErrors.Intake_year = "Intake Year is Required";
     }
-    if (formData.Intake_month === "") {
-      newErrors.Intake_month = "Intake Month is Required";
-    }
+  
     return newErrors;
   };
 
@@ -125,27 +116,14 @@ const Hero = () => {
             <div className="form-groups">
               <input
                 type="text"
-                name="First_name"
+                name="Full_name"
                 placeholder="First Name"
                 className="input-feild"
                 onChange={handleChange}
-                value={formData.First_name}
+                value={formData.Full_name}
               />
-              {errors.First_name && (
-                <p style={{ color: "red" }}>{errors.First_name}</p>
-              )}
-            </div>
-            <div className="form-group">
-              <input
-                type="text"
-                name="Last_name"
-                placeholder="Last Name"
-                className="input-feild"
-                onChange={handleChange}
-                value={formData.Last_name}
-              />
-              {errors.Last_name && (
-                <p style={{ color: "red" }}>{errors.Last_name}</p>
+              {errors.Full_name && (
+                <p style={{ color: "red" }}>{errors.Full_name}</p>
               )}
             </div>
             <div className="form-group">
@@ -181,19 +159,6 @@ const Hero = () => {
               />
               {errors.Intake_year && (
                 <p style={{ color: "red" }}>{errors.Intake_year}</p>
-              )}
-            </div>
-            <div className="form-group">
-              <input
-                type="text"
-                name="Intake_month"
-                placeholder="Intake Month"
-                className="input-feild"
-                onChange={handleChange}
-                value={formData.Intake_month}
-              />
-              {errors.Intake_month && (
-                <p style={{ color: "red" }}>{errors.Intake_month}</p>
               )}
             </div>
             <input type="hidden" name="source" className="input-feild" value={formData.Source} />
