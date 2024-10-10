@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Dialog, DialogTitle, DialogContent, DialogActions, Button, Typography, IconButton, useMediaQuery } from '@mui/material';
-import ReCAPTCHA from "react-google-recaptcha";
+// import ReCAPTCHA from "react-google-recaptcha";
 import "./index.css";
 import axios from 'axios';
 import CloseIcon from '@mui/icons-material/Close';
@@ -240,12 +240,12 @@ const LeadFormPopUp = () => {
             </div>
 
               {/* reCAPTCHA component */}
-              <div style={{ transform: 'scale(0.85)', transformOrigin: '0 0' }}>
+              {/* <div style={{ transform: 'scale(0.85)', transformOrigin: '0 0' }}>
               <ReCAPTCHA
                 sitekey="6LdjSl0qAAAAAOxzA0J_HjvwPIxua1iY0jdAFO4E" // Replace with your site key
                 onChange={handleCaptchaChange}
               />
-              </div>
+              </div> */}
               
               <input type="hidden" name="Source" className="input-field" value={formData.Source} />
               <button className="popup-form-container-button" type="submit">
