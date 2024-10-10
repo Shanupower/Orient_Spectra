@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Dialog, DialogTitle, DialogContent, DialogActions, Button, Typography, IconButton, useMediaQuery } from '@mui/material';
-import ReCAPTCHA from 'react-google-recaptcha';
+// import ReCAPTCHA from 'react-google-recaptcha';
 import "./index.css";
 import axios from 'axios';
 import CloseIcon from '@mui/icons-material/Close';
