@@ -240,12 +240,12 @@ const LeadFormPopUp = () => {
             </div>
 
               {/* reCAPTCHA component */}
-              <div style={{ transform: 'scale(0.85)', transformOrigin: '0 0' }}>
+              {/* <div style={{ transform: 'scale(0.85)', transformOrigin: '0 0' }}>
               <ReCAPTCHA
                 sitekey="6LcXTF0qAAAAACZ0_JszhJnIkkhyi6P9bF-zEPm6" // Replace with your site key
                 onChange={handleCaptchaChange}
               />
-              </div>
+              </div> */}
               
               <input type="hidden" name="Source" className="input-field" value={formData.Source} />
               <button className="popup-form-container-button" type="submit">
