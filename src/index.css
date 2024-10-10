@@ -137,6 +137,7 @@ html {
 .ImageContainer {
   width: 50%;
   border-radius: 20px;
+  align-self: center;
 }
 .popup-form-container-button {
   width: 100%;
@@ -201,6 +202,9 @@ html {
     width: 52%;
     border-radius: 20px;
   }
+  .DailogBox {
+    overflow-y:scroll;
+  }
   
 }
 @media (max-width: 986px) {
@@ -210,6 +214,7 @@ html {
   .DailogBox {
     margin-left: 2px;
     margin-right: 0px;
+    overflow-y:scroll;
   }
   .Dailog-container {
     padding: 1.2rem;

@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { Dialog, DialogTitle, DialogContent, DialogActions, Button, Typography, IconButton, useMediaQuery } from '@mui/material';
+import ReCAPTCHA from 'react-google-recaptcha';
 import "./index.css";
 import axios from 'axios';
 import CloseIcon from '@mui/icons-material/Close';
 
 const LeadFormPopUp = () => {
+  const isMd = useMediaQuery("(max-width:1024px)");
   const isSm = useMediaQuery("(max-width:986px)");
+  const isLg = useMediaQuery("(max-width: 1280px)");
   const [open, setOpen] = useState(false);
+  const [captchaToken, setCaptchaToken] = useState(null); // reCAPTCHA token
 
   useEffect(() => {
-    // Open the dialog when the component mounts (when the page loads)
     setOpen(true);
   }, []);
 
@@ -18,7 +21,8 @@ const LeadFormPopUp = () => {
     Email: "",
     Mobile: "",
     Intake_Year: "",
-    Source: "MiddleSex University Event",
+    Country:"",
+    Source: "UK & EU EDU FAIR",
   });
   const [errors, setErrors] = useState({});
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -28,17 +32,17 @@ const LeadFormPopUp = () => {
     try {
       const response = await axios.post(api, {
         data: formData,
+        captchaToken, // Send reCAPTCHA token to backend
       });
-      console.log(formData,"formdata");
       if (response.status === 200) {
         setFormSubmitted(true);
-       
         setFormData({
           Name: "",
           Email: "",
           Mobile: "",
           Intake_Year: "",
-          Source: "MiddleSex University Event",
+          Country: "",
+          Source: "UK & EU EDU FAIR",
         });
       }
     } catch (errors) {
@@ -82,18 +86,29 @@ const LeadFormPopUp = () => {
     if (formData.Intake_Year === "") {
       newErrors.Intake_Year = "Intake Year is Required";
     }
+    if (formData.Country === "") {
+      newErrors.Country = "Select your Destination";
+    }
     return newErrors;
   };
 
   const handleSubmitValidation = (event) => {
     event.preventDefault();
     const validationErrors = Validation();
-    if (Object.keys(validationErrors).length === 0) {
+    if (Object.keys(validationErrors).length === 0 && captchaToken) {
       handleSubmitData();
     } else {
       setErrors(validationErrors);
+      if (!captchaToken) {
+        alert('Please complete the CAPTCHA');
+      }
     }
   };
+
+  const handleCaptchaChange = (token) => {
+    setCaptchaToken(token); // Store reCAPTCHA token in state
+  };
+
   const handleClose = () => {
     setOpen(false);
   };
@@ -108,10 +123,11 @@ const LeadFormPopUp = () => {
         maxWidth="lg"
         PaperProps={{
           sx: {
-            width: { xs: '100%', sm: '80%', md: '70%', lg: '50%' },
+            width: { xs: '90%', sm: '75%', md: '80%', lg: isLg ? "65%" : '51%' },
+            // width: { xs: '100%', sm: '80%', md: '70%', lg: '50%' },
             maxWidth: 'none',
             position: 'relative',
-            overflow: 'visible',
+            overflow:  "visible",
           },
         }}
         className='DailogBox'
@@ -122,8 +138,7 @@ const LeadFormPopUp = () => {
             <img src="https://strapi.orientspectra.com/uploads/luxa_org_no_background_green_double_circle_check_mark_78370_1749_c6ee2071c0.webp" alt="Success" />
             <h2>Thank you for your response!</h2>
             <p onClick={handleClose}>Back to Home</p>
-
-        </div>
+          </div>
         </div>
         ):(
           <>
@@ -142,17 +157,18 @@ const LeadFormPopUp = () => {
                   backgroundColor: "#306398",
                   zIndex: 2,
                 },
+                zIndex: 3,
                 width: { xs: '30px', sm: '35px', md: '45px' },
                 height: { xs: '30px', sm: '35px', md: '45px' },
               }}
-            >
+              >
               <CloseIcon />
             </IconButton>
           <div className="Dailog-container">
           <div className='DailogContent'>
-          <h2 className="DailogTitle">Meet Middlesex University Delegate<span> | Walk-in Event</span></h2>
-          <h3>14th Oct | Orient Spectra Himayatnagar</h3>
-          <p>Fill out the form below to register now:</p>
+          <h2 className="DailogTitle">Europe & UK Education Fair <span>2024</span></h2>
+          <h3>09th Nov | Hyatt Place, Banjara Hills</h3>
+          <p>Register now & get free TOEFL coaching</p>
           <DialogContent>
             <form onSubmit={handleSubmitValidation}>
             <div className="popup-text-feild">
@@ -204,6 +220,33 @@ const LeadFormPopUp = () => {
                   <p style={{ color: "red" }}>{errors.Intake_Year}</p>
                 )}
               </div>
+
+              <div className="popup-form-group">
+              <select
+                type="text"
+                name="Country"
+                className="popup-input-field"
+                onChange={handleChange}
+                value={formData.Country} >
+
+                <option value="">Select Country</option>
+                  <option value="UK">UK</option>
+                  <option value="Europe">Europe</option>
+
+              </select>
+                {errors.Country && (
+                  <p style={{ color: "red" }}>{errors.Country}</p>
+                )}
+            </div>
+
+              {/* reCAPTCHA component */}
+              <div style={{ transform: 'scale(0.85)', transformOrigin: '0 0' }}>
+              <ReCAPTCHA
+                sitekey="6LcXTF0qAAAAACZ0_JszhJnIkkhyi6P9bF-zEPm6" // Replace with your site key
+                onChange={handleCaptchaChange}
+              />
+              </div>
+              
               <input type="hidden" name="Source" className="input-field" value={formData.Source} />
               <button className="popup-form-container-button" type="submit">
               Book A Free Call
