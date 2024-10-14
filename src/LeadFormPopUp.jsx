@@ -10,7 +10,7 @@ const LeadFormPopUp = () => {
   const isSm = useMediaQuery("(max-width:986px)");
   const isLg = useMediaQuery("(max-width: 1280px)");
   const [open, setOpen] = useState(false);
-  const [captchaToken, setCaptchaToken] = useState(null); // reCAPTCHA token
+  // const [captchaToken, setCaptchaToken] = useState(null); // reCAPTCHA token
 
   useEffect(() => {
     setOpen(true);
@@ -32,7 +32,7 @@ const LeadFormPopUp = () => {
     try {
       const response = await axios.post(api, {
         data: formData,
-        captchaToken, // Send reCAPTCHA token to backend
+        // captchaToken, // Send reCAPTCHA token to backend
       });
       if (response.status === 200) {
         setFormSubmitted(true);
@@ -95,13 +95,22 @@ const LeadFormPopUp = () => {
   const handleSubmitValidation = (event) => {
     event.preventDefault();
     const validationErrors = Validation();
-    if (Object.keys(validationErrors).length === 0 && captchaToken) {
+    // if (Object.keys(validationErrors).length === 0 && captchaToken) {
+    //   handleSubmitData();
+    // } else {
+    //   setErrors(validationErrors);
+    //   if (!captchaToken) {
+    //     alert('Please complete the CAPTCHA');
+    //   }
+    // }
+
+    if (Object.keys(validationErrors).length === 0) {
       handleSubmitData();
     } else {
       setErrors(validationErrors);
-      if (!captchaToken) {
-        alert('Please complete the CAPTCHA');
-      }
+      // if (!captchaToken) {
+        // alert('Please complete the CAPTCHA');
+      // }
     }
   };
 
@@ -256,7 +265,7 @@ const LeadFormPopUp = () => {
             <p onClick={handleClose} className='SkipNow'>Skip Now </p>
           </DialogContent>
           </div>
-          <img src="https://strapi.orientspectra.com/uploads/388_X_516_a4d2a9e44a.jpg" alt="EventImage" className='ImageContainer'/>
+          <img src="https://strapi.orientspectra.com/uploads/Whats_App_Image_2024_10_14_at_12_31_28_PM_1995cb6250.jpeg" alt="EventImage" className='ImageContainer'/>
           </div>
            
           </>

@@ -1,19 +1,21 @@
 import { useEffect, useState } from "react";
 import "./ADS.css";
 import axios from "axios";
+import { useLocation } from "react-router-dom";
 // import emailjs from "emailjs-com";
 
 const Hero = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  const location =useLocation();
 
   const [formData, setFormData] = useState({
     Full_name: "",
     Email: "",
     Mobile: "",
     Intake_year: "",
-    Source:"UK Education Fair",
+    Source:location.pathname,
   });
 
   const [errors, setErrors] = useState({});
@@ -33,7 +35,7 @@ const Hero = () => {
           Email: "",
           Mobile: "",
           Intake_year: "",
-          Source:"UK Education Fair",
+          Source:location.pathname,
         });
       }
     } catch (errors) {

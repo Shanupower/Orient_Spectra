@@ -147,7 +147,10 @@ function App() {
         />
 
         <Route path="/uk-november-2024" element={<UK_EDU_FAIR />} />
+
         <Route path="/uk-education-fair" element={<UK_Jan_2025 />} />
+        <Route path="/uk-education-fair?source=verse" element={<UK_Jan_2025 />} />
+
 
         <Route
           path="/usa-september-fair-2024"
@@ -155,6 +158,10 @@ function App() {
         />
         <Route
           path="/europe-education-fair"
+          element={<EuropeEDUFair />}
+        />
+        <Route
+          path="/europe-education-fair?source=verse"
           element={<EuropeEDUFair />}
         />
         <Route path="/thank-you" element={<ThankYou />} />
