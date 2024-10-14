@@ -265,7 +265,7 @@ const LeadFormPopUp = () => {
             <p onClick={handleClose} className='SkipNow'>Skip Now </p>
           </DialogContent>
           </div>
-          <img src="https://strapi.orientspectra.com/uploads/Whats_App_Image_2024_10_14_at_12_31_28_PM_1995cb6250.jpeg" alt="EventImage" className='ImageContainer'/>
+          <img src="https://strapi.orientspectra.com/uploads/388_X_516_uk_eu_58507af29d.webp" alt="EventImage" className='ImageContainer'/>
           </div>
            
           </>
