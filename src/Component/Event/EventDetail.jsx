@@ -1,11 +1,10 @@
-import "./ADS.css";
 
 const EventDetails =()=>{
     return(
         <div className="Event_container">
             <div className="Event_content">
                 <div className="Event_details">
-                <h1>Europe Education Fair <span> - 2024</span></h1>
+                <h1>UK & Europe Education Fair <span> - 2024</span></h1>
                 <p>Orient Spectra provides end-to-end guidance with your study abroad goal across university connects, visa application, 
                 and loan assistance. Our student-focussed offerings and expert counselling has made us the top overseas education consultants 
                 in Hyderabad.</p>
@@ -14,7 +13,7 @@ const EventDetails =()=>{
                 <p><b>Venue :</b> <span>Hyatt Place, Banjara Hills, Hyderabad</span></p>
                 </div>
                 <div className="Image_container">
-                <img src="https://strapi.orientspectra.com/uploads/Whats_App_Image_2024_10_14_at_12_30_35_PM_97350fabfb.jpeg" alt=""/>
+                <img src="https://strapi.orientspectra.com/uploads/388_X_516_uk_eu_58507af29d.webp" alt=""/>
                 </div>
             </div>
             

@@ -133,7 +133,6 @@ const LeadFormPopUp = () => {
         PaperProps={{
           sx: {
             width: { xs: '90%', sm: '75%', md: '80%', lg: isLg ? "65%" : '51%' },
-            // width: { xs: '100%', sm: '80%', md: '70%', lg: '50%' },
             maxWidth: 'none',
             position: 'relative',
             overflow:  "visible",
@@ -234,7 +233,7 @@ const LeadFormPopUp = () => {
               <select
                 type="text"
                 name="Country"
-                className="popup-input-field"
+                className="popup-input-dropdown"
                 onChange={handleChange}
                 value={formData.Country} >
 

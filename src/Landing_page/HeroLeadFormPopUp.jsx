@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Dialog, DialogTitle, DialogContent, DialogActions, Button, Typography, IconButton, useMediaQuery } from '@mui/material';
+import { Dialog, DialogContent, IconButton, useMediaQuery } from '@mui/material';
 // import ReCAPTCHA from "react-google-recaptcha";
 import "./index.css";
 import axios from 'axios';
 import CloseIcon from '@mui/icons-material/Close';
 
-const LeadFormPopUp = () => {
+const LeadFormPopUp = ({closePopup}) => {
   const isMd = useMediaQuery("(max-width:1024px)");
   const isSm = useMediaQuery("(max-width:986px)");
   const isLg = useMediaQuery("(max-width: 1280px)");
@@ -126,7 +126,7 @@ const LeadFormPopUp = () => {
     <div>
       <Dialog
         open={open}
-        onClose={handleClose}
+        onClose={closePopup}
         aria-labelledby="popup-dialog-title"
         aria-describedby="popup-dialog-description"
         maxWidth="lg"
@@ -153,7 +153,7 @@ const LeadFormPopUp = () => {
           <>
            <IconButton
               aria-label="close"
-              onClick={handleClose}
+              onClick={closePopup}
               sx={{
                 position: 'absolute',
                 right: {xs: '-16px', lg:'-20px'},
@@ -234,14 +234,13 @@ const LeadFormPopUp = () => {
               <select
                 type="text"
                 name="Country"
-                className="popup-input-field"
+                className="popup-input-dropdown"
                 onChange={handleChange}
                 value={formData.Country} >
 
                 <option value="">Select Country</option>
-                  <option value="UK">UK</option>
-                  <option value="Europe">Europe</option>
-
+                <option value="UK">UK</option>
+                <option value="Europe">Europe</option>
               </select>
                 {errors.Country && (
                   <p style={{ color: "red" }}>{errors.Country}</p>
@@ -262,7 +261,7 @@ const LeadFormPopUp = () => {
             </button>
             </div>  
             </form>
-            <p onClick={handleClose} className='SkipNow'>Skip Now </p>
+            <p onClick={closePopup} className='SkipNow'>Skip Now </p>
           </DialogContent>
           </div>
           <img src="https://strapi.orientspectra.com/uploads/388_X_516_uk_eu_58507af29d.webp" alt="EventImage" className='ImageContainer'/>

@@ -12,7 +12,7 @@ import { fabClasses, useMediaQuery } from "@mui/material";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import "./index.css";
 import Skeleton from "@mui/material/Skeleton";
-import HeroLeadFormPopUp from "./HeroLeadFormPopUp";
+import LeadFormPopUp from "./HeroLeadFormPopUp";
 
 const Hero = ({ blog, event }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -61,7 +61,7 @@ const Hero = ({ blog, event }) => {
         id: 4,
         text: "",
         heading: "",
-        bgImage: "https://strapi.orientspectra.com/uploads/Website_Event_Banner_5_0cb3a0308d.jpg",
+        bgImage: "https://strapi.orientspectra.com/uploads/Website_Event_Banner_EU_UK_J_c28c8123fa.webp",
         alt:"event",
         subtext: "",
         link: "event",
@@ -72,7 +72,7 @@ const Hero = ({ blog, event }) => {
     [blog, event]
   );
 
-  const handleNavigate = (data) => {
+  const handleNavigate = (data, e) => {
     if (data.isPopUp) {
       setIsOpen(true);
     } else {
@@ -123,9 +123,7 @@ const Hero = ({ blog, event }) => {
         </Carousel>
       </div>
       {isOpen &&  (
-        <div role="dialog" aria-hidden={!isOpen}>
-        <HeroLeadFormPopUp closePopup={closePopup} />
-        </div> 
+        <LeadFormPopUp closePopup={closePopup} />
       )
         }
     </div>

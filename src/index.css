@@ -74,10 +74,9 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
   z-index: 6;
 }
-.WhatsApp > img {
+.WhatsApp > a > img {
   width: 70px;
   height: 70px;
   cursor: pointer;
@@ -109,6 +108,15 @@ html {
   padding: 10px;
   border: 1px solid var(--brand-color);
   border-radius: 20px;
+}
+.popup-input-dropdown {
+  width: 100%;
+  font-size: 15px;
+  padding: 10px 30px 10px 10px;
+  border: 1px solid var(--brand-color);
+  border-radius: 20px;
+  appearance: none;
+  background: url('data:image/svg+xml;utf8,<svg fill="%23000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center;
 }
 .DailogContent {
   width: 70%;
@@ -218,7 +226,6 @@ html {
   }
   .Dailog-container {
     padding: 1.2rem;
-
   }
   .DailogContent {
     width: 100%;
@@ -259,8 +266,8 @@ html {
 
 /* For extra small screens */
 @media (max-width: 576px) {
-  .WhatsApp > img {
-    margin-bottom: 50px !important;
+  .WhatsApp > a > img {
+    margin-bottom: 30px !important;
     margin-right: 40px;
     width: 60px;
     height: 60px;

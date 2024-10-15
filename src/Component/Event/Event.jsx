@@ -5,6 +5,10 @@ import Navbar from "../Common/Navbar";
 import Hero from "./Hero";
 import SuccessStory from "./SuccessStory";
 import axios from "axios";
+import Benifits from "../../Ads landing page/Europe-Education-Fair/UK_Benifits";
+import WhyOs from "../../Ads landing page/OfflineMarketingClub/WhyOS";
+import EventDetails from "./EventDetail";
+import Universities from "../../Ads landing page/Europe-Education-Fair/UK_Universities";
 // import { Helmet } from "react-helmet-async";
 
 const Event = () => {
@@ -54,8 +58,12 @@ const Event = () => {
           content="Read latest news about Orient Spectra's overseas education fairs, and other updates like student visa approvals and so on." />
       </Helmet> */}
       <Hero eventData={upcomingEventdata} />
-      <SuccessStory CompletedEventdata={CompletedEventdata} />
-      <GetTuchWithUs />
+      <EventDetails />
+      {/* <SuccessStory CompletedEventdata={CompletedEventdata} /> */}
+      <Benifits />
+      <WhyOs />
+      <Universities/>
+      {/* <GetTuchWithUs /> */}
     </>
   );
 };

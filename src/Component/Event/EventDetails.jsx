@@ -4,12 +4,15 @@ import { useParams } from "react-router-dom";
 import Button from "../Common/Button";
 import BookEventForm from "./BookEventForm";
 import HeroLeadFormPopUp from "../../Landing_page/HeroLeadFormPopUp";
+import { useMediaQuery } from "@mui/material";
 
 const EventDetail = () => {
   const { id } = useParams();
   const [event, setEvent] = useState({});
   const [bookEventForm, setBookEventForm] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const isMd = useMediaQuery("(max-width:1024px)");
+
   const api = `https://strapi.orientspectra.com/api/events/${id}?populate=*`;
   const FetchEventDetails = async () => {
     try {
@@ -51,10 +54,17 @@ const EventDetail = () => {
 
       <div className="event-details-conatiner section">
         <div className="event-image">
-          <img
-            src={`https://strapi.orientspectra.com${event?.attributes?.Poster?.data?.attributes?.formats?.small?.url}`}
+          {isMd ? (
+            <img
+            src={`https://strapi.orientspectra.com${event?.attributes?.Thumbnail?.data[0]?.attributes.url}`}
+            alt="" />
+          ):(
+            <img
+            src={`https://strapi.orientspectra.com${event?.attributes?.Poster?.data?.attributes?.formats?.large?.url}`}
             alt="blog"
           />
+          )}
+          
 
           <Button
             onClick={() => setIsOpen(true)}

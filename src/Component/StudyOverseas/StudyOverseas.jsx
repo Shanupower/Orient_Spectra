@@ -10,6 +10,7 @@ import DiscoverEvent from "./DiscoverEvent";
 import Hero from "./Hero";
 import { useMediaQuery } from "@mui/material";
 import MobileDiscoverEvent from "./mobileDiscoverEvent/MobileDiscoverEvent";
+import Country from "../../Landing_page/Country";
 const getItems = (panelStyle) => [
   {
     key: "1",
@@ -156,7 +157,7 @@ const StudyOverseas = () => {
       <Hero />
       {isMd ? <MobileDiscoverEvent /> : <DiscoverEvent />}
 
-      <Counselors />
+      <Country />
       <Testimonial />
       <Events />
       <CountryFaq getItems={getItems} />
