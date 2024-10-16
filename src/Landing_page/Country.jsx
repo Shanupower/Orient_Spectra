@@ -32,12 +32,12 @@ const CountryImages =[
         name: "Study In Canada",
         link: "/country/study-in-canada"
     },
-    {
-        id: 5,
-        img: "https://strapi.orientspectra.com/uploads/singapore_9302d691ec.webp",
-        name:"Study In Singapore",
-        link: "/country/study-in-singapore",
-    },
+    // {
+    //     id: 5,
+    //     img: "https://strapi.orientspectra.com/uploads/singapore_9302d691ec.webp",
+    //     name:"Study In Singapore",
+    //     link: "/country/study-in-singapore",
+    // },
     {
         id: 6,
         img: "https://strapi.orientspectra.com/uploads/australia_f0cf3b4792.webp",
@@ -62,18 +62,18 @@ const CountryImages =[
         name:"Study In Dubai",
         link: "/country/study-in-dubai",
     },
-    {
-        id: 10,
-        img: "https://strapi.orientspectra.com/uploads/poland_b781e4dec6.webp",
-        name:"Study In Poland",
-        link: "/country/study-in-poland",
-    },
-    {
-        id: 11,
-        img: "https://strapi.orientspectra.com/uploads/malta_587ed83c6a.webp",
-        name:"Study In Malta",
-        link: "/country/study-in-malta",
-    },
+    // {
+    //     id: 10,
+    //     img: "https://strapi.orientspectra.com/uploads/poland_b781e4dec6.webp",
+    //     name:"Study In Poland",
+    //     link: "/country/study-in-poland",
+    // },
+    // {
+    //     id: 11,
+    //     img: "https://strapi.orientspectra.com/uploads/malta_587ed83c6a.webp",
+    //     name:"Study In Malta",
+    //     link: "/country/study-in-malta",
+    // },
 ]
 
 const Country = () =>{

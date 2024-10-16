@@ -25,6 +25,7 @@ const EventDargCard = ({ Eventdata }) => {
             className="swiper-slide-conatiner"
             onClick={handleNavigate(item)}
           >
+            <b className="pastEvents">Past Events</b>
             <h2 className="EventHeadine">{item?.attributes?.Headline}</h2>
             <span>{item?.attributes?.Date_of_the_event}</span>
             <div className="eventCard-image-containeer">

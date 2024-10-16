@@ -1286,6 +1286,16 @@ canvas {
 .upcomingEvents {
   display: none;
 }
+.pastEvents {
+  display: block;
+  color: var(--text-color-white);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  background-color: #ff7300;
+  padding: 10px;
+  width: 40%;
+  border-radius: 15px;
+}
 
 .ant-steps-item-title {
   margin-top: 1rem;
@@ -2468,6 +2478,17 @@ canvas {
     padding: 13px;
     width: 60%;
     border-radius: 15px;
+  }
+  .pastEvents {
+    display: block;
+    color: var(--text-color-white);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    background-color: #ff7300;
+    padding: 10px;
+    width: 60%;
+    border-radius: 15px;
+    font-size: 20px;
   }
   .upcomingText {
     display: none;

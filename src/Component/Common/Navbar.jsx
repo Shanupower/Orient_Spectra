@@ -68,11 +68,11 @@ const StudyCountry = [
     image: Ireland,
     link: "/country/study-in-ireland",
   },
-  {
-    name: "Sweden",
-    image: Sweden,
-    link: "/country/study-in-sweden",
-  },
+  // {
+  //   name: "Sweden",
+  //   image: Sweden,
+  //   link: "/country/study-in-sweden",
+  // },
   {
     name: "Dubai",
     image: Dubai,
@@ -83,21 +83,21 @@ const StudyCountry = [
     image: Switzerland,
     link: "/country/study-in-switzerland",
   },
-  {
-    name: "Singapore",
-    image: Singapore,
-    link: "/country/study-in-singapore",
-  },
-  {
-    name: "Poland",
-    image: Poland,
-    link: "/country/study-in-poland",
-  },
-  {
-    name: "Malta",
-    image: Malta,
-    link: "/country/study-in-malta",
-  },
+  // {
+  //   name: "Singapore",
+  //   image: Singapore,
+  //   link: "/country/study-in-singapore",
+  // },
+  // {
+  //   name: "Poland",
+  //   image: Poland,
+  //   link: "/country/study-in-poland",
+  // },
+  // {
+  //   name: "Malta",
+  //   image: Malta,
+  //   link: "/country/study-in-malta",
+  // },
 ];
 
 const items = [
@@ -351,14 +351,14 @@ const Menuitem = [
         ),
       },
       
-      {
-        key: "9",
-        label: (
-          <Link style={{ textDecoration: "none" }} to="/country/study-in-singapore">
-            Singapore
-          </Link>
-        ),
-      },
+      // {
+      //   key: "9",
+      //   label: (
+      //     <Link style={{ textDecoration: "none" }} to="/country/study-in-singapore">
+      //       Singapore
+      //     </Link>
+      //   ),
+      // },
       {
         key: "10",
         label: (
@@ -367,30 +367,30 @@ const Menuitem = [
           </Link>
         ),
       },
-      {
-        key: "11",
-        label: (
-          <Link style={{ textDecoration: "none" }} to="/country/study-in-sweden">
-            Sweden
-          </Link>
-        ),
-      },
-      {
-        key: "12",
-        label: (
-          <Link style={{ textDecoration: "none" }} to="/country/study-in-poland">
-            Poland
-          </Link>
-        ),
-      },
-      {
-        key: "13",
-        label: (
-          <Link style={{ textDecoration: "none" }} to="/country/study-in-malta">
-            Malta
-          </Link>
-        ),
-      },
+      // {
+      //   key: "11",
+      //   label: (
+      //     <Link style={{ textDecoration: "none" }} to="/country/study-in-sweden">
+      //       Sweden
+      //     </Link>
+      //   ),
+      // },
+      // {
+      //   key: "12",
+      //   label: (
+      //     <Link style={{ textDecoration: "none" }} to="/country/study-in-poland">
+      //       Poland
+      //     </Link>
+      //   ),
+      // },
+      // {
+      //   key: "13",
+      //   label: (
+      //     <Link style={{ textDecoration: "none" }} to="/country/study-in-malta">
+      //       Malta
+      //     </Link>
+      //   ),
+      // },
     ],
   },
 

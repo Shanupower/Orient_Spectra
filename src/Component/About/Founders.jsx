@@ -18,7 +18,7 @@ const Founders = () => {
             <img src={FounderImage} alt="" />
           </div>
           <h1>Srinivas Goud Nandaram</h1>
-          <span>Co-Founder</span>
+          <span>Founder</span>
         </div>
         <div className="Quotation-card">
           <FormatQuoteSharpIcon className="FormatQuoteSharpIcon" />

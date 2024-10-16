@@ -1,6 +1,3 @@
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import Quote from "../../assets/Country/quote.png";
-import Graph from "../../assets/Blogs/graph2.png";
 import FormatQuoteSharpIcon from "@mui/icons-material/FormatQuoteSharp";
 import BarLabel from "./Barchart";
 import CircleArrow from "../Common/CircleArrow";
@@ -21,7 +18,7 @@ const Story = () => {
       </div>
       <div className="story-spectra-card">
         <div className="stroy-left-card">
-          <img src={Quote} alt="" />
+          <img src="https://strapi.orientspectra.com/uploads/images_2_f38130d7b2.webp" alt="Quotes" />
         </div>
         <div className="stroy-center-card">
           <div className="quoet-image">
