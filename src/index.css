@@ -63,23 +63,33 @@ html {
 .section2 {
   padding: 1rem 6%;
 }
-
-.WhatsApp {
+.ActionIcons {
   position: fixed;
   right: 0px;
   bottom: 0px;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  display: flex;
+  display: block;
   align-items: center;
-  justify-content: center;
   z-index: 6;
+}
+.Phone,
+.WhatsApp {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
 }
 .WhatsApp > a > img {
   width: 70px;
   height: 70px;
   cursor: pointer;
+} 
+.Phone > a > img {
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  background: linear-gradient(120deg,  rgba(31, 122, 255, 1) 59%, rgba(98, 207, 244, 1) 100%);
+  padding: 15px;
+  border-radius: 50px;
+
 }
 .Dailog-container {
   padding: 2rem;
@@ -194,6 +204,14 @@ html {
   margin-top: 10px; 
 }
 @media (max-width:1024px) {
+  .ActionIcons {
+    position: fixed;
+    right: 25px;
+    bottom: 0px;
+    display: block;
+    align-items: center;
+    z-index: 6;
+  }
   .DailogTitle {
     font-size: 23px;
     text-align: center;
@@ -216,6 +234,25 @@ html {
   
 }
 @media (max-width: 986px) {
+  .ActionIcons {
+    position: fixed;
+    right: 25px;
+    bottom: 0px;
+    display: block;
+    align-items: center;
+    z-index: 6;
+  }
+  .Phone,
+  .WhatsApp {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+  }
+  .Phone > a > img,
+  .WhatsApp > a > img {
+    width: 60px;
+    height: 60px;
+  }
   .ImageContainer {
     display: none;
   }
@@ -255,22 +292,6 @@ html {
   .success-message > p,
   .SkipNow {
     font-size: 18px;
-  }
-}
-
-@media (max-width: 768px) {
-  .WhatsApp {
-    right: 0px;
-  }
-}
-
-/* For extra small screens */
-@media (max-width: 576px) {
-  .WhatsApp > a > img {
-    margin-bottom: 30px !important;
-    margin-right: 40px;
-    width: 60px;
-    height: 60px;
   }
 }
 
