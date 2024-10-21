@@ -11,7 +11,7 @@ const Story = () => {
         <p>
           Founded in 2005, Orient Spectra boasts 19 years of expertise in
           overseas education consultancy. As one of Hyderabad's leading firms,
-          we partner with over 1500 universities globally, ensuring students
+          we partner with over 500+ universities globally, ensuring students
           access top-tier educational opportunities worldwide.
         </p>
         <h3>Our Story</h3>

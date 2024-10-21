@@ -28,6 +28,7 @@ const Step4 = ({
   const handleMonth = (month) => () => {
     setMonth(month);
   };
+  const canProceed = Month !== "";
   return (
     <div className="step1-container section">
       <div className="step1-left-card">
@@ -60,7 +61,7 @@ const Step4 = ({
           <p className={`notSureCard  `}>Not Sure</p>
         </div>
         {Month ? (
-          <NextStepComponent handleStepCount={handleStepCount} />
+          <NextStepComponent handleStepCount={handleStepCount} canProceed={canProceed}/>
         ) : (
           <NextStepComponent />
         )}

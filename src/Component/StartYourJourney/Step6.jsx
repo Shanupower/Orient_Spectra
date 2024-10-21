@@ -14,7 +14,10 @@ const Step6 = ({
   setName,
   number,
   setNumber,
+  source,
+  message,
 }) => {
+  const canProceed = name !== "" && email !== "" && number !== "";
   return (
     <div className="step1-container section">
       <div className="step1-left-card">
@@ -52,26 +55,35 @@ const Step6 = ({
             placeholder="Please Enter Your Mobile Number"
             onChange={(e) => setNumber(e.target.value)}
           />
+          <input
+            type="hidden"
+            name="Source"
+            value={source}
+          />
           <p>
             By proceeding, you agree to the Terms & Conditions and Privacy
             Policy
           </p>
+          {message && <p style={{ color: "red" }}>{message} Please Try Again</p> }
+          
         </div>
 
-        {email ? (
-          <div className="Next-container">
-            Sign Up
-            <AddCircleOutlineOutlinedIcon
-              onClick={handleSubmitData}
-              style={{ fontSize: "50px" }}
-            />
-          </div>
-        ) : (
-          <div className="Next-container">
-            Schedule Your Call
-            <AddCircleOutlineOutlinedIcon style={{ fontSize: "50px" }} />
-          </div>
-        )}
+        <div
+          className={`Next-container ${!canProceed ? "disabled" : ""}`}
+          onClick={canProceed ? handleSubmitData : null}
+        >
+          {canProceed ? (
+            <>
+              Sign Up
+              <AddCircleOutlineOutlinedIcon style={{ fontSize: "50px" }} />
+            </>
+          ) : (
+            <>
+              Schedule Your Call
+              <AddCircleOutlineOutlinedIcon style={{ fontSize: "50px" }} />
+            </>
+          )}
+        </div>
       </div>
     </div>
   );

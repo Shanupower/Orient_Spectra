@@ -236,6 +236,10 @@
   color: var(--text-color-darkgray);
   font-size: 18px;
 }
+.Next-container.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
 
 @media (max-width: 985px) {
   .step1-container {
