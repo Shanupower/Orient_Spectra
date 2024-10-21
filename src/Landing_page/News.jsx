@@ -32,16 +32,16 @@ const News = () => {
     fetchData();
   }, []);
 
-  const handleVideoPlay =()=>{
-      if(isPlaying && isshowCover) {
-        videoRef.current.pause();
-        setShowControls(false);
-      } else {
-        videoRef.current.play();
-      }
+  const handleVideoPlay = () => {
+    if (isPlaying && isshowCover) {
+      videoRef.current.pause();
+      setShowControls(false);
+    } else {
+      videoRef.current.play();
+    }
     setIsPlaying(false);
     setShowCover(false);
-  }
+  };
 
   const handlePlay = () => {
     setIsPlaying(true);
@@ -50,76 +50,95 @@ const News = () => {
 
   const handlePause = () => {
     setIsPlaying(false);
-
   };
   return (
     <>
       <div className="section News-container">
-        <h2>Glimpses of Our <span>Contribution</span></h2>
-        <Swiper 
-            spaceBetween={30}
-               slidesPerView={isSm ? 1 : isMd ? 2 : 3}
-               className="country_Container"
-               modules={[Navigation, Scrollbar]}
-               autoplay={{
-                delay: 2500,
-                disableOnInteraction: true,
-              }}
-              //  speed={1000}
-               navigation>
-        <div className="media-container">
-          {NewsData?.map((item) => (
-            <SwiperSlide className="media-card" key={item?.id}>
-              <div className="media-video" onClick={handleVideoPlay}>
-                {item?.attributes?.Headline_image?.data[0]?.attributes?.mime === 'video/mp4'? (
-                  <>
-                  {!isshowCover ? (
-                    <img
-                    src="https://strapi.orientspectra.com/uploads/australia_d22eb37527.jpg"
-                    alt="Video thumbnail"
-                    loading="lazy"
-                    className="video-thumbnail"
-                    style={{
-                      width: '100%',
-                      height: '100%',
-                      position: 'absolute',
-                      top: 0,
-                      left: 0,
-                      objectFit: 'cover',
-                      // zIndex: 1,
-                    }} 
-                    />
-                  ) :''}
+        <h2>
+          Glimpses of Our <span>Contribution</span>
+        </h2>
+        <Swiper
+          spaceBetween={30}
+          slidesPerView={isSm ? 1 : isMd ? 2 : 3}
+          className="country_Container"
+          modules={[Navigation, Scrollbar]}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: true,
+          }}
+          //  speed={1000}
+          navigation
+        >
+          <div className="media-container">
+            {NewsData?.map((item) => (
+              <SwiperSlide className="media-card" key={item?.id}>
+                <div className="media-video" onClick={handleVideoPlay}>
+                  {item?.attributes?.Headline_image?.data[0]?.attributes
+                    ?.mime === "video/mp4" ? (
+                    <>
+                      {!isshowCover ? (
+                        <img
+                          src="https://strapi.orientspectra.com/uploads/australia_d22eb37527.jpg"
+                          alt="Video thumbnail"
+                          loading="lazy"
+                          className="video-thumbnail"
+                          style={{
+                            width: "100%",
+                            height: "100%",
+                            position: "absolute",
+                            top: 0,
+                            left: 0,
+                            objectFit: "cover",
+                            // zIndex: 1,
+                          }}
+                        />
+                      ) : (
+                        ""
+                      )}
 
-                    {!isPlaying ? (
-                    <img className="playIcon" src={Play} alt="" loading="lazy"/>
-                    ): ''}
-                  <video className="NewsVideo" muted controls onPause={handlePause} onPlay={handlePlay}>
-                  <source src={`https://strapi.orientspectra.com${item?.attributes?.Headline_image?.data[0]?.attributes?.url}`} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-                
-                </>
-                ):(
-                  <img
-                    src={`https://strapi.orientspectra.com${item?.attributes?.Headline_image?.data[0]?.attributes?.formats?.large?.url}`}
-                    alt=""
-                    loading="lazy"
-                  />
-                )}
-                
-              </div>
-              <p>{item?.attributes?.Title}</p>
-              <span>{item?.attributes?.Short_Description}</span>
-            </SwiperSlide>
-          ))}
-        </div>
-        </Swiper>
-          <div className="findmoreButton Container">
-            <Link to={"/news-&-pr"} className="Link_route findMore">
-                Find More <ArrowForwardIcon className="blogarrrow" />
-              </Link>
+                      {!isPlaying ? (
+                        <img
+                          className="playIcon"
+                          src={Play}
+                          alt=""
+                          loading="lazy"
+                        />
+                      ) : (
+                        ""
+                      )}
+                      <video
+                        className="NewsVideo"
+                        muted
+                        controls
+                        onPause={handlePause}
+                        onPlay={handlePlay}
+                      >
+                        <source
+                          src={`https://strapi.orientspectra.com${item?.attributes?.Headline_image?.data[0]?.attributes?.url}`}
+                          type="video/mp4"
+                        />
+                        Your browser does not support the video tag.
+                      </video>
+                    </>
+                  ) : (
+                    <img
+                      src={`https://strapi.orientspectra.com${item?.attributes?.Headline_image?.data[0]?.attributes?.formats?.large?.url}`}
+                      alt=""
+                      loading="lazy"
+                    />
+                  )}
+                </div>
+                <p>{item?.attributes?.Title}</p>
+                <span>{item?.attributes?.Short_Description}</span>
+              </SwiperSlide>
+            ))}
           </div>
+        </Swiper>
+        <div className="findmoreButton Container">
+          <Link to={"/news-and-pr"} className="Link_route findMore">
+            Find More <ArrowForwardIcon className="blogarrrow" />
+          </Link>
+        </div>
       </div>
     </>
   );

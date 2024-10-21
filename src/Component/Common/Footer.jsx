@@ -137,7 +137,7 @@ const Footer = () => {
           <Link to="/blogs" className="Link_route leftSideItem">
             Blogs
           </Link>
-          <Link to="/news-&-pr" className="Link_route leftSideItem">
+          <Link to="/news-and-pr" className="Link_route leftSideItem">
             Daily News
           </Link>
           <Link to="/privacy-policy" className="Link_route leftSideItem">
