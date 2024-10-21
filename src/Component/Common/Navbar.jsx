@@ -475,7 +475,7 @@ const Menuitem = [
   {
     key: "News & PR",
     label: (
-      <Link style={{ textDecoration: "none" }} to="/news-&-pr">
+      <Link style={{ textDecoration: "none" }} to="/news-and-pr">
         News & PR
       </Link>
     ),
@@ -834,7 +834,7 @@ const Navbar = ({
                 <Link
                   className={`Link_route DailyNews
                     `}
-                  to={"/news-&-pr"}
+                  to={"/news-and-pr"}
                 >
                   News & PR
                 </Link>

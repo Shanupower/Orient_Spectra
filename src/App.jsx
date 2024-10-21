@@ -129,8 +129,8 @@ function App() {
         <Route path="/event-details/:id" element={<EventDetails />} />
         <Route path="/study-overseas" element={<StudyOverseas />} />
         <Route path="/countries" element={<StudyOverseas />} />
-        <Route path="/news-&-pr" element={<NewsPR />} />
-        <Route path="/news-&-pr-detail/:id" element={<NewsDetails />} />
+        <Route path="/news-and-pr" element={<NewsPR />} />
+        <Route path="/news-and-pr-detail/:id" element={<NewsDetails />} />
         <Route path="/FindYourCourse" element={<Finding />}></Route>
         <Route path="/Coaching" element={<Coaching />}></Route>
         <Route path="/Mentorship" element={<Mentorship />}></Route>
