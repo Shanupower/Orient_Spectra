@@ -63,61 +63,100 @@ html {
 .section2 {
   padding: 1rem 6%;
 }
-
-.WhatsApp {
+.ActionIcons {
   position: fixed;
+  right: 0px;
   bottom: 0px;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  display: flex;
+  display: block;
   align-items: center;
-  justify-content: center;
-  cursor: pointer;
   z-index: 6;
 }
-.WhatsApp > img {
+.Phone,
+.WhatsApp {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+.WhatsApp > a > img {
   width: 70px;
   height: 70px;
   cursor: pointer;
-}
+} 
+.Phone > a > img {
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  background: linear-gradient(120deg,  rgba(31, 122, 255, 1) 29%, rgba(98, 207, 244, 1) 100%);
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  border-radius: 50px;
 
+}
 .Dailog-container {
   padding: 2rem;
-  background-color: #306398;
+  background-color: white;
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  background-image: url("https://strapi.orientspectra.com/uploads/thumbnail_testimonial_map_45da579353_1_c7ba4b807e.webp");
+  background-size:cover;
+  background-repeat: no-repeat;
 }
 .popup-dialog-title {
   font-size: 20px;
 }
 .popup-text-feild {
   width: 100%;
+  margin-top: 10px;
 }
 .popup-form-group {
   width: 100%;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 .popup-input-field {
   width: 100%;
   font-size: 15px;
   padding: 10px;
+  border: 1px solid var(--brand-color);
+  border-radius: 20px;
+}
+.popup-input-dropdown {
+  width: 100%;
+  font-size: 15px;
+  padding: 10px 30px 10px 10px;
+  border: 1px solid var(--brand-color);
+  border-radius: 20px;
+  appearance: none;
+  background: url('data:image/svg+xml;utf8,<svg fill="%23000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center;
+}
+.DailogContent {
+  width: 70%;
 }
 .DailogTitle {
-  font-size: 30px;
+  font-size: 25px;
   text-align: center;
-  color: white;
+  color: #306398;
 }
-.Dailog-container > h3 {
-  font-size: 20px;
-  color: white;
-  font-weight: 500;
-  text-align: center;
+.DailogTitle > span {
+  color: var(--brand-color);
 }
-.Dailog-container > p {
+.DailogContent > h3 {
   font-size: 18px;
-  color: white;
-  font-weight: 500;
+  color: #306398;
+  font-weight: 600;
   text-align: center;
-  margin-top: 5px;
+}
+.DailogContent > p {
+  font-size: 18px;
+  color: black;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 10px;
+}
+.ImageContainer {
+  width: 50%;
+  border-radius: 20px;
+  align-self: center;
 }
 .popup-form-container-button {
   width: 100%;
@@ -128,6 +167,7 @@ html {
   color: white;
   margin-top: 0 !important;
   cursor: pointer;
+  border-radius: 20px;
 }
 .success-message {
   padding: 3rem;
@@ -156,39 +196,94 @@ html {
   margin-top: 10px;  
 }
 .SkipNow {
-  color: white;
+  color: black;
   text-decoration: underline;
-  font-size: 23px;
+  font-size: 20px;
   font-weight: 600;
   text-align: center;
   cursor: pointer;
   margin-top: 10px; 
 }
-@media (max-width: 986px) {
+@media (max-width:1024px) {
+  .ActionIcons {
+    position: fixed;
+    right: 25px;
+    bottom: 0px;
+    display: block;
+    align-items: center;
+    z-index: 6;
+  }
+  .DailogTitle {
+    font-size: 23px;
+    text-align: center;
+  }
+  .DailogContent > h3 {
+    font-size: 16px;
+  }
+  .DailogContent > p {
+    font-size: 15px;
+    color: black;
+    text-align: center;
+  }
+  .ImageContainer {
+    width: 52%;
+    border-radius: 20px;
+  }
   .DailogBox {
-    margin-left: -15px;
-    margin-right: 20px;
+    overflow-y:scroll;
+  }
+  
+}
+@media (max-width: 986px) {
+  .ActionIcons {
+    position: fixed;
+    right: 25px;
+    bottom: 0px;
+    display: block;
+    align-items: center;
+    z-index: 6;
+  }
+  .Phone,
+  .WhatsApp {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+  }
+  .Phone > a > img,
+  .WhatsApp > a > img {
+    width: 60px;
+    height: 60px;
+  }
+  .ImageContainer {
+    display: none;
+  }
+  .DailogBox {
+    margin-left: 2px;
+    margin-right: 0px;
+    overflow-y:scroll;
   }
   .Dailog-container {
     padding: 1.2rem;
   }
-  .Dailog-container > h3 {
+  .DailogContent {
+    width: 100%;
+  }
+  .DailogContent > h3 {
     font-size: 16px;
-    color: white;
-    font-weight: 500;
+    color: #306398;
+    font-weight: 600;
     text-align: center;
   }
-  .Dailog-container > p {
-    font-size: 15px;
-    color: white;
-    font-weight: 500;
+  .DailogContent > p {
+    font-size: 16px;
+    color: black;
     text-align: center;
-    margin-top: 5px;
   }
   .DailogTitle {
     font-size: 22px;
     text-align: center;
   }
+
   .success-message {
     padding: 2rem;
   }
@@ -201,18 +296,26 @@ html {
   }
 }
 
-@media (max-width: 768px) {
-  .WhatsApp {
-    left: 30px;
+@media (max-width: 1280px) {
+  .DailogContent > h3 {
+    font-size: 15px;
+    color: #306398;
+    font-weight: 600;
+    text-align: center;
   }
-}
-
-/* For extra small screens */
-@media (max-width: 576px) {
-  .WhatsApp > img {
-    margin-bottom: 50px !important;
-    margin-right: 40px;
-    width: 60px;
-    height: 60px;
+  .DailogContent > p {
+    font-size: 15px;
+    color: black;
+    text-align: center;
+  }
+  .DailogTitle {
+    font-size: 22px;
+    text-align: center;
+  }
+  .Dailog-container {
+    padding: 1.2rem;
+  }
+  .ImageContainer {
+   align-self: center;
   }
 }

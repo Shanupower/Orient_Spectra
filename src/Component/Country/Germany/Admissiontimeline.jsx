@@ -181,14 +181,14 @@ const Admissiontimeline = () => {
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/Logo_update_6af66a1318.webp"
+                  src="https://strapi.orientspectra.com/uploads/13_52c361d909.webp"
                   alt="New European College"
                   loading="lazy"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/hochschule_macromedia_logo_rgb_blueberry_e296c7e1d4.webp"
+                  src="https://strapi.orientspectra.com/uploads/8_b4289a68a8.webp"
                   alt="Marcomedia University"
                   loading="lazy"
                 />
@@ -209,7 +209,7 @@ const Admissiontimeline = () => {
               </div>
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/1545396559_HSF_Logo_RZ_RGB_2748269be1.jpg"
+                  src="https://strapi.orientspectra.com/uploads/11_4ebffb1e87.webp"
                   alt="Fresenius University of Applied Sciences "
                   loading="lazy"
                 />
@@ -232,7 +232,7 @@ const Admissiontimeline = () => {
 
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/thumbnail_1718285496_arden_univerrsity_logo_a26cdefcb8_dfa35e1129.webp"
+                  src="https://strapi.orientspectra.com/uploads/12_7916183ad3.webp"
                   alt="Andren University"
                   loading="lazy"
                 />

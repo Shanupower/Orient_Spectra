@@ -7,32 +7,32 @@ const Programdata = [
     text: "MBA",
   },
   {
-    text: "	Data science",
+    text: "	Data Science",
   },
   {
-    text: "	Cyber security",
+    text: "	Cyber Security",
   },
   {
-    text: "Computer science",
+    text: "Computer Science",
   },
   {
     text: "	AI and Robotics",
   },
   {
-    text: "	Aerospace engineering",
+    text: "	Aerospace Engineering",
   },
  
   {
-    text: "	Construction project management with BIM",
+    text: "	Construction",
   },
   {
     text: "Telecommunication ",
   },
   {
-    text: "		Electrical and electronics engineering",
+    text: "	Electrical and Electronics Engineering",
   },
   {
-    text: "Biomedical science",
+    text: "Biomedical Science",
   },
 ];
 const Admissiontimeline = () => {

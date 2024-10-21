@@ -25,11 +25,12 @@ const EventDargCard = ({ Eventdata }) => {
             className="swiper-slide-conatiner"
             onClick={handleNavigate(item)}
           >
+            <b className="pastEvents">Past Events</b>
             <h2 className="EventHeadine">{item?.attributes?.Headline}</h2>
             <span>{item?.attributes?.Date_of_the_event}</span>
             <div className="eventCard-image-containeer">
               <img
-                src={` https://strapi.orientspectra.com${item?.attributes?.Poster?.data?.attributes?.formats?.thumbnail?.url}`}
+                src={` https://strapi.orientspectra.com${item?.attributes?.Poster?.data?.attributes?.formats?.small?.url}`}
                 alt=""
               />
             </div>

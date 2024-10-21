@@ -36,10 +36,13 @@ import Privacy_Policy from "./Component/Privacy_Policy/Privacy_Policy";
 import USA_SEPTEMBER_FAIR_2024 from "./Ads landing page/USA_SEPT_FAIR_2024/USA_SEPTEMBER_FAIR_2024";
 import NewsDetails from "./Component/NewsPR/NewsDetails";
 import EventDetails from "./Component/Event/EventDetails";
-import Europe_Jan_2025 from "./Ads landing page/Europe_education_fair_2024/Europe_Jan_2025";
 import Offline_Marketing_Club from "./Ads landing page/OfflineMarketingClub/Offline_Marketing_Club";
 import WhatsApp from "./Whatsapp";
 import LeadFormPopUp from "./LeadFormPopUp";
+import SwedenCountry from "./Component/Country/Sweden/Country";
+import DUBAICountry from "./Component/Country/Dubai/Country";
+import EuropeEDUFair from "./Ads landing page/Europe-Education-Fair/EuropeEDUFair";
+// import { HelmetProvider } from "react-helmet-async";
 
 function App() {
   const [openWhatwedo, setWhatwedoOpen] = useState(false);
@@ -78,6 +81,7 @@ function App() {
 
   return (
     <>
+    {/* <HelmetProvider> */}
       <LeadFormPopUp />
       <Navbar
         openWhatwedo={openWhatwedo}
@@ -113,10 +117,10 @@ function App() {
           path="/country/study-in-switzerland"
           element={<SwitzerlandCountry />}
         />
-        <Route path="/country/Dubai" element={<SwitzerlandCountry />} />
+        <Route path="/country/study-in-dubai" element={<DUBAICountry />} />
         <Route
           path="/country/study-in-sweden"
-          element={<SwitzerlandCountry />}
+          element={<SwedenCountry />}
         />
 
         <Route path="/about" element={<About />} />
@@ -143,20 +147,29 @@ function App() {
         />
 
         <Route path="/uk-november-2024" element={<UK_EDU_FAIR />} />
-        <Route path="/uk-january-2025" element={<UK_Jan_2025 />} />
+
+        <Route path="/uk-education-fair" element={<UK_Jan_2025 />} />
+        <Route path="/uk-education-fair?source=verse" element={<UK_Jan_2025 />} />
+
+
         <Route
           path="/usa-september-fair-2024"
           element={<USA_SEPTEMBER_FAIR_2024 />}
         />
         <Route
-          path="/europe-education-fair-2024"
-          element={<Europe_Jan_2025 />}
+          path="/europe-education-fair"
+          element={<EuropeEDUFair />}
+        />
+        <Route
+          path="/europe-education-fair?source=verse"
+          element={<EuropeEDUFair />}
         />
         <Route path="/thank-you" element={<ThankYou />} />
         <Route path="/privacy-policy" element={<Privacy_Policy />} />
       </Routes>
       <WhatsApp />
       <Footer />
+      {/* </HelmetProvider> */}
     </>
   );
 }

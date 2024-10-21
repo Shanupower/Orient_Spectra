@@ -106,10 +106,11 @@
 }
 .stroy-left-card {
   background-color: rgb(241, 241, 241);
-  width: calc(40% - 3rem);
+  width: calc(35% - 4rem);
   height: 20rem;
   border-radius: 10px;
   overflow: hidden;
+  padding: 40px;
 }
 
 .stroy-center-card {

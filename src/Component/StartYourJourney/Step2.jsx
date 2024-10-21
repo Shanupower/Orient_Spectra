@@ -27,6 +27,7 @@ const Step2 = ({
     console.log(title);
     setCourse(title);
   };
+  const canProceed = course !== "";
   return (
     <div className="step1-container section">
       <div className="step1-left-card">
@@ -53,7 +54,7 @@ const Step2 = ({
           ))}
         </div>
         {course ? (
-          <NextStepComponent handleStepCount={handleStepCount} />
+          <NextStepComponent handleStepCount={handleStepCount} canProceed={canProceed}/>
         ) : (
           <NextStepComponent />
         )}

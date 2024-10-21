@@ -73,11 +73,11 @@ const FlagData = [
 
 import "./index.css";
 
-export const NextStepComponent = ({ handleStepCount, text, icon }) => {
+export const NextStepComponent = ({ handleStepCount, text, icon, canProceed }) => {
   return (
-    <div className="Next-container">
+    <div className={`Next-container ${!canProceed ? "disabled" : ""}`}>
       {text ? text : "Next"}{" "}
-      {icon ? icon : <CircleArrow onClick={handleStepCount} />}
+      {icon ? icon : <CircleArrow onClick={canProceed ? handleStepCount : null} />}
     </div>
   );
 };
@@ -91,6 +91,7 @@ const Step1 = ({
   const onClickCoutry = (name) => () => {
     if (setCountry) setCountry(name);
   };
+  const canProceed = country !== "";
 
   return (
     <div className="step1-container section">
@@ -121,7 +122,7 @@ const Step1 = ({
           ))}
         </div>
         {country ? (
-          <NextStepComponent handleStepCount={handleStepCount} />
+          <NextStepComponent handleStepCount={handleStepCount} canProceed={canProceed}/>
         ) : (
           <NextStepComponent />
         )}

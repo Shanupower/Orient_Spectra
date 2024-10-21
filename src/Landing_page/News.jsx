@@ -10,11 +10,11 @@ import { useMediaQuery } from "@mui/material";
 
 const News = () => {
   const [NewsData, setNewsData] = useState([]);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [isshowCover, setShowCover] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(null); // Store video ID instead of boolean
   const isMd = useMediaQuery("(max-width:1024px)");
   const isSm = useMediaQuery("(max-width:986px)");
-  const videoRef = useRef(null);
+  const videoRefs = useRef({}); // Use refs for multiple videos
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -32,25 +32,27 @@ const News = () => {
     fetchData();
   }, []);
 
-  const handleVideoPlay = () => {
-    if (isPlaying && isshowCover) {
-      videoRef.current.pause();
-      setShowControls(false);
-    } else {
-      videoRef.current.play();
+  const handleVideoPlay = (id) => {
+    const currentVideo = videoRefs.current[id];
+
+    // If video reference exists
+    if (currentVideo) {
+      if (isPlaying === id) {
+        currentVideo.pause();
+        setIsPlaying(null); // Reset state when video is paused
+      } else {
+        // Pause the currently playing video (if any)
+        if (isPlaying !== null && videoRefs.current[isPlaying]) {
+          videoRefs.current[isPlaying].pause();
+        }
+        currentVideo.play(); // Play the clicked video
+        setIsPlaying(id); // Set the currently playing video ID
+      }
     }
-    setIsPlaying(false);
-    setShowCover(false);
   };
 
-  const handlePlay = () => {
-    setIsPlaying(true);
-    setShowCover(true); // Hide cover when video starts playing
-  };
+  const NewsPrData = [...NewsData].reverse();
 
-  const handlePause = () => {
-    setIsPlaying(false);
-  };
   return (
     <>
       <div className="section News-container">
@@ -66,58 +68,57 @@ const News = () => {
             delay: 2500,
             disableOnInteraction: true,
           }}
-          //  speed={1000}
           navigation
         >
           <div className="media-container">
-            {NewsData?.map((item) => (
+            {NewsPrData?.map((item, index) => (
               <SwiperSlide className="media-card" key={item?.id}>
-                <div className="media-video" onClick={handleVideoPlay}>
+                <div className="media-video">
                   {item?.attributes?.Headline_image?.data[0]?.attributes
                     ?.mime === "video/mp4" ? (
                     <>
-                      {!isshowCover ? (
-                        <img
-                          src="https://strapi.orientspectra.com/uploads/australia_d22eb37527.jpg"
-                          alt="Video thumbnail"
-                          loading="lazy"
-                          className="video-thumbnail"
-                          style={{
-                            width: "100%",
-                            height: "100%",
-                            position: "absolute",
-                            top: 0,
-                            left: 0,
-                            objectFit: "cover",
-                            // zIndex: 1,
-                          }}
-                        />
-                      ) : (
-                        ""
+                      {isPlaying !== item.id && (
+                        <>
+                          <img
+                            src={`https://strapi.orientspectra.com${item?.attributes?.Thumbnail?.data?.attributes?.formats?.large?.url}`}
+                            alt="Video thumbnail"
+                            loading="lazy"
+                            className="video-thumbnail"
+                            style={{
+                              width: "100%",
+                              height: "100%",
+                              position: "absolute",
+                              top: 0,
+                              left: 0,
+                              objectFit: "cover",
+                            }}
+                            onClick={() => handleVideoPlay(item.id)}
+                          />
+                          <img
+                            className="playIcon"
+                            src={Play}
+                            alt="Play Icon"
+                            onClick={() => handleVideoPlay(item.id)}
+                          />
+                        </>
                       )}
 
-                      {!isPlaying ? (
-                        <img
-                          className="playIcon"
-                          src={Play}
-                          alt=""
-                          loading="lazy"
-                        />
-                      ) : (
-                        ""
-                      )}
                       <video
                         className="NewsVideo"
                         muted
                         controls
-                        onPause={handlePause}
-                        onPlay={handlePlay}
+                        ref={(el) => (videoRefs.current[item.id] = el)} // Store reference to each video
+                        onPause={() => {
+                          setIsPlaying(null); // Reset playing state on pause
+                        }}
+                        onPlay={() => {
+                          handleVideoPlay(item.id); // Call play handler
+                        }}
                       >
                         <source
                           src={`https://strapi.orientspectra.com${item?.attributes?.Headline_image?.data[0]?.attributes?.url}`}
                           type="video/mp4"
                         />
-                        Your browser does not support the video tag.
                       </video>
                     </>
                   ) : (

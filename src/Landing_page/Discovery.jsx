@@ -3,7 +3,36 @@ import Divider from "../Component/Common/Divider";
 import "./index.css";
 import Marquee from "react-fast-marquee";
 import axios from "axios";
+import { useMediaQuery } from "@mui/material";
 
+
+const DiscoveryData = [
+  {
+    id: 1,
+    count: "19+",
+    title: "Years of Experiences"
+  },
+  {
+    id: 2,
+    count: "15000+",
+    title: "Successful Admits"
+  },
+  {
+    id: 3,
+    count: "10+",
+    title: "Study Destinations"
+  },
+  {
+    id: 4,
+    count: "500+",
+    title: "Global Universities"
+  },
+  {
+    id: 5,
+    count: "98%",
+    title: "Visa Success Rate"
+  },
+]
 const Discovery = () => {
 
   const [formData, setFormData] = useState({
@@ -88,37 +117,39 @@ const Discovery = () => {
       setErrors(validationErrors);
     }
   };
-
+  const isSm = useMediaQuery("(max-width:986px)");
   return (
     <div className=" discovery-section">
-      <div className=" discovery_Container">
-        <div className="dicovery_card">
-          <h1>19+</h1>
-          <p>Years Experience</p>
+      {isSm ? (
+        <div className=" discovery_Container">
+        <img src="https://strapi.orientspectra.com/uploads/9e03ad56_1b80_4ca6_96b3_da6acc4f738b_removebg_preview_42fd338519.webp" />
+        <div className="discovery_content">
+          {DiscoveryData.map((item)=> (
+            <div className="dicovery_card" key={item.id}>
+            <h1>{item.count}</h1>
+            <p>{item.title}</p>
         </div>
-        <div className="dicovery_card">
-          <h1>15000+</h1>
-          <p>Successful Admits</p>
+          ))}
         </div>
-        <div className="dicovery_card">
-          <h1>10+</h1>
-          <p>Study Destinations
-          </p>
-        </div>
-        <div className="dicovery_card">
-          <h1>500+</h1>
-          <p>Global Universities
-          </p>
-        </div>
-        <div className="dicovery_card">
-          <h1>98%</h1>
-          <p>Visa Success Rate</p>
-        </div>
+    </div>
+      ):(
+        <div className=" discovery_Container">
+          <div className="discovery_content">
+            {DiscoveryData.map((item)=> (
+              <div className="dicovery_card" key={item.id}>
+              <h1>{item.count}</h1>
+              <p>{item.title}</p>
+          </div>
+            ))}
+          </div>
+          <img src="https://strapi.orientspectra.com/uploads/9e03ad56_1b80_4ca6_96b3_da6acc4f738b_removebg_preview_42fd338519.webp" />
       </div>
+      )}
+        
       <div className="discoverTextCard">
         <p>
         Orient Spectra provides end-to-end guidance with your study abroad goal across university connects, visa application, 
-        and loan assistance. Our student-focussed offerings and expert counselling has made us the top overseas education consultants 
+        and loan assistance. Our student-focussed offerings and expert counselling has made us one of the top overseas education consultants 
         in Hyderabad.
         </p>
 

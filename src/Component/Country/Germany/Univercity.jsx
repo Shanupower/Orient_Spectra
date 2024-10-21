@@ -53,23 +53,23 @@ const universityData = [
     ielts: "6.0",
     toefl: "80",
   },
-  // {
-  //   key:8,
-  //   img: "https://strapi.orientspectra.com/uploads/Logo_update_6af66a1318.webp",
-  //   title: "New European College",
-  //   ielts: "6.0",
-  //   toefl: "80",
-  // },
-  // {
-  //   key:9,
-  //   img: "https://strapi.orientspectra.com/uploads/hochschule_macromedia_logo_rgb_blueberry_e296c7e1d4.webp",
-  //   title: "Macromedia University of Applied Sciences",
-  //   ielts: "6.0",
-  //   toefl: "72",
-  // },
+  {
+    key:8,
+    img: "https://strapi.orientspectra.com/uploads/13_52c361d909.webp",
+    title: "New European College",
+    ielts: "6.0",
+    toefl: "80",
+  },
+  {
+    key:9,
+    img: "https://strapi.orientspectra.com/uploads/8_b4289a68a8.webp",
+    title: "Macromedia University of Applied Sciences",
+    ielts: "6.0",
+    toefl: "72",
+  },
   {
     key:10,
-    img: "https://strapi.orientspectra.com/uploads/thumbnail_1545396559_HSF_Logo_RZ_RGB_2748269be1_ee75f83ce9.webp",
+    img: "https://strapi.orientspectra.com/uploads/11_4ebffb1e87.webp",
     title: "Fresenius University of Applied Sciences",
     ielts: "6.0",
     toefl: "70",
@@ -83,21 +83,21 @@ const universityData = [
   },
   {
     key:12,
-    img: "https://strapi.orientspectra.com/uploads/thumbnail_1718285496_arden_univerrsity_logo_a26cdefcb8_dfa35e1129.webp",
+    img: "https://strapi.orientspectra.com/uploads/12_7916183ad3.webp",
     title: "Arden University",
     ielts: "6.0",
     toefl: "60",
   },
   {
     key:13,
-    img: "https://strapi.orientspectra.com/uploads/schiller_60yrs_color_80bc39a669.png",
+    img: "https://strapi.orientspectra.com/uploads/9_159284de64.webp",
     title: "Schiller University- Germany",
     ielts: "6.5",
     toefl: "89",
   },
   {
     key:14,
-    img: "https://strapi.orientspectra.com/uploads/ISM_ea654b47a3.png",
+    img: "https://strapi.orientspectra.com/uploads/10_fa24113b48.webp",
     title: "ISM (International School of Management)",
     ielts: "6.0",
     toefl: "80",
@@ -141,7 +141,7 @@ const Univercity = () => {
           {universityData.map((item) => (
             <div className="univercityList" key={item.key}>
               <div className="univercityList-Img">
-                <img src={item.img} alt="University" loading="lazy" />
+                <img src={item.img} alt="University" />
               </div>
               <div className="Concordia-container">
                 <div className="ConcordiaCard">

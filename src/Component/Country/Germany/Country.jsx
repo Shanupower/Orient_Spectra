@@ -10,6 +10,7 @@ import CountryFaq from "../../Common/Contryfaq";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import StudyAbroad from "../../../Landing_page/StudyAbroad";
+// import { Helmet } from "react-helmet-async";
 const getItems = (panelStyle) => [
   {
     key: "1",
@@ -85,6 +86,12 @@ const GermanyCountry = () => {
   }, []);
   return (
     <>
+    {/* <Helmet>
+      <title>Study in Germany | Germany Universities, Intakes & Admissions</title>
+      <meta 
+        name="description" 
+        content="Study in Germany for your higher education or Masters as Orient Spectra will guide you through university selection, admission, visa process, loan assistance and scholarship opportunities." />
+    </Helmet> */}
       <Hero />
       <State />
       <UnitedState />

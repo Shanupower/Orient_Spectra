@@ -19,7 +19,7 @@ const Hero = () => {
       </div>
 
       <div className="hero-rightside-card">
-        <img src={Globe} alt="img1" className="hero-img" />
+        <img src="https://strapi.orientspectra.com/uploads/output_onlinegiftools_2f4eb019bb.gif" alt="img1" className="hero-img" />
       </div>
     </div>
   );

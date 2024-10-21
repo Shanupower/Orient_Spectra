@@ -9,6 +9,7 @@ import Univercity from "./Univercity";
 import CountryFaq from "../../Common/Contryfaq";
 import StudyAbroad from "../../../Landing_page/StudyAbroad";
 import { useEffect } from "react";
+// import { Helmet } from "react-helmet-async";
 
 const getItems = (panelStyle) => [
   {
@@ -84,13 +85,19 @@ const IrelandCountry = () => {
   }, []);
   return (
     <>
+      {/* <Helmet>
+        <title>Study in Ireland | Ireland Universities, Intakes & Admissions</title>
+        <meta 
+          name="description" 
+          content="Study in Ireland with Orient Spectra guidance to help you learn popular universities in Ireland, how to apply for student visa and other queries to help you study abroad." />
+      </Helmet> */}
       <Hero />
       <State />
-      <UnitedState />
+      {/* <UnitedState />
       <Univercity />
-      <TrendingCourse />
+      <TrendingCourse /> */}
       <AdmitionRequired />
-      <Admissiontimeline />
+      {/* <Admissiontimeline /> */}
       <StudyAbroad />
       {/* <Personalized /> */}
       <CountryFaq getItems={getItems} />

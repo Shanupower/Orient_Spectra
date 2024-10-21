@@ -123,6 +123,7 @@ const Step5 = ({
       prevSubjects.filter((subject) => subject.id !== id)
     );
   };
+  const canProceed = Subject !== "";
   return (
     <div className="step1-container section">
       <div className="step1-left-card">
@@ -172,7 +173,7 @@ const Step5 = ({
         {Subject.length <= 1 ? <p>Please Select minimum 1 subject</p> : ""}
 
         {Subject.length >= 1 ? (
-          <NextStepComponent handleStepCount={handleStepCount} />
+          <NextStepComponent handleStepCount={handleStepCount} canProceed={canProceed}/>
         ) : (
           <NextStepComponent />
         )}

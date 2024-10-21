@@ -20,15 +20,15 @@ const Explore = () => {
         </div>
         <div className="services-card">
           <img src="https://strapi.orientspectra.com/uploads/2_Admission_e4e2f5749b.webp" alt="Admission" loading="lazy"/>
-          <p>Admission Guidance</p>
+          <p>Admission Assistance</p>
         </div>
         <div className="services-card">
           <img src="https://strapi.orientspectra.com/uploads/7_m_Scholarshi_a05f01af4a.webp" alt="Scholarship" loading="lazy"/>
-          <p>Scholarship Guidance</p>
+          <p>Scholarship Advice</p>
         </div>
         <div className="services-card">
           <img src="https://strapi.orientspectra.com/uploads/1_removebg_1_65d45718a3.webp" alt="Education" loading="lazy"/>
-          <p>Education Loans Guidance</p>
+          <p>Education Loan Support</p>
         </div>
         <div className="services-card">
           <img src="https://strapi.orientspectra.com/uploads/5_posspor_58d41bc193.webp" alt="Visa" loading="lazy"/>
@@ -36,7 +36,7 @@ const Explore = () => {
         </div>
         <div className="services-card">
           <img src="https://strapi.orientspectra.com/uploads/6_pre_departur_aeabd5a6a1.webp" alt="Pre-departure" loading="lazy"/>
-          <p>Pre-departure Guidance</p>
+          <p>Pre-Departure Prep</p>
         </div>
     </div>
     </div>

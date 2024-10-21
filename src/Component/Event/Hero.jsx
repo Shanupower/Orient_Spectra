@@ -2,9 +2,12 @@ import LandscapeIcon from "@mui/icons-material/Landscape";
 import "./event.css";
 import CircleArrow from "../Common/CircleArrow";
 import { useState } from "react";
+import { useMediaQuery } from "@mui/material";
+import LeadFormPopUp from "../../Landing_page/HeroLeadFormPopUp";
 
 const Hero = ({ eventData }) => {
   const [EventId, setEventId] = useState(0);
+  const [isOpen, setIsOpen] =useState(false);
 
   const handleEventdata = (status, e) => {
     e.stopPropagation();
@@ -28,14 +31,32 @@ const Hero = ({ eventData }) => {
     e.stopPropagation();
   };
 
+  const isMd = useMediaQuery("(max-width:1024px)");
+
+  const handlePopUpOpen =(e)=>{
+    e.stopPropagation();
+    setIsOpen(!isOpen);
+  }
+
+  const closePopup = () => {
+    setIsOpen(false); 
+  };
   return (
-    <div className="Event-hero-container section2" onClick={handleSingleEvnet}>
-      <div className="event-hero-section">
-        <div className="Experience-rightcard">
-          <img
+    <div className="Event-hero-container section2" >
+      <div className="event-hero-section" onClick={handleSingleEvnet}>
+        <div className="Experience-rightcard" >
+          {isMd ? (
+            <img
+            src={`https://strapi.orientspectra.com${eventData[EventId]?.attributes?.Thumbnail?.data[0]?.attributes.url}`}
+            alt=""
+          />
+          ):(
+            <img
             src={`https://strapi.orientspectra.com${eventData[EventId]?.attributes?.Poster?.data?.attributes.url}`}
             alt=""
           />
+          )}
+         
         </div>
 
         <div className="bookPass-container">
@@ -49,16 +70,18 @@ const Hero = ({ eventData }) => {
               onClick={(e) => handleEventdata("next", e)}
             />
           </div>
-          <div className="bookPass-cardd" onClick={handleCardClick}>
+          <div className="bookPass-cardd" >
             <div className="eventUpcomingcard">
               <span>Upcoming Event</span>
               <h1>Book Your Passes</h1>
             </div>
 
-            <CircleArrow className="BookRightCircleArrow" />
+            <CircleArrow className="BookRightCircleArrow" onClick={handlePopUpOpen}/>
           </div>
         </div>
       </div>
+      {isOpen && 
+      <LeadFormPopUp closePopup={closePopup}/>}
     </div>
   );
 };

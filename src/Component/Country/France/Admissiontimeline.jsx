@@ -5,7 +5,10 @@ import { useState } from "react";
 
 const Programdata = [
   {
-    text: "	Hospitality & Tourism Management ",
+    text: "	Hospitality ",
+  },
+  {
+    text: "	Tourism Management ",
   },
   {
     text: "	Data Science ",
@@ -134,31 +137,31 @@ const Admissiontimeline = () => {
             <div className="Popular_Universities">
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/images_0a82f55b7a.png"
+                  src="https://strapi.orientspectra.com/uploads/11_76e57375f8.webp"
                   alt="Avaincity University"
                 />
               </div>
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/images_1_5a5abf792e.png"
+                  src="https://strapi.orientspectra.com/uploads/14_d712099774.webp"
                   alt="Paris School of Business"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/NEOMA_LOGOTYPE_RVB_dc7f3d584f.jpg"
+                  src="https://strapi.orientspectra.com/uploads/13_1_420208047d.webp"
                   alt="NEOMA Business School"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/LOGO_ESSCA_VERTICAL_01_1_b788331589.png"
+                  src="https://strapi.orientspectra.com/uploads/10_ee15e54a4a.webp"
                   alt="ESSCA Business School"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/inseec_msc_and_mba_logo_vector_2d2825d28f.png"
+                  src="https://strapi.orientspectra.com/uploads/6_66f654a0645e6_da3f07d776.webp"
                   alt="INSEEC Business School"
                 />
               </div>{" "}
@@ -170,7 +173,7 @@ const Admissiontimeline = () => {
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/Rennes_School_of_Business_Unframed_Thinking_ccbeeb365c.jpg"
+                  src="https://strapi.orientspectra.com/uploads/15_02e8ce5c4d.webp"
                   alt="Rennes School of Business"
                 />
               </div>{" "}
@@ -194,13 +197,13 @@ const Admissiontimeline = () => {
               </div>
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/IUM_logo_849a1b2cdb.jpg"
+                  src="https://strapi.orientspectra.com/uploads/9_711b8417a2.webp"
                   alt="IUM"
                 />
               </div>
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/supdepub_logo_88ee806908.png"
+                  src="https://strapi.orientspectra.com/uploads/16_327f848301.webp"
                   alt="SupdePub"
                 />
               </div>

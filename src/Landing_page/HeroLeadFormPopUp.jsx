@@ -1,17 +1,28 @@
 import React, { useState, useEffect } from 'react';
-import { Dialog, DialogTitle, DialogContent, DialogActions, Button, Typography } from '@mui/material';
+import { Dialog, DialogContent, IconButton, useMediaQuery } from '@mui/material';
+// import ReCAPTCHA from "react-google-recaptcha";
 import "./index.css";
 import axios from 'axios';
+import CloseIcon from '@mui/icons-material/Close';
 
-const HeroLeadFormPopUp = () => {
-  const [open, setOpen] = useState(true);
+const LeadFormPopUp = ({closePopup}) => {
+  const isMd = useMediaQuery("(max-width:1024px)");
+  const isSm = useMediaQuery("(max-width:986px)");
+  const isLg = useMediaQuery("(max-width: 1280px)");
+  const [open, setOpen] = useState(false);
+  // const [captchaToken, setCaptchaToken] = useState(null); // reCAPTCHA token
+
+  useEffect(() => {
+    setOpen(true);
+  }, []);
 
   const [formData, setFormData] = useState({
     Name: "",
     Email: "",
     Mobile: "",
     Intake_Year: "",
-    Source: "Eroupe EDU FAIR",
+    Country:"",
+    Source: "UK & EU EDU FAIR",
   });
   const [errors, setErrors] = useState({});
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -21,17 +32,17 @@ const HeroLeadFormPopUp = () => {
     try {
       const response = await axios.post(api, {
         data: formData,
+        // captchaToken, // Send reCAPTCHA token to backend
       });
-      console.log(formData,"formdata");
       if (response.status === 200) {
         setFormSubmitted(true);
-       
         setFormData({
           Name: "",
           Email: "",
           Mobile: "",
           Intake_Year: "",
-          Source: "Eroupe EDU FAIR",
+          Country: "",
+          Source: "UK & EU EDU FAIR",
         });
       }
     } catch (errors) {
@@ -75,18 +86,38 @@ const HeroLeadFormPopUp = () => {
     if (formData.Intake_Year === "") {
       newErrors.Intake_Year = "Intake Year is Required";
     }
+    if (formData.Country === "") {
+      newErrors.Country = "Select your Destination";
+    }
     return newErrors;
   };
 
   const handleSubmitValidation = (event) => {
     event.preventDefault();
     const validationErrors = Validation();
+    // if (Object.keys(validationErrors).length === 0 && captchaToken) {
+    //   handleSubmitData();
+    // } else {
+    //   setErrors(validationErrors);
+    //   if (!captchaToken) {
+    //     alert('Please complete the CAPTCHA');
+    //   }
+    // }
+
     if (Object.keys(validationErrors).length === 0) {
       handleSubmitData();
     } else {
       setErrors(validationErrors);
+      // if (!captchaToken) {
+        // alert('Please complete the CAPTCHA');
+      // }
     }
   };
+
+  const handleCaptchaChange = (token) => {
+    setCaptchaToken(token); // Store reCAPTCHA token in state
+  };
+
   const handleClose = () => {
     setOpen(false);
   };
@@ -95,9 +126,19 @@ const HeroLeadFormPopUp = () => {
     <div>
       <Dialog
         open={open}
-        onClose={handleClose}
+        onClose={closePopup}
         aria-labelledby="popup-dialog-title"
         aria-describedby="popup-dialog-description"
+        maxWidth="lg"
+        PaperProps={{
+          sx: {
+            width: { xs: '90%', sm: '75%', md: '80%', lg: isLg ? "65%" : '51%' },
+            // width: { xs: '100%', sm: '80%', md: '70%', lg: '50%' },
+            maxWidth: 'none',
+            position: 'relative',
+            overflow:  "visible",
+          },
+        }}
         className='DailogBox'
       >
         {formSubmitted ? (
@@ -106,14 +147,37 @@ const HeroLeadFormPopUp = () => {
             <img src="https://strapi.orientspectra.com/uploads/luxa_org_no_background_green_double_circle_check_mark_78370_1749_c6ee2071c0.webp" alt="Success" />
             <h2>Thank you for your response!</h2>
             <p onClick={handleClose}>Back to Home</p>
-
-        </div>
+          </div>
         </div>
         ):(
+          <>
+           <IconButton
+              aria-label="close"
+              onClick={closePopup}
+              sx={{
+                position: 'absolute',
+                right: {xs: '-16px', lg:'-20px'},
+                top: {xs: '-16px', lg:'-20px'},
+                backgroundColor: '#e37d25',
+                borderRadius: {lg: '50%', md: '80%'},
+                boxShadow: '0px 2px 10px rgba(0, 0, 0, 0.1)',
+                color: 'white', 
+                '&:hover': {
+                  backgroundColor: "#306398",
+                  zIndex: 2,
+                },
+                zIndex: 3,
+                width: { xs: '30px', sm: '35px', md: '45px' },
+                height: { xs: '30px', sm: '35px', md: '45px' },
+              }}
+              >
+              <CloseIcon />
+            </IconButton>
           <div className="Dailog-container">
-          <h2 className="DailogTitle">Europe Education Fair 2024</h2>
-          <h3>5th Oct 2024 | Hyatt Place Hyderabad</h3>
-          <p>Fill out the form below to register now:</p>
+          <div className='DailogContent'>
+          <h2 className="DailogTitle">Europe & UK Education Fair <span>2024</span></h2>
+          <h3>09th Nov | Hyatt Place, Banjara Hills</h3>
+          <p>Register now & get free TOEFL coaching</p>
           <DialogContent>
             <form onSubmit={handleSubmitValidation}>
             <div className="popup-text-feild">
@@ -165,21 +229,49 @@ const HeroLeadFormPopUp = () => {
                   <p style={{ color: "red" }}>{errors.Intake_Year}</p>
                 )}
               </div>
+
+              <div className="popup-form-group">
+              <select
+                type="text"
+                name="Country"
+                className="popup-input-dropdown"
+                onChange={handleChange}
+                value={formData.Country} >
+
+                <option value="">Select Country</option>
+                <option value="UK">UK</option>
+                <option value="Europe">Europe</option>
+              </select>
+                {errors.Country && (
+                  <p style={{ color: "red" }}>{errors.Country}</p>
+                )}
+            </div>
+
+              {/* reCAPTCHA component */}
+              {/* <div style={{ transform: 'scale(0.85)', transformOrigin: '0 0' }}>
+              <ReCAPTCHA
+                sitekey="6LdjSl0qAAAAAOxzA0J_HjvwPIxua1iY0jdAFO4E" // Replace with your site key
+                onChange={handleCaptchaChange}
+              />
+              </div> */}
+              
               <input type="hidden" name="Source" className="input-field" value={formData.Source} />
               <button className="popup-form-container-button" type="submit">
               Book A Free Call
             </button>
             </div>  
             </form>
-            <p onClick={handleClose} className='SkipNow'>Skip Now </p>
+            <p onClick={closePopup} className='SkipNow'>Skip Now </p>
           </DialogContent>
-          
           </div>
-
+          <img src="https://strapi.orientspectra.com/uploads/388_X_516_uk_eu_58507af29d.webp" alt="EventImage" className='ImageContainer'/>
+          </div>
+           
+          </>
         )}
       </Dialog>
     </div>
   );
 };
 
-export default HeroLeadFormPopUp;
+export default LeadFormPopUp;

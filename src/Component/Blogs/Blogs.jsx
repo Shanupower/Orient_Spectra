@@ -5,6 +5,7 @@ import GetTuchWithUs from "../../Landing_page/GetTuchWithUs2";
 import BestBlog from "./BestBlog";
 import axios from "axios";
 import { useEffect, useState } from "react";
+// import { Helmet } from "react-helmet-async";
 const Blogs = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
@@ -26,6 +27,12 @@ const Blogs = () => {
   }, []);
   return (
     <>
+      {/* <Helmet>
+        <title>Blog | News, Trends & Updates about Overseas Education</title>
+        <meta 
+          name="description" 
+          content="Get all the information about top universities, programs, scholarship details, and other news updates, information and trends from around the world." />
+      </Helmet> */}
       <Hero data={data.slice(0, 3)} />
       <BestBlog data={data.slice(3, 8)} />
       <MoreBlog data={data.slice(8)} />

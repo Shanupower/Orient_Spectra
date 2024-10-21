@@ -35,16 +35,23 @@ const servicesData = [
 ]
 const Benifits = () => {
     return(
-        <div className="Benifts_container">
-            <h1>Why Should You Attend</h1>
-            <div className="Benifits_content">
+        <div className="Why-should-attend">
+            <div className="Why-should-attend-content">
+            <h1>Why Should You Attend ?</h1>
+            <p>Orient Spectra provides end-to-end guidance with your study abroad goal across university connects, 
+                visa application, and loan assistance. Our student-focussed offerings and expert counselling has made us 
+                the top overseas education consultants in Hyderabad.
+            </p>
             {servicesData.map((item)=> (  
                 <div className="Benifits_Box">
                     <img src={item.img} alt="" />
                     <p>{item.title}</p>
                 </div>
             ))}
-             </div> 
+            </div>
+            <div className="Why-should-attend-Image">
+                <img src="https://strapi.orientspectra.com/uploads/Your_Gateway_to_a_World_of_Educational_Opportunities_jpg_a9c225c147.webp" alt=""/>
+            </div>
         </div>
     )
 }

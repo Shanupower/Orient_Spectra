@@ -3,6 +3,7 @@ import "./ADS.css";
 import Universities from "./UK_Universities";
 import EventDetails from "./UK_EventDetails";
 import Benifits from "./UK_Benifits";
+import WhyOs from "../OfflineMarketingClub/WhyOS";
 
 const UK_Jan_2025 =() =>{
     return(
@@ -10,6 +11,7 @@ const UK_Jan_2025 =() =>{
     <Hero />
     <EventDetails />
     <Benifits />
+    <WhyOs />
     <Universities/>
     </>
     )

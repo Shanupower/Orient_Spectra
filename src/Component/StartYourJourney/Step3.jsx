@@ -8,6 +8,7 @@ const Step3 = ({ handleStepCount, step, handlePrevStep, year, setYear }) => {
   };
   const currentYear = new Date().getFullYear();
   console.log(year);
+  const canProceed = year !== "";
   return (
     <div className="step1-container section">
       <div className="step1-left-card">
@@ -44,7 +45,7 @@ const Step3 = ({ handleStepCount, step, handlePrevStep, year, setYear }) => {
           </p>
         </div>
         {year ? (
-          <NextStepComponent handleStepCount={handleStepCount} />
+          <NextStepComponent handleStepCount={handleStepCount} canProceed={canProceed}/>
         ) : (
           <NextStepComponent />
         )}

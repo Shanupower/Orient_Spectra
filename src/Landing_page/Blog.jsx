@@ -44,7 +44,7 @@ const Blog = () => {
         <div className="leftBlogCard">
           <div className="leftBlogCard-image-card">
             <img
-              src={`https://strapi.orientspectra.com${blogData[0]?.attributes?.Headline_image?.data?.attributes?.formats?.thumbnail?.url}`}
+              src={`https://strapi.orientspectra.com${blogData[0]?.attributes?.Headline_image?.data?.attributes?.formats?.small?.url}`}
               alt="Blog Image 1" loading="lazy"
             />
           </div>
@@ -62,7 +62,7 @@ const Blog = () => {
           )}
         </div>
         <div className="rightBlogsCantainer">
-          {blogData.slice(1, 4).map((item) => (
+          {blogData.slice(1, 5).map((item) => (
             <Link
               to={`blog-content/${item?.id}`}
               className="rightcard1 Link_route"
@@ -79,7 +79,7 @@ const Blog = () => {
               <div className="blog-content-section">
                 <strong>{item?.attributes?.Title}</strong>
                 <p>
-                  {item?.attributes?.Short_Description.slice(1, 100)}
+                  {item?.attributes?.Short_Description.slice(0, 100)}
                   <b>...more</b>
                 </p>
               </div>

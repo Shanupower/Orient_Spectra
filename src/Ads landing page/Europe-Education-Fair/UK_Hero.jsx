@@ -1,21 +1,21 @@
 import { useEffect, useState } from "react";
 import "./ADS.css";
 import axios from "axios";
+import { useLocation } from "react-router-dom";
 // import emailjs from "emailjs-com";
 
 const Hero = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
+  const location = useLocation();
   const [formData, setFormData] = useState({
-    First_name: "",
+    Full_name: "",
     Last_name: "",
     Email: "",
     Mobile: "",
     Intake_year: "",
-    Intake_month: "",
-    Source:"/uk-january-2025",
+    Source:location.pathname,
   });
 
   const [errors, setErrors] = useState({});
@@ -31,13 +31,12 @@ const Hero = () => {
 
         // Reset form data
         setFormData({
-          First_name: "",
+          Full_name: "",
           Last_name: "",
           Email: "",
           Mobile: "",
           Intake_year: "",
-          Intake_month: "",
-          Source:"",
+          Source: location.pathname,
         });
       }
     } catch (errors) {
@@ -66,11 +65,8 @@ const Hero = () => {
   const Validation = () => {
     const newErrors = {};
 
-    if (formData.First_name === "") {
-      newErrors.First_name = "First Name is Required";
-    }
-    if (formData.Last_name === "") {
-      newErrors.Last_name = "Last Name is Required";
+    if (formData.Full_name === "") {
+      newErrors.Full_name = "Full Name is Required";
     }
     if (formData.Email === "") {
       newErrors.Email = "Email Id is Required";
@@ -84,9 +80,6 @@ const Hero = () => {
     }
     if (formData.Intake_year === "") {
       newErrors.Intake_year = "Intake Year is Required";
-    }
-    if (formData.Intake_month === "") {
-      newErrors.Intake_month = "Intake Month is Required";
     }
     return newErrors;
   };
@@ -104,48 +97,35 @@ const Hero = () => {
   return (
     <div className="Leadgeneration-container section">
       <div className="Leadgeneration-content section">
-        <h1>January  2025 Intake for Germany & France  is Now Open</h1>
+        <h1>Europe Education Fair</h1>
         <p>
-        Attend our Europe  Education Fair 2024 to talk directly with university delegates and select the best university 
-        and course for your career goal. Our experts will walk you through application process, scholarship and loan opportunities, 
-        and guide you through visa process.
+        Attend our Europe Education Fair 2024 to talk directly with university delegates and select the best 
+        university and course for your career goal. Our experts will walk you through 
+        application process, scholarship and loan opportunities, and guide you through visa process.
         </p>
 
         <ul>
-          <li>Direct interaction with University representatives</li>
+          <li>Early-bird scholarship opportunities</li>
+          <li>Direct interaction with University delegates</li>
           <li>Application submission within 24 hours</li>
           <li>Affordable tuition fees</li>
-          <li>Scholarship opportunities</li>
         </ul>
       </div>
-      <div className="form-container">
+      <div className="form-container1">
         <p>Fill out the form below to register now:</p>
         <form onSubmit={handleSubmitValidation}>
-          <div className="text-feild-container">
-            <div className="form-group">
+          <div className="text-feild-containers">
+            <div className="form-groups">
               <input
                 type="text"
-                name="First_name"
+                name="Full_name"
                 placeholder="First Name"
-                className="input-field"
+                className="input-feild"
                 onChange={handleChange}
-                value={formData.First_name}
+                value={formData.Full_name}
               />
-              {errors.First_name && (
-                <p style={{ color: "red" }}>{errors.First_name}</p>
-              )}
-            </div>
-            <div className="form-group">
-              <input
-                type="text"
-                name="Last_name"
-                placeholder="Last Name"
-                className="input-field"
-                onChange={handleChange}
-                value={formData.Last_name}
-              />
-              {errors.Last_name && (
-                <p style={{ color: "red" }}>{errors.Last_name}</p>
+              {errors.Full_name && (
+                <p style={{ color: "red" }}>{errors.Full_name}</p>
               )}
             </div>
             <div className="form-group">
@@ -153,7 +133,7 @@ const Hero = () => {
                 type="text"
                 name="Email"
                 placeholder="Email"
-                className="input-field"
+                className="input-feild"
                 onChange={handleChange}
                 value={formData.Email}
               />
@@ -164,7 +144,7 @@ const Hero = () => {
                 type="text"
                 name="Mobile"
                 placeholder="Mobile Number"
-                className="input-field"
+                className="input-feild"
                 onChange={handleChange}
                 value={formData.Mobile}
               />
@@ -175,7 +155,7 @@ const Hero = () => {
                 type="text"
                 name="Intake_year"
                 placeholder="Intake Year"
-                className="input-field"
+                className="input-feild"
                 onChange={handleChange}
                 value={formData.Intake_year}
               />
@@ -183,20 +163,7 @@ const Hero = () => {
                 <p style={{ color: "red" }}>{errors.Intake_year}</p>
               )}
             </div>
-            <div className="form-group">
-              <input
-                type="text"
-                name="Intake_month"
-                placeholder="Intake Month"
-                className="input-field"
-                onChange={handleChange}
-                value={formData.Intake_month}
-              />
-              {errors.Intake_month && (
-                <p style={{ color: "red" }}>{errors.Intake_month}</p>
-              )}
-            </div>
-            <input type="hidden" name="source" className="input-field" value={formData.Source} />
+            <input type="hidden" name="source" className="input-feild" value={formData.Source} />
           </div>
           <button className="form-container-button" type="submit">
             REGISTER NOW

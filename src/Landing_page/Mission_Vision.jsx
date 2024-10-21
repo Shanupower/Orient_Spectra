@@ -23,7 +23,7 @@ const Mission_Vision = () =>{
 
             
             <h3>Vision</h3>
-            <p>Is to tuch 1 Lakh lives and guide them in the right direction for the best education across the world.</p>
+            <p>Is to touch 1 Million lives and guide them in the right direction for the best education across the world.</p>
           </div>
         </div>
       </div>

@@ -9,6 +9,7 @@ import Univercity from "./Univercity";
 import CountryFaq from "../../Common/Contryfaq";
 import StudyAbroad from "../../../Landing_page/StudyAbroad";
 import { useEffect } from "react";
+// import { Helmet } from "react-helmet-async";
 const getItems = (panelStyle) => [
   {
     key: "1",
@@ -61,13 +62,19 @@ const PolandCountry = () => {
   }, []);
   return (
     <>
+      {/* <Helmet>
+        <title>Study in Poland | Poland Universities, Intakes & Admissions</title>
+        <meta 
+          name="description" 
+          content="Study in Poland to get global academic exposure with expert guidance from Orient Spectra to identify the best universities and courses for you along with scholarship and internship opportunities. Talk to us today." />
+      </Helmet> */}
       <Hero />
       <State />
-      <UnitedState />
+      {/* <UnitedState />
       <Univercity />
-      <TrendingCourse />
+      <TrendingCourse /> */}
       <AdmitionRequired />
-      <Admissiontimeline />
+      {/* <Admissiontimeline /> */}
       <StudyAbroad />
       {/* <Personalized /> */}
       <CountryFaq getItems={getItems} />

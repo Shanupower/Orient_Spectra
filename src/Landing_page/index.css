@@ -95,6 +95,18 @@
   text-align: center;
   margin-top: 1rem;
 }
+.discovery_content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 80%; 
+}
+.discovery_Container > img {
+  width: 15%;
+  object-fit: contain;
+}
 
 .dicovery_card > h1 {
   color: var(--brand-color);
@@ -1274,6 +1286,16 @@ canvas {
 .upcomingEvents {
   display: none;
 }
+.pastEvents {
+  display: block;
+  color: var(--text-color-white);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  background-color: #ff7300;
+  padding: 10px;
+  width: 40%;
+  border-radius: 15px;
+}
 
 .ant-steps-item-title {
   margin-top: 1rem;
@@ -1295,6 +1317,7 @@ canvas {
   margin-block: 6rem;
   flex-wrap: wrap;
   gap: 2rem;
+  margin-top: 2rem;
 }
 
 .event_leftSide {
@@ -1367,11 +1390,11 @@ canvas {
 }
 
 .explaintag {
-  font-size: 36px;
+  font-size: 32px;
   font-weight: 600;
   color: var(--text-color-white);
-  width: 60%;
-  line-height: 1;
+  /* width: 70%; */
+  line-height: 1.2;
   margin-bottom: 0.6rem;
 }
 
@@ -1714,6 +1737,7 @@ canvas {
   }
   .leftBlogCard {
     padding: 3.2rem 1rem 5rem 1rem;
+    height: 50vh;
   }
   .titleblogContent > strong,
   .titleblogContent > p {
@@ -1733,13 +1757,15 @@ canvas {
   .rightBlogsCantainer > .rightcard:nth-child(1) {
     background: white;
   }
-  .rightBlogsCantainer > .rightcard:nth-child(1) > strong {
-    font-size: 16px;
-    color: var(--text-color-black);
+  .rightBlogsCantainer > .rightcard1 > div > strong {
+    font-size: 23px;
+    color: var(--text-color-darkblack);
+    line-height: 2;
   }
-  .rightBlogsCantainer > .rightcard:nth-child(1) > p {
-    font-size: 12px;
-    color: var(--text-color-darkgray);
+  .rightBlogsCantainer > .rightcard1 > div > p,
+  .rightBlogsCantainer > .rightcard > div > p {
+    font-size: 22px;
+    color: var(--text-color-darkblack);
   }
   .News-container > h2 {
     font-size: 28px;
@@ -1801,7 +1827,37 @@ canvas {
     font-size: 18px;
   }
   .discovery_Container {
-    /* display: none; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  .discovery_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    width: 55%; 
+  }
+  .discovery_Container > img {
+    width: 30%;
+    object-fit: contain;
+  }
+  
+  .dicovery_card > h1 {
+    color: var(--brand-color);
+    font-size: 3rem;
+    line-height: 1.2;
+  }
+  
+  .dicovery_card > p {
+    color: var(--text-color-darkblack);
+    font-size: 1.2rem;
+    line-height: 2;
   }
   .discoverButton {
     display: flex;
@@ -1825,10 +1881,13 @@ canvas {
     font-size: 22px;
     font-weight: 500;
     color: var(--text-color-white);
-    width: 50%;
+    width: 100%;
     line-height: 1;
     margin-bottom: 0.6rem;
   }
+  .dateEvent > span {
+    margin-top: -2px;
+}
   .event_bottomContent > span {
     color: var(--text-color-white);
     font-size: 14px;
@@ -1836,11 +1895,12 @@ canvas {
   .event_leftContent > .dateEvent > p::after {
     content: "";
     position: absolute;
-    width: 52%;
+    width: 20%;
     height: 1px;
     background-color: var(--text-color-white);
     top: 0.67rem;
     right: 2%;
+    left: 85%;
   }
 
   .event_leftContent {
@@ -2008,12 +2068,25 @@ canvas {
     display: flex;
     position: relative;
   }
+  
   .discovery_Container {
     flex-direction: column;
+  }
+  .discovery_content {
+    display: block;
+    width: 100%;
+    /* gap: 2rem; */
+  }
+  .discovery_Container > img {
+    width: 200px;
+    height: 200px;
   }
   .discoverTextCard {
     align-items: flex-start;
     flex-direction: column;
+  }
+  .dicovery_card {
+    margin-bottom: 20px;
   }
   .Marguee {
     width: 100%;
@@ -2306,6 +2379,16 @@ canvas {
     height: 100%;
     aspect-ratio: 1/1;
   }
+  .rightBlogsCantainer > .rightcard1 > div > strong {
+    font-size: 13px;
+    color: var(--text-color-darkblack);
+    line-height: 0;
+  }
+  .rightBlogsCantainer > .rightcard1 > div > p,
+  .rightBlogsCantainer > .rightcard > div > p {
+    font-size: 12px;
+    color: var(--text-color-darkblack);
+  }
 }
 
 .css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-completed {
@@ -2368,6 +2451,7 @@ canvas {
   .eventsRigtImage > img {
     width: 100%;
     height: 100%;
+    border-radius: 10px;
   }
   .Explore_leftSide > p {
     font-size: 32px;
@@ -2395,6 +2479,17 @@ canvas {
     width: 60%;
     border-radius: 15px;
   }
+  .pastEvents {
+    display: block;
+    color: var(--text-color-white);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    background-color: #ff7300;
+    padding: 10px;
+    width: 60%;
+    border-radius: 15px;
+    font-size: 20px;
+  }
   .upcomingText {
     display: none;
   }
@@ -2404,12 +2499,22 @@ canvas {
   .event_leftContent > .dateEvent {
     margin-bottom: 1.4rem;
   }
+  .event_leftContent > .dateEvent > p::after {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 1px;
+    background-color: var(--text-color-white);
+    top: 0.67rem;
+    right: 2%;
+    left: 72%;
+  }
   .explaintag {
-    font-size: 28px;
+    font-size: 22px;
     font-weight: 600;
     color: var(--text-color-white);
-    width: 80%;
-    line-height: 1;
+    width: 100%;
+    line-height: 1.2;
     margin-bottom: 0.6rem;
   }
   .Capabilities,

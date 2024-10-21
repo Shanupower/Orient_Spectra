@@ -17,53 +17,55 @@ import Icon12 from "../../../assets/Country/Evidence.png";
 
 const AdmissionData = [
   {
-    icon: Icon1,
-    title: "Copy of a valid passport",
+    key: 1,
+    icon: "https://strapi.orientspectra.com/uploads/possport_0c65803b78.webp",
+    title: "Completed Visa Application Form",
   },
   {
-    icon: Icon2,
-    title: "Proof of English proficiency (OEFL/IELTS test scores)",
+    key: 2,
+    icon: "https://strapi.orientspectra.com/uploads/certificate_2b2662d10c.webp",
+    title: "2 Passport Size Photos",
   },
   {
-    icon: Icon3,
-    title: "ACT/SAT/LSAT forUG programs, GMAT/GRE scores for PG programs",
+    key: 3,
+    icon: "https://strapi.orientspectra.com/uploads/Refrence_d4804c3d2c.webp",
+    title: "Overseas Travel Medical Insurance",
   },
   {
-    icon: Icon4,
-    title: "Academic Tanscripts from the previous study",
+    key: 4,
+    icon: "https://strapi.orientspectra.com/uploads/Letters_7e2220fd8a.webp",
+    title: "Original Letter of Acceptance from Maltese Educational Institute",
   },
   {
-    icon: Icon5,
+    key: 5,
+    icon: "https://strapi.orientspectra.com/uploads/Portfolio_6a09763c1d.webp",
     title:
-      "Academic Refrence Letters, the number of reference letters depends from university to university",
+      "Course Details",
   },
   {
-    icon: Icon6,
-    title: "Letters of recommendation fromthe employer/manager (if applicable)",
+    key: 6,
+    icon: "https://strapi.orientspectra.com/uploads/Evidence_a35d42d28c.webp",
+    title: "Proof of Tuition Fee Payment",
   },
   {
-    icon: Icon7,
-    title: "CV/Resume",
+    key: 7,
+    icon: "https://strapi.orientspectra.com/uploads/resident_bd19a54281.webp",
+    title: "Proof of Accommodation",
   },
   {
-    icon: Icon8,
-    title: "Statement of Purpose (SOP)",
+    key: 8,
+    icon: "https://strapi.orientspectra.com/uploads/Academic_0e24a00ca2.webp",
+    title: "Academic Transcripts and Certificates",
   },
   {
-    icon: Icon9,
-    title: "Essays (if dmanded by the university)",
+    key: 9,
+    icon: "https://strapi.orientspectra.com/uploads/Resume_4ed7eda327.webp",
+    title: "Aadhar Card",
   },
   {
-    icon: Icon10,
-    title: "Portfolio (for specific courses)",
-  },
-  {
-    icon: Icon11,
-    title: "      Certificates of extracurricular activities      ",
-  },
-  {
-    icon: Icon12,
-    title: "Evidence of Funds",
+    key: 10,
+    icon: "https://strapi.orientspectra.com/uploads/possport_0c65803b78.webp",
+    title: "Original and Photocopy of the passport bio page",
   },
 ];
 const AdmitionRequired = () => {

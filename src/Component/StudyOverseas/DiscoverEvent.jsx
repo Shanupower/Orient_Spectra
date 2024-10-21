@@ -96,8 +96,8 @@ const DiscoverEvent = () => {
             <span>Soar into the skies</span>
             <h2>Pre Departure Briefing</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-              nonummy nibh euismod
+            This session provides crucial insights, equipping students with the necessary 
+            mental and practical preparation for their journey in a foreign country.
             </p>
           </div>
         </Chrono>

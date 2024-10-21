@@ -7,28 +7,23 @@ const Testimonials =() =>{
     const TestimonialData = [
         {
             id: 1,
-            name: "RamaKrishna",
-            description: "Hello everyone ! I'm Ramakrishna Gandikota. I recommend Orient Spectra Consultancy for abroad studies. After years of visa rejections, they helped me secure my visa with excellent service."
+            name: "JayaSri",
+            description: "Orient spectra has helped me a lot in my master's process. My university offer letter came within five days and I got my visa within 15 days."
         },
         {
             id: 2,
-            name: "RamaKrishna",
-            description: "Hiii everyone ! I'm Ramakrishna Gandikota. I recommend Orient Spectra Consultancy for abroad studies. After years of visa rejections, they helped me secure my visa with excellent service."
+            name: "Shashi Kumar",
+            description: "Student mother extends her appreciation to Orient Spectra! Here is her heartfelt thanks as we helped to achieve her son's dream of studying in US. Your success stories inspire us every day!"
         },
         {
             id: 3,
-            name: "RamaKrishna",
-            description: "Hello everyone ! I'm Ramakrishna Gandikota. I recommend Orient Spectra Consultancy for abroad studies. After years of visa rejections, they helped me secure my visa with excellent service."
+            name: "Alekhya",
+            description: "I've got to know about Orient Spectra from my brother who's doing his Master's in London, University of East London. They have helped me with the university listings and admission process."
         },
         {
             id: 4,
-            name: "RamaKrishna",
-            description: "Hello everyone ! I'm Ramakrishna Gandikota. I recommend Orient Spectra Consultancy for abroad studies. After years of visa rejections, they helped me secure my visa with excellent service."
-        },
-        {
-            id: 5,
-            name: "RamaKrishna",
-            description: "Hello everyone ! I'm Ramakrishna Gandikota. I recommend Orient Spectra Consultancy for abroad studies. After years of visa rejections, they helped me secure my visa with excellent service."
+            name: "Swetha Sree",
+            description: "I got admission at University of Europe in Berlin for an MBA International Business. I would like to thank Ramya and Nandini actually for providing me complete support since the beginning of the application process then getting to the visa documents."
         },
 
     ]

@@ -579,12 +579,16 @@
 }
 .prgram-item-container {
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 0.4rem;
   border: 2px solid var(--brand-color);
   background: #fff;
   padding: 0.5rem 0.4rem;
   border-radius: 10px;
+  text-align: center;
+  height: 100%;
+  min-height: 50px;
+  width: 100%;
 }
 .intakesCOntainer {
   display: flex;
@@ -613,12 +617,13 @@
 .intackText >p{
   color: var(--text-color-black);
   line-height: 1;
-  letter-spacing: -1px;
-  
+  letter-spacing: -1px; 
 }
 .program-name {
   font-size: 15px;
   line-height: 1.1;
+  margin: 0; 
+  width: 100%;
   text-align: center;
 }
 .icon_image {
@@ -692,7 +697,8 @@
   }
   .state-container > p {
     width: 100% !important;
-    font-size: 18px !important;
+    font-size: 20px !important;
+    line-height: 1.5 !important;
   }
   .state-container > div {
     width: 100% !important;

@@ -53,7 +53,7 @@ const Footer = () => {
             src="https://strapi.orientspectra.com/uploads/Watsapp_Qr_9ad1331dd0_2ff73ee08e.webp"
             alt="WhatsApp QR" loading="lazy"
           />
-          <p>91+ 9000456765</p>
+          <p>+91 9000456765</p>
           <p>info@orientspectra.com</p>
         </div>
       </div>
@@ -86,9 +86,8 @@ const Footer = () => {
       </div>
       <div className="LinkContainerFooter">
         <div className="leftSide2">
-          <Link className="Link_route leftSideItem2">Study Overseas</Link>
+          <Link className="Link_route leftSideItem2">Countries</Link>
           <Link className="Link_route leftSideItem2">About Us</Link>
-          <Link className="Link_route leftSideItem2">What we do</Link>
           <Link className="Link_route leftSideItem2">Our Branches</Link>
           <Link className="Link_route leftSideItem2">Blogs</Link>
           <Link className="Link_route leftSideItem2">Daily News</Link>
@@ -126,13 +125,13 @@ const Footer = () => {
 
       <div className="foterTopContaner">
         <div className="leftSide ">
-          <Link to="/study-overseas" className="Link_route leftSideItem">
-            Study Overseas
+          <Link to="/countries" className="Link_route leftSideItem">
+            Countries
           </Link>
           <Link to="/about" className="Link_route leftSideItem">
             About Us
           </Link>
-          <Link className="Link_route leftSideItem">What we do</Link>
+          {/* <Link className="Link_route leftSideItem">What we do</Link> */}
           <Link className="Link_route leftSideItem">Our Branches</Link>
           <Link to="/blogs" className="Link_route leftSideItem">
             Blogs

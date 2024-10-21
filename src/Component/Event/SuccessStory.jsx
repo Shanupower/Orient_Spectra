@@ -28,10 +28,10 @@ const SuccessStory = ({ CompletedEventdata }) => {
   }, [Year, CompletedEventdata]);
   return (
     <div className="success-story-container section">
-      <div className="event-datecard">
-        <b>{CompletedEventdata?.[1]?.attributes.Date_of_the_event}</b>
-        <p>{CompletedEventdata?.[1]?.attributes.Shortdescription}</p>
-      </div>
+      {/* <div className="event-datecard">
+        <b>{CompletedEventdata?.[0]?.attributes.Date_of_the_event}</b>
+        <p>{CompletedEventdata?.[0]?.attributes.Shortdescription}</p>
+      </div> */}
       <div className="success-stroy-section">
         <h1>Sucess Stories</h1>
       </div>
