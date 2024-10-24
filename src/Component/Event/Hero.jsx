@@ -61,14 +61,14 @@ const Hero = ({ eventData }) => {
 
         <div className="bookPass-container">
           <div className="eventarrowcard">
-            <CircleArrow
+            {/* <CircleArrow
               className="eventLeftCircleArrow"
               onClick={(e) => handleEventdata("prev", e)}
             />
             <CircleArrow
               className="eventRightCircleArrow"
               onClick={(e) => handleEventdata("next", e)}
-            />
+            /> */}
           </div>
           <div className="bookPass-cardd" >
             <div className="eventUpcomingcard">
