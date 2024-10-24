@@ -6,7 +6,7 @@ import "./about.css";
 const Story = () => {
   return (
     <div className="story-containers section">
-      <h1>This Is Us</h1>
+      <h1>Our Story</h1>
       <div className="storytext-card">
         <p>
           Founded in 2005, Orient Spectra boasts 19 years of expertise in
@@ -14,7 +14,6 @@ const Story = () => {
           we partner with over 500+ universities globally, ensuring students
           access top-tier educational opportunities worldwide.
         </p>
-        <h3>Our Story</h3>
       </div>
       <div className="story-spectra-card">
         <div className="stroy-left-card">
@@ -32,11 +31,15 @@ const Story = () => {
           </p>
         </div>
         <div className="stroy-right-card">
+        <a
+            href="https://strapi.orientspectra.com/uploads/USA_Digital_Booklet_bcc64fbf36.pdf"
+            target="_blank"
+          >
           <CircleArrow />
+          </a>
         </div>
       </div>
 
-      <h1>Until Now</h1>
       <div className="storytext-card">
         <p>
           At Orient Spectra, we are dedicated to transforming your dreams of
@@ -48,7 +51,6 @@ const Story = () => {
           unwavering commitment to excellence, your journey to studying abroad
           begins here
         </p>
-        <h3>Our progress</h3>
       </div>
 
       <div className="success-admit-container">

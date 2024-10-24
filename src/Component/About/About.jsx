@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import Counselors from "../../Landing_page/Counselors";
-import Events from "../../Landing_page/Events";
 import GetTuchWithUs from "../../Landing_page/GetTuchWithUs2";
 import Testimonial from "../../Landing_page/Testimonial";
 import Awarded from "./Awarded";
@@ -9,6 +8,7 @@ import Founders from "./Founders";
 import Hero from "./Hero";
 import Story from "./Story";
 import Country from "../../Landing_page/Country";
+import Mission_Vision from "../../Landing_page/Mission_Vision";
 // import { Helmet } from "react-helmet-async";
 
 const About = () => {
@@ -25,13 +25,12 @@ const About = () => {
       </Helmet> */}
       <Hero />
       <Story />
-      <Country />
-      {/* <Counselors /> */}
+      <Mission_Vision />
       <Consectetuer />
       <Founders />
-      {/* <AboutCountry /> */}
+      <Country />
+      {/* <Counselors /> */}
       <Awarded />
-      <Events />
       <Testimonial />
       <GetTuchWithUs />
     </>

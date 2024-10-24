@@ -24,7 +24,6 @@ const Awarded = () => {
     <div className="awarded-container section">
       <div className="founders-card">
         <h1>Accreditations</h1>
-        <p>Foreign Education Consultancy</p>
       </div>
       <Divider />
       <div className="awarded-section">
