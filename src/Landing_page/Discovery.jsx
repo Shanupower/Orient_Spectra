@@ -40,6 +40,7 @@ const Discovery = () => {
     Email: "",
     Mobile: "",
     Intake_Year: "",
+    Country: "",
     Source: "Homepage",
   });
 
@@ -61,6 +62,7 @@ const Discovery = () => {
           Email: "",
           Mobile: "",
           Intake_Year: "",
+          Country: "",
           Source: "Homepage",
         });
       }
@@ -90,20 +92,23 @@ const Discovery = () => {
     const newErrors = {};
 
     if (formData.Name === "") {
-      newErrors.Name = "First Name is Required";
+      newErrors.Name = "Required";
     }
     if (formData.Email === "") {
-      newErrors.Email = "Email Id is Required";
+      newErrors.Email = "Required";
     } else if (!/\S+@\S+\.\S+/.test(formData.Email)) {
       newErrors.Email = "Email is not valid";
     }
     if (formData.Mobile === "") {
-      newErrors.Mobile = "Enter the Mobile Number";
+      newErrors.Mobile = "Required";
     } else if (!/^\d{10}$/.test(formData.Mobile)) {
-      newErrors.Mobile = "Enter the valid 10 digit mobile number";
+      newErrors.Mobile = "Enter the valid mobile number";
     }
     if (formData.Intake_Year === "") {
-      newErrors.Intake_Year = "Intake Year is Required";
+      newErrors.Intake_Year = "Required";
+    }
+    if (formData.Country === "") {
+      newErrors.Country = "Required";
     }
     return newErrors;
   };
@@ -205,6 +210,21 @@ const Discovery = () => {
                 <p style={{ color: "red" }}>{errors.Intake_Year}</p>
               )}
             </div>
+
+            <div className="form-group2">
+                        <select
+                          name="Country"
+                          className="input-field"
+                          placeholder="Select Country" 
+                          onChange={handleChange}
+                          value={formData.Country}
+                        >
+                          <option value="">Select Country</option>
+                          <option value="UK">UK</option>
+                          <option value="Europe">Europe</option>
+                        </select>
+                        {errors.Country && <p style={{ color: "red" }}>{errors.Country}</p>}
+                      </div>
             <input type="hidden" name="Source" className="input-field" value={formData.Source} />
             <button className="form-container-button" type="submit">
             Book A Free Call

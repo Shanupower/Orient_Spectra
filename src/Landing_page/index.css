@@ -154,6 +154,12 @@
   position: relative; /* Ensure error message is positioned relative to this container */
   width: 47% !important;
 }
+.form-group2 {
+  margin-bottom: 0.5rem; /* Space between form fields */
+  position: relative; /* Ensure error message is positioned relative to this container */
+  width: 100% !important;
+  padding-right: 20px;
+}
 .input-field {
   width: 100%;
   font-size: 15px;
@@ -2102,6 +2108,12 @@ canvas {
     margin-bottom: 0.5rem; /* Space between form fields */
     position: relative; /* Ensure error message is positioned relative to this container */
     width: 100% !important;
+  }
+  .form-group2 {
+    margin-bottom: 0.5rem; /* Space between form fields */
+    position: relative; /* Ensure error message is positioned relative to this container */
+    width: 100% !important;
+    padding-right: 0px;
   }
   .input-field {
     width: 100%;
