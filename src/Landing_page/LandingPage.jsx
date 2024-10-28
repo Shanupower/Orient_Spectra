@@ -3,7 +3,7 @@ import Footer from "../Component/Common/Footer";
 import Navbar from "../Component/Common/Navbar";
 import Acedemic from "./Acedemic";
 import Blog from "./Blog";
-import Counselors from "./Counselors";
+// import Counselors from "./Counselors";
 import Country from "./Country";
 import Course from "./Course";
 import Discovery from "./Discovery";
