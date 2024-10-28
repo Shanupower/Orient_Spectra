@@ -1,6 +1,10 @@
 import CircleArrow from "../Common/CircleArrow";
 import Skeleton from "@mui/material/Skeleton";
 import { useState, useEffect } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation, Scrollbar } from "swiper/modules";
+import "swiper/swiper-bundle.css";
+import { useMediaQuery } from "@mui/material";
 
 import "./news.css";
 import { Link } from "react-router-dom";
@@ -9,38 +13,51 @@ const RecentNews = ({ NewsData }) => {
   useEffect(() => {
     window.scroll(0, 0);
   });
-  console.log("NEsDAAT", NewsData);
+  const isMd = useMediaQuery("(max-width:1024px)");
+  const isSm = useMediaQuery("(max-width:986px)");
   return (
     <div className="Recent-newws-container section">
-      {NewsData?.map((item) => (
-        <div key={item.id} className="recent_news_section">
-          <div className="Recentnews-card">
-            <div className="recentnews-card-img">
-              {isLoading && (
-                <Skeleton
-                  animation="wave"
-                  variant="rectangular"
-                  width={"100%"}
-                  height={"100%"}
-                  sx={{ bgcolor: "grey.500" }}
-                />
-              )}{" "}
-              <img
-                src={`https://strapi.orientspectra.com${item?.attributes?.Headline_image?.data[0]?.attributes?.formats?.large?.url}`}
-                alt=""
-              />
-            </div>
+      <Swiper
+        spaceBetween={30}
+        slidesPerView={isSm ? 1 : isMd ? 2 : 3}
+        className="country_Container"
+        modules={[Navigation, Scrollbar, Autoplay]}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: true,
+        }}
+        speed={1000}
+        navigation
+        loop={true}
+      >
+        <div>
+          {NewsData?.map((item) => (
+            <SwiperSlide className="recent_news_section" key={item.id}>
+              <div className="Recentnews-card">
+                <div className="recentnews-card-img">
+                  {isLoading && (
+                    <Skeleton
+                      animation="wave"
+                      variant="rectangular"
+                      width={"100%"}
+                      height={"100%"}
+                      sx={{ bgcolor: "grey.500" }}
+                    />
+                  )}{" "}
+                  <img
+                    src={`https://strapi.orientspectra.com${item?.attributes?.Headline_image?.data[0]?.attributes?.formats?.large?.url}`}
+                    alt=""
+                  />
+                </div>
 
-            <Link to={`/news-and-pr-detail/${item?.id}`}>
-              <CircleArrow className="CircleArrow" />
-            </Link>
-          </div>
-          <div className="recent-news-title-card">
-            <h1>{item?.attributes.Title}</h1>
-            <p>{item?.attributes?.Short_Description}</p>
-          </div>
+                <Link to={`/news-and-pr-detail/${item?.id}`}>
+                  <CircleArrow className="CircleArrow" />
+                </Link>
+              </div>
+            </SwiperSlide>
+          ))}
         </div>
-      ))}
+      </Swiper>
     </div>
   );
 };
