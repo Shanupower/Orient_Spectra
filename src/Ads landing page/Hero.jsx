@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./ADS.css";
 import axios from "axios";
-import emailjs from "emailjs-com";
+// import emailjs from "emailjs-com";
 
 const Hero = () => {
   useEffect(() => {

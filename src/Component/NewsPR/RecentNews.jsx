@@ -3,6 +3,7 @@ import Skeleton from "@mui/material/Skeleton";
 import { useState, useEffect } from "react";
 
 import "./news.css";
+import { Link } from "react-router-dom";
 const RecentNews = ({ NewsData }) => {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
@@ -29,10 +30,10 @@ const RecentNews = ({ NewsData }) => {
                 alt=""
               />
             </div>
-            <div>
-              <p>{item?.attributes.Title}</p>
+
+            <Link to={`/news-and-pr-detail/${item?.id}`}>
               <CircleArrow className="CircleArrow" />
-            </div>
+            </Link>
           </div>
           <div className="recent-news-title-card">
             <h1>{item?.attributes.Title}</h1>
