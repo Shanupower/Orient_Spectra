@@ -5,6 +5,9 @@ import { useParams } from "react-router-dom";
 const NewsDetails = () => {
   const { id } = useParams();
   const [newsData, setNewsData] = useState(null);
+  useEffect(() => {
+    window.scroll(0, 0);
+  });
   const fetchNewsData = async () => {
     try {
       const response = await axios.get(
@@ -33,7 +36,7 @@ const NewsDetails = () => {
       </div>
       <div className="banner-image-conatiner">
         <img
-          src={`https://strapi.orientspectra.com${newsData?.attributes?.Thumbnail?.data?.attributes?.formats?.large?.url}`}
+          src={`https://strapi.orientspectra.com${newsData?.attributes?.Headline_image?.data[0]?.attributes?.formats?.large?.url}`}
           alt=""
         />
       </div>
