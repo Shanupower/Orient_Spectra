@@ -32,7 +32,7 @@ const Story = () => {
         </div>
         <div className="stroy-right-card">
         <a
-            href="https://strapi.orientspectra.com/uploads/USA_Digital_Booklet_bcc64fbf36.pdf"
+            href="https://strapi.orientspectra.com/uploads/OS_Brochure_Digital_70e8aa52e9.pdf"
             target="_blank"
           >
           <CircleArrow />
