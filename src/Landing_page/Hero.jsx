@@ -61,7 +61,7 @@ const Hero = ({ blog, event }) => {
         id: 4,
         text: "",
         heading: "",
-        bgImage: "https://strapi.orientspectra.com/uploads/Website_Event_Banner_EU_UK_J_c28c8123fa.webp",
+        bgImage: "https://strapi.orientspectra.com/uploads/EU_Website_Event_Banner_1_fd212bd2f2.webp",
         alt:"event",
         subtext: "",
         link: "event",
