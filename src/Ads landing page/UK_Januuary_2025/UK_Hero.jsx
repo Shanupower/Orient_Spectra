@@ -5,20 +5,30 @@ import { useLocation } from "react-router-dom";
 // import emailjs from "emailjs-com";
 
 const Hero = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
   const location =useLocation();
-
+  const getSourceFromUrl = () => {
+    return `${location.pathname}${location.search}`;
+    // const searchParams = new URLSearchParams(location.search);
+    // return searchParams.get("source") || location.pathname;
+  };
   const [formData, setFormData] = useState({
     Full_name: "",
     Email: "",
     Mobile: "",
     Intake_year: "",
-    Source:location.pathname,
+    Country:"UK",
+    Source:getSourceFromUrl(),
   });
 
   const [errors, setErrors] = useState({});
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      Source: getSourceFromUrl(),
+    }));
+  }, [location.search, location.pathname]);
 
   const handleSubmitData = async () => {
     const api = "https://strapi.orientspectra.com/api/ads-landing-pages/";
@@ -35,7 +45,8 @@ const Hero = () => {
           Email: "",
           Mobile: "",
           Intake_year: "",
-          Source:location.pathname,
+          Country:"UK",
+          Source:getSourceFromUrl(),
         });
       }
     } catch (errors) {
@@ -163,6 +174,7 @@ const Hero = () => {
                 <p style={{ color: "red" }}>{errors.Intake_year}</p>
               )}
             </div>
+            <input type="hidden" name="country" className="input-feild" value={formData.Country} />
             <input type="hidden" name="source" className="input-feild" value={formData.Source} />
           </div>
           <button className="form-container-button" type="submit">
