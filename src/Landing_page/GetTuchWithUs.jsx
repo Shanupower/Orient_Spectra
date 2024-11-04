@@ -1,7 +1,7 @@
-import Img6 from "../assets/Asset 4@2x (5).png";
-import Img7 from "../assets/Asset 2@2x.png";
-import Img8 from "../assets/Asset 5@2x.png";
-import Img9 from "../assets/Asset 3@2x.png";
+import Img6 from "../assets/Home_page/A.webp";
+import Img7 from "../assets/Home_page/Assets3.webp";
+import Img8 from "../assets/Home_page/Assets2.webp";
+import Img9 from "../assets/Home_page/Assets1.webp";
 import Button from "../Component/Common/Button";
 import { motion } from "framer-motion";
 
@@ -61,21 +61,25 @@ const GetTuchWithUs = () => {
         </p>
         <div className="foreignAcedemic_marquee">
           <div className="foreignAcedemic_image_container">
-            <img src="https://strapi.orientspectra.com/uploads/Asset_4_2x_5_89df66b2f3.webp" 
-            alt="Asset 24"  
-            loading="lazy"/>
+            {/* <img src="https://strapi.orientspectra.com/uploads/Asset_4_2x_5_89df66b2f3.webp"  */}
+            <img src={Img6} alt="Asset 24" loading="lazy"/>
           </div>
           <div className="foreignAcedemic_image_container">
-            <img src="https://strapi.orientspectra.com/uploads/Asset_2_2x_34ea0388b6.webp" alt="IELTS" loading="lazy" />
+            {/* <img src="https://strapi.orientspectra.com/uploads/Asset_2_2x_34ea0388b6.webp" alt="IELTS" loading="lazy" /> */}
+            <img src={Img7} alt="IELTS" loading="lazy" />
           </div>
           <div className="foreignAcedemic_image_container">
-            <img
+            {/* <img
               src="https://strapi.orientspectra.com/uploads/British_Council_full_85e3019ee3.webp"
               alt="British Council" loading="lazy"
+            /> */}
+            <img src={Img8} alt="British Council" loading="lazy"
             />
           </div>
           <div className="foreignAcedemic_image_container">
-            <img src="https://strapi.orientspectra.com/uploads/Asset_3_2x_36f8d34b7c.webp" alt="PTE" loading="lazy"/>
+            {/* <img src="https://strapi.orientspectra.com/uploads/Asset_3_2x_36f8d34b7c.webp" alt="PTE" loading="lazy"/> */}
+            <img src={Img9} alt="PTE" loading="lazy"/>
+
           </div>
         </div>
       </div>

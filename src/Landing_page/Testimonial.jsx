@@ -5,7 +5,14 @@ import Video3 from "../assets/Testimonial_03.mp4";
 import Video5 from "../assets/Testimonial_05.mp4";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import "./index.css";
-
+import Img1 from "../assets/Home_page/Testmonial1.webp";
+import Img1_Mobile from "../assets/Home_page/Testimonial1-Mobile.webp";
+import Img2 from "../assets/Home_page/Testimonial2.webp";
+import Img2_Mobile from "../assets/Home_page/Testimonial2-Mobile.webp";
+import Img3 from "../assets/Home_page/Testimonial3.webp";
+import Img3_Mobile from "../assets/Home_page/Testimonial3-Mobile.webp";
+import Img4 from "../assets/Home_page/Testimonial4.webp";
+import Img4_Mobile from "../assets/Home_page/Testimonial4-Mobile.webp";
 
 const TestimonialData = [ 
   {
@@ -14,8 +21,10 @@ const TestimonialData = [
     videoUrl: Video5,
     userName: "Jaishree",
     universityName: "University of East London",
-    usrImg: "https://strapi.orientspectra.com/uploads/10_b4ff89b5ac_f99e04df70.webp",
-    usrImg2: "https://strapi.orientspectra.com/uploads/001_UK_512a971774_a1b316a103.webp",
+    // usrImg: "https://strapi.orientspectra.com/uploads/10_b4ff89b5ac_f99e04df70.webp",
+    usrImg: Img1,
+    usrImg2: Img1_Mobile,
+    // usrImg2: "https://strapi.orientspectra.com/uploads/001_UK_512a971774_a1b316a103.webp",
     content:
       "Orient spectra has helped me a lot in my master's process. My university offer letter came within five days and I got my visa within 15 days.",
   },
@@ -25,8 +34,10 @@ const TestimonialData = [
     videoUrl: Video3,
     userName: "Shashi Kumar",
     universityName: "Franklin University",
-    usrImg: "https://strapi.orientspectra.com/uploads/USA_97a14e4b74_0a3b340eee.webp",
-    usrImg2: "https://strapi.orientspectra.com/uploads/004_USA_6771f9d0ef_93d123d1e9.webp",
+    // usrImg: "https://strapi.orientspectra.com/uploads/USA_97a14e4b74_0a3b340eee.webp",
+    // usrImg2: "https://strapi.orientspectra.com/uploads/004_USA_6771f9d0ef_93d123d1e9.webp",
+    usrImg: Img2,
+    usrImg2: Img2_Mobile,
     content:
       "Student mother extends her appreciation to Orient Spectra! Here is her heartfelt thanks as we helped to achieve her son's dream of studying in US. Your success stories inspire us every day!",
   },
@@ -36,8 +47,10 @@ const TestimonialData = [
     videoUrl: "https://strapi.orientspectra.com/uploads/swetha_sree_568cad99fc.mp4",
     userName: "Swetha Sree",
     universityName: "International University of Applied Sciences",
-    usrImg: "https://strapi.orientspectra.com/uploads/3_GERMANY_aea2e1a5b1_5d6bd457c0.webp",
-    usrImg2: "https://strapi.orientspectra.com/uploads/GERMANY_350_W_2fba8f5568_ddff9802d9.webp",
+    // usrImg: "https://strapi.orientspectra.com/uploads/3_GERMANY_aea2e1a5b1_5d6bd457c0.webp",
+    // usrImg2: "https://strapi.orientspectra.com/uploads/GERMANY_350_W_2fba8f5568_ddff9802d9.webp",
+    usrImg: Img3,
+    usrImg2: Img3_Mobile,
     content:
       "I got admission at University of Europe in Berlin for an MBA International Business. I would like to thank Ramya and Nandini actually for providing me complete support since the beginning of the application process then getting to the visa documents.",
   },
@@ -47,8 +60,10 @@ const TestimonialData = [
     videoUrl: "https://strapi.orientspectra.com/uploads/alekhya_Review_54832075bb.mp4",
     userName: "Alekhya",
     universityName: "University of New Haven",
-    usrImg: "https://strapi.orientspectra.com/uploads/4_USA_orange_a2f2a00f12_ca2863d622.webp",
-    usrImg2: "https://strapi.orientspectra.com/uploads/003_USA_b554c163c4_d852e8de11.webp",
+    // usrImg: "https://strapi.orientspectra.com/uploads/4_USA_orange_a2f2a00f12_ca2863d622.webp",
+    // usrImg2: "https://strapi.orientspectra.com/uploads/003_USA_b554c163c4_d852e8de11.webp",
+    usrImg: Img4,
+    usrImg2: Img4_Mobile,
     content:
       "I've got to know about Orient Spectra from my brother who's doing his Master's in London, University of East London. They have helped me with the university listings and admission process.",
   },

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./Footer.css";
-import Logo from "../../assets/Layer_1.png";
-import QrLink from "../../assets/Layer_1 (1).png";
+import Logo from "../../assets/Home_page/logo-footer.webp";
+import QrLink from "../../assets/Home_page/QR.webp";
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import YouTubeIcon from "@mui/icons-material/YouTube";
@@ -14,7 +14,8 @@ const Footer = () => {
     <div className="footerContrainer">
       <div className="componnylogo_container">
         <div className="logoImage">
-          <img src="https://strapi.orientspectra.com/uploads/Layer_1_ff782153b5.webp" alt="Orient Spectra" loading="lazy"/>
+          {/* <img src="https://strapi.orientspectra.com/uploads/Layer_1_ff782153b5.webp" alt="Orient Spectra" loading="lazy"/> */}
+          <img src={Logo} alt="Orient Spectra" loading="lazy"/>
           <div className="footercenterRightContent">
             <Link
               to="https://www.facebook.com/orient.spectra.1"
@@ -49,8 +50,12 @@ const Footer = () => {
           </div>
         </div>
         <div className="qrImage">
-          <img
+          {/* <img
             src="https://strapi.orientspectra.com/uploads/Watsapp_Qr_9ad1331dd0_2ff73ee08e.webp"
+            alt="WhatsApp QR" loading="lazy"
+          /> */}
+           <img
+            src={QrLink}
             alt="WhatsApp QR" loading="lazy"
           />
           <p>+91 9000456765</p>

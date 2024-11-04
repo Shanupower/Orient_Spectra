@@ -4,6 +4,7 @@ import "./index.css";
 import Marquee from "react-fast-marquee";
 import axios from "axios";
 import { useMediaQuery } from "@mui/material";
+import Badge from "../assets/Home_page/AwardBadge.webp";
 
 
 const DiscoveryData = [
@@ -127,7 +128,8 @@ const Discovery = () => {
     <div className=" discovery-section">
       {isSm ? (
         <div className=" discovery_Container">
-        <img src="https://strapi.orientspectra.com/uploads/9e03ad56_1b80_4ca6_96b3_da6acc4f738b_removebg_preview_42fd338519.webp" />
+        {/* <img src="https://strapi.orientspectra.com/uploads/9e03ad56_1b80_4ca6_96b3_da6acc4f738b_removebg_preview_42fd338519.webp" /> */}
+        <img src={Badge} alt="Badge" loading="lazy"/>
         <div className="discovery_content">
           {DiscoveryData.map((item)=> (
             <div className="dicovery_card" key={item.id}>
@@ -147,7 +149,8 @@ const Discovery = () => {
           </div>
             ))}
           </div>
-          <img src="https://strapi.orientspectra.com/uploads/9e03ad56_1b80_4ca6_96b3_da6acc4f738b_removebg_preview_42fd338519.webp" />
+          <img src={Badge} />
+          {/* // "https://strapi.orientspectra.com/uploads/9e03ad56_1b80_4ca6_96b3_da6acc4f738b_removebg_preview_42fd338519.webp" /> */}
       </div>
       )}
         

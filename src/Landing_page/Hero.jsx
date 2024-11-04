@@ -2,9 +2,10 @@ import AddIcon from "@mui/icons-material/Add";
 import Whatsapp from "../assets/icons/Group 56.png";
 import Window from "../assets/icons/Group (2).png";
 import Mic from "../assets/icons/Group (3).png";
-import Img1 from "../assets/Home_page/Home Page_04.jpg";
-import Img2 from "../assets/pretty-indian-college-girl-university.jpg";
-import Img3 from "../assets/young-adult-achievement-graduation-gown-toothy-smile-generated-by-ai.jpg";
+import Img1 from "../assets/Home_page/Homepage_Banner1.webp";
+import Img2 from "../assets/Home_page/Homepage_Banner2.webp";
+import Img3 from "../assets/Home_page/Homepage_Banner3.webp";
+import Img4 from "../assets/Home_page/Homepage_Banner4.webp";
 import { Carousel } from "antd";
 import Button from "../Component/Common/Button";
 import { useState, useMemo, useEffect } from "react";
@@ -26,8 +27,8 @@ const Hero = ({ blog, event }) => {
         id: 1,
         text: "Make Your Study Abroad ",
         heading: "Dream A Reality",
-        bgImage:
-          "https://strapi.orientspectra.com/uploads/Banner_03_91ff06ff51.webp",
+        bgImage: Img1,
+          // "https://strapi.orientspectra.com/uploads/Banner_03_91ff06ff51.webp"
         alt:"Banner3",
         subtext:
           "We helped over 15000+ students in their journey to study abroad across USA, UK, Germany, Australia, and so on.",
@@ -37,8 +38,8 @@ const Hero = ({ blog, event }) => {
         id: 2,
         text: "Want To Know",
         heading: "How To Study Abroad?",
-        bgImage:
-          "https://strapi.orientspectra.com/uploads/Banner_02_ab30739bfe_f492f9774c.webp",
+        bgImage: Img2,
+          // "https://strapi.orientspectra.com/uploads/Banner_02_ab30739bfe_f492f9774c.webp",
         alt:"Study Abroad",
         subtext:
           "Our expert counsellors will help you through the visa application process, and ensure you land in your dream course.",
@@ -49,8 +50,8 @@ const Hero = ({ blog, event }) => {
         id: 3,
         text: "Begin Your Journey",
         heading: " of MS in USA",
-        bgImage:
-          "https://strapi.orientspectra.com/uploads/USA_Banner_f047158782.webp",
+        bgImage: Img3,
+          // "https://strapi.orientspectra.com/uploads/USA_Banner_f047158782.webp",
         alt:"USA",
         subtext:
           "Get complete guidance on your visa application, university intakes, and scholarship opportunities. Talk to our counsellors.",
@@ -61,7 +62,8 @@ const Hero = ({ blog, event }) => {
         id: 4,
         text: "",
         heading: "",
-        bgImage: "https://strapi.orientspectra.com/uploads/EU_Website_Event_Banner_1_fd212bd2f2.webp",
+        bgImage: Img4,
+        // bgImage: "https://strapi.orientspectra.com/uploads/EU_Website_Event_Banner_1_fd212bd2f2.webp",
         alt:"event",
         subtext: "",
         link: "event",

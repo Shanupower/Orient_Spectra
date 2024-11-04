@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./index.css";
-import Banner1 from "../assets/Frame 6.png";
-import Banner2 from "../assets/Property 1=Default.png";
-import Banner3 from "../assets/Property 1=Default (1).png";
-
+import Banner1 from "../assets/Home_page/Why1.webp";
+import Banner2 from "../assets/Home_page/why2.webp";
+import Banner3 from "../assets/Home_page/Why3.webp";
 import { Tabs } from "antd";
 import Button from "../Component/Common/Button";
 const { TabPane } = Tabs;
@@ -24,7 +23,9 @@ const items = [
           <Button link="/start-your-journey" text=" Find Your Course" arrow={true} />
         </div>
         <div className="course_container_inner_right">
-          <img src="https://strapi.orientspectra.com/uploads/Frame_6_22ef29815f.webp" alt="Diverse" loading="lazy"/>
+          {/* <img src="https://strapi.orientspectra.com/uploads/Frame_6_22ef29815f.webp" alt="Diverse" loading="lazy"/> */}
+          <img src={Banner1} alt="Diverse" loading="lazy"/>
+
         </div>
       </div>
     ),
@@ -46,7 +47,8 @@ const items = [
           <Button link="/start-your-journey" text=" Find Your Course" arrow={true} />
         </div>
         <div className="course_container_inner_right">
-          <img src="https://strapi.orientspectra.com/uploads/Property_1_Default_dfeaa102ab.webp" alt="Global" loading="lazy"/>
+          {/* <img src="https://strapi.orientspectra.com/uploads/Property_1_Default_dfeaa102ab.webp" alt="Global" loading="lazy"/> */}
+          <img src={Banner2} alt="Global" loading="lazy"/>
         </div>
       </div>
     ),
@@ -67,7 +69,8 @@ const items = [
           <Button link="/start-your-journey" text=" Find Your Course" arrow={true} />
         </div>
         <div className="course_container_inner_right">
-          <img src="https://strapi.orientspectra.com/uploads/Property_1_Default_1_1aa38fd23d.webp" alt="Experience" loading="lazy"/>
+          {/* <img src="https://strapi.orientspectra.com/uploads/Property_1_Default_1_1aa38fd23d.webp" alt="Experience" loading="lazy"/> */}
+          <img src={Banner3} alt="Experience" loading="lazy"/>
         </div>
       </div>
     ),

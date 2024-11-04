@@ -1,5 +1,6 @@
 import "./index.css";
-
+import Mission from "../assets/Home_page/Mission.webp";
+import Vision from "../assets/Home_page/Vision.webp";
 
 const Mission_Vision = () =>{
     return(
@@ -12,14 +13,15 @@ const Mission_Vision = () =>{
             
         <div className="explore_rightCard">
             {" "}
-            <img src="https://strapi.orientspectra.com/uploads/target_png_2_4b9d5f97d2.webp" alt="Mission" className="corcesImage" loading="lazy"/>
-
+            <img src={Mission} alt="Mission" className="corcesImage" loading="lazy"/>
+            {/* <img src="https://strapi.orientspectra.com/uploads/target_png_2_4b9d5f97d2.webp" alt="Mission" className="corcesImage" loading="lazy"/> */}
             <h3>Mission</h3>
             <p>To help students who want to study abroad, to fulfill their aspirations which transform their lives and world.</p>
           </div>
           <div className="explore_rightCard">
             {" "}
-            <img src="https://strapi.orientspectra.com/uploads/light_png_2_84981d7934.webp" alt="Vision" className="corcesImage" loading="lazy" />
+            {/* <img src="https://strapi.orientspectra.com/uploads/light_png_2_84981d7934.webp" alt="Vision" className="corcesImage" loading="lazy" /> */}
+            <img src={Vision} alt="Vision" className="corcesImage" loading="lazy" />
 
             
             <h3>Vision</h3>
