@@ -149,7 +149,7 @@ function App() {
         <Route path="/uk-november-2024" element={<UK_EDU_FAIR />} />
 
         <Route path="/uk-education-fair" element={<UK_Jan_2025 />} />
-        <Route path="/uk-education-fair?source=verse" element={<UK_Jan_2025 />} />
+        <Route path="/uk-education-fair?source=hotstar" element={<UK_Jan_2025 />} />
 
 
         <Route
