@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "./Footer.css";
-import Logo from "../../assets/Home_page/logo-footer.webp";
+import Logo from "../../assets/Home_page/Logo_Footer.webp";
 import QrLink from "../../assets/Home_page/QR.webp";
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import InstagramIcon from "@mui/icons-material/Instagram";

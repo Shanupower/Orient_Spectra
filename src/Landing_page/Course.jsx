@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./index.css";
 import Banner1 from "../assets/Home_page/Why1.webp";
-import Banner2 from "../assets/Home_page/why2.webp";
+import Banner2 from "../assets/Home_page/Why2.webp";
 import Banner3 from "../assets/Home_page/Why3.webp";
 import { Tabs } from "antd";
 import Button from "../Component/Common/Button";

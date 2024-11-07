@@ -1,12 +1,12 @@
 import "./index.css";
-import Counselling from "../assets/Home_page/Icon1.webp";
-import Selection from "../assets/Home_page/Icon2.webp";
-import Processing from "../assets/Home_page/Icon3.webp";
-import Assistance from "../assets/Home_page/Icon4.webp";
-import Advice from "../assets/Home_page/Icon5.webp";
-import Loan from "../assets/Home_page/Icon6.webp";
-import Departure from "../assets/Home_page/Icon8.webp";
-import Gudiance from "../assets/Home_page/Icon7.webp";
+import Counselling from "../assets/Home_page/Icon_1.webp";
+import Selection from "../assets/Home_page/Icon_2.webp";
+import Processing from "../assets/Home_page/Icon_3.webp";
+import Assistance from "../assets/Home_page/Icon_4.webp";
+import Advice from "../assets/Home_page/Icon_5.webp";
+import Loan from "../assets/Home_page/Icon_6.webp";
+import Departure from "../assets/Home_page/Icon_8.webp";
+import Gudiance from "../assets/Home_page/Icon_7.webp";
 
 const Explore = () => {
   return (

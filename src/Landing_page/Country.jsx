@@ -4,14 +4,14 @@ import { Autoplay, Navigation, Scrollbar } from "swiper/modules";
 import "swiper/swiper-bundle.css";
 import { useMediaQuery } from "@mui/material";
 import { Link } from "react-router-dom";
-import USA from "../assets/Home_page/usa.webp";
-import UK from "../assets/Home_page/uk.webp";
+import USA from "../assets/Home_page/Usa.webp";
+import UK from "../assets/Home_page/Uk.webp";
 import GERMANY from "../assets/Home_page/Germany.webp";
-import FRANCE from "../assets/Home_page/france.webp";
-import AUSTRALIA from "../assets/Home_page/australia.webp";
-import CANADA from "../assets/Home_page/canada.webp";
-import DUBAI from "../assets/Home_page/dubai.webp";
-import SWITZERLAND from "../assets/Home_page/switzerland.webp";
+import FRANCE from "../assets/Home_page/France.webp";
+import AUSTRALIA from "../assets/Home_page/Australia.webp";
+import CANADA from "../assets/Home_page/Canada.webp";
+import DUBAI from "../assets/Home_page/Dubai.webp";
+import SWITZERLAND from "../assets/Home_page/Switzerland.webp";
 
 const CountryImages =[
     {

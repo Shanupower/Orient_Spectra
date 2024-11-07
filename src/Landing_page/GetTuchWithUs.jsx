@@ -1,7 +1,7 @@
-import Img6 from "../assets/Home_page/A.webp";
-import Img7 from "../assets/Home_page/Assets3.webp";
-import Img8 from "../assets/Home_page/Assets2.webp";
-import Img9 from "../assets/Home_page/Assets1.webp";
+import Img6 from "../assets/Home_page/Assets_4.webp";
+import Img7 from "../assets/Home_page/Assets_3.webp";
+import Img8 from "../assets/Home_page/Assets_2.webp";
+import Img9 from "../assets/Home_page/Assets_1.webp";
 import Button from "../Component/Common/Button";
 import { motion } from "framer-motion";
 
@@ -10,24 +10,6 @@ import "./index.css";
 
 const GetTuchWithUs = () => {
   const isAnimated = useInViewport();
-//   const handleClick = () => {
-//     // Create the span element
-//     const badge = document.createElement('span');
-//     badge.id = 'iasBadge';
-//     badge.setAttribute('data-account-id', '5815');
-
-//     // Append the span to the body (or a specific container)
-//     document.body.appendChild(badge);
-
-//     // Create and append the script
-//     const script = document.createElement('script');
-//     script.src = "https://www-cdn.icef.com/scripts/iasbadgeid.js";
-//     script.async = true;
-//     script.defer = true;
-//     script.crossOrigin = "anonymous";
-
-//     document.body.appendChild(script);
-// };
   return (
     <>
       <motion.div
