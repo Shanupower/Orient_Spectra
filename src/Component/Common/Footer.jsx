@@ -14,8 +14,8 @@ const Footer = () => {
     <div className="footerContrainer">
       <div className="componnylogo_container">
         <div className="logoImage">
-          <img src="https://strapi.orientspectra.com/uploads/Layer_1_ff782153b5.webp" alt="Orient Spectra" loading="lazy"/>
-          {/* <img src={Logo} alt="Orient Spectra" loading="lazy"/> */}
+          {/* <img src="https://strapi.orientspectra.com/uploads/Layer_1_ff782153b5.webp" alt="Orient Spectra" loading="lazy"/> */}
+          <img src={Logo} alt="Orient Spectra" loading="lazy"/>
           <div className="footercenterRightContent">
             <Link
               to="https://www.facebook.com/orient.spectra.1"
