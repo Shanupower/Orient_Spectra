@@ -38,11 +38,11 @@ const Hero = ({ data }) => {
           <div className=" blog-image-section NullImageBg"></div>
         )}
         <div className="blog-leftside-card1">
-          <p>Best of the Week</p>
-          <h1>{data[0]?.attributes?.Title}</h1>
+          <p className="Best_of_thisWeek">Best of the Week</p>
         </div>
         <div className="blog-leftside-card2">
-          <p>{data[0]?.attributes?.Short_Description}</p>
+          <h1>{data[0]?.attributes?.Title}</h1>
+          {/* <p>{data[0]?.attributes?.Short_Description}</p> */}
           <Link to={`/blog-content/${data[0]?.id}`}>
             <CircleArrow className={"CircleArrow"} />
           </Link>
@@ -75,7 +75,7 @@ const Hero = ({ data }) => {
               <div className=" blog-image-section NullImageBg"></div>
             )}
 
-            <Link to={`/blog-content/${data[1]?.id}`}>
+            <Link to={`/blog-content/${data[1]?.id}`} className="blog-arrow">
               <CircleArrow className={"CircleArrow"} />
             </Link>
           </div>
@@ -109,7 +109,7 @@ const Hero = ({ data }) => {
               <div className=" blog-image-section NullImageBg"></div>
             )}
 
-            <Link to={`/blog-content/${data[2]?.id}`}>
+            <Link to={`/blog-content/${data[2]?.id}`} className="blog-arrow">
               <CircleArrow className={"CircleArrow"} />
             </Link>
           </div>

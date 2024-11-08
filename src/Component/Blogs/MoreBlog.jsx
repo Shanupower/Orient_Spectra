@@ -61,7 +61,6 @@ const MoreBlog = ({ data }) => {
           <div className="blogcontainer1" key={item?.id}>
             <div className="blogcard1">
               <h3>{item?.attributes.Title}</h3>
-              <p>{item?.attributes.Short_Description}</p>
             </div>
 
             <Link to={`/blog-content/${item?.id}`} className="Link_route">

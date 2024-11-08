@@ -540,13 +540,20 @@
   align-items: center;
   gap: 0.6rem;
 }
-
+.study_overseas_card:hover {
+  border: 1px solid var(--brand-color);
+  padding: 5px !important;
+}
+.study_overseas_card:active {
+  animation: none;
+}
 .countryImagecard {
   width: 50px;
   height: 30px;
   overflow: hidden;
   border-radius: 6px;
 }
+
 
 .showStudyoverseas {
   display: grid;
