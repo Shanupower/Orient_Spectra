@@ -505,6 +505,7 @@ const Navbar = ({
   const [mentor, setMentor] = useState(false);
   const [find, setFind] = useState(false);
   const [course, setCourse] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(null);
   const showDrawer = () => {
     setOpen(!open);
   };
@@ -568,6 +569,9 @@ const Navbar = ({
     hanldeCloseSubheader();
   };
 
+  const handleClick = (index) => {
+    setActiveIndex(index); // Set the clicked item as active
+  };
   return (
     <>
       {isMd ? (
@@ -644,10 +648,15 @@ const Navbar = ({
                 >
                   {StudyCountry.map((item, index) => (
                     <Link
-                      className="study_overseas_card Link_route"
-                      key={index}
-                      to={item.link}
-                      style={{ color: "#000" }}
+                    className={`study_overseas_card Link_route ${activeIndex === index ? "active" : ""}`}
+                    key={index}
+                    to={item.link}
+                    style={{ backgroundColor: activeIndex === index ? "#ff5f00" : "#fff" , 
+                             color: activeIndex === index ? "#fff" : "#000", 
+                             transform:"none",
+                             padding : activeIndex === index ? "5px" : "0px",
+                             borderRadius: activeIndex === index ? "5px" : "0px"}} // Change color if active
+                    onClick={() => handleClick(index)} // Set as active on click
                     >
                       <div className="countryImagecard">
                         <img src={item.image} alt="" />

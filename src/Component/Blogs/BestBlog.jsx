@@ -25,7 +25,7 @@ const BestBlog = ({ data }) => {
         loop={true}
         margin={10}
         nav
-        center={true}
+        // center={true}
         autoplay={true}
         items={isMd ? 1 : 3}
         className="owl-theme"
@@ -55,7 +55,7 @@ const BestBlog = ({ data }) => {
                 <h1>{item?.attributes?.Title}</h1>
               </div>
               <div className="bestblog-leftside-card2">
-                <Link to={`/blog-content/${item?.id}`} className="Link_route">
+                <Link to={`/blog-content/${item?.id}`}>
                   <CircleArrow className={"CircleArrow "} />
                 </Link>
               </div>
