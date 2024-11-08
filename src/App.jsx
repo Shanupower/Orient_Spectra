@@ -81,7 +81,6 @@ function App() {
 
   return (
     <>
-    {/* <HelmetProvider> */}
       {/* <LeadFormPopUp /> */}
       <Navbar
         openWhatwedo={openWhatwedo}
@@ -169,7 +168,6 @@ function App() {
       </Routes>
       <WhatsApp />
       <Footer />
-      {/* </HelmetProvider> */}
     </>
   );
 }
