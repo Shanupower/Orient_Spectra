@@ -27,12 +27,12 @@ const Blogs = () => {
   }, []);
   return (
     <>
-      <Helmet>
+      {/* <Helmet>
         <title>Blog | News, Trends & Updates about Overseas Education</title>
         <meta 
           name="description" 
           content="Get all the information about top universities, programs, scholarship details, and other news updates, information and trends from around the world." />
-      </Helmet>
+      </Helmet> */}
       <Hero data={data.slice(0, 3)} />
       <BestBlog data={data.slice(3, 8)} />
       <MoreBlog data={data.slice(8)} />
