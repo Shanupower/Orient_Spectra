@@ -75,9 +75,12 @@ import "./index.css";
 
 export const NextStepComponent = ({ handleStepCount, text, icon, canProceed }) => {
   return (
-    <div className={`Next-container ${!canProceed ? "disabled" : ""}`}>
+    <div 
+      className={`Next-container ${!canProceed ? "disabled" : ""}`}
+      onClick={canProceed ? handleStepCount : null}
+      >
       {text ? text : "Next"}{" "}
-      {icon ? icon : <CircleArrow onClick={canProceed ? handleStepCount : null} />}
+      {icon ? icon : <CircleArrow />}
     </div>
   );
 };
