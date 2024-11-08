@@ -10,7 +10,7 @@ import CountryFaq from "../../Common/Contryfaq";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import StudyAbroad from "../../../Landing_page/StudyAbroad";
-// import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet-async";
 
 const getItems = (panelStyle) => [
   {
@@ -90,12 +90,12 @@ const GermanyCountry = () => {
   }, []);
   return (
     <>
-    {/* <Helmet>
+    <Helmet>
       <title>Study in France | France Universities, Intakes & Admissions</title>
       <meta 
         name="description" 
         content="Studying in France can be an enriching experience, but you will need expert guidance to help you through university selection, visa process and scholarship opportunities. Schedule a call with Orient Spectra to start your study abroad journey." />
-    </Helmet> */}
+    </Helmet>
       <Hero />
       <State />
       <UnitedState />

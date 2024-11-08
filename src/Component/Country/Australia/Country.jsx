@@ -10,7 +10,7 @@ import CountryFaq from "../../Common/Contryfaq";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import StudyAbroad from "../../../Landing_page/StudyAbroad";
-// import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet-async";
 
 const getItems = (panelStyle) => [
   {
@@ -101,12 +101,12 @@ const AustraliaCountry = () => {
   }, []);
   return (
     <>
-      {/* <Helmet>
+      <Helmet>
         <title>Study in Australia | Australia Universities, Intakes & Admissions</title>
         <meta 
           name="description" 
           content="Wondering how you can study abroad in Australia? Schedule a call with Orient Spectra counsellors to learn about Australia universities admission process, course selection, visa application, and scholarship opportunities." />
-      </Helmet> */}
+      </Helmet>
       <Hero />
       <State />
       <UnitedState />

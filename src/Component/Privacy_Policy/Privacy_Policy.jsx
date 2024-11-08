@@ -1,15 +1,15 @@
 import React from "react";
 import "./privacy.css";
-// import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet-async";
 const Privacy_Policy = () => {
   return (
     <>
-    {/* <Helmet>
+    <Helmet>
         <title>Privacy Policy | Orient Spectra Overseas Education Consultancy</title>
         <meta 
           name="description" 
           content="Our privacy policy detailing how we manage the data we gather to improve the experience of our website visitors." />
-      </Helmet> */}
+      </Helmet>
       <div className="privacy-container section">
         <div className="privacy_image">
           <img

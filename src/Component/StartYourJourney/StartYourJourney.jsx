@@ -8,6 +8,7 @@ import Step6 from "./Step6";
 import axios from "axios";
 import ThankYouDialog from "./Thankyou";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const StartYourJourney = () => {
   const [country, setCountry] = useState("");
@@ -103,6 +104,12 @@ const StartYourJourney = () => {
 
   return (
     <>
+    <Helmet>
+        <title>Start Your Study Abroad Journey with Orient Spectra</title>
+        <meta 
+          name="description" 
+          content="Get your study abroad journey started with Orient Spectra's expert counselling and guidance through studenrt visa application process and university admission." />
+      </Helmet>
       {step === 1 && (
         <Step1
           step={step}

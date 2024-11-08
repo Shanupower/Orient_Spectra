@@ -9,7 +9,7 @@ import Benifits from "../../Ads landing page/Europe-Education-Fair/UK_Benifits";
 import WhyOs from "../../Ads landing page/OfflineMarketingClub/WhyOS";
 import EventDetails from "./EventDetail";
 import Universities from "../../Ads landing page/Europe-Education-Fair/UK_Universities";
-// import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet-async";
 
 const Event = () => {
   const [upcomingEventdata, setUpcominngEventData] = useState([]);
@@ -51,12 +51,12 @@ const Event = () => {
   }, []);
   return (
     <>
-      {/* <Helmet>
+      <Helmet>
         <title>All Abroad Education Fairs & Events of Orient Spectra</title>
         <meta 
           name="description" 
           content="Read latest news about Orient Spectra's overseas education fairs, and other updates like student visa approvals and so on." />
-      </Helmet> */}
+      </Helmet>
       <Hero eventData={upcomingEventdata} />
       <EventDetails />
       {/* <SuccessStory CompletedEventdata={CompletedEventdata} /> */}
