@@ -1,50 +1,66 @@
 import { motion } from "framer-motion";
 import axios from "axios";
 import EventDargCard from "./EventSwip";
-import React, { useRef, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
 import "./index.css";
+import { Subtitles } from "@mui/icons-material";
 
 const Events = () => {
-  const [upcomingEventdata, setUpcominngEventData] = useState([]);
-  const [CompletedEventdata, setCompletedEventData] = useState([]);
+  const [upcomingEventdata, setUpcomingEventData] = useState([]);
+  const [completedEventdata, setCompletedEventData] = useState([]);
   const formattedDate = new Date();
   const currentDate = formattedDate.toISOString().split("T")[0];
 
   const fetchUpcomingEventData = async () => {
     try {
       const response = await axios.get(
-        `https://strapi.orientspectra.com/api/events?filters[Date_of_the_event][$gt]=${currentDate}?sort[0]=Date_of_the_event&populate=*`
+        `https://strapi.orientspectra.com/api/events?filters[Date_of_the_event][$gt]=${currentDate}&sort[0]=Date_of_the_event&populate=*`
       );
       if (response?.status === 200) {
-        setUpcominngEventData(response?.data.data);
+        const events = response.data.data;
+        const newEvents = events.filter(
+          (event) => event?.attributes?.Date_of_the_event > currentDate
+        );
+        
+        setUpcomingEventData(newEvents.length > 0 ? newEvents : [defaultEvent]);
       }
     } catch (error) {
-      console.log("ERROR OCCURED WHILE FETCHING:", error.message);
+      console.log("ERROR OCCURRED WHILE FETCHING:", error.message);
     }
   };
-  const fetchCompletedEventdata = async () => {
+
+  const fetchCompletedEventData = async () => {
     try {
       const response = await axios.get(
-        `https://strapi.orientspectra.com/api/events?filters[Date_of_the_event][$lt]=${currentDate}?sort[0]=Date_of_the_event&populate=*`
+        `https://strapi.orientspectra.com/api/events?filters[Date_of_the_event][$lt]=${currentDate}&sort[0]=Date_of_the_event&populate=*`
       );
       if (response?.status === 200) {
-        setCompletedEventData(response?.data.data);
+        setCompletedEventData(response.data.data);
       }
     } catch (error) {
-      console.log("ERROR OCCURED WHILE FETCHING:", error.message);
+      console.log("ERROR OCCURRED WHILE FETCHING:", error.message);
     }
   };
 
   useEffect(() => {
     fetchUpcomingEventData();
-    fetchCompletedEventdata();
+    fetchCompletedEventData();
   }, []);
+
+  // Default event data
+  const defaultEvent = {
+    attributes: {
+      // Date_of_the_event: "8 Nov 2024",
+      Headline: "No - Cost IELTS/TOEFL Coaching",
+      Subtitle: "Expert training upon refundable deposit payment",
+      Thumbnail: { data: [{ attributes: { url: "/uploads/Frame_6_22ef29815f.webp" } }] },
+    },
+  };
 
   return (
     <div className="section Events__container">
@@ -57,7 +73,7 @@ const Events = () => {
         modules={[Navigation, Pagination, Mousewheel, Keyboard]}
         className="event_leftSide"
       >
-        {upcomingEventdata?.map((e, index) => (
+        {upcomingEventdata.map((e, index) => (
           <SwiperSlide key={index}>
             <div className="swiperLeftSide">
               <div className="event_leftContent">
@@ -65,19 +81,20 @@ const Events = () => {
                   <b className="upcomingText">Upcoming Events</b>
                 </div>
                 <div className="dateEvent">
-                  <p>Date of the event</p>
+                  {/* <p>Date of the event</p> */}
                   <span>{e?.attributes?.Date_of_the_event}</span>
                 </div>
                 <div className="event_bottomContent">
                   <h4 className="explaintag">{e?.attributes?.Headline}</h4>
-                  {/* <span>{e?.attributes?.Shortdescription}</span> */}
+                  <p>{e?.attributes?.Subtitle}</p>
                 </div>
               </div>
               <div className="eventsRigtImage">
                 <b className="upcomingEvents">Upcoming Events</b>
                 <img
                   src={`https://strapi.orientspectra.com${e?.attributes?.Thumbnail?.data[0]?.attributes.url}`}
-                  alt="" loading="lazy"
+                  alt=""
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -95,7 +112,7 @@ const Events = () => {
           visible: { opacity: 1, y: 0 },
         }}
       >
-        <EventDargCard Eventdata={[...CompletedEventdata]?.reverse()} />
+        <EventDargCard Eventdata={[...completedEventdata]?.reverse()} />
       </motion.div>
     </div>
   );

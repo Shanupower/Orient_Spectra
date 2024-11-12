@@ -542,7 +542,6 @@
 }
 .study_overseas_card:hover {
   border: 1px solid var(--brand-color);
-  padding: 5px !important;
 }
 .study_overseas_card:active {
   animation: none;
