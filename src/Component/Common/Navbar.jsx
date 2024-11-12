@@ -6,10 +6,9 @@ import Coaching from "../../assets/About2/Coaching.svg";
 import Find1 from "../../assets/About2/Finding your course.svg";
 import Mentorship1 from "../../assets/About2/Mentorship.svg";
 import Coaching1 from "../../assets/About2/Coaching (1).svg";
-
 import { Space } from "antd";
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
 import { useMediaQuery } from "@mui/material";
 import { Drawer } from "antd";
 import { Menu } from "antd";
@@ -506,6 +505,7 @@ const Navbar = ({
   const [find, setFind] = useState(false);
   const [course, setCourse] = useState(false);
   const [activeIndex, setActiveIndex] = useState(null);
+  const location = useLocation();
   const showDrawer = () => {
     setOpen(!open);
   };
@@ -569,9 +569,20 @@ const Navbar = ({
     hanldeCloseSubheader();
   };
 
-  const handleClick = (index) => {
-    setActiveIndex(index); // Set the clicked item as active
-  };
+  useEffect(() => {
+    const currentPath = location.pathname; // Get current path
+    let index = null;
+    // Iterate over StudyCountry and check if current path matches any country's link
+    StudyCountry.forEach((item, i) => {
+      if (currentPath === item.link) {
+        index = i; // If match found, set index to the country's index
+      }
+    });
+    setActiveIndex(index); // Update activeIndex
+    setStudyOverseas(false);
+  }, [location, StudyCountry]);
+
+  
   return (
     <>
       {isMd ? (
@@ -648,15 +659,15 @@ const Navbar = ({
                 >
                   {StudyCountry.map((item, index) => (
                     <Link
-                    className={`study_overseas_card Link_route ${activeIndex === index ? "active" : ""}`}
-                    key={index}
-                    to={item.link}
-                    style={{ backgroundColor: activeIndex === index ? "#ff5f00" : "#fff" , 
-                             color: activeIndex === index ? "#fff" : "#000", 
-                             transform:"none",
-                             padding : activeIndex === index ? "5px" : "0px",
-                             borderRadius: activeIndex === index ? "5px" : "0px"}} // Change color if active
-                    onClick={() => handleClick(index)} // Set as active on click
+                      className={`study_overseas_card Link_route ${activeIndex === index ? "active" : ""}`}
+                      key={index}
+                      to={item.link}
+                      style={{ backgroundColor: activeIndex === index ? "#ff5f00" : "#fff" , 
+                              color: activeIndex === index ? "#fff" : "#000", 
+                              transform:"none",
+                              padding :"5px",
+                              borderRadius: activeIndex === index ? "5px" : "0px"
+                              }}
                     >
                       <div className="countryImagecard">
                         <img src={item.image} alt="" />
