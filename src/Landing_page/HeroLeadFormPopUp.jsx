@@ -29,8 +29,8 @@ const LeadFormPopUp = ({closePopup}) => {
 
   const handleSubmitData = async () => {
     console.log("Sending data to API...");
-    // const api = "https://strapi.orientspectra.com/api/leadform-popups";
-    const api = "http://send.orientspectra.com/send-email-lead-form-popup";
+   
+    const api = "https://send.orientspectra.com/send-email-lead-form-popup";
     try {
       const response = await axios.post(api, {
         data: formData,
