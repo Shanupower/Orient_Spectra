@@ -32,10 +32,17 @@ const LeadFormPopUp = ({closePopup}) => {
    
     const api = "https://send.orientspectra.com/send-email-lead-form-popup";
     try {
-      const response = await axios.post(api, {
-        data: formData,
-        // captchaToken, // Send reCAPTCHA token to backend
+      const response = await axios.post(api, formData, {
+        headers: {
+          "Content-Type": "application/json",  // Ensure content type is JSON
+          // If you are using a CAPTCHA, include the token here
+          // captchaToken: captchaToken
+        }
       });
+      // const response = await axios.post(api, {
+      //   data: formData,
+      //   // captchaToken, // Send reCAPTCHA token to backend
+      // });
       if (response.status === 200) {
         setFormSubmitted(true);
         setFormData({
