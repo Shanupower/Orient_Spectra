@@ -6,6 +6,7 @@ import Img1 from "../assets/Home_page/Homepage_Banner1.webp";
 import Img2 from "../assets/Home_page/Homepage_Banner2.webp";
 import Img3 from "../assets/Home_page/Homepage_Banner3.webp";
 import Img4 from "../assets/Home_page/Homepage_Banner4.webp";
+import Img5 from "../assets/Home_page/Homepage_Banner5.webp"; // Common Event(if there is no new events this image will display)
 import { Carousel } from "antd";
 import Button from "../Component/Common/Button";
 import { useState, useMemo, useEffect } from "react";
@@ -62,8 +63,7 @@ const Hero = ({ blog, event }) => {
         id: 4,
         text: "",
         heading: "",
-        // bgImage: Img4,
-        bgImage: "https://strapi.orientspectra.com/uploads/Website_Event_Banner_5_0cb3a0308d.jpg",
+        bgImage: Img5,
         alt:"event",
         subtext: "",
         link: "event",
