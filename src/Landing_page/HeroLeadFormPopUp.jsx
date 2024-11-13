@@ -17,18 +17,20 @@ const LeadFormPopUp = ({closePopup}) => {
   }, []);
 
   const [formData, setFormData] = useState({
-    Name: "",
-    Email: "",
-    Mobile: "",
-    Intake_Year: "",
-    Country:"",
-    Source: "UK & EU EDU FAIR",
+    name: "",
+    email: "",
+    mobile: "",
+    intake_year: "",
+    // Country:"",
+    source: "UK & EU EDU FAIR",
   });
   const [errors, setErrors] = useState({});
   const [formSubmitted, setFormSubmitted] = useState(false);
 
   const handleSubmitData = async () => {
-    const api = "https://strapi.orientspectra.com/api/leadform-popups";
+    console.log("Sending data to API...");
+    // const api = "https://strapi.orientspectra.com/api/leadform-popups";
+    const api = "http://send.orientspectra.com/send-email-lead-form-popup";
     try {
       const response = await axios.post(api, {
         data: formData,
@@ -37,12 +39,11 @@ const LeadFormPopUp = ({closePopup}) => {
       if (response.status === 200) {
         setFormSubmitted(true);
         setFormData({
-          Name: "",
-          Email: "",
-          Mobile: "",
-          Intake_Year: "",
-          Country: "",
-          Source: "UK & EU EDU FAIR",
+          name: "",
+          email: "",
+          mobile: "",
+          intake_Year: "",
+          source: "UK & EU EDU FAIR",
         });
       }
     } catch (errors) {
@@ -70,30 +71,31 @@ const LeadFormPopUp = ({closePopup}) => {
   const Validation = () => {
     const newErrors = {};
 
-    if (formData.Name === "") {
-      newErrors.Name = "First Name is Required";
+    if (formData.name === "") {
+      newErrors.name = "First Name is Required";
     }
-    if (formData.Email === "") {
-      newErrors.Email = "Email Id is Required";
-    } else if (!/\S+@\S+\.\S+/.test(formData.Email)) {
-      newErrors.Email = "Email is not valid";
+    if (formData.email === "") {
+      newErrors.email = "Email Id is Required";
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = "Email is not valid";
     }
-    if (formData.Mobile === "") {
-      newErrors.Mobile = "Enter the Mobile Number";
-    } else if (!/^\d{10}$/.test(formData.Mobile)) {
-      newErrors.Mobile = "Enter the valid 10 digit mobile number";
+    if (formData.mobile === "") {
+      newErrors.mobile = "Enter the Mobile Number";
+    } else if (!/^\d{10}$/.test(formData.mobile)) {
+      newErrors.mobile = "Enter the valid 10 digit mobile number";
     }
-    if (formData.Intake_Year === "") {
-      newErrors.Intake_Year = "Intake Year is Required";
+    if (formData.intake_year === "") {
+      newErrors.intake_year = "Intake Year is Required";
     }
-    if (formData.Country === "") {
-      newErrors.Country = "Select your Destination";
-    }
+    // if (formData.Country === "") {
+    //   newErrors.Country = "Select your Destination";
+    // }
     return newErrors;
   };
 
   const handleSubmitValidation = (event) => {
     event.preventDefault();
+    console.log("Form submitted");
     const validationErrors = Validation();
     // if (Object.keys(validationErrors).length === 0 && captchaToken) {
     //   handleSubmitData();
@@ -184,8 +186,8 @@ const LeadFormPopUp = ({closePopup}) => {
               <div className="popup-form-group">
               <input
                   type="text"
-                  name="Name"
-                  placeholder="Name"
+                  name="name"
+                  placeholder="name"
                   className="popup-input-field"
                   onChange={handleChange}
                   value={formData.Name}
@@ -197,8 +199,8 @@ const LeadFormPopUp = ({closePopup}) => {
               <div className="popup-form-group">
               <input
                   type="text"
-                  name="Email"
-                  placeholder="Email"
+                  name="email"
+                  placeholder="email"
                   className="popup-input-field"
                   onChange={handleChange}
                   value={formData.Email}
@@ -208,7 +210,7 @@ const LeadFormPopUp = ({closePopup}) => {
               <div className="popup-form-group">
               <input
                   type="text"
-                  name="Mobile"
+                  name="mobile"
                   placeholder="Mobile Number"
                   className="popup-input-field"
                   onChange={handleChange}
@@ -219,7 +221,7 @@ const LeadFormPopUp = ({closePopup}) => {
               <div className="popup-form-group">
               <input
                   type="text"
-                  name="Intake_Year"
+                  name="intake_year"
                   placeholder="Intake Year" 
                   className="popup-input-field"
                   onChange={handleChange}
@@ -230,7 +232,7 @@ const LeadFormPopUp = ({closePopup}) => {
                 )}
               </div>
 
-              <div className="popup-form-group">
+              {/* <div className="popup-form-group">
               <select
                 type="text"
                 name="Country"
@@ -245,7 +247,7 @@ const LeadFormPopUp = ({closePopup}) => {
                 {errors.Country && (
                   <p style={{ color: "red" }}>{errors.Country}</p>
                 )}
-            </div>
+            </div> */}
 
               {/* reCAPTCHA component */}
               {/* <div style={{ transform: 'scale(0.85)', transformOrigin: '0 0' }}>
