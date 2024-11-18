@@ -4,8 +4,10 @@ import CircleArrow from "../Common/CircleArrow";
 import { useState } from "react";
 import { useMediaQuery } from "@mui/material";
 import LeadFormPopUp from "../../Landing_page/HeroLeadFormPopUp";
+import CommonEvent_Banner from "../../assets/Home_page/Homepage_Banner5.webp"; // Common Event(if there is no new events this image will display)
+import CommonEvent  from "../../assets/Home_page/Common_Event.webp";
 
-const Hero = ({ eventData }) => {
+const Hero = ({ eventData}) => {
   const [EventId, setEventId] = useState(0);
   const [isOpen, setIsOpen] =useState(false);
 
@@ -47,12 +49,14 @@ const Hero = ({ eventData }) => {
         <div className="Experience-rightcard" >
           {isMd ? (
             <img
-            src={`https://strapi.orientspectra.com${eventData[EventId]?.attributes?.Thumbnail?.data[0]?.attributes.url}`}
+            // src={`https://strapi.orientspectra.com${eventData[EventId]?.attributes?.Thumbnail?.data[0]?.attributes.url}`}
+            src={CommonEvent}
             alt=""
           />
           ):(
             <img
-            src={`https://strapi.orientspectra.com${eventData[EventId]?.attributes?.Poster?.data?.attributes.url}`}
+            src={CommonEvent_Banner}
+            // src={`https://strapi.orientspectra.com${eventData[EventId]?.attributes?.Poster?.data?.attributes.url}`}
             alt=""
           />
           )}

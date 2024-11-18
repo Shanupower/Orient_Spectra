@@ -42,7 +42,6 @@ import LeadFormPopUp from "./LeadFormPopUp";
 import SwedenCountry from "./Component/Country/Sweden/Country";
 import DUBAICountry from "./Component/Country/Dubai/Country";
 import EuropeEDUFair from "./Ads landing page/Europe-Education-Fair/EuropeEDUFair";
-// import { HelmetProvider } from "react-helmet-async";
 
 function App() {
   const [openWhatwedo, setWhatwedoOpen] = useState(false);
@@ -81,7 +80,7 @@ function App() {
 
   return (
     <>
-      {/* <LeadFormPopUp /> */}
+      <LeadFormPopUp />
       <Navbar
         openWhatwedo={openWhatwedo}
         setWhatwedoOpen={setWhatwedoOpen}
