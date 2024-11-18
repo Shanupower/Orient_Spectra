@@ -223,8 +223,13 @@ const Discovery = () => {
                           value={formData.Country}
                         >
                           <option value="">Select Country</option>
+                          <option value="USA">USA</option>
                           <option value="UK">UK</option>
-                          <option value="Europe">Europe</option>
+                          <option value="Germany">Germany</option>
+                          <option value="France">France</option>
+                          <option value="Australia">Australia</option>
+                          <option value="Canada">Canada</option>
+                          <option value="Ireland">Ireland</option>
                         </select>
                         {errors.Country && <p style={{ color: "red" }}>{errors.Country}</p>}
                       </div>
