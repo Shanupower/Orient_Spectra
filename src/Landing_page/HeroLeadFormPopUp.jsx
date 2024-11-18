@@ -186,10 +186,10 @@ const LeadFormPopUp = ({closePopup}) => {
             </IconButton>
           <div className="Dailog-container">
           <div className='DailogContent'>
-            <h2 className="DailogTitle">First Step to Study Abroad <span>2024</span></h2>
+            <h2 className="DailogTitle">First Step to Study <span>Abroad</span></h2>
             <h3>Walk - In Invitation for Spot Profile Evaluation</h3>
-            <h3 style={{colro:"black"}}>Orient Spectra, Himayatnagar - Hyderabad</h3>
-            <p>Register now for Personalized Counselling</p>
+            <h3 style={{colro:"black"}}>Himayatnagar, Hyderabad</h3>
+            <p>Register for Personalized Counselling</p>
           <DialogContent>
             <form onSubmit={handleSubmitValidation}>
             <div className="popup-text-feild">
