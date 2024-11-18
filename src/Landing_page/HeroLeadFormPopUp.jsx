@@ -4,6 +4,7 @@ import { Dialog, DialogContent, IconButton, useMediaQuery } from '@mui/material'
 import "./index.css";
 import axios from 'axios';
 import CloseIcon from '@mui/icons-material/Close';
+import CommonEvent from '../assets/Home_page/Common_Event.webp';
 
 const LeadFormPopUp = ({closePopup}) => {
   const isMd = useMediaQuery("(max-width:1024px)");
@@ -21,20 +22,23 @@ const LeadFormPopUp = ({closePopup}) => {
     email: "",
     mobile: "",
     intake_year: "",
-    // Country:"",
-    source: "UK & EU EDU FAIR",
+    country: "",
+    source: "Walk- In Invitation - Orientspectra Website",
   });
   const [errors, setErrors] = useState({});
   const [formSubmitted, setFormSubmitted] = useState(false);
 
   const handleSubmitData = async () => {
     console.log("Sending data to API...");
-    // const api = "https://strapi.orientspectra.com/api/leadform-popups";
-    const api = "http://send.orientspectra.com/send-email-lead-form-popup";
+   
+    const api = "https://send.orientspectra.com/send-email-lead-form-popup";
     try {
-      const response = await axios.post(api, {
-        data: formData,
-        // captchaToken, // Send reCAPTCHA token to backend
+      const response = await axios.post(api, formData, {
+        headers: {
+          "Content-Type": "application/json",  // Ensure content type is JSON
+          // If you are using a CAPTCHA, include the token here
+          // captchaToken: captchaToken
+        }
       });
       if (response.status === 200) {
         setFormSubmitted(true);
@@ -43,6 +47,7 @@ const LeadFormPopUp = ({closePopup}) => {
           email: "",
           mobile: "",
           intake_Year: "",
+          country: "",
           source: "UK & EU EDU FAIR",
         });
       }
@@ -87,9 +92,9 @@ const LeadFormPopUp = ({closePopup}) => {
     if (formData.intake_year === "") {
       newErrors.intake_year = "Intake Year is Required";
     }
-    // if (formData.Country === "") {
-    //   newErrors.Country = "Select your Destination";
-    // }
+    if (formData.country === "") {
+      newErrors.country = "Select your Destination";
+    }
     return newErrors;
   };
 
@@ -177,9 +182,10 @@ const LeadFormPopUp = ({closePopup}) => {
             </IconButton>
           <div className="Dailog-container">
           <div className='DailogContent'>
-          <h2 className="DailogTitle">Europe & UK Education Fair <span>2024</span></h2>
-          <h3>09th Nov | Hyatt Place, Banjara Hills</h3>
-          <p>Register now & get free TOEFL coaching</p>
+            <h2 className="DailogTitle">First Step to Study Abroad <span>2024</span></h2>
+            <h3>Walk - In Invitation for Spot Profile Evaluation</h3>
+            <h3 style={{colro:"black"}}>Orient Spectra, Himayatnagar - Hyderabad</h3>
+            <p>Register now for Personalized Counselling</p>
           <DialogContent>
             <form onSubmit={handleSubmitValidation}>
             <div className="popup-text-feild">
@@ -187,7 +193,7 @@ const LeadFormPopUp = ({closePopup}) => {
               <input
                   type="text"
                   name="name"
-                  placeholder="name"
+                  placeholder="Name"
                   className="popup-input-field"
                   onChange={handleChange}
                   value={formData.Name}
@@ -200,7 +206,7 @@ const LeadFormPopUp = ({closePopup}) => {
               <input
                   type="text"
                   name="email"
-                  placeholder="email"
+                  placeholder="Email"
                   className="popup-input-field"
                   onChange={handleChange}
                   value={formData.Email}
@@ -232,22 +238,27 @@ const LeadFormPopUp = ({closePopup}) => {
                 )}
               </div>
 
-              {/* <div className="popup-form-group">
+              <div className="popup-form-group">
               <select
                 type="text"
-                name="Country"
+                name="country"
                 className="popup-input-dropdown"
                 onChange={handleChange}
-                value={formData.Country} >
+                value={formData.country} >
 
-                <option value="">Select Country</option>
-                <option value="UK">UK</option>
-                <option value="Europe">Europe</option>
+                  <option value="">Select Country</option>
+                  <option value="UK">USA</option>
+                  <option value="UK">UK</option>
+                  <option value="Germany">Germany</option>
+                  <option value="France">France</option>
+                  <option value="Australia">Australia</option>
+                  <option value="Canada">Canada</option>
+                  <option value="Ireland">Ireland</option>
               </select>
                 {errors.Country && (
                   <p style={{ color: "red" }}>{errors.Country}</p>
                 )}
-            </div> */}
+            </div>
 
               {/* reCAPTCHA component */}
               {/* <div style={{ transform: 'scale(0.85)', transformOrigin: '0 0' }}>
@@ -266,7 +277,7 @@ const LeadFormPopUp = ({closePopup}) => {
             <p onClick={closePopup} className='SkipNow'>Skip Now </p>
           </DialogContent>
           </div>
-          <img src="https://strapi.orientspectra.com/uploads/388_X_516_uk_eu_58507af29d.webp" alt="EventImage" className='ImageContainer'/>
+          <img src={CommonEvent} alt="EventImage" className='ImageContainer'/>
           </div>
            
           </>

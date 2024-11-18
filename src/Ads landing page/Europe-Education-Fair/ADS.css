@@ -149,7 +149,13 @@
 .Event_details > h1 {
   font-size: 3rem;
   color: #306398;
+  margin-bottom: 0.5rem !important;
+}
+.Event_details > h2 {
+  font-size: 1.8rem;
+  color: #306398;
   margin-bottom: 2rem;
+
 }
 .Event_details > h1 > span {
   color: #e37d25;
@@ -164,12 +170,14 @@
   margin-bottom: 20px;
 }
 .Image_container{
-  width: 40%;
+  min-width: 40%;
+  min-height: 50vh;
 }
 .Image_container > img {
-  object-fit: cover;
+  object-fit: contain !important;
   border-radius: 20px;
   border: 2px solid var(--text-color-gray);
+
 }
 .Benifts_container {
   background-color: #f3f3f3f3 !important;

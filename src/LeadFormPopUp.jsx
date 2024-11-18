@@ -3,40 +3,46 @@ import { Dialog, DialogContent, IconButton, useMediaQuery } from '@mui/material'
 import axios from 'axios';
 import CloseIcon from '@mui/icons-material/Close';
 import "./index.css";
+import CommonEvent from './assets/Home_page/Common_Event.webp';
 
 const LeadFormPopUp = () => {
   const isMd = useMediaQuery("(max-width:1024px)");
   const isLg = useMediaQuery("(max-width: 1280px)");
-  const [open, setOpen] = useState(true); // Open the dialog by default
+  const [open, setOpen] = useState(false); // Open the dialog by default
   const [formSubmitted, setFormSubmitted] = useState(false); // Track form submission
   const [formData, setFormData] = useState({
-    Name: "",
-    Email: "",
-    Mobile: "",
-    Intake_Year: "",
-    Country: "",
-    Source: "UK & EU EDU FAIR",
+    name: "",
+    email: "",
+    mobile: "",
+    intake_year: "",
+    country: "",
+    source: "Walk- In Invitation - Orientspectra Website",
   });
   const [errors, setErrors] = useState({});
   
   useEffect(() => {
-    setOpen(true);
+    const timer = setTimeout(() => {
+      setOpen(true);
+    }, 5000);
+    return () => clearTimeout(timer);
   }, []);
 
   const handleSubmitData = async () => {
-    const api = "https://strapi.orientspectra.com/api/leadform-popups";
+    const api = "https://send.orientspectra.com/send-email-lead-form-popup";
     try {
-      const response = await axios.post(api, {
-        data: formData,
+      const response = await axios.post(api, formData, {
+        headers: {
+          "Content-Type": "application/json",  // Ensure content type is JSON
+        }
       });
       if (response.status === 200) {
         setFormData({
-          Name: "",
-          Email: "",
-          Mobile: "",
-          Intake_Year: "",
-          Country: "",
-          Source: "UK & EU EDU FAIR",
+          name: "",
+          email: "",
+          mobile: "",
+          intake_year: "",
+          country: "",
+          source: "Walk- In Invitation - Orientspectra Website",
         });
         setFormSubmitted(true); // Set formSubmitted to true upon successful submission
       }
@@ -65,24 +71,24 @@ const LeadFormPopUp = () => {
   const Validation = () => {
     const newErrors = {};
 
-    if (formData.Name === "") {
-      newErrors.Name = "First Name is Required";
+    if (formData.name === "") {
+      newErrors.name = "First Name is Required";
     }
-    if (formData.Email === "") {
-      newErrors.Email = "Email Id is Required";
-    } else if (!/\S+@\S+\.\S+/.test(formData.Email)) {
-      newErrors.Email = "Email is not valid";
+    if (formData.email === "") {
+      newErrors.email = "Email Id is Required";
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = "Email is not valid";
     }
-    if (formData.Mobile === "") {
-      newErrors.Mobile = "Enter the Mobile Number";
-    } else if (!/^\d{10}$/.test(formData.Mobile)) {
-      newErrors.Mobile = "Enter the valid 10 digit mobile number";
+    if (formData.mobile === "") {
+      newErrors.mobile = "Enter the Mobile Number";
+    } else if (!/^\d{10}$/.test(formData.mobile)) {
+      newErrors.mobile = "Enter the valid 10 digit mobile number";
     }
-    if (formData.Intake_Year === "") {
-      newErrors.Intake_Year = "Intake Year is Required";
+    if (formData.intake_year === "") {
+      newErrors.intake_year = "Intake Year is Required";
     }
-    if (formData.Country === "") {
-      newErrors.Country = "Select your Destination";
+    if (formData.country === "") {
+      newErrors.country = "Select your Destination";
     }
     return newErrors;
   };
@@ -153,16 +159,17 @@ const LeadFormPopUp = () => {
             </IconButton>
             <div className="Dailog-container">
               <div className='DailogContent'>
-                <h2 className="DailogTitle">Europe & UK Education Fair <span>2024</span></h2>
-                <h3>09th Nov | Hyatt Place, Banjara Hills</h3>
-                <p>Register now & get free TOEFL coaching</p>
+                <h2 className="DailogTitle">First Step to Study Abroad <span>2024</span></h2>
+                <h3>Walk - In Invitation for Spot Profile Evaluation</h3>
+                <h3 style={{colro:"black"}}>Orient Spectra, Himayatnagar - Hyderabad</h3>
+                <p>Register now for Personalized Counselling</p>
                 <DialogContent>
                   <form onSubmit={handleSubmitValidation}>
                     <div className="popup-text-feild">
                       <div className="popup-form-group">
                         <input
                           type="text"
-                          name="Name"
+                          name="name"
                           placeholder="Name"
                           className="popup-input-field"
                           onChange={handleChange}
@@ -173,7 +180,7 @@ const LeadFormPopUp = () => {
                       <div className="popup-form-group">
                         <input
                           type="text"
-                          name="Email"
+                          name="email"
                           placeholder="Email"
                           className="popup-input-field"
                           onChange={handleChange}
@@ -184,7 +191,7 @@ const LeadFormPopUp = () => {
                       <div className="popup-form-group">
                         <input
                           type="text"
-                          name="Mobile"
+                          name="mobile"
                           placeholder="Mobile Number"
                           className="popup-input-field"
                           onChange={handleChange}
@@ -195,7 +202,7 @@ const LeadFormPopUp = () => {
                       <div className="popup-form-group">
                         <input
                           type="text"
-                          name="Intake_Year"
+                          name="intake_year"
                           placeholder="Intake Year"
                           className="popup-input-field"
                           onChange={handleChange}
@@ -205,19 +212,24 @@ const LeadFormPopUp = () => {
                       </div>
                       <div className="popup-form-group">
                         <select
-                          name="Country"
+                          name="country"
                           className="popup-input-dropdown"
                           onChange={handleChange}
                           value={formData.Country}
                         >
                           <option value="">Select Country</option>
+                          <option value="UK">USA</option>
                           <option value="UK">UK</option>
-                          <option value="Europe">Europe</option>
+                          <option value="Germany">Germany</option>
+                          <option value="France">France</option>
+                          <option value="Australia">Australia</option>
+                          <option value="Canada">Canada</option>
+                          <option value="Ireland">Ireland</option>
                         </select>
                         {errors.Country && <p style={{ color: "red" }}>{errors.Country}</p>}
                       </div>
 
-                      <input type="hidden" name="Source" className="input-field" value={formData.Source} />
+                      <input type="hidden" name="source" className="input-field" value={formData.Source} />
                       <button className="popup-form-container-button" type="submit">
                         Book A Free Call
                       </button>
@@ -226,7 +238,7 @@ const LeadFormPopUp = () => {
                   <p onClick={handleClose} className='SkipNow'>Skip Now</p>
                 </DialogContent>
               </div>
-              <img src="https://strapi.orientspectra.com/uploads/388_X_516_uk_eu_58507af29d.webp" alt="EventImage" className='ImageContainer' />
+              <img src={CommonEvent} alt="EventImage" className='ImageContainer' />
             </div>
           </>
         )}
