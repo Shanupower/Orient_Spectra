@@ -541,7 +541,8 @@
   padding-block: 10rem 12rem;
   margin: 4rem;
   justify-content: space-between;
-  background-image: url("https://strapi.orientspectra.com/uploads/Banner_Final_1_ff1aab3e3c.webp");
+  /* background-image: url("https://strapi.orientspectra.com/uploads/Banner_Final_1_ff1aab3e3c.webp"); */
+  background-image: url("../assets/Banner_Final.webp");
   background-size: contain;
   border-radius: 20px;
 }
