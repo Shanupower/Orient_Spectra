@@ -4,7 +4,7 @@ import "./Country.css";
 
 const Hero = () => {
   return (
-    <div className="hero-container section">
+    <div className="hero-container_1 section">
       <div className="hero-image-container">
         <video className="hero-video" autoPlay loop muted>
           <source src={Video} type="video/mp4" />

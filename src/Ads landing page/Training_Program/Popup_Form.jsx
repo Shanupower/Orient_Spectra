@@ -3,9 +3,8 @@ import { Dialog, DialogContent, IconButton, useMediaQuery } from '@mui/material'
 import axios from 'axios';
 import CloseIcon from '@mui/icons-material/Close';
 import "./index.css";
-import CommonEvent from './assets/Home_page/Common_Event.webp';
 
-const LeadFormPopUp = () => {
+const Popup_Form = ({closePopup}) => {
   const isMd = useMediaQuery("(max-width:1024px)");
   const isLg = useMediaQuery("(max-width: 1280px)");
   const [open, setOpen] = useState(false); // Open the dialog by default
@@ -14,21 +13,19 @@ const LeadFormPopUp = () => {
     name: "",
     email: "",
     mobile: "",
+    preferred_exam: "",
     intake_year: "",
     country: "",
-    source: "Walk- In Invitation - Orientspectra Website",
+    source: "No cost IELTS/TOEFL Training Program - Orientspectra Website",
   });
   const [errors, setErrors] = useState({});
   
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setOpen(true);
-    }, 5000);
-    return () => clearTimeout(timer);
+    setOpen(true);
   }, []);
 
   const handleSubmitData = async () => {
-    const api = "https://send.orientspectra.com/send-email-lead-form-popup";
+    const api = "https://send.orientspectra.com/send-email-nocost-ielts-toefl-training-program";
     try {
       const response = await axios.post(api, formData, {
         headers: {
@@ -40,9 +37,10 @@ const LeadFormPopUp = () => {
           name: "",
           email: "",
           mobile: "",
+          preferred_exam: "",
           intake_year: "",
           country: "",
-          source: "Walk- In Invitation - Orientspectra Website",
+          source: "No cost IELTS/TOEFL Training Program - Orientspectra Website",
         });
         setFormSubmitted(true); // Set formSubmitted to true upon successful submission
       }
@@ -84,6 +82,9 @@ const LeadFormPopUp = () => {
     } else if (!/^\d{10}$/.test(formData.mobile)) {
       newErrors.mobile = "Enter the valid 10 digit mobile number";
     }
+    if (formData.preferred_exam === "") {
+      newErrors.preferred_exam = "Select your Preferred Exam";
+    }
     if (formData.intake_year === "") {
       newErrors.intake_year = "Intake Year is Required";
     }
@@ -112,12 +113,12 @@ const LeadFormPopUp = () => {
     <div>
       <Dialog
         open={open}
-        onClose={handleClose}
+        onClose={closePopup}
         aria-labelledby="popup-dialog-title"
         maxWidth="lg"
         PaperProps={{
           sx: {
-            width: { xs: '90%', sm: '75%', md: '80%', lg: isLg ? "65%" : '51%' },
+            width: { xs: '90%', sm: '65%', md: '60%', lg: isLg ? "40%" : '30%' },
             maxWidth: 'none',
             position: 'relative',
             overflow: "visible",
@@ -137,7 +138,7 @@ const LeadFormPopUp = () => {
           <>
             <IconButton
               aria-label="close"
-              onClick={handleClose}
+              onClick={closePopup}
               sx={{
                 position: 'absolute',
                 right: { xs: '-16px', lg: '-20px' },
@@ -159,10 +160,10 @@ const LeadFormPopUp = () => {
             </IconButton>
             <div className="Dailog-container">
               <div className='DailogContent'>
-                <h2 className="DailogTitle">First Step to Study <span>Abroad</span></h2>
-                <h3>Walk - In Invitation for Spot Profile Evaluation</h3>
+                <h2 className="Dailog_Title">No-Cost <span>IELTS/TOEFL</span>Training Program</h2>
+                {/* <h3>Walk - In Invitation for Spot Profile Evaluation</h3> */}
                 <h3 style={{colro:"black"}}>Himayatnagar, Hyderabad</h3>
-                <p>Register for Personalized Counselling</p>
+                <p>Register for Free IELTS/TOEFL Training</p>
                 <DialogContent>
                   <form onSubmit={handleSubmitValidation}>
                     <div className="popup-text-feild">
@@ -199,6 +200,21 @@ const LeadFormPopUp = () => {
                         />
                         {errors.mobile && <p style={{ color: "red" }}>{errors.mobile}</p>}
                       </div>
+
+                      <div className="popup-form-group">
+                        <select
+                          name="preferred_exam"
+                          className="popup-input-dropdown"
+                          onChange={handleChange}
+                          value={formData.preferred_exam}
+                        >
+                          <option value="">Select Exam</option>
+                          <option value="UK">IELTS</option>
+                          <option value="UK">TOEFL</option>
+                        </select>
+                        {errors.preferred_exam && <p style={{ color: "red" }}>{errors.preferred_exam}</p>}
+                      </div>
+
                       <div className="popup-form-group">
                         <input
                           type="text"
@@ -235,10 +251,9 @@ const LeadFormPopUp = () => {
                       </button>
                     </div>
                   </form>
-                  <p onClick={handleClose} className='SkipNow'>Skip Now</p>
+                  <p onClick={closePopup} className='SkipNow'>Skip Now</p>
                 </DialogContent>
               </div>
-              <img src={CommonEvent} alt="EventImage" className='ImageContainer' />
             </div>
           </>
         )}
@@ -247,4 +262,4 @@ const LeadFormPopUp = () => {
   );
 };
 
-export default LeadFormPopUp;
+export default Popup_Form;

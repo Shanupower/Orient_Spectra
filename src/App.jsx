@@ -42,12 +42,15 @@ import LeadFormPopUp from "./LeadFormPopUp";
 import SwedenCountry from "./Component/Country/Sweden/Country";
 import DUBAICountry from "./Component/Country/Dubai/Country";
 import EuropeEDUFair from "./Ads landing page/Europe-Education-Fair/EuropeEDUFair";
+import TrainingProgram from "./Ads landing page/Training_Program/Landing_Page";
 
 function App() {
   const [openWhatwedo, setWhatwedoOpen] = useState(false);
   const [openbranches, setopenbranches] = useState(false);
   const [studyOverseas, setStudyOverseas] = useState(false);
   const [activeNavbar, setactiveNavbar] = useState(false);
+  const location = useLocation();
+  const [isPopupVisible, setIsPopupVisible] = useState(true);
   const hanldeCloseSubheader = () => {
     setWhatwedoOpen(false);
     setopenbranches(false);
@@ -77,10 +80,14 @@ function App() {
   if (loading) {
     return <Loading />;
   }
+  const restrictedPaths = ["/no-cost-ielts-&-toefl-training-program"];
+  const shouldDisplayPopup = !restrictedPaths.includes(location.pathname);
 
   return (
     <>
+    {shouldDisplayPopup && isPopupVisible && (
       <LeadFormPopUp />
+    )}
       <Navbar
         openWhatwedo={openWhatwedo}
         setWhatwedoOpen={setWhatwedoOpen}
@@ -164,6 +171,8 @@ function App() {
         />
         <Route path="/thank-you" element={<ThankYou />} />
         <Route path="/privacy-policy" element={<Privacy_Policy />} />
+
+        <Route path="/no-cost-ielts-&-toefl-training-program" element={<TrainingProgram />} />
       </Routes>
       <WhatsApp />
       <Footer />

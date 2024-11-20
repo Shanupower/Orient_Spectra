@@ -196,10 +196,10 @@ const LeadFormPopUp = ({closePopup}) => {
                   placeholder="Name"
                   className="popup-input-field"
                   onChange={handleChange}
-                  value={formData.Name}
+                  value={formData.name}
                 />
-                {errors.Name && (
-                  <p style={{ color: "red" }}>{errors.Name}</p>
+                {errors.name && (
+                  <p style={{ color: "red" }}>{errors.name}</p>
                 )}
               </div>
               <div className="popup-form-group">
@@ -209,9 +209,9 @@ const LeadFormPopUp = ({closePopup}) => {
                   placeholder="Email"
                   className="popup-input-field"
                   onChange={handleChange}
-                  value={formData.Email}
+                  value={formData.email}
                 />
-                {errors.Email && <p style={{ color: "red" }}>{errors.Email}</p>}
+                {errors.email && <p style={{ color: "red" }}>{errors.email}</p>}
               </div>
               <div className="popup-form-group">
               <input
@@ -220,9 +220,9 @@ const LeadFormPopUp = ({closePopup}) => {
                   placeholder="Mobile Number"
                   className="popup-input-field"
                   onChange={handleChange}
-                  value={formData.Mobile}
+                  value={formData.mobile}
                 />
-                {errors.Mobile && <p style={{ color: "red" }}>{errors.Mobile}</p>}
+                {errors.mobile && <p style={{ color: "red" }}>{errors.mobile}</p>}
               </div>
               <div className="popup-form-group">
               <input
@@ -231,10 +231,10 @@ const LeadFormPopUp = ({closePopup}) => {
                   placeholder="Intake Year" 
                   className="popup-input-field"
                   onChange={handleChange}
-                  value={formData.Intake_Year}
+                  value={formData.intake_year}
                 />
-                {errors.Intake_Year && (
-                  <p style={{ color: "red" }}>{errors.Intake_Year}</p>
+                {errors.intake_year && (
+                  <p style={{ color: "red" }}>{errors.intake_year}</p>
                 )}
               </div>
 
@@ -255,8 +255,8 @@ const LeadFormPopUp = ({closePopup}) => {
                   <option value="Canada">Canada</option>
                   <option value="Ireland">Ireland</option>
               </select>
-                {errors.Country && (
-                  <p style={{ color: "red" }}>{errors.Country}</p>
+                {errors.country && (
+                  <p style={{ color: "red" }}>{errors.country}</p>
                 )}
             </div>
 
@@ -268,7 +268,7 @@ const LeadFormPopUp = ({closePopup}) => {
               />
               </div> */}
               
-              <input type="hidden" name="Source" className="input-field" value={formData.Source} />
+              <input type="hidden" name="source" className="input-field" value={formData.source} />
               <button className="popup-form-container-button" type="submit">
               Book A Free Call
             </button>
