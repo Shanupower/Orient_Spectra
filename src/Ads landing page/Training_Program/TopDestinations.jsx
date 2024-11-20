@@ -1,3 +1,5 @@
+import Img3 from "../../assets/Training_Program/Page.png";
+
 const TopDestinations = ()=>{
     return(
         <div className="Destination_Container">
@@ -13,7 +15,7 @@ const TopDestinations = ()=>{
                     </p>
                 </div>
                 <div className="Destination-right">
-                    {/* <img src={Img1} alt="preparation" /> */}
+                    <img src={Img3} alt="preparation" />
                 </div>
             </div>
         </div>
