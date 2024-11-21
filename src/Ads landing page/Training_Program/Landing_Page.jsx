@@ -17,7 +17,7 @@ const TrainingProgram =() =>{
             <WhyChoose />
             <Overview />
             <Hightlights />
-            {/* <TopDestinations /> */}
+            <TopDestinations />
             <Testimonials />
             <Accredations />
         </>
