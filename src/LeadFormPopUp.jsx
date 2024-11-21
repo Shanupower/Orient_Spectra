@@ -23,7 +23,7 @@ const LeadFormPopUp = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setOpen(true);
-    }, 5000);
+    }, 2000);
     return () => clearTimeout(timer);
   }, []);
 
