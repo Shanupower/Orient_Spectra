@@ -1,5 +1,5 @@
+import { useMediaQuery } from "@mui/material";
 import Img3 from "../../assets/Training_Program/Page.png";
-
 const TopDestinations = ()=>{
     const isMd = useMediaQuery("(max-width:986px)");
     return(
@@ -8,6 +8,7 @@ const TopDestinations = ()=>{
             {isMd ? (
                 <>
                 <div className="Destination-right">
+                    <h1>Your Gateway to <span>World-Class Education</span></h1>
                     <img src={Img3} alt="preparation" />
                 </div>
                 <div className="Destination-left">
