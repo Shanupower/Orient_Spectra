@@ -364,6 +364,36 @@
       .WhyChoose_Container > p {
         font-size: 18px;
       }
+      .Destination-right {
+        width: 100%;
+        border-radius: 20px;
+      }
+      .Destination-right > img {
+        width: 100%;
+        object-fit: contain;
+        border-radius: 20px;
+      }
+      .Destination-right > h1 {
+        font-size: 30px;
+        text-align: center;
+        font-weight: 600;
+        color: white;
+        margin-bottom: -2rem;
+    }
+    .Destination-right > h1 > span { 
+      color:var(--brand-color);
+    }
+    .Destination-left {
+      width: 100%;
+      margin-top: 1rem;
+    }
+    .Destination-left > p {
+      font-size: 18px;
+    }
+    .Destination-left > h2 {
+      font-size: 20px;
+    }
+
 }
 
 @media (max-width: 1024px) {
@@ -417,6 +447,16 @@
       }
       .DailogBox {
         overflow-y:scroll;
+      }
+      .Destination-left > h1 {
+        font-size: 35px;
+        line-height: 1.2;
+      }
+      .Destination-left > p {
+        font-size: 18px;
+      }
+      .Destination-left > h2 {
+        font-size: 20px;
       }
 }
 
