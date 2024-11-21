@@ -1,20 +1,32 @@
 import "./index.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import { Dialog, useMediaQuery } from "@mui/material";
+import { useLocation } from "react-router-dom";
 
 const TrainingHero =() =>{
     const isLg = useMediaQuery("(max-width: 1280px)");
     const [open, setOpen] = useState(false);
     const [formSubmitted, setFormSubmitted] = useState(false); // Track form submission
+    const location = useLocation();
+    const getSourceFromUrl = () => {
+        return window.location.href; // Full URL with domain
+    };;
     const [formData, setFormData] = useState({
         name: "",
         mobile: "",
         email: "",
         preferred_exam: "",
-        source: "",
+        source: getSourceFromUrl(),
     });
   const [errors, setErrors] = useState({});
+
+  useEffect(() => {
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      source: getSourceFromUrl(),
+    }));
+  }, [location.search, location.pathname]);
 
   const handleSubmitData = async () => {
     const api = "https://send.orientspectra.com/send-email-nocost-ielts-toefl-training-program";
@@ -30,7 +42,7 @@ const TrainingHero =() =>{
           mobile: "",
           email: "",
           preferred_exam: "",
-          source: "",
+          source: getSourceFromUrl(),
         });
         setFormSubmitted(true); // Set formSubmitted to true upon successful submission
         setOpen(true)
@@ -172,8 +184,8 @@ const TrainingHero =() =>{
                                 value={formData.preferred_exam}
                                 >
                                 <option value="">Select Exam</option>
-                                <option value="UK">IELTS</option>
-                                <option value="UK">TOEFL</option>
+                                <option value="IELTS">IELTS</option>
+                                <option value="TOEFL">TOEFL</option>
                                 </select>
                                 {errors.preferred_exam && <p style={{ color: "red" }}>{errors.preferred_exam}</p>}
                             </div>
