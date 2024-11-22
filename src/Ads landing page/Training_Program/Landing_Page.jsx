@@ -6,6 +6,7 @@ import TrainingHero from "./TrainingHero";
 import WhyChoose from "./WhyChoose";
 import Testimonials from "../../Landing_page/Testimonial"
 import TopDestinations from "./TopDestinations";
+import LSQPortalWidget from "./LSQ_widget";
 
 const TrainingProgram =() =>{
     useEffect(() => {
@@ -13,6 +14,7 @@ const TrainingProgram =() =>{
     }, []);
     return(
         <>
+            <LSQPortalWidget/>
             <TrainingHero />
             <WhyChoose />
             <Overview />
