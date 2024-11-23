@@ -40,16 +40,13 @@ const TestimonialsCarousel = () => {
     <div className="gtco-testimonials section">
       <h2>Testimonials Carousel - Cards Comments</h2>
       <OwlCarousel
+        loop={true}
+        margin={10}
+        nav
+        // center={true}
+        autoplay={true}
+        items={3}
         className="owl-theme"
-        loop
-        center
-        margin={0}
-        nav={false}
-        responsive={{
-          0: { items: 1, nav: false },
-          680: { items: 2, nav: false, loop: false },
-          1000: { items: 3, nav: true },
-        }}
       >
         {testimonials.map((testimonial, index) => (
           <div key={index} className="">

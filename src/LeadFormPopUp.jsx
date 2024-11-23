@@ -4,6 +4,7 @@ import axios from 'axios';
 import CloseIcon from '@mui/icons-material/Close';
 import "./index.css";
 import CommonEvent from './assets/Home_page/Common_Event.webp';
+import Img1 from "./assets/Unvercity/Event-Poster.webp";
 
 const LeadFormPopUp = () => {
   const isMd = useMediaQuery("(max-width:1024px)");
@@ -15,8 +16,7 @@ const LeadFormPopUp = () => {
     email: "",
     mobile: "",
     intake_year: "",
-    country: "",
-    source: "Walk- In Invitation - Orientspectra Website",
+    source: "SPOT Assesment for SRH University - Orientspectra Website",
   });
   const [errors, setErrors] = useState({});
   
@@ -41,8 +41,7 @@ const LeadFormPopUp = () => {
           email: "",
           mobile: "",
           intake_year: "",
-          country: "",
-          source: "Walk- In Invitation - Orientspectra Website",
+          source: "SPOT Assesment for SRH University - Orientspectra Website",
         });
         setFormSubmitted(true); // Set formSubmitted to true upon successful submission
       }
@@ -159,8 +158,8 @@ const LeadFormPopUp = () => {
             </IconButton>
             <div className="Dailog-container">
               <div className='DailogContent'>
-                <h2 className="DailogTitle">First Step to Study <span>Abroad</span></h2>
-                <h3>Walk - In Invitation for Spot Profile Evaluation</h3>
+                <h2 className="DailogTitle">Spot Assesment for <br/><span>SRH University</span></h2>
+                {/* <h3>Walk - In Invitation for Spot Profile Evaluation</h3> */}
                 <h3 style={{colro:"black"}}>Himayatnagar, Hyderabad</h3>
                 <p>Register for Personalized Counselling</p>
                 <DialogContent>
@@ -210,24 +209,6 @@ const LeadFormPopUp = () => {
                         />
                         {errors.intake_year && <p style={{ color: "red" }}>{errors.intake_year}</p>}
                       </div>
-                      <div className="popup-form-group">
-                        <select
-                          name="country"
-                          className="popup-input-dropdown"
-                          onChange={handleChange}
-                          value={formData.country}
-                        >
-                          <option value="">Select Country</option>
-                          <option value="UK">USA</option>
-                          <option value="UK">UK</option>
-                          <option value="Germany">Germany</option>
-                          <option value="France">France</option>
-                          <option value="Australia">Australia</option>
-                          <option value="Canada">Canada</option>
-                          <option value="Ireland">Ireland</option>
-                        </select>
-                        {errors.country && <p style={{ color: "red" }}>{errors.country}</p>}
-                      </div>
 
                       <input type="hidden" name="source" className="input-field" value={formData.source} />
                       <button className="popup-form-container-button" type="submit">
@@ -238,7 +219,7 @@ const LeadFormPopUp = () => {
                   <p onClick={handleClose} className='SkipNow'>Skip Now</p>
                 </DialogContent>
               </div>
-              <img src={CommonEvent} alt="EventImage" className='ImageContainer' />
+              <img src={Img1} alt="EventImage" className='ImageContainer' />
             </div>
           </>
         )}

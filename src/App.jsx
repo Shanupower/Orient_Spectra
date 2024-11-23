@@ -43,6 +43,7 @@ import SwedenCountry from "./Component/Country/Sweden/Country";
 import DUBAICountry from "./Component/Country/Dubai/Country";
 import EuropeEDUFair from "./Ads landing page/Europe-Education-Fair/EuropeEDUFair";
 import TrainingProgram from "./Ads landing page/Training_Program/Landing_Page";
+import Event_LandingPage from "./Ads landing page/SrhUniversityEvent/Event_LandingPage";
 
 function App() {
   const [openWhatwedo, setWhatwedoOpen] = useState(false);
@@ -80,7 +81,7 @@ function App() {
   if (loading) {
     return <Loading />;
   }
-  const restrictedPaths = ["/no-cost-ielts-&-toefl-training-program"];
+  const restrictedPaths = ["/no-cost-ielts-&-toefl-training-program", "/spot-assesment-for-srh-university-2024"];
   const shouldDisplayPopup = !restrictedPaths.includes(location.pathname);
 
   return (
@@ -173,6 +174,7 @@ function App() {
         <Route path="/privacy-policy" element={<Privacy_Policy />} />
 
         <Route path="/no-cost-ielts-&-toefl-training-program" element={<TrainingProgram />} />
+        <Route path="/spot-assesment-for-srh-university-2024" element={<Event_LandingPage />} />
       </Routes>
       <WhatsApp />
       <Footer />

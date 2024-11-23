@@ -5,6 +5,8 @@ import "./index.css";
 import axios from 'axios';
 import CloseIcon from '@mui/icons-material/Close';
 import CommonEvent from '../assets/Home_page/Common_Event.webp';
+import Img1 from "../assets/Unvercity/Event-Poster.webp";
+
 
 const LeadFormPopUp = ({closePopup}) => {
   const isMd = useMediaQuery("(max-width:1024px)");
@@ -22,8 +24,8 @@ const LeadFormPopUp = ({closePopup}) => {
     email: "",
     mobile: "",
     intake_year: "",
-    country: "",
-    source: "Walk- In Invitation - Orientspectra Website",
+    // country: "",
+    source: "SPOT Assesment for SRH University - Orientspectra Website",
   });
   const [errors, setErrors] = useState({});
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -52,7 +54,7 @@ const LeadFormPopUp = ({closePopup}) => {
           mobile: "",
           intake_Year: "",
           country: "",
-          source: "UK & EU EDU FAIR",
+          source: "SPOT Assesment for SRH University",
         });
       }
     } catch (errors) {
@@ -186,8 +188,8 @@ const LeadFormPopUp = ({closePopup}) => {
             </IconButton>
           <div className="Dailog-container">
           <div className='DailogContent'>
-            <h2 className="DailogTitle">First Step to Study <span>Abroad</span></h2>
-            <h3>Walk - In Invitation for Spot Profile Evaluation</h3>
+            <h2 className="DailogTitle">SPOT Assesment for <br/><span>SRH University</span></h2>
+            {/* <h3>Walk - In Invitation for Spot Profile Evaluation</h3> */}
             <h3 style={{colro:"black"}}>Himayatnagar, Hyderabad</h3>
             <p>Register for Personalized Counselling</p>
           <DialogContent>
@@ -242,7 +244,7 @@ const LeadFormPopUp = ({closePopup}) => {
                 )}
               </div>
 
-              <div className="popup-form-group">
+              {/* <div className="popup-form-group">
               <select
                 type="text"
                 name="country"
@@ -262,7 +264,7 @@ const LeadFormPopUp = ({closePopup}) => {
                 {errors.country && (
                   <p style={{ color: "red" }}>{errors.country}</p>
                 )}
-            </div>
+            </div> */}
 
               {/* reCAPTCHA component */}
               {/* <div style={{ transform: 'scale(0.85)', transformOrigin: '0 0' }}>
@@ -281,7 +283,7 @@ const LeadFormPopUp = ({closePopup}) => {
             <p onClick={closePopup} className='SkipNow'>Skip Now </p>
           </DialogContent>
           </div>
-          <img src={CommonEvent} alt="EventImage" className='ImageContainer'/>
+          <img src={Img1} alt="EventImage" className='ImageContainer'/>
           </div>
            
           </>
