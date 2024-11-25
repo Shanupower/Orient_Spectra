@@ -18,6 +18,10 @@
     width: 55%;
     padding: 5rem 2rem 0 8rem;
 }
+.EventHero-section > Img {
+    width: 300px;
+    object-fit: contain;
+}
 .EventHero-section > h1 {
     font-size: 52px;
     font-weight: 600;
