@@ -4,7 +4,7 @@ import axios from 'axios';
 import CloseIcon from '@mui/icons-material/Close';
 import "./index.css";
 import CommonEvent from './assets/Home_page/Common_Event.webp';
-import Img1 from "./assets/Unvercity/Event-Poster.webp";
+import Img1 from "./assets/Unvercity/Euschool-Poster.webp";
 
 const LeadFormPopUp = () => {
   const isMd = useMediaQuery("(max-width:1024px)");
@@ -16,7 +16,7 @@ const LeadFormPopUp = () => {
     email: "",
     mobile: "",
     intake_year: "",
-    source: "SPOT Assesment for SRH University - Orientspectra Website",
+    source: "EU-Bussiness School - Website PopUp",
   });
   const [errors, setErrors] = useState({});
   
@@ -41,7 +41,7 @@ const LeadFormPopUp = () => {
           email: "",
           mobile: "",
           intake_year: "",
-          source: "SPOT Assesment for SRH University - Orientspectra Website",
+          source: "EU-Bussiness School - Website PopUp",
         });
         setFormSubmitted(true); // Set formSubmitted to true upon successful submission
       }
@@ -158,10 +158,10 @@ const LeadFormPopUp = () => {
             </IconButton>
             <div className="Dailog-container">
               <div className='DailogContent'>
-                <h2 className="DailogTitle">Spot Assesment for <br/><span>SRH University</span></h2>
-                {/* <h3>Walk - In Invitation for Spot Profile Evaluation</h3> */}
-                <h3 style={{colro:"black"}}>Himayatnagar, Hyderabad</h3>
-                <p>Register for Personalized Counselling</p>
+                <h2 className="DailogTitle">Apply for <span>EU Bussiness School </span></h2>
+                <h3>& Get <span>Rs 2 Lakhs</span> Discount</h3>
+                {/* <h3 style={{colro:"black"}}>Himayatnagar, Hyderabad</h3> */}
+                <p>Register before 29th November</p>
                 <DialogContent>
                   <form onSubmit={handleSubmitValidation}>
                     <div className="popup-text-feild">
