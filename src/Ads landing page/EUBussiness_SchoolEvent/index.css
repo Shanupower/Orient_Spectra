@@ -1,0 +1,430 @@
+.EUHero-Container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../../assets/Unvercity/Germany-University.webp");
+    background-blend-mode: darken;
+    background-color: #000000af;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    flex-wrap: wrap;
+ }
+ .EventHero-section {
+     position: relative;
+     width: 55%;
+     padding: 5rem 2rem 0 8rem;
+ }
+ .EventHero-section > h1 > span > Img {
+     width: 200px;
+     object-fit: contain;
+     margin-bottom: -1rem;
+ }
+ .EventHero-section > h2,
+ .EventHero-section > h1 {
+     font-size: 52px;
+     font-weight: 600;
+     line-height: 1.2;
+     color: white;
+     margin-bottom: 2rem;
+ }
+ .EventHero-section > h1 > span,
+ .EventHero-section > p > span {
+     color: var(--brand-color);
+ }
+ .EventHero-section > p {
+     font-size: 22px;
+     font-weight: 500;
+     color: white;
+ }
+ .EventHero-section > h3 {
+    font-size: 22px;
+     font-weight: 500;
+     color: white;
+     margin-top: 10px;
+ }
+ .highlighted-text {
+    padding: 5px 10px;
+ }
+ .EventHero-right {
+     position: relative;
+     background-color: white;
+     border-radius: 15px;
+     width: 35%;
+     padding: 2rem;
+     margin-block: 2rem;
+ }
+ .EventHero-right > p {
+     font-size: 25px;
+     font-weight: 600;
+     text-align: center;
+ }
+ .Event-Form-section {
+   gap: 1.5rem;
+   padding: 2rem 2.5rem 1rem 2.5rem;
+   justify-content: center;
+ }
+ .Event-Form-groups {
+     width: 100%;
+     margin-bottom: 1rem;
+ }
+ .Event-Form-text-feild {
+   width: 100%;
+   margin-top: 10px;
+   padding: 13px;
+   border: 1px solid var(--brand-color);
+   border-radius: 40px;
+   font-size: 16px;
+ }
+ .Event-Form-container-button {
+   width: 100%;
+   font-size: 22px;
+   font-weight: 500;
+   background-color: var(--brand-color);
+   border: none;
+   color: white;
+   cursor: pointer;
+   border-radius: 50px;
+   padding: 15px;
+ }
+ .Event_Details-container {
+     padding: 2rem 6%;
+     background-color: white;
+ }
+ .Event_Details-section {
+     display: flex;
+     justify-content:space-between;
+     flex-wrap: wrap;
+     gap: 2rem;
+ }
+ .Whywe-left,
+ .Event_Details-left {
+     width: 50%;
+     align-self: center;
+ }
+ .Event_Details-left > h1 {
+     font-size: 45px;
+     font-weight: 600;
+ }
+ .Event_Details-left > p {
+     margin: 26px 0 20px;
+     font-size: 22px;
+     font-weight: 400;
+ }
+ .Event_Details-left > p > span {
+     color: black;
+     font-weight: 700;
+ }
+ .Event_Details-right {
+     width: 40%;
+     border-radius: 20px;
+ }
+ .Event_Details-right > img {
+     width: 100%;
+     object-fit: fill;
+     border-radius: 30px;
+     padding: 15px;
+ }
+ .Whywe-container {
+     padding: 2rem 6%;
+     background-color: whitesmoke;
+ }
+ .Whywe-left > h1 {
+     font-size: 45px;
+     font-weight: 600;
+     color: #4985c5;
+     margin-bottom: 2rem;
+ }
+ .Whywe-left > p {
+     color: black;
+     font-size: 22px;
+     font-weight: 500;
+     margin: 26px 0 15px;
+ }
+ .Whywe-list {
+     padding: 10px 0 0 0;
+ }
+ .Whywe-list > li {
+     display: flex;
+     gap: 10px;
+ }
+ .Whywe-list > li {
+     font-size: 22px;
+     font-weight: 500;
+     color: black;
+     margin: 10px 0 5px 0;
+ }
+ .Whywe-list > li > img {
+     width: 25px;
+     height: 25px;
+     align-self: center;
+ }
+ .gtco-testimonials {
+     padding: 3rem 6%;
+     background-color: #ffe7c9;
+ }
+ .gtco-testimonials > h1 {
+     color: black;
+     text-align: center;
+     font-size: 40px;
+ }
+ .gtco-testimonials > p{
+     text-align: center;
+     font-size: 22px;
+     color: black;
+     margin-top: 20px;
+ }
+ .Testimonial-container {
+     padding: 2rem;
+     width: 100%;
+ }
+ .testimonial-card-body {
+     background-color: whitesmoke;
+     border: 2px solid whitesmoke;
+     border-radius: 10px;
+     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.192);
+     padding: 5%;
+ }
+ .testimonial-card-body > p {
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 20px;
+ }
+ .testimonial-card-body > h1 {
+     font-size: 25px;
+     color: #4985c5;
+  }
+ 
+ @media (max-width: 986px) {
+     .EUHero-Container {
+         padding: 0;
+         height: fit-content;
+         gap: 0;
+     }
+     .EventHero-section {
+         width: 100%;
+         padding: 7rem 1rem 0 1.5rem;
+     }
+     .EventHero-section > h2,
+     .EventHero-section > h1 {
+         font-size: 28px;
+         line-height: 1.3;
+         margin-bottom: 1rem;
+     }
+     .EventHero-section > h3 {
+        font-size: 18px;
+        margin-top: 10px;
+     }
+     .highlighted-text {
+        padding: 5px;
+     }
+     .EventHero-section > h1 > span > Img {
+        width: 150px;
+        object-fit: contain;
+        margin-bottom: -1rem;
+    }
+     .EventHero-section > p {
+         font-size: 16px;
+     }
+     .EventHero-right {
+         width: 100%;
+         padding: 1.5rem;
+         margin: 2rem;
+     }
+     .EventHero-right > p {
+         font-size: 18px;
+         margin-bottom: 1rem;
+     }
+     .Event-Form-section {
+       gap: 1rem;
+       padding: 0;
+     }
+     .Event-Form-text-feild {
+       width: 100%;
+       margin-top: 10px;
+       padding: 7px;
+     }
+     .Event-Form-container-button {
+       width: 100%;
+       font-size: 18px;
+       font-weight: 500;
+       background-color: var(--brand-color);
+       border: none;
+       color: white;
+       cursor: pointer;
+       border-radius: 50px;
+       padding: 10px;
+     }
+     .Event_Details-right {
+         width: 100%;
+     }
+     .Event_Details-left {
+         width: 100%;
+         margin-bottom: 1rem;
+     }
+     .Event_Details-right {
+         width: 100%;
+     }
+     .Event_Details-right > img {
+        border-radius: 20px;
+     }
+     .Event_Details-right > h1 {
+         font-size: 35px;
+         font-weight: 600;
+     }
+     .Event_Details-left > p {
+         margin: 26px 0 10px;
+         font-size: 18px;
+         font-weight: 400;
+     }
+     .Whywe-left {
+         width: 100%;
+     }
+     .Whywe-left > h1 {
+         font-size: 25px;
+     }
+     .Whywe-left > p {
+         font-size: 18px;
+     }
+     .Whywe-list > li {
+         font-size: 18px;
+     }
+     .Whywe-list > li > img {
+        width: 20px;
+        height: 20px;
+     }
+     .gtco-testimonials > h1 {
+         font-size: 31px;
+     }
+     .gtco-testimonials > p{
+         font-size: 18px;
+         margin-top: 10px;
+     }
+     .Testimonial-container {
+         padding: 1.7rem;
+     }
+     .testimonial-card-body {
+         padding: 5%;
+     }
+     .owl-prev {
+         position: absolute;
+         width: 40px;
+         height: 40px;
+         border: 2px solid var(--text-color-darkblack) !important;
+         border-radius: 50% !important;
+         margin-right: 1rem;
+         top: 8.6rem;
+         left: -1.8rem;
+       }
+       .owl-next {
+         position: absolute;
+         top: 8.6rem;
+         right: -1.8rem;
+         width: 40px;
+         height: 40px;
+         border: 2px solid var(--text-color-darkblack) !important;
+         border-radius: 50% !important;
+         margin-right: 1rem;
+       }
+       .testimonial-card-body > p {
+         font-size: 18px;
+      }
+      .testimonial-card-body > h1 {
+          font-size: 25px;
+          color: #4985c5;
+       }
+ }
+ 
+ @media (max-width: 1024px) {
+     .EventHero-section > h2,
+     .EventHero-section > h1 {
+         font-size: 35px;
+     }
+     .EventHero-section > p {
+         font-size: 18px;
+     }
+     .EventHero-section > h3 {
+        font-size: 18px;
+        margin-top: 10px;
+     }
+     .EventHero-right {
+         padding: 2rem;
+         margin-block: 8rem;
+     }
+     .EventHero-right > p {
+         font-size: 18px;
+         margin-bottom: 1rem;
+     }
+     .Event-Form-section {
+         gap: 1rem;
+         padding: 0;
+       }
+       .Event-Form-text-feild {
+         margin-top: 10px;
+         padding: 7px;
+       }
+       .Event-Form-container-button {
+         font-size: 18px;
+         padding: 10px;
+       }
+       .Event_Details-left > h1 {
+         font-size: 35px;
+         text-align: left;
+     }
+     .Event_Details-left > p {
+         margin: 26px 0 10px;
+         font-size: 18px;
+         font-weight: 400;
+     }
+     .Whywe-left > h1 {
+         font-size: 31px;
+     }
+     .Whywe-left > p {
+         font-size: 18px;
+     }
+     .Whywe-list > li {
+         font-size: 18px;
+     }
+     .Whywe-list > li > img {
+        width: 20px;
+        height: 20px;
+     }
+     .gtco-testimonials > h1 {
+         font-size: 31px;
+     }
+     .gtco-testimonials > p{
+         font-size: 18px;
+         margin-top: 10px;
+     }
+     .testimonial-card-body > p {
+         font-size: 18px;
+     }
+      .testimonial-card-body > h1 {
+          font-size: 25px;
+          color: #4985c5;
+     }
+ }
+ 
+ @media (max-width: 1280px) {
+     .DailogContent > h3 {
+       font-size: 18px;
+       color: #306398;
+       font-weight: 600;
+       text-align: center;
+     }
+     .DailogContent > p {
+       font-size: 15px;
+       color: black;
+       text-align: center;
+     }
+     .DailogTitle {
+       font-size: 22px;
+       text-align: center;
+     }
+     .Dailog-container {
+       padding: 1.2rem;
+     }
+ }

@@ -33,7 +33,6 @@ import UK_EDU_FAIR from "./Ads landing page/UK_EDU_FAIR";
 import ThankYou from "./Ads landing page/ThankYou";
 import UK_Jan_2025 from "./Ads landing page/UK_Januuary_2025/UK_Jan_2025";
 import Privacy_Policy from "./Component/Privacy_Policy/Privacy_Policy";
-import USA_SEPTEMBER_FAIR_2024 from "./Ads landing page/USA_SEPT_FAIR_2024/USA_SEPTEMBER_FAIR_2024";
 import NewsDetails from "./Component/NewsPR/NewsDetails";
 import EventDetails from "./Component/Event/EventDetails";
 import Offline_Marketing_Club from "./Ads landing page/OfflineMarketingClub/Offline_Marketing_Club";
@@ -44,6 +43,7 @@ import DUBAICountry from "./Component/Country/Dubai/Country";
 import EuropeEDUFair from "./Ads landing page/Europe-Education-Fair/EuropeEDUFair";
 import TrainingProgram from "./Ads landing page/Training_Program/Landing_Page";
 import Event_LandingPage from "./Ads landing page/SrhUniversityEvent/Event_LandingPage";
+import EU_LandingPage from "./Ads landing page/EUBussiness_SchoolEvent/EU_Landing_page";
 
 function App() {
   const [openWhatwedo, setWhatwedoOpen] = useState(false);
@@ -157,11 +157,6 @@ function App() {
         <Route path="/uk-education-fair" element={<UK_Jan_2025 />} />
         <Route path="/uk-education-fair?source=hotstar" element={<UK_Jan_2025 />} />
 
-
-        <Route
-          path="/usa-september-fair-2024"
-          element={<USA_SEPTEMBER_FAIR_2024 />}
-        />
         <Route
           path="/europe-education-fair"
           element={<EuropeEDUFair />}
@@ -175,6 +170,7 @@ function App() {
 
         <Route path="/no-cost-ielts-&-toefl-training-program" element={<TrainingProgram />} />
         <Route path="/spot-assesment-for-srh-university-2024" element={<Event_LandingPage />} />
+        <Route path="/eubussiness-school-apply-for-march-intake" element={<EU_LandingPage />} />
       </Routes>
       <WhatsApp />
       <Footer />

@@ -1,33 +1,44 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import "./index.css";
+import { useLocation } from 'react-router-dom';
+import { Dialog, useMediaQuery } from '@mui/material';
 const LeadForm = ({ source }) => { 
+  const isLg = useMediaQuery("(max-width: 1280px)");
+  const [open, setOpen] = useState(false);
+  const [formSubmitted, setFormSubmitted] = useState(false); // Track form submission
+  const location = useLocation();
+  const getSourceFromUrl = () => {
+    return window.location.href; // Full URL with domain
+  };
   const [formData, setFormData] = useState({
-    Name: "",
-    Email: "",
-    Mobile: "",
-    Intake_Year: "",
-    Source: source,
+        name: "",
+        mobile: "",
+        email: "",
+        intake_year: "",
+        source: getSourceFromUrl(),
   });
 
   const [errors, setErrors] = useState({});
-
+ 
   const handleSubmitData = async () => {
-    const api = "https://strapi.orientspectra.com/api/lead-form-hompages";
+    const api = "https://send.orientspectra.com/send-email-landing-pages";
     try {
-      const response = await axios.post(api, {
-        data: formData,
+      const response = await axios.post(api, formData, {
+        headers: {
+          "Content-Type": "application/json",  // Ensure content type is JSON
+        }
       });
-      console.log(formData, "formdata");
       if (response.status === 200) {
-        alert("Form submitted successfully");
         setFormData({
-          Name: "",
-          Email: "",
-          Mobile: "",
-          Intake_Year: "",
-          Source: source,
+          name: "",
+          mobile: "",
+          email: "",
+          intake_year: "",
+          source: getSourceFromUrl(),
         });
+        setFormSubmitted(true); // Set formSubmitted to true upon successful submission
+        setOpen(true)
       }
     } catch (error) {
       console.log(error);
@@ -54,21 +65,21 @@ const LeadForm = ({ source }) => {
   const validate = () => {
     const newErrors = {};
 
-    if (formData.Name === "") {
-      newErrors.Name = "First Name is Required";
+    if (formData.name === "") {
+      newErrors.name = "First Name is Required";
     }
-    if (formData.Email === "") {
-      newErrors.Email = "Email Id is Required";
-    } else if (!/\S+@\S+\.\S+/.test(formData.Email)) {
-      newErrors.Email = "Email is not valid";
+    if (formData.email === "") {
+      newErrors.email = "Email Id is Required";
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = "Email is not valid";
     }
-    if (formData.Mobile === "") {
-      newErrors.Mobile = "Enter the Mobile Number";
-    } else if (!/^\d{10}$/.test(formData.Mobile)) {
-      newErrors.Mobile = "Enter a valid 10-digit mobile number";
+    if (formData.mobile === "") {
+      newErrors.mobile = "Enter the Mobile Number";
+    } else if (!/^\d{10}$/.test(formData.mobile)) {
+      newErrors.mobile = "Enter a valid 10-digit mobile number";
     }
-    if (formData.Intake_Year === "") {
-      newErrors.Intake_Year = "Intake Year is Required";
+    if (formData.intake_year === "") {
+      newErrors.intake_year = "Intake Year is Required";
     }
     return newErrors;
   };
@@ -83,67 +94,97 @@ const LeadForm = ({ source }) => {
     }
   };
 
+  const handleClose = () => {
+    setOpen(false);
+  };
   return (
     <>
-     {/* <div className="lead-form-container"> */}
-      <h3>Register for Personalized Counselling</h3>
-      <form onSubmit={handleSubmitValidation}>
-        <div className="text-field container">
-          <div className="form-fields">
-            <input
-              type="text"
-              name="Name"
-              placeholder="Name"
-              className="input-fields"
-              onChange={handleChange}
-              value={formData.Name}
-            />
-            {errors.Name && <p style={{ color: "red" }}>{errors.Name}</p>}
-          </div>
-
-          <div className="form-fields">
-            <input
-              type="text"
-              name="Email"
-              placeholder="Email"
-              className="input-fields"
-              onChange={handleChange}
-              value={formData.Email}
-            />
-            {errors.Email && <p style={{ color: "red" }}>{errors.Email}</p>}
-          </div>
-
-          <div className="form-fields">
-            <input
-              type="text"
-              name="Mobile"
-              placeholder="Mobile Number"
-              className="input-fields"
-              onChange={handleChange}
-              value={formData.Mobile}
-            />
-            {errors.Mobile && <p style={{ color: "red" }}>{errors.Mobile}</p>}
-          </div>
-
-          <div className="form-fields">
-            <input
-              type="text"
-              name="Intake_Year"
-              placeholder="Intake Year"
-              className="input-fields"
-              onChange={handleChange}
-              value={formData.Intake_Year}
-            />
-            {errors.Intake_Year && (
-              <p style={{ color: "red" }}>{errors.Intake_Year}</p>
-            )}
-          </div>
-          <input type="hidden" name="Source" className="input-fields" />
-          <button className="form-button" type="submit">
-            Book A Free Call
-          </button>
+    <div>
+            <Dialog
+                open={open}
+                // onClose={closePopup}
+                aria-labelledby="popup-dialog-title"
+                maxWidth="lg"
+                PaperProps={{
+                sx: {
+                    width: { xs: '90%', sm: '65%', md: '60%', lg: isLg ? "40%" : '30%' },
+                    maxWidth: 'none',
+                    position: 'relative',
+                    overflow: "visible",
+                },
+                }}
+                className='DailogBox'
+            >
+                {formSubmitted && (
+                <div className="Success-container">
+                    <div className="success-message">
+                    <img src="https://strapi.orientspectra.com/uploads/luxa_org_no_background_green_double_circle_check_mark_78370_1749_c6ee2071c0.webp" alt="Success" />
+                    <h2>Thank you for your response!</h2>
+                    <p onClick={handleClose}>Go Back</p>
+                    </div>
+                </div>
+                )}
+            </Dialog>
         </div>
-      </form>
+      {/* <div className="lead-form-container"> */}
+        <h3>Register for Personalized Counselling</h3>
+        <form onSubmit={handleSubmitValidation}>
+          <div className="text-field container">
+            <div className="form-fields">
+              <input
+                type="text"
+                name="name"
+                placeholder="Name"
+                className="input-fields"
+                onChange={handleChange}
+                value={formData.name}
+              />
+              {errors.name && <p style={{ color: "red" }}>{errors.name}</p>}
+            </div>
+
+            <div className="form-fields">
+              <input
+                type="text"
+                name="email"
+                placeholder="Email"
+                className="input-fields"
+                onChange={handleChange}
+                value={formData.email}
+              />
+              {errors.email && <p style={{ color: "red" }}>{errors.email}</p>}
+            </div>
+
+            <div className="form-fields">
+              <input
+                type="text"
+                name="mobile"
+                placeholder="Mobile Number"
+                className="input-fields"
+                onChange={handleChange}
+                value={formData.mobile}
+              />
+              {errors.mobile && <p style={{ color: "red" }}>{errors.mobile}</p>}
+            </div>
+
+            <div className="form-fields">
+              <input
+                type="text"
+                name="intake_year"
+                placeholder="Intake Year"
+                className="input-fields"
+                onChange={handleChange}
+                value={formData.intake_year}
+              />
+              {errors.intake_year && (
+                <p style={{ color: "red" }}>{errors.intake_year}</p>
+              )}
+            </div>
+            <input type="hidden" name="source" className="input-fields" />
+            <button className="form-button" type="submit">
+              Book A Free Call
+            </button>
+          </div>
+        </form>
       </>
   );
 };

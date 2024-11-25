@@ -3,8 +3,9 @@ import Divider from "../Component/Common/Divider";
 import "./index.css";
 import Marquee from "react-fast-marquee";
 import axios from "axios";
-import { useMediaQuery } from "@mui/material";
+import { Dialog, useMediaQuery } from "@mui/material";
 import Badge from "../assets/Home_page/AwardBadge.webp";
+import { useLocation } from "react-router-dom";
 
 
 const DiscoveryData = [
@@ -35,37 +36,44 @@ const DiscoveryData = [
   },
 ]
 const Discovery = () => {
+  const isLg = useMediaQuery("(max-width: 1280px)");
+  const [open, setOpen] = useState(false);
+  const [formSubmitted, setFormSubmitted] = useState(false); // Track form submission
+  const location = useLocation();
+  const getSourceFromUrl = () => {
+    return window.location.href; // Full URL with domain
+  };
 
   const [formData, setFormData] = useState({
-    Name: "",
-    Email: "",
-    Mobile: "",
-    Intake_Year: "",
-    Country: "",
-    Source: "Homepage",
+    name: "",
+        mobile: "",
+        email: "",
+        intake_year: "",
+        country:"",
+        source: getSourceFromUrl(),
   });
 
   const [errors, setErrors] = useState({});
 
   const handleSubmitData = async () => {
-    const api = "https://strapi.orientspectra.com/api/lead-form-hompages";
+    const api = "https://send.orientspectra.com/send-email-landing-pages";
     try {
-      const response = await axios.post(api, {
-        data: formData,
+      const response = await axios.post(api, formData, {
+        headers: {
+          "Content-Type": "application/json",  // Ensure content type is JSON
+        }
       });
-      console.log(formData,"formdata");
       if (response.status === 200) {
-        alert("Form submitted successfully");
-
-       
         setFormData({
-          Name: "",
-          Email: "",
-          Mobile: "",
-          Intake_Year: "",
-          Country: "",
-          Source: "Homepage",
+          name: "",
+          mobile: "",
+          email: "",
+          intake_year: "",
+          country:"",
+          source: getSourceFromUrl(),
         });
+        setFormSubmitted(true); // Set formSubmitted to true upon successful submission
+        setOpen(true)
       }
     } catch (errors) {
       console.log(errors);
@@ -92,24 +100,24 @@ const Discovery = () => {
   const Validation = () => {
     const newErrors = {};
 
-    if (formData.Name === "") {
-      newErrors.Name = "Required";
+    if (formData.name === "") {
+      newErrors.name = "Required";
     }
-    if (formData.Email === "") {
-      newErrors.Email = "Required";
-    } else if (!/\S+@\S+\.\S+/.test(formData.Email)) {
-      newErrors.Email = "Email is not valid";
+    if (formData.email === "") {
+      newErrors.email = "Required";
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = "Email is not valid";
     }
-    if (formData.Mobile === "") {
-      newErrors.Mobile = "Required";
-    } else if (!/^\d{10}$/.test(formData.Mobile)) {
-      newErrors.Mobile = "Enter the valid mobile number";
+    if (formData.mobile === "") {
+      newErrors.mobile = "Required";
+    } else if (!/^\d{10}$/.test(formData.mobile)) {
+      newErrors.mobile = "Enter the valid mobile number";
     }
-    if (formData.Intake_Year === "") {
-      newErrors.Intake_Year = "Required";
+    if (formData.intake_year === "") {
+      newErrors.intake_year = "Required";
     }
-    if (formData.Country === "") {
-      newErrors.Country = "Required";
+    if (formData.country === "") {
+      newErrors.country = "Required";
     }
     return newErrors;
   };
@@ -124,6 +132,12 @@ const Discovery = () => {
     }
   };
   const isSm = useMediaQuery("(max-width:986px)");
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+
   return (
     <div className=" discovery-section">
       {isSm ? (
@@ -153,6 +167,34 @@ const Discovery = () => {
           {/* // "https://strapi.orientspectra.com/uploads/9e03ad56_1b80_4ca6_96b3_da6acc4f738b_removebg_preview_42fd338519.webp" /> */}
       </div>
       )}
+
+          <div>
+            <Dialog
+                open={open}
+                // onClose={closePopup}
+                aria-labelledby="popup-dialog-title"
+                maxWidth="lg"
+                PaperProps={{
+                sx: {
+                    width: { xs: '90%', sm: '65%', md: '60%', lg: isLg ? "40%" : '30%' },
+                    maxWidth: 'none',
+                    position: 'relative',
+                    overflow: "visible",
+                },
+                }}
+                className='DailogBox'
+            >
+                {formSubmitted && (
+                <div className="Success-container">
+                    <div className="success-message">
+                    <img src="https://strapi.orientspectra.com/uploads/luxa_org_no_background_green_double_circle_check_mark_78370_1749_c6ee2071c0.webp" alt="Success" />
+                    <h2>Thank you for your response!</h2>
+                    <p onClick={handleClose}>Go Back</p>
+                    </div>
+                </div>
+                )}
+            </Dialog>
+          </div>
         
       <div className="discoverTextCard">
         <p>
@@ -168,59 +210,59 @@ const Discovery = () => {
             <div className="form-group">
             <input
                 type="text"
-                name="Name"
+                name="name"
                 placeholder="Name"
                 className="input-field"
                 onChange={handleChange}
-                value={formData.Name}
+                value={formData.name}
               />
-              {errors.Name && (
-                <p style={{ color: "red" }}>{errors.Name}</p>
+              {errors.name && (
+                <p style={{ color: "red" }}>{errors.name}</p>
               )}
             </div>
             <div className="form-group">
             <input
                 type="text"
-                name="Email"
+                name="email"
                 placeholder="Email"
                 className="input-field"
                 onChange={handleChange}
-                value={formData.Email}
+                value={formData.email}
               />
-              {errors.Email && <p style={{ color: "red" }}>{errors.Email}</p>}
+              {errors.email && <p style={{ color: "red" }}>{errors.email}</p>}
             </div>
             <div className="form-group">
             <input
                 type="text"
-                name="Mobile"
+                name="mobile"
                 placeholder="Mobile Number"
                 className="input-field"
                 onChange={handleChange}
-                value={formData.Mobile}
+                value={formData.mobile}
               />
-              {errors.Mobile && <p style={{ color: "red" }}>{errors.Mobile}</p>}
+              {errors.mobile && <p style={{ color: "red" }}>{errors.mobile}</p>}
             </div>
             <div className="form-group">
             <input
                 type="text"
-                name="Intake_Year"
+                name="intake_year"
                 placeholder="Intake Year" 
                 className="input-field"
                 onChange={handleChange}
-                value={formData.Intake_Year}
+                value={formData.intake_year}
               />
-              {errors.Intake_Year && (
-                <p style={{ color: "red" }}>{errors.Intake_Year}</p>
+              {errors.intake_year && (
+                <p style={{ color: "red" }}>{errors.intake_year}</p>
               )}
             </div>
 
             <div className="form-group2">
                         <select
-                          name="Country"
+                          name="country"
                           className="input-field"
                           placeholder="Select Country" 
                           onChange={handleChange}
-                          value={formData.Country}
+                          value={formData.country}
                         >
                           <option value="">Select Country</option>
                           <option value="USA">USA</option>
@@ -231,9 +273,9 @@ const Discovery = () => {
                           <option value="Canada">Canada</option>
                           <option value="Ireland">Ireland</option>
                         </select>
-                        {errors.Country && <p style={{ color: "red" }}>{errors.Country}</p>}
+                        {errors.country && <p style={{ color: "red" }}>{errors.country}</p>}
                       </div>
-            <input type="hidden" name="Source" className="input-field" value={formData.Source} />
+            <input type="hidden" name="Source" className="input-field" />
             <button className="form-container-button" type="submit">
             Book A Free Call
           </button>

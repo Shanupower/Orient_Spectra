@@ -3,9 +3,9 @@ import "./index.css";
 import { useLocation } from "react-router-dom";
 import { Dialog, useMediaQuery } from "@mui/material";
 import axios from "axios";
-import Img1 from "../../assets/Unvercity/SRH-University.webp";
+import Img1 from "../../assets/Unvercity/Euschool.webp";
 
-const EventHero =() =>{
+const EUHero =() =>{
     const isLg = useMediaQuery("(max-width: 1280px)");
     const [open, setOpen] = useState(false);
     const [formSubmitted, setFormSubmitted] = useState(false); // Track form submission
@@ -30,7 +30,7 @@ const EventHero =() =>{
   }, [location.search, location.pathname]);
 
   const handleSubmitData = async () => {
-    const api = "https://send.orientspectra.com/send-email-ads-landing-page";
+    const api = "https://send.orientspectra.com/send-email-ads-landing-page-2";
     try {
       const response = await axios.post(api, formData, {
         headers: {
@@ -134,17 +134,17 @@ const EventHero =() =>{
                 )}
             </Dialog>
         </div>
-        <div className="EventHero-Container">
+        <div className="EUHero-Container">
             <div className="EventHero-section">
-                    <h1>Spot Assessment for <br />
-                    {/* <span>SRH University - Germany</span>  */}
+                    <h1>Apply for   
+                    <span> <img src={Img1}/> </span> 
                     </h1>
-                    <img src={Img1}/>
-                    <p>Attend our Spot Assessment <span><b>SRH University - Germany</b></span> for to talk directly with university delegates 
-                        and select the best university and course for your career goal. Our experts 
-                        will walk you through application process, scholarship and loan opportunities, 
-                        and guide you through visa process.
+                    <h2>& Get Rs 2 Lakhs Discount</h2>
+                    <p>Don't miss the opportunity to connect directly with university delegates from <span><b>EU Business School </b></span>
+                      and secure a <span><b>Rs. 2 Lakhs discount</b></span>. Explore the best university and course options tailored 
+                      to your career goals.
                     </p>
+                    <h3><mark className="highlighted-text"> Hurry, the last date to apply is 29th November! </mark></h3>
             </div>
 
             <div className="EventHero-right">
@@ -207,4 +207,4 @@ const EventHero =() =>{
 
     )
 }
-export default EventHero;
+export default EUHero;
