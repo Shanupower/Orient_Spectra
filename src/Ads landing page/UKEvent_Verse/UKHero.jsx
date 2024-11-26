@@ -3,9 +3,9 @@ import "./index.css";
 import { useLocation } from "react-router-dom";
 import { Dialog, useMediaQuery } from "@mui/material";
 import axios from "axios";
-import Img1 from "../../assets/Unvercity/Euschool.webp";
+import Img1 from "../../assets/Unvercity/SRH-University.webp";
 
-const EUHero =() =>{
+const UKHero =() =>{
     const isLg = useMediaQuery("(max-width: 1280px)");
     const [open, setOpen] = useState(false);
     const [formSubmitted, setFormSubmitted] = useState(false); // Track form submission
@@ -30,7 +30,7 @@ const EUHero =() =>{
   }, [location.search, location.pathname]);
 
   const handleSubmitData = async () => {
-    const api = "https://send.orientspectra.com/send-email-ads-landing-page-2";
+    const api = "https://send.orientspectra.com/send-email-ads-landing-page-3";
     try {
       const response = await axios.post(api, formData, {
         headers: {
@@ -134,18 +134,16 @@ const EUHero =() =>{
                 )}
             </Dialog>
         </div>
-        <div className="EUHero-Container">
-            <div className="EventHero-section">
-                    <img src={Img1} alt="EU-Business School logo"/> 
-                    <h1>Apply for EU Business School  </h1>
-                    <h2>& Get Rs 2 Lakhs Discount<span><sup>*</sup></span></h2>
-                    <p>Don't miss the opportunity to connect directly with university delegates from <span><b>EU Business School </b></span>
-                      and secure a <span><b>Rs. 2 Lakhs discount</b></span>. Explore the best university and course options tailored 
-                      to your career goals.
+        <div className="UKHero-Container">
+            <div className="UKHero-section">
+                    <h1>Missed USA Student Visa ? </h1>
+                    <h3>Apply for UK Universities</h3>
+                    <p>Missed your chance to study in the USA? Don’t worry! You can still achieve your academic goals by applying to 
+                       top-tier UK universities. With a streamlined application process, you can secure admission in as little as 48 hours*.
                     </p>
             </div>
 
-            <div className="EventHero-right">
+            <div className="UKHero-right">
                 <p>Register For Personalised Counselling</p>
                 <form onSubmit={handleSubmitValidation}>
                     <div className="Event-Form-section">
@@ -205,4 +203,4 @@ const EUHero =() =>{
 
     )
 }
-export default EUHero;
+export default UKHero;

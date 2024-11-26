@@ -184,7 +184,7 @@
 }
 .testimonial-card-body > h1 {
     font-size: 25px;
-    color: #4985c5;
+    color: var(--brand-color);
  }
 
 @media (max-width: 986px) {
@@ -310,7 +310,7 @@
      }
      .testimonial-card-body > h1 {
          font-size: 25px;
-         color: #4985c5;
+         color: var(--brand-color);
       }
 }
 
@@ -375,7 +375,7 @@
     }
      .testimonial-card-body > h1 {
          font-size: 25px;
-         color: #4985c5;
+         color: var(--brand-color);
     }
 }
 

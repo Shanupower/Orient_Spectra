@@ -1,5 +1,5 @@
 import Img2 from "../../assets/Unvercity/Euschool-Poster.webp";
-import Icon from "../../assets/Unvercity/Checked.webp";
+import Icon from "../../assets/Unvercity/Checked-2.webp";
 
 const WhyWe_Attend =()=>{
     return(

@@ -136,14 +136,13 @@ const EventHero =() =>{
         </div>
         <div className="EventHero-Container">
             <div className="EventHero-section">
-                    <h1>Spot Assessment for <br />
-                    {/* <span>SRH University - Germany</span>  */}
-                    </h1>
                     <img src={Img1}/>
-                    <p>Attend our Spot Assessment <span><b>SRH University - Germany</b></span> for to talk directly with university delegates 
-                        and select the best university and course for your career goal. Our experts 
-                        will walk you through application process, scholarship and loan opportunities, 
-                        and guide you through visa process.
+                    <h1>Spot Assessment for <br />
+                    <span>SRH University</span> 
+                    </h1>
+                    <p>Join us at Orient Spectra on 14th December for an exclusive in-house event featuring SRH University! 
+                      Get a spot assessment for the April 2025 intake and explore opportunities to unlock scholarships, discover 
+                      top courses, and navigate the visa process with ease. Don’t miss this chance to step closer to your study abroad dreams!
                     </p>
             </div>
 

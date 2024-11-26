@@ -44,6 +44,7 @@ import EuropeEDUFair from "./Ads landing page/Europe-Education-Fair/EuropeEDUFai
 import TrainingProgram from "./Ads landing page/Training_Program/Landing_Page";
 import Event_LandingPage from "./Ads landing page/SrhUniversityEvent/Event_LandingPage";
 import EU_LandingPage from "./Ads landing page/EUBussiness_SchoolEvent/EU_Landing_page";
+import UK_LandingPage from "./Ads landing page/UKEvent_Verse/UK_Landing_Page";
 
 function App() {
   const [openWhatwedo, setWhatwedoOpen] = useState(false);
@@ -81,7 +82,7 @@ function App() {
   if (loading) {
     return <Loading />;
   }
-  const restrictedPaths = ["/no-cost-ielts-&-toefl-training-program", "/spot-assesment-for-srh-university-2024", "/eubussiness-school-apply-for-march-intake"];
+  const restrictedPaths = ["/no-cost-ielts-&-toefl-training-program", "/spot-assesment-for-srh-university-2024", "/eubussiness-school-apply-for-march-intake", "/apply-for-uk-universities"];
   const shouldDisplayPopup = !restrictedPaths.includes(location.pathname);
 
   return (
@@ -171,6 +172,7 @@ function App() {
         <Route path="/no-cost-ielts-&-toefl-training-program" element={<TrainingProgram />} />
         <Route path="/spot-assesment-for-srh-university-2024" element={<Event_LandingPage />} />
         <Route path="/eubussiness-school-apply-for-march-intake" element={<EU_LandingPage />} />
+        <Route path="/apply-for-uk-universities" element={<UK_LandingPage />} />
       </Routes>
       <WhatsApp />
       <Footer />
