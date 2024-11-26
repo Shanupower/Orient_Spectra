@@ -30,7 +30,7 @@ const TestimonialsCarousel = () => {
 
   return (
     <div className="gtco-testimonials section">
-      <h1>What Our Students Say's</h1>
+      <h1>What Our Students Say</h1>
       <p>Explore heartfelt testimonials from students who turned their aspirations into accomplishments with our guidance.</p>
       <OwlCarousel
         loop={true}
