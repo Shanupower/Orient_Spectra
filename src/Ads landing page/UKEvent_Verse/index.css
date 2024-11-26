@@ -1,55 +1,52 @@
-.EUHero-Container {
+.UKHero-Container {
     position: relative;
     width: 100%;
     height: 100vh;
-    background-image: url("../../assets/Unvercity/Germany-University.webp");
+    background-image: url("../../assets/Unvercity/UK-Banner.webp");
     background-blend-mode: darken;
     background-color: #000000af;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    /* background-position: center; */
     display: flex;
     gap: 2rem;
     align-items: center;
     flex-wrap: wrap;
  }
- .EventHero-section {
+ .UKHero-section {
      position: relative;
      width: 55%;
      padding: 5rem 2rem 0 8rem;
  }
- .EventHero-section >  Img {
-     width: 200px;
+ .UKHero-section > Img {
+     width: 300px;
      object-fit: contain;
-     margin-bottom: 1rem;
  }
- .EventHero-section > h2,
- .EventHero-section > h1 {
+ .UKHero-section > h1 {
      font-size: 52px;
      font-weight: 600;
      line-height: 1.2;
      color: white;
-     margin-bottom: 1rem;
+     margin-bottom: 2rem;
  }
- .EventHero-section > h2 > span {
-    font-size: 42px;
+ .UKHero-section > h3 {
+    font-size: 40px;
+     font-weight: 600;
+     line-height: 1.2;
+     color: white;
+     margin-top: -1rem;
+     margin-bottom: 2rem;
  }
- .EventHero-section > h1 > span,
- .EventHero-section > p > span {
+ .UKHero-section > h1 > span,
+ .UKHero-section > p > span {
      color: var(--brand-color);
  }
- .EventHero-section > p {
+ .UKHero-section > p {
      font-size: 22px;
      font-weight: 500;
      color: white;
- }
- .EventHero-section > h3 {
-    font-size: 22px;
-     font-weight: 500;
-     color: white;
-     margin-top: 10px;
- }
- .EventHero-right {
+ } 
+ .UKHero-right {
      position: relative;
      background-color: white;
      border-radius: 15px;
@@ -57,7 +54,7 @@
      padding: 2rem;
      margin-block: 2rem;
  }
- .EventHero-right > p {
+ .UKHero-right > p {
      font-size: 25px;
      font-weight: 600;
      text-align: center;
@@ -100,7 +97,7 @@
      flex-wrap: wrap;
      gap: 2rem;
  }
- .Whywe-left,
+ .WhyAttend-left,
  .Event_Details-left {
      width: 50%;
      align-self: center;
@@ -128,36 +125,36 @@
      border-radius: 30px;
      padding: 15px;
  }
- .Whywe-container {
+ .WhyAttend-container {
      padding: 2rem 6%;
      background-color: whitesmoke;
  }
- .Whywe-left > h1 {
+ .WhyAttend-left > h1 {
      font-size: 45px;
      font-weight: 600;
      color: #4985c5;
      margin-bottom: 2rem;
  }
- .Whywe-left > p {
+ .WhyAttend-left > p {
      color: black;
      font-size: 22px;
      font-weight: 500;
      margin: 26px 0 15px;
  }
- .Whywe-list {
+ .WhyAttend-list {
      padding: 10px 0 0 0;
  }
- .Whywe-list > li {
+ .WhyAttend-list > li {
      display: flex;
      gap: 10px;
  }
- .Whywe-list > li {
+ .WhyAttend-list > li {
      font-size: 22px;
      font-weight: 500;
      color: black;
      margin: 10px 0 5px 0;
  }
- .Whywe-list > li > img {
+ .WhyAttend-list > li > img {
      width: 25px;
      height: 25px;
      align-self: center;
@@ -199,43 +196,29 @@
   }
  
  @media (max-width: 986px) {
-     .EUHero-Container {
+     .UKHero-Container {
          padding: 0;
          height: fit-content;
-         gap: 0;
+         gap: 0rem;
      }
-     .EventHero-section {
+     .UKHero-section {
          width: 100%;
          padding: 7rem 1rem 0 1.5rem;
      }
-     .EventHero-section > h2,
-     .EventHero-section > h1 {
-         font-size: 25px !important;
+     .UKHero-section > h1 {
+         font-size: 28px;
          line-height: 1.3;
-         margin-bottom: 0.5rem;
+         margin-bottom: 1rem;
      }
-     .EventHero-section > h2 > span {
-        font-size: 25px !important;
-        margin-top: 2rem;
-     }
-     .EventHero-section > h3 {
-        font-size: 17px;
-        margin-top: 10px;
-     }
-     .EventHero-section > h1 > span > Img {
-        width: 150px;
-        object-fit: contain;
-        margin-bottom: -1rem;
-    }
-     .EventHero-section > p {
+     .UKHero-section > p {
          font-size: 16px;
      }
-     .EventHero-right {
+     .UKHero-right {
          width: 100%;
          padding: 1.5rem;
          margin: 2rem;
      }
-     .EventHero-right > p {
+     .UKHero-right > p {
          font-size: 18px;
          margin-bottom: 1rem;
      }
@@ -281,24 +264,24 @@
          font-size: 18px;
          font-weight: 400;
      }
-     .Whywe-left {
+     .WhyAttend-left {
          width: 100%;
      }
-     .Whywe-left > h1 {
-         font-size: 25px;
+     .WhyAttend-left > h1 {
+         font-size: 35px;
      }
-     .Whywe-left > p {
+     .WhyAttend-left > p {
          font-size: 18px;
      }
-     .Whywe-list > li {
+     .WhyAttend-list > li {
          font-size: 18px;
      }
-     .Whywe-list > li > img {
+     .WhyAttend-list > li > img {
         width: 20px;
         height: 20px;
      }
      .gtco-testimonials > h1 {
-         font-size: 31px;
+         font-size: 35px;
      }
      .gtco-testimonials > p{
          font-size: 18px;
@@ -340,25 +323,17 @@
  }
  
  @media (max-width: 1024px) {
-     .EventHero-section > h2,
-     .EventHero-section > h1 {
-         font-size: 30px;
+     .UKHero-section > h1 {
+         font-size: 35px;
      }
-     .EventHero-section > h2 > span {
-        font-size: 25px;
+     .UKHero-section > p {
+         font-size: 18px;
      }
-     .EventHero-section > p {
-         font-size: 16px;
-     }
-     .EventHero-section > h3 {
-        font-size: 18px;
-        margin-top: 10px;
-     }
-     .EventHero-right {
+     .UKHero-right {
          padding: 2rem;
          margin-block: 8rem;
      }
-     .EventHero-right > p {
+     .UKHero-right > p {
          font-size: 18px;
          margin-bottom: 1rem;
      }
@@ -374,30 +349,30 @@
          font-size: 18px;
          padding: 10px;
        }
-       .Event_Details-left > h1 {
+       .UK_Details-left > h1 {
          font-size: 35px;
          text-align: left;
      }
-     .Event_Details-left > p {
+     .UK_Details-left > p {
          margin: 26px 0 10px;
          font-size: 18px;
          font-weight: 400;
      }
-     .Whywe-left > h1 {
-         font-size: 31px;
+     .WhyAttend-left > h1 {
+         font-size: 35px;
      }
-     .Whywe-left > p {
+     .WhyAttend-left > p {
          font-size: 18px;
      }
-     .Whywe-list > li {
+     .WhyAttend-list > li {
          font-size: 18px;
      }
-     .Whywe-list > li > img {
+     .WhyAttend-list > li > img {
         width: 20px;
         height: 20px;
      }
      .gtco-testimonials > h1 {
-         font-size: 31px;
+         font-size: 35px;
      }
      .gtco-testimonials > p{
          font-size: 18px;
@@ -408,7 +383,7 @@
      }
       .testimonial-card-body > h1 {
           font-size: 25px;
-          color: #4985c5;
+          color: var(--brand-color);
      }
  }
  
