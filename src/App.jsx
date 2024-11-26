@@ -82,7 +82,7 @@ function App() {
   if (loading) {
     return <Loading />;
   }
-  const restrictedPaths = ["/no-cost-ielts-&-toefl-training-program", "/spot-assesment-for-srh-university-2024", "/apply-for-uk-universities"];
+  const restrictedPaths = ["/no-cost-ielts-&-toefl-training-program", "/spot-assesment-for-srh-university-2024", "/eubussiness-school-apply-for-march-intake", "/apply-for-uk-universities"];
   const shouldDisplayPopup = !restrictedPaths.includes(location.pathname);
 
   return (

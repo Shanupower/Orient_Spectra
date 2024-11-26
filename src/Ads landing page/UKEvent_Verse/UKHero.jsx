@@ -136,9 +136,9 @@ const UKHero =() =>{
         </div>
         <div className="UKHero-Container">
             <div className="UKHero-section">
-                    <h1>Missed USA Student Visa ? </h1>
-                    <h3>Apply for UK Universities</h3>
-                    <p>Missed your chance to study in the USA? Don’t worry! You can still achieve your academic goals by applying to 
+                    <h1>Apply for UK Universities</h1>
+                    <h3>Missed USA Student Visa ? </h3>
+                    <p>Missed your chance to study in the USA? <br/>Don’t worry! <br/>You can still achieve your academic goals by applying to 
                        top-tier UK universities. With a streamlined application process, you can secure admission in as little as 48 hours*.
                     </p>
             </div>
