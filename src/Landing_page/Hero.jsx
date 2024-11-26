@@ -63,7 +63,7 @@ const Hero = ({ blog, event }) => {
         id: 4,
         text: "",
         heading: "",
-        bgImage: Img5,
+        bgImage: Img4,
         alt:"event",
         subtext: "",
         link: "event",
