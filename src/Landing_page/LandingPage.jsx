@@ -69,7 +69,7 @@ const LandingPage = () => {
             property="og:description" 
             content="Orient Spectra is the top overseas education consultancy in Hyderabad with 3 branches in Himanaytnagar, Kothapet and Kukatpally. Orient Spectra helps students with their study abroad dream with right guidance." 
           />
-          <meta property="og:image" content="https://orientspectra.com/Logo2.png" />
+          <meta property="og:image" content="https://orientspectra.com/OG-Logo.png" />
           <meta property="og:url" content="https://orientspectra.com" />
           <meta property="og:type" content="website" />
       </Helmet>
