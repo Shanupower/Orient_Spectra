@@ -184,8 +184,8 @@ const LeadFormPopUp = ({closePopup}) => {
             </IconButton>
           <div className="Dailog-container">
           <div className='DailogContent'>
-          <h2 className="DailogTitle">Apply for <span>EU Bussiness School </span></h2>
-          <h3>& Get <span>Rs 2 Lakhs</span> Discount</h3>
+          <h2 className="DailogTitle">Apply for <span>EU Business School </span></h2>
+          <h3>& Get <span>Rs 2 Lakhs</span> Discount*</h3>
           <p>Register before 29th November</p>
           <DialogContent>
             <form onSubmit={handleSubmitValidation}>
