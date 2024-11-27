@@ -532,7 +532,7 @@
   margin: 6rem;
   justify-content: space-between;
   /* background-image: url("https://strapi.orientspectra.com/uploads/Banner_Final_1_ff1aab3e3c.webp"); */
-  background-image: url("../assets/Banner_Final.webp");
+  background-image: url("../assets/Home_page/Banner_Final.webp");
   background-size: cover;
   border-radius: 20px;
 }
@@ -543,7 +543,7 @@
   margin: 4rem;
   justify-content: space-between;
   /* background-image: url("https://strapi.orientspectra.com/uploads/Banner_Final_1_ff1aab3e3c.webp"); */
-  background-image: url("../assets/Banner_Final.webp");
+  background-image: url("../assets/Home_page/Banner_Final.webp");
   background-size: contain;
   border-radius: 20px;
 }
