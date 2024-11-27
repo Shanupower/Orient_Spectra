@@ -10,6 +10,10 @@ import WhyOs from "../../Ads landing page/OfflineMarketingClub/WhyOS";
 import EventDetails from "./EventDetail";
 import Universities from "../../Ads landing page/Europe-Education-Fair/UK_Universities";
 import { Helmet } from "react-helmet-async";
+import WhyWe_Attend from "../../Ads landing page/EUBussiness_SchoolEvent/WhyWe_Attend";
+import WhyChoose from "../../Ads landing page/Training_Program/WhyChoose";
+import TestimonialsCarousel from "../../Ads landing page/SrhUniversityEvent/TestimonialCarousal";
+import Accredations from "../../Ads landing page/Training_Program/Accredations";
 
 const Event = () => {
   const [upcomingEventdata, setUpcominngEventData] = useState([]);
@@ -58,11 +62,11 @@ const Event = () => {
           content="Read latest news about Orient Spectra's overseas education fairs, and other updates like student visa approvals and so on." />
       </Helmet>
       <Hero eventData={upcomingEventdata} />
-      <EventDetails />
+      <WhyChoose />
+      <WhyWe_Attend />
+      <TestimonialsCarousel />
+      <Accredations />
       {/* <SuccessStory CompletedEventdata={CompletedEventdata} /> */}
-      <Benifits />
-      <WhyOs />
-      <Universities/>
       {/* <GetTuchWithUs /> */}
     </>
   );

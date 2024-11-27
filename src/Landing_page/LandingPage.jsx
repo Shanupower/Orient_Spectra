@@ -84,8 +84,8 @@ const LandingPage = () => {
       <Course />
       {/* <Counselors /> */}
       <Testimonial />
-      <Blog />
-      <News />
+      {/* <Blog />
+      <News /> */}
       <GetTuchWithUs />
     </>
   );
