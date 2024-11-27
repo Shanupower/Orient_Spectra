@@ -1,6 +1,6 @@
 import Marquee from "react-fast-marquee";
 import img1 from "../../assets/Blogs/glob1.png";
-import Globe from "../../assets/About/Earth_1-ezgif.com-optimize.gif";
+import Globe from "../../assets/About/Earth.gif";
 
 import "./about.css";
 const Hero = () => {
@@ -19,7 +19,7 @@ const Hero = () => {
       </div>
 
       <div className="hero-rightside-card">
-        <img src="https://strapi.orientspectra.com/uploads/output_onlinegiftools_2f4eb019bb.gif" alt="img1" className="hero-img" />
+        <img src={Globe} alt="img1" className="hero-img" />
       </div>
     </div>
   );

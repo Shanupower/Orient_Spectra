@@ -14,7 +14,7 @@ const Founders = () => {
       <div className="founder-container-section">
         <div className="founder-card">
           <div className="founderImage_card">
-            <img src="https://strapi.orientspectra.com/uploads/fk7sh_E2_M_f57122c778.webp" alt="Founder Image" />
+            <img src={FounderImage} alt="Founder Image" />
           </div>
         </div>
         <div className="Quotation-card">

@@ -2,6 +2,8 @@ import FormatQuoteSharpIcon from "@mui/icons-material/FormatQuoteSharp";
 import BarLabel from "./Barchart";
 import CircleArrow from "../Common/CircleArrow";
 import "./about.css";
+import Img from "../../assets/About/About1.webp";
+import Brochuer from "../../assets/About/OS_Brochure_Digital.pdf";
 
 const Story = () => {
   return (
@@ -17,7 +19,7 @@ const Story = () => {
       </div>
       <div className="story-spectra-card">
         <div className="stroy-left-card">
-          <img src="https://strapi.orientspectra.com/uploads/images_2_f38130d7b2.webp" alt="Quotes" />
+          <img src={Img} alt="Quotes" />
         </div>
         <div className="stroy-center-card">
           <div className="quoet-image">
@@ -32,7 +34,7 @@ const Story = () => {
         </div>
         <div className="stroy-right-card">
         <a
-            href="https://strapi.orientspectra.com/uploads/OS_Brochure_Digital_70e8aa52e9.pdf"
+            href={Brochuer}
             target="_blank"
           >
           <CircleArrow />
