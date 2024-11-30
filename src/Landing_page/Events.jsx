@@ -8,7 +8,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
 import "./index.css";
-import Img1 from "../assets/Unvercity/Euschool-Poster.webp";
+import Img1 from "../assets/Unvercity/Euschool_Poster.webp";
 import Img2 from "../assets/Home_page/UK_Event.webp";
 import Img3 from "../assets/Home_page/Event_03.webp";
 import Img4 from "../assets/Home_page/Event_04.webp";
