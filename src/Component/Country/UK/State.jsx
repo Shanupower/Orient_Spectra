@@ -1,11 +1,10 @@
 import "./Country.css";
 import LeadForm from "../../Common/LeadForm";
+import Img1 from "../../../assets/University-Images/Graph.webp";
+import Img2 from "../../../assets/Country/Clip path group.png";
 
 const State = () => {
   const sourceValue = "UK";
-  
-
-
   return (
     <div className="section">
       <div className="state-container ">
@@ -44,12 +43,12 @@ const State = () => {
           <span>GDP</span>
           <h3>£2.274 trillion</h3>
           <div className="imageCardGdp">
-            <img src="https://strapi.orientspectra.com/uploads/graph_ecd0e550a3.webp" alt="GDPgraph" />
+            <img src={Img1} alt="GDPgraph" />
           </div>
         </div>
         <div className="univercity-container">
           <div className="imageCardGdp2">
-            <img src="https://strapi.orientspectra.com/uploads/Clip_path_group_953a37abb6.webp" alt="University" />
+            <img src={Img2} alt="University" />
           </div>
 
           <div className="univercity-card2">

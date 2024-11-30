@@ -2,6 +2,9 @@ import { Link } from "react-router-dom";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import "./Country.css";
 import { useState } from "react";
+import Img1 from "../../../assets/University-Images/Summer.webp";
+import Img2 from "../../../assets/University-Images/Fall.webp";
+import Img3 from "../../../assets/University-Images/Spring.webp";
 
 const Programdata = [
   {
@@ -81,8 +84,8 @@ const Admissiontimeline = () => {
                 <div className="intakesCard">
                   <div className="imageContainer">
                     <img
-                      src="https://strapi.orientspectra.com/uploads/fall_1c6257491c.jpg"
-                      alt=""
+                      src={Img2}
+                      alt="Fall"
                     />
                   </div>
                   <div className="intackText">
@@ -93,8 +96,8 @@ const Admissiontimeline = () => {
                 <div className="intakesCard">
                   <div className="imageContainer">
                     <img
-                      src="https://strapi.orientspectra.com/uploads/67de7faf_5f92_402d_929e_75686635e0d9_a95c028b0f.jpg"
-                      alt=""
+                      src={Img3}
+                      alt="Spring"
                     />
                   </div>
                   <div className="intackText">
@@ -105,8 +108,8 @@ const Admissiontimeline = () => {
                 <div className="intakesCard">
                   <div className="imageContainer">
                     <img
-                      src="https://strapi.orientspectra.com/uploads/Summer_6b20b10000.jpg"
-                      alt=""
+                      src={Img1}
+                      alt="Summer"
                     />
                   </div>
                   <div className="intackText">

@@ -1,6 +1,6 @@
 import "./Country.css";
 import Img1 from "../../../assets/Country/Clip path group-2.png";
-import Img2 from "../../../assets/Country/graph.png";
+import Img2 from "../../../assets/University-Images/Graph.webp";
 import LeadForm from "../../Common/LeadForm";
 
 const State = () => {

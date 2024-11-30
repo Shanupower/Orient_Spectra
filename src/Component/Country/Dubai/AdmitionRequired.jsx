@@ -1,45 +1,53 @@
 import "./Country.css";
+import Icon2 from "../../../assets/Country/certificate.webp";
+import Icon3 from "../../../assets/Country/program.webp";
+import Icon4 from "../../../assets/Country/Academic.webp";
+import Icon6 from "../../../assets/Country/Letters.webp";
+import Icon7 from "../../../assets/Country/Resume.webp";
+import Icon8 from "../../../assets/Country/Statement.webp";
+import Icon12 from "../../../assets/Country/Evidence.webp";
+import Icon1 from "../../../assets/Country/possport.webp";
 
 const AdmissionData = [
   {
     key: 1,
-    icon: "https://strapi.orientspectra.com/uploads/possport_0c65803b78.webp",
+    icon: Icon1,
     title: "Copy of a valid passport",
   },
   {
     key: 2,
-    icon: "https://strapi.orientspectra.com/uploads/certificate_2b2662d10c.webp",
+    icon: Icon2,
     title: "English language proficiency scores of IELTS / TOEFL / PTE",
   },
   {
     key: 3,
-    icon: "https://strapi.orientspectra.com/uploads/program_a82348b8ac.webp",
+    icon: Icon3,
     title: "Standardized test scores (as applicable)",
   },
   {
     key: 4,
-    icon: "https://strapi.orientspectra.com/uploads/Academic_0e24a00ca2.webp",
+    icon: Icon4,
     title: "Academic Tanscripts",
   },
   {
     key: 5,
-    icon: "https://strapi.orientspectra.com/uploads/Letters_7e2220fd8a.webp",
+    icon: Icon6,
     title:
       "Letters of recommendation from the employer/manager (if applicable)",
   },
   {
     key: 6,
-    icon: "https://strapi.orientspectra.com/uploads/Resume_4ed7eda327.webp",
+    icon: Icon7,
     title: "CV/Resume",
   },
   {
     key: 7,
-    icon: "https://strapi.orientspectra.com/uploads/Statement_b50bc660b6.webp",
+    icon: Icon8,
     title: "Statement of Purpose (SOP)",
   },
   {
     key: 8,
-    icon: "https://strapi.orientspectra.com/uploads/Evidence_a35d42d28c.webp",
+    icon: Icon12,
     title: "Evidence of Funds",
   },
 ];

@@ -3,40 +3,56 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import "./Country.css";
 import { Univercitydata } from "../../../Container/data/Universities";
 import Marquee from "react-fast-marquee";
+import img1 from "../../../assets/University-Images/France/1.webp";
+import img2 from "../../../assets/University-Images/France/2.webp";
+import img3 from "../../../assets/University-Images/France/3.webp";
+import img4 from "../../../assets/University-Images/France/4.webp";
+import img5 from "../../../assets/University-Images/France/5.webp";
+import img6 from "../../../assets/University-Images/France/6.webp";
+import img7 from "../../../assets/University-Images/France/7.webp";
+import img8 from "../../../assets/University-Images/France/8.webp";
+import img9 from "../../../assets/University-Images/France/9.webp";
+import img10 from "../../../assets/University-Images/France/10.webp";
+import img11 from "../../../assets/University-Images/France/11.webp";
+import img12 from "../../../assets/University-Images/France/12.webp";
+import img13 from "../../../assets/University-Images/France/13.webp";
+import img14 from "../../../assets/University-Images/France/14.webp";
+import img15 from "../../../assets/University-Images/France/15.webp";
+import img16 from "../../../assets/University-Images/France/16.webp";
 
 
 const universityData = [
   {
     id:1,
-    img: "https://strapi.orientspectra.com/uploads/10_ee15e54a4a.webp",
+    img: img10,
     universityName: "ESSCA Business School",
     ielts: "6.0",
     tofel: "85",
   },
   {
     id:2,
-    img: "https://strapi.orientspectra.com/uploads/11_76e57375f8.webp",
+    img: img11,
     universityName: "Avaincity University",
     ielts: "6.0",
     tofel: "83",
   },
   {
     id:3,
-    img: "https://strapi.orientspectra.com/uploads/14_d712099774.webp",
+    img: img14,
     universityName: "Paris School of Business",
     ielts: "5.5",
     tofel: "70",
   },
   {
     id:4,
-    img: "https://strapi.orientspectra.com/uploads/13_1_420208047d.webp",
+    img: img13,
     universityName: "NEOMA Business School",
     ielts: "6.0",
     tofel: "83",
   },
   {
     id:5,
-    img: "https://strapi.orientspectra.com/uploads/6_66f654a0645e6_da3f07d776.webp",
+    img: img6,
     universityName: "INSEEC Business School",
     ielts: "6.5",
     tofel: "90",
@@ -50,7 +66,7 @@ const universityData = [
   },
   {
     id: 7,
-    img: "https://strapi.orientspectra.com/uploads/15_02e8ce5c4d.webp",
+    img: img15,
     universityName: "Rennes School of Business",
     ielts: "6.5",
     tofel: "80",
@@ -78,21 +94,21 @@ const universityData = [
   },
   {
     id: 11,
-    img: "https://strapi.orientspectra.com/uploads/9_711b8417a2.webp",
+    img: img9,
     universityName: "IUM",
     ielts: "6.0",
     tofel: "79",
   },
   {
     id: 12,
-    img: "https://strapi.orientspectra.com/uploads/16_327f848301.webp",
+    img: img16,
     universityName: "SupdePub University",
     ielts: "6.0",
     tofel: "83",
   },
   {
     id: 13,
-    img: "https://strapi.orientspectra.com/uploads/2_66f6549ed3ea7_82087653df.webp",
+    img: img2,
     universityName: "CREA OMENS Education",
     ielts: "6.5",
     tofel: "80",
@@ -106,21 +122,21 @@ const universityData = [
   },
   {
     id: 16,
-    img: "https://strapi.orientspectra.com/uploads/3_66f6549f8c3a7_21cec90e74.webp",
+    img: img3,
     universityName: "ESAM Management Finance & Law",
     ielts: "6.5",
     tofel: "80",
   },
   {
     id: 17,
-    img: "https://strapi.orientspectra.com/uploads/1_66f6549ec745a_882f32965b.webp",
+    img: img1,
     universityName: "American Business School",
     ielts: "6.5",
     tofel: "80",
   },
   {
     id: 18,
-    img: "https://strapi.orientspectra.com/uploads/4_66f6549fa1160_5553604d67.webp",
+    img: img4,
     universityName: "ICD Business School",
     ielts: "6.5",
     tofel: "80",
@@ -134,14 +150,14 @@ const universityData = [
   },
   {
     id: 20,
-    img: "https://strapi.orientspectra.com/uploads/8_66f654a1384ee_87bfc3fe11.webp",
+    img: img8,
     universityName: "ISTEC Business School",
     ielts: "6.0",
     tofel: "83",
   },
   {
     id: 21,
-    img: "https://strapi.orientspectra.com/uploads/12_f6e9dde4d9.webp",
+    img: img12,
     universityName: "EMLV",
     ielts: "6.0",
     tofel: "80",
@@ -155,14 +171,14 @@ const universityData = [
   },
   {
     id: 23,
-    img: "https://strapi.orientspectra.com/uploads/7_66f654a0cdb56_c02a5cb5f8.webp",
+    img: img7,
     universityName: "IPI - Paris",
     ielts: "6.0",
     tofel: "83",
   },
   {
     id: 24,
-    img: "https://strapi.orientspectra.com/uploads/5_66f654a03a363_4c7b9702d1.webp",
+    img: img5,
     universityName: "AIB Management & Business School",
     ielts: "6.0",
     tofel: "83",

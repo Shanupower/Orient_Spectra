@@ -2,6 +2,24 @@ import { Link } from "react-router-dom";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import "./Country.css";
 import { useState } from "react";
+import Img2 from "../../../assets/University-Images/Fall.webp";
+import Img3 from "../../../assets/University-Images/Spring.webp";
+import img1 from "../../../assets/University-Images/France/1.webp";
+import img2 from "../../../assets/University-Images/France/2.webp";
+import img3 from "../../../assets/University-Images/France/3.webp";
+import img4 from "../../../assets/University-Images/France/4.webp";
+import img5 from "../../../assets/University-Images/France/5.webp";
+import img6 from "../../../assets/University-Images/France/6.webp";
+import img7 from "../../../assets/University-Images/France/7.webp";
+import img8 from "../../../assets/University-Images/France/8.webp";
+import img9 from "../../../assets/University-Images/France/9.webp";
+import img10 from "../../../assets/University-Images/France/10.webp";
+import img11 from "../../../assets/University-Images/France/11.webp";
+import img12 from "../../../assets/University-Images/France/12.webp";
+import img13 from "../../../assets/University-Images/France/13.webp";
+import img14 from "../../../assets/University-Images/France/14.webp";
+import img15 from "../../../assets/University-Images/France/15.webp";
+import img16 from "../../../assets/University-Images/France/16.webp";
 
 const Programdata = [
   {
@@ -96,8 +114,8 @@ const Admissiontimeline = () => {
                   <div className="intakesCard">
                     <div className="imageContainer">
                       <img
-                        src="https://strapi.orientspectra.com/uploads/fall_1c6257491c.jpg"
-                        alt=""
+                        src={Img2}
+                        alt="Fall"
                       />
                     </div>
                     <div className="intackText">
@@ -108,8 +126,8 @@ const Admissiontimeline = () => {
                   <div className="intakesCard">
                     <div className="imageContainer">
                       <img
-                        src="https://strapi.orientspectra.com/uploads/67de7faf_5f92_402d_929e_75686635e0d9_a95c028b0f.jpg"
-                        alt=""
+                        src={Img3}
+                        alt="Spring"
                       />
                     </div>
                     <div className="intackText">
@@ -137,31 +155,31 @@ const Admissiontimeline = () => {
             <div className="Popular_Universities">
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/11_76e57375f8.webp"
+                  src={img11}
                   alt="Avaincity University"
                 />
               </div>
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/14_d712099774.webp"
+                  src={img14}
                   alt="Paris School of Business"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/13_1_420208047d.webp"
+                  src={img13}
                   alt="NEOMA Business School"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/10_ee15e54a4a.webp"
+                  src={img10}
                   alt="ESSCA Business School"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/6_66f654a0645e6_da3f07d776.webp"
+                  src={img6}
                   alt="INSEEC Business School"
                 />
               </div>{" "}
@@ -173,7 +191,7 @@ const Admissiontimeline = () => {
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/15_02e8ce5c4d.webp"
+                  src={img15}
                   alt="Rennes School of Business"
                 />
               </div>{" "}
@@ -197,13 +215,13 @@ const Admissiontimeline = () => {
               </div>
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/9_711b8417a2.webp"
+                  src={img9}
                   alt="IUM"
                 />
               </div>
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/16_327f848301.webp"
+                  src={img16}
                   alt="SupdePub"
                 />
               </div>

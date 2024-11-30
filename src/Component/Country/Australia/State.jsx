@@ -1,6 +1,7 @@
 import "./Country.css";
-import Img1 from "../../../assets/Country/Group 6-2.png";
+import Img1 from "../../../assets/University-Images/Graph.webp";
 import LeadForm from "../../Common/LeadForm";
+import Img2 from "../../../assets/Country/Group 6-1.png";
 
 const State = () => {
   const sourceValue = "Australia";
@@ -43,12 +44,12 @@ const State = () => {
           <span>GDP</span>
           <h3>$ 1.7 Trillion</h3>
           <div className="imageCardGdp">
-            <img src="https://strapi.orientspectra.com/uploads/graph_ecd0e550a3.webp" alt="GDPgraph" />
+            <img src={Img1} alt="GDPgraph" />
           </div>
         </div>
         <div className="univercity-container">
           <div className="imageCardGdp2">
-            <img src={Img1} alt="" />
+            <img src={Img2} alt="" />
           </div>
 
           <div className="univercity-card2">

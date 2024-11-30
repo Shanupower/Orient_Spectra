@@ -1,18 +1,31 @@
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import "./Country.css";
 import Marquee from "react-fast-marquee";
+import img1 from "../../../assets/University-Images/Germany/1.webp";
+import img2 from "../../../assets/University-Images/Germany/2.webp";
+import img3 from "../../../assets/University-Images/Germany/3.webp";
+import img4 from "../../../assets/University-Images/Germany/4.webp";
+import img5 from "../../../assets/University-Images/Germany/5.webp";
+import img6 from "../../../assets/University-Images/Germany/6.webp";
+import img7 from "../../../assets/University-Images/Germany/7.webp";
+import img8 from "../../../assets/University-Images/Germany/8.webp";
+import img9 from "../../../assets/University-Images/Germany/9.webp";
+import img10 from "../../../assets/University-Images/Germany/10.webp";
+import img11 from "../../../assets/University-Images/Germany/11.webp";
+import img12 from "../../../assets/University-Images/Germany/12.webp";
+import img13 from "../../../assets/University-Images/Germany/13.webp";
 
 const universityData = [
   {
     key:1,
-    img: "https://strapi.orientspectra.com/uploads/1_61d4a89cef.webp",
+    img: img1,
     title: "EU Business School",
     ielts: "6.5",
     toefl: "89",
   },
   {
     key:2,
-    img: "https://strapi.orientspectra.com/uploads/2_a6101c1a73.webp",
+    img: img2,
     title: "University of Europe for Applied Sciences",
     ielts: "5.5",
     toefl: "72",
@@ -20,56 +33,56 @@ const universityData = [
   },
   {
     key:3,
-    img: "https://strapi.orientspectra.com/uploads/3_35008e0c54.webp",
+    img: img3,
     title: "IU of Applied Sciences",
     ielts: "6.0",
     toefl: "80",
   },
   {
     key:4,
-    img: "https://strapi.orientspectra.com/uploads/4_ab74fddb01.webp",
+    img: img4,
     title: "SRH Berlin University of Applied Sciences",
     ielts: "6.0",
     toefl: "74",
   },
   {
     key:5,
-    img: "https://strapi.orientspectra.com/uploads/5_e70654ef5b.webp",
+    img: img5,
     title: "Gisma University of Applied Sciences",
     ielts: "6.5",
     toefl: "80",
   },
   {
     key:6,
-    img: "https://strapi.orientspectra.com/uploads/6_67f8497b5d.webp",
+    img: img6,
     title: "Steinbies University",
     ielts: "6.0",
     toefl: "80",
   },
   {
     key:7,
-    img: "https://strapi.orientspectra.com/uploads/7_ebd0f3ee88.webp",
+    img: img7,
     title: "Berlin of School Business & Inovation",
     ielts: "6.0",
     toefl: "80",
   },
   {
     key:8,
-    img: "https://strapi.orientspectra.com/uploads/13_52c361d909.webp",
+    img: img13,
     title: "New European College",
     ielts: "6.0",
     toefl: "80",
   },
   {
     key:9,
-    img: "https://strapi.orientspectra.com/uploads/8_b4289a68a8.webp",
+    img: img8,
     title: "Macromedia University of Applied Sciences",
     ielts: "6.0",
     toefl: "72",
   },
   {
     key:10,
-    img: "https://strapi.orientspectra.com/uploads/11_4ebffb1e87.webp",
+    img: img11,
     title: "Fresenius University of Applied Sciences",
     ielts: "6.0",
     toefl: "70",
@@ -83,21 +96,21 @@ const universityData = [
   },
   {
     key:12,
-    img: "https://strapi.orientspectra.com/uploads/12_7916183ad3.webp",
+    img: img12,
     title: "Arden University",
     ielts: "6.0",
     toefl: "60",
   },
   {
     key:13,
-    img: "https://strapi.orientspectra.com/uploads/9_159284de64.webp",
+    img: img9,
     title: "Schiller University- Germany",
     ielts: "6.5",
     toefl: "89",
   },
   {
     key:14,
-    img: "https://strapi.orientspectra.com/uploads/10_fa24113b48.webp",
+    img: img10,
     title: "ISM (International School of Management)",
     ielts: "6.0",
     toefl: "80",

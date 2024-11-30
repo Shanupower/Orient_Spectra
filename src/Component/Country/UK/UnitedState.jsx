@@ -1,48 +1,55 @@
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import "./Country.css";
-
+import Img1 from "../../../assets/University-Images/World-Class-Education.webp";
+import Img2 from "../../../assets/University-Images/Tution-Fees.webp";
+import Img3 from "../../../assets/University-Images/Financial.webp";
+import Img4 from "../../../assets/University-Images/Diversity.webp";
+import Img5 from "../../../assets/University-Images/Admission.webp";
+import Img6 from "../../../assets/University-Images/College-Life.webp";
+import Img7 from "../../../assets/University-Images/Career.webp";
+import Broucher from "../../../assets/University-Images/UK-Digital-Booklet.pdf";
 
 const StudyData = [
   {
     id: 1,
-    img: "https://strapi.orientspectra.com/uploads/university_81771721e4_d1e50ebea5.webp",
+    img: Img1,
     title: "World Renowned Universities",
     description: "UK is home for oldest & globally renowned universities.",
   },
   {
     id: 2,
-    img: "https://strapi.orientspectra.com/uploads/1_removebg_10c95da1e1_9f783830c5.webp",
+    img: Img2,
     title: "Affordable Tuition Fees",
     description: "Tuition fees in UK is much affordable than in USA, Australia, etc.,",
   },
   {
     id: 3,
-    img: "https://strapi.orientspectra.com/uploads/financial_report_d7262ccc54_a3cc5889a1.webp",
+    img: Img3,
     title: "Financial Assistance",
     description: "Most universities offer scholarships for Indian students",
   },
   {
     id: 4,
-    img: "https://strapi.orientspectra.com/uploads/cultural_sensitivity_b317fd3821_e188d9d532.webp",
+    img: Img4,
     title: "Cultural Diversity",
     description: "UK introduces you to a variety of cultures and languages.",
   },
   {
     id: 5,
-    img: "https://strapi.orientspectra.com/uploads/Admission_75b4bfd983_778447e120.webp",
+    img: Img5,
     title: "Easy Admission Process",
     description: "IELTS or TOEFL isn’t mandatory for many universities.",
   },
   {
     id: 6,
-    img: "https://strapi.orientspectra.com/uploads/sollege_life_d8bbf45949_2837e5c04a.webp",
+    img: Img6,
     title: "Vibrant Campus Life",
     description:
       "Vibrant campus life with numerous extracurricular activities, and clubs.",
   },
   {
     id: 7,
-    img: "https://strapi.orientspectra.com/uploads/job_seeker_6430b5255c_34f413df42.webp",
+    img: Img7,
     title: "Placement Opportunities",
     description: "Courses come with internships and post-study placements.",
   },
@@ -67,7 +74,7 @@ const UnitedState = () => {
         <div className="ReadMoreCard">
           <p>Read More</p>
           <a
-            href="https://strapi.orientspectra.com/uploads/UK_Digital_Booklet_2f190d053f.pdf"
+            href={Broucher}
             target="_blank"
           >
             <ArrowForwardIcon className="rightArrowBlog" />

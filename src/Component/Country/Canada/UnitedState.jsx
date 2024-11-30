@@ -1,51 +1,56 @@
-import Img1 from "../../../assets/Property 1=Default (1).png";
 import Quote from "../../../assets/Country/quote.png";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import "./Country.css";
-import { Link } from "react-router-dom";
-
+import Img1 from "../../../assets/University-Images/World-Class-Education.webp";
+import Img2 from "../../../assets/University-Images/Course.webp";
+import Img3 from "../../../assets/University-Images/Technology.webp";
+import Img4 from "../../../assets/University-Images/Diversity.webp";
+import Img5 from "../../../assets/University-Images/Tution-Fees.webp";
+import Img6 from "../../../assets/University-Images/College-Life.webp";
+import Img7 from "../../../assets/University-Images/Career.webp";
+import Brochuer from "../../../assets/About/OS_Brochure_Digital.pdf";
 
 const StudyData = [
   {
     id: 1,
-    img: "https://strapi.orientspectra.com/uploads/world_class_Education_71b72a914c_ed92a52423.webp",
+    img: Img1,
     title: "High-Quality Education",
     description: "Top universities are renowned for quality education and valued graduates.",
   },
   {
     id: 2,
-    img: "https://strapi.orientspectra.com/uploads/1_removebg_10c95da1e1_9f783830c5.webp",
+    img: Img5,
     title: "Affordable Tuition Fees",
     description: "Tuition fees in Canada is often more affordable than in USA, UK, France, Germany etc..",
   },
   {
     id: 3,
-    img: "https://strapi.orientspectra.com/uploads/curriculum_9e777e3b3e_dda731de1f.webp",
+    img: Img2,
     title: "Diverse Course Offerings",
     description: "A wide range of programs and courses are available across various fields",
   },
   {
     id: 4,
-    img: "https://strapi.orientspectra.com/uploads/cultural_sensitivity_b317fd3821_e188d9d532.webp",
+    img: Img4,
     title: "Cultural Diversity",
     description: "Canada offers a enriching education & preparing students for global workforce.",
   },
   {
     id: 5,
-    img: "https://strapi.orientspectra.com/uploads/technology_db90794e03_da84aebb6f.webp",
+    img: Img3,
     title: "Strong Research & Innovation",
     description: "Canada leads in research across technology, medicine, and environmental science.",
   },
   {
     id: 6,
-    img: "https://strapi.orientspectra.com/uploads/sollege_life_d8bbf45949_2837e5c04a.webp",
+    img: Img6,
     title: "Safe & Quality Lifestyle",
     description:
       "Canada offers high & secure living standards, world-class healthcare for students.",
   },
   {
     id: 7,
-    img: "https://strapi.orientspectra.com/uploads/job_seeker_6430b5255c_34f413df42.webp",
+    img: Img7,
     title: "Work Opportunities",
     description: "Canada offers work opportunities for international students, including part-time jobs.",
   },
@@ -69,7 +74,7 @@ const UnitedState = () => {
         <div className="ReadMoreCard">
           <p>Read More</p>
           <a
-            href="https://strapi.orientspectra.com/uploads/OS_Brochure_Digital_bfcefac1d3.pdf"
+            href={Brochuer}
             target="_blank"
           >
             <ArrowForwardIcon className="rightArrowBlog" />

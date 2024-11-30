@@ -1,49 +1,58 @@
 import "./Country.css";
+import Icon2 from "../../../assets/Country/certificate.webp";
+import Icon4 from "../../../assets/Country/Academic.webp";
+import Icon5 from "../../../assets/Country/Refrence.webp";
+import Icon6 from "../../../assets/Country/Letters.webp";
+import Icon7 from "../../../assets/Country/Resume.webp";
+import Icon8 from "../../../assets/Country/Statement.webp";
+import Icon11 from "../../../assets/Country/Certificates.webp";
+import Icon12 from "../../../assets/Country/Evidence.webp";
+import Icon1 from "../../../assets/Country/possport.webp";
 
 const AdmissionData = [
   {
     id:1,
-    icon: "https://strapi.orientspectra.com/uploads/possport_0c65803b78.webp",
+    icon: Icon1,
     title: "A Valid Passport",
   },
   {
     id:2,
-    icon: "https://strapi.orientspectra.com/uploads/certificate_2b2662d10c.webp",
+    icon: Icon2,
     title: "Proof of English Proficiency (Not Mandatory for all Universities)",
   },
   {
     id:3,
-    icon: "https://strapi.orientspectra.com/uploads/Academic_0e24a00ca2.webp",
+    icon: Icon4,
     title: "Academic Tanscripts",
   },
   {
     id:4,
-    icon: "https://strapi.orientspectra.com/uploads/Refrence_d4804c3d2c.webp",
+    icon: Icon5,
     title: "Academic Reference Letters",
   },
   {
     id:5,
-    icon: "https://strapi.orientspectra.com/uploads/Letters_7e2220fd8a.webp",
+    icon: Icon6,
     title: "Letters of Recommendation",
   },
   {
     id:6,
-    icon: "https://strapi.orientspectra.com/uploads/Portfolio_6a09763c1d.webp",
+    icon: Icon7,
     title: "CV/Resume",
   },
   {
     id:7,
-    icon: "https://strapi.orientspectra.com/uploads/Statement_b50bc660b6.webp",
+    icon: Icon8,
     title: "Statement of Purpose (SOP)",
   },
   {
     id:8,
-    icon: "https://strapi.orientspectra.com/uploads/Certificates_734a5b9296.webp",
+    icon: Icon11,
     title: "Certificate of Extracurricular Activities",
   },
   {
     id:9,
-    icon: "https://strapi.orientspectra.com/uploads/Evidence_a35d42d28c.webp",
+    icon: Icon12,
     title: "Evidence of Funds",
   },
 ];
