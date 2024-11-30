@@ -71,9 +71,9 @@ const Events = () => {
     {
       id:1,
       Headline: "Study in Germany with 2 Lakhs Discount*",
-      Subtitle: "Last Date to Apply for March Intake 29th November",
+      Subtitle: "Last Date to Apply for March Intake 21st December",
       img: Img1,
-      Date_of_the_event: "29th Nov 2024"
+      Date_of_the_event: " 21st Dec 2024"
     }
   ]
 
@@ -190,7 +190,7 @@ const Events = () => {
                 </div>
                 <div className="dateEvent">
                   <p>Date of the event</p>
-                  <span>{item?.Date_of_the_event}</span>
+                  <span> {item?.Date_of_the_event}</span>
                 </div>
                 <div className="event_bottomContent">
                   <h4 className="explaintag">{item?.Headline}</h4>

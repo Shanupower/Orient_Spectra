@@ -5,7 +5,7 @@ import Mic from "../assets/icons/Group (3).png";
 import Img1 from "../assets/Home_page/Homepage_Banner1.webp";
 import Img2 from "../assets/Home_page/Homepage_Banner2.webp";
 import Img3 from "../assets/Home_page/Homepage_Banner3.webp";
-import Img4 from "../assets/Home_page/Banner4.webp";
+import Img4 from "../assets/Home_page/Banner_4.webp";
 import Img5 from "../assets/Home_page/Homepage_Banner5.webp"; // Common Event(if there is no new events this image will display)
 import { Carousel } from "antd";
 import Button from "../Component/Common/Button";

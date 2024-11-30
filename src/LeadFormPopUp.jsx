@@ -4,7 +4,7 @@ import axios from 'axios';
 import CloseIcon from '@mui/icons-material/Close';
 import "./index.css";
 import CommonEvent from './assets/Home_page/Common_Event.webp';
-import Img1 from "./assets/Unvercity/Euschool-Poster.webp";
+import Img1 from "./assets/Unvercity/Euschool-Poster-1.webp";
 
 const LeadFormPopUp = () => {
   const isMd = useMediaQuery("(max-width:1024px)");
@@ -161,7 +161,7 @@ const LeadFormPopUp = () => {
                 <h2 className="DailogTitle">Apply for <span>EU Business School </span></h2>
                 <h3>& Get <span>Rs 2 Lakhs</span> Discount*</h3>
                 {/* <h3 style={{colro:"black"}}>Himayatnagar, Hyderabad</h3> */}
-                <p>Register before 29th November</p>
+                <p>Register before 21st December</p>
                 <DialogContent>
                   <form onSubmit={handleSubmitValidation}>
                     <div className="popup-text-feild">
