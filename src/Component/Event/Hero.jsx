@@ -5,7 +5,7 @@ import { useState } from "react";
 import { useMediaQuery } from "@mui/material";
 import LeadFormPopUp from "../../Landing_page/HeroLeadFormPopUp";
 import Event from "../../assets/Home_page/Banner_4.webp";
-import Event2 from "../../assets/Unvercity/Euschool-Poster.webp";
+import Event2 from "../../assets/Unvercity/Euschool_Poster.webp";
 import CommonEvent_Banner from "../../assets/Home_page/Homepage_Banner5.webp"; // Common Event(if there is no new events this image will display)
 import CommonEvent  from "../../assets/Home_page/Common_Event.webp";
 
