@@ -1,11 +1,11 @@
-import Icon1 from "../../../assets/Country/possport.png";
+import Icon1 from "../../../assets/Country/possport.webp";
 import "./Country.css";
-import Icon3 from "../../../assets/Country/program.png";
-import Icon4 from "../../../assets/Country/Academic.png";
-import Icon6 from "../../../assets/Country/Letters.png";
-import Icon7 from "../../../assets/Country/Resume.png";
-import Icon8 from "../../../assets/Country/Statement.png";
-
+import Icon3 from "../../../assets/Country/program.webp";
+import Icon4 from "../../../assets/Country/Academic.webp";
+import Icon6 from "../../../assets/Country/Letters.webp";
+import Icon7 from "../../../assets/Country/Resume.webp";
+import Icon8 from "../../../assets/Country/Statement.webp";
+import Icon2 from "../../../assets/Country/travel.webp";
 
 const AdmissionData = [
   {
@@ -41,7 +41,7 @@ const AdmissionData = [
   },
   {
     key: 7,
-    icon: "https://strapi.orientspectra.com/uploads/travel_c64ff0ffe2.webp",
+    icon: Icon2,
     title: "Arriving",
   },
 ];

@@ -1,66 +1,78 @@
 import "./Country.css";
+import Icon2 from "../../../assets/Country/certificate.webp";
+import Icon3 from "../../../assets/Country/program.webp";
+import Icon4 from "../../../assets/Country/Academic.webp";
+import Icon5 from "../../../assets/Country/Refrence.webp";
+import Icon6 from "../../../assets/Country/Letters.webp";
+import Icon7 from "../../../assets/Country/Resume.webp";
+import Icon8 from "../../../assets/Country/Statement.webp";
+import Icon9 from "../../../assets/Country/Essays.webp";
+import Icon10 from "../../../assets/Country/Portfolio.webp";
+import Icon11 from "../../../assets/Country/Certificates.webp";
+import Icon12 from "../../../assets/Country/Evidence.webp";
+import Icon1 from "../../../assets/Country/possport.webp";
 
 const AdmissionData = [
   {
     key: 1,
-    icon: "https://strapi.orientspectra.com/uploads/possport_0c65803b78.webp",
+    icon: Icon1,
     title: "Copy of a valid passport",
   },
   {
     key: 2,
-    icon: "https://strapi.orientspectra.com/uploads/certificate_2b2662d10c.webp",
+    icon: Icon2,
     title: "Proof of English proficiency (TOEFL/IELTS test scores)",
   },
   {
     key: 3,
-    icon: "https://strapi.orientspectra.com/uploads/program_a82348b8ac.webp",
+    icon: Icon3,
     title: "ACT/SAT/LSAT for UG programs, GMAT/GRE scores for PG programs",
   },
   {
     key: 4,
-    icon: "https://strapi.orientspectra.com/uploads/Academic_0e24a00ca2.webp",
+    icon: Icon4,
     title: "Academic Tanscripts from the previous study",
   },
   {
     key: 5,
-    icon: "https://strapi.orientspectra.com/uploads/Refrence_d4804c3d2c.webp",
+    icon: Icon5,
     title:
       "Academic Refrence Letters, the number of reference letters depends from university to university",
   },
   {
     key: 6,
-    icon: "https://strapi.orientspectra.com/uploads/Letters_7e2220fd8a.webp",
+    icon: Icon6,
     title:
       "Letters of recommendation from the employer/manager (if applicable)",
   },
   {
     key: 7,
-    icon: "https://strapi.orientspectra.com/uploads/Resume_4ed7eda327.webp",
+    icon: Icon7,
     title: "CV/Resume",
   },
   {
     key: 8,
-    icon: "https://strapi.orientspectra.com/uploads/Statement_b50bc660b6.webp",
+    icon: Icon8,
     title: "Statement of Purpose (SOP)",
   },
   {
     key: 9,
-    icon: "https://strapi.orientspectra.com/uploads/Essays_c9cdd737c1.webp",
+    icon: Icon9,
     title: "Essays (if demanded by the university)",
   },
   {
     key: 10,
-    icon: "https://strapi.orientspectra.com/uploads/Portfolio_6a09763c1d.webp",
+    icon: Icon10,
     title: "Portfolio (for specific courses)",
   },
   {
-    key: 12,
-    icon: "https://strapi.orientspectra.com/uploads/Certificates_734a5b9296.webp",
+    key: 11,
+    icon: Icon11,
     title: "Certificates of extracurricular activities",
   },
   {
-    key: 13,
-    icon: "https://strapi.orientspectra.com/uploads/Evidence_a35d42d28c.webp",
+    key: 12,
+    icon: Icon12,
     title: "Evidence of Funds",
   },
 ];
