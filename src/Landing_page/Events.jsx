@@ -8,6 +8,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
 import "./index.css";
+import Img from "../assets/Unvercity/Event1.webp";
 import Img1 from "../assets/Unvercity/Euschool_Poster.webp";
 import Img2 from "../assets/Home_page/UK_Event.webp";
 import Img3 from "../assets/Home_page/Event_03.webp";
@@ -70,6 +71,13 @@ const Events = () => {
   const UpcomingData =[
     {
       id:1,
+      Headline: "Exclusive Abroad Education Fair ",
+      Subtitle: "Hotel Grand Gayathri, Khammam",
+      img: Img,
+      Date_of_the_event: " 22nd Dec 2024"
+    },
+    {
+      id:2,
       Headline: "Study in Germany with 2 Lakhs Discount*",
       Subtitle: "Last Date to Apply for March Intake 21st December",
       img: Img1,
