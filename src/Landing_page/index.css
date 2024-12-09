@@ -351,6 +351,46 @@
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
 }
 
+.gtco-testimonial {
+  padding: 3rem 6%;
+}
+.gtco-testimonial > h1 {
+  color: black;
+  font-size: 3rem;
+  line-height: 1.2;
+  font-weight: 500;
+}
+.gtco-testimonial > h1 > span {
+  color: var(--brand-color);
+  font-weight: 600;
+}
+.gtco-testimonial > p{
+  text-align: left;
+  font-size: 22px;
+  color: black;
+  margin-top: 20px;
+}
+.Testimonial-container {
+  padding: 2rem;
+  width: 100%;
+}
+.testimonial-card-body {
+  background-color: whitesmoke;
+  border: 2px solid whitesmoke;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.192);
+  padding: 5%;
+}
+.testimonial-card-body > p {
+ font-size: 20px;
+ font-weight: 500;
+ margin-top: 20px;
+}
+.testimonial-card-body > h1 {
+  font-size: 25px;
+  color: var(--brand-color);
+}
+
 @media (max-width: 1024px) {
   .services-card-container {
     display: flex;
@@ -2666,6 +2706,12 @@ canvas {
   .hero_Heading {
     font-size: 32px;
   }
+  .gtco-testimonial > h1 {
+    font-size: 35px;
+  } 
+  .gtco-testimonial > p {
+    font-size: 18px;
+  } 
 }
 
 /* circular nav menu */

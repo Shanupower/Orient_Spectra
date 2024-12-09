@@ -18,6 +18,7 @@ import StudyAbroad from "./StudyAbroad";
 import Testimonial from "./Testimonial";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import Testimonial2 from "./Testimonial2";
 
 const LandingPage = () => {
   const [blog, setBlog] = useState({});
@@ -83,7 +84,8 @@ const LandingPage = () => {
       <Mission_Vision />
       <Course />
       {/* <Counselors /> */}
-      <Testimonial />
+      {/* <Testimonial /> */}
+      <Testimonial2 />
       {/* <Blog />
       <News /> */}
       <GetTuchWithUs />
