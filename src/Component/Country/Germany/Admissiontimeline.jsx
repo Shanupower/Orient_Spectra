@@ -11,11 +11,10 @@ import img5 from "../../../assets/University-Images/Germany/5.webp";
 import img6 from "../../../assets/University-Images/Germany/6.webp";
 import img7 from "../../../assets/University-Images/Germany/7.webp";
 import img8 from "../../../assets/University-Images/Germany/8.webp";
-import img9 from "../../../assets/University-Images/Germany/9.webp";
-import img10 from "../../../assets/University-Images/Germany/10.webp";
 import img11 from "../../../assets/University-Images/Germany/11.webp";
 import img12 from "../../../assets/University-Images/Germany/12.webp";
 import img13 from "../../../assets/University-Images/Germany/13.webp";
+import img15 from "../../../assets/University-Images/Germany/15.webp";
 
 const Programdata = [
   {
@@ -239,7 +238,7 @@ const Admissiontimeline = () => {
 
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/thumbnail_channels4_profile_removebg_preview_333e855e4d_ad670dbaf2.webp"
+                  src={img15}
                   alt="DIU(Dresden International University)"
                   loading="lazy"
                 />

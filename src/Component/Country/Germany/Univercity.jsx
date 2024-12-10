@@ -14,6 +14,10 @@ import img10 from "../../../assets/University-Images/Germany/10.webp";
 import img11 from "../../../assets/University-Images/Germany/11.webp";
 import img12 from "../../../assets/University-Images/Germany/12.webp";
 import img13 from "../../../assets/University-Images/Germany/13.webp";
+import img14 from "../../../assets/University-Images/Germany/14.webp";
+import img15 from "../../../assets/University-Images/Germany/15.webp";
+import img16 from "../../../assets/University-Images/Germany/16.webp";
+import img17 from "../../../assets/University-Images/Germany/17.webp";
 
 const universityData = [
   {
@@ -89,7 +93,7 @@ const universityData = [
   },
   {
     key:11,
-    img: "https://strapi.orientspectra.com/uploads/thumbnail_channels4_profile_removebg_preview_333e855e4d_ad670dbaf2.webp",
+    img: img15,
     title: "DIU(Dresden International University)",
     ielts: "6.0",
     toefl: "79",
@@ -117,28 +121,21 @@ const universityData = [
   },
   {
     key:15,
-    img: "https://strapi.orientspectra.com/uploads/SRH_University_Hamburg_20d9953426.jpg",
+    img: img17,
     title: "SRH University Hamburg",
     ielts: "6.5",
     toefl: "87",
   },
   {
     key:16,
-    img: "https://strapi.orientspectra.com/uploads/SRH_University_Heildeberg_45db6646b1.png",
+    img: img14,
     title: "SRH University Heildeberg",
     ielts: "6.5",
     toefl: "80",
   },
   {
     key:17,
-    img: "https://strapi.orientspectra.com/uploads/SRH_University_Hamm_89f434c67d.jpg",
-    title: "SRH University Hamm",
-    ielts: "6.5",
-    toefl: "80",
-  },
-  {
-    key:18,
-    img: "https://strapi.orientspectra.com/uploads/SRH_CAMPUS_LEIPZIG_9b2622fe26.png",
+    img: img16,
     title: "SRH University Leipzig",
     ielts: "6.5",
     toefl: "87",

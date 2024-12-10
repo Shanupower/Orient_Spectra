@@ -3,11 +3,20 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import "./Country.css";
 import { Univercitydata } from "../../../Container/data/Universities";
 import Marquee from "react-fast-marquee";
+import img1 from "../../../assets/University-Images/Australia/1.webp";
+import img2 from "../../../assets/University-Images/Australia/2.webp";
+import img3 from "../../../assets/University-Images/Australia/3.webp";
+import img4 from "../../../assets/University-Images/Australia/4.webp";
+import img5 from "../../../assets/University-Images/Australia/5.webp";
+import img6 from "../../../assets/University-Images/Australia/6.webp";
+import img7 from "../../../assets/University-Images/Australia/7.webp";
+import img8 from "../../../assets/University-Images/Australia/8.webp";
+
 
 const universityData = [
   {
     id:1,
-    img: "https://strapi.orientspectra.com/uploads/channels4_profile_fbccddc0da.jpg",
+    img: img5,
     universityName: "University of Melbourne",
     ielts: "6.5",
     tofel: "92",
@@ -15,7 +24,7 @@ const universityData = [
   },
   {
     id:2,
-    img: "https://strapi.orientspectra.com/uploads/U_Syd_Logo_1_removebg_preview_4eadf23bc9.png",
+    img: img8,
     universityName: "University of Sydney",
     ielts: "6.5",
     tofel: "79",
@@ -23,7 +32,7 @@ const universityData = [
   },
   {
     id:3,
-    img: "https://strapi.orientspectra.com/uploads/download_removebg_preview_875f65d9d6.png",
+    img: img4,
     universityName: "University of New South Wales (UNSW Sydney)",
     ielts: "6.0",
     tofel: "80",
@@ -31,7 +40,7 @@ const universityData = [
   },
   {
     id:4,
-    img: "https://strapi.orientspectra.com/uploads/Untitled_design_47_removebg_preview_c489fdf123.png",
+    img: img7,
     universityName: "University of Queensland (UQ)",
     ielts: "6.5",
     tofel: "79",
@@ -39,7 +48,7 @@ const universityData = [
   },
   {
     id:5,
-    img: "https://strapi.orientspectra.com/uploads/download_removebg_preview_1_0b2805f151.png",
+    img: img1,
     universityName: "Monash University",
     ielts: "6.5",
     tofel: "79",
@@ -47,7 +56,7 @@ const universityData = [
   },
   {
     id:6,
-    img: "https://strapi.orientspectra.com/uploads/The_University_of_Western_Australia_logo_removebg_preview_6aa670811d.png",
+    img: img6,
     universityName: "University of Western Australia",
     ielts: "6.5",
     tofel: "79",
@@ -55,7 +64,7 @@ const universityData = [
   },
   {
     id: 7,
-    img: "https://strapi.orientspectra.com/uploads/download_removebg_preview_2_a1315cfc13.png",
+    img: img2,
     universityName: "The University of Adelaide",
     ielts: "6.5",
     tofel: "79",
@@ -63,16 +72,8 @@ const universityData = [
   },
   {
     id: 8,
-    img: "https://strapi.orientspectra.com/uploads/download_removebg_preview_3_825d492b62.png",
+    img: img3,
     universityName: "RMIT University",
-    ielts: "6.5",
-    tofel: "79",
-    backlogs: "0",
-  },
-  {
-    id: 9,
-    img: "https://strapi.orientspectra.com/uploads/uts_1b15e165f2.webp",
-    universityName: "University of Technology Sydney (UTS)",
     ielts: "6.5",
     tofel: "79",
     backlogs: "0",

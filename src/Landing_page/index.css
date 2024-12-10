@@ -374,21 +374,32 @@
   padding: 2rem;
   width: 100%;
 }
-.testimonial-card-body {
-  background-color: whitesmoke;
-  border: 2px solid whitesmoke;
+.testimonials-card-body {
+  background-color: white;
+  border: 2px solid white;
   border-radius: 10px;
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.192);
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1), /* Top shadow */
+              0 4px 6px rgba(0, 0, 0, 0.1),  /* Bottom shadow */
+              -4px 0 6px rgba(0, 0, 0, 0.1), /* Left shadow */
+              4px 0 6px rgba(0, 0, 0, 0.1);  /* Right shadow */
   padding: 5%;
 }
-.testimonial-card-body > p {
- font-size: 20px;
+.testimonials-card-body > p {
+ font-size: 17px;
  font-weight: 500;
  margin-top: 20px;
 }
-.testimonial-card-body > h1 {
+.testimonials-card-body > h1 {
   font-size: 25px;
   color: var(--brand-color);
+}
+.testimonials-card-body > h4 {
+  color: #306398;
+}
+.review-stars {
+  display: flex;
+  gap: 5px;
+  margin-top: 10px;
 }
 
 @media (max-width: 1024px) {
@@ -403,6 +414,9 @@
     width: 30%;
     border-radius: 10px;
   }
+  .testimonials-card-body > p {
+    font-size: 17px;
+   }
 }
 
 @media (max-width: 986px) {
@@ -451,6 +465,9 @@
   top: 5rem;
   align-self: flex-start;
   overflow-y: auto;
+}
+.Explore_leftSide::-webkit-scrollbar {
+  display: none;
 }
 
 .explore_rightSide {
@@ -2712,6 +2729,9 @@ canvas {
   .gtco-testimonial > p {
     font-size: 18px;
   } 
+  .testimonials-card-body > p {
+    font-size: 15px;
+   }
 }
 
 /* circular nav menu */
