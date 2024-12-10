@@ -23,7 +23,7 @@ const Testimonial2 = () => {
     },
     {
         name: "Yaseen Mohammed",
-        sub: "United States of America(USA)",
+        sub: "Wichita State University, USA",
         text: "I am glad to share that it was a wonderful experience with Orient Spectra towards my journey of pursuing a Masters in USA, especially, lalitha and swetha who were consistent, patient, persistent and helped me get through the process.",
     },
     {
@@ -32,14 +32,14 @@ const Testimonial2 = () => {
       text: "I recently had the pleasure of working with Orient Spectra Hyderabad for my master's admission to SRH Berlin University. They guided me through every step, from the application to securing my residence visa, and even helped with accommodation arrangements",
     },
     {
-        name: "Sandeep Reddy",
-        sub: "United Kingdom (UK)",
-        text: "I sincerely appreciate Orient Spectra's invaluable advice me to pursue my masters in UK. I would like to express my sincere gratitude to Orient Spectra and especially to my counselor who guided me every step of process & selecting the best master's program.",
+        name: "Lahereesh",
+        sub: "UMBC, USA",
+        text: "I want to express my heartfelt gratitude to Ramya Madam and Varun Sir for being exceptional mentors throughout my journey. Their unwavering support, insightful guidance, and genuine care have made a significant difference in my academic and personal growth.",
     },
     {
       name: "Pulla Prakash",
-      sub: "Germany",
-      text: "I had an excellent experience with Orient Spectra Consultancy about my Germany visa application. Special thanks to Ramya Krishna Ma'am for her invaluable help throughout the process. Her experience, kindness, and clear directions helped things go smoothly",
+      sub: "EU-Business School, Germany",
+      text: "I had an excellent experience with Orient Spectra Consultancy about my Germany visa application. Special thanks to Ramya Krishna Ma'am for her invaluable help throughout the process. Her experience, kindness, and clear directions helped things go smoothly.",
     },
     {
       name: "Praneeth Jillkapalli",
