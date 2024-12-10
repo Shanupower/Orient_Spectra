@@ -4,22 +4,18 @@ import "./Country.css";
 import { useState } from "react";
 import Img2 from "../../../assets/University-Images/Fall.webp";
 import Img3 from "../../../assets/University-Images/Spring.webp";
-import img1 from "../../../assets/University-Images/France/1.webp";
-import img2 from "../../../assets/University-Images/France/2.webp";
-import img3 from "../../../assets/University-Images/France/3.webp";
-import img4 from "../../../assets/University-Images/France/4.webp";
-import img5 from "../../../assets/University-Images/France/5.webp";
 import img6 from "../../../assets/University-Images/France/6.webp";
-import img7 from "../../../assets/University-Images/France/7.webp";
-import img8 from "../../../assets/University-Images/France/8.webp";
 import img9 from "../../../assets/University-Images/France/9.webp";
 import img10 from "../../../assets/University-Images/France/10.webp";
 import img11 from "../../../assets/University-Images/France/11.webp";
-import img12 from "../../../assets/University-Images/France/12.webp";
 import img13 from "../../../assets/University-Images/France/13.webp";
 import img14 from "../../../assets/University-Images/France/14.webp";
 import img15 from "../../../assets/University-Images/France/15.webp";
 import img16 from "../../../assets/University-Images/France/16.webp";
+import img18 from "../../../assets/University-Images/France/18.webp";
+import img20 from "../../../assets/University-Images/France/20.webp";
+import img21 from "../../../assets/University-Images/France/21.webp";
+import img23 from "../../../assets/University-Images/France/23.webp";
 
 const Programdata = [
   {
@@ -185,7 +181,7 @@ const Admissiontimeline = () => {
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/Logo_icn_business_school_dfbcdd18e6.png"
+                  src={img18}
                   alt="ICN Business School"
                 />
               </div>{" "}
@@ -197,19 +193,19 @@ const Admissiontimeline = () => {
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/EM_Normandie_Logo_c4acc3543b.jpg"
+                  src={img23}
                   alt="EM Normandie Business School"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/ESCE_53bb5633f9.png"
+                  src={img20}
                   alt="ESCE"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/ECE_LOGO_20240226114033_ef71cfffe5.jpg"
+                  src={img21}
                   alt="ECE"
                 />
               </div>

@@ -19,7 +19,13 @@ import img13 from "../../../assets/University-Images/France/13.webp";
 import img14 from "../../../assets/University-Images/France/14.webp";
 import img15 from "../../../assets/University-Images/France/15.webp";
 import img16 from "../../../assets/University-Images/France/16.webp";
-
+import img17 from "../../../assets/University-Images/France/17.webp";
+import img18 from "../../../assets/University-Images/France/18.webp";
+import img19 from "../../../assets/University-Images/France/19.webp";
+import img20 from "../../../assets/University-Images/France/20.webp";
+import img21 from "../../../assets/University-Images/France/21.webp";
+import img22 from "../../../assets/University-Images/France/22.webp";
+import img23 from "../../../assets/University-Images/France/23.webp";
 
 const universityData = [
   {
@@ -59,7 +65,7 @@ const universityData = [
   },
   {
     id:6,
-    img: "https://strapi.orientspectra.com/uploads/Logo_icn_business_school_dfbcdd18e6.png",
+    img: img18,
     universityName: "ICN Business School",
     ielts: "6.5",
     tofel: "79",
@@ -73,21 +79,21 @@ const universityData = [
   },
   {
     id: 8,
-    img: "https://strapi.orientspectra.com/uploads/EM_Normandie_Logo_c4acc3543b.jpg",
+    img: img23,
     universityName: "EM Normandie Business School",
     ielts: "6.5",
     tofel: "79",
   },
   {
     id: 9,
-    img: "https://strapi.orientspectra.com/uploads/ESCE_53bb5633f9.png",
+    img: img20,
     universityName: "ESCE International Business School",
     ielts: "6.5",
     tofel: "80",
   },
   {
     id: 10,
-    img: "https://strapi.orientspectra.com/uploads/ECE_LOGO_20240226114033_ef71cfffe5.jpg",
+    img: img21,
     universityName: "ECE",
     ielts: "6.0",
     tofel: "83",
@@ -115,7 +121,7 @@ const universityData = [
   },
   {
     id: 15,
-    img: "https://strapi.orientspectra.com/uploads/HEIP_a62b9b1544.png",
+    img: img19,
     universityName: "HEIP",
     ielts: "6.5",
     tofel: "90",
@@ -143,7 +149,7 @@ const universityData = [
   },
   {
     id: 19,
-    img: "https://strapi.orientspectra.com/uploads/Logo_MBS_Quadri_142x150_jpg_bd6fb61985.webp",
+    img: img17,
     universityName: "Montpellier Business School",
     ielts: "6.0",
     tofel: "88",
@@ -164,7 +170,7 @@ const universityData = [
   },
   {
     id: 22,
-    img: "https://strapi.orientspectra.com/uploads/CEDS_d6036483cb.png",
+    img: img22,
     universityName: "CEDS",
     ielts: "6.5",
     tofel: "90",

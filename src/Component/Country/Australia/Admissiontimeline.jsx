@@ -5,6 +5,14 @@ import { useState } from "react";
 import Img1 from "../../../assets/University-Images/Summer.webp";
 import Img2 from "../../../assets/University-Images/Fall.webp";
 import Img3 from "../../../assets/University-Images/Spring.webp";
+import img1 from "../../../assets/University-Images/Australia/1.webp";
+import img2 from "../../../assets/University-Images/Australia/2.webp";
+import img3 from "../../../assets/University-Images/Australia/3.webp";
+import img4 from "../../../assets/University-Images/Australia/4.webp";
+import img5 from "../../../assets/University-Images/Australia/5.webp";
+import img6 from "../../../assets/University-Images/Australia/6.webp";
+import img7 from "../../../assets/University-Images/Australia/7.webp";
+import img8 from "../../../assets/University-Images/Australia/8.webp";
 
 const Programdata = [
   {
@@ -135,56 +143,50 @@ const Admissiontimeline = () => {
             <div className="Popular_Universities">
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/channels4_profile_fbccddc0da.jpg"
+                  src={img5}
                   alt="the university of melbourne"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/U_Syd_Logo_1_removebg_preview_4eadf23bc9.png"
+                  src={img8}
                   alt="The University of Sydney"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/download_removebg_preview_875f65d9d6.png"
+                  src={img4}
                   alt="University of New South Wales (UNSW Sydney)"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/Untitled_design_47_removebg_preview_c489fdf123.png"
+                  src={img7}
                   alt="University of Queensland (UQ)"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/download_removebg_preview_1_0b2805f151.png"
+                  src={img1}
                   alt="Monash University"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/The_University_of_Western_Australia_logo_removebg_preview_6aa670811d.png"
+                  src={img6}
                   alt="The-University-of-Western-Australia-logo"
                 />
               </div>{" "}
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/download_removebg_preview_2_a1315cfc13.png"
+                  src={img2}
                   alt="The University of Adelaide"
                 />
               </div>
               <div className="university-card">
                 <img
-                  src="https://strapi.orientspectra.com/uploads/download_removebg_preview_3_825d492b62.png"
+                  src={img3}
                   alt="RMIT University"
-                />
-              </div>
-              <div className="university-card">
-                <img
-                  src="https://strapi.orientspectra.com/uploads/uts_1b15e165f2.webp"
-                  alt="University of Technology Sydney (UTS)"
                 />
               </div>
             </div>
