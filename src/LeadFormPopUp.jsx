@@ -129,7 +129,7 @@ const LeadFormPopUp = () => {
         maxWidth="lg"
         PaperProps={{
           sx: {
-            width: { xs: '90%', sm: '55%', md: '80%', lg: isLg ? "65%" : '51%' },
+            width: { xs: '90%', sm: '60%', md: '80%', lg: isLg ? "65%" : '51%' },
             maxWidth: 'none',
             position: 'relative',
             overflow: "visible",
