@@ -100,9 +100,10 @@ html {
   display: flex;
   gap: 2rem;
   justify-content: space-between;
-  background-image: url("https://strapi.orientspectra.com/uploads/thumbnail_testimonial_map_45da579353_1_c7ba4b807e.webp");
+  background-image: url("./assets/Map.webp");
   background-size:cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 @keyframes zoomIn{
   from {

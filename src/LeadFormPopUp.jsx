@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import { Dialog, DialogContent, FormControl, FormControlLabel, IconButton, Radio, RadioGroup, useMediaQuery } from '@mui/material';
+import { Dialog, DialogContent, FormControl, FormControlLabel, IconButton, Radio, RadioGroup, Tab, Tabs, useMediaQuery } from '@mui/material';
 import axios from 'axios';
 import CloseIcon from '@mui/icons-material/Close';
 import "./index.css";
 import CommonEvent from './assets/Home_page/Common_Event.webp';
 import Img1 from "./assets/Unvercity/Euschool-Poster-1.webp";
 import Img2 from "./assets/Unvercity/Event1.webp";
-
+import Img3 from "./assets/Success.webp";
 const LeadFormPopUp = () => {
   const isSm = useMediaQuery("(max-width:986px)");
   const isMd = useMediaQuery("(max-width:1024px)");
   const isLg = useMediaQuery("(max-width: 1280px)");
   const [open, setOpen] = useState(false); // Open the dialog by default
   const [formSubmitted, setFormSubmitted] = useState(false); // Track form submission
-  const [selectedForm, setSelectedForm] = useState('form1');
+  const [activeTab, setActiveTab] = useState(0);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -25,7 +25,7 @@ const LeadFormPopUp = () => {
   
   useEffect(() => {
     const newSource =
-      selectedForm === "form1"
+      activeTab === 0
         ? "Education Fair Khamam - Website PopUp"
         : "EU-Business School - Website PopUp";
     setFormData((prevData) => ({ ...prevData, source: newSource }));
@@ -34,7 +34,7 @@ const LeadFormPopUp = () => {
       setOpen(true);
     }, 2000);
     return () => clearTimeout(timer);
-  }, [selectedForm]);
+  }, [activeTab]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -67,7 +67,7 @@ const LeadFormPopUp = () => {
           email: "",
           mobile: "",
           intake_year: "",
-          source: selectedForm  === 'form1' ? "Education Fair Khamam - Website PopUp" : "EU-Business School - Website PopUp",
+          source: activeTab  === 0 ? "Education Fair Khamam - Website PopUp" : "EU-Business School - Website PopUp",
         });
         setFormSubmitted(true); // Set formSubmitted to true upon successful submission
       }
@@ -116,8 +116,8 @@ const LeadFormPopUp = () => {
     setOpen(false);
   };
 
-  const handleRadioChange = (e) => {
-    setSelectedForm(e.target.value); // Change the form based on selected radio button
+  const handleTabChange = (e, newValue) => {
+    setActiveTab(newValue); // Change the form based on selected Tab
   };
 
   return (
@@ -129,7 +129,7 @@ const LeadFormPopUp = () => {
         maxWidth="lg"
         PaperProps={{
           sx: {
-            width: { xs: '90%', sm: '65%', md: '80%', lg: isLg ? "65%" : '51%' },
+            width: { xs: '90%', sm: '60%', md: '80%', lg: isLg ? "65%" : '51%' },
             maxWidth: 'none',
             position: 'relative',
             overflow: "visible",
@@ -140,7 +140,7 @@ const LeadFormPopUp = () => {
         {formSubmitted ? (
           <div className="Success-container">
             <div className="success-message">
-              <img src="https://strapi.orientspectra.com/uploads/luxa_org_no_background_green_double_circle_check_mark_78370_1749_c6ee2071c0.webp" alt="Success" />
+              <img src={Img3} alt="Success" />
               <h2>Thank you for your response!</h2>
               <p onClick={handleClose}>Back to Home</p>
             </div>
@@ -171,29 +171,31 @@ const LeadFormPopUp = () => {
             </IconButton>
             <div className="Dailog-container">
               <div className='DailogContent'>
-              <div className="RadioButtons">
-                <RadioGroup
-                  row
-                  aria-labelledby="form-selection-group"
-                  value={selectedForm}
-                  onChange={handleRadioChange}
-                  sx={{justifyContent:"center"}}
+              <Tabs
+                  value={activeTab}
+                  onChange={handleTabChange}
+                  centered
+                  sx={{
+                    '.MuiTab-root': {
+                      wordWrap: 'break-word', // Break long words
+                      maxWidth: isSm ? '145px': '200px', // Adjust as per your design
+                      fontSize: '12px', // Adjust font size if needed
+                      padding: '10px', // Add padding for better spacing
+                      border: "2px solid whiteSmoke",
+                      lineHeight: "20px"
+                    },
+                    marginBottom: '10px',
+                    '.MuiTabs-flexContainer': {
+                      justifyContent: 'center', // Center align tabs container
+                    },
+                  }}
                 >
-                  <FormControlLabel value="form1" control={<Radio />} label="Education Fair" 
-                    sx={{
-                      fontSize: '13px'
-                    }}
-                    checked={selectedForm === 'form1'}
-                    />
-                  <FormControlLabel value="form2" control={<Radio />} label="EU-Business School" sx={{
-                      fontSize: '13px'
-                    }}
-                    checked={selectedForm === 'form2'}/>
-                </RadioGroup>
-              </div>
-              {selectedForm === 'form1' ? (
+                  <Tab label="World Education Fair"/>
+                  <Tab label="EU-Business School"/>
+                </Tabs>
+              {activeTab === 0 ? (
                 <>
-                  <h2 className="DailogTitle">Exclusive <span>Abroad Education Fair </span></h2>
+                  <h2 className="DailogTitle"> World <span> Education Fair </span></h2>
                   <h3>on <span>22nd December </span>Hotel Grand Gayathri, Khammam</h3>
                   <p>Register for Personalized Counselling</p>
                 </>
@@ -205,7 +207,7 @@ const LeadFormPopUp = () => {
                 </>
               )}
                 <DialogContent>
-                {selectedForm === 'form1' ? (
+                {activeTab === 0 ? (
                   <>
                   <form onSubmit={handleSubmitValidation}>
                     <div className="popup-text-feild">
@@ -321,7 +323,7 @@ const LeadFormPopUp = () => {
                   <p onClick={handleClose} className='SkipNow'>Skip Now</p>
                 </DialogContent>
               </div>
-              {selectedForm === 'form1' ? (
+              {activeTab === 0 ? (
               <img src={Img2} alt="EventImage" className='ImageContainer' /> ):(
                 <img src={Img1} alt="EventImage" className='ImageContainer' />
               )}
