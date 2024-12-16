@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Dialog, DialogContent, FormControl, FormControlLabel, IconButton, Radio, RadioGroup, Tab, Tabs, useMediaQuery } from '@mui/material';
+import { Dialog, DialogContent, IconButton, Tab, Tabs, useMediaQuery } from '@mui/material';
 import axios from 'axios';
 import CloseIcon from '@mui/icons-material/Close';
 import "./index.css";
@@ -24,17 +24,18 @@ const LeadFormPopUp = () => {
   const [errors, setErrors] = useState({});
   
   useEffect(() => {
-    const newSource =
-      activeTab === 0
-        ? "Education Fair Khamam - Website PopUp"
-        : "EU-Business School - Website PopUp";
-    setFormData((prevData) => ({ ...prevData, source: newSource }));
+    // const newSource =
+    //   activeTab === 0
+    //     ? "Education Fair Khamam - Website PopUp"
+    //     : "EU-Business School - Website PopUp";
+    // setFormData((prevData) => ({ ...prevData, source: newSource }));
 
     const timer = setTimeout(() => {
       setOpen(true);
     }, 2000);
     return () => clearTimeout(timer);
-  }, [activeTab]);
+  }, []);
+  // }, [activeTab]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -67,7 +68,9 @@ const LeadFormPopUp = () => {
           email: "",
           mobile: "",
           intake_year: "",
-          source: activeTab  === 0 ? "Education Fair Khamam - Website PopUp" : "EU-Business School - Website PopUp",
+          source: "Education Fair Khamam - Website PopUp",
+          // source: activeTab  === 0 ? "Education Fair Khamam - Website PopUp" : "EU-Business School - Website PopUp",
+
         });
         setFormSubmitted(true); // Set formSubmitted to true upon successful submission
       }
@@ -116,9 +119,9 @@ const LeadFormPopUp = () => {
     setOpen(false);
   };
 
-  const handleTabChange = (e, newValue) => {
-    setActiveTab(newValue); // Change the form based on selected Tab
-  };
+  // const handleTabChange = (e, newValue) => {
+  //   setActiveTab(newValue); // Change the form based on selected Tab
+  // };
 
   return (
     <div>
@@ -171,7 +174,7 @@ const LeadFormPopUp = () => {
             </IconButton>
             <div className="Dailog-container">
               <div className='DailogContent'>
-              <Tabs
+              {/* <Tabs
                   value={activeTab}
                   onChange={handleTabChange}
                   centered
@@ -192,22 +195,22 @@ const LeadFormPopUp = () => {
                 >
                   <Tab label="World Education Fair"/>
                   <Tab label="EU-Business School"/>
-                </Tabs>
-              {activeTab === 0 ? (
+                </Tabs> */}
+              {/* {activeTab === 0 ? ( */}
                 <>
                   <h2 className="DailogTitle"> World <span> Education Fair </span></h2>
                   <h3>on <span>22nd December </span>Hotel Grand Gayathri, Khammam</h3>
                   <p>Register for Personalized Counselling</p>
                 </>
-              ) : (
+              {/* ) : (
                 <>
                   <h2 className="DailogTitle">Apply for <span>EU Business School</span></h2>
                   <h3>& Get <span>Rs 2 Lakhs</span> Discount*</h3>
                   <p>Register before 21st December</p>
                 </>
-              )}
+              )} */}
                 <DialogContent>
-                {activeTab === 0 ? (
+                {/* {activeTab === 0 ? ( */}
                   <>
                   <form onSubmit={handleSubmitValidation}>
                     <div className="popup-text-feild">
@@ -263,7 +266,7 @@ const LeadFormPopUp = () => {
                     </div>
                   </form>
                   </>
-                  ) : (
+                  {/* ) : (
                     <>
                     <form onSubmit={handleSubmitValidation}>
                     <div className="popup-text-feild">
@@ -319,14 +322,15 @@ const LeadFormPopUp = () => {
                     </div>
                   </form>
                   </>
-                  )}
+                  )} */}
                   <p onClick={handleClose} className='SkipNow'>Skip Now</p>
                 </DialogContent>
               </div>
-              {activeTab === 0 ? (
-              <img src={Img2} alt="EventImage" className='ImageContainer' /> ):(
+              {/* {activeTab === 0 ? ( */}
+              <img src={Img2} alt="EventImage" className='ImageContainer' /> 
+              {/* ):(
                 <img src={Img1} alt="EventImage" className='ImageContainer' />
-              )}
+              )} */}
             </div>
           </>
         )}
