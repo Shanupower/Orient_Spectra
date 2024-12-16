@@ -45,6 +45,7 @@ import TrainingProgram from "./Ads landing page/Training_Program/Landing_Page";
 import Event_LandingPage from "./Ads landing page/SrhUniversityEvent/Event_LandingPage";
 import EU_LandingPage from "./Ads landing page/EUBussiness_SchoolEvent/EU_Landing_page";
 import UK_LandingPage from "./Ads landing page/UKEvent_Verse/UK_Landing_Page";
+// import NewLandingPage from "./NewLandingPage/NewLandingPage";
 
 function App() {
   const [openWhatwedo, setWhatwedoOpen] = useState(false);
@@ -173,6 +174,7 @@ function App() {
         <Route path="/spot-assesment-for-srh-university-2024" element={<Event_LandingPage />} />
         <Route path="/eubussiness-school-apply-for-march-intake" element={<EU_LandingPage />} />
         <Route path="/apply-for-uk-universities" element={<UK_LandingPage />} />
+        {/* <Route path="/landing-page-demo" element={<NewLandingPage />} /> */}
       </Routes>
       <WhatsApp />
       <Footer />
